@@ -1,5 +1,14 @@
 import random
 
+FACTION_META = {
+    'name': 'Vampiros de Elarion',
+    'origin': 'vampiro',
+    'home': 'Cripta Eterna',
+    'config_section': 'VAMPIROS',
+    'weight_key': 'peso_conselho',
+    'default_weight': 0.90,
+}
+
 
 def _completar(tripla):
     nums = list(tripla)
@@ -51,3 +60,7 @@ def vampires(ariadne, seed=None, cfg=None):
             "peso": peso,
         },
     ]
+
+
+def council(ariadne=None, seed=None, cfg=None, ctx=None):
+    return vampires(ariadne, seed, cfg)

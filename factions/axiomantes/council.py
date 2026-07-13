@@ -8,6 +8,15 @@ from races.legacy import normalize
 from .ritual import execute_ritual
 from i18n.translations import t
 
+FACTION_META = {
+    'name': 'Axiomantes de Nemerion',
+    'origin': 'axiomantes_nemerion',
+    'home': 'Cidadela de Nemerion',
+    'config_section': 'AXIOMANTES',
+    'weight_key': 'peso_conselho',
+    'default_weight': 0.75,
+}
+
 
 def axiomantes(ariadne, seed, cfg=None):
     """
@@ -46,3 +55,7 @@ def axiomantes(ariadne, seed, cfg=None):
             f"{result['veredicto']}"
         ),
     }]
+
+
+def council(ariadne=None, seed=None, cfg=None, ctx=None):
+    return axiomantes(ariadne, seed, cfg)

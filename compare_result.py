@@ -1,9 +1,13 @@
 
 import argparse
 import json
+import sys
 from pathlib import Path
 
-from legends.registro import registar_lendas
+if hasattr(sys.stdout, 'reconfigure'):
+    sys.stdout.reconfigure(encoding='utf-8', errors='replace')
+
+from legends.registry import registar_lendas
 
 
 def titulo(n, e):
@@ -28,8 +32,8 @@ def main():
     args = parser.parse_args()
 
     arquivo = json.loads(Path("data/arquivo_destino.json").read_text(encoding="utf-8"))
-    alvo_n = set(args.numbers)
-    alvo_e = set(args.stars)
+    alvo_n = set(args.numeros)
+    alvo_e = set(args.estrelas)
     results = []
 
     for registo in arquivo:
@@ -50,8 +54,8 @@ def main():
     )
 
     actual_key = {
-        "numeros": sorted(args.numbers),
-        "estrelas": sorted(args.stars),
+        "numeros": sorted(args.numeros),
+        "estrelas": sorted(args.estrelas),
     }
     novas_lendas = registar_lendas(results, actual_key, min_numbers=3, min_stars=2)
 

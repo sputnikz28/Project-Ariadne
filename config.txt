@@ -275,9 +275,6 @@ guardar_mantra_no_relatorio = true
 # PAINEL DOS DEUSES — V6.1
 ###################################################
 
-[MUNDO]
-ficheiro = mundos/mundo_classico.ini
-
 [CAMPANHA]
 ativa = true
 numero_de_rodadas = 1

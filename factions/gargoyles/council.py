@@ -1,5 +1,14 @@
 import random
 
+FACTION_META = {
+    'name': 'Gárgulas do Torreão de Pedra',
+    'origin': 'gargula',
+    'home': 'Torreão de Pedra',
+    'config_section': 'GARGULAS',
+    'weight_key': 'peso_conselho',
+    'default_weight': 0.85,
+}
+
 
 def _completar(dupla):
     nums = list(dupla)
@@ -51,3 +60,7 @@ def gargoyles(ariadne, seed=None, cfg=None):
             "peso": peso,
         },
     ]
+
+
+def council(ariadne=None, seed=None, cfg=None, ctx=None):
+    return gargoyles(ariadne, seed, cfg)

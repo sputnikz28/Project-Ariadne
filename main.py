@@ -13,9 +13,14 @@ from world.malphas_virus import choose_carrier
 from world.council_war import resolve
 from evolution.statistics import calculate
 from evolution.genetic import execute
-from races.extras import dwarves, faeries, melforks, werewolves, treefolks, superiors
-from races.chronomancers import create_chronomancers
-from races.skeletons import create_representatives as criar_esqueletos
+from races.extras import superiors
+from factions.treefolks.council import council as treefolks_council
+from factions.skeletons.council import council as skeletons_council
+from factions.chronomancers.council import council as chronomancers_council
+from factions.melforks.council import council as melforks_council
+from factions.dwarves.council import council as dwarves_council
+from factions.faeries.council import council as faeries_council
+from factions.werewolves.council import council as werewolves_council
 from council.council import filter_candidates, vote, corrupt
 from reports.writer import generate
 from amulets.books import synchronize_sources, build_books, update_next_draw_book
@@ -73,17 +78,18 @@ def main():
     fontes_biblioteca = synchronize_sources(cfg)
     biblioteca = build_books(cfg, hist, world)
     ctx = {'mundo': world, 'historico': hist, 'estatisticas': est, 'extracao': extraction, 'biblioteca': biblioteca, 'seed': seed}
+    ariadne = Ariadne()
 
     evo = execute(cfg, ctx)
     ritual = calculate_ritual(cfg, world, evo)
     vis, deus = superiors(ctx)
-    ac = dwarves(cfg, ctx)
-    fs = faeries(cfg, ctx)
-    ms = melforks(cfg, ctx)
-    lob = werewolves(cfg, ctx)
-    tr = treefolks(cfg, ctx)
-    cronos = create_chronomancers(cfg, extraction, world)
-    esqueletos = criar_esqueletos(cfg, ctx)
+    ac = dwarves_council(ariadne, seed, cfg, ctx)
+    fs = faeries_council(ariadne, seed, cfg, ctx)
+    ms = melforks_council(ariadne, seed, cfg, ctx)
+    lob = werewolves_council(ariadne, seed, cfg, ctx)
+    tr = treefolks_council(ariadne, seed, cfg, ctx)
+    cronos = chronomancers_council(ariadne, seed, cfg, ctx)
+    esqueletos = skeletons_council(ariadne, seed, cfg, ctx)
 
     dark_events = []
     magos_negros, black_grimoire = create_mages(cfg, ctx, dark_events)
@@ -93,7 +99,6 @@ def main():
     ninjas_elficos = create_ninjas(cfg)
     estado_ordem = execute_missions(cfg, ninjas_elficos, elven_events)
 
-    ariadne = Ariadne()
     cartografos = execute_cartographers(ariadne, cfg)
     kors = kors_council(ariadne)
     ax = axiomantes_ritual(ariadne, seed, cfg)
