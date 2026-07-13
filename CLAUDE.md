@@ -32,15 +32,15 @@ Biblioteca de conhecimento.
 | Facção | Módulo | Estratégia |
 |--------|--------|-----------|
 | Clérigos | `races/legacy.py` + `evolution/` | Algoritmo genético, 14 gerações |
-| Melforks | `races/extras.py` | Algoritmo genético especializado |
-| Anões | `races/extras.py` | Combinatória por clãs (3 × 15 chaves) |
-| Fadas | `races/extras.py` | Ponderação por números quotidianos |
-| Lobisomens | `races/extras.py` | Monte Carlo de aptidão (fase lunar) |
-| Treefolks | `treefolks/` | Consulta Ariadne; mede fantasmas estatísticos |
-| Vampiros | `vampires/` | Triplas frequentes e consecutivas |
-| Gárgulas | `gargoyles/` | Duplas frequentes e consecutivas |
-| Cronomantes | `races/chronomancers.py` | Energia dos eventos de extração |
-| Esqueletos | `races/skeletons.py` | Janela móvel de 25 números |
+| Melforks | `factions/melforks/` ← `races/extras.py` | Algoritmo genético especializado |
+| Anões | `factions/dwarves/` ← `races/extras.py` | Combinatória por clãs (3 × 15 chaves) |
+| Fadas | `factions/faeries/` ← `races/extras.py` | Ponderação por números quotidianos |
+| Lobisomens | `factions/werewolves/` ← `races/extras.py` | Monte Carlo de aptidão (fase lunar) |
+| Treefolks | `factions/treefolks/` ← `races/extras.py` | Mede fantasmas estatísticos |
+| Vampiros | `factions/vampires/` | Triplas frequentes via Ariadne (V8) |
+| Gárgulas | `factions/gargoyles/` | Duplas frequentes via Ariadne (V8) |
+| Cronomantes | `factions/chronomancers/` ← `races/chronomancers.py` | Energia dos eventos de extração |
+| Esqueletos | `factions/skeletons/` ← `races/skeletons.py` | Janela móvel de 25 números |
 | Esquadrão Negro | `black_squad/` | Anti-popularidade; grimório roubado |
 | Ordem Élfica | `elven_order/` | Missões de recuperação (não vota directamente) |
 | Kors de Elarion | `factions/kors/` | Observação via Ariadne (V7.2) |
@@ -303,26 +303,63 @@ Facção em `factions/axiomantes/`. Percorrem o Labirinto de 139.838.160 câmara
 
 ---
 
-# Arquitetura futura (V9)
+# Arquitetura V9 (Plugin Loader — implementado)
 
 ```
 factions/
     kors/                    ✅ V7.2
-    chaos_cartographers/     ✅ V8
+    chaos_cartographers/     ✅ V8  (analítico, sem FACTION_META)
     axiomantes/              ✅ V8.1
-    vampires/                🔲 migrar de vampires/
-    gargoyles/               🔲 migrar de gargoyles/
-    treefolks/               🔲 migrar de treefolks/
-    clerics/                 🔲 migrar de races/ + evolution/
-    black_squad/             🔲 migrar de black_squad/
+    vampires/                ✅ V8  (migrado de vampires/)
+    gargoyles/               ✅ V8  (migrado de gargoyles/)
+    treefolks/               ✅ V9  (migrado de races/extras.py)
+    skeletons/               ✅ V9  (migrado de races/skeletons.py)
+    chronomancers/           ✅ V9  (migrado de races/chronomancers.py)
+    melforks/                ✅ V9  (migrado de races/extras.py)
+    dwarves/                 ✅ V9  (migrado de races/extras.py)
+    faeries/                 ✅ V9  (migrado de races/extras.py)
+    werewolves/              ✅ V9  (migrado de races/extras.py)
+    loader.py                ✅ V9  discover_factions() — auto-discovery
 ```
 
-Cada facção seguirá o padrão:
-- `config.json` — metadados, peso, descrição
-- `council.py` — ponto de entrada único
-- ficheiros de estratégia individuais
+### Interface padrão de facção
 
-## Candidatos para V9
+```python
+FACTION_META = {
+    'name': str,           # nome de exibição
+    'origin': str,         # campo 'origem' no arquivo_destino
+    'home': str,           # campo 'casa' no registo_externo
+    'config_section': str, # secção [X] em config.txt
+    'weight_key': str,     # chave de peso em config.txt
+    'default_weight': float,
+}
+
+def council(ariadne=None, seed=None, cfg=None, ctx=None) -> list[dict]:
+    # cada dict: {'nome': str, 'chave': ([nums], [stars]), 'peso': float, ...}
+    ...
+```
+
+### Plugin loader
+
+```python
+from factions.loader import discover_factions
+
+for mod in discover_factions("factions"):
+    # mod.FACTION_META — metadados
+    # mod.council(ariadne, seed, cfg, ctx) — devolve candidatos
+    results = mod.council(ariadne, seed, cfg, ctx)
+```
+
+`discover_factions()` carrega todos os módulos `factions/<name>/council.py` que tenham `FACTION_META` e `council`. O `chaos_cartographers` não tem `FACTION_META` (analítico) e é excluído automaticamente.
+
+## Ainda fora do sistema de plugins (pendente)
+
+- **Clérigos** — algoritmo genético `evolution/genetic.py` (complexo demais; fica explícito)
+- **Esquadrão Negro** — estado persistente (grimório, eventos); fica explícito
+- **Ordem Élfica** — não vota directamente; fica explícito
+- **Seres Superiores** — retorno duplo `(vis, deus)` com pesos diferentes; fica explícito
+
+## Candidatos para V10
 
 - Entropia — medir o "caos" dos sorteios por ano
 - Heatmaps — matriz visual de pares/triplas (CSV/JSON para visualização)
