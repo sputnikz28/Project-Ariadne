@@ -1,0 +1,86 @@
+{
+  "era": 3,
+  "id": "H-00030",
+  "nome": "Kael Pedra-Partida",
+  "raca": "Bruxa",
+  "casa": "Casa das Estrelas",
+  "geracao": 1,
+  "pais": [],
+  "pontos": 168,
+  "titulo": "Sussurrador do Destino",
+  "estado": "VIVO",
+  "amuletos": [],
+  "melhores_chaves": [
+    {
+      "geracao": 1,
+      "numeros": [
+        6,
+        8,
+        23,
+        33,
+        38
+      ],
+      "estrelas": [
+        1,
+        6
+      ]
+    },
+    {
+      "geracao": 2,
+      "numeros": [
+        25,
+        32,
+        33,
+        39,
+        48
+      ],
+      "estrelas": [
+        2,
+        8
+      ]
+    },
+    {
+      "geracao": 3,
+      "numeros": [
+        22,
+        23,
+        25,
+        31,
+        45
+      ],
+      "estrelas": [
+        4,
+        12
+      ]
+    },
+    {
+      "geracao": 4,
+      "numeros": [
+        7,
+        21,
+        30,
+        32,
+        45
+      ],
+      "estrelas": [
+        3,
+        5
+      ]
+    },
+    {
+      "geracao": 5,
+      "numeros": [
+        3,
+        7,
+        32,
+        43,
+        46
+      ],
+      "estrelas": [
+        5,
+        12
+      ]
+    }
+  ],
+  "criada_em": "2026-07-11T09:21:43+00:00"
+}

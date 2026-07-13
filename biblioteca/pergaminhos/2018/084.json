@@ -1,0 +1,84 @@
+{
+  "id": "PERG-2018-084",
+  "titulo": "Pergaminho da Extração 084/2018",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2018,
+  "numero_sorteio": "084/2018",
+  "data": "2018-10-19",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2018-10-19T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      1,
+      3,
+      29,
+      47,
+      48
+    ],
+    "estrelas": [
+      3,
+      12
+    ],
+    "formato": "1 3 29 47 48 + 3 12",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 128,
+    "media_numeros": 25.6,
+    "mediana_numeros": 29,
+    "desvio_padrao": 20.4313,
+    "amplitude": 47,
+    "pares": 1,
+    "impares": 4,
+    "gaps": [
+      2,
+      26,
+      18,
+      1
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 2,
+      "21-30": 1,
+      "41-50": 2
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Gibosa crescente",
+    "iluminacao_lunar_percent": 76.89,
+    "idade_lunar_dias": 10.051,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2018",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2018",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2018_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "b2222ee3a39a7be487f168d1770d98f3bbba170fe973b87f26b2dd032e5306ab",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

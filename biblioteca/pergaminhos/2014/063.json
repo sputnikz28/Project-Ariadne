@@ -1,0 +1,86 @@
+{
+  "id": "PERG-2014-063",
+  "titulo": "Pergaminho da Extração 063/2014",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2014,
+  "numero_sorteio": "063/2014",
+  "data": "2014-08-08",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2014-08-08T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      21,
+      29,
+      35,
+      43,
+      46
+    ],
+    "estrelas": [
+      1,
+      9
+    ],
+    "formato": "21 29 35 43 46 + 1 9",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 174,
+    "media_numeros": 34.8,
+    "mediana_numeros": 35,
+    "desvio_padrao": 9.1302,
+    "amplitude": 25,
+    "pares": 1,
+    "impares": 4,
+    "gaps": [
+      8,
+      6,
+      8,
+      3
+    ],
+    "distribuicao_por_dezenas": {
+      "21-30": 2,
+      "31-40": 1,
+      "41-50": 2
+    },
+    "repetidos_sorteio_anterior": [
+      21
+    ],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Gibosa crescente",
+    "iluminacao_lunar_percent": 93.882,
+    "idade_lunar_dias": 12.416,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2014",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2014",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2014_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "096d34fe3586ace0129fb49cb1e7b4782da8f1c3243ea06a4d2cb2263d081769",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

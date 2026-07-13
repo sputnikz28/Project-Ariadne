@@ -1,0 +1,84 @@
+{
+  "id": "PERG-2010-003",
+  "titulo": "Pergaminho da Extração 003/2010",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2010,
+  "numero_sorteio": "003/2010",
+  "data": "2010-01-15",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "19:00:00",
+    "timestamp_utc": "2010-01-15T19:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      11,
+      26,
+      29,
+      49,
+      50
+    ],
+    "estrelas": [
+      4,
+      7
+    ],
+    "formato": "11 26 29 49 50 + 4 7",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 165,
+    "media_numeros": 33,
+    "mediana_numeros": 29,
+    "desvio_padrao": 14.7919,
+    "amplitude": 39,
+    "pares": 2,
+    "impares": 3,
+    "gaps": [
+      15,
+      3,
+      20,
+      1
+    ],
+    "distribuicao_por_dezenas": {
+      "11-20": 1,
+      "21-30": 2,
+      "41-50": 2
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Lua nova",
+    "iluminacao_lunar_percent": 0.216,
+    "idade_lunar_dias": 0.437,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2010",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2010",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2010_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "10b43c700b6ed3be7f146317455cb30d74c6e99fc228a140c46ccc3dc3620ece",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

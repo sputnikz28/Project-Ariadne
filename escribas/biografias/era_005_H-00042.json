@@ -1,0 +1,86 @@
+{
+  "era": 5,
+  "id": "H-00042",
+  "nome": "Aruk dos Astros",
+  "raca": "Goblin",
+  "casa": "Casa Tribal",
+  "geracao": 1,
+  "pais": [],
+  "pontos": 160,
+  "titulo": "Leitor dos Sinais",
+  "estado": "VIVO",
+  "amuletos": [],
+  "melhores_chaves": [
+    {
+      "geracao": 1,
+      "numeros": [
+        3,
+        15,
+        36,
+        37,
+        42
+      ],
+      "estrelas": [
+        1,
+        11
+      ]
+    },
+    {
+      "geracao": 2,
+      "numeros": [
+        18,
+        35,
+        42,
+        45,
+        46
+      ],
+      "estrelas": [
+        9,
+        10
+      ]
+    },
+    {
+      "geracao": 3,
+      "numeros": [
+        21,
+        35,
+        40,
+        47,
+        48
+      ],
+      "estrelas": [
+        4,
+        7
+      ]
+    },
+    {
+      "geracao": 4,
+      "numeros": [
+        18,
+        31,
+        38,
+        41,
+        50
+      ],
+      "estrelas": [
+        6,
+        8
+      ]
+    },
+    {
+      "geracao": 5,
+      "numeros": [
+        14,
+        35,
+        38,
+        47,
+        49
+      ],
+      "estrelas": [
+        2,
+        6
+      ]
+    }
+  ],
+  "criada_em": "2026-07-11T09:21:55+00:00"
+}

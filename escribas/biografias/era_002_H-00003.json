@@ -1,0 +1,86 @@
+{
+  "era": 2,
+  "id": "H-00003",
+  "nome": "Velka da Lua Fria",
+  "raca": "Vidente",
+  "casa": "Casa dos Ossos",
+  "geracao": 1,
+  "pais": [],
+  "pontos": 155,
+  "titulo": "Observador Celeste",
+  "estado": "VIVO",
+  "amuletos": [],
+  "melhores_chaves": [
+    {
+      "geracao": 1,
+      "numeros": [
+        3,
+        22,
+        23,
+        39,
+        45
+      ],
+      "estrelas": [
+        5,
+        9
+      ]
+    },
+    {
+      "geracao": 2,
+      "numeros": [
+        23,
+        25,
+        33,
+        37,
+        39
+      ],
+      "estrelas": [
+        2,
+        5
+      ]
+    },
+    {
+      "geracao": 3,
+      "numeros": [
+        34,
+        36,
+        40,
+        46,
+        50
+      ],
+      "estrelas": [
+        2,
+        6
+      ]
+    },
+    {
+      "geracao": 4,
+      "numeros": [
+        2,
+        18,
+        33,
+        34,
+        42
+      ],
+      "estrelas": [
+        2,
+        9
+      ]
+    },
+    {
+      "geracao": 5,
+      "numeros": [
+        16,
+        23,
+        25,
+        38,
+        45
+      ],
+      "estrelas": [
+        2,
+        6
+      ]
+    }
+  ],
+  "criada_em": "2026-07-11T09:21:37+00:00"
+}

@@ -1,0 +1,88 @@
+{
+  "id": "PERG-2021-029",
+  "titulo": "Pergaminho da Extração 029/2021",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2021,
+  "numero_sorteio": "029/2021",
+  "data": "2021-04-09",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2021-04-09T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      2,
+      8,
+      32,
+      35,
+      44
+    ],
+    "estrelas": [
+      8,
+      11
+    ],
+    "formato": "2 8 32 35 44 + 8 11",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 121,
+    "media_numeros": 24.2,
+    "mediana_numeros": 32,
+    "desvio_padrao": 16.2776,
+    "amplitude": 42,
+    "pares": 4,
+    "impares": 1,
+    "gaps": [
+      6,
+      24,
+      3,
+      9
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 2,
+      "31-40": 2,
+      "41-50": 1
+    },
+    "repetidos_sorteio_anterior": [
+      2
+    ],
+    "estrelas_repetidas_sorteio_anterior": [
+      8
+    ]
+  },
+  "astronomia": {
+    "fase_lua": "Lua minguante",
+    "iluminacao_lunar_percent": 5.196,
+    "idade_lunar_dias": 27.369,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2021",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2021",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2021_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "7531b8e17b5e5653a63c713e6eee38c9f9fa43f7a7af43fea6111a334cf2b4c2",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

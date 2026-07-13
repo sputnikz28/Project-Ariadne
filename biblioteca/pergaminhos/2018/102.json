@@ -1,0 +1,85 @@
+{
+  "id": "PERG-2018-102",
+  "titulo": "Pergaminho da Extração 102/2018",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2018,
+  "numero_sorteio": "102/2018",
+  "data": "2018-12-21",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "19:00:00",
+    "timestamp_utc": "2018-12-21T19:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      2,
+      12,
+      15,
+      34,
+      50
+    ],
+    "estrelas": [
+      3,
+      4
+    ],
+    "formato": "2 12 15 34 50 + 3 4",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 113,
+    "media_numeros": 22.6,
+    "mediana_numeros": 15,
+    "desvio_padrao": 17.1767,
+    "amplitude": 48,
+    "pares": 4,
+    "impares": 1,
+    "gaps": [
+      10,
+      3,
+      19,
+      16
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 1,
+      "11-20": 2,
+      "31-40": 1,
+      "41-50": 1
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Lua cheia",
+    "iluminacao_lunar_percent": 98.732,
+    "idade_lunar_dias": 13.705,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2018",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2018",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2018_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "0410fc0c773a458ae391829b5a5764311843dad819a6402e3d77dbd035397968",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

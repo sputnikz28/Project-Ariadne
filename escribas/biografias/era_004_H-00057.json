@@ -1,0 +1,86 @@
+{
+  "era": 4,
+  "id": "H-00057",
+  "nome": "Selene da Névoa",
+  "raca": "Vidente",
+  "casa": "Casa Tribal",
+  "geracao": 1,
+  "pais": [],
+  "pontos": 146,
+  "titulo": "Observador Celeste",
+  "estado": "VIVO",
+  "amuletos": [],
+  "melhores_chaves": [
+    {
+      "geracao": 1,
+      "numeros": [
+        8,
+        18,
+        21,
+        25,
+        46
+      ],
+      "estrelas": [
+        5,
+        9
+      ]
+    },
+    {
+      "geracao": 2,
+      "numeros": [
+        2,
+        6,
+        30,
+        39,
+        45
+      ],
+      "estrelas": [
+        6,
+        9
+      ]
+    },
+    {
+      "geracao": 3,
+      "numeros": [
+        24,
+        31,
+        39,
+        49,
+        50
+      ],
+      "estrelas": [
+        5,
+        6
+      ]
+    },
+    {
+      "geracao": 4,
+      "numeros": [
+        1,
+        18,
+        33,
+        34,
+        49
+      ],
+      "estrelas": [
+        4,
+        6
+      ]
+    },
+    {
+      "geracao": 5,
+      "numeros": [
+        10,
+        14,
+        34,
+        38,
+        39
+      ],
+      "estrelas": [
+        2,
+        6
+      ]
+    }
+  ],
+  "criada_em": "2026-07-11T09:21:49+00:00"
+}

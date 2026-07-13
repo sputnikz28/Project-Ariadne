@@ -1,0 +1,101 @@
+{
+  "era": 5,
+  "id": "H-00024",
+  "nome": "Morgana Pedra-Partida",
+  "raca": "Vidente",
+  "casa": "Casa Lunar",
+  "geracao": 1,
+  "pais": [],
+  "pontos": 190,
+  "titulo": "Sussurrador do Destino",
+  "estado": "VIVO",
+  "amuletos": [
+    {
+      "id": "ART-4C4EE67615",
+      "nome": "Osso Lunar",
+      "raridade": "RARO",
+      "multiplicador": 1.15,
+      "criador": "Morgana Pedra-Partida",
+      "geracao_criacao": 6,
+      "donos": [
+        "Morgana Pedra-Partida"
+      ],
+      "energia_acumulada": 58.75,
+      "conselhos": 0,
+      "estado": "ATIVO"
+    }
+  ],
+  "melhores_chaves": [
+    {
+      "geracao": 1,
+      "numeros": [
+        13,
+        25,
+        45,
+        46,
+        48
+      ],
+      "estrelas": [
+        2,
+        5
+      ]
+    },
+    {
+      "geracao": 2,
+      "numeros": [
+        11,
+        36,
+        45,
+        48,
+        49
+      ],
+      "estrelas": [
+        5,
+        9
+      ]
+    },
+    {
+      "geracao": 3,
+      "numeros": [
+        11,
+        27,
+        34,
+        36,
+        44
+      ],
+      "estrelas": [
+        5,
+        9
+      ]
+    },
+    {
+      "geracao": 4,
+      "numeros": [
+        3,
+        7,
+        33,
+        34,
+        39
+      ],
+      "estrelas": [
+        4,
+        5
+      ]
+    },
+    {
+      "geracao": 5,
+      "numeros": [
+        3,
+        5,
+        19,
+        31,
+        34
+      ],
+      "estrelas": [
+        4,
+        5
+      ]
+    }
+  ],
+  "criada_em": "2026-07-11T09:21:55+00:00"
+}

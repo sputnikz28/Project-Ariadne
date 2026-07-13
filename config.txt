@@ -1,0 +1,295 @@
+[MUNDO]
+data=2026-07-14
+hora=20:01
+local=Paris
+pais=França
+timezone=Europe/Paris
+# Língua do simulador — códigos suportados:
+#   pt  Português   (Portugal 🇵🇹)
+#   es  Español     (España 🇪🇸)
+#   fr  Français    (France 🇫🇷 · Belgique 🇧🇪 · Luxembourg 🇱🇺 · Suisse 🇨🇭)
+#   nl  Nederlands  (België 🇧🇪)
+#   de  Deutsch     (Österreich 🇦🇹 · Schweiz 🇨🇭 · Luxemburg 🇱🇺)
+#   en  English     (UK 🇬🇧 · Ireland 🇮🇪)   [gb é alias de en]
+lang=pt
+
+[FONTES]
+usar_api_euromilhoes=true
+usar_api_lua=true
+usar_api_jackpot=true
+permitir_fallback_local=true
+timeout_segundos=3
+euromilhoes_url=https://euromillions.api.pedromealha.dev/draws
+lua_url=
+jackpot_url=
+
+[SIMULACAO]
+modo_semente=caos
+semente=20260710
+geracoes=14
+populacao_inicial=72
+sobreviventes=20
+conselho_final=9
+
+[CAMINHO_1000_ALMAS]
+ativo=true
+intervalo_torneio=5
+max_ressuscitados=2
+min_treinos=3
+
+[LOBISOMENS]
+ativo=true
+apenas_semana_lua_cheia=true
+simulacoes_monte_carlo=30000
+representantes=6
+
+[ANOES]
+numero_clas=3
+chaves_por_cla=15
+
+[MELFORKS]
+ativo=true
+populacao_chaves=160
+geracoes_chaves=20
+elite=30
+representantes=5
+
+[TREEFOLKS]
+ativo=true
+quantidade=3
+
+[FADAS]
+ativo=true
+quantidade=4
+numeros_quotidiano=7,14,22,31
+estrelas_quotidiano=3,8
+
+[CORRUPTOR]
+ativo=true
+nome=Malphas, o Quebra-Conselhos
+range_numeros=-3,3
+range_estrelas=-1,1
+
+[EXTRACAO]
+ativo = true
+hora_oficial = 20:00:00
+delay_arranque_min = 2.0
+delay_arranque_max = 15.0
+tempo_medio_bola = 7.5
+variacao_segundos = 2.0
+usar_milisegundos = true
+quantidade_cronomantes = 4
+
+
+[RITUAL_CELESTE]
+ativo = true
+inicio = 00:00:00
+libertacao = 20:00:00
+
+# Energia base por ponto de score de cada alma.
+energia_por_ponto = 0.001
+
+# Multiplicadores espirituais.
+multiplicador_ressuscitado = 2.0
+multiplicador_lenda = 5.0
+multiplicador_profeta = 2.0
+multiplicador_mestre = 1.5
+
+# Amuletos multiplicam a energia de cada alma portadora.
+multiplicador_osso_lunar = 1.10
+multiplicador_espelho_sonhos = 1.20
+multiplicador_livro_ecos = 1.30
+multiplicador_presa_fenrir = 1.40
+multiplicador_fragmento_divino = 1.50
+
+# Chave humana que recebe a bênção narrativa dos Clérigos.
+chave_numeros = 1,10,32,36,43
+chave_estrelas = 5,6
+peso_no_conselho = 1.50
+
+# A energia é narrativa/estratégica e não altera a probabilidade real.
+usar_almas = true
+usar_ressuscitados = true
+usar_amuletos = true
+
+
+[ARTEFACTOS_VIVOS]
+ativo=true
+chance_forja=0.08
+heranca=true
+energia_por_geracao=0.05
+
+[VIRUS_MALPHAS]
+ativo=true
+chance_infeccao=0.04
+ocultar_portador=true
+bonus_score_infectado=1.20
+chance_revelacao_conselho=0.75
+
+[GUERRA_CONSELHO]
+ativo=true
+usar_fenrir=true
+usar_clerigos=true
+custo_purificacao=1.50
+chance_base_deteccao=0.35
+
+
+[BIBLIOTECA_OCULTA]
+ativa = true
+atualizar_ao_arrancar = false
+usar_cache = true
+validar_com_multiplas_fontes = true
+minimo_fontes_confirmacao = 2
+timeout_segundos = 8
+
+# As fontes são públicas e configuráveis. O programa nunca contorna
+# autenticação, CAPTCHA ou bloqueios.
+fonte_jogos_santa_casa = https://www.jogossantacasa.pt/web/SCEstatisticas/
+fonte_euromillones = https://www.euromillones.com/pt/estatisticas/euromilhoes
+fonte_euro_millions = https://www.euro-millions.com/pt/estatisticas
+
+# Os livros são sempre reconstruídos localmente a partir do histórico
+# validado, mesmo quando as páginas remotas não estão disponíveis.
+criar_livro_quentes = true
+criar_livro_frios = true
+criar_livro_pares = true
+criar_livro_trios = true
+criar_livro_estrelas = true
+criar_livro_atrasos = true
+criar_livro_gaps = true
+criar_livro_proximas_extracoes = true
+
+[MONGES_E_ESCRIBAS]
+# Classes com acesso total.
+acesso_total = Escriba,Monge
+
+# Acesso parcial.
+acesso_quentes_frios = Bruxa,Shaman,Mago Temporal
+acesso_historico = Mago Temporal,Druida dos Ecos,Treefolk IA,Cronomante
+acesso_pares_trios = Druida dos Ecos,Melfork Genético,Treefolk IA
+acesso_gaps = Elfo,Cronomante,Treefolk IA,Melfork Genético
+chance_audiencia = 0.35
+max_consultas_por_heroi = 2
+
+[ARCA_ARTEFACTOS]
+ativa = true
+chance_materializacao = 0.10
+raridade_minima = RARO
+permitir_redescoberta = true
+chance_encontro_por_geracao = 0.025
+max_encontrados_por_execucao = 3
+heranca_persistente = true
+energia_evolucao_por_execucao = 0.10
+
+
+[ESQUADRAO_NEGRO]
+ativo = true
+quantidade = 5
+chance_infiltracao = 0.55
+chance_copiar_livro = 0.60
+chance_roubar_reliquia = 0.30
+corrupcao_copia_min = 0.05
+corrupcao_copia_max = 0.35
+chance_ressuscitar_lenda = 0.15
+peso_conselho = 0.85
+max_copias_por_execucao = 2
+max_reliquias_roubadas_por_execucao = 1
+
+[ORDEM_ELFICA]
+ativa = true
+quantidade = 4
+chance_missao = 0.70
+bonus_fenrir = 0.15
+chance_purificar = 0.60
+max_missoes_por_execucao = 3
+peso_conselho = 0.60
+
+[LENDAS]
+ativo = true
+min_numeros = 3
+min_estrelas = 2
+chance_eco_despertar = 0.10
+permitir_necromancia = true
+
+[ESTRATEGIA_NEGRA]
+peso_desvio_padrao = 0.25
+peso_anti_popularidade = 0.25
+peso_distribuicao = 0.20
+peso_gaps = 0.15
+peso_frequencia_roubada = 0.15
+candidatas_geradas = 3000
+desvio_minimo = 10.0
+max_numeros_ate_31 = 3
+
+
+
+[ESCRIBAS_V6]
+ativos = true
+inventariar_artefactos = true
+inventariar_livros = true
+inventariar_reliquias_roubadas = true
+inventariar_lendas = true
+criar_cronica = true
+criar_atlas = true
+criar_museu = true
+criar_biografias = true
+max_biografias_por_rodada = 12
+
+[CARTOGRAFOS_CAOS]
+ativos = true
+monte_carlo_simulacoes = 100000
+
+[KORS]
+ativos = true
+peso_conselho = 1.0
+limite_atrasados = 15
+limite_menos_frequentes = 20
+
+[AXIOMANTES]
+ativos = true
+peso_conselho = 0.75
+periodo_anos = 1
+limiar_cobertura = 0.50
+excesso_minimo = 0.0
+n_candidatos = 50000
+guardar_experiencia = true
+
+[ESQUELETOS]
+ativos = true
+largura_numeros = 25
+largura_estrelas = 6
+peso_conselho = 0.80
+quantidade_externa = 4
+
+[CONVICCAO_SOMBRIA]
+ativa = true
+repeticoes_por_numero = 5
+repeticoes_por_estrela = 7
+numero_obsessivo_repeticoes = 15
+intensidade_min = 0.60
+intensidade_max = 1.00
+guardar_mantra_no_relatorio = true
+
+
+###################################################
+# PAINEL DOS DEUSES — V6.1
+###################################################
+
+[MUNDO]
+ficheiro = mundos/mundo_classico.ini
+
+[CAMPANHA]
+ativa = true
+numero_de_rodadas = 1
+guardar_estado_entre_rodadas = true
+comparar_rodadas = true
+gerar_conselho_dos_conselhos = true
+pausa_entre_rodadas_ms = 0
+guardar_snapshot_por_rodada = true
+guardar_relatorio_por_era = true
+guardar_inventario_por_era = true
+guardar_museu_por_era = true
+
+[DEBUG]
+mostrar_seed = true
+modo_verbose = false

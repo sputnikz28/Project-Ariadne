@@ -1,0 +1,87 @@
+{
+  "id": "PERG-2015-045",
+  "titulo": "Pergaminho da Extração 045/2015",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2015,
+  "numero_sorteio": "045/2015",
+  "data": "2015-06-05",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2015-06-05T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      2,
+      7,
+      8,
+      45,
+      48
+    ],
+    "estrelas": [
+      1,
+      9
+    ],
+    "formato": "2 7 8 45 48 + 1 9",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 110,
+    "media_numeros": 22,
+    "mediana_numeros": 8,
+    "desvio_padrao": 20.1296,
+    "amplitude": 46,
+    "pares": 3,
+    "impares": 2,
+    "gaps": [
+      5,
+      1,
+      37,
+      3
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 3,
+      "41-50": 2
+    },
+    "repetidos_sorteio_anterior": [
+      7
+    ],
+    "estrelas_repetidas_sorteio_anterior": [
+      1
+    ]
+  },
+  "astronomia": {
+    "fase_lua": "Gibosa minguante",
+    "iluminacao_lunar_percent": 88.949,
+    "idade_lunar_dias": 17.951,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2015",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2015",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2015_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "d77c407b74a66b05ac57a0a3387c4e873efeb227ef70b01b9fd3a5c9cc1b1560",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

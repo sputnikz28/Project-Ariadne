@@ -1,0 +1,80 @@
+{
+  "nome": "Geometria Secreta da Teia",
+  "tipo": "COPIA_SOMBRIA",
+  "gaps": [
+    {
+      "gap": 1,
+      "vezes": 4
+    },
+    {
+      "gap": 7,
+      "vezes": 3
+    },
+    {
+      "gap": 8,
+      "vezes": 3
+    },
+    {
+      "gap": 10,
+      "vezes": 3
+    },
+    {
+      "gap": 30,
+      "vezes": 2
+    },
+    {
+      "gap": 3,
+      "vezes": 2
+    },
+    {
+      "gap": 9,
+      "vezes": 2
+    },
+    {
+      "gap": 6,
+      "vezes": 2
+    },
+    {
+      "gap": 5,
+      "vezes": 2
+    },
+    {
+      "gap": 2,
+      "vezes": 2
+    },
+    {
+      "gap": 4,
+      "vezes": 2
+    },
+    {
+      "gap": 26,
+      "vezes": 1
+    },
+    {
+      "gap": 29,
+      "vezes": 1
+    },
+    {
+      "gap": 14,
+      "vezes": 1
+    },
+    {
+      "gap": 24,
+      "vezes": 1
+    },
+    {
+      "gap": 12,
+      "vezes": 1
+    }
+  ],
+  "atualizado_em": "2026-07-10T20:41:48+00:00",
+  "fidelidade": 0.8539,
+  "corrupcao": 0.1461,
+  "criado_em": "2026-07-10T20:41:48+00:00",
+  "original": "livro_gaps.json",
+  "roubado_por": "Veyron Eclipse",
+  "id": "LIVRO-NEGRO-8DC42BA0",
+  "estado": "RECUPERADO_PELA_ORDEM_ELFICA",
+  "recuperado_em": "2026-07-11T09:21:30+00:00",
+  "purificado": false
+}

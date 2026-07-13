@@ -1,0 +1,88 @@
+{
+  "id": "PERG-2023-097",
+  "titulo": "Pergaminho da Extração 097/2023",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2023,
+  "numero_sorteio": "097/2023",
+  "data": "2023-12-05",
+  "dia_semana": "terça-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "19:00:00",
+    "timestamp_utc": "2023-12-05T19:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      4,
+      6,
+      20,
+      24,
+      25
+    ],
+    "estrelas": [
+      5,
+      9
+    ],
+    "formato": "4 6 20 24 25 + 5 9",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 79,
+    "media_numeros": 15.8,
+    "mediana_numeros": 20,
+    "desvio_padrao": 8.9978,
+    "amplitude": 21,
+    "pares": 4,
+    "impares": 1,
+    "gaps": [
+      2,
+      14,
+      4,
+      1
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 2,
+      "11-20": 1,
+      "21-30": 2
+    },
+    "repetidos_sorteio_anterior": [
+      4
+    ],
+    "estrelas_repetidas_sorteio_anterior": [
+      9
+    ]
+  },
+  "astronomia": {
+    "fase_lua": "Quarto minguante",
+    "iluminacao_lunar_percent": 44.824,
+    "idade_lunar_dias": 22.635,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2023",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2023",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2023_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "b94e85f6e2eb26cf8e37825384a31547dd58f7fbcdffd1ef4147ff2d48e50c74",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

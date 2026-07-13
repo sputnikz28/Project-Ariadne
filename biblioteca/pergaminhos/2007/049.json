@@ -1,0 +1,86 @@
+{
+  "id": "PERG-2007-049",
+  "titulo": "Pergaminho da Extração 049/2007",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2007,
+  "numero_sorteio": "049/2007",
+  "data": "2007-12-07",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "19:00:00",
+    "timestamp_utc": "2007-12-07T19:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      2,
+      4,
+      32,
+      43,
+      48
+    ],
+    "estrelas": [
+      1,
+      7
+    ],
+    "formato": "2 4 32 43 48 + 1 7",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 129,
+    "media_numeros": 25.8,
+    "mediana_numeros": 32,
+    "desvio_padrao": 19.3329,
+    "amplitude": 46,
+    "pares": 4,
+    "impares": 1,
+    "gaps": [
+      2,
+      28,
+      11,
+      5
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 2,
+      "31-40": 1,
+      "41-50": 2
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": [
+      7
+    ]
+  },
+  "astronomia": {
+    "fase_lua": "Lua nova",
+    "iluminacao_lunar_percent": 3.428,
+    "idade_lunar_dias": 27.78,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2007",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2007",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2007_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "284e6b9c3c94618709f6fb3336d6a6f0351d5cddb7070f87d93e627379f643c2",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

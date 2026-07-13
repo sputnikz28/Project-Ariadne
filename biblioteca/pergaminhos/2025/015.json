@@ -1,0 +1,84 @@
+{
+  "id": "PERG-2025-015",
+  "titulo": "Pergaminho da Extração 015/2025",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2025,
+  "numero_sorteio": "015/2025",
+  "data": "2025-02-21",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "19:00:00",
+    "timestamp_utc": "2025-02-21T19:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      1,
+      3,
+      11,
+      20,
+      43
+    ],
+    "estrelas": [
+      2,
+      11
+    ],
+    "formato": "1 3 11 20 43 + 2 11",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 78,
+    "media_numeros": 15.6,
+    "mediana_numeros": 11,
+    "desvio_padrao": 15.2525,
+    "amplitude": 42,
+    "pares": 1,
+    "impares": 4,
+    "gaps": [
+      2,
+      8,
+      9,
+      23
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 2,
+      "11-20": 2,
+      "41-50": 1
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Quarto minguante",
+    "iluminacao_lunar_percent": 39.701,
+    "idade_lunar_dias": 23.123,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2025",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2025",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2025_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "aabf815748cdc937ac0c73df00bfbb6896202625c65b121cecab51e79d3e8d82",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

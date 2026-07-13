@@ -1,0 +1,88 @@
+{
+  "id": "PERG-2012-065",
+  "titulo": "Pergaminho da Extração 065/2012",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2012,
+  "numero_sorteio": "065/2012",
+  "data": "2012-08-14",
+  "dia_semana": "terça-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2012-08-14T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      1,
+      16,
+      38,
+      42,
+      45
+    ],
+    "estrelas": [
+      9,
+      10
+    ],
+    "formato": "1 16 38 42 45 + 9 10",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 142,
+    "media_numeros": 28.4,
+    "mediana_numeros": 38,
+    "desvio_padrao": 17.0716,
+    "amplitude": 44,
+    "pares": 3,
+    "impares": 2,
+    "gaps": [
+      15,
+      22,
+      4,
+      3
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 1,
+      "11-20": 1,
+      "31-40": 1,
+      "41-50": 2
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": [
+      9,
+      10
+    ]
+  },
+  "astronomia": {
+    "fase_lua": "Lua minguante",
+    "iluminacao_lunar_percent": 9.082,
+    "idade_lunar_dias": 26.653,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2012",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2012",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2012_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "f823cf11424f68ed90ad32514396f09ed9eb4d758375d464afea888f5184b2ee",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

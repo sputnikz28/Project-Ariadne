@@ -1,0 +1,88 @@
+{
+  "id": "PERG-2024-050",
+  "titulo": "Pergaminho da Extração 050/2024",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2024,
+  "numero_sorteio": "050/2024",
+  "data": "2024-06-21",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2024-06-21T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      3,
+      4,
+      7,
+      11,
+      17
+    ],
+    "estrelas": [
+      3,
+      12
+    ],
+    "formato": "3 4 7 11 17 + 3 12",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 42,
+    "media_numeros": 8.4,
+    "mediana_numeros": 7,
+    "desvio_padrao": 5.1225,
+    "amplitude": 14,
+    "pares": 1,
+    "impares": 4,
+    "gaps": [
+      1,
+      3,
+      4,
+      6
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 3,
+      "11-20": 2
+    },
+    "repetidos_sorteio_anterior": [
+      3,
+      11
+    ],
+    "estrelas_repetidas_sorteio_anterior": [
+      12
+    ]
+  },
+  "astronomia": {
+    "fase_lua": "Lua cheia",
+    "iluminacao_lunar_percent": 99.894,
+    "idade_lunar_dias": 14.459,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2024",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2024",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2024_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "68aa3da2513b2bbf73d6261fe230cfdcc640e3ba28331274ba11657fd90283fd",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

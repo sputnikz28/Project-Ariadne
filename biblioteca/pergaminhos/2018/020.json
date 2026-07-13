@@ -1,0 +1,88 @@
+{
+  "id": "PERG-2018-020",
+  "titulo": "Pergaminho da Extração 020/2018",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2018,
+  "numero_sorteio": "020/2018",
+  "data": "2018-03-09",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "19:00:00",
+    "timestamp_utc": "2018-03-09T19:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      9,
+      14,
+      21,
+      32,
+      44
+    ],
+    "estrelas": [
+      1,
+      12
+    ],
+    "formato": "9 14 21 32 44 + 1 12",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 120,
+    "media_numeros": 24,
+    "mediana_numeros": 21,
+    "desvio_padrao": 12.6333,
+    "amplitude": 35,
+    "pares": 3,
+    "impares": 2,
+    "gaps": [
+      5,
+      7,
+      11,
+      12
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 1,
+      "11-20": 1,
+      "21-30": 1,
+      "31-40": 1,
+      "41-50": 1
+    },
+    "repetidos_sorteio_anterior": [
+      44
+    ],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Quarto minguante",
+    "iluminacao_lunar_percent": 46.952,
+    "idade_lunar_dias": 22.435,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2018",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2018",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2018_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "c5fb1e9b1f0a55711fdb73abdaf71ddd7a64144a7916115a246413a8844b2e8c",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

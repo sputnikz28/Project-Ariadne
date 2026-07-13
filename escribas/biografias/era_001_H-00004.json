@@ -1,0 +1,86 @@
+{
+  "era": 1,
+  "id": "H-00004",
+  "nome": "Morgana da Lua Fria",
+  "raca": "Cronomante",
+  "casa": "Casa Lunar",
+  "geracao": 1,
+  "pais": [],
+  "pontos": 146,
+  "titulo": "Sussurrador do Destino",
+  "estado": "VIVO",
+  "amuletos": [],
+  "melhores_chaves": [
+    {
+      "geracao": 1,
+      "numeros": [
+        18,
+        37,
+        41,
+        46,
+        49
+      ],
+      "estrelas": [
+        7,
+        12
+      ]
+    },
+    {
+      "geracao": 2,
+      "numeros": [
+        18,
+        37,
+        41,
+        46,
+        49
+      ],
+      "estrelas": [
+        7,
+        12
+      ]
+    },
+    {
+      "geracao": 3,
+      "numeros": [
+        18,
+        37,
+        41,
+        46,
+        49
+      ],
+      "estrelas": [
+        7,
+        12
+      ]
+    },
+    {
+      "geracao": 4,
+      "numeros": [
+        9,
+        18,
+        37,
+        46,
+        49
+      ],
+      "estrelas": [
+        7,
+        12
+      ]
+    },
+    {
+      "geracao": 5,
+      "numeros": [
+        11,
+        37,
+        41,
+        46,
+        49
+      ],
+      "estrelas": [
+        7,
+        12
+      ]
+    }
+  ],
+  "criada_em": "2026-07-11T09:21:30+00:00"
+}

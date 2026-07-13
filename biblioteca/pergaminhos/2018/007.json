@@ -1,0 +1,87 @@
+{
+  "id": "PERG-2018-007",
+  "titulo": "Pergaminho da Extração 007/2018",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2018,
+  "numero_sorteio": "007/2018",
+  "data": "2018-01-23",
+  "dia_semana": "terça-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "19:00:00",
+    "timestamp_utc": "2018-01-23T19:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      5,
+      8,
+      9,
+      23,
+      24
+    ],
+    "estrelas": [
+      7,
+      8
+    ],
+    "formato": "5 8 9 23 24 + 7 8",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 69,
+    "media_numeros": 13.8,
+    "mediana_numeros": 9,
+    "desvio_padrao": 8.0349,
+    "amplitude": 19,
+    "pares": 2,
+    "impares": 3,
+    "gaps": [
+      3,
+      1,
+      14,
+      1
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 3,
+      "21-30": 2
+    },
+    "repetidos_sorteio_anterior": [
+      8
+    ],
+    "estrelas_repetidas_sorteio_anterior": [
+      7
+    ]
+  },
+  "astronomia": {
+    "fase_lua": "Quarto crescente",
+    "iluminacao_lunar_percent": 37.855,
+    "idade_lunar_dias": 6.229,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2018",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2018",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2018_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "1f31ad1823710f186859993d36932213e8af21ce346f6816e20264824937e054",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

@@ -1,0 +1,85 @@
+{
+  "id": "PERG-2023-032",
+  "titulo": "Pergaminho da Extração 032/2023",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2023,
+  "numero_sorteio": "032/2023",
+  "data": "2023-04-21",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2023-04-21T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      7,
+      8,
+      18,
+      33,
+      42
+    ],
+    "estrelas": [
+      2,
+      8
+    ],
+    "formato": "7 8 18 33 42 + 2 8",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 108,
+    "media_numeros": 21.6,
+    "mediana_numeros": 18,
+    "desvio_padrao": 13.8362,
+    "amplitude": 35,
+    "pares": 3,
+    "impares": 2,
+    "gaps": [
+      1,
+      10,
+      15,
+      9
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 2,
+      "11-20": 1,
+      "31-40": 1,
+      "41-50": 1
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Lua nova",
+    "iluminacao_lunar_percent": 2.942,
+    "idade_lunar_dias": 1.62,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2023",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2023",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2023_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "3a6945218099a10ddd00c4c6204f6021061676df486117b6c3c9af45e7afe7ed",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

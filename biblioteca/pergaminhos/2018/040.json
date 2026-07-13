@@ -1,0 +1,86 @@
+{
+  "id": "PERG-2018-040",
+  "titulo": "Pergaminho da Extração 040/2018",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2018,
+  "numero_sorteio": "040/2018",
+  "data": "2018-05-18",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2018-05-18T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      5,
+      8,
+      10,
+      13,
+      31
+    ],
+    "estrelas": [
+      3,
+      6
+    ],
+    "formato": "5 8 10 13 31 + 3 6",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 67,
+    "media_numeros": 13.4,
+    "mediana_numeros": 10,
+    "desvio_padrao": 9.1782,
+    "amplitude": 26,
+    "pares": 2,
+    "impares": 3,
+    "gaps": [
+      3,
+      2,
+      3,
+      18
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 3,
+      "11-20": 1,
+      "31-40": 1
+    },
+    "repetidos_sorteio_anterior": [
+      31
+    ],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Lua crescente",
+    "iluminacao_lunar_percent": 14.404,
+    "idade_lunar_dias": 3.659,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2018",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2018",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2018_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "c2239fd7fe21ca86bafa1f027bf71913de776b22e8b4739329bf0e6993c65bdd",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

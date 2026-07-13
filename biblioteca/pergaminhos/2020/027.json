@@ -1,0 +1,84 @@
+{
+  "id": "PERG-2020-027",
+  "titulo": "Pergaminho da Extração 027/2020",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2020,
+  "numero_sorteio": "027/2020",
+  "data": "2020-04-03",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2020-04-03T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      16,
+      19,
+      34,
+      46,
+      50
+    ],
+    "estrelas": [
+      2,
+      6
+    ],
+    "formato": "16 19 34 46 50 + 2 6",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 165,
+    "media_numeros": 33,
+    "mediana_numeros": 34,
+    "desvio_padrao": 13.7405,
+    "amplitude": 34,
+    "pares": 4,
+    "impares": 1,
+    "gaps": [
+      3,
+      15,
+      12,
+      4
+    ],
+    "distribuicao_por_dezenas": {
+      "11-20": 2,
+      "31-40": 1,
+      "41-50": 2
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Gibosa crescente",
+    "iluminacao_lunar_percent": 74.385,
+    "idade_lunar_dias": 9.777,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2020",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2020",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2020_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "6ce5d66a2c36d4c29ad55adca21df38dd4264551a6b3c9e20e067622ac38951c",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

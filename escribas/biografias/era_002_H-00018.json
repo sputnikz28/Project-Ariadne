@@ -1,0 +1,86 @@
+{
+  "era": 2,
+  "id": "H-00018",
+  "nome": "Thara dos Ossos",
+  "raca": "Goblin",
+  "casa": "Casa dos Ossos",
+  "geracao": 1,
+  "pais": [],
+  "pontos": 155,
+  "titulo": "Sussurrador do Destino",
+  "estado": "VIVO",
+  "amuletos": [],
+  "melhores_chaves": [
+    {
+      "geracao": 1,
+      "numeros": [
+        32,
+        33,
+        35,
+        42,
+        45
+      ],
+      "estrelas": [
+        3,
+        5
+      ]
+    },
+    {
+      "geracao": 2,
+      "numeros": [
+        38,
+        39,
+        41,
+        47,
+        48
+      ],
+      "estrelas": [
+        6,
+        10
+      ]
+    },
+    {
+      "geracao": 3,
+      "numeros": [
+        7,
+        26,
+        35,
+        36,
+        48
+      ],
+      "estrelas": [
+        4,
+        12
+      ]
+    },
+    {
+      "geracao": 4,
+      "numeros": [
+        33,
+        42,
+        44,
+        45,
+        47
+      ],
+      "estrelas": [
+        4,
+        12
+      ]
+    },
+    {
+      "geracao": 5,
+      "numeros": [
+        1,
+        36,
+        38,
+        40,
+        50
+      ],
+      "estrelas": [
+        1,
+        8
+      ]
+    }
+  ],
+  "criada_em": "2026-07-11T13:32:34+00:00"
+}

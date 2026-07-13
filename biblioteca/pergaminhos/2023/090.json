@@ -1,0 +1,88 @@
+{
+  "id": "PERG-2023-090",
+  "titulo": "Pergaminho da Extração 090/2023",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2023,
+  "numero_sorteio": "090/2023",
+  "data": "2023-11-10",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "19:00:00",
+    "timestamp_utc": "2023-11-10T19:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      10,
+      21,
+      30,
+      38,
+      42
+    ],
+    "estrelas": [
+      2,
+      12
+    ],
+    "formato": "10 21 30 38 42 + 2 12",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 141,
+    "media_numeros": 28.2,
+    "mediana_numeros": 30,
+    "desvio_padrao": 11.6,
+    "amplitude": 32,
+    "pares": 4,
+    "impares": 1,
+    "gaps": [
+      11,
+      9,
+      8,
+      4
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 1,
+      "21-30": 2,
+      "31-40": 1,
+      "41-50": 1
+    },
+    "repetidos_sorteio_anterior": [
+      10,
+      30
+    ],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Lua minguante",
+    "iluminacao_lunar_percent": 6.877,
+    "idade_lunar_dias": 27.036,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2023",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2023",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2023_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "c9d44742561f36b2af6ad83a25b4822484d23add4c4123f4222816faa7b487da",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

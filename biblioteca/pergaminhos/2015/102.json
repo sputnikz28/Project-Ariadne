@@ -1,0 +1,84 @@
+{
+  "id": "PERG-2015-102",
+  "titulo": "Pergaminho da Extração 102/2015",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2015,
+  "numero_sorteio": "102/2015",
+  "data": "2015-12-22",
+  "dia_semana": "terça-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "19:00:00",
+    "timestamp_utc": "2015-12-22T19:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      18,
+      19,
+      20,
+      40,
+      41
+    ],
+    "estrelas": [
+      7,
+      10
+    ],
+    "formato": "18 19 20 40 41 + 7 10",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 138,
+    "media_numeros": 27.6,
+    "mediana_numeros": 20,
+    "desvio_padrao": 10.5565,
+    "amplitude": 23,
+    "pares": 3,
+    "impares": 2,
+    "gaps": [
+      1,
+      1,
+      20,
+      1
+    ],
+    "distribuicao_por_dezenas": {
+      "11-20": 3,
+      "31-40": 1,
+      "41-50": 1
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Gibosa crescente",
+    "iluminacao_lunar_percent": 90.917,
+    "idade_lunar_dias": 11.888,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2015",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2015",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2015_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "d044b912b3c3cbf490538ddec86573e2d0964363f7272a12e02ffb87a6ada9cb",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

@@ -1,0 +1,18 @@
+ORÁCULOS DO EUROMILHÕES V7 — BIBLIOTECA ETERNA
+
+Requisitos:
+- Python 3.10 ou superior
+- Sem dependências externas obrigatórias para a simulação V7
+
+Executar:
+    python simular_v7.py
+
+Consultar Ariadne:
+    python consultar_ariadne.py lua "Lua cheia"
+    python consultar_ariadne.py numero 17
+    python consultar_ariadne.py duplas
+    python consultar_ariadne.py triplas
+
+Executar o universo anterior:
+    python main.py
+    python campanha_v6.py

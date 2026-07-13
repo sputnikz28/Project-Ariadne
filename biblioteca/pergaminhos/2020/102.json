@@ -1,0 +1,86 @@
+{
+  "id": "PERG-2020-102",
+  "titulo": "Pergaminho da Extração 102/2020",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2020,
+  "numero_sorteio": "102/2020",
+  "data": "2020-12-22",
+  "dia_semana": "terça-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "19:00:00",
+    "timestamp_utc": "2020-12-22T19:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      2,
+      10,
+      16,
+      42,
+      50
+    ],
+    "estrelas": [
+      4,
+      11
+    ],
+    "formato": "2 10 16 42 50 + 4 11",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 120,
+    "media_numeros": 24,
+    "mediana_numeros": 16,
+    "desvio_padrao": 18.6762,
+    "amplitude": 48,
+    "pares": 5,
+    "impares": 0,
+    "gaps": [
+      8,
+      6,
+      26,
+      8
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 2,
+      "11-20": 1,
+      "41-50": 2
+    },
+    "repetidos_sorteio_anterior": [
+      2
+    ],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Quarto crescente",
+    "iluminacao_lunar_percent": 57.696,
+    "idade_lunar_dias": 8.109,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2020",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2020",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2020_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "7b7532617b53ca98b43f8f8d21740c28c42e76e3ccd84e4a05718468df2dbd06",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

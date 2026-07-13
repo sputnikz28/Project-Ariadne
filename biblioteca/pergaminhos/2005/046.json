@@ -1,0 +1,87 @@
+{
+  "id": "PERG-2005-046",
+  "titulo": "Pergaminho da Extração 046/2005",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2005,
+  "numero_sorteio": "046/2005",
+  "data": "2005-11-18",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "19:00:00",
+    "timestamp_utc": "2005-11-18T19:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      17,
+      18,
+      25,
+      34,
+      48
+    ],
+    "estrelas": [
+      2,
+      3
+    ],
+    "formato": "17 18 25 34 48 + 2 3",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 142,
+    "media_numeros": 28.4,
+    "mediana_numeros": 25,
+    "desvio_padrao": 11.5343,
+    "amplitude": 31,
+    "pares": 3,
+    "impares": 2,
+    "gaps": [
+      1,
+      7,
+      9,
+      14
+    ],
+    "distribuicao_por_dezenas": {
+      "11-20": 2,
+      "21-30": 1,
+      "31-40": 1,
+      "41-50": 1
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": [
+      3
+    ]
+  },
+  "astronomia": {
+    "fase_lua": "Gibosa minguante",
+    "iluminacao_lunar_percent": 91.892,
+    "idade_lunar_dias": 17.479,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2005",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2005",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2005_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "a8861391bf2b82bd4fc9e5e6e8530f89bed3fd7fb09b58ac2512b8852e3f25ef",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

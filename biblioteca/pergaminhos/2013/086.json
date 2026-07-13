@@ -1,0 +1,83 @@
+{
+  "id": "PERG-2013-086",
+  "titulo": "Pergaminho da Extração 086/2013",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2013,
+  "numero_sorteio": "086/2013",
+  "data": "2013-10-25",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2013-10-25T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      2,
+      3,
+      10,
+      31,
+      38
+    ],
+    "estrelas": [
+      6,
+      10
+    ],
+    "formato": "2 3 10 31 38 + 6 10",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 84,
+    "media_numeros": 16.8,
+    "mediana_numeros": 10,
+    "desvio_padrao": 14.8782,
+    "amplitude": 36,
+    "pares": 3,
+    "impares": 2,
+    "gaps": [
+      1,
+      7,
+      21,
+      7
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 3,
+      "31-40": 2
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Quarto minguante",
+    "iluminacao_lunar_percent": 61.644,
+    "idade_lunar_dias": 21.043,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2013",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2013",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2013_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "c614743b1616f9971d78caa7312af7b99fd6a232ad5ee294c2bc5df0c728ab36",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

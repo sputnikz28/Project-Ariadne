@@ -1,0 +1,89 @@
+{
+  "era": 4,
+  "id": "H-00073",
+  "nome": "Velka do Bosque",
+  "raca": "Vidente",
+  "casa": "Casa das Estrelas",
+  "geracao": 2,
+  "pais": [
+    "H-00016",
+    "H-00003"
+  ],
+  "pontos": 145,
+  "titulo": "Observador Celeste",
+  "estado": "VIVO",
+  "amuletos": [],
+  "melhores_chaves": [
+    {
+      "geracao": 2,
+      "numeros": [
+        7,
+        33,
+        35,
+        37,
+        39
+      ],
+      "estrelas": [
+        4,
+        9
+      ]
+    },
+    {
+      "geracao": 3,
+      "numeros": [
+        8,
+        25,
+        26,
+        33,
+        45
+      ],
+      "estrelas": [
+        5,
+        6
+      ]
+    },
+    {
+      "geracao": 4,
+      "numeros": [
+        2,
+        5,
+        25,
+        36,
+        39
+      ],
+      "estrelas": [
+        4,
+        5
+      ]
+    },
+    {
+      "geracao": 5,
+      "numeros": [
+        5,
+        34,
+        37,
+        41,
+        45
+      ],
+      "estrelas": [
+        2,
+        5
+      ]
+    },
+    {
+      "geracao": 6,
+      "numeros": [
+        3,
+        7,
+        21,
+        31,
+        46
+      ],
+      "estrelas": [
+        4,
+        9
+      ]
+    }
+  ],
+  "criada_em": "2026-07-11T09:21:49+00:00"
+}

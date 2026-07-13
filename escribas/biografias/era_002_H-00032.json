@@ -1,0 +1,86 @@
+{
+  "era": 2,
+  "id": "H-00032",
+  "nome": "Thara da Lua Fria",
+  "raca": "Goblin",
+  "casa": "Casa das Estrelas",
+  "geracao": 1,
+  "pais": [],
+  "pontos": 140,
+  "titulo": "Observador Celeste",
+  "estado": "VIVO",
+  "amuletos": [],
+  "melhores_chaves": [
+    {
+      "geracao": 1,
+      "numeros": [
+        34,
+        36,
+        39,
+        41,
+        46
+      ],
+      "estrelas": [
+        6,
+        7
+      ]
+    },
+    {
+      "geracao": 2,
+      "numeros": [
+        7,
+        27,
+        38,
+        45,
+        50
+      ],
+      "estrelas": [
+        1,
+        5
+      ]
+    },
+    {
+      "geracao": 3,
+      "numeros": [
+        24,
+        28,
+        35,
+        36,
+        39
+      ],
+      "estrelas": [
+        9,
+        11
+      ]
+    },
+    {
+      "geracao": 4,
+      "numeros": [
+        7,
+        32,
+        42,
+        45,
+        46
+      ],
+      "estrelas": [
+        10,
+        12
+      ]
+    },
+    {
+      "geracao": 5,
+      "numeros": [
+        15,
+        25,
+        40,
+        47,
+        49
+      ],
+      "estrelas": [
+        2,
+        8
+      ]
+    }
+  ],
+  "criada_em": "2026-07-11T13:32:34+00:00"
+}

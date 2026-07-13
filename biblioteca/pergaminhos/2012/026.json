@@ -1,0 +1,88 @@
+{
+  "id": "PERG-2012-026",
+  "titulo": "Pergaminho da Extração 026/2012",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2012,
+  "numero_sorteio": "026/2012",
+  "data": "2012-03-30",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2012-03-30T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      4,
+      17,
+      23,
+      36,
+      46
+    ],
+    "estrelas": [
+      6,
+      10
+    ],
+    "formato": "4 17 23 36 46 + 6 10",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 126,
+    "media_numeros": 25.2,
+    "mediana_numeros": 23,
+    "desvio_padrao": 14.6342,
+    "amplitude": 42,
+    "pares": 3,
+    "impares": 2,
+    "gaps": [
+      13,
+      6,
+      13,
+      10
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 1,
+      "11-20": 1,
+      "21-30": 1,
+      "31-40": 1,
+      "41-50": 1
+    },
+    "repetidos_sorteio_anterior": [
+      36
+    ],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Quarto crescente",
+    "iluminacao_lunar_percent": 49.305,
+    "idade_lunar_dias": 7.317,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2012",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2012",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2012_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "6125bc8ac409dec8c80aa63985a4f4648beb5c15097b2d8e68fb485d21d39907",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

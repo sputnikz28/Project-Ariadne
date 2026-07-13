@@ -1,0 +1,86 @@
+{
+  "id": "PERG-2022-078",
+  "titulo": "Pergaminho da Extração 078/2022",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2022,
+  "numero_sorteio": "078/2022",
+  "data": "2022-09-30",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2022-09-30T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      1,
+      2,
+      11,
+      16,
+      26
+    ],
+    "estrelas": [
+      3,
+      12
+    ],
+    "formato": "1 2 11 16 26 + 3 12",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 56,
+    "media_numeros": 11.2,
+    "mediana_numeros": 11,
+    "desvio_padrao": 9.2822,
+    "amplitude": 25,
+    "pares": 3,
+    "impares": 2,
+    "gaps": [
+      1,
+      9,
+      5,
+      10
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 2,
+      "11-20": 2,
+      "21-30": 1
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": [
+      3
+    ]
+  },
+  "astronomia": {
+    "fase_lua": "Lua crescente",
+    "iluminacao_lunar_percent": 25.372,
+    "idade_lunar_dias": 4.962,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2022",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2022",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2022_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "a28462623e0e5ed32f7bb0d8baee5969de2cefdc69fd7d464d5dbee6b6b7316c",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

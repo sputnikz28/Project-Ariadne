@@ -1,0 +1,89 @@
+{
+  "id": "PERG-2013-074",
+  "titulo": "Pergaminho da Extração 074/2013",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2013,
+  "numero_sorteio": "074/2013",
+  "data": "2013-09-13",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2013-09-13T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      4,
+      6,
+      14,
+      27,
+      33
+    ],
+    "estrelas": [
+      5,
+      10
+    ],
+    "formato": "4 6 14 27 33 + 5 10",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 84,
+    "media_numeros": 16.8,
+    "mediana_numeros": 14,
+    "desvio_padrao": 11.4438,
+    "amplitude": 29,
+    "pares": 3,
+    "impares": 2,
+    "gaps": [
+      2,
+      8,
+      13,
+      6
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 2,
+      "11-20": 1,
+      "21-30": 1,
+      "31-40": 1
+    },
+    "repetidos_sorteio_anterior": [
+      14
+    ],
+    "estrelas_repetidas_sorteio_anterior": [
+      10
+    ]
+  },
+  "astronomia": {
+    "fase_lua": "Quarto crescente",
+    "iluminacao_lunar_percent": 61.828,
+    "idade_lunar_dias": 8.505,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2013",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2013",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2013_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "11b69460122d8af2920ed70ed8155c3a72a6c10754a807a1c4b153eb3cfada5c",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

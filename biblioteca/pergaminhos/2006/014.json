@@ -1,0 +1,86 @@
+{
+  "id": "PERG-2006-014",
+  "titulo": "Pergaminho da Extração 014/2006",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2006,
+  "numero_sorteio": "014/2006",
+  "data": "2006-04-07",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2006-04-07T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      12,
+      13,
+      29,
+      44,
+      50
+    ],
+    "estrelas": [
+      4,
+      5
+    ],
+    "formato": "12 13 29 44 50 + 4 5",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 148,
+    "media_numeros": 29.6,
+    "mediana_numeros": 29,
+    "desvio_padrao": 15.5512,
+    "amplitude": 38,
+    "pares": 3,
+    "impares": 2,
+    "gaps": [
+      1,
+      16,
+      15,
+      6
+    ],
+    "distribuicao_por_dezenas": {
+      "11-20": 2,
+      "21-30": 1,
+      "41-50": 2
+    },
+    "repetidos_sorteio_anterior": [
+      50
+    ],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Gibosa crescente",
+    "iluminacao_lunar_percent": 71.115,
+    "idade_lunar_dias": 9.432,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2006",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2006",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2006_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "452040bdd776adff865e63951a376d66e722a404b258caf6757274491b2536d8",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

@@ -1,0 +1,92 @@
+{
+  "id": "PERG-2026-017",
+  "titulo": "Pergaminho da Extração 017/2026",
+  "biblioteca": "Grande Grimório das Extrações",
+  "estado": "SELADO",
+  "raridade": "Sagrado",
+  "data": {
+    "extracao": "2026-02-27",
+    "dia_semana": "sexta-feira",
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "timestamp_utc": "2026-02-27T19:00:00+00:00"
+  },
+  "extracao": {
+    "numero_sorteio": "017/2026",
+    "numeros": [
+      14,
+      24,
+      27,
+      39,
+      42
+    ],
+    "estrelas": [
+      6,
+      10
+    ],
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma": 146,
+    "media": 29.2,
+    "mediana": 27,
+    "desvio_padrao": 10.2255,
+    "amplitude": 28,
+    "pares": 3,
+    "impares": 2,
+    "gaps": [
+      10,
+      3,
+      12,
+      3
+    ],
+    "distribuicao_dezenas": {
+      "11-20": 1,
+      "21-30": 2,
+      "31-40": 1,
+      "41-50": 1
+    },
+    "repetidos_anterior": [
+      27
+    ],
+    "estrelas_repetidas_anterior": [
+      6,
+      10
+    ]
+  },
+  "astronomia": {
+    "fase_lua": "Gibosa crescente",
+    "iluminacao_percent": 84.136,
+    "idade_lunar_dias": 10.915,
+    "eclipse": false
+  },
+  "premios": {
+    "categorias": null,
+    "houve_vencedor_1_premio_total": null,
+    "houve_vencedor_1_premio_portugal": null,
+    "total_vencedores_todas_categorias": null,
+    "total_vencedores_portugal_todas_categorias": null
+  },
+  "qualidade_dados": {
+    "fonte_resultado": "texto ou imagem fornecidos pelo utilizador",
+    "transcricao_manual": true,
+    "ordem_saida_confirmada": false,
+    "dados_financeiros_disponiveis": false,
+    "categorias_premio_disponiveis": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "receita_liquida_apostas_eur",
+      "montante_para_premios_eur",
+      "jackpot_previsto",
+      "categorias_premio"
+    ]
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "selo": "Biblioteca Eterna",
+    "sha256": "b71982dda8a67e30d09743d968882dba25c320445ec5e1f3c30bfe9eaa457e08",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

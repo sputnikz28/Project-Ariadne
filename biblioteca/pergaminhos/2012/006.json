@@ -1,0 +1,87 @@
+{
+  "id": "PERG-2012-006",
+  "titulo": "Pergaminho da Extração 006/2012",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2012,
+  "numero_sorteio": "006/2012",
+  "data": "2012-01-20",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "19:00:00",
+    "timestamp_utc": "2012-01-20T19:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      2,
+      10,
+      22,
+      27,
+      28
+    ],
+    "estrelas": [
+      6,
+      8
+    ],
+    "formato": "2 10 22 27 28 + 6 8",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 89,
+    "media_numeros": 17.8,
+    "mediana_numeros": 22,
+    "desvio_padrao": 10.1666,
+    "amplitude": 26,
+    "pares": 4,
+    "impares": 1,
+    "gaps": [
+      8,
+      12,
+      5,
+      1
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 2,
+      "21-30": 3
+    },
+    "repetidos_sorteio_anterior": [
+      22
+    ],
+    "estrelas_repetidas_sorteio_anterior": [
+      6
+    ]
+  },
+  "astronomia": {
+    "fase_lua": "Lua minguante",
+    "iluminacao_lunar_percent": 7.718,
+    "idade_lunar_dias": 26.884,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2012",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2012",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2012_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "840e87f6e13f42ca955b3ac79aeceb37a5ad0ed5a523de81ec7199d89f27f876",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

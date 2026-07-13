@@ -1,0 +1,89 @@
+{
+  "era": 1,
+  "id": "H-00089",
+  "nome": "Morgana dos Ossos",
+  "raca": "Bruxa",
+  "casa": "Casa dos Ossos",
+  "geracao": 2,
+  "pais": [
+    "H-00007",
+    "H-00016"
+  ],
+  "pontos": 160,
+  "titulo": "Observador Celeste",
+  "estado": "VIVO",
+  "amuletos": [],
+  "melhores_chaves": [
+    {
+      "geracao": 2,
+      "numeros": [
+        25,
+        27,
+        33,
+        45,
+        49
+      ],
+      "estrelas": [
+        1,
+        4
+      ]
+    },
+    {
+      "geracao": 3,
+      "numeros": [
+        23,
+        27,
+        33,
+        39,
+        50
+      ],
+      "estrelas": [
+        5,
+        12
+      ]
+    },
+    {
+      "geracao": 4,
+      "numeros": [
+        3,
+        18,
+        19,
+        25,
+        43
+      ],
+      "estrelas": [
+        4,
+        10
+      ]
+    },
+    {
+      "geracao": 5,
+      "numeros": [
+        18,
+        25,
+        29,
+        31,
+        50
+      ],
+      "estrelas": [
+        5,
+        10
+      ]
+    },
+    {
+      "geracao": 6,
+      "numeros": [
+        7,
+        8,
+        20,
+        32,
+        34
+      ],
+      "estrelas": [
+        6,
+        12
+      ]
+    }
+  ],
+  "criada_em": "2026-07-11T09:21:30+00:00"
+}

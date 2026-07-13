@@ -1,0 +1,89 @@
+{
+  "era": 3,
+  "id": "H-00133",
+  "nome": "Kael da Lua Fria",
+  "raca": "Vidente",
+  "casa": "Casa dos Ossos",
+  "geracao": 3,
+  "pais": [
+    "H-00004",
+    "H-00049"
+  ],
+  "pontos": 153,
+  "titulo": "Errante das Sombras",
+  "estado": "VIVO",
+  "amuletos": [],
+  "melhores_chaves": [
+    {
+      "geracao": 3,
+      "numeros": [
+        8,
+        20,
+        21,
+        34,
+        39
+      ],
+      "estrelas": [
+        4,
+        5
+      ]
+    },
+    {
+      "geracao": 4,
+      "numeros": [
+        10,
+        18,
+        36,
+        41,
+        49
+      ],
+      "estrelas": [
+        2,
+        9
+      ]
+    },
+    {
+      "geracao": 5,
+      "numeros": [
+        3,
+        18,
+        34,
+        44,
+        46
+      ],
+      "estrelas": [
+        6,
+        9
+      ]
+    },
+    {
+      "geracao": 6,
+      "numeros": [
+        3,
+        21,
+        25,
+        34,
+        50
+      ],
+      "estrelas": [
+        2,
+        5
+      ]
+    },
+    {
+      "geracao": 7,
+      "numeros": [
+        3,
+        9,
+        17,
+        39,
+        46
+      ],
+      "estrelas": [
+        5,
+        9
+      ]
+    }
+  ],
+  "criada_em": "2026-07-11T09:21:43+00:00"
+}

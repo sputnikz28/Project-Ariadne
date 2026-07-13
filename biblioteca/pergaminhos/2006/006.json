@@ -1,0 +1,86 @@
+{
+  "id": "PERG-2006-006",
+  "titulo": "Pergaminho da Extração 006/2006",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2006,
+  "numero_sorteio": "006/2006",
+  "data": "2006-02-10",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "19:00:00",
+    "timestamp_utc": "2006-02-10T19:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      5,
+      6,
+      38,
+      48,
+      50
+    ],
+    "estrelas": [
+      6,
+      7
+    ],
+    "formato": "5 6 38 48 50 + 6 7",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 147,
+    "media_numeros": 29.4,
+    "mediana_numeros": 38,
+    "desvio_padrao": 19.9359,
+    "amplitude": 45,
+    "pares": 4,
+    "impares": 1,
+    "gaps": [
+      1,
+      32,
+      10,
+      2
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 2,
+      "31-40": 1,
+      "41-50": 2
+    },
+    "repetidos_sorteio_anterior": [
+      50
+    ],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Gibosa crescente",
+    "iluminacao_lunar_percent": 94.832,
+    "idade_lunar_dias": 12.61,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2006",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2006",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2006_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "f997ad7e7345e73078446ca87d2f2633f5b2188a91b1a7086cb663044d6f6973",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

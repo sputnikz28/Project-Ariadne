@@ -1,0 +1,84 @@
+{
+  "id": "PERG-2023-065",
+  "titulo": "Pergaminho da Extração 065/2023",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2023,
+  "numero_sorteio": "065/2023",
+  "data": "2023-08-15",
+  "dia_semana": "terça-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2023-08-15T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      3,
+      5,
+      9,
+      32,
+      43
+    ],
+    "estrelas": [
+      6,
+      10
+    ],
+    "formato": "3 5 9 32 43 + 6 10",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 92,
+    "media_numeros": 18.4,
+    "mediana_numeros": 9,
+    "desvio_padrao": 16.0947,
+    "amplitude": 40,
+    "pares": 1,
+    "impares": 4,
+    "gaps": [
+      2,
+      4,
+      23,
+      11
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 3,
+      "31-40": 1,
+      "41-50": 1
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Lua nova",
+    "iluminacao_lunar_percent": 0.383,
+    "idade_lunar_dias": 28.948,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2023",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2023",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2023_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "f38de2c76833640b73ef694319b1588fb90c43a4a3d155fca18493fef90daa29",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

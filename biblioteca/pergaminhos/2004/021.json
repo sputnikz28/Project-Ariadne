@@ -1,0 +1,88 @@
+{
+  "id": "PERG-2004-021",
+  "titulo": "Pergaminho da Extração 021/2004",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2004,
+  "numero_sorteio": "021/2004",
+  "data": "2004-07-02",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2004-07-02T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      4,
+      23,
+      24,
+      28,
+      34
+    ],
+    "estrelas": [
+      1,
+      3
+    ],
+    "formato": "4 23 24 28 34 + 1 3",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 113,
+    "media_numeros": 22.6,
+    "mediana_numeros": 24,
+    "desvio_padrao": 10.0717,
+    "amplitude": 30,
+    "pares": 4,
+    "impares": 1,
+    "gaps": [
+      19,
+      1,
+      4,
+      6
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 1,
+      "21-30": 3,
+      "31-40": 1
+    },
+    "repetidos_sorteio_anterior": [
+      34
+    ],
+    "estrelas_repetidas_sorteio_anterior": [
+      1
+    ]
+  },
+  "astronomia": {
+    "fase_lua": "Lua cheia",
+    "iluminacao_lunar_percent": 99.873,
+    "idade_lunar_dias": 15.1,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2004",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2004",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2004_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "23d334b773baeb720bfcfff169762e4aa96d7267be4b227e1d516b36f4371cab",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

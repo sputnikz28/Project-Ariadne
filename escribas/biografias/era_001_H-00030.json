@@ -1,0 +1,86 @@
+{
+  "era": 1,
+  "id": "H-00030",
+  "nome": "Aruk da Névoa",
+  "raca": "Goblin",
+  "casa": "Casa Tribal",
+  "geracao": 1,
+  "pais": [],
+  "pontos": 132,
+  "titulo": "Errante das Sombras",
+  "estado": "VIVO",
+  "amuletos": [],
+  "melhores_chaves": [
+    {
+      "geracao": 1,
+      "numeros": [
+        22,
+        25,
+        40,
+        45,
+        46
+      ],
+      "estrelas": [
+        3,
+        8
+      ]
+    },
+    {
+      "geracao": 2,
+      "numeros": [
+        24,
+        31,
+        41,
+        45,
+        48
+      ],
+      "estrelas": [
+        1,
+        12
+      ]
+    },
+    {
+      "geracao": 3,
+      "numeros": [
+        17,
+        37,
+        38,
+        45,
+        48
+      ],
+      "estrelas": [
+        8,
+        9
+      ]
+    },
+    {
+      "geracao": 4,
+      "numeros": [
+        15,
+        26,
+        46,
+        49,
+        50
+      ],
+      "estrelas": [
+        3,
+        10
+      ]
+    },
+    {
+      "geracao": 5,
+      "numeros": [
+        28,
+        32,
+        39,
+        40,
+        45
+      ],
+      "estrelas": [
+        9,
+        12
+      ]
+    }
+  ],
+  "criada_em": "2026-07-11T13:32:31+00:00"
+}

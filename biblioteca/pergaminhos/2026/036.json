@@ -1,0 +1,100 @@
+{
+  "id": "PERG-2026-036",
+  "titulo": "Pergaminho da Extração 036/2026",
+  "biblioteca": "Grande Grimório das Extrações",
+  "estado": "SELADO",
+  "raridade": "Sagrado",
+  "data": {
+    "extracao": "2026-05-05",
+    "dia_semana": "terça-feira",
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "timestamp_utc": "2026-05-05T18:00:00+00:00"
+  },
+  "extracao": {
+    "numero_sorteio": "036/2026",
+    "numeros": [
+      3,
+      4,
+      8,
+      20,
+      31
+    ],
+    "estrelas": [
+      6,
+      8
+    ],
+    "ordem_saida": {
+      "numeros": [
+        4,
+        8,
+        3,
+        31,
+        20
+      ],
+      "estrelas": [
+        6,
+        8
+      ],
+      "formato": "4 8 3 31 20 + 6 8"
+    },
+    "ordem_saida_disponivel": true
+  },
+  "estatisticas": {
+    "soma": 66,
+    "media": 13.2,
+    "mediana": 8,
+    "desvio_padrao": 10.7592,
+    "amplitude": 28,
+    "pares": 3,
+    "impares": 2,
+    "gaps": [
+      1,
+      4,
+      12,
+      11
+    ],
+    "distribuicao_dezenas": {
+      "01-10": 3,
+      "11-20": 1,
+      "31-40": 1
+    },
+    "repetidos_anterior": [
+      3
+    ],
+    "estrelas_repetidas_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Gibosa minguante",
+    "iluminacao_percent": 85.842,
+    "idade_lunar_dias": 18.391,
+    "eclipse": false
+  },
+  "premios": {
+    "categorias": null,
+    "houve_vencedor_1_premio_total": null,
+    "houve_vencedor_1_premio_portugal": null,
+    "total_vencedores_todas_categorias": null,
+    "total_vencedores_portugal_todas_categorias": null
+  },
+  "qualidade_dados": {
+    "fonte_resultado": "texto ou imagem fornecidos pelo utilizador",
+    "transcricao_manual": true,
+    "ordem_saida_confirmada": true,
+    "dados_financeiros_disponiveis": false,
+    "categorias_premio_disponiveis": false,
+    "campos_em_falta": [
+      "receita_liquida_apostas_eur",
+      "montante_para_premios_eur",
+      "jackpot_previsto",
+      "categorias_premio"
+    ]
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "selo": "Biblioteca Eterna",
+    "sha256": "d937695f6137c2369600ef7dfebdd8117dd7789b003c64ed1ca7a29607c7b813",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

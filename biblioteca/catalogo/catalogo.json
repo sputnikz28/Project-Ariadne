@@ -1,0 +1,24 @@
+{
+  "nome": "Catálogo da Biblioteca Eterna",
+  "versao": "7.0",
+  "guardia": "Ariadne",
+  "pergaminhos": 55,
+  "livros": [
+    "Grande Grimório das Extrações",
+    "Livro das Pedras Eternas",
+    "Livro dos Pactos de Pedra",
+    "Livro do Sangue Triplo",
+    "Livro Lunar",
+    "Livro das Chamas e dos Esquecidos",
+    "Atlas das Doze Luzes"
+  ],
+  "classes_especialistas": {
+    "Clérigos": "Algoritmo genético equilibrado",
+    "Melforks": "Mantêm a estratégia atual",
+    "Vampiros": "Triplas e linhagens",
+    "Gárgulas": "Duplas e pactos",
+    "Treefolks": "Hipóteses e validação",
+    "Bibliotecários": "Transformação de fontes em livros",
+    "Escribas": "Validação, assinatura e crónicas"
+  }
+}

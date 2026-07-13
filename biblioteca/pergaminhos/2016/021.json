@@ -1,0 +1,87 @@
+{
+  "id": "PERG-2016-021",
+  "titulo": "Pergaminho da Extração 021/2016",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2016,
+  "numero_sorteio": "021/2016",
+  "data": "2016-03-11",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "19:00:00",
+    "timestamp_utc": "2016-03-11T19:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      1,
+      21,
+      26,
+      40,
+      43
+    ],
+    "estrelas": [
+      6,
+      9
+    ],
+    "formato": "1 21 26 40 43 + 6 9",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 131,
+    "media_numeros": 26.2,
+    "mediana_numeros": 26,
+    "desvio_padrao": 15.0652,
+    "amplitude": 42,
+    "pares": 2,
+    "impares": 3,
+    "gaps": [
+      20,
+      5,
+      14,
+      3
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 1,
+      "21-30": 2,
+      "31-40": 1,
+      "41-50": 1
+    },
+    "repetidos_sorteio_anterior": [
+      1
+    ],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Lua crescente",
+    "iluminacao_lunar_percent": 10.552,
+    "idade_lunar_dias": 3.11,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2016",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2016",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2016_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "d72a69d1b3b4d00f9dfed7a93832722a7e80a9ba883fd566421e54473d5cbdcb",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

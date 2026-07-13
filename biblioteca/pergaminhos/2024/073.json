@@ -1,0 +1,86 @@
+{
+  "id": "PERG-2024-073",
+  "titulo": "Pergaminho da Extração 073/2024",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2024,
+  "numero_sorteio": "073/2024",
+  "data": "2024-09-10",
+  "dia_semana": "terça-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2024-09-10T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      6,
+      29,
+      46,
+      47,
+      48
+    ],
+    "estrelas": [
+      2,
+      9
+    ],
+    "formato": "6 29 46 47 48 + 2 9",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 176,
+    "media_numeros": 35.2,
+    "mediana_numeros": 46,
+    "desvio_padrao": 16.1914,
+    "amplitude": 42,
+    "pares": 3,
+    "impares": 2,
+    "gaps": [
+      23,
+      17,
+      1,
+      1
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 1,
+      "21-30": 1,
+      "41-50": 3
+    },
+    "repetidos_sorteio_anterior": [
+      47
+    ],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Quarto crescente",
+    "iluminacao_lunar_percent": 44.895,
+    "idade_lunar_dias": 6.902,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2024",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2024",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2024_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "aee2f4f057a5c20540023f16b28da6ea0bc711b5f54fd5d8e0d13bfae7d6661d",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

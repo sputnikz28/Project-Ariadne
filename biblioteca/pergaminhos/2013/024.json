@@ -1,0 +1,89 @@
+{
+  "id": "PERG-2013-024",
+  "titulo": "Pergaminho da Extração 024/2013",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2013,
+  "numero_sorteio": "024/2013",
+  "data": "2013-03-22",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "19:00:00",
+    "timestamp_utc": "2013-03-22T19:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      12,
+      27,
+      32,
+      34,
+      49
+    ],
+    "estrelas": [
+      8,
+      9
+    ],
+    "formato": "12 27 32 34 49 + 8 9",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 154,
+    "media_numeros": 30.8,
+    "mediana_numeros": 32,
+    "desvio_padrao": 11.9231,
+    "amplitude": 37,
+    "pares": 3,
+    "impares": 2,
+    "gaps": [
+      15,
+      5,
+      2,
+      15
+    ],
+    "distribuicao_por_dezenas": {
+      "11-20": 1,
+      "21-30": 1,
+      "31-40": 2,
+      "41-50": 1
+    },
+    "repetidos_sorteio_anterior": [
+      32
+    ],
+    "estrelas_repetidas_sorteio_anterior": [
+      9
+    ]
+  },
+  "astronomia": {
+    "fase_lua": "Gibosa crescente",
+    "iluminacao_lunar_percent": 77.92,
+    "idade_lunar_dias": 10.167,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2013",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2013",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2013_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "db9975eeb4e6e9121d3fd430412c2322515ff7ddfb7ba8d829c40071346477f8",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

@@ -1,0 +1,86 @@
+{
+  "id": "PERG-2013-041",
+  "titulo": "Pergaminho da Extração 041/2013",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2013,
+  "numero_sorteio": "041/2013",
+  "data": "2013-05-21",
+  "dia_semana": "terça-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2013-05-21T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      7,
+      8,
+      19,
+      28,
+      29
+    ],
+    "estrelas": [
+      5,
+      9
+    ],
+    "formato": "7 8 19 28 29 + 5 9",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 91,
+    "media_numeros": 18.2,
+    "mediana_numeros": 19,
+    "desvio_padrao": 9.4106,
+    "amplitude": 22,
+    "pares": 2,
+    "impares": 3,
+    "gaps": [
+      1,
+      11,
+      9,
+      1
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 2,
+      "11-20": 1,
+      "21-30": 2
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": [
+      9
+    ]
+  },
+  "astronomia": {
+    "fase_lua": "Gibosa crescente",
+    "iluminacao_lunar_percent": 84.303,
+    "idade_lunar_dias": 10.936,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2013",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2013",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2013_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "482b1cc6be01f9912535ca27c2968ed65264a22d23734a2c58a4345e58a4f22f",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

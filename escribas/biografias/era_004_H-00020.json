@@ -1,0 +1,86 @@
+{
+  "era": 4,
+  "id": "H-00020",
+  "nome": "Thara da Lua Fria",
+  "raca": "Vidente",
+  "casa": "Casa dos Ossos",
+  "geracao": 1,
+  "pais": [],
+  "pontos": 155,
+  "titulo": "Observador Celeste",
+  "estado": "VIVO",
+  "amuletos": [],
+  "melhores_chaves": [
+    {
+      "geracao": 1,
+      "numeros": [
+        23,
+        25,
+        33,
+        44,
+        45
+      ],
+      "estrelas": [
+        2,
+        5
+      ]
+    },
+    {
+      "geracao": 2,
+      "numeros": [
+        13,
+        24,
+        30,
+        31,
+        45
+      ],
+      "estrelas": [
+        2,
+        4
+      ]
+    },
+    {
+      "geracao": 3,
+      "numeros": [
+        22,
+        29,
+        33,
+        37,
+        46
+      ],
+      "estrelas": [
+        5,
+        9
+      ]
+    },
+    {
+      "geracao": 4,
+      "numeros": [
+        8,
+        18,
+        26,
+        31,
+        46
+      ],
+      "estrelas": [
+        6,
+        9
+      ]
+    },
+    {
+      "geracao": 5,
+      "numeros": [
+        12,
+        19,
+        28,
+        36,
+        37
+      ],
+      "estrelas": [
+        4,
+        6
+      ]
+    }
+  ],
+  "criada_em": "2026-07-11T09:21:49+00:00"
+}

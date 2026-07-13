@@ -1,0 +1,84 @@
+{
+  "id": "PERG-2016-089",
+  "titulo": "Pergaminho da Extração 089/2016",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2016,
+  "numero_sorteio": "089/2016",
+  "data": "2016-11-04",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "19:00:00",
+    "timestamp_utc": "2016-11-04T19:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      7,
+      11,
+      12,
+      44,
+      48
+    ],
+    "estrelas": [
+      3,
+      7
+    ],
+    "formato": "7 11 12 44 48 + 3 7",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 122,
+    "media_numeros": 24.4,
+    "mediana_numeros": 12,
+    "desvio_padrao": 17.7606,
+    "amplitude": 41,
+    "pares": 3,
+    "impares": 2,
+    "gaps": [
+      4,
+      1,
+      32,
+      4
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 1,
+      "11-20": 2,
+      "41-50": 2
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Lua crescente",
+    "iluminacao_lunar_percent": 21.474,
+    "idade_lunar_dias": 4.529,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2016",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2016",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2016_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "9733cebb929fc1185063fa11c1d19a668a0b54383dd29309c723c4151cd55efc",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

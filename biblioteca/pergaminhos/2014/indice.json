@@ -1,0 +1,531 @@
+{
+  "ano": 2014,
+  "fonte": "biblioteca/fontes/euromilhoes_2014_dataset_completo.json",
+  "primeiro_sorteio": "001/2014",
+  "ultimo_sorteio": "104/2014",
+  "data_inicio": "2014-01-03",
+  "data_fim": "2014-12-30",
+  "quantidade_sorteios": 104,
+  "pergaminhos": [
+    {
+      "numero_sorteio": "001/2014",
+      "data": "2014-01-03",
+      "ficheiro": "biblioteca/pergaminhos/2014/001.json"
+    },
+    {
+      "numero_sorteio": "002/2014",
+      "data": "2014-01-07",
+      "ficheiro": "biblioteca/pergaminhos/2014/002.json"
+    },
+    {
+      "numero_sorteio": "003/2014",
+      "data": "2014-01-10",
+      "ficheiro": "biblioteca/pergaminhos/2014/003.json"
+    },
+    {
+      "numero_sorteio": "004/2014",
+      "data": "2014-01-14",
+      "ficheiro": "biblioteca/pergaminhos/2014/004.json"
+    },
+    {
+      "numero_sorteio": "005/2014",
+      "data": "2014-01-17",
+      "ficheiro": "biblioteca/pergaminhos/2014/005.json"
+    },
+    {
+      "numero_sorteio": "006/2014",
+      "data": "2014-01-21",
+      "ficheiro": "biblioteca/pergaminhos/2014/006.json"
+    },
+    {
+      "numero_sorteio": "007/2014",
+      "data": "2014-01-24",
+      "ficheiro": "biblioteca/pergaminhos/2014/007.json"
+    },
+    {
+      "numero_sorteio": "008/2014",
+      "data": "2014-01-28",
+      "ficheiro": "biblioteca/pergaminhos/2014/008.json"
+    },
+    {
+      "numero_sorteio": "009/2014",
+      "data": "2014-01-31",
+      "ficheiro": "biblioteca/pergaminhos/2014/009.json"
+    },
+    {
+      "numero_sorteio": "010/2014",
+      "data": "2014-02-04",
+      "ficheiro": "biblioteca/pergaminhos/2014/010.json"
+    },
+    {
+      "numero_sorteio": "011/2014",
+      "data": "2014-02-07",
+      "ficheiro": "biblioteca/pergaminhos/2014/011.json"
+    },
+    {
+      "numero_sorteio": "012/2014",
+      "data": "2014-02-11",
+      "ficheiro": "biblioteca/pergaminhos/2014/012.json"
+    },
+    {
+      "numero_sorteio": "013/2014",
+      "data": "2014-02-14",
+      "ficheiro": "biblioteca/pergaminhos/2014/013.json"
+    },
+    {
+      "numero_sorteio": "014/2014",
+      "data": "2014-02-18",
+      "ficheiro": "biblioteca/pergaminhos/2014/014.json"
+    },
+    {
+      "numero_sorteio": "015/2014",
+      "data": "2014-02-21",
+      "ficheiro": "biblioteca/pergaminhos/2014/015.json"
+    },
+    {
+      "numero_sorteio": "016/2014",
+      "data": "2014-02-25",
+      "ficheiro": "biblioteca/pergaminhos/2014/016.json"
+    },
+    {
+      "numero_sorteio": "017/2014",
+      "data": "2014-02-28",
+      "ficheiro": "biblioteca/pergaminhos/2014/017.json"
+    },
+    {
+      "numero_sorteio": "018/2014",
+      "data": "2014-03-04",
+      "ficheiro": "biblioteca/pergaminhos/2014/018.json"
+    },
+    {
+      "numero_sorteio": "019/2014",
+      "data": "2014-03-07",
+      "ficheiro": "biblioteca/pergaminhos/2014/019.json"
+    },
+    {
+      "numero_sorteio": "020/2014",
+      "data": "2014-03-11",
+      "ficheiro": "biblioteca/pergaminhos/2014/020.json"
+    },
+    {
+      "numero_sorteio": "021/2014",
+      "data": "2014-03-14",
+      "ficheiro": "biblioteca/pergaminhos/2014/021.json"
+    },
+    {
+      "numero_sorteio": "022/2014",
+      "data": "2014-03-18",
+      "ficheiro": "biblioteca/pergaminhos/2014/022.json"
+    },
+    {
+      "numero_sorteio": "023/2014",
+      "data": "2014-03-21",
+      "ficheiro": "biblioteca/pergaminhos/2014/023.json"
+    },
+    {
+      "numero_sorteio": "024/2014",
+      "data": "2014-03-25",
+      "ficheiro": "biblioteca/pergaminhos/2014/024.json"
+    },
+    {
+      "numero_sorteio": "025/2014",
+      "data": "2014-03-28",
+      "ficheiro": "biblioteca/pergaminhos/2014/025.json"
+    },
+    {
+      "numero_sorteio": "026/2014",
+      "data": "2014-04-01",
+      "ficheiro": "biblioteca/pergaminhos/2014/026.json"
+    },
+    {
+      "numero_sorteio": "027/2014",
+      "data": "2014-04-04",
+      "ficheiro": "biblioteca/pergaminhos/2014/027.json"
+    },
+    {
+      "numero_sorteio": "028/2014",
+      "data": "2014-04-08",
+      "ficheiro": "biblioteca/pergaminhos/2014/028.json"
+    },
+    {
+      "numero_sorteio": "029/2014",
+      "data": "2014-04-11",
+      "ficheiro": "biblioteca/pergaminhos/2014/029.json"
+    },
+    {
+      "numero_sorteio": "030/2014",
+      "data": "2014-04-15",
+      "ficheiro": "biblioteca/pergaminhos/2014/030.json"
+    },
+    {
+      "numero_sorteio": "031/2014",
+      "data": "2014-04-18",
+      "ficheiro": "biblioteca/pergaminhos/2014/031.json"
+    },
+    {
+      "numero_sorteio": "032/2014",
+      "data": "2014-04-22",
+      "ficheiro": "biblioteca/pergaminhos/2014/032.json"
+    },
+    {
+      "numero_sorteio": "033/2014",
+      "data": "2014-04-25",
+      "ficheiro": "biblioteca/pergaminhos/2014/033.json"
+    },
+    {
+      "numero_sorteio": "034/2014",
+      "data": "2014-04-29",
+      "ficheiro": "biblioteca/pergaminhos/2014/034.json"
+    },
+    {
+      "numero_sorteio": "035/2014",
+      "data": "2014-05-02",
+      "ficheiro": "biblioteca/pergaminhos/2014/035.json"
+    },
+    {
+      "numero_sorteio": "036/2014",
+      "data": "2014-05-06",
+      "ficheiro": "biblioteca/pergaminhos/2014/036.json"
+    },
+    {
+      "numero_sorteio": "037/2014",
+      "data": "2014-05-09",
+      "ficheiro": "biblioteca/pergaminhos/2014/037.json"
+    },
+    {
+      "numero_sorteio": "038/2014",
+      "data": "2014-05-13",
+      "ficheiro": "biblioteca/pergaminhos/2014/038.json"
+    },
+    {
+      "numero_sorteio": "039/2014",
+      "data": "2014-05-16",
+      "ficheiro": "biblioteca/pergaminhos/2014/039.json"
+    },
+    {
+      "numero_sorteio": "040/2014",
+      "data": "2014-05-20",
+      "ficheiro": "biblioteca/pergaminhos/2014/040.json"
+    },
+    {
+      "numero_sorteio": "041/2014",
+      "data": "2014-05-23",
+      "ficheiro": "biblioteca/pergaminhos/2014/041.json"
+    },
+    {
+      "numero_sorteio": "042/2014",
+      "data": "2014-05-27",
+      "ficheiro": "biblioteca/pergaminhos/2014/042.json"
+    },
+    {
+      "numero_sorteio": "043/2014",
+      "data": "2014-05-30",
+      "ficheiro": "biblioteca/pergaminhos/2014/043.json"
+    },
+    {
+      "numero_sorteio": "044/2014",
+      "data": "2014-06-03",
+      "ficheiro": "biblioteca/pergaminhos/2014/044.json"
+    },
+    {
+      "numero_sorteio": "045/2014",
+      "data": "2014-06-06",
+      "ficheiro": "biblioteca/pergaminhos/2014/045.json"
+    },
+    {
+      "numero_sorteio": "046/2014",
+      "data": "2014-06-10",
+      "ficheiro": "biblioteca/pergaminhos/2014/046.json"
+    },
+    {
+      "numero_sorteio": "047/2014",
+      "data": "2014-06-13",
+      "ficheiro": "biblioteca/pergaminhos/2014/047.json"
+    },
+    {
+      "numero_sorteio": "048/2014",
+      "data": "2014-06-17",
+      "ficheiro": "biblioteca/pergaminhos/2014/048.json"
+    },
+    {
+      "numero_sorteio": "049/2014",
+      "data": "2014-06-20",
+      "ficheiro": "biblioteca/pergaminhos/2014/049.json"
+    },
+    {
+      "numero_sorteio": "050/2014",
+      "data": "2014-06-24",
+      "ficheiro": "biblioteca/pergaminhos/2014/050.json"
+    },
+    {
+      "numero_sorteio": "051/2014",
+      "data": "2014-06-27",
+      "ficheiro": "biblioteca/pergaminhos/2014/051.json"
+    },
+    {
+      "numero_sorteio": "052/2014",
+      "data": "2014-07-01",
+      "ficheiro": "biblioteca/pergaminhos/2014/052.json"
+    },
+    {
+      "numero_sorteio": "053/2014",
+      "data": "2014-07-04",
+      "ficheiro": "biblioteca/pergaminhos/2014/053.json"
+    },
+    {
+      "numero_sorteio": "054/2014",
+      "data": "2014-07-08",
+      "ficheiro": "biblioteca/pergaminhos/2014/054.json"
+    },
+    {
+      "numero_sorteio": "055/2014",
+      "data": "2014-07-11",
+      "ficheiro": "biblioteca/pergaminhos/2014/055.json"
+    },
+    {
+      "numero_sorteio": "056/2014",
+      "data": "2014-07-15",
+      "ficheiro": "biblioteca/pergaminhos/2014/056.json"
+    },
+    {
+      "numero_sorteio": "057/2014",
+      "data": "2014-07-18",
+      "ficheiro": "biblioteca/pergaminhos/2014/057.json"
+    },
+    {
+      "numero_sorteio": "058/2014",
+      "data": "2014-07-22",
+      "ficheiro": "biblioteca/pergaminhos/2014/058.json"
+    },
+    {
+      "numero_sorteio": "059/2014",
+      "data": "2014-07-25",
+      "ficheiro": "biblioteca/pergaminhos/2014/059.json"
+    },
+    {
+      "numero_sorteio": "060/2014",
+      "data": "2014-07-29",
+      "ficheiro": "biblioteca/pergaminhos/2014/060.json"
+    },
+    {
+      "numero_sorteio": "061/2014",
+      "data": "2014-08-01",
+      "ficheiro": "biblioteca/pergaminhos/2014/061.json"
+    },
+    {
+      "numero_sorteio": "062/2014",
+      "data": "2014-08-05",
+      "ficheiro": "biblioteca/pergaminhos/2014/062.json"
+    },
+    {
+      "numero_sorteio": "063/2014",
+      "data": "2014-08-08",
+      "ficheiro": "biblioteca/pergaminhos/2014/063.json"
+    },
+    {
+      "numero_sorteio": "064/2014",
+      "data": "2014-08-12",
+      "ficheiro": "biblioteca/pergaminhos/2014/064.json"
+    },
+    {
+      "numero_sorteio": "065/2014",
+      "data": "2014-08-15",
+      "ficheiro": "biblioteca/pergaminhos/2014/065.json"
+    },
+    {
+      "numero_sorteio": "066/2014",
+      "data": "2014-08-19",
+      "ficheiro": "biblioteca/pergaminhos/2014/066.json"
+    },
+    {
+      "numero_sorteio": "067/2014",
+      "data": "2014-08-22",
+      "ficheiro": "biblioteca/pergaminhos/2014/067.json"
+    },
+    {
+      "numero_sorteio": "068/2014",
+      "data": "2014-08-26",
+      "ficheiro": "biblioteca/pergaminhos/2014/068.json"
+    },
+    {
+      "numero_sorteio": "069/2014",
+      "data": "2014-08-29",
+      "ficheiro": "biblioteca/pergaminhos/2014/069.json"
+    },
+    {
+      "numero_sorteio": "070/2014",
+      "data": "2014-09-02",
+      "ficheiro": "biblioteca/pergaminhos/2014/070.json"
+    },
+    {
+      "numero_sorteio": "071/2014",
+      "data": "2014-09-05",
+      "ficheiro": "biblioteca/pergaminhos/2014/071.json"
+    },
+    {
+      "numero_sorteio": "072/2014",
+      "data": "2014-09-09",
+      "ficheiro": "biblioteca/pergaminhos/2014/072.json"
+    },
+    {
+      "numero_sorteio": "073/2014",
+      "data": "2014-09-12",
+      "ficheiro": "biblioteca/pergaminhos/2014/073.json"
+    },
+    {
+      "numero_sorteio": "074/2014",
+      "data": "2014-09-16",
+      "ficheiro": "biblioteca/pergaminhos/2014/074.json"
+    },
+    {
+      "numero_sorteio": "075/2014",
+      "data": "2014-09-19",
+      "ficheiro": "biblioteca/pergaminhos/2014/075.json"
+    },
+    {
+      "numero_sorteio": "076/2014",
+      "data": "2014-09-23",
+      "ficheiro": "biblioteca/pergaminhos/2014/076.json"
+    },
+    {
+      "numero_sorteio": "077/2014",
+      "data": "2014-09-26",
+      "ficheiro": "biblioteca/pergaminhos/2014/077.json"
+    },
+    {
+      "numero_sorteio": "078/2014",
+      "data": "2014-09-30",
+      "ficheiro": "biblioteca/pergaminhos/2014/078.json"
+    },
+    {
+      "numero_sorteio": "079/2014",
+      "data": "2014-10-03",
+      "ficheiro": "biblioteca/pergaminhos/2014/079.json"
+    },
+    {
+      "numero_sorteio": "080/2014",
+      "data": "2014-10-07",
+      "ficheiro": "biblioteca/pergaminhos/2014/080.json"
+    },
+    {
+      "numero_sorteio": "081/2014",
+      "data": "2014-10-10",
+      "ficheiro": "biblioteca/pergaminhos/2014/081.json"
+    },
+    {
+      "numero_sorteio": "082/2014",
+      "data": "2014-10-14",
+      "ficheiro": "biblioteca/pergaminhos/2014/082.json"
+    },
+    {
+      "numero_sorteio": "083/2014",
+      "data": "2014-10-17",
+      "ficheiro": "biblioteca/pergaminhos/2014/083.json"
+    },
+    {
+      "numero_sorteio": "084/2014",
+      "data": "2014-10-21",
+      "ficheiro": "biblioteca/pergaminhos/2014/084.json"
+    },
+    {
+      "numero_sorteio": "085/2014",
+      "data": "2014-10-24",
+      "ficheiro": "biblioteca/pergaminhos/2014/085.json"
+    },
+    {
+      "numero_sorteio": "086/2014",
+      "data": "2014-10-28",
+      "ficheiro": "biblioteca/pergaminhos/2014/086.json"
+    },
+    {
+      "numero_sorteio": "087/2014",
+      "data": "2014-10-31",
+      "ficheiro": "biblioteca/pergaminhos/2014/087.json"
+    },
+    {
+      "numero_sorteio": "088/2014",
+      "data": "2014-11-04",
+      "ficheiro": "biblioteca/pergaminhos/2014/088.json"
+    },
+    {
+      "numero_sorteio": "089/2014",
+      "data": "2014-11-07",
+      "ficheiro": "biblioteca/pergaminhos/2014/089.json"
+    },
+    {
+      "numero_sorteio": "090/2014",
+      "data": "2014-11-11",
+      "ficheiro": "biblioteca/pergaminhos/2014/090.json"
+    },
+    {
+      "numero_sorteio": "091/2014",
+      "data": "2014-11-14",
+      "ficheiro": "biblioteca/pergaminhos/2014/091.json"
+    },
+    {
+      "numero_sorteio": "092/2014",
+      "data": "2014-11-18",
+      "ficheiro": "biblioteca/pergaminhos/2014/092.json"
+    },
+    {
+      "numero_sorteio": "093/2014",
+      "data": "2014-11-21",
+      "ficheiro": "biblioteca/pergaminhos/2014/093.json"
+    },
+    {
+      "numero_sorteio": "094/2014",
+      "data": "2014-11-25",
+      "ficheiro": "biblioteca/pergaminhos/2014/094.json"
+    },
+    {
+      "numero_sorteio": "095/2014",
+      "data": "2014-11-28",
+      "ficheiro": "biblioteca/pergaminhos/2014/095.json"
+    },
+    {
+      "numero_sorteio": "096/2014",
+      "data": "2014-12-02",
+      "ficheiro": "biblioteca/pergaminhos/2014/096.json"
+    },
+    {
+      "numero_sorteio": "097/2014",
+      "data": "2014-12-05",
+      "ficheiro": "biblioteca/pergaminhos/2014/097.json"
+    },
+    {
+      "numero_sorteio": "098/2014",
+      "data": "2014-12-09",
+      "ficheiro": "biblioteca/pergaminhos/2014/098.json"
+    },
+    {
+      "numero_sorteio": "099/2014",
+      "data": "2014-12-12",
+      "ficheiro": "biblioteca/pergaminhos/2014/099.json"
+    },
+    {
+      "numero_sorteio": "100/2014",
+      "data": "2014-12-16",
+      "ficheiro": "biblioteca/pergaminhos/2014/100.json"
+    },
+    {
+      "numero_sorteio": "101/2014",
+      "data": "2014-12-19",
+      "ficheiro": "biblioteca/pergaminhos/2014/101.json"
+    },
+    {
+      "numero_sorteio": "102/2014",
+      "data": "2014-12-23",
+      "ficheiro": "biblioteca/pergaminhos/2014/102.json"
+    },
+    {
+      "numero_sorteio": "103/2014",
+      "data": "2014-12-26",
+      "ficheiro": "biblioteca/pergaminhos/2014/103.json"
+    },
+    {
+      "numero_sorteio": "104/2014",
+      "data": "2014-12-30",
+      "ficheiro": "biblioteca/pergaminhos/2014/104.json"
+    }
+  ]
+}

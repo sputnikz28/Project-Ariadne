@@ -1,0 +1,88 @@
+{
+  "id": "PERG-2019-096",
+  "titulo": "Pergaminho da Extração 096/2019",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2019,
+  "numero_sorteio": "096/2019",
+  "data": "2019-11-29",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "19:00:00",
+    "timestamp_utc": "2019-11-29T19:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      3,
+      7,
+      12,
+      42,
+      50
+    ],
+    "estrelas": [
+      6,
+      8
+    ],
+    "formato": "3 7 12 42 50 + 6 8",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 114,
+    "media_numeros": 22.8,
+    "mediana_numeros": 12,
+    "desvio_padrao": 19.3225,
+    "amplitude": 47,
+    "pares": 3,
+    "impares": 2,
+    "gaps": [
+      4,
+      5,
+      30,
+      8
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 2,
+      "11-20": 1,
+      "41-50": 2
+    },
+    "repetidos_sorteio_anterior": [
+      3
+    ],
+    "estrelas_repetidas_sorteio_anterior": [
+      8
+    ]
+  },
+  "astronomia": {
+    "fase_lua": "Lua crescente",
+    "iluminacao_lunar_percent": 11.361,
+    "idade_lunar_dias": 3.232,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2019",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2019",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2019_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "035000a9ec444ce899735d547931bbb835e4317c7a8439dba794876448d0cd2d",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

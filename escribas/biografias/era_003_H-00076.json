@@ -1,0 +1,89 @@
+{
+  "era": 3,
+  "id": "H-00076",
+  "nome": "Lyra da Lua Fria",
+  "raca": "Vidente",
+  "casa": "Casa Tribal",
+  "geracao": 2,
+  "pais": [
+    "H-00048",
+    "H-00001"
+  ],
+  "pontos": 173,
+  "titulo": "Sussurrador do Destino",
+  "estado": "VIVO",
+  "amuletos": [],
+  "melhores_chaves": [
+    {
+      "geracao": 2,
+      "numeros": [
+        21,
+        30,
+        31,
+        45,
+        46
+      ],
+      "estrelas": [
+        5,
+        9
+      ]
+    },
+    {
+      "geracao": 3,
+      "numeros": [
+        8,
+        16,
+        25,
+        31,
+        37
+      ],
+      "estrelas": [
+        4,
+        9
+      ]
+    },
+    {
+      "geracao": 4,
+      "numeros": [
+        7,
+        36,
+        37,
+        43,
+        46
+      ],
+      "estrelas": [
+        4,
+        9
+      ]
+    },
+    {
+      "geracao": 5,
+      "numeros": [
+        8,
+        9,
+        36,
+        39,
+        42
+      ],
+      "estrelas": [
+        6,
+        9
+      ]
+    },
+    {
+      "geracao": 6,
+      "numeros": [
+        22,
+        29,
+        37,
+        38,
+        46
+      ],
+      "estrelas": [
+        5,
+        6
+      ]
+    }
+  ],
+  "criada_em": "2026-07-11T09:21:43+00:00"
+}

@@ -1,0 +1,87 @@
+{
+  "id": "PERG-2011-032",
+  "titulo": "Pergaminho da Extração 032/2011",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2011,
+  "numero_sorteio": "032/2011",
+  "data": "2011-06-24",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2011-06-24T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      5,
+      16,
+      20,
+      30,
+      41
+    ],
+    "estrelas": [
+      6,
+      11
+    ],
+    "formato": "5 16 20 30 41 + 6 11",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 112,
+    "media_numeros": 22.4,
+    "mediana_numeros": 20,
+    "desvio_padrao": 12.2735,
+    "amplitude": 36,
+    "pares": 3,
+    "impares": 2,
+    "gaps": [
+      11,
+      4,
+      10,
+      11
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 1,
+      "11-20": 2,
+      "21-30": 1,
+      "41-50": 1
+    },
+    "repetidos_sorteio_anterior": [
+      20
+    ],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Quarto minguante",
+    "iluminacao_lunar_percent": 38.113,
+    "idade_lunar_dias": 23.276,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2011",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2011",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2011_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "4c2d01c8899c7d680ef42baa63ebfa1cba6f4603963056dc024957184a1c1c5e",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

@@ -1,0 +1,149 @@
+{
+  "era": 4,
+  "id": "H-00003",
+  "nome": "Morgana dos Astros",
+  "raca": "Vidente",
+  "casa": "Casa das Estrelas",
+  "geracao": 1,
+  "pais": [],
+  "pontos": 206,
+  "titulo": "Errante das Sombras",
+  "estado": "VIVO",
+  "amuletos": [
+    {
+      "id": "ART-F46159D799",
+      "nome": "Presa Imutável de Fenrir",
+      "raridade": "RARO",
+      "multiplicador": 1.15,
+      "criador": "Morgana dos Astros",
+      "geracao_criacao": 8,
+      "donos": [
+        "Morgana dos Astros"
+      ],
+      "energia_acumulada": 56.55,
+      "conselhos": 0,
+      "estado": "ATIVO"
+    },
+    {
+      "id": "ART-F46159D799",
+      "nome": "Presa Imutável de Fenrir",
+      "raridade": "RARO",
+      "multiplicador": 1.15,
+      "criador": "Morgana dos Astros",
+      "geracao_criacao": 8,
+      "donos": [
+        "Morgana dos Astros",
+        "Selene dos Astros",
+        "Morgana dos Astros"
+      ],
+      "energia_acumulada": 50.25,
+      "conselhos": 0,
+      "estado": "HERDADO",
+      "universo_origem": 1783761708457386197,
+      "portador_atual": "Selene dos Astros",
+      "vezes_encontrado": 1,
+      "execucoes_sobrevividas": 0,
+      "historia": [
+        {
+          "evento": "MATERIALIZADO_NA_ARCA",
+          "momento": "2026-07-11T09:21:48+00:00",
+          "criador": "Morgana dos Astros"
+        },
+        {
+          "evento": "REENCONTRADO",
+          "momento": "2026-07-11T09:21:48+00:00",
+          "geracao": 9,
+          "personagem": "Selene dos Astros",
+          "classe": "Vidente"
+        }
+      ]
+    },
+    {
+      "id": "ART-6F252F86A8",
+      "nome": "Coroa Quebrada de Malphas",
+      "raridade": "COMUM",
+      "multiplicador": 1.05,
+      "criador": "Morgana dos Astros",
+      "geracao_criacao": 13,
+      "donos": [
+        "Morgana dos Astros"
+      ],
+      "energia_acumulada": 10.3,
+      "conselhos": 0,
+      "estado": "ATIVO"
+    }
+  ],
+  "melhores_chaves": [
+    {
+      "geracao": 1,
+      "numeros": [
+        18,
+        36,
+        38,
+        45,
+        46
+      ],
+      "estrelas": [
+        4,
+        5
+      ]
+    },
+    {
+      "geracao": 2,
+      "numeros": [
+        3,
+        4,
+        23,
+        46,
+        50
+      ],
+      "estrelas": [
+        5,
+        9
+      ]
+    },
+    {
+      "geracao": 3,
+      "numeros": [
+        3,
+        8,
+        14,
+        34,
+        38
+      ],
+      "estrelas": [
+        2,
+        5
+      ]
+    },
+    {
+      "geracao": 4,
+      "numeros": [
+        3,
+        31,
+        40,
+        45,
+        46
+      ],
+      "estrelas": [
+        2,
+        5
+      ]
+    },
+    {
+      "geracao": 5,
+      "numeros": [
+        8,
+        17,
+        30,
+        33,
+        39
+      ],
+      "estrelas": [
+        4,
+        6
+      ]
+    }
+  ],
+  "criada_em": "2026-07-11T09:21:49+00:00"
+}

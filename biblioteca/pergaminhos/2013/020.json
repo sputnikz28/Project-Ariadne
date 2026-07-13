@@ -1,0 +1,85 @@
+{
+  "id": "PERG-2013-020",
+  "titulo": "Pergaminho da Extração 020/2013",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2013,
+  "numero_sorteio": "020/2013",
+  "data": "2013-03-08",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "19:00:00",
+    "timestamp_utc": "2013-03-08T19:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      3,
+      20,
+      23,
+      28,
+      42
+    ],
+    "estrelas": [
+      8,
+      11
+    ],
+    "formato": "3 20 23 28 42 + 8 11",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 116,
+    "media_numeros": 23.2,
+    "mediana_numeros": 23,
+    "desvio_padrao": 12.6079,
+    "amplitude": 39,
+    "pares": 3,
+    "impares": 2,
+    "gaps": [
+      17,
+      3,
+      5,
+      14
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 1,
+      "11-20": 1,
+      "21-30": 2,
+      "41-50": 1
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Lua minguante",
+    "iluminacao_lunar_percent": 11.122,
+    "idade_lunar_dias": 26.334,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2013",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2013",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2013_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "2a08c555e6f04d7f77db7e946b5a0a1b6682c9ce914c6bfaa3aa4b91c0ebbfad",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

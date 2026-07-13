@@ -1,0 +1,87 @@
+{
+  "id": "PERG-2008-039",
+  "titulo": "Pergaminho da Extração 039/2008",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2008,
+  "numero_sorteio": "039/2008",
+  "data": "2008-09-26",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2008-09-26T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      14,
+      29,
+      31,
+      33,
+      37
+    ],
+    "estrelas": [
+      1,
+      2
+    ],
+    "formato": "14 29 31 33 37 + 1 2",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 144,
+    "media_numeros": 28.8,
+    "mediana_numeros": 31,
+    "desvio_padrao": 7.8588,
+    "amplitude": 23,
+    "pares": 1,
+    "impares": 4,
+    "gaps": [
+      15,
+      2,
+      2,
+      4
+    ],
+    "distribuicao_por_dezenas": {
+      "11-20": 1,
+      "21-30": 1,
+      "31-40": 3
+    },
+    "repetidos_sorteio_anterior": [
+      14,
+      31
+    ],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Lua minguante",
+    "iluminacao_lunar_percent": 7.455,
+    "idade_lunar_dias": 26.931,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2008",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2008",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2008_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "90f2d417742c30b669a157f63204b0bca4a9ea377e459965e1e5250515a02d88",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

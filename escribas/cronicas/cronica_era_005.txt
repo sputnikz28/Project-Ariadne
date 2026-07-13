@@ -1,0 +1,17 @@
+╔════════════════════════════════════════════════════╗
+             📜 CRÓNICA DA ERA 5
+╚════════════════════════════════════════════════════╝
+
+Semente do universo: 1783761714327997240
+Chave original: [[8, 25, 36, 37, 45], [5, 6]]
+Chave corrompida: [[6, 25, 37, 38, 48], [4, 7]]
+Indivíduos únicos: 744
+Chaves das raças antigas: 1008
+Magos Negros: 5
+Missões Élficas nesta era: 3
+Artefactos persistentes: 4
+Livros proibidos: 9
+Reflexos sombrios: 8
+Lendas: 1
+
+Os Escribas fecharam os portões do arquivo e selaram esta era.

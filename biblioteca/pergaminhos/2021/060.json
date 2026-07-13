@@ -1,0 +1,84 @@
+{
+  "id": "PERG-2021-060",
+  "titulo": "Pergaminho da Extração 060/2021",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2021,
+  "numero_sorteio": "060/2021",
+  "data": "2021-07-27",
+  "dia_semana": "terça-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2021-07-27T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      5,
+      9,
+      19,
+      21,
+      25
+    ],
+    "estrelas": [
+      10,
+      12
+    ],
+    "formato": "5 9 19 21 25 + 10 12",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 79,
+    "media_numeros": 15.8,
+    "mediana_numeros": 19,
+    "desvio_padrao": 7.5472,
+    "amplitude": 20,
+    "pares": 0,
+    "impares": 5,
+    "gaps": [
+      4,
+      10,
+      2,
+      4
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 2,
+      "11-20": 1,
+      "21-30": 2
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Gibosa minguante",
+    "iluminacao_lunar_percent": 84.415,
+    "idade_lunar_dias": 18.58,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2021",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2021",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2021_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "13cc14ae597b69f315d72a6e1c5661875dcbfe35514e068aebfe5c5b8e4263ed",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

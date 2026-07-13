@@ -1,0 +1,86 @@
+{
+  "era": 5,
+  "id": "H-00010",
+  "nome": "Velka dos Ossos",
+  "raca": "Cronomante",
+  "casa": "Casa Lunar",
+  "geracao": 1,
+  "pais": [],
+  "pontos": 195,
+  "titulo": "Sussurrador do Destino",
+  "estado": "VIVO",
+  "amuletos": [],
+  "melhores_chaves": [
+    {
+      "geracao": 1,
+      "numeros": [
+        26,
+        44,
+        45,
+        46,
+        49
+      ],
+      "estrelas": [
+        4,
+        11
+      ]
+    },
+    {
+      "geracao": 2,
+      "numeros": [
+        26,
+        44,
+        45,
+        46,
+        49
+      ],
+      "estrelas": [
+        5,
+        11
+      ]
+    },
+    {
+      "geracao": 3,
+      "numeros": [
+        26,
+        44,
+        45,
+        46,
+        49
+      ],
+      "estrelas": [
+        7,
+        11
+      ]
+    },
+    {
+      "geracao": 4,
+      "numeros": [
+        26,
+        44,
+        45,
+        46,
+        49
+      ],
+      "estrelas": [
+        9,
+        11
+      ]
+    },
+    {
+      "geracao": 5,
+      "numeros": [
+        26,
+        44,
+        45,
+        46,
+        49
+      ],
+      "estrelas": [
+        2,
+        11
+      ]
+    }
+  ],
+  "criada_em": "2026-07-11T09:21:55+00:00"
+}

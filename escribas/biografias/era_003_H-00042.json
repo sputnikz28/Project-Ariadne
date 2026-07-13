@@ -1,0 +1,86 @@
+{
+  "era": 3,
+  "id": "H-00042",
+  "nome": "Velka da Névoa",
+  "raca": "Vidente",
+  "casa": "Casa Tribal",
+  "geracao": 1,
+  "pais": [],
+  "pontos": 166,
+  "titulo": "Sussurrador do Destino",
+  "estado": "VIVO",
+  "amuletos": [],
+  "melhores_chaves": [
+    {
+      "geracao": 1,
+      "numeros": [
+        3,
+        23,
+        25,
+        27,
+        31
+      ],
+      "estrelas": [
+        2,
+        5
+      ]
+    },
+    {
+      "geracao": 2,
+      "numeros": [
+        25,
+        27,
+        33,
+        46,
+        49
+      ],
+      "estrelas": [
+        2,
+        5
+      ]
+    },
+    {
+      "geracao": 3,
+      "numeros": [
+        11,
+        38,
+        39,
+        44,
+        46
+      ],
+      "estrelas": [
+        2,
+        4
+      ]
+    },
+    {
+      "geracao": 4,
+      "numeros": [
+        10,
+        15,
+        33,
+        34,
+        46
+      ],
+      "estrelas": [
+        5,
+        9
+      ]
+    },
+    {
+      "geracao": 5,
+      "numeros": [
+        11,
+        23,
+        30,
+        33,
+        39
+      ],
+      "estrelas": [
+        2,
+        9
+      ]
+    }
+  ],
+  "criada_em": "2026-07-11T09:21:43+00:00"
+}

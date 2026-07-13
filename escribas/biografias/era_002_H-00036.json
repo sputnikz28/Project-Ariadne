@@ -1,0 +1,86 @@
+{
+  "era": 2,
+  "id": "H-00036",
+  "nome": "Kael do Bosque",
+  "raca": "Bruxa",
+  "casa": "Casa Tribal",
+  "geracao": 1,
+  "pais": [],
+  "pontos": 141,
+  "titulo": "Errante das Sombras",
+  "estado": "VIVO",
+  "amuletos": [],
+  "melhores_chaves": [
+    {
+      "geracao": 1,
+      "numeros": [
+        28,
+        32,
+        33,
+        36,
+        50
+      ],
+      "estrelas": [
+        9,
+        12
+      ]
+    },
+    {
+      "geracao": 2,
+      "numeros": [
+        28,
+        31,
+        33,
+        38,
+        45
+      ],
+      "estrelas": [
+        3,
+        6
+      ]
+    },
+    {
+      "geracao": 3,
+      "numeros": [
+        24,
+        28,
+        36,
+        45,
+        46
+      ],
+      "estrelas": [
+        5,
+        12
+      ]
+    },
+    {
+      "geracao": 4,
+      "numeros": [
+        22,
+        27,
+        30,
+        36,
+        39
+      ],
+      "estrelas": [
+        9,
+        10
+      ]
+    },
+    {
+      "geracao": 5,
+      "numeros": [
+        7,
+        24,
+        31,
+        46,
+        50
+      ],
+      "estrelas": [
+        3,
+        9
+      ]
+    }
+  ],
+  "criada_em": "2026-07-11T13:32:34+00:00"
+}

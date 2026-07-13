@@ -1,0 +1,88 @@
+{
+  "id": "PERG-2008-036",
+  "titulo": "Pergaminho da Extração 036/2008",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2008,
+  "numero_sorteio": "036/2008",
+  "data": "2008-09-05",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2008-09-05T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      7,
+      12,
+      16,
+      17,
+      39
+    ],
+    "estrelas": [
+      3,
+      8
+    ],
+    "formato": "7 12 16 17 39 + 3 8",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 91,
+    "media_numeros": 18.2,
+    "mediana_numeros": 16,
+    "desvio_padrao": 10.98,
+    "amplitude": 32,
+    "pares": 2,
+    "impares": 3,
+    "gaps": [
+      5,
+      4,
+      1,
+      22
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 1,
+      "11-20": 3,
+      "31-40": 1
+    },
+    "repetidos_sorteio_anterior": [
+      39
+    ],
+    "estrelas_repetidas_sorteio_anterior": [
+      8
+    ]
+  },
+  "astronomia": {
+    "fase_lua": "Quarto crescente",
+    "iluminacao_lunar_percent": 32.801,
+    "idade_lunar_dias": 5.732,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2008",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2008",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2008_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "aa765a857cc9024db085791481c2b7866b2f829167fbee7d0f34e314876ae53b",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

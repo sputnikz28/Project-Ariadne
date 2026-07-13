@@ -1,0 +1,38 @@
+{
+  "nome": "Cartógrafos do Caos",
+  "versao": "8.0",
+  "descricao": "Cinco mestres da análise histórica. Não geram chaves — criam livros analíticos para que outras facções consultem.",
+  "aviso": "Todas as análises são descritivas. Padrões históricos não aumentam a probabilidade de prever um sorteio futuro.",
+  "membros": [
+    {
+      "nome": "Eldran das Constelações",
+      "classe": "CartografoDasConstelacoes",
+      "livro": "Livro das Constelações Numéricas",
+      "especialidade": "Rede de coocorrência e centralidade entre números"
+    },
+    {
+      "nome": "Vesara dos Intervalos",
+      "classe": "CronistaDoCiclos",
+      "livro": "Livro dos Ciclos Eternos",
+      "especialidade": "Atrasos históricos, médias, máximos, ciclos completos"
+    },
+    {
+      "nome": "Lirien das Correntes",
+      "classe": "CartografoDasTendencias",
+      "livro": "Livro das Tendências e Correntes",
+      "especialidade": "Tendências por janela, baixos vs altos, dígitos finais"
+    },
+    {
+      "nome": "Thalvos do Acaso Esperado",
+      "classe": "MongeDoAcaso",
+      "livro": "Livro do Acaso Esperado",
+      "especialidade": "Monte Carlo — compara o real com o esperado aleatório"
+    },
+    {
+      "nome": "Oryn dos Ecos Sequenciais",
+      "classe": "OracleDeMarkov",
+      "livro": "Livro dos Ecos Sequenciais",
+      "especialidade": "Transições entre sorteios, vizinhança, sequências consecutivas"
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "era": 2,
+  "id": "H-00034",
+  "nome": "Thara da Névoa",
+  "raca": "Vidente",
+  "casa": "Casa Lunar",
+  "geracao": 1,
+  "pais": [],
+  "pontos": 155,
+  "titulo": "Sussurrador do Destino",
+  "estado": "VIVO",
+  "amuletos": [],
+  "melhores_chaves": [
+    {
+      "geracao": 1,
+      "numeros": [
+        3,
+        15,
+        35,
+        39,
+        45
+      ],
+      "estrelas": [
+        4,
+        5
+      ]
+    },
+    {
+      "geracao": 2,
+      "numeros": [
+        3,
+        9,
+        14,
+        33,
+        50
+      ],
+      "estrelas": [
+        6,
+        9
+      ]
+    },
+    {
+      "geracao": 3,
+      "numeros": [
+        36,
+        44,
+        46,
+        47,
+        48
+      ],
+      "estrelas": [
+        2,
+        4
+      ]
+    },
+    {
+      "geracao": 4,
+      "numeros": [
+        18,
+        31,
+        41,
+        42,
+        46
+      ],
+      "estrelas": [
+        2,
+        5
+      ]
+    },
+    {
+      "geracao": 5,
+      "numeros": [
+        8,
+        18,
+        28,
+        31,
+        50
+      ],
+      "estrelas": [
+        6,
+        9
+      ]
+    }
+  ],
+  "criada_em": "2026-07-11T13:32:34+00:00"
+}

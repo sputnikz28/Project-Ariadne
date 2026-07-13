@@ -1,0 +1,85 @@
+{
+  "id": "PERG-2025-032",
+  "titulo": "Pergaminho da Extração 032/2025",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2025,
+  "numero_sorteio": "032/2025",
+  "data": "2025-04-22",
+  "dia_semana": "terça-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2025-04-22T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      7,
+      28,
+      33,
+      37,
+      47
+    ],
+    "estrelas": [
+      9,
+      12
+    ],
+    "formato": "7 28 33 37 47 + 9 12",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 152,
+    "media_numeros": 30.4,
+    "mediana_numeros": 33,
+    "desvio_padrao": 13.2605,
+    "amplitude": 40,
+    "pares": 1,
+    "impares": 4,
+    "gaps": [
+      21,
+      5,
+      4,
+      10
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 1,
+      "21-30": 1,
+      "31-40": 2,
+      "41-50": 1
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Quarto minguante",
+    "iluminacao_lunar_percent": 32.262,
+    "idade_lunar_dias": 23.852,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2025",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2025",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2025_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "e2743f1365a28dab32fa7710b899af8e29a5e59d455ef479e85b1b30ad9d9074",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

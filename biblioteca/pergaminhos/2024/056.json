@@ -1,0 +1,86 @@
+{
+  "id": "PERG-2024-056",
+  "titulo": "Pergaminho da Extração 056/2024",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2024,
+  "numero_sorteio": "056/2024",
+  "data": "2024-07-12",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2024-07-12T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      12,
+      18,
+      24,
+      25,
+      39
+    ],
+    "estrelas": [
+      8,
+      10
+    ],
+    "formato": "12 18 24 25 39 + 8 10",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 118,
+    "media_numeros": 23.6,
+    "mediana_numeros": 24,
+    "desvio_padrao": 9.0022,
+    "amplitude": 27,
+    "pares": 3,
+    "impares": 2,
+    "gaps": [
+      6,
+      6,
+      1,
+      14
+    ],
+    "distribuicao_por_dezenas": {
+      "11-20": 2,
+      "21-30": 2,
+      "31-40": 1
+    },
+    "repetidos_sorteio_anterior": [
+      39
+    ],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Quarto crescente",
+    "iluminacao_lunar_percent": 38.705,
+    "idade_lunar_dias": 6.312,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2024",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2024",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2024_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "038b603a2738f06961e11de6ee59d1cebfddc0e0abafb7b478cb95894d8aff71",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

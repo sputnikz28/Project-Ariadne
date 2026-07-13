@@ -1,0 +1,88 @@
+{
+  "id": "PERG-2009-052",
+  "titulo": "Pergaminho da Extração 052/2009",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2009,
+  "numero_sorteio": "052/2009",
+  "data": "2009-12-25",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "19:00:00",
+    "timestamp_utc": "2009-12-25T19:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      4,
+      5,
+      14,
+      17,
+      34
+    ],
+    "estrelas": [
+      3,
+      5
+    ],
+    "formato": "4 5 14 17 34 + 3 5",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 74,
+    "media_numeros": 14.8,
+    "mediana_numeros": 14,
+    "desvio_padrao": 10.8333,
+    "amplitude": 30,
+    "pares": 3,
+    "impares": 2,
+    "gaps": [
+      1,
+      9,
+      3,
+      17
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 2,
+      "11-20": 2,
+      "31-40": 1
+    },
+    "repetidos_sorteio_anterior": [
+      14
+    ],
+    "estrelas_repetidas_sorteio_anterior": [
+      3
+    ]
+  },
+  "astronomia": {
+    "fase_lua": "Quarto crescente",
+    "iluminacao_lunar_percent": 60.547,
+    "idade_lunar_dias": 8.382,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2009",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2009",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2009_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "719f28c48907e6c2622a49c597962ff4c1233e9cbb4889a1f2dd1736d5d903b1",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

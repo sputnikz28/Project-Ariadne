@@ -1,0 +1,85 @@
+{
+  "id": "PERG-2022-097",
+  "titulo": "Pergaminho da Extração 097/2022",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2022,
+  "numero_sorteio": "097/2022",
+  "data": "2022-12-06",
+  "dia_semana": "terça-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "19:00:00",
+    "timestamp_utc": "2022-12-06T19:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      12,
+      20,
+      25,
+      26,
+      27
+    ],
+    "estrelas": [
+      8,
+      12
+    ],
+    "formato": "12 20 25 26 27 + 8 12",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 110,
+    "media_numeros": 22,
+    "mediana_numeros": 25,
+    "desvio_padrao": 5.5498,
+    "amplitude": 15,
+    "pares": 3,
+    "impares": 2,
+    "gaps": [
+      8,
+      5,
+      1,
+      1
+    ],
+    "distribuicao_por_dezenas": {
+      "11-20": 2,
+      "21-30": 3
+    },
+    "repetidos_sorteio_anterior": [
+      12
+    ],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Lua cheia",
+    "iluminacao_lunar_percent": 98.167,
+    "idade_lunar_dias": 13.489,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2022",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2022",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2022_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "09d93ca1be54f4a6a0c536e423b5fae08edca88719d27b2ad8b121869a1c7225",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

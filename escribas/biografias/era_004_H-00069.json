@@ -1,0 +1,86 @@
+{
+  "era": 4,
+  "id": "H-00069",
+  "nome": "Gruk Pedra-Partida",
+  "raca": "Bruxa",
+  "casa": "Casa Tribal",
+  "geracao": 1,
+  "pais": [],
+  "pontos": 178,
+  "titulo": "Sussurrador do Destino",
+  "estado": "VIVO",
+  "amuletos": [],
+  "melhores_chaves": [
+    {
+      "geracao": 1,
+      "numeros": [
+        30,
+        36,
+        42,
+        43,
+        46
+      ],
+      "estrelas": [
+        4,
+        8
+      ]
+    },
+    {
+      "geracao": 2,
+      "numeros": [
+        3,
+        22,
+        28,
+        45,
+        46
+      ],
+      "estrelas": [
+        2,
+        10
+      ]
+    },
+    {
+      "geracao": 3,
+      "numeros": [
+        31,
+        33,
+        38,
+        48,
+        50
+      ],
+      "estrelas": [
+        1,
+        5
+      ]
+    },
+    {
+      "geracao": 4,
+      "numeros": [
+        10,
+        27,
+        34,
+        36,
+        50
+      ],
+      "estrelas": [
+        6,
+        8
+      ]
+    },
+    {
+      "geracao": 5,
+      "numeros": [
+        18,
+        30,
+        33,
+        36,
+        38
+      ],
+      "estrelas": [
+        6,
+        10
+      ]
+    }
+  ],
+  "criada_em": "2026-07-11T09:21:49+00:00"
+}

@@ -1,0 +1,536 @@
+{
+  "ano": 2024,
+  "fonte": "biblioteca/fontes/euromilhoes_2024_dataset_completo.json",
+  "primeiro_sorteio": "001/2024",
+  "ultimo_sorteio": "105/2024",
+  "data_inicio": "2024-01-02",
+  "data_fim": "2024-12-31",
+  "quantidade_sorteios": 105,
+  "pergaminhos": [
+    {
+      "numero_sorteio": "001/2024",
+      "data": "2024-01-02",
+      "ficheiro": "biblioteca/pergaminhos/2024/001.json"
+    },
+    {
+      "numero_sorteio": "002/2024",
+      "data": "2024-01-05",
+      "ficheiro": "biblioteca/pergaminhos/2024/002.json"
+    },
+    {
+      "numero_sorteio": "003/2024",
+      "data": "2024-01-09",
+      "ficheiro": "biblioteca/pergaminhos/2024/003.json"
+    },
+    {
+      "numero_sorteio": "004/2024",
+      "data": "2024-01-12",
+      "ficheiro": "biblioteca/pergaminhos/2024/004.json"
+    },
+    {
+      "numero_sorteio": "005/2024",
+      "data": "2024-01-16",
+      "ficheiro": "biblioteca/pergaminhos/2024/005.json"
+    },
+    {
+      "numero_sorteio": "006/2024",
+      "data": "2024-01-19",
+      "ficheiro": "biblioteca/pergaminhos/2024/006.json"
+    },
+    {
+      "numero_sorteio": "007/2024",
+      "data": "2024-01-23",
+      "ficheiro": "biblioteca/pergaminhos/2024/007.json"
+    },
+    {
+      "numero_sorteio": "008/2024",
+      "data": "2024-01-26",
+      "ficheiro": "biblioteca/pergaminhos/2024/008.json"
+    },
+    {
+      "numero_sorteio": "009/2024",
+      "data": "2024-01-30",
+      "ficheiro": "biblioteca/pergaminhos/2024/009.json"
+    },
+    {
+      "numero_sorteio": "010/2024",
+      "data": "2024-02-02",
+      "ficheiro": "biblioteca/pergaminhos/2024/010.json"
+    },
+    {
+      "numero_sorteio": "011/2024",
+      "data": "2024-02-06",
+      "ficheiro": "biblioteca/pergaminhos/2024/011.json"
+    },
+    {
+      "numero_sorteio": "012/2024",
+      "data": "2024-02-09",
+      "ficheiro": "biblioteca/pergaminhos/2024/012.json"
+    },
+    {
+      "numero_sorteio": "013/2024",
+      "data": "2024-02-13",
+      "ficheiro": "biblioteca/pergaminhos/2024/013.json"
+    },
+    {
+      "numero_sorteio": "014/2024",
+      "data": "2024-02-16",
+      "ficheiro": "biblioteca/pergaminhos/2024/014.json"
+    },
+    {
+      "numero_sorteio": "015/2024",
+      "data": "2024-02-20",
+      "ficheiro": "biblioteca/pergaminhos/2024/015.json"
+    },
+    {
+      "numero_sorteio": "016/2024",
+      "data": "2024-02-23",
+      "ficheiro": "biblioteca/pergaminhos/2024/016.json"
+    },
+    {
+      "numero_sorteio": "017/2024",
+      "data": "2024-02-27",
+      "ficheiro": "biblioteca/pergaminhos/2024/017.json"
+    },
+    {
+      "numero_sorteio": "018/2024",
+      "data": "2024-03-01",
+      "ficheiro": "biblioteca/pergaminhos/2024/018.json"
+    },
+    {
+      "numero_sorteio": "019/2024",
+      "data": "2024-03-05",
+      "ficheiro": "biblioteca/pergaminhos/2024/019.json"
+    },
+    {
+      "numero_sorteio": "020/2024",
+      "data": "2024-03-08",
+      "ficheiro": "biblioteca/pergaminhos/2024/020.json"
+    },
+    {
+      "numero_sorteio": "021/2024",
+      "data": "2024-03-12",
+      "ficheiro": "biblioteca/pergaminhos/2024/021.json"
+    },
+    {
+      "numero_sorteio": "022/2024",
+      "data": "2024-03-15",
+      "ficheiro": "biblioteca/pergaminhos/2024/022.json"
+    },
+    {
+      "numero_sorteio": "023/2024",
+      "data": "2024-03-19",
+      "ficheiro": "biblioteca/pergaminhos/2024/023.json"
+    },
+    {
+      "numero_sorteio": "024/2024",
+      "data": "2024-03-22",
+      "ficheiro": "biblioteca/pergaminhos/2024/024.json"
+    },
+    {
+      "numero_sorteio": "025/2024",
+      "data": "2024-03-26",
+      "ficheiro": "biblioteca/pergaminhos/2024/025.json"
+    },
+    {
+      "numero_sorteio": "026/2024",
+      "data": "2024-03-29",
+      "ficheiro": "biblioteca/pergaminhos/2024/026.json"
+    },
+    {
+      "numero_sorteio": "027/2024",
+      "data": "2024-04-02",
+      "ficheiro": "biblioteca/pergaminhos/2024/027.json"
+    },
+    {
+      "numero_sorteio": "028/2024",
+      "data": "2024-04-05",
+      "ficheiro": "biblioteca/pergaminhos/2024/028.json"
+    },
+    {
+      "numero_sorteio": "029/2024",
+      "data": "2024-04-09",
+      "ficheiro": "biblioteca/pergaminhos/2024/029.json"
+    },
+    {
+      "numero_sorteio": "030/2024",
+      "data": "2024-04-12",
+      "ficheiro": "biblioteca/pergaminhos/2024/030.json"
+    },
+    {
+      "numero_sorteio": "031/2024",
+      "data": "2024-04-16",
+      "ficheiro": "biblioteca/pergaminhos/2024/031.json"
+    },
+    {
+      "numero_sorteio": "032/2024",
+      "data": "2024-04-19",
+      "ficheiro": "biblioteca/pergaminhos/2024/032.json"
+    },
+    {
+      "numero_sorteio": "033/2024",
+      "data": "2024-04-23",
+      "ficheiro": "biblioteca/pergaminhos/2024/033.json"
+    },
+    {
+      "numero_sorteio": "034/2024",
+      "data": "2024-04-26",
+      "ficheiro": "biblioteca/pergaminhos/2024/034.json"
+    },
+    {
+      "numero_sorteio": "035/2024",
+      "data": "2024-04-30",
+      "ficheiro": "biblioteca/pergaminhos/2024/035.json"
+    },
+    {
+      "numero_sorteio": "036/2024",
+      "data": "2024-05-03",
+      "ficheiro": "biblioteca/pergaminhos/2024/036.json"
+    },
+    {
+      "numero_sorteio": "037/2024",
+      "data": "2024-05-07",
+      "ficheiro": "biblioteca/pergaminhos/2024/037.json"
+    },
+    {
+      "numero_sorteio": "038/2024",
+      "data": "2024-05-10",
+      "ficheiro": "biblioteca/pergaminhos/2024/038.json"
+    },
+    {
+      "numero_sorteio": "039/2024",
+      "data": "2024-05-14",
+      "ficheiro": "biblioteca/pergaminhos/2024/039.json"
+    },
+    {
+      "numero_sorteio": "040/2024",
+      "data": "2024-05-17",
+      "ficheiro": "biblioteca/pergaminhos/2024/040.json"
+    },
+    {
+      "numero_sorteio": "041/2024",
+      "data": "2024-05-21",
+      "ficheiro": "biblioteca/pergaminhos/2024/041.json"
+    },
+    {
+      "numero_sorteio": "042/2024",
+      "data": "2024-05-24",
+      "ficheiro": "biblioteca/pergaminhos/2024/042.json"
+    },
+    {
+      "numero_sorteio": "043/2024",
+      "data": "2024-05-28",
+      "ficheiro": "biblioteca/pergaminhos/2024/043.json"
+    },
+    {
+      "numero_sorteio": "044/2024",
+      "data": "2024-05-31",
+      "ficheiro": "biblioteca/pergaminhos/2024/044.json"
+    },
+    {
+      "numero_sorteio": "045/2024",
+      "data": "2024-06-04",
+      "ficheiro": "biblioteca/pergaminhos/2024/045.json"
+    },
+    {
+      "numero_sorteio": "046/2024",
+      "data": "2024-06-07",
+      "ficheiro": "biblioteca/pergaminhos/2024/046.json"
+    },
+    {
+      "numero_sorteio": "047/2024",
+      "data": "2024-06-11",
+      "ficheiro": "biblioteca/pergaminhos/2024/047.json"
+    },
+    {
+      "numero_sorteio": "048/2024",
+      "data": "2024-06-14",
+      "ficheiro": "biblioteca/pergaminhos/2024/048.json"
+    },
+    {
+      "numero_sorteio": "049/2024",
+      "data": "2024-06-18",
+      "ficheiro": "biblioteca/pergaminhos/2024/049.json"
+    },
+    {
+      "numero_sorteio": "050/2024",
+      "data": "2024-06-21",
+      "ficheiro": "biblioteca/pergaminhos/2024/050.json"
+    },
+    {
+      "numero_sorteio": "051/2024",
+      "data": "2024-06-25",
+      "ficheiro": "biblioteca/pergaminhos/2024/051.json"
+    },
+    {
+      "numero_sorteio": "052/2024",
+      "data": "2024-06-28",
+      "ficheiro": "biblioteca/pergaminhos/2024/052.json"
+    },
+    {
+      "numero_sorteio": "053/2024",
+      "data": "2024-07-02",
+      "ficheiro": "biblioteca/pergaminhos/2024/053.json"
+    },
+    {
+      "numero_sorteio": "054/2024",
+      "data": "2024-07-05",
+      "ficheiro": "biblioteca/pergaminhos/2024/054.json"
+    },
+    {
+      "numero_sorteio": "055/2024",
+      "data": "2024-07-09",
+      "ficheiro": "biblioteca/pergaminhos/2024/055.json"
+    },
+    {
+      "numero_sorteio": "056/2024",
+      "data": "2024-07-12",
+      "ficheiro": "biblioteca/pergaminhos/2024/056.json"
+    },
+    {
+      "numero_sorteio": "057/2024",
+      "data": "2024-07-16",
+      "ficheiro": "biblioteca/pergaminhos/2024/057.json"
+    },
+    {
+      "numero_sorteio": "058/2024",
+      "data": "2024-07-19",
+      "ficheiro": "biblioteca/pergaminhos/2024/058.json"
+    },
+    {
+      "numero_sorteio": "059/2024",
+      "data": "2024-07-23",
+      "ficheiro": "biblioteca/pergaminhos/2024/059.json"
+    },
+    {
+      "numero_sorteio": "060/2024",
+      "data": "2024-07-26",
+      "ficheiro": "biblioteca/pergaminhos/2024/060.json"
+    },
+    {
+      "numero_sorteio": "061/2024",
+      "data": "2024-07-30",
+      "ficheiro": "biblioteca/pergaminhos/2024/061.json"
+    },
+    {
+      "numero_sorteio": "062/2024",
+      "data": "2024-08-02",
+      "ficheiro": "biblioteca/pergaminhos/2024/062.json"
+    },
+    {
+      "numero_sorteio": "063/2024",
+      "data": "2024-08-06",
+      "ficheiro": "biblioteca/pergaminhos/2024/063.json"
+    },
+    {
+      "numero_sorteio": "064/2024",
+      "data": "2024-08-09",
+      "ficheiro": "biblioteca/pergaminhos/2024/064.json"
+    },
+    {
+      "numero_sorteio": "065/2024",
+      "data": "2024-08-13",
+      "ficheiro": "biblioteca/pergaminhos/2024/065.json"
+    },
+    {
+      "numero_sorteio": "066/2024",
+      "data": "2024-08-16",
+      "ficheiro": "biblioteca/pergaminhos/2024/066.json"
+    },
+    {
+      "numero_sorteio": "067/2024",
+      "data": "2024-08-20",
+      "ficheiro": "biblioteca/pergaminhos/2024/067.json"
+    },
+    {
+      "numero_sorteio": "068/2024",
+      "data": "2024-08-23",
+      "ficheiro": "biblioteca/pergaminhos/2024/068.json"
+    },
+    {
+      "numero_sorteio": "069/2024",
+      "data": "2024-08-27",
+      "ficheiro": "biblioteca/pergaminhos/2024/069.json"
+    },
+    {
+      "numero_sorteio": "070/2024",
+      "data": "2024-08-30",
+      "ficheiro": "biblioteca/pergaminhos/2024/070.json"
+    },
+    {
+      "numero_sorteio": "071/2024",
+      "data": "2024-09-03",
+      "ficheiro": "biblioteca/pergaminhos/2024/071.json"
+    },
+    {
+      "numero_sorteio": "072/2024",
+      "data": "2024-09-06",
+      "ficheiro": "biblioteca/pergaminhos/2024/072.json"
+    },
+    {
+      "numero_sorteio": "073/2024",
+      "data": "2024-09-10",
+      "ficheiro": "biblioteca/pergaminhos/2024/073.json"
+    },
+    {
+      "numero_sorteio": "074/2024",
+      "data": "2024-09-13",
+      "ficheiro": "biblioteca/pergaminhos/2024/074.json"
+    },
+    {
+      "numero_sorteio": "075/2024",
+      "data": "2024-09-17",
+      "ficheiro": "biblioteca/pergaminhos/2024/075.json"
+    },
+    {
+      "numero_sorteio": "076/2024",
+      "data": "2024-09-20",
+      "ficheiro": "biblioteca/pergaminhos/2024/076.json"
+    },
+    {
+      "numero_sorteio": "077/2024",
+      "data": "2024-09-24",
+      "ficheiro": "biblioteca/pergaminhos/2024/077.json"
+    },
+    {
+      "numero_sorteio": "078/2024",
+      "data": "2024-09-27",
+      "ficheiro": "biblioteca/pergaminhos/2024/078.json"
+    },
+    {
+      "numero_sorteio": "079/2024",
+      "data": "2024-10-01",
+      "ficheiro": "biblioteca/pergaminhos/2024/079.json"
+    },
+    {
+      "numero_sorteio": "080/2024",
+      "data": "2024-10-04",
+      "ficheiro": "biblioteca/pergaminhos/2024/080.json"
+    },
+    {
+      "numero_sorteio": "081/2024",
+      "data": "2024-10-08",
+      "ficheiro": "biblioteca/pergaminhos/2024/081.json"
+    },
+    {
+      "numero_sorteio": "082/2024",
+      "data": "2024-10-11",
+      "ficheiro": "biblioteca/pergaminhos/2024/082.json"
+    },
+    {
+      "numero_sorteio": "083/2024",
+      "data": "2024-10-15",
+      "ficheiro": "biblioteca/pergaminhos/2024/083.json"
+    },
+    {
+      "numero_sorteio": "084/2024",
+      "data": "2024-10-18",
+      "ficheiro": "biblioteca/pergaminhos/2024/084.json"
+    },
+    {
+      "numero_sorteio": "085/2024",
+      "data": "2024-10-22",
+      "ficheiro": "biblioteca/pergaminhos/2024/085.json"
+    },
+    {
+      "numero_sorteio": "086/2024",
+      "data": "2024-10-25",
+      "ficheiro": "biblioteca/pergaminhos/2024/086.json"
+    },
+    {
+      "numero_sorteio": "087/2024",
+      "data": "2024-10-29",
+      "ficheiro": "biblioteca/pergaminhos/2024/087.json"
+    },
+    {
+      "numero_sorteio": "088/2024",
+      "data": "2024-11-01",
+      "ficheiro": "biblioteca/pergaminhos/2024/088.json"
+    },
+    {
+      "numero_sorteio": "089/2024",
+      "data": "2024-11-05",
+      "ficheiro": "biblioteca/pergaminhos/2024/089.json"
+    },
+    {
+      "numero_sorteio": "090/2024",
+      "data": "2024-11-08",
+      "ficheiro": "biblioteca/pergaminhos/2024/090.json"
+    },
+    {
+      "numero_sorteio": "091/2024",
+      "data": "2024-11-12",
+      "ficheiro": "biblioteca/pergaminhos/2024/091.json"
+    },
+    {
+      "numero_sorteio": "092/2024",
+      "data": "2024-11-15",
+      "ficheiro": "biblioteca/pergaminhos/2024/092.json"
+    },
+    {
+      "numero_sorteio": "093/2024",
+      "data": "2024-11-19",
+      "ficheiro": "biblioteca/pergaminhos/2024/093.json"
+    },
+    {
+      "numero_sorteio": "094/2024",
+      "data": "2024-11-22",
+      "ficheiro": "biblioteca/pergaminhos/2024/094.json"
+    },
+    {
+      "numero_sorteio": "095/2024",
+      "data": "2024-11-26",
+      "ficheiro": "biblioteca/pergaminhos/2024/095.json"
+    },
+    {
+      "numero_sorteio": "096/2024",
+      "data": "2024-11-29",
+      "ficheiro": "biblioteca/pergaminhos/2024/096.json"
+    },
+    {
+      "numero_sorteio": "097/2024",
+      "data": "2024-12-03",
+      "ficheiro": "biblioteca/pergaminhos/2024/097.json"
+    },
+    {
+      "numero_sorteio": "098/2024",
+      "data": "2024-12-06",
+      "ficheiro": "biblioteca/pergaminhos/2024/098.json"
+    },
+    {
+      "numero_sorteio": "099/2024",
+      "data": "2024-12-10",
+      "ficheiro": "biblioteca/pergaminhos/2024/099.json"
+    },
+    {
+      "numero_sorteio": "100/2024",
+      "data": "2024-12-13",
+      "ficheiro": "biblioteca/pergaminhos/2024/100.json"
+    },
+    {
+      "numero_sorteio": "101/2024",
+      "data": "2024-12-17",
+      "ficheiro": "biblioteca/pergaminhos/2024/101.json"
+    },
+    {
+      "numero_sorteio": "102/2024",
+      "data": "2024-12-20",
+      "ficheiro": "biblioteca/pergaminhos/2024/102.json"
+    },
+    {
+      "numero_sorteio": "103/2024",
+      "data": "2024-12-24",
+      "ficheiro": "biblioteca/pergaminhos/2024/103.json"
+    },
+    {
+      "numero_sorteio": "104/2024",
+      "data": "2024-12-27",
+      "ficheiro": "biblioteca/pergaminhos/2024/104.json"
+    },
+    {
+      "numero_sorteio": "105/2024",
+      "data": "2024-12-31",
+      "ficheiro": "biblioteca/pergaminhos/2024/105.json"
+    }
+  ]
+}

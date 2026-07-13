@@ -1,0 +1,86 @@
+{
+  "id": "PERG-2020-029",
+  "titulo": "Pergaminho da Extração 029/2020",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2020,
+  "numero_sorteio": "029/2020",
+  "data": "2020-04-10",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2020-04-10T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      3,
+      10,
+      17,
+      33,
+      39
+    ],
+    "estrelas": [
+      1,
+      4
+    ],
+    "formato": "3 10 17 33 39 + 1 4",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 102,
+    "media_numeros": 20.4,
+    "mediana_numeros": 17,
+    "desvio_padrao": 13.6176,
+    "amplitude": 36,
+    "pares": 1,
+    "impares": 4,
+    "gaps": [
+      7,
+      7,
+      16,
+      6
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 2,
+      "11-20": 1,
+      "31-40": 2
+    },
+    "repetidos_sorteio_anterior": [
+      33
+    ],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Gibosa minguante",
+    "iluminacao_lunar_percent": 89.872,
+    "idade_lunar_dias": 17.81,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2020",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2020",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2020_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "d7da51a146eda52f5f9a0fa91688f6ce347d740bd6974fb26a65a6e31a46420a",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

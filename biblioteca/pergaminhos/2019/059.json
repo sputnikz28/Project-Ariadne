@@ -1,0 +1,89 @@
+{
+  "id": "PERG-2019-059",
+  "titulo": "Pergaminho da Extração 059/2019",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2019,
+  "numero_sorteio": "059/2019",
+  "data": "2019-07-23",
+  "dia_semana": "terça-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2019-07-23T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      1,
+      14,
+      19,
+      23,
+      38
+    ],
+    "estrelas": [
+      3,
+      7
+    ],
+    "formato": "1 14 19 23 38 + 3 7",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 95,
+    "media_numeros": 19,
+    "mediana_numeros": 19,
+    "desvio_padrao": 12.0499,
+    "amplitude": 37,
+    "pares": 2,
+    "impares": 3,
+    "gaps": [
+      13,
+      5,
+      4,
+      15
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 1,
+      "11-20": 2,
+      "21-30": 1,
+      "31-40": 1
+    },
+    "repetidos_sorteio_anterior": [
+      14
+    ],
+    "estrelas_repetidas_sorteio_anterior": [
+      7
+    ]
+  },
+  "astronomia": {
+    "fase_lua": "Quarto minguante",
+    "iluminacao_lunar_percent": 62.656,
+    "idade_lunar_dias": 20.945,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2019",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2019",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2019_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "4338560f1c8418d4284523c51955bee741c55b87a33dc894d32b43d463aa149b",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

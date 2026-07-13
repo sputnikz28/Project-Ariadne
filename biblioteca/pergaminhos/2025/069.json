@@ -1,0 +1,84 @@
+{
+  "id": "PERG-2025-069",
+  "titulo": "Pergaminho da Extração 069/2025",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2025,
+  "numero_sorteio": "069/2025",
+  "data": "2025-08-29",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2025-08-29T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      6,
+      9,
+      10,
+      13,
+      37
+    ],
+    "estrelas": [
+      1,
+      7
+    ],
+    "formato": "6 9 10 13 37 + 1 7",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 75,
+    "media_numeros": 15,
+    "mediana_numeros": 10,
+    "desvio_padrao": 11.225,
+    "amplitude": 31,
+    "pares": 2,
+    "impares": 3,
+    "gaps": [
+      3,
+      1,
+      3,
+      24
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 3,
+      "11-20": 1,
+      "31-40": 1
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Quarto crescente",
+    "iluminacao_lunar_percent": 35.731,
+    "idade_lunar_dias": 6.022,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2025",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2025",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2025_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "e17591e44ff68b2e8ac2e5d4bf3cdde7b49e2a8f4e28e6392f14fb6c6454920f",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

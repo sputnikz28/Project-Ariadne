@@ -1,0 +1,90 @@
+{
+  "id": "PERG-2016-034",
+  "titulo": "Pergaminho da Extração 034/2016",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2016,
+  "numero_sorteio": "034/2016",
+  "data": "2016-04-26",
+  "dia_semana": "terça-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2016-04-26T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      10,
+      17,
+      31,
+      32,
+      42
+    ],
+    "estrelas": [
+      2,
+      5
+    ],
+    "formato": "10 17 31 32 42 + 2 5",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 132,
+    "media_numeros": 26.4,
+    "mediana_numeros": 31,
+    "desvio_padrao": 11.4298,
+    "amplitude": 32,
+    "pares": 3,
+    "impares": 2,
+    "gaps": [
+      7,
+      14,
+      1,
+      10
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 1,
+      "11-20": 1,
+      "31-40": 2,
+      "41-50": 1
+    },
+    "repetidos_sorteio_anterior": [
+      17,
+      32
+    ],
+    "estrelas_repetidas_sorteio_anterior": [
+      2
+    ]
+  },
+  "astronomia": {
+    "fase_lua": "Gibosa minguante",
+    "iluminacao_lunar_percent": 82.114,
+    "idade_lunar_dias": 18.87,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2016",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2016",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2016_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "1ddf0468422a023ec79000a51b845dd14079d099a7c41d64c1d0eabc36ccda65",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

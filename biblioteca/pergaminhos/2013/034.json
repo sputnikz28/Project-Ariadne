@@ -1,0 +1,84 @@
+{
+  "id": "PERG-2013-034",
+  "titulo": "Pergaminho da Extração 034/2013",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2013,
+  "numero_sorteio": "034/2013",
+  "data": "2013-04-26",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2013-04-26T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      11,
+      16,
+      24,
+      38,
+      40
+    ],
+    "estrelas": [
+      2,
+      5
+    ],
+    "formato": "11 16 24 38 40 + 2 5",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 129,
+    "media_numeros": 25.8,
+    "mediana_numeros": 24,
+    "desvio_padrao": 11.5655,
+    "amplitude": 29,
+    "pares": 4,
+    "impares": 1,
+    "gaps": [
+      5,
+      8,
+      14,
+      2
+    ],
+    "distribuicao_por_dezenas": {
+      "11-20": 2,
+      "21-30": 1,
+      "31-40": 2
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Lua cheia",
+    "iluminacao_lunar_percent": 98.803,
+    "idade_lunar_dias": 15.796,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2013",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2013",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2013_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "35c848488981848f19d35f77e7466becf59aa0f9f9cfe5c48d0c304a7578fa75",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

@@ -1,0 +1,91 @@
+{
+  "id": "PERG-2024-005",
+  "titulo": "Pergaminho da Extração 005/2024",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2024,
+  "numero_sorteio": "005/2024",
+  "data": "2024-01-16",
+  "dia_semana": "terça-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "19:00:00",
+    "timestamp_utc": "2024-01-16T19:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      10,
+      18,
+      21,
+      33,
+      45
+    ],
+    "estrelas": [
+      8,
+      12
+    ],
+    "formato": "10 18 21 33 45 + 8 12",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 127,
+    "media_numeros": 25.4,
+    "mediana_numeros": 21,
+    "desvio_padrao": 12.2735,
+    "amplitude": 35,
+    "pares": 2,
+    "impares": 3,
+    "gaps": [
+      8,
+      3,
+      12,
+      12
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 1,
+      "11-20": 1,
+      "21-30": 1,
+      "31-40": 1,
+      "41-50": 1
+    },
+    "repetidos_sorteio_anterior": [
+      18,
+      45
+    ],
+    "estrelas_repetidas_sorteio_anterior": [
+      12
+    ]
+  },
+  "astronomia": {
+    "fase_lua": "Quarto crescente",
+    "iluminacao_lunar_percent": 34.789,
+    "idade_lunar_dias": 5.93,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2024",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2024",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2024_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "00eb1bdc3be1461f245c0c9189daeb6c9f15c3858f1b07b20e8a312877663c3a",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

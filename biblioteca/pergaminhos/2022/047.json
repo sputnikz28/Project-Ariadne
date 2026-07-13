@@ -1,0 +1,86 @@
+{
+  "id": "PERG-2022-047",
+  "titulo": "Pergaminho da Extração 047/2022",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2022,
+  "numero_sorteio": "047/2022",
+  "data": "2022-06-14",
+  "dia_semana": "terça-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2022-06-14T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      2,
+      7,
+      27,
+      34,
+      40
+    ],
+    "estrelas": [
+      3,
+      11
+    ],
+    "formato": "2 7 27 34 40 + 3 11",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 110,
+    "media_numeros": 22,
+    "mediana_numeros": 27,
+    "desvio_padrao": 14.9533,
+    "amplitude": 38,
+    "pares": 3,
+    "impares": 2,
+    "gaps": [
+      5,
+      20,
+      7,
+      6
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 2,
+      "21-30": 1,
+      "31-40": 2
+    },
+    "repetidos_sorteio_anterior": [
+      40
+    ],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Lua cheia",
+    "iluminacao_lunar_percent": 99.899,
+    "idade_lunar_dias": 15.064,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2022",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2022",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2022_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "f4ace662868e81889e62e91beb2aeff2be4dcd7be3334c2dac9919327119300d",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

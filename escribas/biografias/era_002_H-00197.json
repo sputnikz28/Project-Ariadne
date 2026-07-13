@@ -1,0 +1,89 @@
+{
+  "era": 2,
+  "id": "H-00197",
+  "nome": "Morgana da Névoa",
+  "raca": "Vidente",
+  "casa": "Casa do Caos",
+  "geracao": 4,
+  "pais": [
+    "H-00043",
+    "H-00096"
+  ],
+  "pontos": 168,
+  "titulo": "Errante das Sombras",
+  "estado": "VIVO",
+  "amuletos": [],
+  "melhores_chaves": [
+    {
+      "geracao": 4,
+      "numeros": [
+        6,
+        31,
+        33,
+        45,
+        46
+      ],
+      "estrelas": [
+        4,
+        5
+      ]
+    },
+    {
+      "geracao": 5,
+      "numeros": [
+        3,
+        9,
+        26,
+        35,
+        39
+      ],
+      "estrelas": [
+        5,
+        9
+      ]
+    },
+    {
+      "geracao": 6,
+      "numeros": [
+        17,
+        18,
+        37,
+        45,
+        46
+      ],
+      "estrelas": [
+        2,
+        6
+      ]
+    },
+    {
+      "geracao": 7,
+      "numeros": [
+        2,
+        21,
+        26,
+        39,
+        46
+      ],
+      "estrelas": [
+        6,
+        9
+      ]
+    },
+    {
+      "geracao": 8,
+      "numeros": [
+        4,
+        33,
+        36,
+        38,
+        39
+      ],
+      "estrelas": [
+        5,
+        6
+      ]
+    }
+  ],
+  "criada_em": "2026-07-11T13:32:34+00:00"
+}

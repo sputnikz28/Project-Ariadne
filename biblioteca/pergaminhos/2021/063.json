@@ -1,0 +1,87 @@
+{
+  "id": "PERG-2021-063",
+  "titulo": "Pergaminho da Extração 063/2021",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2021,
+  "numero_sorteio": "063/2021",
+  "data": "2021-08-06",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2021-08-06T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      7,
+      14,
+      21,
+      26,
+      32
+    ],
+    "estrelas": [
+      4,
+      12
+    ],
+    "formato": "7 14 21 26 32 + 4 12",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 100,
+    "media_numeros": 20,
+    "mediana_numeros": 21,
+    "desvio_padrao": 8.7864,
+    "amplitude": 25,
+    "pares": 3,
+    "impares": 2,
+    "gaps": [
+      7,
+      7,
+      5,
+      6
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 1,
+      "11-20": 1,
+      "21-30": 2,
+      "31-40": 1
+    },
+    "repetidos_sorteio_anterior": [
+      21
+    ],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Lua nova",
+    "iluminacao_lunar_percent": 3.507,
+    "idade_lunar_dias": 27.76,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2021",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2021",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2021_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "2626608ef22b2b7dce564b614328675734dbaaf7d41f17107bc3b4ad6d7de809",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

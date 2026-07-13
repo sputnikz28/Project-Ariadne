@@ -1,0 +1,86 @@
+{
+  "era": 5,
+  "id": "H-00045",
+  "nome": "Lyra Pedra-Partida",
+  "raca": "Cronomante",
+  "casa": "Casa do Caos",
+  "geracao": 1,
+  "pais": [],
+  "pontos": 155,
+  "titulo": "Sussurrador do Destino",
+  "estado": "VIVO",
+  "amuletos": [],
+  "melhores_chaves": [
+    {
+      "geracao": 1,
+      "numeros": [
+        26,
+        44,
+        45,
+        46,
+        49
+      ],
+      "estrelas": [
+        5,
+        11
+      ]
+    },
+    {
+      "geracao": 2,
+      "numeros": [
+        26,
+        44,
+        45,
+        46,
+        49
+      ],
+      "estrelas": [
+        9,
+        11
+      ]
+    },
+    {
+      "geracao": 3,
+      "numeros": [
+        26,
+        44,
+        45,
+        46,
+        49
+      ],
+      "estrelas": [
+        6,
+        11
+      ]
+    },
+    {
+      "geracao": 4,
+      "numeros": [
+        11,
+        26,
+        44,
+        45,
+        46
+      ],
+      "estrelas": [
+        6,
+        11
+      ]
+    },
+    {
+      "geracao": 5,
+      "numeros": [
+        7,
+        44,
+        45,
+        46,
+        49
+      ],
+      "estrelas": [
+        10,
+        11
+      ]
+    }
+  ],
+  "criada_em": "2026-07-11T09:21:55+00:00"
+}

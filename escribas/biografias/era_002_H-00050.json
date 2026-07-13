@@ -1,0 +1,101 @@
+{
+  "era": 2,
+  "id": "H-00050",
+  "nome": "Aruk da Lua Fria",
+  "raca": "Vidente",
+  "casa": "Casa das Estrelas",
+  "geracao": 1,
+  "pais": [],
+  "pontos": 207,
+  "titulo": "Sussurrador do Destino",
+  "estado": "VIVO",
+  "amuletos": [
+    {
+      "id": "ART-D811AE8F88",
+      "nome": "Fragmento Divino",
+      "raridade": "COMUM",
+      "multiplicador": 1.05,
+      "criador": "Aruk da Lua Fria",
+      "geracao_criacao": 12,
+      "donos": [
+        "Aruk da Lua Fria"
+      ],
+      "energia_acumulada": 19.95,
+      "conselhos": 0,
+      "estado": "ATIVO"
+    }
+  ],
+  "melhores_chaves": [
+    {
+      "geracao": 1,
+      "numeros": [
+        18,
+        36,
+        37,
+        43,
+        46
+      ],
+      "estrelas": [
+        4,
+        9
+      ]
+    },
+    {
+      "geracao": 2,
+      "numeros": [
+        30,
+        31,
+        33,
+        36,
+        45
+      ],
+      "estrelas": [
+        2,
+        9
+      ]
+    },
+    {
+      "geracao": 3,
+      "numeros": [
+        13,
+        31,
+        33,
+        37,
+        43
+      ],
+      "estrelas": [
+        4,
+        6
+      ]
+    },
+    {
+      "geracao": 4,
+      "numeros": [
+        34,
+        36,
+        37,
+        43,
+        45
+      ],
+      "estrelas": [
+        4,
+        5
+      ]
+    },
+    {
+      "geracao": 5,
+      "numeros": [
+        3,
+        8,
+        17,
+        19,
+        45
+      ],
+      "estrelas": [
+        4,
+        6
+      ]
+    }
+  ],
+  "criada_em": "2026-07-11T13:32:34+00:00"
+}

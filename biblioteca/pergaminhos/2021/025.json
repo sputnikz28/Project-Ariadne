@@ -1,0 +1,89 @@
+{
+  "id": "PERG-2021-025",
+  "titulo": "Pergaminho da Extração 025/2021",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2021,
+  "numero_sorteio": "025/2021",
+  "data": "2021-03-26",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "19:00:00",
+    "timestamp_utc": "2021-03-26T19:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      10,
+      12,
+      37,
+      49,
+      50
+    ],
+    "estrelas": [
+      3,
+      8
+    ],
+    "formato": "10 12 37 49 50 + 3 8",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 158,
+    "media_numeros": 31.6,
+    "mediana_numeros": 37,
+    "desvio_padrao": 17.4425,
+    "amplitude": 40,
+    "pares": 3,
+    "impares": 2,
+    "gaps": [
+      2,
+      25,
+      12,
+      1
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 1,
+      "11-20": 1,
+      "31-40": 1,
+      "41-50": 2
+    },
+    "repetidos_sorteio_anterior": [
+      49
+    ],
+    "estrelas_repetidas_sorteio_anterior": [
+      3
+    ]
+  },
+  "astronomia": {
+    "fase_lua": "Gibosa crescente",
+    "iluminacao_lunar_percent": 94.484,
+    "idade_lunar_dias": 12.537,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2021",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2021",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2021_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "ecc3df1c5ff3ccaecccd08dbf23c9b03a6f792d124c2b4faabff24706f422e7f",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

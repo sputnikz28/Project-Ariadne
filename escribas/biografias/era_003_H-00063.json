@@ -1,0 +1,86 @@
+{
+  "era": 3,
+  "id": "H-00063",
+  "nome": "Kael da Névoa",
+  "raca": "Chefe Tribal",
+  "casa": "Casa do Bosque",
+  "geracao": 1,
+  "pais": [],
+  "pontos": 140,
+  "titulo": "Observador Celeste",
+  "estado": "VIVO",
+  "amuletos": [],
+  "melhores_chaves": [
+    {
+      "geracao": 1,
+      "numeros": [
+        4,
+        14,
+        31,
+        36,
+        50
+      ],
+      "estrelas": [
+        5,
+        12
+      ]
+    },
+    {
+      "geracao": 2,
+      "numeros": [
+        17,
+        32,
+        37,
+        45,
+        50
+      ],
+      "estrelas": [
+        9,
+        10
+      ]
+    },
+    {
+      "geracao": 3,
+      "numeros": [
+        37,
+        40,
+        43,
+        45,
+        50
+      ],
+      "estrelas": [
+        2,
+        11
+      ]
+    },
+    {
+      "geracao": 4,
+      "numeros": [
+        2,
+        33,
+        44,
+        45,
+        50
+      ],
+      "estrelas": [
+        5,
+        10
+      ]
+    },
+    {
+      "geracao": 5,
+      "numeros": [
+        15,
+        32,
+        45,
+        47,
+        50
+      ],
+      "estrelas": [
+        9,
+        11
+      ]
+    }
+  ],
+  "criada_em": "2026-07-11T09:21:43+00:00"
+}

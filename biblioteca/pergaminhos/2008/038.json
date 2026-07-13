@@ -1,0 +1,85 @@
+{
+  "id": "PERG-2008-038",
+  "titulo": "Pergaminho da Extração 038/2008",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2008,
+  "numero_sorteio": "038/2008",
+  "data": "2008-09-19",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2008-09-19T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      14,
+      16,
+      19,
+      20,
+      31
+    ],
+    "estrelas": [
+      6,
+      9
+    ],
+    "formato": "14 16 19 20 31 + 6 9",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 100,
+    "media_numeros": 20,
+    "mediana_numeros": 19,
+    "desvio_padrao": 5.8992,
+    "amplitude": 17,
+    "pares": 3,
+    "impares": 2,
+    "gaps": [
+      2,
+      3,
+      1,
+      11
+    ],
+    "distribuicao_por_dezenas": {
+      "11-20": 4,
+      "31-40": 1
+    },
+    "repetidos_sorteio_anterior": [
+      19
+    ],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Gibosa minguante",
+    "iluminacao_lunar_percent": 77.01,
+    "idade_lunar_dias": 19.466,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2008",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2008",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2008_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "af8dec8169b1c7059c9b11349f279bec981fe57d06152019a7cfebb6f21bb597",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

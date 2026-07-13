@@ -1,0 +1,31 @@
+{
+  "nome": "Axiomantes de Nemerion",
+  "versao": "8.1",
+  "descricao": "Guardiões do Labirinto com 139.838.160 câmaras. Estudam a posição das chaves no universo combinatório, não padrões históricos.",
+  "cidadela": "Nemerion",
+  "universo": 139838160,
+  "algoritmo": "feistel_v1",
+  "aviso": "A posição de uma chave numa permutação pseudoaleatória não altera a sua probabilidade real.",
+  "linhagens": [
+    {
+      "nome": "Cartógrafos do Labirinto",
+      "funcao": "Mapeiam combinações para identificadores únicos (rank/unrank)"
+    },
+    {
+      "nome": "Embaralhadores",
+      "funcao": "Criam a permutação Feistel reproduzível sem repetições"
+    },
+    {
+      "nome": "Contadores dos Ecos",
+      "funcao": "Comparam com chaves históricas ao longo do Labirinto"
+    },
+    {
+      "nome": "Guardiões das Chaves Inéditas",
+      "funcao": "Seleccionam combinações nunca sorteadas após o marco"
+    },
+    {
+      "nome": "Juízes do Acaso",
+      "funcao": "Comparam resultado observado com o esperado num processo aleatório"
+    }
+  ]
+}

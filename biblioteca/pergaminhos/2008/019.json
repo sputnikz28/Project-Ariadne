@@ -1,0 +1,86 @@
+{
+  "id": "PERG-2008-019",
+  "titulo": "Pergaminho da Extração 019/2008",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2008,
+  "numero_sorteio": "019/2008",
+  "data": "2008-05-09",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2008-05-09T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      8,
+      9,
+      40,
+      42,
+      45
+    ],
+    "estrelas": [
+      6,
+      7
+    ],
+    "formato": "8 9 40 42 45 + 6 7",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 144,
+    "media_numeros": 28.8,
+    "mediana_numeros": 40,
+    "desvio_padrao": 16.6541,
+    "amplitude": 37,
+    "pares": 3,
+    "impares": 2,
+    "gaps": [
+      1,
+      31,
+      2,
+      3
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 2,
+      "31-40": 1,
+      "41-50": 2
+    },
+    "repetidos_sorteio_anterior": [
+      45
+    ],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Lua crescente",
+    "iluminacao_lunar_percent": 24.46,
+    "idade_lunar_dias": 4.863,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2008",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2008",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2008_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "5ff62a318bf852f8ee4f4da33823d0ae172b38c7c0343cd4c962fb5530a973cd",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

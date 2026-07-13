@@ -1,0 +1,87 @@
+{
+  "id": "PERG-2024-021",
+  "titulo": "Pergaminho da Extração 021/2024",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2024,
+  "numero_sorteio": "021/2024",
+  "data": "2024-03-12",
+  "dia_semana": "terça-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "19:00:00",
+    "timestamp_utc": "2024-03-12T19:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      13,
+      19,
+      30,
+      38,
+      46
+    ],
+    "estrelas": [
+      4,
+      12
+    ],
+    "formato": "13 19 30 38 46 + 4 12",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 146,
+    "media_numeros": 29.2,
+    "mediana_numeros": 30,
+    "desvio_padrao": 12.0565,
+    "amplitude": 33,
+    "pares": 3,
+    "impares": 2,
+    "gaps": [
+      6,
+      11,
+      8,
+      8
+    ],
+    "distribuicao_por_dezenas": {
+      "11-20": 2,
+      "21-30": 1,
+      "31-40": 1,
+      "41-50": 1
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": [
+      4
+    ]
+  },
+  "astronomia": {
+    "fase_lua": "Lua crescente",
+    "iluminacao_lunar_percent": 8.53,
+    "idade_lunar_dias": 2.786,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2024",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2024",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2024_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "f4a5d04f73d73138f3e9c9273f140183aa580fa3351c760f39ff23b307f179e8",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

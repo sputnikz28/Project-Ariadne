@@ -1,0 +1,531 @@
+{
+  "ano": 2015,
+  "fonte": "biblioteca/fontes/euromilhoes_2015_dataset_completo.json",
+  "primeiro_sorteio": "001/2015",
+  "ultimo_sorteio": "104/2015",
+  "data_inicio": "2015-01-02",
+  "data_fim": "2015-12-29",
+  "quantidade_sorteios": 104,
+  "pergaminhos": [
+    {
+      "numero_sorteio": "001/2015",
+      "data": "2015-01-02",
+      "ficheiro": "biblioteca/pergaminhos/2015/001.json"
+    },
+    {
+      "numero_sorteio": "002/2015",
+      "data": "2015-01-06",
+      "ficheiro": "biblioteca/pergaminhos/2015/002.json"
+    },
+    {
+      "numero_sorteio": "003/2015",
+      "data": "2015-01-09",
+      "ficheiro": "biblioteca/pergaminhos/2015/003.json"
+    },
+    {
+      "numero_sorteio": "004/2015",
+      "data": "2015-01-13",
+      "ficheiro": "biblioteca/pergaminhos/2015/004.json"
+    },
+    {
+      "numero_sorteio": "005/2015",
+      "data": "2015-01-16",
+      "ficheiro": "biblioteca/pergaminhos/2015/005.json"
+    },
+    {
+      "numero_sorteio": "006/2015",
+      "data": "2015-01-20",
+      "ficheiro": "biblioteca/pergaminhos/2015/006.json"
+    },
+    {
+      "numero_sorteio": "007/2015",
+      "data": "2015-01-23",
+      "ficheiro": "biblioteca/pergaminhos/2015/007.json"
+    },
+    {
+      "numero_sorteio": "008/2015",
+      "data": "2015-01-27",
+      "ficheiro": "biblioteca/pergaminhos/2015/008.json"
+    },
+    {
+      "numero_sorteio": "009/2015",
+      "data": "2015-01-30",
+      "ficheiro": "biblioteca/pergaminhos/2015/009.json"
+    },
+    {
+      "numero_sorteio": "010/2015",
+      "data": "2015-02-03",
+      "ficheiro": "biblioteca/pergaminhos/2015/010.json"
+    },
+    {
+      "numero_sorteio": "011/2015",
+      "data": "2015-02-06",
+      "ficheiro": "biblioteca/pergaminhos/2015/011.json"
+    },
+    {
+      "numero_sorteio": "012/2015",
+      "data": "2015-02-10",
+      "ficheiro": "biblioteca/pergaminhos/2015/012.json"
+    },
+    {
+      "numero_sorteio": "013/2015",
+      "data": "2015-02-13",
+      "ficheiro": "biblioteca/pergaminhos/2015/013.json"
+    },
+    {
+      "numero_sorteio": "014/2015",
+      "data": "2015-02-17",
+      "ficheiro": "biblioteca/pergaminhos/2015/014.json"
+    },
+    {
+      "numero_sorteio": "015/2015",
+      "data": "2015-02-20",
+      "ficheiro": "biblioteca/pergaminhos/2015/015.json"
+    },
+    {
+      "numero_sorteio": "016/2015",
+      "data": "2015-02-24",
+      "ficheiro": "biblioteca/pergaminhos/2015/016.json"
+    },
+    {
+      "numero_sorteio": "017/2015",
+      "data": "2015-02-27",
+      "ficheiro": "biblioteca/pergaminhos/2015/017.json"
+    },
+    {
+      "numero_sorteio": "018/2015",
+      "data": "2015-03-03",
+      "ficheiro": "biblioteca/pergaminhos/2015/018.json"
+    },
+    {
+      "numero_sorteio": "019/2015",
+      "data": "2015-03-06",
+      "ficheiro": "biblioteca/pergaminhos/2015/019.json"
+    },
+    {
+      "numero_sorteio": "020/2015",
+      "data": "2015-03-10",
+      "ficheiro": "biblioteca/pergaminhos/2015/020.json"
+    },
+    {
+      "numero_sorteio": "021/2015",
+      "data": "2015-03-13",
+      "ficheiro": "biblioteca/pergaminhos/2015/021.json"
+    },
+    {
+      "numero_sorteio": "022/2015",
+      "data": "2015-03-17",
+      "ficheiro": "biblioteca/pergaminhos/2015/022.json"
+    },
+    {
+      "numero_sorteio": "023/2015",
+      "data": "2015-03-20",
+      "ficheiro": "biblioteca/pergaminhos/2015/023.json"
+    },
+    {
+      "numero_sorteio": "024/2015",
+      "data": "2015-03-24",
+      "ficheiro": "biblioteca/pergaminhos/2015/024.json"
+    },
+    {
+      "numero_sorteio": "025/2015",
+      "data": "2015-03-27",
+      "ficheiro": "biblioteca/pergaminhos/2015/025.json"
+    },
+    {
+      "numero_sorteio": "026/2015",
+      "data": "2015-03-31",
+      "ficheiro": "biblioteca/pergaminhos/2015/026.json"
+    },
+    {
+      "numero_sorteio": "027/2015",
+      "data": "2015-04-03",
+      "ficheiro": "biblioteca/pergaminhos/2015/027.json"
+    },
+    {
+      "numero_sorteio": "028/2015",
+      "data": "2015-04-07",
+      "ficheiro": "biblioteca/pergaminhos/2015/028.json"
+    },
+    {
+      "numero_sorteio": "029/2015",
+      "data": "2015-04-10",
+      "ficheiro": "biblioteca/pergaminhos/2015/029.json"
+    },
+    {
+      "numero_sorteio": "030/2015",
+      "data": "2015-04-14",
+      "ficheiro": "biblioteca/pergaminhos/2015/030.json"
+    },
+    {
+      "numero_sorteio": "031/2015",
+      "data": "2015-04-17",
+      "ficheiro": "biblioteca/pergaminhos/2015/031.json"
+    },
+    {
+      "numero_sorteio": "032/2015",
+      "data": "2015-04-21",
+      "ficheiro": "biblioteca/pergaminhos/2015/032.json"
+    },
+    {
+      "numero_sorteio": "033/2015",
+      "data": "2015-04-24",
+      "ficheiro": "biblioteca/pergaminhos/2015/033.json"
+    },
+    {
+      "numero_sorteio": "034/2015",
+      "data": "2015-04-28",
+      "ficheiro": "biblioteca/pergaminhos/2015/034.json"
+    },
+    {
+      "numero_sorteio": "035/2015",
+      "data": "2015-05-01",
+      "ficheiro": "biblioteca/pergaminhos/2015/035.json"
+    },
+    {
+      "numero_sorteio": "036/2015",
+      "data": "2015-05-05",
+      "ficheiro": "biblioteca/pergaminhos/2015/036.json"
+    },
+    {
+      "numero_sorteio": "037/2015",
+      "data": "2015-05-08",
+      "ficheiro": "biblioteca/pergaminhos/2015/037.json"
+    },
+    {
+      "numero_sorteio": "038/2015",
+      "data": "2015-05-12",
+      "ficheiro": "biblioteca/pergaminhos/2015/038.json"
+    },
+    {
+      "numero_sorteio": "039/2015",
+      "data": "2015-05-15",
+      "ficheiro": "biblioteca/pergaminhos/2015/039.json"
+    },
+    {
+      "numero_sorteio": "040/2015",
+      "data": "2015-05-19",
+      "ficheiro": "biblioteca/pergaminhos/2015/040.json"
+    },
+    {
+      "numero_sorteio": "041/2015",
+      "data": "2015-05-22",
+      "ficheiro": "biblioteca/pergaminhos/2015/041.json"
+    },
+    {
+      "numero_sorteio": "042/2015",
+      "data": "2015-05-26",
+      "ficheiro": "biblioteca/pergaminhos/2015/042.json"
+    },
+    {
+      "numero_sorteio": "043/2015",
+      "data": "2015-05-29",
+      "ficheiro": "biblioteca/pergaminhos/2015/043.json"
+    },
+    {
+      "numero_sorteio": "044/2015",
+      "data": "2015-06-02",
+      "ficheiro": "biblioteca/pergaminhos/2015/044.json"
+    },
+    {
+      "numero_sorteio": "045/2015",
+      "data": "2015-06-05",
+      "ficheiro": "biblioteca/pergaminhos/2015/045.json"
+    },
+    {
+      "numero_sorteio": "046/2015",
+      "data": "2015-06-09",
+      "ficheiro": "biblioteca/pergaminhos/2015/046.json"
+    },
+    {
+      "numero_sorteio": "047/2015",
+      "data": "2015-06-12",
+      "ficheiro": "biblioteca/pergaminhos/2015/047.json"
+    },
+    {
+      "numero_sorteio": "048/2015",
+      "data": "2015-06-16",
+      "ficheiro": "biblioteca/pergaminhos/2015/048.json"
+    },
+    {
+      "numero_sorteio": "049/2015",
+      "data": "2015-06-19",
+      "ficheiro": "biblioteca/pergaminhos/2015/049.json"
+    },
+    {
+      "numero_sorteio": "050/2015",
+      "data": "2015-06-23",
+      "ficheiro": "biblioteca/pergaminhos/2015/050.json"
+    },
+    {
+      "numero_sorteio": "051/2015",
+      "data": "2015-06-26",
+      "ficheiro": "biblioteca/pergaminhos/2015/051.json"
+    },
+    {
+      "numero_sorteio": "052/2015",
+      "data": "2015-06-30",
+      "ficheiro": "biblioteca/pergaminhos/2015/052.json"
+    },
+    {
+      "numero_sorteio": "053/2015",
+      "data": "2015-07-03",
+      "ficheiro": "biblioteca/pergaminhos/2015/053.json"
+    },
+    {
+      "numero_sorteio": "054/2015",
+      "data": "2015-07-07",
+      "ficheiro": "biblioteca/pergaminhos/2015/054.json"
+    },
+    {
+      "numero_sorteio": "055/2015",
+      "data": "2015-07-10",
+      "ficheiro": "biblioteca/pergaminhos/2015/055.json"
+    },
+    {
+      "numero_sorteio": "056/2015",
+      "data": "2015-07-14",
+      "ficheiro": "biblioteca/pergaminhos/2015/056.json"
+    },
+    {
+      "numero_sorteio": "057/2015",
+      "data": "2015-07-17",
+      "ficheiro": "biblioteca/pergaminhos/2015/057.json"
+    },
+    {
+      "numero_sorteio": "058/2015",
+      "data": "2015-07-21",
+      "ficheiro": "biblioteca/pergaminhos/2015/058.json"
+    },
+    {
+      "numero_sorteio": "059/2015",
+      "data": "2015-07-24",
+      "ficheiro": "biblioteca/pergaminhos/2015/059.json"
+    },
+    {
+      "numero_sorteio": "060/2015",
+      "data": "2015-07-28",
+      "ficheiro": "biblioteca/pergaminhos/2015/060.json"
+    },
+    {
+      "numero_sorteio": "061/2015",
+      "data": "2015-07-31",
+      "ficheiro": "biblioteca/pergaminhos/2015/061.json"
+    },
+    {
+      "numero_sorteio": "062/2015",
+      "data": "2015-08-04",
+      "ficheiro": "biblioteca/pergaminhos/2015/062.json"
+    },
+    {
+      "numero_sorteio": "063/2015",
+      "data": "2015-08-07",
+      "ficheiro": "biblioteca/pergaminhos/2015/063.json"
+    },
+    {
+      "numero_sorteio": "064/2015",
+      "data": "2015-08-11",
+      "ficheiro": "biblioteca/pergaminhos/2015/064.json"
+    },
+    {
+      "numero_sorteio": "065/2015",
+      "data": "2015-08-14",
+      "ficheiro": "biblioteca/pergaminhos/2015/065.json"
+    },
+    {
+      "numero_sorteio": "066/2015",
+      "data": "2015-08-18",
+      "ficheiro": "biblioteca/pergaminhos/2015/066.json"
+    },
+    {
+      "numero_sorteio": "067/2015",
+      "data": "2015-08-21",
+      "ficheiro": "biblioteca/pergaminhos/2015/067.json"
+    },
+    {
+      "numero_sorteio": "068/2015",
+      "data": "2015-08-25",
+      "ficheiro": "biblioteca/pergaminhos/2015/068.json"
+    },
+    {
+      "numero_sorteio": "069/2015",
+      "data": "2015-08-28",
+      "ficheiro": "biblioteca/pergaminhos/2015/069.json"
+    },
+    {
+      "numero_sorteio": "070/2015",
+      "data": "2015-09-01",
+      "ficheiro": "biblioteca/pergaminhos/2015/070.json"
+    },
+    {
+      "numero_sorteio": "071/2015",
+      "data": "2015-09-04",
+      "ficheiro": "biblioteca/pergaminhos/2015/071.json"
+    },
+    {
+      "numero_sorteio": "072/2015",
+      "data": "2015-09-08",
+      "ficheiro": "biblioteca/pergaminhos/2015/072.json"
+    },
+    {
+      "numero_sorteio": "073/2015",
+      "data": "2015-09-11",
+      "ficheiro": "biblioteca/pergaminhos/2015/073.json"
+    },
+    {
+      "numero_sorteio": "074/2015",
+      "data": "2015-09-15",
+      "ficheiro": "biblioteca/pergaminhos/2015/074.json"
+    },
+    {
+      "numero_sorteio": "075/2015",
+      "data": "2015-09-18",
+      "ficheiro": "biblioteca/pergaminhos/2015/075.json"
+    },
+    {
+      "numero_sorteio": "076/2015",
+      "data": "2015-09-22",
+      "ficheiro": "biblioteca/pergaminhos/2015/076.json"
+    },
+    {
+      "numero_sorteio": "077/2015",
+      "data": "2015-09-25",
+      "ficheiro": "biblioteca/pergaminhos/2015/077.json"
+    },
+    {
+      "numero_sorteio": "078/2015",
+      "data": "2015-09-29",
+      "ficheiro": "biblioteca/pergaminhos/2015/078.json"
+    },
+    {
+      "numero_sorteio": "079/2015",
+      "data": "2015-10-02",
+      "ficheiro": "biblioteca/pergaminhos/2015/079.json"
+    },
+    {
+      "numero_sorteio": "080/2015",
+      "data": "2015-10-06",
+      "ficheiro": "biblioteca/pergaminhos/2015/080.json"
+    },
+    {
+      "numero_sorteio": "081/2015",
+      "data": "2015-10-09",
+      "ficheiro": "biblioteca/pergaminhos/2015/081.json"
+    },
+    {
+      "numero_sorteio": "082/2015",
+      "data": "2015-10-13",
+      "ficheiro": "biblioteca/pergaminhos/2015/082.json"
+    },
+    {
+      "numero_sorteio": "083/2015",
+      "data": "2015-10-16",
+      "ficheiro": "biblioteca/pergaminhos/2015/083.json"
+    },
+    {
+      "numero_sorteio": "084/2015",
+      "data": "2015-10-20",
+      "ficheiro": "biblioteca/pergaminhos/2015/084.json"
+    },
+    {
+      "numero_sorteio": "085/2015",
+      "data": "2015-10-23",
+      "ficheiro": "biblioteca/pergaminhos/2015/085.json"
+    },
+    {
+      "numero_sorteio": "086/2015",
+      "data": "2015-10-27",
+      "ficheiro": "biblioteca/pergaminhos/2015/086.json"
+    },
+    {
+      "numero_sorteio": "087/2015",
+      "data": "2015-10-30",
+      "ficheiro": "biblioteca/pergaminhos/2015/087.json"
+    },
+    {
+      "numero_sorteio": "088/2015",
+      "data": "2015-11-03",
+      "ficheiro": "biblioteca/pergaminhos/2015/088.json"
+    },
+    {
+      "numero_sorteio": "089/2015",
+      "data": "2015-11-06",
+      "ficheiro": "biblioteca/pergaminhos/2015/089.json"
+    },
+    {
+      "numero_sorteio": "090/2015",
+      "data": "2015-11-10",
+      "ficheiro": "biblioteca/pergaminhos/2015/090.json"
+    },
+    {
+      "numero_sorteio": "091/2015",
+      "data": "2015-11-13",
+      "ficheiro": "biblioteca/pergaminhos/2015/091.json"
+    },
+    {
+      "numero_sorteio": "092/2015",
+      "data": "2015-11-17",
+      "ficheiro": "biblioteca/pergaminhos/2015/092.json"
+    },
+    {
+      "numero_sorteio": "093/2015",
+      "data": "2015-11-20",
+      "ficheiro": "biblioteca/pergaminhos/2015/093.json"
+    },
+    {
+      "numero_sorteio": "094/2015",
+      "data": "2015-11-24",
+      "ficheiro": "biblioteca/pergaminhos/2015/094.json"
+    },
+    {
+      "numero_sorteio": "095/2015",
+      "data": "2015-11-27",
+      "ficheiro": "biblioteca/pergaminhos/2015/095.json"
+    },
+    {
+      "numero_sorteio": "096/2015",
+      "data": "2015-12-01",
+      "ficheiro": "biblioteca/pergaminhos/2015/096.json"
+    },
+    {
+      "numero_sorteio": "097/2015",
+      "data": "2015-12-04",
+      "ficheiro": "biblioteca/pergaminhos/2015/097.json"
+    },
+    {
+      "numero_sorteio": "098/2015",
+      "data": "2015-12-08",
+      "ficheiro": "biblioteca/pergaminhos/2015/098.json"
+    },
+    {
+      "numero_sorteio": "099/2015",
+      "data": "2015-12-11",
+      "ficheiro": "biblioteca/pergaminhos/2015/099.json"
+    },
+    {
+      "numero_sorteio": "100/2015",
+      "data": "2015-12-15",
+      "ficheiro": "biblioteca/pergaminhos/2015/100.json"
+    },
+    {
+      "numero_sorteio": "101/2015",
+      "data": "2015-12-18",
+      "ficheiro": "biblioteca/pergaminhos/2015/101.json"
+    },
+    {
+      "numero_sorteio": "102/2015",
+      "data": "2015-12-22",
+      "ficheiro": "biblioteca/pergaminhos/2015/102.json"
+    },
+    {
+      "numero_sorteio": "103/2015",
+      "data": "2015-12-25",
+      "ficheiro": "biblioteca/pergaminhos/2015/103.json"
+    },
+    {
+      "numero_sorteio": "104/2015",
+      "data": "2015-12-29",
+      "ficheiro": "biblioteca/pergaminhos/2015/104.json"
+    }
+  ]
+}

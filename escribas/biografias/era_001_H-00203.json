@@ -1,0 +1,89 @@
+{
+  "era": 1,
+  "id": "H-00203",
+  "nome": "Kael dos Ossos",
+  "raca": "Vidente",
+  "casa": "Casa do Bosque",
+  "geracao": 4,
+  "pais": [
+    "H-00028",
+    "H-00041"
+  ],
+  "pontos": 158,
+  "titulo": "Sussurrador do Destino",
+  "estado": "VIVO",
+  "amuletos": [],
+  "melhores_chaves": [
+    {
+      "geracao": 4,
+      "numeros": [
+        3,
+        12,
+        20,
+        45,
+        46
+      ],
+      "estrelas": [
+        5,
+        9
+      ]
+    },
+    {
+      "geracao": 5,
+      "numeros": [
+        7,
+        8,
+        16,
+        31,
+        33
+      ],
+      "estrelas": [
+        2,
+        5
+      ]
+    },
+    {
+      "geracao": 6,
+      "numeros": [
+        3,
+        12,
+        31,
+        37,
+        43
+      ],
+      "estrelas": [
+        4,
+        6
+      ]
+    },
+    {
+      "geracao": 7,
+      "numeros": [
+        7,
+        14,
+        25,
+        37,
+        38
+      ],
+      "estrelas": [
+        4,
+        9
+      ]
+    },
+    {
+      "geracao": 8,
+      "numeros": [
+        12,
+        18,
+        25,
+        26,
+        45
+      ],
+      "estrelas": [
+        6,
+        9
+      ]
+    }
+  ],
+  "criada_em": "2026-07-11T09:21:30+00:00"
+}

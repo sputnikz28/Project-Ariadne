@@ -1,0 +1,89 @@
+{
+  "id": "PERG-2006-051",
+  "titulo": "Pergaminho da Extração 051/2006",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2006,
+  "numero_sorteio": "051/2006",
+  "data": "2006-12-22",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "19:00:00",
+    "timestamp_utc": "2006-12-22T19:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      9,
+      11,
+      20,
+      38,
+      43
+    ],
+    "estrelas": [
+      2,
+      3
+    ],
+    "formato": "9 11 20 38 43 + 2 3",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 121,
+    "media_numeros": 24.2,
+    "mediana_numeros": 20,
+    "desvio_padrao": 13.9054,
+    "amplitude": 34,
+    "pares": 2,
+    "impares": 3,
+    "gaps": [
+      2,
+      9,
+      18,
+      5
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 1,
+      "11-20": 2,
+      "31-40": 1,
+      "41-50": 1
+    },
+    "repetidos_sorteio_anterior": [
+      9
+    ],
+    "estrelas_repetidas_sorteio_anterior": [
+      3
+    ]
+  },
+  "astronomia": {
+    "fase_lua": "Lua crescente",
+    "iluminacao_lunar_percent": 5.689,
+    "idade_lunar_dias": 2.264,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2006",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2006",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2006_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "33dc68ad71fb7f0333dc5f432ad029e50cfcd1435781f0b710ed60f3a496679f",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

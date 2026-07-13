@@ -1,0 +1,84 @@
+{
+  "id": "PERG-2017-097",
+  "titulo": "Pergaminho da Extração 097/2017",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2017,
+  "numero_sorteio": "097/2017",
+  "data": "2017-12-05",
+  "dia_semana": "terça-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "19:00:00",
+    "timestamp_utc": "2017-12-05T19:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      11,
+      36,
+      43,
+      44,
+      48
+    ],
+    "estrelas": [
+      2,
+      7
+    ],
+    "formato": "11 36 43 44 48 + 2 7",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 182,
+    "media_numeros": 36.4,
+    "mediana_numeros": 43,
+    "desvio_padrao": 13.2755,
+    "amplitude": 37,
+    "pares": 3,
+    "impares": 2,
+    "gaps": [
+      25,
+      7,
+      1,
+      4
+    ],
+    "distribuicao_por_dezenas": {
+      "11-20": 1,
+      "31-40": 1,
+      "41-50": 3
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Gibosa minguante",
+    "iluminacao_lunar_percent": 93.174,
+    "idade_lunar_dias": 17.25,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2017",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2017",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2017_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "4e9473d1f1de0e105df7e94f035582224bfccce2d60e1e29ba2b3e73360ae399",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

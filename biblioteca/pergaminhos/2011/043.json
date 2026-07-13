@@ -1,0 +1,85 @@
+{
+  "id": "PERG-2011-043",
+  "titulo": "Pergaminho da Extração 043/2011",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2011,
+  "numero_sorteio": "043/2011",
+  "data": "2011-08-02",
+  "dia_semana": "terça-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2011-08-02T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      5,
+      8,
+      14,
+      24,
+      33
+    ],
+    "estrelas": [
+      3,
+      8
+    ],
+    "formato": "5 8 14 24 33 + 3 8",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 84,
+    "media_numeros": 16.8,
+    "mediana_numeros": 14,
+    "desvio_padrao": 10.3808,
+    "amplitude": 28,
+    "pares": 3,
+    "impares": 2,
+    "gaps": [
+      3,
+      6,
+      10,
+      9
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 2,
+      "11-20": 1,
+      "21-30": 1,
+      "31-40": 1
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Lua crescente",
+    "iluminacao_lunar_percent": 11.764,
+    "idade_lunar_dias": 3.291,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2011",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2011",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2011_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "c50cbaecc5783da17fecc79bd1cdb3397d9d24de9871f40aa887a19ad0cb6456",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

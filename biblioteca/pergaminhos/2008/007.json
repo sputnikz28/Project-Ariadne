@@ -1,0 +1,86 @@
+{
+  "id": "PERG-2008-007",
+  "titulo": "Pergaminho da Extração 007/2008",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2008,
+  "numero_sorteio": "007/2008",
+  "data": "2008-02-15",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "19:00:00",
+    "timestamp_utc": "2008-02-15T19:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      12,
+      27,
+      29,
+      45,
+      46
+    ],
+    "estrelas": [
+      4,
+      7
+    ],
+    "formato": "12 27 29 45 46 + 4 7",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 159,
+    "media_numeros": 31.8,
+    "mediana_numeros": 29,
+    "desvio_padrao": 12.6396,
+    "amplitude": 34,
+    "pares": 2,
+    "impares": 3,
+    "gaps": [
+      15,
+      2,
+      16,
+      1
+    ],
+    "distribuicao_por_dezenas": {
+      "11-20": 1,
+      "21-30": 2,
+      "41-50": 2
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": [
+      4
+    ]
+  },
+  "astronomia": {
+    "fase_lua": "Quarto crescente",
+    "iluminacao_lunar_percent": 68.444,
+    "idade_lunar_dias": 9.158,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2008",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2008",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2008_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "c7a2ed91a2162b26e4788974643028a09ab19a318446b266d8e4e1b81d16416e",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

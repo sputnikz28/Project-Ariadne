@@ -1,0 +1,120 @@
+{
+  "era": 1,
+  "id": "H-00052",
+  "nome": "Gruk Pedra-Partida",
+  "raca": "Bruxa",
+  "casa": "Casa das Estrelas",
+  "geracao": 1,
+  "pais": [],
+  "pontos": 125,
+  "titulo": "Errante das Sombras",
+  "estado": "VIVO",
+  "amuletos": [
+    {
+      "id": "ART-5637DEC365",
+      "nome": "Livro dos Ecos",
+      "raridade": "LENDARIO",
+      "multiplicador": 1.6,
+      "criador": "Aruk da Lua Fria",
+      "geracao_criacao": 4,
+      "donos": [
+        "Aruk da Lua Fria",
+        "Gruk Pedra-Partida"
+      ],
+      "energia_acumulada": 40.0,
+      "conselhos": 0,
+      "estado": "ENCONTRADO",
+      "universo_origem": 1783776750689192668,
+      "portador_atual": "Gruk Pedra-Partida",
+      "vezes_encontrado": 1,
+      "execucoes_sobrevividas": 0,
+      "historia": [
+        {
+          "evento": "MATERIALIZADO_NA_ARCA",
+          "momento": "2026-07-11T13:32:30+00:00",
+          "criador": "Aruk da Lua Fria"
+        },
+        {
+          "evento": "REENCONTRADO",
+          "momento": "2026-07-11T13:32:30+00:00",
+          "geracao": 5,
+          "personagem": "Gruk Pedra-Partida",
+          "classe": "Bruxa"
+        }
+      ]
+    }
+  ],
+  "melhores_chaves": [
+    {
+      "geracao": 1,
+      "numeros": [
+        31,
+        32,
+        36,
+        43,
+        50
+      ],
+      "estrelas": [
+        1,
+        5
+      ]
+    },
+    {
+      "geracao": 2,
+      "numeros": [
+        10,
+        18,
+        30,
+        32,
+        33
+      ],
+      "estrelas": [
+        2,
+        8
+      ]
+    },
+    {
+      "geracao": 3,
+      "numeros": [
+        3,
+        7,
+        32,
+        40,
+        45
+      ],
+      "estrelas": [
+        3,
+        9
+      ]
+    },
+    {
+      "geracao": 4,
+      "numeros": [
+        25,
+        35,
+        45,
+        49,
+        50
+      ],
+      "estrelas": [
+        3,
+        4
+      ]
+    },
+    {
+      "geracao": 5,
+      "numeros": [
+        7,
+        24,
+        27,
+        40,
+        46
+      ],
+      "estrelas": [
+        6,
+        12
+      ]
+    }
+  ],
+  "criada_em": "2026-07-11T13:32:31+00:00"
+}

@@ -1,0 +1,85 @@
+{
+  "id": "PERG-2007-001",
+  "titulo": "Pergaminho da Extração 001/2007",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2007,
+  "numero_sorteio": "001/2007",
+  "data": "2007-01-05",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "19:00:00",
+    "timestamp_utc": "2007-01-05T19:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      17,
+      19,
+      29,
+      36,
+      45
+    ],
+    "estrelas": [
+      5,
+      6
+    ],
+    "formato": "17 19 29 36 45 + 5 6",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 146,
+    "media_numeros": 29.2,
+    "mediana_numeros": 29,
+    "desvio_padrao": 10.4766,
+    "amplitude": 28,
+    "pares": 1,
+    "impares": 4,
+    "gaps": [
+      2,
+      10,
+      7,
+      9
+    ],
+    "distribuicao_por_dezenas": {
+      "11-20": 2,
+      "21-30": 1,
+      "31-40": 1,
+      "41-50": 1
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Gibosa minguante",
+    "iluminacao_lunar_percent": 94.712,
+    "idade_lunar_dias": 16.946,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2007",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2007",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2007_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "95b77566de45ecd685aab39ce3b53c9bfe10e9373b8dc851a5005bf72e58818c",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

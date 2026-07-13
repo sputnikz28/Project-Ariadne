@@ -1,0 +1,84 @@
+{
+  "id": "PERG-2019-085",
+  "titulo": "Pergaminho da Extração 085/2019",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2019,
+  "numero_sorteio": "085/2019",
+  "data": "2019-10-22",
+  "dia_semana": "terça-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2019-10-22T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      2,
+      5,
+      32,
+      33,
+      47
+    ],
+    "estrelas": [
+      7,
+      8
+    ],
+    "formato": "2 5 32 33 47 + 7 8",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 119,
+    "media_numeros": 23.8,
+    "mediana_numeros": 32,
+    "desvio_padrao": 17.4287,
+    "amplitude": 45,
+    "pares": 2,
+    "impares": 3,
+    "gaps": [
+      3,
+      27,
+      1,
+      14
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 2,
+      "31-40": 2,
+      "41-50": 1
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Quarto minguante",
+    "iluminacao_lunar_percent": 36.401,
+    "idade_lunar_dias": 23.443,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2019",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2019",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2019_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "d1a3794a3345ccb7a69dd95b7482fa35100eb2d52c46bf095ea0f2c41727bb02",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

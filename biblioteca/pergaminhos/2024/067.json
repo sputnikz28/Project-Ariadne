@@ -1,0 +1,84 @@
+{
+  "id": "PERG-2024-067",
+  "titulo": "Pergaminho da Extração 067/2024",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2024,
+  "numero_sorteio": "067/2024",
+  "data": "2024-08-20",
+  "dia_semana": "terça-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2024-08-20T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      7,
+      10,
+      13,
+      18,
+      26
+    ],
+    "estrelas": [
+      3,
+      12
+    ],
+    "formato": "7 10 13 18 26 + 3 12",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 74,
+    "media_numeros": 14.8,
+    "mediana_numeros": 13,
+    "desvio_padrao": 6.6753,
+    "amplitude": 19,
+    "pares": 3,
+    "impares": 2,
+    "gaps": [
+      3,
+      3,
+      5,
+      8
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 2,
+      "11-20": 2,
+      "21-30": 1
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Lua cheia",
+    "iluminacao_lunar_percent": 98.574,
+    "idade_lunar_dias": 15.891,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2024",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2024",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2024_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "e8caac25efbbc3e7290487aa0bad6a538742c5792a98b9a12f0b4b6fe7af7822",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

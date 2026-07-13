@@ -1,0 +1,549 @@
+{
+  "nome": "Livro Lunar",
+  "fases": {
+    "Lua cheia": {
+      "quantidade_sorteios": 7,
+      "numeros_mais_frequentes": [
+        {
+          "numero": 8,
+          "frequencia": 4
+        },
+        {
+          "numero": 46,
+          "frequencia": 3
+        },
+        {
+          "numero": 5,
+          "frequencia": 2
+        },
+        {
+          "numero": 27,
+          "frequencia": 2
+        },
+        {
+          "numero": 42,
+          "frequencia": 2
+        },
+        {
+          "numero": 44,
+          "frequencia": 2
+        },
+        {
+          "numero": 1,
+          "frequencia": 1
+        },
+        {
+          "numero": 3,
+          "frequencia": 1
+        },
+        {
+          "numero": 6,
+          "frequencia": 1
+        },
+        {
+          "numero": 7,
+          "frequencia": 1
+        }
+      ],
+      "estrelas_mais_frequentes": [
+        {
+          "estrela": 2,
+          "frequencia": 4
+        },
+        {
+          "estrela": 1,
+          "frequencia": 2
+        },
+        {
+          "estrela": 7,
+          "frequencia": 2
+        },
+        {
+          "estrela": 10,
+          "frequencia": 2
+        },
+        {
+          "estrela": 5,
+          "frequencia": 1
+        }
+      ],
+      "soma_media": 132.7143
+    },
+    "Gibosa minguante": {
+      "quantidade_sorteios": 9,
+      "numeros_mais_frequentes": [
+        {
+          "numero": 17,
+          "frequencia": 4
+        },
+        {
+          "numero": 5,
+          "frequencia": 2
+        },
+        {
+          "numero": 6,
+          "frequencia": 2
+        },
+        {
+          "numero": 14,
+          "frequencia": 2
+        },
+        {
+          "numero": 16,
+          "frequencia": 2
+        },
+        {
+          "numero": 18,
+          "frequencia": 2
+        },
+        {
+          "numero": 19,
+          "frequencia": 2
+        },
+        {
+          "numero": 20,
+          "frequencia": 2
+        },
+        {
+          "numero": 28,
+          "frequencia": 2
+        },
+        {
+          "numero": 31,
+          "frequencia": 2
+        }
+      ],
+      "estrelas_mais_frequentes": [
+        {
+          "estrela": 6,
+          "frequencia": 4
+        },
+        {
+          "estrela": 9,
+          "frequencia": 3
+        },
+        {
+          "estrela": 2,
+          "frequencia": 2
+        },
+        {
+          "estrela": 7,
+          "frequencia": 2
+        },
+        {
+          "estrela": 12,
+          "frequencia": 2
+        }
+      ],
+      "soma_media": 101.8889
+    },
+    "Quarto minguante": {
+      "quantidade_sorteios": 7,
+      "numeros_mais_frequentes": [
+        {
+          "numero": 34,
+          "frequencia": 3
+        },
+        {
+          "numero": 1,
+          "frequencia": 2
+        },
+        {
+          "numero": 2,
+          "frequencia": 2
+        },
+        {
+          "numero": 7,
+          "frequencia": 2
+        },
+        {
+          "numero": 10,
+          "frequencia": 2
+        },
+        {
+          "numero": 14,
+          "frequencia": 2
+        },
+        {
+          "numero": 17,
+          "frequencia": 2
+        },
+        {
+          "numero": 19,
+          "frequencia": 2
+        },
+        {
+          "numero": 44,
+          "frequencia": 2
+        },
+        {
+          "numero": 5,
+          "frequencia": 1
+        }
+      ],
+      "estrelas_mais_frequentes": [
+        {
+          "estrela": 5,
+          "frequencia": 3
+        },
+        {
+          "estrela": 8,
+          "frequencia": 3
+        },
+        {
+          "estrela": 4,
+          "frequencia": 2
+        },
+        {
+          "estrela": 2,
+          "frequencia": 1
+        },
+        {
+          "estrela": 3,
+          "frequencia": 1
+        }
+      ],
+      "soma_media": 120.5714
+    },
+    "Lua minguante": {
+      "quantidade_sorteios": 8,
+      "numeros_mais_frequentes": [
+        {
+          "numero": 4,
+          "frequencia": 3
+        },
+        {
+          "numero": 2,
+          "frequencia": 2
+        },
+        {
+          "numero": 13,
+          "frequencia": 2
+        },
+        {
+          "numero": 14,
+          "frequencia": 2
+        },
+        {
+          "numero": 17,
+          "frequencia": 2
+        },
+        {
+          "numero": 26,
+          "frequencia": 2
+        },
+        {
+          "numero": 28,
+          "frequencia": 2
+        },
+        {
+          "numero": 44,
+          "frequencia": 2
+        },
+        {
+          "numero": 48,
+          "frequencia": 2
+        },
+        {
+          "numero": 1,
+          "frequencia": 1
+        }
+      ],
+      "estrelas_mais_frequentes": [
+        {
+          "estrela": 10,
+          "frequencia": 4
+        },
+        {
+          "estrela": 5,
+          "frequencia": 3
+        },
+        {
+          "estrela": 7,
+          "frequencia": 2
+        },
+        {
+          "estrela": 1,
+          "frequencia": 1
+        },
+        {
+          "estrela": 2,
+          "frequencia": 1
+        }
+      ],
+      "soma_media": 116.5
+    },
+    "Lua crescente": {
+      "quantidade_sorteios": 8,
+      "numeros_mais_frequentes": [
+        {
+          "numero": 13,
+          "frequencia": 3
+        },
+        {
+          "numero": 5,
+          "frequencia": 2
+        },
+        {
+          "numero": 12,
+          "frequencia": 2
+        },
+        {
+          "numero": 16,
+          "frequencia": 2
+        },
+        {
+          "numero": 18,
+          "frequencia": 2
+        },
+        {
+          "numero": 37,
+          "frequencia": 2
+        },
+        {
+          "numero": 42,
+          "frequencia": 2
+        },
+        {
+          "numero": 45,
+          "frequencia": 2
+        },
+        {
+          "numero": 2,
+          "frequencia": 1
+        },
+        {
+          "numero": 4,
+          "frequencia": 1
+        }
+      ],
+      "estrelas_mais_frequentes": [
+        {
+          "estrela": 2,
+          "frequencia": 2
+        },
+        {
+          "estrela": 3,
+          "frequencia": 2
+        },
+        {
+          "estrela": 4,
+          "frequencia": 2
+        },
+        {
+          "estrela": 5,
+          "frequencia": 2
+        },
+        {
+          "estrela": 9,
+          "frequencia": 2
+        }
+      ],
+      "soma_media": 129.5
+    },
+    "Quarto crescente": {
+      "quantidade_sorteios": 6,
+      "numeros_mais_frequentes": [
+        {
+          "numero": 26,
+          "frequencia": 2
+        },
+        {
+          "numero": 27,
+          "frequencia": 2
+        },
+        {
+          "numero": 40,
+          "frequencia": 2
+        },
+        {
+          "numero": 43,
+          "frequencia": 2
+        },
+        {
+          "numero": 45,
+          "frequencia": 2
+        },
+        {
+          "numero": 47,
+          "frequencia": 2
+        },
+        {
+          "numero": 3,
+          "frequencia": 1
+        },
+        {
+          "numero": 4,
+          "frequencia": 1
+        },
+        {
+          "numero": 6,
+          "frequencia": 1
+        },
+        {
+          "numero": 10,
+          "frequencia": 1
+        }
+      ],
+      "estrelas_mais_frequentes": [
+        {
+          "estrela": 5,
+          "frequencia": 3
+        },
+        {
+          "estrela": 1,
+          "frequencia": 2
+        },
+        {
+          "estrela": 3,
+          "frequencia": 2
+        },
+        {
+          "estrela": 6,
+          "frequencia": 2
+        },
+        {
+          "estrela": 8,
+          "frequencia": 1
+        }
+      ],
+      "soma_media": 144.5
+    },
+    "Gibosa crescente": {
+      "quantidade_sorteios": 6,
+      "numeros_mais_frequentes": [
+        {
+          "numero": 35,
+          "frequencia": 3
+        },
+        {
+          "numero": 6,
+          "frequencia": 2
+        },
+        {
+          "numero": 14,
+          "frequencia": 2
+        },
+        {
+          "numero": 26,
+          "frequencia": 2
+        },
+        {
+          "numero": 46,
+          "frequencia": 2
+        },
+        {
+          "numero": 4,
+          "frequencia": 1
+        },
+        {
+          "numero": 10,
+          "frequencia": 1
+        },
+        {
+          "numero": 16,
+          "frequencia": 1
+        },
+        {
+          "numero": 18,
+          "frequencia": 1
+        },
+        {
+          "numero": 23,
+          "frequencia": 1
+        }
+      ],
+      "estrelas_mais_frequentes": [
+        {
+          "estrela": 6,
+          "frequencia": 2
+        },
+        {
+          "estrela": 11,
+          "frequencia": 2
+        },
+        {
+          "estrela": 12,
+          "frequencia": 2
+        },
+        {
+          "estrela": 2,
+          "frequencia": 1
+        },
+        {
+          "estrela": 4,
+          "frequencia": 1
+        }
+      ],
+      "soma_media": 145.1667
+    },
+    "Lua nova": {
+      "quantidade_sorteios": 4,
+      "numeros_mais_frequentes": [
+        {
+          "numero": 41,
+          "frequencia": 4
+        },
+        {
+          "numero": 10,
+          "frequencia": 2
+        },
+        {
+          "numero": 28,
+          "frequencia": 2
+        },
+        {
+          "numero": 1,
+          "frequencia": 1
+        },
+        {
+          "numero": 3,
+          "frequencia": 1
+        },
+        {
+          "numero": 4,
+          "frequencia": 1
+        },
+        {
+          "numero": 5,
+          "frequencia": 1
+        },
+        {
+          "numero": 6,
+          "frequencia": 1
+        },
+        {
+          "numero": 17,
+          "frequencia": 1
+        },
+        {
+          "numero": 22,
+          "frequencia": 1
+        }
+      ],
+      "estrelas_mais_frequentes": [
+        {
+          "estrela": 9,
+          "frequencia": 2
+        },
+        {
+          "estrela": 2,
+          "frequencia": 1
+        },
+        {
+          "estrela": 3,
+          "frequencia": 1
+        },
+        {
+          "estrela": 5,
+          "frequencia": 1
+        },
+        {
+          "estrela": 6,
+          "frequencia": 1
+        }
+      ],
+      "soma_media": 120.5
+    }
+  }
+}

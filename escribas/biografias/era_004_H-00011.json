@@ -1,0 +1,101 @@
+{
+  "era": 4,
+  "id": "H-00011",
+  "nome": "Selene da Névoa",
+  "raca": "Cronomante",
+  "casa": "Casa dos Ossos",
+  "geracao": 1,
+  "pais": [],
+  "pontos": 165,
+  "titulo": "Errante das Sombras",
+  "estado": "VIVO",
+  "amuletos": [
+    {
+      "id": "ART-67230294CE",
+      "nome": "Livro dos Ecos",
+      "raridade": "MITICO",
+      "multiplicador": 2.0,
+      "criador": "Selene da Névoa",
+      "geracao_criacao": 13,
+      "donos": [
+        "Selene da Névoa"
+      ],
+      "energia_acumulada": 8.25,
+      "conselhos": 0,
+      "estado": "ATIVO"
+    }
+  ],
+  "melhores_chaves": [
+    {
+      "geracao": 1,
+      "numeros": [
+        4,
+        6,
+        18,
+        33,
+        46
+      ],
+      "estrelas": [
+        3,
+        11
+      ]
+    },
+    {
+      "geracao": 2,
+      "numeros": [
+        4,
+        6,
+        18,
+        33,
+        46
+      ],
+      "estrelas": [
+        3,
+        11
+      ]
+    },
+    {
+      "geracao": 3,
+      "numeros": [
+        4,
+        6,
+        18,
+        33,
+        46
+      ],
+      "estrelas": [
+        3,
+        11
+      ]
+    },
+    {
+      "geracao": 4,
+      "numeros": [
+        4,
+        6,
+        18,
+        33,
+        46
+      ],
+      "estrelas": [
+        3,
+        11
+      ]
+    },
+    {
+      "geracao": 5,
+      "numeros": [
+        4,
+        6,
+        18,
+        33,
+        46
+      ],
+      "estrelas": [
+        3,
+        11
+      ]
+    }
+  ],
+  "criada_em": "2026-07-11T09:21:49+00:00"
+}

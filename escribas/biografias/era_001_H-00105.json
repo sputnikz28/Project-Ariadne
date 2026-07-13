@@ -1,0 +1,89 @@
+{
+  "era": 1,
+  "id": "H-00105",
+  "nome": "Kael da Névoa",
+  "raca": "Vidente",
+  "casa": "Casa do Bosque",
+  "geracao": 2,
+  "pais": [
+    "H-00041",
+    "H-00005"
+  ],
+  "pontos": 178,
+  "titulo": "Errante das Sombras",
+  "estado": "VIVO",
+  "amuletos": [],
+  "melhores_chaves": [
+    {
+      "geracao": 2,
+      "numeros": [
+        3,
+        22,
+        28,
+        30,
+        37
+      ],
+      "estrelas": [
+        4,
+        9
+      ]
+    },
+    {
+      "geracao": 3,
+      "numeros": [
+        8,
+        18,
+        34,
+        35,
+        50
+      ],
+      "estrelas": [
+        2,
+        9
+      ]
+    },
+    {
+      "geracao": 4,
+      "numeros": [
+        3,
+        19,
+        23,
+        33,
+        46
+      ],
+      "estrelas": [
+        2,
+        6
+      ]
+    },
+    {
+      "geracao": 5,
+      "numeros": [
+        34,
+        40,
+        44,
+        45,
+        50
+      ],
+      "estrelas": [
+        4,
+        9
+      ]
+    },
+    {
+      "geracao": 6,
+      "numeros": [
+        5,
+        18,
+        41,
+        42,
+        46
+      ],
+      "estrelas": [
+        4,
+        6
+      ]
+    }
+  ],
+  "criada_em": "2026-07-11T09:21:30+00:00"
+}

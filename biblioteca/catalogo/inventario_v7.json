@@ -1,0 +1,17 @@
+{
+  "versao": "7.0",
+  "pergaminhos": 55,
+  "indices": 5,
+  "fontes": [
+    "euromilhoes_2026_001_055_dataset_completo.json",
+    "saidas_de_bolas.xlsx",
+    "saidas_de_bolas_normalizado.json"
+  ],
+  "classes_novas": [
+    "Vampiros",
+    "Gárgulas",
+    "Bibliotecários",
+    "Ariadne",
+    "Treefolks Investigadores"
+  ]
+}

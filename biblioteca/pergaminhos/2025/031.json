@@ -1,0 +1,85 @@
+{
+  "id": "PERG-2025-031",
+  "titulo": "Pergaminho da Extração 031/2025",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2025,
+  "numero_sorteio": "031/2025",
+  "data": "2025-04-18",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2025-04-18T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      20,
+      27,
+      35,
+      39,
+      48
+    ],
+    "estrelas": [
+      3,
+      8
+    ],
+    "formato": "20 27 35 39 48 + 3 8",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 169,
+    "media_numeros": 33.8,
+    "mediana_numeros": 35,
+    "desvio_padrao": 9.6623,
+    "amplitude": 28,
+    "pares": 2,
+    "impares": 3,
+    "gaps": [
+      7,
+      8,
+      4,
+      9
+    ],
+    "distribuicao_por_dezenas": {
+      "11-20": 1,
+      "21-30": 1,
+      "31-40": 2,
+      "41-50": 1
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Gibosa minguante",
+    "iluminacao_lunar_percent": 72.697,
+    "idade_lunar_dias": 19.933,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2025",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2025",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2025_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "252f26a648fbd9322b967b5b2a4ec579707793d949a67e96dfce7dd96fe28edf",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

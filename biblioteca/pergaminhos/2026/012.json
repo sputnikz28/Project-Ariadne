@@ -1,0 +1,87 @@
+{
+  "id": "PERG-2026-012",
+  "titulo": "Pergaminho da Extração 012/2026",
+  "biblioteca": "Grande Grimório das Extrações",
+  "estado": "SELADO",
+  "raridade": "Sagrado",
+  "data": {
+    "extracao": "2026-02-10",
+    "dia_semana": "terça-feira",
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "timestamp_utc": "2026-02-10T19:00:00+00:00"
+  },
+  "extracao": {
+    "numero_sorteio": "012/2026",
+    "numeros": [
+      1,
+      17,
+      19,
+      34,
+      42
+    ],
+    "estrelas": [
+      5,
+      8
+    ],
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma": 113,
+    "media": 22.6,
+    "mediana": 19,
+    "desvio_padrao": 14.2632,
+    "amplitude": 41,
+    "pares": 2,
+    "impares": 3,
+    "gaps": [
+      16,
+      2,
+      15,
+      8
+    ],
+    "distribuicao_dezenas": {
+      "01-10": 1,
+      "11-20": 2,
+      "31-40": 1,
+      "41-50": 1
+    },
+    "repetidos_anterior": [],
+    "estrelas_repetidas_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Quarto minguante",
+    "iluminacao_percent": 38.153,
+    "idade_lunar_dias": 23.272,
+    "eclipse": false
+  },
+  "premios": {
+    "categorias": null,
+    "houve_vencedor_1_premio_total": null,
+    "houve_vencedor_1_premio_portugal": null,
+    "total_vencedores_todas_categorias": null,
+    "total_vencedores_portugal_todas_categorias": null
+  },
+  "qualidade_dados": {
+    "fonte_resultado": "texto ou imagem fornecidos pelo utilizador",
+    "transcricao_manual": true,
+    "ordem_saida_confirmada": false,
+    "dados_financeiros_disponiveis": false,
+    "categorias_premio_disponiveis": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "receita_liquida_apostas_eur",
+      "montante_para_premios_eur",
+      "jackpot_previsto",
+      "categorias_premio"
+    ]
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "selo": "Biblioteca Eterna",
+    "sha256": "574f19dad1dcc44ea024b2f054203508b0e45d9297859d93352cc0580bf3c3c4",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

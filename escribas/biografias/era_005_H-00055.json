@@ -1,0 +1,86 @@
+{
+  "era": 5,
+  "id": "H-00055",
+  "nome": "Aion da Lua Fria",
+  "raca": "Elfo",
+  "casa": "Casa do Caos",
+  "geracao": 1,
+  "pais": [],
+  "pontos": 175,
+  "titulo": "Sussurrador do Destino",
+  "estado": "VIVO",
+  "amuletos": [],
+  "melhores_chaves": [
+    {
+      "geracao": 1,
+      "numeros": [
+        8,
+        16,
+        29,
+        45,
+        46
+      ],
+      "estrelas": [
+        4,
+        5
+      ]
+    },
+    {
+      "geracao": 2,
+      "numeros": [
+        20,
+        21,
+        37,
+        39,
+        48
+      ],
+      "estrelas": [
+        2,
+        6
+      ]
+    },
+    {
+      "geracao": 3,
+      "numeros": [
+        10,
+        22,
+        27,
+        38,
+        41
+      ],
+      "estrelas": [
+        2,
+        6
+      ]
+    },
+    {
+      "geracao": 4,
+      "numeros": [
+        7,
+        8,
+        28,
+        29,
+        39
+      ],
+      "estrelas": [
+        2,
+        6
+      ]
+    },
+    {
+      "geracao": 5,
+      "numeros": [
+        11,
+        19,
+        28,
+        42,
+        50
+      ],
+      "estrelas": [
+        2,
+        4
+      ]
+    }
+  ],
+  "criada_em": "2026-07-11T09:21:55+00:00"
+}

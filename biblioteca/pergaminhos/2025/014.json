@@ -1,0 +1,87 @@
+{
+  "id": "PERG-2025-014",
+  "titulo": "Pergaminho da Extração 014/2025",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2025,
+  "numero_sorteio": "014/2025",
+  "data": "2025-02-18",
+  "dia_semana": "terça-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "19:00:00",
+    "timestamp_utc": "2025-02-18T19:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      5,
+      14,
+      25,
+      26,
+      40
+    ],
+    "estrelas": [
+      5,
+      7
+    ],
+    "formato": "5 14 25 26 40 + 5 7",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 110,
+    "media_numeros": 22,
+    "mediana_numeros": 25,
+    "desvio_padrao": 11.8491,
+    "amplitude": 35,
+    "pares": 3,
+    "impares": 2,
+    "gaps": [
+      9,
+      11,
+      1,
+      14
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 1,
+      "11-20": 1,
+      "21-30": 2,
+      "31-40": 1
+    },
+    "repetidos_sorteio_anterior": [
+      14
+    ],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Quarto minguante",
+    "iluminacao_lunar_percent": 68.063,
+    "idade_lunar_dias": 20.411,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2025",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2025",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2025_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "b80d5d0018ae6c689ccb7abe2bc3e52def05d01a9b4e2876beb9f0a6c8768b17",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

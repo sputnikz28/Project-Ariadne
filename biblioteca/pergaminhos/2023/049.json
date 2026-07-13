@@ -1,0 +1,84 @@
+{
+  "id": "PERG-2023-049",
+  "titulo": "Pergaminho da Extração 049/2023",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2023,
+  "numero_sorteio": "049/2023",
+  "data": "2023-06-20",
+  "dia_semana": "terça-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2023-06-20T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      11,
+      17,
+      28,
+      32,
+      35
+    ],
+    "estrelas": [
+      5,
+      6
+    ],
+    "formato": "11 17 28 32 35 + 5 6",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 123,
+    "media_numeros": 24.6,
+    "mediana_numeros": 28,
+    "desvio_padrao": 9.1345,
+    "amplitude": 24,
+    "pares": 2,
+    "impares": 3,
+    "gaps": [
+      6,
+      11,
+      4,
+      3
+    ],
+    "distribuicao_por_dezenas": {
+      "11-20": 2,
+      "21-30": 1,
+      "31-40": 2
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Lua crescente",
+    "iluminacao_lunar_percent": 6.183,
+    "idade_lunar_dias": 2.362,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2023",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2023",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2023_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "56b8261740aa9fc4a7163c549fe229807d4267a2b827c5b9632721f93d810c48",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

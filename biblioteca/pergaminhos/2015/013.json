@@ -1,0 +1,85 @@
+{
+  "id": "PERG-2015-013",
+  "titulo": "Pergaminho da Extração 013/2015",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2015,
+  "numero_sorteio": "013/2015",
+  "data": "2015-02-13",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "19:00:00",
+    "timestamp_utc": "2015-02-13T19:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      12,
+      24,
+      39,
+      42,
+      44
+    ],
+    "estrelas": [
+      3,
+      11
+    ],
+    "formato": "12 24 39 42 44 + 3 11",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 161,
+    "media_numeros": 32.2,
+    "mediana_numeros": 39,
+    "desvio_padrao": 12.3028,
+    "amplitude": 32,
+    "pares": 4,
+    "impares": 1,
+    "gaps": [
+      12,
+      15,
+      3,
+      2
+    ],
+    "distribuicao_por_dezenas": {
+      "11-20": 1,
+      "21-30": 1,
+      "31-40": 1,
+      "41-50": 2
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Quarto minguante",
+    "iluminacao_lunar_percent": 33.205,
+    "idade_lunar_dias": 23.758,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2015",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2015",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2015_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "9df0def3783cb52a15f38f51e65bdafa136636bdbaf79e8d821a3aa5e40075f6",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

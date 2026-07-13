@@ -1,0 +1,87 @@
+{
+  "id": "PERG-2020-089",
+  "titulo": "Pergaminho da Extração 089/2020",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2020,
+  "numero_sorteio": "089/2020",
+  "data": "2020-11-06",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "19:00:00",
+    "timestamp_utc": "2020-11-06T19:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      7,
+      12,
+      37,
+      40,
+      50
+    ],
+    "estrelas": [
+      1,
+      2
+    ],
+    "formato": "7 12 37 40 50 + 1 2",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 146,
+    "media_numeros": 29.2,
+    "mediana_numeros": 37,
+    "desvio_padrao": 16.726,
+    "amplitude": 43,
+    "pares": 3,
+    "impares": 2,
+    "gaps": [
+      5,
+      25,
+      3,
+      10
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 1,
+      "11-20": 1,
+      "31-40": 2,
+      "41-50": 1
+    },
+    "repetidos_sorteio_anterior": [
+      7
+    ],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Quarto minguante",
+    "iluminacao_lunar_percent": 68.221,
+    "idade_lunar_dias": 20.395,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2020",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2020",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2020_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "2df43df5c6c045207872be91bd9b4bfadf952b3e1e17fd418a7618e0178bdebb",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

@@ -1,0 +1,84 @@
+{
+  "id": "PERG-2012-002",
+  "titulo": "Pergaminho da Extração 002/2012",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2012,
+  "numero_sorteio": "002/2012",
+  "data": "2012-01-06",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "19:00:00",
+    "timestamp_utc": "2012-01-06T19:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      1,
+      6,
+      10,
+      12,
+      31
+    ],
+    "estrelas": [
+      2,
+      7
+    ],
+    "formato": "1 6 10 12 31 + 2 7",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 60,
+    "media_numeros": 12,
+    "mediana_numeros": 10,
+    "desvio_padrao": 10.2176,
+    "amplitude": 30,
+    "pares": 3,
+    "impares": 2,
+    "gaps": [
+      5,
+      4,
+      2,
+      19
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 3,
+      "11-20": 1,
+      "31-40": 1
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Gibosa crescente",
+    "iluminacao_lunar_percent": 93.539,
+    "idade_lunar_dias": 12.35,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2012",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2012",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2012_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "c6b3a6df84cf165939718aab6150a510f6acdce7d7779d334e39142967f49179",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

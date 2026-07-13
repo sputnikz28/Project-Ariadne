@@ -1,0 +1,88 @@
+{
+  "id": "PERG-2022-010",
+  "titulo": "Pergaminho da Extração 010/2022",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2022,
+  "numero_sorteio": "010/2022",
+  "data": "2022-02-04",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "19:00:00",
+    "timestamp_utc": "2022-02-04T19:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      3,
+      25,
+      38,
+      43,
+      49
+    ],
+    "estrelas": [
+      3,
+      7
+    ],
+    "formato": "3 25 38 43 49 + 3 7",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 158,
+    "media_numeros": 31.6,
+    "mediana_numeros": 38,
+    "desvio_padrao": 16.3414,
+    "amplitude": 46,
+    "pares": 1,
+    "impares": 4,
+    "gaps": [
+      22,
+      13,
+      5,
+      6
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 1,
+      "21-30": 1,
+      "31-40": 1,
+      "41-50": 2
+    },
+    "repetidos_sorteio_anterior": [
+      38,
+      49
+    ],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Lua crescente",
+    "iluminacao_lunar_percent": 15.468,
+    "idade_lunar_dias": 3.8,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2022",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2022",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2022_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "2948e6c03e4a25d5263869cebfc128dc533a1591a27c99fe157d21f60e77100c",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

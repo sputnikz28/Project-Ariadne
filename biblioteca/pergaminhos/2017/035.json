@@ -1,0 +1,86 @@
+{
+  "id": "PERG-2017-035",
+  "titulo": "Pergaminho da Extração 035/2017",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2017,
+  "numero_sorteio": "035/2017",
+  "data": "2017-05-02",
+  "dia_semana": "terça-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2017-05-02T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      6,
+      19,
+      23,
+      25,
+      27
+    ],
+    "estrelas": [
+      11,
+      12
+    ],
+    "formato": "6 19 23 25 27 + 11 12",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 100,
+    "media_numeros": 20,
+    "mediana_numeros": 23,
+    "desvio_padrao": 7.4833,
+    "amplitude": 21,
+    "pares": 1,
+    "impares": 4,
+    "gaps": [
+      13,
+      4,
+      2,
+      2
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 1,
+      "11-20": 1,
+      "21-30": 3
+    },
+    "repetidos_sorteio_anterior": [
+      25
+    ],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Quarto crescente",
+    "iluminacao_lunar_percent": 45.983,
+    "idade_lunar_dias": 7.005,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2017",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2017",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2017_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "0c7bbc1dbead283b2077aed619daccd346b590d517bb6dc8bc4f872835648cbd",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

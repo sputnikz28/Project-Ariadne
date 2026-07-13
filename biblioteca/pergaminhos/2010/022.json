@@ -1,0 +1,85 @@
+{
+  "id": "PERG-2010-022",
+  "titulo": "Pergaminho da Extração 022/2010",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2010,
+  "numero_sorteio": "022/2010",
+  "data": "2010-05-28",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2010-05-28T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      4,
+      9,
+      31,
+      32,
+      33
+    ],
+    "estrelas": [
+      3,
+      7
+    ],
+    "formato": "4 9 31 32 33 + 3 7",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 109,
+    "media_numeros": 21.8,
+    "mediana_numeros": 31,
+    "desvio_padrao": 12.6079,
+    "amplitude": 29,
+    "pares": 2,
+    "impares": 3,
+    "gaps": [
+      5,
+      22,
+      1,
+      1
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 2,
+      "31-40": 3
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": [
+      7
+    ]
+  },
+  "astronomia": {
+    "fase_lua": "Lua cheia",
+    "iluminacao_lunar_percent": 99.312,
+    "idade_lunar_dias": 15.546,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2010",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2010",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2010_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "c12ee06c941183b39ab147d35ecb324c637a55a58dab5f442c93b011681f9ea5",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

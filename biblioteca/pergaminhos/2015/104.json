@@ -1,0 +1,84 @@
+{
+  "id": "PERG-2015-104",
+  "titulo": "Pergaminho da Extração 104/2015",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2015,
+  "numero_sorteio": "104/2015",
+  "data": "2015-12-29",
+  "dia_semana": "terça-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "19:00:00",
+    "timestamp_utc": "2015-12-29T19:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      5,
+      20,
+      31,
+      32,
+      36
+    ],
+    "estrelas": [
+      6,
+      7
+    ],
+    "formato": "5 20 31 32 36 + 6 7",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 124,
+    "media_numeros": 24.8,
+    "mediana_numeros": 31,
+    "desvio_padrao": 11.2321,
+    "amplitude": 31,
+    "pares": 3,
+    "impares": 2,
+    "gaps": [
+      15,
+      11,
+      1,
+      4
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 1,
+      "11-20": 1,
+      "31-40": 3
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Gibosa minguante",
+    "iluminacao_lunar_percent": 80.588,
+    "idade_lunar_dias": 19.054,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2015",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2015",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2015_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "438a2d016f3816f9c4932ffd809a1dfea9234905c04a4f8bf44d7acb69486359",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

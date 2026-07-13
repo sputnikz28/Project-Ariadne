@@ -1,0 +1,536 @@
+{
+  "ano": 2019,
+  "fonte": "biblioteca/fontes/euromilhoes_2019_dataset_completo.json",
+  "primeiro_sorteio": "001/2019",
+  "ultimo_sorteio": "105/2019",
+  "data_inicio": "2019-01-01",
+  "data_fim": "2019-12-31",
+  "quantidade_sorteios": 105,
+  "pergaminhos": [
+    {
+      "numero_sorteio": "001/2019",
+      "data": "2019-01-01",
+      "ficheiro": "biblioteca/pergaminhos/2019/001.json"
+    },
+    {
+      "numero_sorteio": "002/2019",
+      "data": "2019-01-04",
+      "ficheiro": "biblioteca/pergaminhos/2019/002.json"
+    },
+    {
+      "numero_sorteio": "003/2019",
+      "data": "2019-01-08",
+      "ficheiro": "biblioteca/pergaminhos/2019/003.json"
+    },
+    {
+      "numero_sorteio": "004/2019",
+      "data": "2019-01-11",
+      "ficheiro": "biblioteca/pergaminhos/2019/004.json"
+    },
+    {
+      "numero_sorteio": "005/2019",
+      "data": "2019-01-15",
+      "ficheiro": "biblioteca/pergaminhos/2019/005.json"
+    },
+    {
+      "numero_sorteio": "006/2019",
+      "data": "2019-01-18",
+      "ficheiro": "biblioteca/pergaminhos/2019/006.json"
+    },
+    {
+      "numero_sorteio": "007/2019",
+      "data": "2019-01-22",
+      "ficheiro": "biblioteca/pergaminhos/2019/007.json"
+    },
+    {
+      "numero_sorteio": "008/2019",
+      "data": "2019-01-25",
+      "ficheiro": "biblioteca/pergaminhos/2019/008.json"
+    },
+    {
+      "numero_sorteio": "009/2019",
+      "data": "2019-01-29",
+      "ficheiro": "biblioteca/pergaminhos/2019/009.json"
+    },
+    {
+      "numero_sorteio": "010/2019",
+      "data": "2019-02-01",
+      "ficheiro": "biblioteca/pergaminhos/2019/010.json"
+    },
+    {
+      "numero_sorteio": "011/2019",
+      "data": "2019-02-05",
+      "ficheiro": "biblioteca/pergaminhos/2019/011.json"
+    },
+    {
+      "numero_sorteio": "012/2019",
+      "data": "2019-02-08",
+      "ficheiro": "biblioteca/pergaminhos/2019/012.json"
+    },
+    {
+      "numero_sorteio": "013/2019",
+      "data": "2019-02-12",
+      "ficheiro": "biblioteca/pergaminhos/2019/013.json"
+    },
+    {
+      "numero_sorteio": "014/2019",
+      "data": "2019-02-15",
+      "ficheiro": "biblioteca/pergaminhos/2019/014.json"
+    },
+    {
+      "numero_sorteio": "015/2019",
+      "data": "2019-02-19",
+      "ficheiro": "biblioteca/pergaminhos/2019/015.json"
+    },
+    {
+      "numero_sorteio": "016/2019",
+      "data": "2019-02-22",
+      "ficheiro": "biblioteca/pergaminhos/2019/016.json"
+    },
+    {
+      "numero_sorteio": "017/2019",
+      "data": "2019-02-26",
+      "ficheiro": "biblioteca/pergaminhos/2019/017.json"
+    },
+    {
+      "numero_sorteio": "018/2019",
+      "data": "2019-03-01",
+      "ficheiro": "biblioteca/pergaminhos/2019/018.json"
+    },
+    {
+      "numero_sorteio": "019/2019",
+      "data": "2019-03-05",
+      "ficheiro": "biblioteca/pergaminhos/2019/019.json"
+    },
+    {
+      "numero_sorteio": "020/2019",
+      "data": "2019-03-08",
+      "ficheiro": "biblioteca/pergaminhos/2019/020.json"
+    },
+    {
+      "numero_sorteio": "021/2019",
+      "data": "2019-03-12",
+      "ficheiro": "biblioteca/pergaminhos/2019/021.json"
+    },
+    {
+      "numero_sorteio": "022/2019",
+      "data": "2019-03-15",
+      "ficheiro": "biblioteca/pergaminhos/2019/022.json"
+    },
+    {
+      "numero_sorteio": "023/2019",
+      "data": "2019-03-19",
+      "ficheiro": "biblioteca/pergaminhos/2019/023.json"
+    },
+    {
+      "numero_sorteio": "024/2019",
+      "data": "2019-03-22",
+      "ficheiro": "biblioteca/pergaminhos/2019/024.json"
+    },
+    {
+      "numero_sorteio": "025/2019",
+      "data": "2019-03-26",
+      "ficheiro": "biblioteca/pergaminhos/2019/025.json"
+    },
+    {
+      "numero_sorteio": "026/2019",
+      "data": "2019-03-29",
+      "ficheiro": "biblioteca/pergaminhos/2019/026.json"
+    },
+    {
+      "numero_sorteio": "027/2019",
+      "data": "2019-04-02",
+      "ficheiro": "biblioteca/pergaminhos/2019/027.json"
+    },
+    {
+      "numero_sorteio": "028/2019",
+      "data": "2019-04-05",
+      "ficheiro": "biblioteca/pergaminhos/2019/028.json"
+    },
+    {
+      "numero_sorteio": "029/2019",
+      "data": "2019-04-09",
+      "ficheiro": "biblioteca/pergaminhos/2019/029.json"
+    },
+    {
+      "numero_sorteio": "030/2019",
+      "data": "2019-04-12",
+      "ficheiro": "biblioteca/pergaminhos/2019/030.json"
+    },
+    {
+      "numero_sorteio": "031/2019",
+      "data": "2019-04-16",
+      "ficheiro": "biblioteca/pergaminhos/2019/031.json"
+    },
+    {
+      "numero_sorteio": "032/2019",
+      "data": "2019-04-19",
+      "ficheiro": "biblioteca/pergaminhos/2019/032.json"
+    },
+    {
+      "numero_sorteio": "033/2019",
+      "data": "2019-04-23",
+      "ficheiro": "biblioteca/pergaminhos/2019/033.json"
+    },
+    {
+      "numero_sorteio": "034/2019",
+      "data": "2019-04-26",
+      "ficheiro": "biblioteca/pergaminhos/2019/034.json"
+    },
+    {
+      "numero_sorteio": "035/2019",
+      "data": "2019-04-30",
+      "ficheiro": "biblioteca/pergaminhos/2019/035.json"
+    },
+    {
+      "numero_sorteio": "036/2019",
+      "data": "2019-05-03",
+      "ficheiro": "biblioteca/pergaminhos/2019/036.json"
+    },
+    {
+      "numero_sorteio": "037/2019",
+      "data": "2019-05-07",
+      "ficheiro": "biblioteca/pergaminhos/2019/037.json"
+    },
+    {
+      "numero_sorteio": "038/2019",
+      "data": "2019-05-10",
+      "ficheiro": "biblioteca/pergaminhos/2019/038.json"
+    },
+    {
+      "numero_sorteio": "039/2019",
+      "data": "2019-05-14",
+      "ficheiro": "biblioteca/pergaminhos/2019/039.json"
+    },
+    {
+      "numero_sorteio": "040/2019",
+      "data": "2019-05-17",
+      "ficheiro": "biblioteca/pergaminhos/2019/040.json"
+    },
+    {
+      "numero_sorteio": "041/2019",
+      "data": "2019-05-21",
+      "ficheiro": "biblioteca/pergaminhos/2019/041.json"
+    },
+    {
+      "numero_sorteio": "042/2019",
+      "data": "2019-05-24",
+      "ficheiro": "biblioteca/pergaminhos/2019/042.json"
+    },
+    {
+      "numero_sorteio": "043/2019",
+      "data": "2019-05-28",
+      "ficheiro": "biblioteca/pergaminhos/2019/043.json"
+    },
+    {
+      "numero_sorteio": "044/2019",
+      "data": "2019-05-31",
+      "ficheiro": "biblioteca/pergaminhos/2019/044.json"
+    },
+    {
+      "numero_sorteio": "045/2019",
+      "data": "2019-06-04",
+      "ficheiro": "biblioteca/pergaminhos/2019/045.json"
+    },
+    {
+      "numero_sorteio": "046/2019",
+      "data": "2019-06-07",
+      "ficheiro": "biblioteca/pergaminhos/2019/046.json"
+    },
+    {
+      "numero_sorteio": "047/2019",
+      "data": "2019-06-11",
+      "ficheiro": "biblioteca/pergaminhos/2019/047.json"
+    },
+    {
+      "numero_sorteio": "048/2019",
+      "data": "2019-06-14",
+      "ficheiro": "biblioteca/pergaminhos/2019/048.json"
+    },
+    {
+      "numero_sorteio": "049/2019",
+      "data": "2019-06-18",
+      "ficheiro": "biblioteca/pergaminhos/2019/049.json"
+    },
+    {
+      "numero_sorteio": "050/2019",
+      "data": "2019-06-21",
+      "ficheiro": "biblioteca/pergaminhos/2019/050.json"
+    },
+    {
+      "numero_sorteio": "051/2019",
+      "data": "2019-06-25",
+      "ficheiro": "biblioteca/pergaminhos/2019/051.json"
+    },
+    {
+      "numero_sorteio": "052/2019",
+      "data": "2019-06-28",
+      "ficheiro": "biblioteca/pergaminhos/2019/052.json"
+    },
+    {
+      "numero_sorteio": "053/2019",
+      "data": "2019-07-02",
+      "ficheiro": "biblioteca/pergaminhos/2019/053.json"
+    },
+    {
+      "numero_sorteio": "054/2019",
+      "data": "2019-07-05",
+      "ficheiro": "biblioteca/pergaminhos/2019/054.json"
+    },
+    {
+      "numero_sorteio": "055/2019",
+      "data": "2019-07-09",
+      "ficheiro": "biblioteca/pergaminhos/2019/055.json"
+    },
+    {
+      "numero_sorteio": "056/2019",
+      "data": "2019-07-12",
+      "ficheiro": "biblioteca/pergaminhos/2019/056.json"
+    },
+    {
+      "numero_sorteio": "057/2019",
+      "data": "2019-07-16",
+      "ficheiro": "biblioteca/pergaminhos/2019/057.json"
+    },
+    {
+      "numero_sorteio": "058/2019",
+      "data": "2019-07-19",
+      "ficheiro": "biblioteca/pergaminhos/2019/058.json"
+    },
+    {
+      "numero_sorteio": "059/2019",
+      "data": "2019-07-23",
+      "ficheiro": "biblioteca/pergaminhos/2019/059.json"
+    },
+    {
+      "numero_sorteio": "060/2019",
+      "data": "2019-07-26",
+      "ficheiro": "biblioteca/pergaminhos/2019/060.json"
+    },
+    {
+      "numero_sorteio": "061/2019",
+      "data": "2019-07-30",
+      "ficheiro": "biblioteca/pergaminhos/2019/061.json"
+    },
+    {
+      "numero_sorteio": "062/2019",
+      "data": "2019-08-02",
+      "ficheiro": "biblioteca/pergaminhos/2019/062.json"
+    },
+    {
+      "numero_sorteio": "063/2019",
+      "data": "2019-08-06",
+      "ficheiro": "biblioteca/pergaminhos/2019/063.json"
+    },
+    {
+      "numero_sorteio": "064/2019",
+      "data": "2019-08-09",
+      "ficheiro": "biblioteca/pergaminhos/2019/064.json"
+    },
+    {
+      "numero_sorteio": "065/2019",
+      "data": "2019-08-13",
+      "ficheiro": "biblioteca/pergaminhos/2019/065.json"
+    },
+    {
+      "numero_sorteio": "066/2019",
+      "data": "2019-08-16",
+      "ficheiro": "biblioteca/pergaminhos/2019/066.json"
+    },
+    {
+      "numero_sorteio": "067/2019",
+      "data": "2019-08-20",
+      "ficheiro": "biblioteca/pergaminhos/2019/067.json"
+    },
+    {
+      "numero_sorteio": "068/2019",
+      "data": "2019-08-23",
+      "ficheiro": "biblioteca/pergaminhos/2019/068.json"
+    },
+    {
+      "numero_sorteio": "069/2019",
+      "data": "2019-08-27",
+      "ficheiro": "biblioteca/pergaminhos/2019/069.json"
+    },
+    {
+      "numero_sorteio": "070/2019",
+      "data": "2019-08-30",
+      "ficheiro": "biblioteca/pergaminhos/2019/070.json"
+    },
+    {
+      "numero_sorteio": "071/2019",
+      "data": "2019-09-03",
+      "ficheiro": "biblioteca/pergaminhos/2019/071.json"
+    },
+    {
+      "numero_sorteio": "072/2019",
+      "data": "2019-09-06",
+      "ficheiro": "biblioteca/pergaminhos/2019/072.json"
+    },
+    {
+      "numero_sorteio": "073/2019",
+      "data": "2019-09-10",
+      "ficheiro": "biblioteca/pergaminhos/2019/073.json"
+    },
+    {
+      "numero_sorteio": "074/2019",
+      "data": "2019-09-13",
+      "ficheiro": "biblioteca/pergaminhos/2019/074.json"
+    },
+    {
+      "numero_sorteio": "075/2019",
+      "data": "2019-09-17",
+      "ficheiro": "biblioteca/pergaminhos/2019/075.json"
+    },
+    {
+      "numero_sorteio": "076/2019",
+      "data": "2019-09-20",
+      "ficheiro": "biblioteca/pergaminhos/2019/076.json"
+    },
+    {
+      "numero_sorteio": "077/2019",
+      "data": "2019-09-24",
+      "ficheiro": "biblioteca/pergaminhos/2019/077.json"
+    },
+    {
+      "numero_sorteio": "078/2019",
+      "data": "2019-09-27",
+      "ficheiro": "biblioteca/pergaminhos/2019/078.json"
+    },
+    {
+      "numero_sorteio": "079/2019",
+      "data": "2019-10-01",
+      "ficheiro": "biblioteca/pergaminhos/2019/079.json"
+    },
+    {
+      "numero_sorteio": "080/2019",
+      "data": "2019-10-04",
+      "ficheiro": "biblioteca/pergaminhos/2019/080.json"
+    },
+    {
+      "numero_sorteio": "081/2019",
+      "data": "2019-10-08",
+      "ficheiro": "biblioteca/pergaminhos/2019/081.json"
+    },
+    {
+      "numero_sorteio": "082/2019",
+      "data": "2019-10-11",
+      "ficheiro": "biblioteca/pergaminhos/2019/082.json"
+    },
+    {
+      "numero_sorteio": "083/2019",
+      "data": "2019-10-15",
+      "ficheiro": "biblioteca/pergaminhos/2019/083.json"
+    },
+    {
+      "numero_sorteio": "084/2019",
+      "data": "2019-10-18",
+      "ficheiro": "biblioteca/pergaminhos/2019/084.json"
+    },
+    {
+      "numero_sorteio": "085/2019",
+      "data": "2019-10-22",
+      "ficheiro": "biblioteca/pergaminhos/2019/085.json"
+    },
+    {
+      "numero_sorteio": "086/2019",
+      "data": "2019-10-25",
+      "ficheiro": "biblioteca/pergaminhos/2019/086.json"
+    },
+    {
+      "numero_sorteio": "087/2019",
+      "data": "2019-10-29",
+      "ficheiro": "biblioteca/pergaminhos/2019/087.json"
+    },
+    {
+      "numero_sorteio": "088/2019",
+      "data": "2019-11-01",
+      "ficheiro": "biblioteca/pergaminhos/2019/088.json"
+    },
+    {
+      "numero_sorteio": "089/2019",
+      "data": "2019-11-05",
+      "ficheiro": "biblioteca/pergaminhos/2019/089.json"
+    },
+    {
+      "numero_sorteio": "090/2019",
+      "data": "2019-11-08",
+      "ficheiro": "biblioteca/pergaminhos/2019/090.json"
+    },
+    {
+      "numero_sorteio": "091/2019",
+      "data": "2019-11-12",
+      "ficheiro": "biblioteca/pergaminhos/2019/091.json"
+    },
+    {
+      "numero_sorteio": "092/2019",
+      "data": "2019-11-15",
+      "ficheiro": "biblioteca/pergaminhos/2019/092.json"
+    },
+    {
+      "numero_sorteio": "093/2019",
+      "data": "2019-11-19",
+      "ficheiro": "biblioteca/pergaminhos/2019/093.json"
+    },
+    {
+      "numero_sorteio": "094/2019",
+      "data": "2019-11-22",
+      "ficheiro": "biblioteca/pergaminhos/2019/094.json"
+    },
+    {
+      "numero_sorteio": "095/2019",
+      "data": "2019-11-26",
+      "ficheiro": "biblioteca/pergaminhos/2019/095.json"
+    },
+    {
+      "numero_sorteio": "096/2019",
+      "data": "2019-11-29",
+      "ficheiro": "biblioteca/pergaminhos/2019/096.json"
+    },
+    {
+      "numero_sorteio": "097/2019",
+      "data": "2019-12-03",
+      "ficheiro": "biblioteca/pergaminhos/2019/097.json"
+    },
+    {
+      "numero_sorteio": "098/2019",
+      "data": "2019-12-06",
+      "ficheiro": "biblioteca/pergaminhos/2019/098.json"
+    },
+    {
+      "numero_sorteio": "099/2019",
+      "data": "2019-12-10",
+      "ficheiro": "biblioteca/pergaminhos/2019/099.json"
+    },
+    {
+      "numero_sorteio": "100/2019",
+      "data": "2019-12-13",
+      "ficheiro": "biblioteca/pergaminhos/2019/100.json"
+    },
+    {
+      "numero_sorteio": "101/2019",
+      "data": "2019-12-17",
+      "ficheiro": "biblioteca/pergaminhos/2019/101.json"
+    },
+    {
+      "numero_sorteio": "102/2019",
+      "data": "2019-12-20",
+      "ficheiro": "biblioteca/pergaminhos/2019/102.json"
+    },
+    {
+      "numero_sorteio": "103/2019",
+      "data": "2019-12-24",
+      "ficheiro": "biblioteca/pergaminhos/2019/103.json"
+    },
+    {
+      "numero_sorteio": "104/2019",
+      "data": "2019-12-27",
+      "ficheiro": "biblioteca/pergaminhos/2019/104.json"
+    },
+    {
+      "numero_sorteio": "105/2019",
+      "data": "2019-12-31",
+      "ficheiro": "biblioteca/pergaminhos/2019/105.json"
+    }
+  ]
+}

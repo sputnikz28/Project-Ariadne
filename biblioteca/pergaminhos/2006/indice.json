@@ -1,0 +1,271 @@
+{
+  "ano": 2006,
+  "fonte": "biblioteca/fontes/euromilhoes_2006_dataset_completo.json",
+  "primeiro_sorteio": "001/2006",
+  "ultimo_sorteio": "052/2006",
+  "data_inicio": "2006-01-06",
+  "data_fim": "2006-12-29",
+  "quantidade_sorteios": 52,
+  "pergaminhos": [
+    {
+      "numero_sorteio": "001/2006",
+      "data": "2006-01-06",
+      "ficheiro": "biblioteca/pergaminhos/2006/001.json"
+    },
+    {
+      "numero_sorteio": "002/2006",
+      "data": "2006-01-13",
+      "ficheiro": "biblioteca/pergaminhos/2006/002.json"
+    },
+    {
+      "numero_sorteio": "003/2006",
+      "data": "2006-01-20",
+      "ficheiro": "biblioteca/pergaminhos/2006/003.json"
+    },
+    {
+      "numero_sorteio": "004/2006",
+      "data": "2006-01-27",
+      "ficheiro": "biblioteca/pergaminhos/2006/004.json"
+    },
+    {
+      "numero_sorteio": "005/2006",
+      "data": "2006-02-03",
+      "ficheiro": "biblioteca/pergaminhos/2006/005.json"
+    },
+    {
+      "numero_sorteio": "006/2006",
+      "data": "2006-02-10",
+      "ficheiro": "biblioteca/pergaminhos/2006/006.json"
+    },
+    {
+      "numero_sorteio": "007/2006",
+      "data": "2006-02-17",
+      "ficheiro": "biblioteca/pergaminhos/2006/007.json"
+    },
+    {
+      "numero_sorteio": "008/2006",
+      "data": "2006-02-24",
+      "ficheiro": "biblioteca/pergaminhos/2006/008.json"
+    },
+    {
+      "numero_sorteio": "009/2006",
+      "data": "2006-03-03",
+      "ficheiro": "biblioteca/pergaminhos/2006/009.json"
+    },
+    {
+      "numero_sorteio": "010/2006",
+      "data": "2006-03-10",
+      "ficheiro": "biblioteca/pergaminhos/2006/010.json"
+    },
+    {
+      "numero_sorteio": "011/2006",
+      "data": "2006-03-17",
+      "ficheiro": "biblioteca/pergaminhos/2006/011.json"
+    },
+    {
+      "numero_sorteio": "012/2006",
+      "data": "2006-03-24",
+      "ficheiro": "biblioteca/pergaminhos/2006/012.json"
+    },
+    {
+      "numero_sorteio": "013/2006",
+      "data": "2006-03-31",
+      "ficheiro": "biblioteca/pergaminhos/2006/013.json"
+    },
+    {
+      "numero_sorteio": "014/2006",
+      "data": "2006-04-07",
+      "ficheiro": "biblioteca/pergaminhos/2006/014.json"
+    },
+    {
+      "numero_sorteio": "015/2006",
+      "data": "2006-04-14",
+      "ficheiro": "biblioteca/pergaminhos/2006/015.json"
+    },
+    {
+      "numero_sorteio": "016/2006",
+      "data": "2006-04-21",
+      "ficheiro": "biblioteca/pergaminhos/2006/016.json"
+    },
+    {
+      "numero_sorteio": "017/2006",
+      "data": "2006-04-28",
+      "ficheiro": "biblioteca/pergaminhos/2006/017.json"
+    },
+    {
+      "numero_sorteio": "018/2006",
+      "data": "2006-05-05",
+      "ficheiro": "biblioteca/pergaminhos/2006/018.json"
+    },
+    {
+      "numero_sorteio": "019/2006",
+      "data": "2006-05-12",
+      "ficheiro": "biblioteca/pergaminhos/2006/019.json"
+    },
+    {
+      "numero_sorteio": "020/2006",
+      "data": "2006-05-19",
+      "ficheiro": "biblioteca/pergaminhos/2006/020.json"
+    },
+    {
+      "numero_sorteio": "021/2006",
+      "data": "2006-05-26",
+      "ficheiro": "biblioteca/pergaminhos/2006/021.json"
+    },
+    {
+      "numero_sorteio": "022/2006",
+      "data": "2006-06-02",
+      "ficheiro": "biblioteca/pergaminhos/2006/022.json"
+    },
+    {
+      "numero_sorteio": "023/2006",
+      "data": "2006-06-09",
+      "ficheiro": "biblioteca/pergaminhos/2006/023.json"
+    },
+    {
+      "numero_sorteio": "024/2006",
+      "data": "2006-06-16",
+      "ficheiro": "biblioteca/pergaminhos/2006/024.json"
+    },
+    {
+      "numero_sorteio": "025/2006",
+      "data": "2006-06-23",
+      "ficheiro": "biblioteca/pergaminhos/2006/025.json"
+    },
+    {
+      "numero_sorteio": "026/2006",
+      "data": "2006-06-30",
+      "ficheiro": "biblioteca/pergaminhos/2006/026.json"
+    },
+    {
+      "numero_sorteio": "027/2006",
+      "data": "2006-07-07",
+      "ficheiro": "biblioteca/pergaminhos/2006/027.json"
+    },
+    {
+      "numero_sorteio": "028/2006",
+      "data": "2006-07-14",
+      "ficheiro": "biblioteca/pergaminhos/2006/028.json"
+    },
+    {
+      "numero_sorteio": "029/2006",
+      "data": "2006-07-21",
+      "ficheiro": "biblioteca/pergaminhos/2006/029.json"
+    },
+    {
+      "numero_sorteio": "030/2006",
+      "data": "2006-07-28",
+      "ficheiro": "biblioteca/pergaminhos/2006/030.json"
+    },
+    {
+      "numero_sorteio": "031/2006",
+      "data": "2006-08-04",
+      "ficheiro": "biblioteca/pergaminhos/2006/031.json"
+    },
+    {
+      "numero_sorteio": "032/2006",
+      "data": "2006-08-11",
+      "ficheiro": "biblioteca/pergaminhos/2006/032.json"
+    },
+    {
+      "numero_sorteio": "033/2006",
+      "data": "2006-08-18",
+      "ficheiro": "biblioteca/pergaminhos/2006/033.json"
+    },
+    {
+      "numero_sorteio": "034/2006",
+      "data": "2006-08-25",
+      "ficheiro": "biblioteca/pergaminhos/2006/034.json"
+    },
+    {
+      "numero_sorteio": "035/2006",
+      "data": "2006-09-01",
+      "ficheiro": "biblioteca/pergaminhos/2006/035.json"
+    },
+    {
+      "numero_sorteio": "036/2006",
+      "data": "2006-09-08",
+      "ficheiro": "biblioteca/pergaminhos/2006/036.json"
+    },
+    {
+      "numero_sorteio": "037/2006",
+      "data": "2006-09-15",
+      "ficheiro": "biblioteca/pergaminhos/2006/037.json"
+    },
+    {
+      "numero_sorteio": "038/2006",
+      "data": "2006-09-22",
+      "ficheiro": "biblioteca/pergaminhos/2006/038.json"
+    },
+    {
+      "numero_sorteio": "039/2006",
+      "data": "2006-09-29",
+      "ficheiro": "biblioteca/pergaminhos/2006/039.json"
+    },
+    {
+      "numero_sorteio": "040/2006",
+      "data": "2006-10-06",
+      "ficheiro": "biblioteca/pergaminhos/2006/040.json"
+    },
+    {
+      "numero_sorteio": "041/2006",
+      "data": "2006-10-13",
+      "ficheiro": "biblioteca/pergaminhos/2006/041.json"
+    },
+    {
+      "numero_sorteio": "042/2006",
+      "data": "2006-10-20",
+      "ficheiro": "biblioteca/pergaminhos/2006/042.json"
+    },
+    {
+      "numero_sorteio": "043/2006",
+      "data": "2006-10-27",
+      "ficheiro": "biblioteca/pergaminhos/2006/043.json"
+    },
+    {
+      "numero_sorteio": "044/2006",
+      "data": "2006-11-03",
+      "ficheiro": "biblioteca/pergaminhos/2006/044.json"
+    },
+    {
+      "numero_sorteio": "045/2006",
+      "data": "2006-11-10",
+      "ficheiro": "biblioteca/pergaminhos/2006/045.json"
+    },
+    {
+      "numero_sorteio": "046/2006",
+      "data": "2006-11-17",
+      "ficheiro": "biblioteca/pergaminhos/2006/046.json"
+    },
+    {
+      "numero_sorteio": "047/2006",
+      "data": "2006-11-24",
+      "ficheiro": "biblioteca/pergaminhos/2006/047.json"
+    },
+    {
+      "numero_sorteio": "048/2006",
+      "data": "2006-12-01",
+      "ficheiro": "biblioteca/pergaminhos/2006/048.json"
+    },
+    {
+      "numero_sorteio": "049/2006",
+      "data": "2006-12-08",
+      "ficheiro": "biblioteca/pergaminhos/2006/049.json"
+    },
+    {
+      "numero_sorteio": "050/2006",
+      "data": "2006-12-15",
+      "ficheiro": "biblioteca/pergaminhos/2006/050.json"
+    },
+    {
+      "numero_sorteio": "051/2006",
+      "data": "2006-12-22",
+      "ficheiro": "biblioteca/pergaminhos/2006/051.json"
+    },
+    {
+      "numero_sorteio": "052/2006",
+      "data": "2006-12-29",
+      "ficheiro": "biblioteca/pergaminhos/2006/052.json"
+    }
+  ]
+}

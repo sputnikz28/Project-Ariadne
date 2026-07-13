@@ -1,0 +1,87 @@
+{
+  "id": "PERG-2017-053",
+  "titulo": "Pergaminho da Extração 053/2017",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2017,
+  "numero_sorteio": "053/2017",
+  "data": "2017-07-04",
+  "dia_semana": "terça-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2017-07-04T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      10,
+      22,
+      25,
+      37,
+      49
+    ],
+    "estrelas": [
+      5,
+      8
+    ],
+    "formato": "10 22 25 37 49 + 5 8",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 143,
+    "media_numeros": 28.6,
+    "mediana_numeros": 25,
+    "desvio_padrao": 13.3357,
+    "amplitude": 39,
+    "pares": 2,
+    "impares": 3,
+    "gaps": [
+      12,
+      3,
+      12,
+      12
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 1,
+      "21-30": 2,
+      "31-40": 1,
+      "41-50": 1
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": [
+      8
+    ]
+  },
+  "astronomia": {
+    "fase_lua": "Gibosa crescente",
+    "iluminacao_lunar_percent": 83.162,
+    "idade_lunar_dias": 10.791,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2017",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2017",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2017_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "67b35675d86180e822f4381a45c64c7bb2e3e15420c351b974a623713427a635",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

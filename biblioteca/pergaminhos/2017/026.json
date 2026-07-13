@@ -1,0 +1,84 @@
+{
+  "id": "PERG-2017-026",
+  "titulo": "Pergaminho da Extração 026/2017",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2017,
+  "numero_sorteio": "026/2017",
+  "data": "2017-03-31",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2017-03-31T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      17,
+      24,
+      26,
+      28,
+      45
+    ],
+    "estrelas": [
+      4,
+      12
+    ],
+    "formato": "17 24 26 28 45 + 4 12",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 140,
+    "media_numeros": 28,
+    "mediana_numeros": 26,
+    "desvio_padrao": 9.2736,
+    "amplitude": 28,
+    "pares": 3,
+    "impares": 2,
+    "gaps": [
+      7,
+      2,
+      2,
+      17
+    ],
+    "distribuicao_por_dezenas": {
+      "11-20": 1,
+      "21-30": 3,
+      "41-50": 1
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Lua crescente",
+    "iluminacao_lunar_percent": 17.597,
+    "idade_lunar_dias": 4.069,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2017",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2017",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2017_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "356cab35668f6d2c2e533f8f0e3354dfae62409acb18dd2200ae6ad176b674d1",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

@@ -1,0 +1,86 @@
+{
+  "id": "PERG-2015-058",
+  "titulo": "Pergaminho da Extração 058/2015",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2015,
+  "numero_sorteio": "058/2015",
+  "data": "2015-07-21",
+  "dia_semana": "terça-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2015-07-21T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      14,
+      20,
+      27,
+      29,
+      44
+    ],
+    "estrelas": [
+      7,
+      10
+    ],
+    "formato": "14 20 27 29 44 + 7 10",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 134,
+    "media_numeros": 26.8,
+    "mediana_numeros": 27,
+    "desvio_padrao": 10.1074,
+    "amplitude": 30,
+    "pares": 3,
+    "impares": 2,
+    "gaps": [
+      6,
+      7,
+      2,
+      15
+    ],
+    "distribuicao_por_dezenas": {
+      "11-20": 2,
+      "21-30": 2,
+      "41-50": 1
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": [
+      7
+    ]
+  },
+  "astronomia": {
+    "fase_lua": "Lua crescente",
+    "iluminacao_lunar_percent": 27.769,
+    "idade_lunar_dias": 5.217,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2015",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2015",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2015_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "eab3681fd3c8e252d35de923e59ae28de1965ab07522b091e1e49073238546af",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

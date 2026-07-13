@@ -1,0 +1,86 @@
+{
+  "era": 2,
+  "id": "H-00069",
+  "nome": "Kael do Bosque",
+  "raca": "Bruxa",
+  "casa": "Casa dos Ossos",
+  "geracao": 1,
+  "pais": [],
+  "pontos": 174,
+  "titulo": "Errante das Sombras",
+  "estado": "VIVO",
+  "amuletos": [],
+  "melhores_chaves": [
+    {
+      "geracao": 1,
+      "numeros": [
+        3,
+        27,
+        37,
+        45,
+        50
+      ],
+      "estrelas": [
+        3,
+        6
+      ]
+    },
+    {
+      "geracao": 2,
+      "numeros": [
+        30,
+        32,
+        37,
+        40,
+        45
+      ],
+      "estrelas": [
+        6,
+        10
+      ]
+    },
+    {
+      "geracao": 3,
+      "numeros": [
+        22,
+        24,
+        25,
+        33,
+        34
+      ],
+      "estrelas": [
+        9,
+        10
+      ]
+    },
+    {
+      "geracao": 4,
+      "numeros": [
+        7,
+        17,
+        22,
+        36,
+        50
+      ],
+      "estrelas": [
+        1,
+        2
+      ]
+    },
+    {
+      "geracao": 5,
+      "numeros": [
+        11,
+        18,
+        32,
+        34,
+        35
+      ],
+      "estrelas": [
+        3,
+        4
+      ]
+    }
+  ],
+  "criada_em": "2026-07-11T09:21:37+00:00"
+}

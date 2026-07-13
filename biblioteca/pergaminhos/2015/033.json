@@ -1,0 +1,85 @@
+{
+  "id": "PERG-2015-033",
+  "titulo": "Pergaminho da Extração 033/2015",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2015,
+  "numero_sorteio": "033/2015",
+  "data": "2015-04-24",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2015-04-24T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      5,
+      19,
+      29,
+      31,
+      40
+    ],
+    "estrelas": [
+      3,
+      10
+    ],
+    "formato": "5 19 29 31 40 + 3 10",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 124,
+    "media_numeros": 24.8,
+    "mediana_numeros": 29,
+    "desvio_padrao": 11.9398,
+    "amplitude": 35,
+    "pares": 1,
+    "impares": 4,
+    "gaps": [
+      14,
+      10,
+      2,
+      9
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 1,
+      "11-20": 1,
+      "21-30": 1,
+      "31-40": 2
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Quarto crescente",
+    "iluminacao_lunar_percent": 37.761,
+    "idade_lunar_dias": 6.22,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2015",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2015",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2015_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "07fa2bcd28d25d44bccbdd93c4efbd29ca9872765f0325a1337d779cb0156d9a",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

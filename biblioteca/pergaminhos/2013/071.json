@@ -1,0 +1,86 @@
+{
+  "id": "PERG-2013-071",
+  "titulo": "Pergaminho da Extração 071/2013",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2013,
+  "numero_sorteio": "071/2013",
+  "data": "2013-09-03",
+  "dia_semana": "terça-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2013-09-03T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      5,
+      9,
+      16,
+      18,
+      42
+    ],
+    "estrelas": [
+      7,
+      9
+    ],
+    "formato": "5 9 16 18 42 + 7 9",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 90,
+    "media_numeros": 18,
+    "mediana_numeros": 16,
+    "desvio_padrao": 12.8841,
+    "amplitude": 37,
+    "pares": 3,
+    "impares": 2,
+    "gaps": [
+      4,
+      7,
+      2,
+      24
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 2,
+      "11-20": 2,
+      "41-50": 1
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": [
+      9
+    ]
+  },
+  "astronomia": {
+    "fase_lua": "Lua nova",
+    "iluminacao_lunar_percent": 3.032,
+    "idade_lunar_dias": 27.886,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2013",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2013",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2013_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "3eed804c5e717c09706d405355cfbce0ed3fbe547d282c697df1eb8448fabb00",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

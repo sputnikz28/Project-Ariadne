@@ -1,0 +1,89 @@
+{
+  "id": "PERG-2021-049",
+  "titulo": "Pergaminho da Extração 049/2021",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2021,
+  "numero_sorteio": "049/2021",
+  "data": "2021-06-18",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2021-06-18T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      11,
+      20,
+      27,
+      30,
+      41
+    ],
+    "estrelas": [
+      3,
+      5
+    ],
+    "formato": "11 20 27 30 41 + 3 5",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 129,
+    "media_numeros": 25.8,
+    "mediana_numeros": 27,
+    "desvio_padrao": 10.028,
+    "amplitude": 30,
+    "pares": 2,
+    "impares": 3,
+    "gaps": [
+      9,
+      7,
+      3,
+      11
+    ],
+    "distribuicao_por_dezenas": {
+      "11-20": 2,
+      "21-30": 2,
+      "41-50": 1
+    },
+    "repetidos_sorteio_anterior": [
+      11,
+      30
+    ],
+    "estrelas_repetidas_sorteio_anterior": [
+      3
+    ]
+  },
+  "astronomia": {
+    "fase_lua": "Quarto crescente",
+    "iluminacao_lunar_percent": 56.548,
+    "idade_lunar_dias": 8.0,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2021",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2021",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2021_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "2c164a83a323091063b5fce0641b37449bff3261ffb5b6395a1bdcdfbf24b1b4",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

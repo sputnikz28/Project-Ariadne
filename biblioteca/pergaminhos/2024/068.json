@@ -1,0 +1,85 @@
+{
+  "id": "PERG-2024-068",
+  "titulo": "Pergaminho da Extração 068/2024",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2024,
+  "numero_sorteio": "068/2024",
+  "data": "2024-08-23",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2024-08-23T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      9,
+      15,
+      24,
+      47,
+      50
+    ],
+    "estrelas": [
+      8,
+      9
+    ],
+    "formato": "9 15 24 47 50 + 8 9",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 145,
+    "media_numeros": 29,
+    "mediana_numeros": 24,
+    "desvio_padrao": 16.6493,
+    "amplitude": 41,
+    "pares": 2,
+    "impares": 3,
+    "gaps": [
+      6,
+      9,
+      23,
+      3
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 1,
+      "11-20": 1,
+      "21-30": 1,
+      "41-50": 2
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Gibosa minguante",
+    "iluminacao_lunar_percent": 78.471,
+    "idade_lunar_dias": 19.301,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2024",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2024",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2024_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "41e0898eb5eb9cb1c45738614cad4ee186aad66deb7a4bf189d0d23704d80f2d",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

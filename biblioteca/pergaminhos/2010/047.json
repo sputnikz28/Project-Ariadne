@@ -1,0 +1,84 @@
+{
+  "id": "PERG-2010-047",
+  "titulo": "Pergaminho da Extração 047/2010",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2010,
+  "numero_sorteio": "047/2010",
+  "data": "2010-11-19",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "19:00:00",
+    "timestamp_utc": "2010-11-19T19:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      12,
+      15,
+      32,
+      36,
+      45
+    ],
+    "estrelas": [
+      7,
+      9
+    ],
+    "formato": "12 15 32 36 45 + 7 9",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 140,
+    "media_numeros": 28,
+    "mediana_numeros": 32,
+    "desvio_padrao": 12.6016,
+    "amplitude": 33,
+    "pares": 3,
+    "impares": 2,
+    "gaps": [
+      3,
+      17,
+      4,
+      9
+    ],
+    "distribuicao_por_dezenas": {
+      "11-20": 2,
+      "31-40": 2,
+      "41-50": 1
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Gibosa crescente",
+    "iluminacao_lunar_percent": 96.127,
+    "idade_lunar_dias": 12.903,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2010",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2010",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2010_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "40d42170a37e401a59b3cc55daee849d6115d94be6453e8fd316c1d06689ebc3",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

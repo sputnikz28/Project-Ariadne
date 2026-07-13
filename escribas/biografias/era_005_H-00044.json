@@ -1,0 +1,121 @@
+{
+  "era": 5,
+  "id": "H-00044",
+  "nome": "Aion dos Astros",
+  "raca": "Chefe Tribal",
+  "casa": "Casa Lunar",
+  "geracao": 1,
+  "pais": [],
+  "pontos": 133,
+  "titulo": "Errante das Sombras",
+  "estado": "VIVO",
+  "amuletos": [
+    {
+      "id": "ART-67230294CE",
+      "nome": "Livro dos Ecos",
+      "raridade": "MITICO",
+      "multiplicador": 2.0,
+      "criador": "Selene da Névoa",
+      "geracao_criacao": 13,
+      "donos": [
+        "Selene da Névoa",
+        "Lyra Pedra-Partida",
+        "Aion dos Astros"
+      ],
+      "energia_acumulada": 52.25,
+      "conselhos": 0,
+      "estado": "HERDADO",
+      "universo_origem": 1783761708457386197,
+      "portador_atual": "Lyra Pedra-Partida",
+      "vezes_encontrado": 1,
+      "execucoes_sobrevividas": 1,
+      "historia": [
+        {
+          "evento": "MATERIALIZADO_NA_ARCA",
+          "momento": "2026-07-11T09:21:48+00:00",
+          "criador": "Selene da Névoa"
+        },
+        {
+          "evento": "REENCONTRADO",
+          "momento": "2026-07-11T09:21:54+00:00",
+          "geracao": 3,
+          "personagem": "Lyra Pedra-Partida",
+          "classe": "Bruxa"
+        }
+      ]
+    }
+  ],
+  "melhores_chaves": [
+    {
+      "geracao": 1,
+      "numeros": [
+        1,
+        33,
+        45,
+        46,
+        50
+      ],
+      "estrelas": [
+        7,
+        11
+      ]
+    },
+    {
+      "geracao": 2,
+      "numeros": [
+        9,
+        38,
+        45,
+        49,
+        50
+      ],
+      "estrelas": [
+        3,
+        7
+      ]
+    },
+    {
+      "geracao": 3,
+      "numeros": [
+        1,
+        6,
+        18,
+        23,
+        47
+      ],
+      "estrelas": [
+        9,
+        11
+      ]
+    },
+    {
+      "geracao": 4,
+      "numeros": [
+        32,
+        37,
+        43,
+        45,
+        50
+      ],
+      "estrelas": [
+        4,
+        12
+      ]
+    },
+    {
+      "geracao": 5,
+      "numeros": [
+        14,
+        38,
+        43,
+        47,
+        50
+      ],
+      "estrelas": [
+        2,
+        5
+      ]
+    }
+  ],
+  "criada_em": "2026-07-11T09:21:55+00:00"
+}

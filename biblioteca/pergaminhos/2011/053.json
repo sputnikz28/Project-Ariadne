@@ -1,0 +1,83 @@
+{
+  "id": "PERG-2011-053",
+  "titulo": "Pergaminho da Extração 053/2011",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2011,
+  "numero_sorteio": "053/2011",
+  "data": "2011-09-06",
+  "dia_semana": "terça-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2011-09-06T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      35,
+      42,
+      47,
+      48,
+      50
+    ],
+    "estrelas": [
+      8,
+      9
+    ],
+    "formato": "35 42 47 48 50 + 8 9",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 222,
+    "media_numeros": 44.4,
+    "mediana_numeros": 47,
+    "desvio_padrao": 5.3889,
+    "amplitude": 15,
+    "pares": 3,
+    "impares": 2,
+    "gaps": [
+      7,
+      5,
+      1,
+      2
+    ],
+    "distribuicao_por_dezenas": {
+      "31-40": 1,
+      "41-50": 4
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Gibosa crescente",
+    "iluminacao_lunar_percent": 71.072,
+    "idade_lunar_dias": 9.427,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2011",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2011",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2011_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "05f969f333c54f45ae6ef59753af43dddfd4ce6d7c42a19abe55daea7cd1d638",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

@@ -1,0 +1,84 @@
+{
+  "id": "PERG-2022-068",
+  "titulo": "Pergaminho da Extração 068/2022",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2022,
+  "numero_sorteio": "068/2022",
+  "data": "2022-08-26",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2022-08-26T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      22,
+      23,
+      25,
+      38,
+      44
+    ],
+    "estrelas": [
+      11,
+      12
+    ],
+    "formato": "22 23 25 38 44 + 11 12",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 152,
+    "media_numeros": 30.4,
+    "mediana_numeros": 25,
+    "desvio_padrao": 8.9129,
+    "amplitude": 22,
+    "pares": 3,
+    "impares": 2,
+    "gaps": [
+      1,
+      2,
+      13,
+      6
+    ],
+    "distribuicao_por_dezenas": {
+      "21-30": 3,
+      "31-40": 1,
+      "41-50": 1
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Lua nova",
+    "iluminacao_lunar_percent": 0.35,
+    "idade_lunar_dias": 28.975,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2022",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2022",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2022_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "dfb194d0f1871c73418ddc9522ff76394eac9f39efec49db7a1d526fd829de4c",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

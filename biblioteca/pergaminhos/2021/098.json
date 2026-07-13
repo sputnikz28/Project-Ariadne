@@ -1,0 +1,87 @@
+{
+  "id": "PERG-2021-098",
+  "titulo": "Pergaminho da Extração 098/2021",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2021,
+  "numero_sorteio": "098/2021",
+  "data": "2021-12-07",
+  "dia_semana": "terça-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "19:00:00",
+    "timestamp_utc": "2021-12-07T19:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      22,
+      31,
+      38,
+      46,
+      47
+    ],
+    "estrelas": [
+      7,
+      11
+    ],
+    "formato": "22 31 38 46 47 + 7 11",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 184,
+    "media_numeros": 36.8,
+    "mediana_numeros": 38,
+    "desvio_padrao": 9.4106,
+    "amplitude": 25,
+    "pares": 3,
+    "impares": 2,
+    "gaps": [
+      9,
+      7,
+      8,
+      1
+    ],
+    "distribuicao_por_dezenas": {
+      "21-30": 1,
+      "31-40": 2,
+      "41-50": 2
+    },
+    "repetidos_sorteio_anterior": [
+      22,
+      46
+    ],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Lua crescente",
+    "iluminacao_lunar_percent": 16.84,
+    "idade_lunar_dias": 3.975,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2021",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2021",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2021_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "be42e7d8ebe986abb6a08c7aff92a589369d4cc02f872341da93331e01c3c8f8",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

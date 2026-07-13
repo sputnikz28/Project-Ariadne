@@ -1,0 +1,85 @@
+{
+  "id": "PERG-2023-073",
+  "titulo": "Pergaminho da Extração 073/2023",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2023,
+  "numero_sorteio": "073/2023",
+  "data": "2023-09-12",
+  "dia_semana": "terça-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2023-09-12T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      5,
+      14,
+      36,
+      40,
+      42
+    ],
+    "estrelas": [
+      2,
+      11
+    ],
+    "formato": "5 14 36 40 42 + 2 11",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 137,
+    "media_numeros": 27.4,
+    "mediana_numeros": 36,
+    "desvio_padrao": 15.0147,
+    "amplitude": 37,
+    "pares": 4,
+    "impares": 1,
+    "gaps": [
+      9,
+      22,
+      4,
+      2
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 1,
+      "11-20": 1,
+      "31-40": 2,
+      "41-50": 1
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Lua minguante",
+    "iluminacao_lunar_percent": 4.795,
+    "idade_lunar_dias": 27.455,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2023",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2023",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2023_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "12e55735dcf6dd5f08ddbcc8105765dbe11028b4aa4027f6a50874f56377b989",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

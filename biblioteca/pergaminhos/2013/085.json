@@ -1,0 +1,84 @@
+{
+  "id": "PERG-2013-085",
+  "titulo": "Pergaminho da Extração 085/2013",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2013,
+  "numero_sorteio": "085/2013",
+  "data": "2013-10-22",
+  "dia_semana": "terça-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2013-10-22T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      29,
+      33,
+      39,
+      41,
+      44
+    ],
+    "estrelas": [
+      9,
+      11
+    ],
+    "formato": "29 33 39 41 44 + 9 11",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 186,
+    "media_numeros": 37.2,
+    "mediana_numeros": 39,
+    "desvio_padrao": 5.4553,
+    "amplitude": 15,
+    "pares": 1,
+    "impares": 4,
+    "gaps": [
+      4,
+      6,
+      2,
+      3
+    ],
+    "distribuicao_por_dezenas": {
+      "21-30": 1,
+      "31-40": 2,
+      "41-50": 2
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Gibosa minguante",
+    "iluminacao_lunar_percent": 86.171,
+    "idade_lunar_dias": 18.347,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2013",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2013",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2013_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "768736e2e5df753434d1c7e2e60407125a5571b0b68a8bb2ad760cc917195d36",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

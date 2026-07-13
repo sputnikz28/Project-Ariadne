@@ -1,0 +1,90 @@
+{
+  "id": "PERG-2024-078",
+  "titulo": "Pergaminho da Extração 078/2024",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2024,
+  "numero_sorteio": "078/2024",
+  "data": "2024-09-27",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2024-09-27T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      7,
+      20,
+      21,
+      27,
+      38
+    ],
+    "estrelas": [
+      5,
+      12
+    ],
+    "formato": "7 20 21 27 38 + 5 12",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 113,
+    "media_numeros": 22.6,
+    "mediana_numeros": 21,
+    "desvio_padrao": 10.0916,
+    "amplitude": 31,
+    "pares": 2,
+    "impares": 3,
+    "gaps": [
+      13,
+      1,
+      6,
+      11
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 1,
+      "11-20": 1,
+      "21-30": 2,
+      "31-40": 1
+    },
+    "repetidos_sorteio_anterior": [
+      20,
+      21
+    ],
+    "estrelas_repetidas_sorteio_anterior": [
+      5
+    ]
+  },
+  "astronomia": {
+    "fase_lua": "Lua minguante",
+    "iluminacao_lunar_percent": 21.458,
+    "idade_lunar_dias": 25.003,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2024",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2024",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2024_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "51775c0bb87225fc69f0c4e0f3c1aa6493817d91fab841023a05186e007781fa",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

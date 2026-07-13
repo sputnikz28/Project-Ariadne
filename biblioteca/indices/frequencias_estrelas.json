@@ -1,0 +1,53 @@
+{
+  "nome": "Atlas das Doze Luzes",
+  "ranking": [
+    {
+      "estrela": 5,
+      "frequencia": 13
+    },
+    {
+      "estrela": 2,
+      "frequencia": 12
+    },
+    {
+      "estrela": 6,
+      "frequencia": 12
+    },
+    {
+      "estrela": 9,
+      "frequencia": 11
+    },
+    {
+      "estrela": 10,
+      "frequencia": 11
+    },
+    {
+      "estrela": 8,
+      "frequencia": 9
+    },
+    {
+      "estrela": 7,
+      "frequencia": 8
+    },
+    {
+      "estrela": 12,
+      "frequencia": 8
+    },
+    {
+      "estrela": 1,
+      "frequencia": 7
+    },
+    {
+      "estrela": 4,
+      "frequencia": 7
+    },
+    {
+      "estrela": 3,
+      "frequencia": 6
+    },
+    {
+      "estrela": 11,
+      "frequencia": 6
+    }
+  ]
+}

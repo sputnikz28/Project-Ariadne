@@ -1,0 +1,86 @@
+{
+  "id": "PERG-2011-007",
+  "titulo": "Pergaminho da Extração 007/2011",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2011,
+  "numero_sorteio": "007/2011",
+  "data": "2011-02-18",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "19:00:00",
+    "timestamp_utc": "2011-02-18T19:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      2,
+      3,
+      15,
+      45,
+      49
+    ],
+    "estrelas": [
+      5,
+      9
+    ],
+    "formato": "2 3 15 45 49 + 5 9",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 114,
+    "media_numeros": 22.8,
+    "mediana_numeros": 15,
+    "desvio_padrao": 20.3214,
+    "amplitude": 47,
+    "pares": 1,
+    "impares": 4,
+    "gaps": [
+      1,
+      12,
+      30,
+      4
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 2,
+      "11-20": 1,
+      "41-50": 2
+    },
+    "repetidos_sorteio_anterior": [
+      15
+    ],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Lua cheia",
+    "iluminacao_lunar_percent": 99.713,
+    "idade_lunar_dias": 15.269,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2011",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2011",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2011_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "c134f3e22935bd004b572af8ad0bc71b4ef58a7b9566725eb6ba8ac3b8b0f5b2",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

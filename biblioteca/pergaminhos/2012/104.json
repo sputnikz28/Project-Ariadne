@@ -1,0 +1,86 @@
+{
+  "id": "PERG-2012-104",
+  "titulo": "Pergaminho da Extração 104/2012",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2012,
+  "numero_sorteio": "104/2012",
+  "data": "2012-12-28",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "19:00:00",
+    "timestamp_utc": "2012-12-28T19:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      17,
+      24,
+      26,
+      27,
+      49
+    ],
+    "estrelas": [
+      3,
+      5
+    ],
+    "formato": "17 24 26 27 49 + 3 5",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 143,
+    "media_numeros": 28.6,
+    "mediana_numeros": 26,
+    "desvio_padrao": 10.7815,
+    "amplitude": 32,
+    "pares": 2,
+    "impares": 3,
+    "gaps": [
+      7,
+      2,
+      1,
+      22
+    ],
+    "distribuicao_por_dezenas": {
+      "11-20": 1,
+      "21-30": 3,
+      "41-50": 1
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": [
+      3
+    ]
+  },
+  "astronomia": {
+    "fase_lua": "Lua cheia",
+    "iluminacao_lunar_percent": 99.881,
+    "idade_lunar_dias": 15.09,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2012",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2012",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2012_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "f88e88d17fbf6591ed8bd9371a71204dfc76b3fd7d7930ffcb27196d42c2ba75",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

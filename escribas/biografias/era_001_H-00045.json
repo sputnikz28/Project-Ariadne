@@ -1,0 +1,86 @@
+{
+  "era": 1,
+  "id": "H-00045",
+  "nome": "Aion do Bosque",
+  "raca": "Bruxa",
+  "casa": "Casa Tribal",
+  "geracao": 1,
+  "pais": [],
+  "pontos": 129,
+  "titulo": "Errante das Sombras",
+  "estado": "VIVO",
+  "amuletos": [],
+  "melhores_chaves": [
+    {
+      "geracao": 1,
+      "numeros": [
+        3,
+        6,
+        23,
+        46,
+        50
+      ],
+      "estrelas": [
+        6,
+        12
+      ]
+    },
+    {
+      "geracao": 2,
+      "numeros": [
+        8,
+        23,
+        25,
+        33,
+        50
+      ],
+      "estrelas": [
+        6,
+        12
+      ]
+    },
+    {
+      "geracao": 3,
+      "numeros": [
+        22,
+        24,
+        31,
+        34,
+        46
+      ],
+      "estrelas": [
+        3,
+        6
+      ]
+    },
+    {
+      "geracao": 4,
+      "numeros": [
+        11,
+        18,
+        23,
+        31,
+        42
+      ],
+      "estrelas": [
+        1,
+        5
+      ]
+    },
+    {
+      "geracao": 5,
+      "numeros": [
+        8,
+        28,
+        34,
+        46,
+        50
+      ],
+      "estrelas": [
+        1,
+        5
+      ]
+    }
+  ],
+  "criada_em": "2026-07-11T09:21:30+00:00"
+}

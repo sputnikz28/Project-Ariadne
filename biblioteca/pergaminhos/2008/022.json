@@ -1,0 +1,86 @@
+{
+  "id": "PERG-2008-022",
+  "titulo": "Pergaminho da Extração 022/2008",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2008,
+  "numero_sorteio": "022/2008",
+  "data": "2008-05-30",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2008-05-30T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      5,
+      7,
+      14,
+      20,
+      49
+    ],
+    "estrelas": [
+      2,
+      8
+    ],
+    "formato": "5 7 14 20 49 + 2 8",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 95,
+    "media_numeros": 19,
+    "mediana_numeros": 14,
+    "desvio_padrao": 15.9123,
+    "amplitude": 44,
+    "pares": 2,
+    "impares": 3,
+    "gaps": [
+      2,
+      7,
+      6,
+      29
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 2,
+      "11-20": 2,
+      "41-50": 1
+    },
+    "repetidos_sorteio_anterior": [
+      5
+    ],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Lua minguante",
+    "iluminacao_lunar_percent": 22.603,
+    "idade_lunar_dias": 24.873,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2008",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2008",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2008_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "bb5ae9388ee179ed21d241ff2caf07f9e945059dac7ebb48b0c604e708190540",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

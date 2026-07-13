@@ -1,0 +1,87 @@
+{
+  "id": "PERG-2014-025",
+  "titulo": "Pergaminho da Extração 025/2014",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2014,
+  "numero_sorteio": "025/2014",
+  "data": "2014-03-28",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "19:00:00",
+    "timestamp_utc": "2014-03-28T19:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      3,
+      4,
+      19,
+      28,
+      43
+    ],
+    "estrelas": [
+      3,
+      7
+    ],
+    "formato": "3 4 19 28 43 + 3 7",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 97,
+    "media_numeros": 19.4,
+    "mediana_numeros": 19,
+    "desvio_padrao": 15.0811,
+    "amplitude": 40,
+    "pares": 2,
+    "impares": 3,
+    "gaps": [
+      1,
+      15,
+      9,
+      15
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 2,
+      "11-20": 1,
+      "21-30": 1,
+      "41-50": 1
+    },
+    "repetidos_sorteio_anterior": [
+      28
+    ],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Lua minguante",
+    "iluminacao_lunar_percent": 5.29,
+    "idade_lunar_dias": 27.349,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2014",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2014",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2014_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "4fb0268f3fae04b99a89654645d615cca7eff7503391061b8e2c75ea6606dab0",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

@@ -1,0 +1,86 @@
+{
+  "era": 3,
+  "id": "H-00007",
+  "nome": "Selene Pedra-Partida",
+  "raca": "Bruxa",
+  "casa": "Casa do Bosque",
+  "geracao": 1,
+  "pais": [],
+  "pontos": 150,
+  "titulo": "Sussurrador do Destino",
+  "estado": "VIVO",
+  "amuletos": [],
+  "melhores_chaves": [
+    {
+      "geracao": 1,
+      "numeros": [
+        24,
+        39,
+        43,
+        45,
+        47
+      ],
+      "estrelas": [
+        5,
+        10
+      ]
+    },
+    {
+      "geracao": 2,
+      "numeros": [
+        3,
+        11,
+        27,
+        28,
+        45
+      ],
+      "estrelas": [
+        3,
+        5
+      ]
+    },
+    {
+      "geracao": 3,
+      "numeros": [
+        11,
+        32,
+        34,
+        40,
+        48
+      ],
+      "estrelas": [
+        5,
+        12
+      ]
+    },
+    {
+      "geracao": 4,
+      "numeros": [
+        22,
+        34,
+        35,
+        46,
+        49
+      ],
+      "estrelas": [
+        1,
+        6
+      ]
+    },
+    {
+      "geracao": 5,
+      "numeros": [
+        18,
+        22,
+        28,
+        31,
+        42
+      ],
+      "estrelas": [
+        1,
+        2
+      ]
+    }
+  ],
+  "criada_em": "2026-07-11T09:21:43+00:00"
+}

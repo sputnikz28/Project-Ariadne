@@ -1,0 +1,88 @@
+{
+  "id": "PERG-2012-068",
+  "titulo": "Pergaminho da Extração 068/2012",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2012,
+  "numero_sorteio": "068/2012",
+  "data": "2012-08-24",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2012-08-24T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      5,
+      6,
+      12,
+      19,
+      37
+    ],
+    "estrelas": [
+      3,
+      7
+    ],
+    "formato": "5 6 12 19 37 + 3 7",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 79,
+    "media_numeros": 15.8,
+    "mediana_numeros": 12,
+    "desvio_padrao": 11.7201,
+    "amplitude": 32,
+    "pares": 2,
+    "impares": 3,
+    "gaps": [
+      1,
+      6,
+      7,
+      18
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 2,
+      "11-20": 2,
+      "31-40": 1
+    },
+    "repetidos_sorteio_anterior": [
+      5
+    ],
+    "estrelas_repetidas_sorteio_anterior": [
+      3
+    ]
+  },
+  "astronomia": {
+    "fase_lua": "Quarto crescente",
+    "iluminacao_lunar_percent": 51.963,
+    "idade_lunar_dias": 7.567,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2012",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2012",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2012_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "9c1a69e1a59375aee82988a1d64d5d4da37d9b7cc5592ff57f62fd54c2e227ba",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

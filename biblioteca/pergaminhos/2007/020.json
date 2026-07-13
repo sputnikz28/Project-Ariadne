@@ -1,0 +1,90 @@
+{
+  "id": "PERG-2007-020",
+  "titulo": "Pergaminho da Extração 020/2007",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2007,
+  "numero_sorteio": "020/2007",
+  "data": "2007-05-18",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2007-05-18T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      26,
+      34,
+      37,
+      39,
+      49
+    ],
+    "estrelas": [
+      2,
+      6
+    ],
+    "formato": "26 34 37 39 49 + 2 6",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 185,
+    "media_numeros": 37,
+    "mediana_numeros": 37,
+    "desvio_padrao": 7.4565,
+    "amplitude": 23,
+    "pares": 2,
+    "impares": 3,
+    "gaps": [
+      8,
+      3,
+      2,
+      10
+    ],
+    "distribuicao_por_dezenas": {
+      "21-30": 1,
+      "31-40": 3,
+      "41-50": 1
+    },
+    "repetidos_sorteio_anterior": [
+      26,
+      49
+    ],
+    "estrelas_repetidas_sorteio_anterior": [
+      2,
+      6
+    ]
+  },
+  "astronomia": {
+    "fase_lua": "Lua crescente",
+    "iluminacao_lunar_percent": 5.375,
+    "idade_lunar_dias": 2.199,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2007",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2007",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2007_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "f11b8607a8c137767c6c3f0247c153cc26a07536173c6ae6be4ee1164754d292",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

@@ -1,0 +1,85 @@
+{
+  "id": "PERG-2024-034",
+  "titulo": "Pergaminho da Extração 034/2024",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2024,
+  "numero_sorteio": "034/2024",
+  "data": "2024-04-26",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2024-04-26T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      2,
+      20,
+      39,
+      40,
+      47
+    ],
+    "estrelas": [
+      4,
+      8
+    ],
+    "formato": "2 20 39 40 47 + 4 8",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 148,
+    "media_numeros": 29.6,
+    "mediana_numeros": 39,
+    "desvio_padrao": 16.4511,
+    "amplitude": 45,
+    "pares": 3,
+    "impares": 2,
+    "gaps": [
+      18,
+      19,
+      1,
+      7
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 1,
+      "11-20": 1,
+      "31-40": 2,
+      "41-50": 1
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Gibosa minguante",
+    "iluminacao_lunar_percent": 92.557,
+    "idade_lunar_dias": 17.363,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2024",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2024",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2024_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "6b7846bca170bb1663ce2f395342771276e394ef89679678a2e4277db887ceed",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

@@ -1,0 +1,115 @@
+{
+  "era": 1,
+  "id": "H-00042",
+  "nome": "Thara do Bosque",
+  "raca": "Vidente",
+  "casa": "Casa dos Ossos",
+  "geracao": 1,
+  "pais": [],
+  "pontos": 165,
+  "titulo": "Observador Celeste",
+  "estado": "VIVO",
+  "amuletos": [
+    {
+      "id": "ART-5329D17E0D",
+      "nome": "Fragmento Divino",
+      "raridade": "COMUM",
+      "multiplicador": 1.05,
+      "criador": "Thara do Bosque",
+      "geracao_criacao": 3,
+      "donos": [
+        "Thara do Bosque"
+      ],
+      "energia_acumulada": 61.5,
+      "conselhos": 0,
+      "estado": "ATIVO"
+    },
+    {
+      "id": "ART-F41C703D41",
+      "nome": "Presa Imutável de Fenrir",
+      "raridade": "LENDARIO",
+      "multiplicador": 1.6,
+      "criador": "Thara do Bosque",
+      "geracao_criacao": 5,
+      "donos": [
+        "Thara do Bosque"
+      ],
+      "energia_acumulada": 54.5,
+      "conselhos": 0,
+      "estado": "ATIVO"
+    }
+  ],
+  "melhores_chaves": [
+    {
+      "geracao": 1,
+      "numeros": [
+        15,
+        30,
+        33,
+        37,
+        46
+      ],
+      "estrelas": [
+        4,
+        5
+      ]
+    },
+    {
+      "geracao": 2,
+      "numeros": [
+        16,
+        18,
+        22,
+        37,
+        47
+      ],
+      "estrelas": [
+        4,
+        5
+      ]
+    },
+    {
+      "geracao": 3,
+      "numeros": [
+        5,
+        11,
+        18,
+        25,
+        37
+      ],
+      "estrelas": [
+        2,
+        9
+      ]
+    },
+    {
+      "geracao": 4,
+      "numeros": [
+        1,
+        9,
+        11,
+        25,
+        46
+      ],
+      "estrelas": [
+        2,
+        6
+      ]
+    },
+    {
+      "geracao": 5,
+      "numeros": [
+        7,
+        18,
+        20,
+        33,
+        37
+      ],
+      "estrelas": [
+        2,
+        9
+      ]
+    }
+  ],
+  "criada_em": "2026-07-11T09:21:30+00:00"
+}

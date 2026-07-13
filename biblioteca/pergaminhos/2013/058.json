@@ -1,0 +1,84 @@
+{
+  "id": "PERG-2013-058",
+  "titulo": "Pergaminho da Extração 058/2013",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2013,
+  "numero_sorteio": "058/2013",
+  "data": "2013-07-19",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2013-07-19T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      13,
+      16,
+      24,
+      26,
+      35
+    ],
+    "estrelas": [
+      2,
+      5
+    ],
+    "formato": "13 16 24 26 35 + 2 5",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 114,
+    "media_numeros": 22.8,
+    "mediana_numeros": 24,
+    "desvio_padrao": 7.782,
+    "amplitude": 22,
+    "pares": 3,
+    "impares": 2,
+    "gaps": [
+      3,
+      8,
+      2,
+      9
+    ],
+    "distribuicao_por_dezenas": {
+      "11-20": 2,
+      "21-30": 2,
+      "31-40": 1
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Gibosa crescente",
+    "iluminacao_lunar_percent": 86.831,
+    "idade_lunar_dias": 11.274,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2013",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2013",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2013_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "60f26e0eeb786ee5910d4c38c0d7eb9ca1300ae24f56113800b57c2704a1a00a",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

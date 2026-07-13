@@ -1,0 +1,84 @@
+{
+  "id": "PERG-2016-073",
+  "titulo": "Pergaminho da Extração 073/2016",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2016,
+  "numero_sorteio": "073/2016",
+  "data": "2016-09-09",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2016-09-09T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      4,
+      11,
+      15,
+      17,
+      28
+    ],
+    "estrelas": [
+      1,
+      3
+    ],
+    "formato": "4 11 15 17 28 + 1 3",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 75,
+    "media_numeros": 15,
+    "mediana_numeros": 15,
+    "desvio_padrao": 7.874,
+    "amplitude": 24,
+    "pares": 2,
+    "impares": 3,
+    "gaps": [
+      7,
+      4,
+      2,
+      11
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 1,
+      "11-20": 3,
+      "21-30": 1
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Quarto crescente",
+    "iluminacao_lunar_percent": 52.508,
+    "idade_lunar_dias": 7.618,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2016",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2016",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2016_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "bc022702af0902f1fde4916581f3c6ec3cc6af4ac7d1064651150b620fae6a4f",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

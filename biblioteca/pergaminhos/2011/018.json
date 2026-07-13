@@ -1,0 +1,83 @@
+{
+  "id": "PERG-2011-018",
+  "titulo": "Pergaminho da Extração 018/2011",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2011,
+  "numero_sorteio": "018/2011",
+  "data": "2011-05-06",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2011-05-06T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      11,
+      16,
+      20,
+      22,
+      28
+    ],
+    "estrelas": [
+      4,
+      9
+    ],
+    "formato": "11 16 20 22 28 + 4 9",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 97,
+    "media_numeros": 19.4,
+    "mediana_numeros": 20,
+    "desvio_padrao": 5.7131,
+    "amplitude": 17,
+    "pares": 4,
+    "impares": 1,
+    "gaps": [
+      5,
+      4,
+      2,
+      6
+    ],
+    "distribuicao_por_dezenas": {
+      "11-20": 3,
+      "21-30": 2
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Lua crescente",
+    "iluminacao_lunar_percent": 11.474,
+    "idade_lunar_dias": 3.248,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2011",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2011",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2011_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "8b5bb921f201bc09933533dce3832d3e929a021366db4ef7fbf4c29f633990df",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

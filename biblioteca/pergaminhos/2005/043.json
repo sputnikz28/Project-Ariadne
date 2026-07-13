@@ -1,0 +1,86 @@
+{
+  "id": "PERG-2005-043",
+  "titulo": "Pergaminho da Extração 043/2005",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2005,
+  "numero_sorteio": "043/2005",
+  "data": "2005-10-28",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2005-10-28T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      14,
+      36,
+      44,
+      47,
+      50
+    ],
+    "estrelas": [
+      3,
+      5
+    ],
+    "formato": "14 36 44 47 50 + 3 5",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 191,
+    "media_numeros": 38.2,
+    "mediana_numeros": 44,
+    "desvio_padrao": 12.9677,
+    "amplitude": 36,
+    "pares": 4,
+    "impares": 1,
+    "gaps": [
+      22,
+      8,
+      3,
+      3
+    ],
+    "distribuicao_por_dezenas": {
+      "11-20": 1,
+      "31-40": 1,
+      "41-50": 3
+    },
+    "repetidos_sorteio_anterior": [
+      14
+    ],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Lua minguante",
+    "iluminacao_lunar_percent": 17.671,
+    "idade_lunar_dias": 25.452,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2005",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2005",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2005_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "7d2d0d402c5f4a567e30a447c3c5a88f99e500fc91f2c361ae76265b231adace",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

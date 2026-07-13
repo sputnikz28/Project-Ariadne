@@ -1,0 +1,86 @@
+{
+  "id": "PERG-2022-048",
+  "titulo": "Pergaminho da Extração 048/2022",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2022,
+  "numero_sorteio": "048/2022",
+  "data": "2022-06-17",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2022-06-17T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      19,
+      21,
+      22,
+      31,
+      38
+    ],
+    "estrelas": [
+      7,
+      11
+    ],
+    "formato": "19 21 22 31 38 + 7 11",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 131,
+    "media_numeros": 26.2,
+    "mediana_numeros": 22,
+    "desvio_padrao": 7.1944,
+    "amplitude": 19,
+    "pares": 2,
+    "impares": 3,
+    "gaps": [
+      2,
+      1,
+      9,
+      7
+    ],
+    "distribuicao_por_dezenas": {
+      "11-20": 1,
+      "21-30": 2,
+      "31-40": 2
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": [
+      11
+    ]
+  },
+  "astronomia": {
+    "fase_lua": "Gibosa minguante",
+    "iluminacao_lunar_percent": 84.733,
+    "idade_lunar_dias": 18.539,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2022",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2022",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2022_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "b16967d6b208ccc818cd4bdf87a0b65394a068d6013526d25c6263e85cca887b",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

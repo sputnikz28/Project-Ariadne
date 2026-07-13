@@ -1,0 +1,90 @@
+{
+  "id": "PERG-2018-055",
+  "titulo": "Pergaminho da Extração 055/2018",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2018,
+  "numero_sorteio": "055/2018",
+  "data": "2018-07-10",
+  "dia_semana": "terça-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2018-07-10T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      3,
+      8,
+      26,
+      33,
+      45
+    ],
+    "estrelas": [
+      7,
+      10
+    ],
+    "formato": "3 8 26 33 45 + 7 10",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 115,
+    "media_numeros": 23,
+    "mediana_numeros": 26,
+    "desvio_padrao": 15.6077,
+    "amplitude": 42,
+    "pares": 2,
+    "impares": 3,
+    "gaps": [
+      5,
+      18,
+      7,
+      12
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 2,
+      "21-30": 1,
+      "31-40": 1,
+      "41-50": 1
+    },
+    "repetidos_sorteio_anterior": [
+      8,
+      33
+    ],
+    "estrelas_repetidas_sorteio_anterior": [
+      10
+    ]
+  },
+  "astronomia": {
+    "fase_lua": "Lua minguante",
+    "iluminacao_lunar_percent": 8.205,
+    "idade_lunar_dias": 26.8,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2018",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2018",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2018_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "79e8d1734414515be64b88fb8f3c258ddb135eb2332f0d9015c9fdce83c62acc",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

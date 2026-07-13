@@ -1,0 +1,84 @@
+{
+  "id": "PERG-2017-067",
+  "titulo": "Pergaminho da Extração 067/2017",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2017,
+  "numero_sorteio": "067/2017",
+  "data": "2017-08-22",
+  "dia_semana": "terça-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2017-08-22T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      3,
+      10,
+      12,
+      17,
+      27
+    ],
+    "estrelas": [
+      3,
+      5
+    ],
+    "formato": "3 10 12 17 27 + 3 5",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 69,
+    "media_numeros": 13.8,
+    "mediana_numeros": 12,
+    "desvio_padrao": 7.985,
+    "amplitude": 24,
+    "pares": 2,
+    "impares": 3,
+    "gaps": [
+      7,
+      2,
+      5,
+      10
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 2,
+      "11-20": 2,
+      "21-30": 1
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Lua nova",
+    "iluminacao_lunar_percent": 1.216,
+    "idade_lunar_dias": 1.039,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2017",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2017",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2017_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "2e16797a41853a3ceceb31bbfd5fbaafd56934bda77eb614c2e61293343dd322",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

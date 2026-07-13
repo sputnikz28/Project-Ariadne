@@ -1,0 +1,531 @@
+{
+  "ano": 2022,
+  "fonte": "biblioteca/fontes/euromilhoes_2022_dataset_completo.json",
+  "primeiro_sorteio": "001/2022",
+  "ultimo_sorteio": "104/2022",
+  "data_inicio": "2022-01-04",
+  "data_fim": "2022-12-30",
+  "quantidade_sorteios": 104,
+  "pergaminhos": [
+    {
+      "numero_sorteio": "001/2022",
+      "data": "2022-01-04",
+      "ficheiro": "biblioteca/pergaminhos/2022/001.json"
+    },
+    {
+      "numero_sorteio": "002/2022",
+      "data": "2022-01-07",
+      "ficheiro": "biblioteca/pergaminhos/2022/002.json"
+    },
+    {
+      "numero_sorteio": "003/2022",
+      "data": "2022-01-11",
+      "ficheiro": "biblioteca/pergaminhos/2022/003.json"
+    },
+    {
+      "numero_sorteio": "004/2022",
+      "data": "2022-01-14",
+      "ficheiro": "biblioteca/pergaminhos/2022/004.json"
+    },
+    {
+      "numero_sorteio": "005/2022",
+      "data": "2022-01-18",
+      "ficheiro": "biblioteca/pergaminhos/2022/005.json"
+    },
+    {
+      "numero_sorteio": "006/2022",
+      "data": "2022-01-21",
+      "ficheiro": "biblioteca/pergaminhos/2022/006.json"
+    },
+    {
+      "numero_sorteio": "007/2022",
+      "data": "2022-01-25",
+      "ficheiro": "biblioteca/pergaminhos/2022/007.json"
+    },
+    {
+      "numero_sorteio": "008/2022",
+      "data": "2022-01-28",
+      "ficheiro": "biblioteca/pergaminhos/2022/008.json"
+    },
+    {
+      "numero_sorteio": "009/2022",
+      "data": "2022-02-01",
+      "ficheiro": "biblioteca/pergaminhos/2022/009.json"
+    },
+    {
+      "numero_sorteio": "010/2022",
+      "data": "2022-02-04",
+      "ficheiro": "biblioteca/pergaminhos/2022/010.json"
+    },
+    {
+      "numero_sorteio": "011/2022",
+      "data": "2022-02-08",
+      "ficheiro": "biblioteca/pergaminhos/2022/011.json"
+    },
+    {
+      "numero_sorteio": "012/2022",
+      "data": "2022-02-11",
+      "ficheiro": "biblioteca/pergaminhos/2022/012.json"
+    },
+    {
+      "numero_sorteio": "013/2022",
+      "data": "2022-02-15",
+      "ficheiro": "biblioteca/pergaminhos/2022/013.json"
+    },
+    {
+      "numero_sorteio": "014/2022",
+      "data": "2022-02-18",
+      "ficheiro": "biblioteca/pergaminhos/2022/014.json"
+    },
+    {
+      "numero_sorteio": "015/2022",
+      "data": "2022-02-22",
+      "ficheiro": "biblioteca/pergaminhos/2022/015.json"
+    },
+    {
+      "numero_sorteio": "016/2022",
+      "data": "2022-02-25",
+      "ficheiro": "biblioteca/pergaminhos/2022/016.json"
+    },
+    {
+      "numero_sorteio": "017/2022",
+      "data": "2022-03-01",
+      "ficheiro": "biblioteca/pergaminhos/2022/017.json"
+    },
+    {
+      "numero_sorteio": "018/2022",
+      "data": "2022-03-04",
+      "ficheiro": "biblioteca/pergaminhos/2022/018.json"
+    },
+    {
+      "numero_sorteio": "019/2022",
+      "data": "2022-03-08",
+      "ficheiro": "biblioteca/pergaminhos/2022/019.json"
+    },
+    {
+      "numero_sorteio": "020/2022",
+      "data": "2022-03-11",
+      "ficheiro": "biblioteca/pergaminhos/2022/020.json"
+    },
+    {
+      "numero_sorteio": "021/2022",
+      "data": "2022-03-15",
+      "ficheiro": "biblioteca/pergaminhos/2022/021.json"
+    },
+    {
+      "numero_sorteio": "022/2022",
+      "data": "2022-03-18",
+      "ficheiro": "biblioteca/pergaminhos/2022/022.json"
+    },
+    {
+      "numero_sorteio": "023/2022",
+      "data": "2022-03-22",
+      "ficheiro": "biblioteca/pergaminhos/2022/023.json"
+    },
+    {
+      "numero_sorteio": "024/2022",
+      "data": "2022-03-25",
+      "ficheiro": "biblioteca/pergaminhos/2022/024.json"
+    },
+    {
+      "numero_sorteio": "025/2022",
+      "data": "2022-03-29",
+      "ficheiro": "biblioteca/pergaminhos/2022/025.json"
+    },
+    {
+      "numero_sorteio": "026/2022",
+      "data": "2022-04-01",
+      "ficheiro": "biblioteca/pergaminhos/2022/026.json"
+    },
+    {
+      "numero_sorteio": "027/2022",
+      "data": "2022-04-05",
+      "ficheiro": "biblioteca/pergaminhos/2022/027.json"
+    },
+    {
+      "numero_sorteio": "028/2022",
+      "data": "2022-04-08",
+      "ficheiro": "biblioteca/pergaminhos/2022/028.json"
+    },
+    {
+      "numero_sorteio": "029/2022",
+      "data": "2022-04-12",
+      "ficheiro": "biblioteca/pergaminhos/2022/029.json"
+    },
+    {
+      "numero_sorteio": "030/2022",
+      "data": "2022-04-15",
+      "ficheiro": "biblioteca/pergaminhos/2022/030.json"
+    },
+    {
+      "numero_sorteio": "031/2022",
+      "data": "2022-04-19",
+      "ficheiro": "biblioteca/pergaminhos/2022/031.json"
+    },
+    {
+      "numero_sorteio": "032/2022",
+      "data": "2022-04-22",
+      "ficheiro": "biblioteca/pergaminhos/2022/032.json"
+    },
+    {
+      "numero_sorteio": "033/2022",
+      "data": "2022-04-26",
+      "ficheiro": "biblioteca/pergaminhos/2022/033.json"
+    },
+    {
+      "numero_sorteio": "034/2022",
+      "data": "2022-04-29",
+      "ficheiro": "biblioteca/pergaminhos/2022/034.json"
+    },
+    {
+      "numero_sorteio": "035/2022",
+      "data": "2022-05-03",
+      "ficheiro": "biblioteca/pergaminhos/2022/035.json"
+    },
+    {
+      "numero_sorteio": "036/2022",
+      "data": "2022-05-06",
+      "ficheiro": "biblioteca/pergaminhos/2022/036.json"
+    },
+    {
+      "numero_sorteio": "037/2022",
+      "data": "2022-05-10",
+      "ficheiro": "biblioteca/pergaminhos/2022/037.json"
+    },
+    {
+      "numero_sorteio": "038/2022",
+      "data": "2022-05-13",
+      "ficheiro": "biblioteca/pergaminhos/2022/038.json"
+    },
+    {
+      "numero_sorteio": "039/2022",
+      "data": "2022-05-17",
+      "ficheiro": "biblioteca/pergaminhos/2022/039.json"
+    },
+    {
+      "numero_sorteio": "040/2022",
+      "data": "2022-05-20",
+      "ficheiro": "biblioteca/pergaminhos/2022/040.json"
+    },
+    {
+      "numero_sorteio": "041/2022",
+      "data": "2022-05-24",
+      "ficheiro": "biblioteca/pergaminhos/2022/041.json"
+    },
+    {
+      "numero_sorteio": "042/2022",
+      "data": "2022-05-27",
+      "ficheiro": "biblioteca/pergaminhos/2022/042.json"
+    },
+    {
+      "numero_sorteio": "043/2022",
+      "data": "2022-05-31",
+      "ficheiro": "biblioteca/pergaminhos/2022/043.json"
+    },
+    {
+      "numero_sorteio": "044/2022",
+      "data": "2022-06-03",
+      "ficheiro": "biblioteca/pergaminhos/2022/044.json"
+    },
+    {
+      "numero_sorteio": "045/2022",
+      "data": "2022-06-07",
+      "ficheiro": "biblioteca/pergaminhos/2022/045.json"
+    },
+    {
+      "numero_sorteio": "046/2022",
+      "data": "2022-06-10",
+      "ficheiro": "biblioteca/pergaminhos/2022/046.json"
+    },
+    {
+      "numero_sorteio": "047/2022",
+      "data": "2022-06-14",
+      "ficheiro": "biblioteca/pergaminhos/2022/047.json"
+    },
+    {
+      "numero_sorteio": "048/2022",
+      "data": "2022-06-17",
+      "ficheiro": "biblioteca/pergaminhos/2022/048.json"
+    },
+    {
+      "numero_sorteio": "049/2022",
+      "data": "2022-06-21",
+      "ficheiro": "biblioteca/pergaminhos/2022/049.json"
+    },
+    {
+      "numero_sorteio": "050/2022",
+      "data": "2022-06-24",
+      "ficheiro": "biblioteca/pergaminhos/2022/050.json"
+    },
+    {
+      "numero_sorteio": "051/2022",
+      "data": "2022-06-28",
+      "ficheiro": "biblioteca/pergaminhos/2022/051.json"
+    },
+    {
+      "numero_sorteio": "052/2022",
+      "data": "2022-07-01",
+      "ficheiro": "biblioteca/pergaminhos/2022/052.json"
+    },
+    {
+      "numero_sorteio": "053/2022",
+      "data": "2022-07-05",
+      "ficheiro": "biblioteca/pergaminhos/2022/053.json"
+    },
+    {
+      "numero_sorteio": "054/2022",
+      "data": "2022-07-08",
+      "ficheiro": "biblioteca/pergaminhos/2022/054.json"
+    },
+    {
+      "numero_sorteio": "055/2022",
+      "data": "2022-07-12",
+      "ficheiro": "biblioteca/pergaminhos/2022/055.json"
+    },
+    {
+      "numero_sorteio": "056/2022",
+      "data": "2022-07-15",
+      "ficheiro": "biblioteca/pergaminhos/2022/056.json"
+    },
+    {
+      "numero_sorteio": "057/2022",
+      "data": "2022-07-19",
+      "ficheiro": "biblioteca/pergaminhos/2022/057.json"
+    },
+    {
+      "numero_sorteio": "058/2022",
+      "data": "2022-07-22",
+      "ficheiro": "biblioteca/pergaminhos/2022/058.json"
+    },
+    {
+      "numero_sorteio": "059/2022",
+      "data": "2022-07-26",
+      "ficheiro": "biblioteca/pergaminhos/2022/059.json"
+    },
+    {
+      "numero_sorteio": "060/2022",
+      "data": "2022-07-29",
+      "ficheiro": "biblioteca/pergaminhos/2022/060.json"
+    },
+    {
+      "numero_sorteio": "061/2022",
+      "data": "2022-08-02",
+      "ficheiro": "biblioteca/pergaminhos/2022/061.json"
+    },
+    {
+      "numero_sorteio": "062/2022",
+      "data": "2022-08-05",
+      "ficheiro": "biblioteca/pergaminhos/2022/062.json"
+    },
+    {
+      "numero_sorteio": "063/2022",
+      "data": "2022-08-09",
+      "ficheiro": "biblioteca/pergaminhos/2022/063.json"
+    },
+    {
+      "numero_sorteio": "064/2022",
+      "data": "2022-08-12",
+      "ficheiro": "biblioteca/pergaminhos/2022/064.json"
+    },
+    {
+      "numero_sorteio": "065/2022",
+      "data": "2022-08-16",
+      "ficheiro": "biblioteca/pergaminhos/2022/065.json"
+    },
+    {
+      "numero_sorteio": "066/2022",
+      "data": "2022-08-19",
+      "ficheiro": "biblioteca/pergaminhos/2022/066.json"
+    },
+    {
+      "numero_sorteio": "067/2022",
+      "data": "2022-08-23",
+      "ficheiro": "biblioteca/pergaminhos/2022/067.json"
+    },
+    {
+      "numero_sorteio": "068/2022",
+      "data": "2022-08-26",
+      "ficheiro": "biblioteca/pergaminhos/2022/068.json"
+    },
+    {
+      "numero_sorteio": "069/2022",
+      "data": "2022-08-30",
+      "ficheiro": "biblioteca/pergaminhos/2022/069.json"
+    },
+    {
+      "numero_sorteio": "070/2022",
+      "data": "2022-09-02",
+      "ficheiro": "biblioteca/pergaminhos/2022/070.json"
+    },
+    {
+      "numero_sorteio": "071/2022",
+      "data": "2022-09-06",
+      "ficheiro": "biblioteca/pergaminhos/2022/071.json"
+    },
+    {
+      "numero_sorteio": "072/2022",
+      "data": "2022-09-09",
+      "ficheiro": "biblioteca/pergaminhos/2022/072.json"
+    },
+    {
+      "numero_sorteio": "073/2022",
+      "data": "2022-09-13",
+      "ficheiro": "biblioteca/pergaminhos/2022/073.json"
+    },
+    {
+      "numero_sorteio": "074/2022",
+      "data": "2022-09-16",
+      "ficheiro": "biblioteca/pergaminhos/2022/074.json"
+    },
+    {
+      "numero_sorteio": "075/2022",
+      "data": "2022-09-20",
+      "ficheiro": "biblioteca/pergaminhos/2022/075.json"
+    },
+    {
+      "numero_sorteio": "076/2022",
+      "data": "2022-09-23",
+      "ficheiro": "biblioteca/pergaminhos/2022/076.json"
+    },
+    {
+      "numero_sorteio": "077/2022",
+      "data": "2022-09-27",
+      "ficheiro": "biblioteca/pergaminhos/2022/077.json"
+    },
+    {
+      "numero_sorteio": "078/2022",
+      "data": "2022-09-30",
+      "ficheiro": "biblioteca/pergaminhos/2022/078.json"
+    },
+    {
+      "numero_sorteio": "079/2022",
+      "data": "2022-10-04",
+      "ficheiro": "biblioteca/pergaminhos/2022/079.json"
+    },
+    {
+      "numero_sorteio": "080/2022",
+      "data": "2022-10-07",
+      "ficheiro": "biblioteca/pergaminhos/2022/080.json"
+    },
+    {
+      "numero_sorteio": "081/2022",
+      "data": "2022-10-11",
+      "ficheiro": "biblioteca/pergaminhos/2022/081.json"
+    },
+    {
+      "numero_sorteio": "082/2022",
+      "data": "2022-10-14",
+      "ficheiro": "biblioteca/pergaminhos/2022/082.json"
+    },
+    {
+      "numero_sorteio": "083/2022",
+      "data": "2022-10-18",
+      "ficheiro": "biblioteca/pergaminhos/2022/083.json"
+    },
+    {
+      "numero_sorteio": "084/2022",
+      "data": "2022-10-21",
+      "ficheiro": "biblioteca/pergaminhos/2022/084.json"
+    },
+    {
+      "numero_sorteio": "085/2022",
+      "data": "2022-10-25",
+      "ficheiro": "biblioteca/pergaminhos/2022/085.json"
+    },
+    {
+      "numero_sorteio": "086/2022",
+      "data": "2022-10-28",
+      "ficheiro": "biblioteca/pergaminhos/2022/086.json"
+    },
+    {
+      "numero_sorteio": "087/2022",
+      "data": "2022-11-01",
+      "ficheiro": "biblioteca/pergaminhos/2022/087.json"
+    },
+    {
+      "numero_sorteio": "088/2022",
+      "data": "2022-11-04",
+      "ficheiro": "biblioteca/pergaminhos/2022/088.json"
+    },
+    {
+      "numero_sorteio": "089/2022",
+      "data": "2022-11-08",
+      "ficheiro": "biblioteca/pergaminhos/2022/089.json"
+    },
+    {
+      "numero_sorteio": "090/2022",
+      "data": "2022-11-11",
+      "ficheiro": "biblioteca/pergaminhos/2022/090.json"
+    },
+    {
+      "numero_sorteio": "091/2022",
+      "data": "2022-11-15",
+      "ficheiro": "biblioteca/pergaminhos/2022/091.json"
+    },
+    {
+      "numero_sorteio": "092/2022",
+      "data": "2022-11-18",
+      "ficheiro": "biblioteca/pergaminhos/2022/092.json"
+    },
+    {
+      "numero_sorteio": "093/2022",
+      "data": "2022-11-22",
+      "ficheiro": "biblioteca/pergaminhos/2022/093.json"
+    },
+    {
+      "numero_sorteio": "094/2022",
+      "data": "2022-11-25",
+      "ficheiro": "biblioteca/pergaminhos/2022/094.json"
+    },
+    {
+      "numero_sorteio": "095/2022",
+      "data": "2022-11-29",
+      "ficheiro": "biblioteca/pergaminhos/2022/095.json"
+    },
+    {
+      "numero_sorteio": "096/2022",
+      "data": "2022-12-02",
+      "ficheiro": "biblioteca/pergaminhos/2022/096.json"
+    },
+    {
+      "numero_sorteio": "097/2022",
+      "data": "2022-12-06",
+      "ficheiro": "biblioteca/pergaminhos/2022/097.json"
+    },
+    {
+      "numero_sorteio": "098/2022",
+      "data": "2022-12-09",
+      "ficheiro": "biblioteca/pergaminhos/2022/098.json"
+    },
+    {
+      "numero_sorteio": "099/2022",
+      "data": "2022-12-13",
+      "ficheiro": "biblioteca/pergaminhos/2022/099.json"
+    },
+    {
+      "numero_sorteio": "100/2022",
+      "data": "2022-12-16",
+      "ficheiro": "biblioteca/pergaminhos/2022/100.json"
+    },
+    {
+      "numero_sorteio": "101/2022",
+      "data": "2022-12-20",
+      "ficheiro": "biblioteca/pergaminhos/2022/101.json"
+    },
+    {
+      "numero_sorteio": "102/2022",
+      "data": "2022-12-23",
+      "ficheiro": "biblioteca/pergaminhos/2022/102.json"
+    },
+    {
+      "numero_sorteio": "103/2022",
+      "data": "2022-12-27",
+      "ficheiro": "biblioteca/pergaminhos/2022/103.json"
+    },
+    {
+      "numero_sorteio": "104/2022",
+      "data": "2022-12-30",
+      "ficheiro": "biblioteca/pergaminhos/2022/104.json"
+    }
+  ]
+}

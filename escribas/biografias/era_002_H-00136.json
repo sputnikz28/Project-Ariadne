@@ -1,0 +1,89 @@
+{
+  "era": 2,
+  "id": "H-00136",
+  "nome": "Kael da Névoa",
+  "raca": "Esqueleto",
+  "casa": "Casa Lunar",
+  "geracao": 3,
+  "pais": [
+    "H-00058",
+    "H-00092"
+  ],
+  "pontos": 166,
+  "titulo": "Observador Celeste",
+  "estado": "VIVO",
+  "amuletos": [],
+  "melhores_chaves": [
+    {
+      "geracao": 3,
+      "numeros": [
+        30,
+        34,
+        41,
+        42,
+        44
+      ],
+      "estrelas": [
+        2,
+        6
+      ]
+    },
+    {
+      "geracao": 4,
+      "numeros": [
+        13,
+        23,
+        34,
+        36,
+        37
+      ],
+      "estrelas": [
+        5,
+        6
+      ]
+    },
+    {
+      "geracao": 5,
+      "numeros": [
+        10,
+        13,
+        24,
+        25,
+        28
+      ],
+      "estrelas": [
+        3,
+        6
+      ]
+    },
+    {
+      "geracao": 6,
+      "numeros": [
+        21,
+        23,
+        26,
+        30,
+        31
+      ],
+      "estrelas": [
+        3,
+        4
+      ]
+    },
+    {
+      "geracao": 7,
+      "numeros": [
+        20,
+        32,
+        33,
+        35,
+        39
+      ],
+      "estrelas": [
+        6,
+        9
+      ]
+    }
+  ],
+  "criada_em": "2026-07-11T09:21:37+00:00"
+}

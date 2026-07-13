@@ -1,0 +1,83 @@
+{
+  "id": "PERG-2014-039",
+  "titulo": "Pergaminho da Extração 039/2014",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2014,
+  "numero_sorteio": "039/2014",
+  "data": "2014-05-16",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2014-05-16T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      23,
+      26,
+      29,
+      37,
+      40
+    ],
+    "estrelas": [
+      3,
+      4
+    ],
+    "formato": "23 26 29 37 40 + 3 4",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 155,
+    "media_numeros": 31,
+    "mediana_numeros": 29,
+    "desvio_padrao": 6.4807,
+    "amplitude": 17,
+    "pares": 2,
+    "impares": 3,
+    "gaps": [
+      3,
+      3,
+      8,
+      3
+    ],
+    "distribuicao_por_dezenas": {
+      "21-30": 3,
+      "31-40": 2
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Gibosa minguante",
+    "iluminacao_lunar_percent": 95.056,
+    "idade_lunar_dias": 16.873,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2014",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2014",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2014_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "a467025eb3b252cdfa818832de40c23673bf70cc99d3664ed4794c31f30b1423",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

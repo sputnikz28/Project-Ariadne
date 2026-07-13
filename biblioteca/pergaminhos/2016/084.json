@@ -1,0 +1,84 @@
+{
+  "id": "PERG-2016-084",
+  "titulo": "Pergaminho da Extração 084/2016",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2016,
+  "numero_sorteio": "084/2016",
+  "data": "2016-10-18",
+  "dia_semana": "terça-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2016-10-18T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      2,
+      17,
+      21,
+      25,
+      27
+    ],
+    "estrelas": [
+      6,
+      9
+    ],
+    "formato": "2 17 21 25 27 + 6 9",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 92,
+    "media_numeros": 18.4,
+    "mediana_numeros": 21,
+    "desvio_padrao": 8.8904,
+    "amplitude": 25,
+    "pares": 1,
+    "impares": 4,
+    "gaps": [
+      15,
+      4,
+      4,
+      2
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 1,
+      "11-20": 1,
+      "21-30": 3
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Gibosa minguante",
+    "iluminacao_lunar_percent": 90.24,
+    "idade_lunar_dias": 17.752,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2016",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2016",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2016_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "9ca3df0672b81eefa5a50a090421d30a64ab8e07cdbaa70421477cb17857f905",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

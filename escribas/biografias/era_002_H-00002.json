@@ -1,0 +1,86 @@
+{
+  "era": 2,
+  "id": "H-00002",
+  "nome": "Lyra dos Astros",
+  "raca": "Vidente",
+  "casa": "Casa dos Ossos",
+  "geracao": 1,
+  "pais": [],
+  "pontos": 236,
+  "titulo": "Sussurrador do Destino",
+  "estado": "VIVO",
+  "amuletos": [],
+  "melhores_chaves": [
+    {
+      "geracao": 1,
+      "numeros": [
+        11,
+        26,
+        31,
+        35,
+        45
+      ],
+      "estrelas": [
+        6,
+        9
+      ]
+    },
+    {
+      "geracao": 2,
+      "numeros": [
+        2,
+        7,
+        24,
+        25,
+        36
+      ],
+      "estrelas": [
+        2,
+        9
+      ]
+    },
+    {
+      "geracao": 3,
+      "numeros": [
+        5,
+        18,
+        30,
+        31,
+        36
+      ],
+      "estrelas": [
+        5,
+        6
+      ]
+    },
+    {
+      "geracao": 4,
+      "numeros": [
+        3,
+        9,
+        32,
+        36,
+        42
+      ],
+      "estrelas": [
+        2,
+        4
+      ]
+    },
+    {
+      "geracao": 5,
+      "numeros": [
+        3,
+        18,
+        22,
+        24,
+        31
+      ],
+      "estrelas": [
+        2,
+        5
+      ]
+    }
+  ],
+  "criada_em": "2026-07-11T09:21:37+00:00"
+}

@@ -1,0 +1,86 @@
+{
+  "id": "PERG-2011-080",
+  "titulo": "Pergaminho da Extração 080/2011",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2011,
+  "numero_sorteio": "080/2011",
+  "data": "2011-12-09",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "19:00:00",
+    "timestamp_utc": "2011-12-09T19:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      12,
+      21,
+      29,
+      44,
+      47
+    ],
+    "estrelas": [
+      1,
+      2
+    ],
+    "formato": "12 21 29 44 47 + 1 2",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 153,
+    "media_numeros": 30.6,
+    "mediana_numeros": 29,
+    "desvio_padrao": 13.3357,
+    "amplitude": 35,
+    "pares": 2,
+    "impares": 3,
+    "gaps": [
+      9,
+      8,
+      15,
+      3
+    ],
+    "distribuicao_por_dezenas": {
+      "11-20": 1,
+      "21-30": 2,
+      "41-50": 2
+    },
+    "repetidos_sorteio_anterior": [
+      21
+    ],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Lua cheia",
+    "iluminacao_lunar_percent": 99.358,
+    "idade_lunar_dias": 14.011,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2011",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2011",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2011_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "d13dc56133d2e232112797eb6d98f2f51d8e1edcaa9389090cb89d2c64383d37",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

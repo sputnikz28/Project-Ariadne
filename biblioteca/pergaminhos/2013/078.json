@@ -1,0 +1,86 @@
+{
+  "id": "PERG-2013-078",
+  "titulo": "Pergaminho da Extração 078/2013",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2013,
+  "numero_sorteio": "078/2013",
+  "data": "2013-09-27",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2013-09-27T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      11,
+      15,
+      38,
+      41,
+      43
+    ],
+    "estrelas": [
+      2,
+      6
+    ],
+    "formato": "11 15 38 41 43 + 2 6",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 148,
+    "media_numeros": 29.6,
+    "mediana_numeros": 38,
+    "desvio_padrao": 13.7055,
+    "amplitude": 32,
+    "pares": 1,
+    "impares": 4,
+    "gaps": [
+      4,
+      23,
+      3,
+      2
+    ],
+    "distribuicao_por_dezenas": {
+      "11-20": 2,
+      "31-40": 1,
+      "41-50": 2
+    },
+    "repetidos_sorteio_anterior": [
+      43
+    ],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Quarto minguante",
+    "iluminacao_lunar_percent": 44.444,
+    "idade_lunar_dias": 22.671,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2013",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2013",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2013_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "08e66d2ab0ee437cd902237da7fd998f09a3f0d37b536e99e08537fb10f8fd77",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

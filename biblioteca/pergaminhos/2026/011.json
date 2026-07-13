@@ -1,0 +1,86 @@
+{
+  "id": "PERG-2026-011",
+  "titulo": "Pergaminho da Extração 011/2026",
+  "biblioteca": "Grande Grimório das Extrações",
+  "estado": "SELADO",
+  "raridade": "Sagrado",
+  "data": {
+    "extracao": "2026-02-06",
+    "dia_semana": "sexta-feira",
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "timestamp_utc": "2026-02-06T19:00:00+00:00"
+  },
+  "extracao": {
+    "numero_sorteio": "011/2026",
+    "numeros": [
+      10,
+      13,
+      20,
+      23,
+      24
+    ],
+    "estrelas": [
+      6,
+      11
+    ],
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma": 90,
+    "media": 18,
+    "mediana": 20,
+    "desvio_padrao": 5.5498,
+    "amplitude": 14,
+    "pares": 3,
+    "impares": 2,
+    "gaps": [
+      3,
+      7,
+      3,
+      1
+    ],
+    "distribuicao_dezenas": {
+      "01-10": 1,
+      "11-20": 2,
+      "21-30": 2
+    },
+    "repetidos_anterior": [],
+    "estrelas_repetidas_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Gibosa minguante",
+    "iluminacao_percent": 75.293,
+    "idade_lunar_dias": 19.655,
+    "eclipse": false
+  },
+  "premios": {
+    "categorias": null,
+    "houve_vencedor_1_premio_total": null,
+    "houve_vencedor_1_premio_portugal": null,
+    "total_vencedores_todas_categorias": null,
+    "total_vencedores_portugal_todas_categorias": null
+  },
+  "qualidade_dados": {
+    "fonte_resultado": "texto ou imagem fornecidos pelo utilizador",
+    "transcricao_manual": true,
+    "ordem_saida_confirmada": false,
+    "dados_financeiros_disponiveis": false,
+    "categorias_premio_disponiveis": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "receita_liquida_apostas_eur",
+      "montante_para_premios_eur",
+      "jackpot_previsto",
+      "categorias_premio"
+    ]
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "selo": "Biblioteca Eterna",
+    "sha256": "63e45b5c7d855a30feb8a0270faa1eb02bd32a6989c9ff17d16c2242c94b522d",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

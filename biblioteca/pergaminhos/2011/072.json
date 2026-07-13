@@ -1,0 +1,87 @@
+{
+  "id": "PERG-2011-072",
+  "titulo": "Pergaminho da Extração 072/2011",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2011,
+  "numero_sorteio": "072/2011",
+  "data": "2011-11-11",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "19:00:00",
+    "timestamp_utc": "2011-11-11T19:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      1,
+      4,
+      18,
+      23,
+      30
+    ],
+    "estrelas": [
+      3,
+      7
+    ],
+    "formato": "1 4 18 23 30 + 3 7",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 76,
+    "media_numeros": 15.2,
+    "mediana_numeros": 18,
+    "desvio_padrao": 11.0887,
+    "amplitude": 29,
+    "pares": 3,
+    "impares": 2,
+    "gaps": [
+      3,
+      14,
+      5,
+      7
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 2,
+      "11-20": 1,
+      "21-30": 2
+    },
+    "repetidos_sorteio_anterior": [
+      1,
+      4
+    ],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Lua cheia",
+    "iluminacao_lunar_percent": 99.181,
+    "idade_lunar_dias": 15.617,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2011",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2011",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2011_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "4ba8611198efc558ad37f56b248fe47f9a4b1865b4e430f3de28b65aaccbbdbb",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

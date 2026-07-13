@@ -1,0 +1,86 @@
+{
+  "id": "PERG-2015-034",
+  "titulo": "Pergaminho da Extração 034/2015",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2015,
+  "numero_sorteio": "034/2015",
+  "data": "2015-04-28",
+  "dia_semana": "terça-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2015-04-28T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      24,
+      26,
+      28,
+      36,
+      45
+    ],
+    "estrelas": [
+      7,
+      10
+    ],
+    "formato": "24 26 28 36 45 + 7 10",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 159,
+    "media_numeros": 31.8,
+    "mediana_numeros": 28,
+    "desvio_padrao": 7.7563,
+    "amplitude": 21,
+    "pares": 4,
+    "impares": 1,
+    "gaps": [
+      2,
+      2,
+      8,
+      9
+    ],
+    "distribuicao_por_dezenas": {
+      "21-30": 3,
+      "31-40": 1,
+      "41-50": 1
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": [
+      10
+    ]
+  },
+  "astronomia": {
+    "fase_lua": "Gibosa crescente",
+    "iluminacao_lunar_percent": 75.133,
+    "idade_lunar_dias": 9.858,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2015",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2015",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2015_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "506706bbd5e66404b6d3203d2231f65c5a3ae423cc835d258440e67cd0e7890c",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

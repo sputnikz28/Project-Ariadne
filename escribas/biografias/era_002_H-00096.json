@@ -1,0 +1,89 @@
+{
+  "era": 2,
+  "id": "H-00096",
+  "nome": "Selene do Bosque",
+  "raca": "Vidente",
+  "casa": "Casa Lunar",
+  "geracao": 2,
+  "pais": [
+    "H-00032",
+    "H-00026"
+  ],
+  "pontos": 223,
+  "titulo": "Observador Celeste",
+  "estado": "VIVO",
+  "amuletos": [],
+  "melhores_chaves": [
+    {
+      "geracao": 2,
+      "numeros": [
+        5,
+        9,
+        25,
+        37,
+        50
+      ],
+      "estrelas": [
+        2,
+        6
+      ]
+    },
+    {
+      "geracao": 3,
+      "numeros": [
+        22,
+        25,
+        31,
+        45,
+        46
+      ],
+      "estrelas": [
+        2,
+        9
+      ]
+    },
+    {
+      "geracao": 4,
+      "numeros": [
+        5,
+        31,
+        33,
+        36,
+        45
+      ],
+      "estrelas": [
+        5,
+        9
+      ]
+    },
+    {
+      "geracao": 5,
+      "numeros": [
+        3,
+        7,
+        32,
+        40,
+        45
+      ],
+      "estrelas": [
+        2,
+        6
+      ]
+    },
+    {
+      "geracao": 6,
+      "numeros": [
+        8,
+        10,
+        28,
+        39,
+        48
+      ],
+      "estrelas": [
+        4,
+        5
+      ]
+    }
+  ],
+  "criada_em": "2026-07-11T09:21:37+00:00"
+}

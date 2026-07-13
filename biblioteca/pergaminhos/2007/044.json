@@ -1,0 +1,88 @@
+{
+  "id": "PERG-2007-044",
+  "titulo": "Pergaminho da Extração 044/2007",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2007,
+  "numero_sorteio": "044/2007",
+  "data": "2007-11-02",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "19:00:00",
+    "timestamp_utc": "2007-11-02T19:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      3,
+      16,
+      18,
+      19,
+      40
+    ],
+    "estrelas": [
+      1,
+      2
+    ],
+    "formato": "3 16 18 19 40 + 1 2",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 96,
+    "media_numeros": 19.2,
+    "mediana_numeros": 18,
+    "desvio_padrao": 11.8895,
+    "amplitude": 37,
+    "pares": 3,
+    "impares": 2,
+    "gaps": [
+      13,
+      2,
+      1,
+      21
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 1,
+      "11-20": 3,
+      "31-40": 1
+    },
+    "repetidos_sorteio_anterior": [
+      40
+    ],
+    "estrelas_repetidas_sorteio_anterior": [
+      1
+    ]
+  },
+  "astronomia": {
+    "fase_lua": "Quarto minguante",
+    "iluminacao_lunar_percent": 40.693,
+    "idade_lunar_dias": 23.028,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2007",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2007",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2007_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "c013b1bfa2fb7b04c3a3a15c63ce250bdd65c305b7371688038e86467c123e64",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

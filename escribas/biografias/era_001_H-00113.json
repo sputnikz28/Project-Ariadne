@@ -1,0 +1,89 @@
+{
+  "era": 1,
+  "id": "H-00113",
+  "nome": "Selene da Névoa",
+  "raca": "Elfo",
+  "casa": "Casa dos Ossos",
+  "geracao": 2,
+  "pais": [
+    "H-00041",
+    "H-00035"
+  ],
+  "pontos": 135,
+  "titulo": "Sussurrador do Destino",
+  "estado": "VIVO",
+  "amuletos": [],
+  "melhores_chaves": [
+    {
+      "geracao": 2,
+      "numeros": [
+        7,
+        10,
+        29,
+        31,
+        46
+      ],
+      "estrelas": [
+        4,
+        9
+      ]
+    },
+    {
+      "geracao": 3,
+      "numeros": [
+        4,
+        16,
+        28,
+        41,
+        47
+      ],
+      "estrelas": [
+        4,
+        9
+      ]
+    },
+    {
+      "geracao": 4,
+      "numeros": [
+        21,
+        25,
+        32,
+        34,
+        48
+      ],
+      "estrelas": [
+        4,
+        6
+      ]
+    },
+    {
+      "geracao": 5,
+      "numeros": [
+        10,
+        12,
+        29,
+        37,
+        44
+      ],
+      "estrelas": [
+        2,
+        4
+      ]
+    },
+    {
+      "geracao": 6,
+      "numeros": [
+        9,
+        16,
+        35,
+        39,
+        44
+      ],
+      "estrelas": [
+        4,
+        5
+      ]
+    }
+  ],
+  "criada_em": "2026-07-11T09:21:30+00:00"
+}

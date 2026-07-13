@@ -1,0 +1,87 @@
+{
+  "id": "PERG-2013-004",
+  "titulo": "Pergaminho da Extração 004/2013",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2013,
+  "numero_sorteio": "004/2013",
+  "data": "2013-01-11",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "19:00:00",
+    "timestamp_utc": "2013-01-11T19:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      4,
+      22,
+      29,
+      37,
+      41
+    ],
+    "estrelas": [
+      4,
+      7
+    ],
+    "formato": "4 22 29 37 41 + 4 7",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 133,
+    "media_numeros": 26.6,
+    "mediana_numeros": 29,
+    "desvio_padrao": 13.0629,
+    "amplitude": 37,
+    "pares": 2,
+    "impares": 3,
+    "gaps": [
+      18,
+      7,
+      8,
+      4
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 1,
+      "21-30": 2,
+      "31-40": 1,
+      "41-50": 1
+    },
+    "repetidos_sorteio_anterior": [
+      22
+    ],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Lua nova",
+    "iluminacao_lunar_percent": 0.001,
+    "idade_lunar_dias": 29.496,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2013",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2013",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2013_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "ef6c039f7d71ac12966010a80772eca8ba2579f84927be323898dbc58c7f2741",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

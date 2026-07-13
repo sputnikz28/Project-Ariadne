@@ -1,0 +1,84 @@
+{
+  "id": "PERG-2018-087",
+  "titulo": "Pergaminho da Extração 087/2018",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2018,
+  "numero_sorteio": "087/2018",
+  "data": "2018-10-30",
+  "dia_semana": "terça-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "19:00:00",
+    "timestamp_utc": "2018-10-30T19:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      17,
+      23,
+      27,
+      43,
+      44
+    ],
+    "estrelas": [
+      1,
+      12
+    ],
+    "formato": "17 23 27 43 44 + 1 12",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 154,
+    "media_numeros": 30.8,
+    "mediana_numeros": 27,
+    "desvio_padrao": 10.8517,
+    "amplitude": 27,
+    "pares": 1,
+    "impares": 4,
+    "gaps": [
+      6,
+      4,
+      16,
+      1
+    ],
+    "distribuicao_por_dezenas": {
+      "11-20": 1,
+      "21-30": 2,
+      "41-50": 2
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Quarto minguante",
+    "iluminacao_lunar_percent": 60.236,
+    "idade_lunar_dias": 21.179,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2018",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2018",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2018_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "189701fa1a1617bafeb3482dfa359985cb06fae900663b0564c77c0aa659a44f",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

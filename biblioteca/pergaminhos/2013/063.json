@@ -1,0 +1,84 @@
+{
+  "id": "PERG-2013-063",
+  "titulo": "Pergaminho da Extração 063/2013",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2013,
+  "numero_sorteio": "063/2013",
+  "data": "2013-08-06",
+  "dia_semana": "terça-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2013-08-06T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      16,
+      17,
+      31,
+      47,
+      49
+    ],
+    "estrelas": [
+      3,
+      11
+    ],
+    "formato": "16 17 31 47 49 + 3 11",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 160,
+    "media_numeros": 32,
+    "mediana_numeros": 31,
+    "desvio_padrao": 14.1138,
+    "amplitude": 33,
+    "pares": 1,
+    "impares": 4,
+    "gaps": [
+      1,
+      14,
+      16,
+      2
+    ],
+    "distribuicao_por_dezenas": {
+      "11-20": 2,
+      "31-40": 1,
+      "41-50": 2
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Lua nova",
+    "iluminacao_lunar_percent": 0.025,
+    "idade_lunar_dias": 29.383,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2013",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2013",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2013_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "bc7be741ef7550e61b652cdc42809231469fa301223b43e48fcb9006c54edab6",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

@@ -1,0 +1,86 @@
+{
+  "id": "PERG-2010-029",
+  "titulo": "Pergaminho da Extração 029/2010",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2010,
+  "numero_sorteio": "029/2010",
+  "data": "2010-07-16",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2010-07-16T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      38,
+      39,
+      45,
+      46,
+      49
+    ],
+    "estrelas": [
+      7,
+      8
+    ],
+    "formato": "38 39 45 46 49 + 7 8",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 217,
+    "media_numeros": 43.4,
+    "mediana_numeros": 45,
+    "desvio_padrao": 4.2237,
+    "amplitude": 11,
+    "pares": 2,
+    "impares": 3,
+    "gaps": [
+      1,
+      6,
+      1,
+      3
+    ],
+    "distribuicao_por_dezenas": {
+      "31-40": 2,
+      "41-50": 3
+    },
+    "repetidos_sorteio_anterior": [
+      39,
+      49
+    ],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Quarto crescente",
+    "iluminacao_lunar_percent": 31.312,
+    "idade_lunar_dias": 5.582,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2010",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2010",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2010_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "cce36473e76c657cdba4358a1b554cbb2f533aff7156d75ea19887c4cadfbf3c",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

@@ -1,0 +1,86 @@
+{
+  "id": "PERG-2006-029",
+  "titulo": "Pergaminho da Extração 029/2006",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2006,
+  "numero_sorteio": "029/2006",
+  "data": "2006-07-21",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2006-07-21T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      2,
+      4,
+      9,
+      38,
+      50
+    ],
+    "estrelas": [
+      6,
+      8
+    ],
+    "formato": "2 4 9 38 50 + 6 8",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 103,
+    "media_numeros": 20.6,
+    "mediana_numeros": 9,
+    "desvio_padrao": 19.6122,
+    "amplitude": 48,
+    "pares": 4,
+    "impares": 1,
+    "gaps": [
+      2,
+      5,
+      29,
+      12
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 3,
+      "31-40": 1,
+      "41-50": 1
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": [
+      8
+    ]
+  },
+  "astronomia": {
+    "fase_lua": "Lua minguante",
+    "iluminacao_lunar_percent": 11.95,
+    "idade_lunar_dias": 26.213,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2006",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2006",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2006_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "3e9fc709aea532ea100ca0f62bf7195e7d9522119b19291793968ef28776a723",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

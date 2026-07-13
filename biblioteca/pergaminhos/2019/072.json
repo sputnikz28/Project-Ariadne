@@ -1,0 +1,86 @@
+{
+  "id": "PERG-2019-072",
+  "titulo": "Pergaminho da Extração 072/2019",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2019,
+  "numero_sorteio": "072/2019",
+  "data": "2019-09-06",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2019-09-06T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      10,
+      13,
+      22,
+      40,
+      48
+    ],
+    "estrelas": [
+      2,
+      5
+    ],
+    "formato": "10 13 22 40 48 + 2 5",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 133,
+    "media_numeros": 26.6,
+    "mediana_numeros": 22,
+    "desvio_padrao": 14.9613,
+    "amplitude": 38,
+    "pares": 4,
+    "impares": 1,
+    "gaps": [
+      3,
+      9,
+      18,
+      8
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 1,
+      "11-20": 1,
+      "21-30": 1,
+      "31-40": 1,
+      "41-50": 1
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Quarto crescente",
+    "iluminacao_lunar_percent": 56.415,
+    "idade_lunar_dias": 7.987,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2019",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2019",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2019_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "6bceff07ef25a41786733b0ff4fd2beee5dae0e75d3e67f35eaec5622d444c67",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

@@ -1,0 +1,83 @@
+{
+  "id": "PERG-2021-043",
+  "titulo": "Pergaminho da Extração 043/2021",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2021,
+  "numero_sorteio": "043/2021",
+  "data": "2021-05-28",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2021-05-28T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      11,
+      13,
+      16,
+      34,
+      40
+    ],
+    "estrelas": [
+      1,
+      12
+    ],
+    "formato": "11 13 16 34 40 + 1 12",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 114,
+    "media_numeros": 22.8,
+    "mediana_numeros": 16,
+    "desvio_padrao": 11.8558,
+    "amplitude": 29,
+    "pares": 3,
+    "impares": 2,
+    "gaps": [
+      2,
+      3,
+      18,
+      6
+    ],
+    "distribuicao_por_dezenas": {
+      "11-20": 3,
+      "31-40": 2
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Gibosa minguante",
+    "iluminacao_lunar_percent": 92.41,
+    "idade_lunar_dias": 17.389,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2021",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2021",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2021_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "eba516c5c6d14688e0990ddcad9eca280695ef51ea6e57b62add57ed3d4bd3b8",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

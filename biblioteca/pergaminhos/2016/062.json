@@ -1,0 +1,87 @@
+{
+  "id": "PERG-2016-062",
+  "titulo": "Pergaminho da Extração 062/2016",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2016,
+  "numero_sorteio": "062/2016",
+  "data": "2016-08-02",
+  "dia_semana": "terça-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2016-08-02T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      2,
+      8,
+      27,
+      38,
+      46
+    ],
+    "estrelas": [
+      2,
+      6
+    ],
+    "formato": "2 8 27 38 46 + 2 6",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 121,
+    "media_numeros": 24.2,
+    "mediana_numeros": 27,
+    "desvio_padrao": 16.9044,
+    "amplitude": 44,
+    "pares": 4,
+    "impares": 1,
+    "gaps": [
+      6,
+      19,
+      11,
+      8
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 2,
+      "21-30": 1,
+      "31-40": 1,
+      "41-50": 1
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": [
+      2
+    ]
+  },
+  "astronomia": {
+    "fase_lua": "Lua nova",
+    "iluminacao_lunar_percent": 0.015,
+    "idade_lunar_dias": 29.414,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2016",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2016",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2016_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "bc8f53b6bc08a0c43c211e60b0976d54953fac912b2c949a3cff35fa3bf7b416",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

@@ -1,0 +1,85 @@
+{
+  "id": "PERG-2008-050",
+  "titulo": "Pergaminho da Extração 050/2008",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2008,
+  "numero_sorteio": "050/2008",
+  "data": "2008-12-12",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "19:00:00",
+    "timestamp_utc": "2008-12-12T19:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      2,
+      19,
+      28,
+      42,
+      49
+    ],
+    "estrelas": [
+      2,
+      7
+    ],
+    "formato": "2 19 28 42 49 + 2 7",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 140,
+    "media_numeros": 28,
+    "mediana_numeros": 28,
+    "desvio_padrao": 16.6973,
+    "amplitude": 47,
+    "pares": 3,
+    "impares": 2,
+    "gaps": [
+      17,
+      9,
+      14,
+      7
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 1,
+      "11-20": 1,
+      "21-30": 1,
+      "41-50": 2
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Lua cheia",
+    "iluminacao_lunar_percent": 99.985,
+    "idade_lunar_dias": 14.882,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2008",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2008",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2008_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "eb96519c9a79e8eb7727b40e62a86f3448f185295328271db9a9069217bf62fa",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

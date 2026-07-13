@@ -1,0 +1,86 @@
+{
+  "era": 2,
+  "id": "H-00009",
+  "nome": "Velka do Bosque",
+  "raca": "Vidente",
+  "casa": "Casa Lunar",
+  "geracao": 1,
+  "pais": [],
+  "pontos": 174,
+  "titulo": "Sussurrador do Destino",
+  "estado": "VIVO",
+  "amuletos": [],
+  "melhores_chaves": [
+    {
+      "geracao": 1,
+      "numeros": [
+        8,
+        18,
+        26,
+        36,
+        39
+      ],
+      "estrelas": [
+        2,
+        5
+      ]
+    },
+    {
+      "geracao": 2,
+      "numeros": [
+        4,
+        5,
+        14,
+        31,
+        46
+      ],
+      "estrelas": [
+        5,
+        9
+      ]
+    },
+    {
+      "geracao": 3,
+      "numeros": [
+        26,
+        31,
+        36,
+        39,
+        45
+      ],
+      "estrelas": [
+        4,
+        9
+      ]
+    },
+    {
+      "geracao": 4,
+      "numeros": [
+        17,
+        25,
+        27,
+        33,
+        39
+      ],
+      "estrelas": [
+        4,
+        5
+      ]
+    },
+    {
+      "geracao": 5,
+      "numeros": [
+        2,
+        3,
+        34,
+        36,
+        49
+      ],
+      "estrelas": [
+        4,
+        5
+      ]
+    }
+  ],
+  "criada_em": "2026-07-11T09:21:37+00:00"
+}

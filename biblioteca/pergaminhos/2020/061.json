@@ -1,0 +1,85 @@
+{
+  "id": "PERG-2020-061",
+  "titulo": "Pergaminho da Extração 061/2020",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2020,
+  "numero_sorteio": "061/2020",
+  "data": "2020-07-31",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2020-07-31T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      21,
+      24,
+      30,
+      46,
+      49
+    ],
+    "estrelas": [
+      2,
+      5
+    ],
+    "formato": "21 24 30 46 49 + 2 5",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 170,
+    "media_numeros": 34,
+    "mediana_numeros": 30,
+    "desvio_padrao": 11.4368,
+    "amplitude": 28,
+    "pares": 3,
+    "impares": 2,
+    "gaps": [
+      3,
+      6,
+      16,
+      3
+    ],
+    "distribuicao_por_dezenas": {
+      "21-30": 3,
+      "41-50": 2
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": [
+      2
+    ]
+  },
+  "astronomia": {
+    "fase_lua": "Gibosa crescente",
+    "iluminacao_lunar_percent": 90.661,
+    "idade_lunar_dias": 11.846,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2020",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2020",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2020_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "c976e4ff48ec006fcc4cc9d454be0500ee97ee5daa8e23387a1263926b5c13e5",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

@@ -1,0 +1,86 @@
+{
+  "era": 5,
+  "id": "H-00031",
+  "nome": "Elarion dos Ossos",
+  "raca": "Cronomante",
+  "casa": "Casa das Estrelas",
+  "geracao": 1,
+  "pais": [],
+  "pontos": 170,
+  "titulo": "Sussurrador do Destino",
+  "estado": "VIVO",
+  "amuletos": [],
+  "melhores_chaves": [
+    {
+      "geracao": 1,
+      "numeros": [
+        26,
+        44,
+        45,
+        46,
+        49
+      ],
+      "estrelas": [
+        10,
+        11
+      ]
+    },
+    {
+      "geracao": 2,
+      "numeros": [
+        26,
+        44,
+        45,
+        46,
+        49
+      ],
+      "estrelas": [
+        1,
+        11
+      ]
+    },
+    {
+      "geracao": 3,
+      "numeros": [
+        7,
+        26,
+        44,
+        45,
+        46
+      ],
+      "estrelas": [
+        2,
+        5
+      ]
+    },
+    {
+      "geracao": 4,
+      "numeros": [
+        4,
+        26,
+        44,
+        45,
+        46
+      ],
+      "estrelas": [
+        5,
+        8
+      ]
+    },
+    {
+      "geracao": 5,
+      "numeros": [
+        26,
+        44,
+        45,
+        46,
+        49
+      ],
+      "estrelas": [
+        11,
+        12
+      ]
+    }
+  ],
+  "criada_em": "2026-07-11T09:21:55+00:00"
+}

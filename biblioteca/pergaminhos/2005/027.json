@@ -1,0 +1,83 @@
+{
+  "id": "PERG-2005-027",
+  "titulo": "Pergaminho da Extração 027/2005",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2005,
+  "numero_sorteio": "027/2005",
+  "data": "2005-07-08",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2005-07-08T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      35,
+      36,
+      42,
+      46,
+      49
+    ],
+    "estrelas": [
+      2,
+      8
+    ],
+    "formato": "35 36 42 46 49 + 2 8",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 208,
+    "media_numeros": 41.6,
+    "mediana_numeros": 42,
+    "desvio_padrao": 5.4626,
+    "amplitude": 14,
+    "pares": 3,
+    "impares": 2,
+    "gaps": [
+      1,
+      6,
+      4,
+      3
+    ],
+    "distribuicao_por_dezenas": {
+      "31-40": 2,
+      "41-50": 3
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Lua crescente",
+    "iluminacao_lunar_percent": 4.546,
+    "idade_lunar_dias": 2.02,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2005",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2005",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2005_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "ede4570c12100604816df8171a1ec3d9a8c39e3abbf6d4345b78b381c9cb97a4",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

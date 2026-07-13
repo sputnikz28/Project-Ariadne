@@ -1,0 +1,86 @@
+{
+  "id": "PERG-2025-055",
+  "titulo": "Pergaminho da Extração 055/2025",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2025,
+  "numero_sorteio": "055/2025",
+  "data": "2025-07-11",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2025-07-11T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      8,
+      23,
+      24,
+      45,
+      49
+    ],
+    "estrelas": [
+      2,
+      10
+    ],
+    "formato": "8 23 24 45 49 + 2 10",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 149,
+    "media_numeros": 29.8,
+    "mediana_numeros": 24,
+    "desvio_padrao": 15.1974,
+    "amplitude": 41,
+    "pares": 2,
+    "impares": 3,
+    "gaps": [
+      15,
+      1,
+      21,
+      4
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 1,
+      "21-30": 2,
+      "41-50": 2
+    },
+    "repetidos_sorteio_anterior": [
+      8
+    ],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Lua cheia",
+    "iluminacao_lunar_percent": 99.136,
+    "idade_lunar_dias": 15.64,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2025",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2025",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2025_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "0ee71103cac4479b78afb5a9caa589a18c8dc7cc635ce093d205a4803e7eac9a",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

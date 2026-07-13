@@ -1,0 +1,84 @@
+{
+  "id": "PERG-2006-018",
+  "titulo": "Pergaminho da Extração 018/2006",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2006,
+  "numero_sorteio": "018/2006",
+  "data": "2006-05-05",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2006-05-05T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      4,
+      8,
+      14,
+      16,
+      50
+    ],
+    "estrelas": [
+      3,
+      9
+    ],
+    "formato": "4 8 14 16 50 + 3 9",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 92,
+    "media_numeros": 18.4,
+    "mediana_numeros": 14,
+    "desvio_padrao": 16.3658,
+    "amplitude": 46,
+    "pares": 5,
+    "impares": 0,
+    "gaps": [
+      4,
+      6,
+      2,
+      34
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 2,
+      "11-20": 2,
+      "41-50": 1
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Quarto crescente",
+    "iluminacao_lunar_percent": 55.089,
+    "idade_lunar_dias": 7.862,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2006",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2006",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2006_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "c2c6a947e8e3939b4696ee1f617a844c83092e85b115a52b730350fc3b8af521",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

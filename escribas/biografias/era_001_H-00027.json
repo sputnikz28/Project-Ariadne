@@ -1,0 +1,86 @@
+{
+  "era": 1,
+  "id": "H-00027",
+  "nome": "Velka Pedra-Partida",
+  "raca": "Elfo",
+  "casa": "Casa Tribal",
+  "geracao": 1,
+  "pais": [],
+  "pontos": 125,
+  "titulo": "Observador Celeste",
+  "estado": "VIVO",
+  "amuletos": [],
+  "melhores_chaves": [
+    {
+      "geracao": 1,
+      "numeros": [
+        3,
+        17,
+        32,
+        36,
+        47
+      ],
+      "estrelas": [
+        4,
+        6
+      ]
+    },
+    {
+      "geracao": 2,
+      "numeros": [
+        11,
+        14,
+        22,
+        33,
+        49
+      ],
+      "estrelas": [
+        4,
+        5
+      ]
+    },
+    {
+      "geracao": 3,
+      "numeros": [
+        8,
+        15,
+        33,
+        43,
+        46
+      ],
+      "estrelas": [
+        4,
+        5
+      ]
+    },
+    {
+      "geracao": 4,
+      "numeros": [
+        20,
+        23,
+        27,
+        38,
+        39
+      ],
+      "estrelas": [
+        4,
+        9
+      ]
+    },
+    {
+      "geracao": 5,
+      "numeros": [
+        7,
+        10,
+        17,
+        37,
+        46
+      ],
+      "estrelas": [
+        6,
+        9
+      ]
+    }
+  ],
+  "criada_em": "2026-07-11T09:21:30+00:00"
+}

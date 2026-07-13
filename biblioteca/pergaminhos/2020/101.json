@@ -1,0 +1,87 @@
+{
+  "id": "PERG-2020-101",
+  "titulo": "Pergaminho da Extração 101/2020",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2020,
+  "numero_sorteio": "101/2020",
+  "data": "2020-12-18",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "19:00:00",
+    "timestamp_utc": "2020-12-18T19:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      2,
+      3,
+      13,
+      17,
+      21
+    ],
+    "estrelas": [
+      7,
+      8
+    ],
+    "formato": "2 3 13 17 21 + 7 8",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 56,
+    "media_numeros": 11.2,
+    "mediana_numeros": 13,
+    "desvio_padrao": 7.5472,
+    "amplitude": 19,
+    "pares": 1,
+    "impares": 4,
+    "gaps": [
+      1,
+      10,
+      4,
+      4
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 2,
+      "11-20": 2,
+      "21-30": 1
+    },
+    "repetidos_sorteio_anterior": [
+      13,
+      21
+    ],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Lua crescente",
+    "iluminacao_lunar_percent": 20.003,
+    "idade_lunar_dias": 4.359,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2020",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2020",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2020_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "acb8746cc51a00effb764c9480398abc461c91a44e9e623d8293796cefa99f51",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

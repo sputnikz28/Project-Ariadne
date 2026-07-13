@@ -1,0 +1,86 @@
+{
+  "id": "PERG-2015-043",
+  "titulo": "Pergaminho da Extração 043/2015",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2015,
+  "numero_sorteio": "043/2015",
+  "data": "2015-05-29",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2015-05-29T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      3,
+      4,
+      20,
+      45,
+      48
+    ],
+    "estrelas": [
+      6,
+      8
+    ],
+    "formato": "3 4 20 45 48 + 6 8",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 120,
+    "media_numeros": 24,
+    "mediana_numeros": 20,
+    "desvio_padrao": 19.3598,
+    "amplitude": 45,
+    "pares": 3,
+    "impares": 2,
+    "gaps": [
+      1,
+      16,
+      25,
+      3
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 2,
+      "11-20": 1,
+      "41-50": 2
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": [
+      6
+    ]
+  },
+  "astronomia": {
+    "fase_lua": "Gibosa crescente",
+    "iluminacao_lunar_percent": 84.753,
+    "idade_lunar_dias": 10.995,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2015",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2015",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2015_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "7a95fe0d1dbce1812e0ddb9b56a3ccd614b8959c838fde7365c46b04e86fde2b",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

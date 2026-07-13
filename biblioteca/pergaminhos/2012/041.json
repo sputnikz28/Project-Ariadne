@@ -1,0 +1,84 @@
+{
+  "id": "PERG-2012-041",
+  "titulo": "Pergaminho da Extração 041/2012",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2012,
+  "numero_sorteio": "041/2012",
+  "data": "2012-05-22",
+  "dia_semana": "terça-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2012-05-22T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      16,
+      31,
+      32,
+      37,
+      41
+    ],
+    "estrelas": [
+      1,
+      7
+    ],
+    "formato": "16 31 32 37 41 + 1 7",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 157,
+    "media_numeros": 31.4,
+    "mediana_numeros": 32,
+    "desvio_padrao": 8.4994,
+    "amplitude": 25,
+    "pares": 2,
+    "impares": 3,
+    "gaps": [
+      15,
+      1,
+      5,
+      4
+    ],
+    "distribuicao_por_dezenas": {
+      "11-20": 1,
+      "31-40": 3,
+      "41-50": 1
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Lua nova",
+    "iluminacao_lunar_percent": 2.782,
+    "idade_lunar_dias": 1.575,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2012",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2012",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2012_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "a5f299f29c873aacb0bff8a39c08ff998af3ef0976564237cf9db2d7fbe3167e",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

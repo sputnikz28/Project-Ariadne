@@ -1,0 +1,84 @@
+{
+  "id": "PERG-2011-041",
+  "titulo": "Pergaminho da Extração 041/2011",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2011,
+  "numero_sorteio": "041/2011",
+  "data": "2011-07-26",
+  "dia_semana": "terça-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2011-07-26T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      1,
+      5,
+      22,
+      25,
+      48
+    ],
+    "estrelas": [
+      3,
+      11
+    ],
+    "formato": "1 5 22 25 48 + 3 11",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 101,
+    "media_numeros": 20.2,
+    "mediana_numeros": 22,
+    "desvio_padrao": 16.726,
+    "amplitude": 47,
+    "pares": 2,
+    "impares": 3,
+    "gaps": [
+      4,
+      17,
+      3,
+      23
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 2,
+      "21-30": 2,
+      "41-50": 1
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Lua minguante",
+    "iluminacao_lunar_percent": 17.978,
+    "idade_lunar_dias": 25.415,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2011",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2011",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2011_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "ee89ae9b2465828c4738b4e1d867a57e2cd4c3d818cf4f4560905c9de2fc979b",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

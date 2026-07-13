@@ -1,0 +1,86 @@
+{
+  "id": "PERG-2016-086",
+  "titulo": "Pergaminho da Extração 086/2016",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2016,
+  "numero_sorteio": "086/2016",
+  "data": "2016-10-25",
+  "dia_semana": "terça-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2016-10-25T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      3,
+      15,
+      20,
+      21,
+      28
+    ],
+    "estrelas": [
+      1,
+      5
+    ],
+    "formato": "3 15 20 21 28 + 1 5",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 87,
+    "media_numeros": 17.4,
+    "mediana_numeros": 20,
+    "desvio_padrao": 8.309,
+    "amplitude": 25,
+    "pares": 2,
+    "impares": 3,
+    "gaps": [
+      12,
+      5,
+      1,
+      7
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 1,
+      "11-20": 2,
+      "21-30": 2
+    },
+    "repetidos_sorteio_anterior": [
+      20
+    ],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Lua minguante",
+    "iluminacao_lunar_percent": 21.387,
+    "idade_lunar_dias": 25.011,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2016",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2016",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2016_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "00a33f8443cef1b87bb4d43646d16d1c8f2ef7eefda243406903f95e9522cfd3",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

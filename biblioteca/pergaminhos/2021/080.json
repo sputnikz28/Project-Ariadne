@@ -1,0 +1,84 @@
+{
+  "id": "PERG-2021-080",
+  "titulo": "Pergaminho da Extração 080/2021",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2021,
+  "numero_sorteio": "080/2021",
+  "data": "2021-10-05",
+  "dia_semana": "terça-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2021-10-05T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      11,
+      13,
+      14,
+      36,
+      45
+    ],
+    "estrelas": [
+      7,
+      9
+    ],
+    "formato": "11 13 14 36 45 + 7 9",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 119,
+    "media_numeros": 23.8,
+    "mediana_numeros": 14,
+    "desvio_padrao": 13.9628,
+    "amplitude": 34,
+    "pares": 2,
+    "impares": 3,
+    "gaps": [
+      2,
+      1,
+      22,
+      9
+    ],
+    "distribuicao_por_dezenas": {
+      "11-20": 3,
+      "31-40": 1,
+      "41-50": 1
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Lua nova",
+    "iluminacao_lunar_percent": 0.693,
+    "idade_lunar_dias": 28.747,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2021",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2021",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2021_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "03c97cf81f9f3e02e167eb14164a88086d2a1f150aa5d942dd19680b43ec2b9a",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

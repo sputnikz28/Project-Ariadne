@@ -1,0 +1,84 @@
+{
+  "id": "PERG-2011-067",
+  "titulo": "Pergaminho da Extração 067/2011",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2011,
+  "numero_sorteio": "067/2011",
+  "data": "2011-10-25",
+  "dia_semana": "terça-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2011-10-25T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      12,
+      22,
+      27,
+      28,
+      39
+    ],
+    "estrelas": [
+      4,
+      10
+    ],
+    "formato": "12 22 27 28 39 + 4 10",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 128,
+    "media_numeros": 25.6,
+    "mediana_numeros": 27,
+    "desvio_padrao": 8.7772,
+    "amplitude": 27,
+    "pares": 3,
+    "impares": 2,
+    "gaps": [
+      10,
+      5,
+      1,
+      11
+    ],
+    "distribuicao_por_dezenas": {
+      "11-20": 1,
+      "21-30": 3,
+      "31-40": 1
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Lua nova",
+    "iluminacao_lunar_percent": 1.803,
+    "idade_lunar_dias": 28.265,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2011",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2011",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2011_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "d59bd0dc3ce0cc6263c1cdb4f2969067eba433a482a462d46670ef207c87f0da",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

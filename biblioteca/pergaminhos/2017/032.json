@@ -1,0 +1,89 @@
+{
+  "id": "PERG-2017-032",
+  "titulo": "Pergaminho da Extração 032/2017",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2017,
+  "numero_sorteio": "032/2017",
+  "data": "2017-04-21",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2017-04-21T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      2,
+      13,
+      16,
+      22,
+      49
+    ],
+    "estrelas": [
+      4,
+      5
+    ],
+    "formato": "2 13 16 22 49 + 4 5",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 102,
+    "media_numeros": 20.4,
+    "mediana_numeros": 16,
+    "desvio_padrao": 15.7048,
+    "amplitude": 47,
+    "pares": 3,
+    "impares": 2,
+    "gaps": [
+      11,
+      3,
+      6,
+      27
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 1,
+      "11-20": 2,
+      "21-30": 1,
+      "41-50": 1
+    },
+    "repetidos_sorteio_anterior": [
+      22
+    ],
+    "estrelas_repetidas_sorteio_anterior": [
+      5
+    ]
+  },
+  "astronomia": {
+    "fase_lua": "Lua minguante",
+    "iluminacao_lunar_percent": 27.103,
+    "idade_lunar_dias": 24.384,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2017",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2017",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2017_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "f15f655feb0667f085a94629fd03fba707a7b2bd5f318a232db81b8b4778b84a",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

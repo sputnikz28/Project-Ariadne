@@ -1,0 +1,531 @@
+{
+  "ano": 2012,
+  "fonte": "biblioteca/fontes/euromilhoes_2012_dataset_completo.json",
+  "primeiro_sorteio": "001/2012",
+  "ultimo_sorteio": "104/2012",
+  "data_inicio": "2012-01-03",
+  "data_fim": "2012-12-28",
+  "quantidade_sorteios": 104,
+  "pergaminhos": [
+    {
+      "numero_sorteio": "001/2012",
+      "data": "2012-01-03",
+      "ficheiro": "biblioteca/pergaminhos/2012/001.json"
+    },
+    {
+      "numero_sorteio": "002/2012",
+      "data": "2012-01-06",
+      "ficheiro": "biblioteca/pergaminhos/2012/002.json"
+    },
+    {
+      "numero_sorteio": "003/2012",
+      "data": "2012-01-10",
+      "ficheiro": "biblioteca/pergaminhos/2012/003.json"
+    },
+    {
+      "numero_sorteio": "004/2012",
+      "data": "2012-01-13",
+      "ficheiro": "biblioteca/pergaminhos/2012/004.json"
+    },
+    {
+      "numero_sorteio": "005/2012",
+      "data": "2012-01-17",
+      "ficheiro": "biblioteca/pergaminhos/2012/005.json"
+    },
+    {
+      "numero_sorteio": "006/2012",
+      "data": "2012-01-20",
+      "ficheiro": "biblioteca/pergaminhos/2012/006.json"
+    },
+    {
+      "numero_sorteio": "007/2012",
+      "data": "2012-01-24",
+      "ficheiro": "biblioteca/pergaminhos/2012/007.json"
+    },
+    {
+      "numero_sorteio": "008/2012",
+      "data": "2012-01-27",
+      "ficheiro": "biblioteca/pergaminhos/2012/008.json"
+    },
+    {
+      "numero_sorteio": "009/2012",
+      "data": "2012-01-31",
+      "ficheiro": "biblioteca/pergaminhos/2012/009.json"
+    },
+    {
+      "numero_sorteio": "010/2012",
+      "data": "2012-02-03",
+      "ficheiro": "biblioteca/pergaminhos/2012/010.json"
+    },
+    {
+      "numero_sorteio": "011/2012",
+      "data": "2012-02-07",
+      "ficheiro": "biblioteca/pergaminhos/2012/011.json"
+    },
+    {
+      "numero_sorteio": "012/2012",
+      "data": "2012-02-10",
+      "ficheiro": "biblioteca/pergaminhos/2012/012.json"
+    },
+    {
+      "numero_sorteio": "013/2012",
+      "data": "2012-02-14",
+      "ficheiro": "biblioteca/pergaminhos/2012/013.json"
+    },
+    {
+      "numero_sorteio": "014/2012",
+      "data": "2012-02-17",
+      "ficheiro": "biblioteca/pergaminhos/2012/014.json"
+    },
+    {
+      "numero_sorteio": "015/2012",
+      "data": "2012-02-21",
+      "ficheiro": "biblioteca/pergaminhos/2012/015.json"
+    },
+    {
+      "numero_sorteio": "016/2012",
+      "data": "2012-02-24",
+      "ficheiro": "biblioteca/pergaminhos/2012/016.json"
+    },
+    {
+      "numero_sorteio": "017/2012",
+      "data": "2012-02-28",
+      "ficheiro": "biblioteca/pergaminhos/2012/017.json"
+    },
+    {
+      "numero_sorteio": "018/2012",
+      "data": "2012-03-02",
+      "ficheiro": "biblioteca/pergaminhos/2012/018.json"
+    },
+    {
+      "numero_sorteio": "019/2012",
+      "data": "2012-03-06",
+      "ficheiro": "biblioteca/pergaminhos/2012/019.json"
+    },
+    {
+      "numero_sorteio": "020/2012",
+      "data": "2012-03-09",
+      "ficheiro": "biblioteca/pergaminhos/2012/020.json"
+    },
+    {
+      "numero_sorteio": "021/2012",
+      "data": "2012-03-13",
+      "ficheiro": "biblioteca/pergaminhos/2012/021.json"
+    },
+    {
+      "numero_sorteio": "022/2012",
+      "data": "2012-03-16",
+      "ficheiro": "biblioteca/pergaminhos/2012/022.json"
+    },
+    {
+      "numero_sorteio": "023/2012",
+      "data": "2012-03-20",
+      "ficheiro": "biblioteca/pergaminhos/2012/023.json"
+    },
+    {
+      "numero_sorteio": "024/2012",
+      "data": "2012-03-23",
+      "ficheiro": "biblioteca/pergaminhos/2012/024.json"
+    },
+    {
+      "numero_sorteio": "025/2012",
+      "data": "2012-03-27",
+      "ficheiro": "biblioteca/pergaminhos/2012/025.json"
+    },
+    {
+      "numero_sorteio": "026/2012",
+      "data": "2012-03-30",
+      "ficheiro": "biblioteca/pergaminhos/2012/026.json"
+    },
+    {
+      "numero_sorteio": "027/2012",
+      "data": "2012-04-03",
+      "ficheiro": "biblioteca/pergaminhos/2012/027.json"
+    },
+    {
+      "numero_sorteio": "028/2012",
+      "data": "2012-04-06",
+      "ficheiro": "biblioteca/pergaminhos/2012/028.json"
+    },
+    {
+      "numero_sorteio": "029/2012",
+      "data": "2012-04-10",
+      "ficheiro": "biblioteca/pergaminhos/2012/029.json"
+    },
+    {
+      "numero_sorteio": "030/2012",
+      "data": "2012-04-13",
+      "ficheiro": "biblioteca/pergaminhos/2012/030.json"
+    },
+    {
+      "numero_sorteio": "031/2012",
+      "data": "2012-04-17",
+      "ficheiro": "biblioteca/pergaminhos/2012/031.json"
+    },
+    {
+      "numero_sorteio": "032/2012",
+      "data": "2012-04-20",
+      "ficheiro": "biblioteca/pergaminhos/2012/032.json"
+    },
+    {
+      "numero_sorteio": "033/2012",
+      "data": "2012-04-24",
+      "ficheiro": "biblioteca/pergaminhos/2012/033.json"
+    },
+    {
+      "numero_sorteio": "034/2012",
+      "data": "2012-04-27",
+      "ficheiro": "biblioteca/pergaminhos/2012/034.json"
+    },
+    {
+      "numero_sorteio": "035/2012",
+      "data": "2012-05-01",
+      "ficheiro": "biblioteca/pergaminhos/2012/035.json"
+    },
+    {
+      "numero_sorteio": "036/2012",
+      "data": "2012-05-04",
+      "ficheiro": "biblioteca/pergaminhos/2012/036.json"
+    },
+    {
+      "numero_sorteio": "037/2012",
+      "data": "2012-05-08",
+      "ficheiro": "biblioteca/pergaminhos/2012/037.json"
+    },
+    {
+      "numero_sorteio": "038/2012",
+      "data": "2012-05-11",
+      "ficheiro": "biblioteca/pergaminhos/2012/038.json"
+    },
+    {
+      "numero_sorteio": "039/2012",
+      "data": "2012-05-15",
+      "ficheiro": "biblioteca/pergaminhos/2012/039.json"
+    },
+    {
+      "numero_sorteio": "040/2012",
+      "data": "2012-05-18",
+      "ficheiro": "biblioteca/pergaminhos/2012/040.json"
+    },
+    {
+      "numero_sorteio": "041/2012",
+      "data": "2012-05-22",
+      "ficheiro": "biblioteca/pergaminhos/2012/041.json"
+    },
+    {
+      "numero_sorteio": "042/2012",
+      "data": "2012-05-25",
+      "ficheiro": "biblioteca/pergaminhos/2012/042.json"
+    },
+    {
+      "numero_sorteio": "043/2012",
+      "data": "2012-05-29",
+      "ficheiro": "biblioteca/pergaminhos/2012/043.json"
+    },
+    {
+      "numero_sorteio": "044/2012",
+      "data": "2012-06-01",
+      "ficheiro": "biblioteca/pergaminhos/2012/044.json"
+    },
+    {
+      "numero_sorteio": "045/2012",
+      "data": "2012-06-05",
+      "ficheiro": "biblioteca/pergaminhos/2012/045.json"
+    },
+    {
+      "numero_sorteio": "046/2012",
+      "data": "2012-06-08",
+      "ficheiro": "biblioteca/pergaminhos/2012/046.json"
+    },
+    {
+      "numero_sorteio": "047/2012",
+      "data": "2012-06-12",
+      "ficheiro": "biblioteca/pergaminhos/2012/047.json"
+    },
+    {
+      "numero_sorteio": "048/2012",
+      "data": "2012-06-15",
+      "ficheiro": "biblioteca/pergaminhos/2012/048.json"
+    },
+    {
+      "numero_sorteio": "049/2012",
+      "data": "2012-06-19",
+      "ficheiro": "biblioteca/pergaminhos/2012/049.json"
+    },
+    {
+      "numero_sorteio": "050/2012",
+      "data": "2012-06-22",
+      "ficheiro": "biblioteca/pergaminhos/2012/050.json"
+    },
+    {
+      "numero_sorteio": "051/2012",
+      "data": "2012-06-26",
+      "ficheiro": "biblioteca/pergaminhos/2012/051.json"
+    },
+    {
+      "numero_sorteio": "052/2012",
+      "data": "2012-06-29",
+      "ficheiro": "biblioteca/pergaminhos/2012/052.json"
+    },
+    {
+      "numero_sorteio": "053/2012",
+      "data": "2012-07-03",
+      "ficheiro": "biblioteca/pergaminhos/2012/053.json"
+    },
+    {
+      "numero_sorteio": "054/2012",
+      "data": "2012-07-06",
+      "ficheiro": "biblioteca/pergaminhos/2012/054.json"
+    },
+    {
+      "numero_sorteio": "055/2012",
+      "data": "2012-07-10",
+      "ficheiro": "biblioteca/pergaminhos/2012/055.json"
+    },
+    {
+      "numero_sorteio": "056/2012",
+      "data": "2012-07-13",
+      "ficheiro": "biblioteca/pergaminhos/2012/056.json"
+    },
+    {
+      "numero_sorteio": "057/2012",
+      "data": "2012-07-17",
+      "ficheiro": "biblioteca/pergaminhos/2012/057.json"
+    },
+    {
+      "numero_sorteio": "058/2012",
+      "data": "2012-07-20",
+      "ficheiro": "biblioteca/pergaminhos/2012/058.json"
+    },
+    {
+      "numero_sorteio": "059/2012",
+      "data": "2012-07-24",
+      "ficheiro": "biblioteca/pergaminhos/2012/059.json"
+    },
+    {
+      "numero_sorteio": "060/2012",
+      "data": "2012-07-27",
+      "ficheiro": "biblioteca/pergaminhos/2012/060.json"
+    },
+    {
+      "numero_sorteio": "061/2012",
+      "data": "2012-07-31",
+      "ficheiro": "biblioteca/pergaminhos/2012/061.json"
+    },
+    {
+      "numero_sorteio": "062/2012",
+      "data": "2012-08-03",
+      "ficheiro": "biblioteca/pergaminhos/2012/062.json"
+    },
+    {
+      "numero_sorteio": "063/2012",
+      "data": "2012-08-07",
+      "ficheiro": "biblioteca/pergaminhos/2012/063.json"
+    },
+    {
+      "numero_sorteio": "064/2012",
+      "data": "2012-08-10",
+      "ficheiro": "biblioteca/pergaminhos/2012/064.json"
+    },
+    {
+      "numero_sorteio": "065/2012",
+      "data": "2012-08-14",
+      "ficheiro": "biblioteca/pergaminhos/2012/065.json"
+    },
+    {
+      "numero_sorteio": "066/2012",
+      "data": "2012-08-17",
+      "ficheiro": "biblioteca/pergaminhos/2012/066.json"
+    },
+    {
+      "numero_sorteio": "067/2012",
+      "data": "2012-08-21",
+      "ficheiro": "biblioteca/pergaminhos/2012/067.json"
+    },
+    {
+      "numero_sorteio": "068/2012",
+      "data": "2012-08-24",
+      "ficheiro": "biblioteca/pergaminhos/2012/068.json"
+    },
+    {
+      "numero_sorteio": "069/2012",
+      "data": "2012-08-28",
+      "ficheiro": "biblioteca/pergaminhos/2012/069.json"
+    },
+    {
+      "numero_sorteio": "070/2012",
+      "data": "2012-08-31",
+      "ficheiro": "biblioteca/pergaminhos/2012/070.json"
+    },
+    {
+      "numero_sorteio": "071/2012",
+      "data": "2012-09-04",
+      "ficheiro": "biblioteca/pergaminhos/2012/071.json"
+    },
+    {
+      "numero_sorteio": "072/2012",
+      "data": "2012-09-07",
+      "ficheiro": "biblioteca/pergaminhos/2012/072.json"
+    },
+    {
+      "numero_sorteio": "073/2012",
+      "data": "2012-09-11",
+      "ficheiro": "biblioteca/pergaminhos/2012/073.json"
+    },
+    {
+      "numero_sorteio": "074/2012",
+      "data": "2012-09-14",
+      "ficheiro": "biblioteca/pergaminhos/2012/074.json"
+    },
+    {
+      "numero_sorteio": "075/2012",
+      "data": "2012-09-18",
+      "ficheiro": "biblioteca/pergaminhos/2012/075.json"
+    },
+    {
+      "numero_sorteio": "076/2012",
+      "data": "2012-09-21",
+      "ficheiro": "biblioteca/pergaminhos/2012/076.json"
+    },
+    {
+      "numero_sorteio": "077/2012",
+      "data": "2012-09-25",
+      "ficheiro": "biblioteca/pergaminhos/2012/077.json"
+    },
+    {
+      "numero_sorteio": "078/2012",
+      "data": "2012-09-28",
+      "ficheiro": "biblioteca/pergaminhos/2012/078.json"
+    },
+    {
+      "numero_sorteio": "079/2012",
+      "data": "2012-10-02",
+      "ficheiro": "biblioteca/pergaminhos/2012/079.json"
+    },
+    {
+      "numero_sorteio": "080/2012",
+      "data": "2012-10-05",
+      "ficheiro": "biblioteca/pergaminhos/2012/080.json"
+    },
+    {
+      "numero_sorteio": "081/2012",
+      "data": "2012-10-09",
+      "ficheiro": "biblioteca/pergaminhos/2012/081.json"
+    },
+    {
+      "numero_sorteio": "082/2012",
+      "data": "2012-10-12",
+      "ficheiro": "biblioteca/pergaminhos/2012/082.json"
+    },
+    {
+      "numero_sorteio": "083/2012",
+      "data": "2012-10-16",
+      "ficheiro": "biblioteca/pergaminhos/2012/083.json"
+    },
+    {
+      "numero_sorteio": "084/2012",
+      "data": "2012-10-19",
+      "ficheiro": "biblioteca/pergaminhos/2012/084.json"
+    },
+    {
+      "numero_sorteio": "085/2012",
+      "data": "2012-10-23",
+      "ficheiro": "biblioteca/pergaminhos/2012/085.json"
+    },
+    {
+      "numero_sorteio": "086/2012",
+      "data": "2012-10-26",
+      "ficheiro": "biblioteca/pergaminhos/2012/086.json"
+    },
+    {
+      "numero_sorteio": "087/2012",
+      "data": "2012-10-30",
+      "ficheiro": "biblioteca/pergaminhos/2012/087.json"
+    },
+    {
+      "numero_sorteio": "088/2012",
+      "data": "2012-11-02",
+      "ficheiro": "biblioteca/pergaminhos/2012/088.json"
+    },
+    {
+      "numero_sorteio": "089/2012",
+      "data": "2012-11-06",
+      "ficheiro": "biblioteca/pergaminhos/2012/089.json"
+    },
+    {
+      "numero_sorteio": "090/2012",
+      "data": "2012-11-09",
+      "ficheiro": "biblioteca/pergaminhos/2012/090.json"
+    },
+    {
+      "numero_sorteio": "091/2012",
+      "data": "2012-11-13",
+      "ficheiro": "biblioteca/pergaminhos/2012/091.json"
+    },
+    {
+      "numero_sorteio": "092/2012",
+      "data": "2012-11-16",
+      "ficheiro": "biblioteca/pergaminhos/2012/092.json"
+    },
+    {
+      "numero_sorteio": "093/2012",
+      "data": "2012-11-20",
+      "ficheiro": "biblioteca/pergaminhos/2012/093.json"
+    },
+    {
+      "numero_sorteio": "094/2012",
+      "data": "2012-11-23",
+      "ficheiro": "biblioteca/pergaminhos/2012/094.json"
+    },
+    {
+      "numero_sorteio": "095/2012",
+      "data": "2012-11-27",
+      "ficheiro": "biblioteca/pergaminhos/2012/095.json"
+    },
+    {
+      "numero_sorteio": "096/2012",
+      "data": "2012-11-30",
+      "ficheiro": "biblioteca/pergaminhos/2012/096.json"
+    },
+    {
+      "numero_sorteio": "097/2012",
+      "data": "2012-12-04",
+      "ficheiro": "biblioteca/pergaminhos/2012/097.json"
+    },
+    {
+      "numero_sorteio": "098/2012",
+      "data": "2012-12-07",
+      "ficheiro": "biblioteca/pergaminhos/2012/098.json"
+    },
+    {
+      "numero_sorteio": "099/2012",
+      "data": "2012-12-11",
+      "ficheiro": "biblioteca/pergaminhos/2012/099.json"
+    },
+    {
+      "numero_sorteio": "100/2012",
+      "data": "2012-12-14",
+      "ficheiro": "biblioteca/pergaminhos/2012/100.json"
+    },
+    {
+      "numero_sorteio": "101/2012",
+      "data": "2012-12-18",
+      "ficheiro": "biblioteca/pergaminhos/2012/101.json"
+    },
+    {
+      "numero_sorteio": "102/2012",
+      "data": "2012-12-21",
+      "ficheiro": "biblioteca/pergaminhos/2012/102.json"
+    },
+    {
+      "numero_sorteio": "103/2012",
+      "data": "2012-12-25",
+      "ficheiro": "biblioteca/pergaminhos/2012/103.json"
+    },
+    {
+      "numero_sorteio": "104/2012",
+      "data": "2012-12-28",
+      "ficheiro": "biblioteca/pergaminhos/2012/104.json"
+    }
+  ]
+}

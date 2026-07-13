@@ -1,0 +1,2224 @@
+{
+  "era": 5,
+  "criado_em": "2026-07-11T09:21:55+00:00",
+  "resumo_execucao": {
+    "era": 5,
+    "seed": "1783761714327997240",
+    "energia_celeste": "5.7775",
+    "almas": "724",
+    "individuos": 744,
+    "chaves_antigas": 1008,
+    "magos_negros": 5,
+    "missoes_elficas": 3,
+    "esqueletos": 4,
+    "invocacoes_sombrias": 54,
+    "chave_original": [
+      [
+        8,
+        25,
+        36,
+        37,
+        45
+      ],
+      [
+        5,
+        6
+      ]
+    ],
+    "chave_corrompida": [
+      [
+        6,
+        25,
+        37,
+        38,
+        48
+      ],
+      [
+        4,
+        7
+      ]
+    ],
+    "relatorio": "relatorios/gerados/relatorio_v4_1_20260711_092155.txt"
+  },
+  "contagens": {
+    "artefactos_persistentes": 4,
+    "livros_proibidos": 9,
+    "reflexos_sombrios": 8,
+    "reliquias_roubadas": 2,
+    "missoes_elficas": 13,
+    "lendas": 1,
+    "individuos_registados": 744
+  },
+  "artefactos": [
+    {
+      "id": "ART-EXEMPLO001",
+      "nome": "Livro dos Ecos da Primeira Linha",
+      "raridade": "EPICO",
+      "multiplicador": 1.3,
+      "criador": "Escriba Fundador",
+      "geracao_criacao": 0,
+      "donos": [
+        "Escriba Fundador",
+        "Gruk dos Astros",
+        "Velka dos Ossos"
+      ],
+      "energia_acumulada": 1.9,
+      "conselhos": 0,
+      "universo_origem": "PROLOGO",
+      "estado": "ENCONTRADO",
+      "portador_atual": "Velka dos Ossos",
+      "vezes_encontrado": 2,
+      "execucoes_sobrevividas": 9,
+      "historia": [
+        {
+          "evento": "DEPOSITADO_COMO_EXEMPLO",
+          "descricao": "Relíquia inicial para demonstrar a redescoberta entre execuções."
+        },
+        {
+          "evento": "REENCONTRADO",
+          "momento": "2026-07-10T14:48:32+00:00",
+          "geracao": 1,
+          "personagem": "Gruk dos Astros",
+          "classe": "Shaman"
+        },
+        {
+          "evento": "PERDIDO_APOS_ELIMINACAO",
+          "momento": "2026-07-10T14:48:32+00:00",
+          "geracao": 1,
+          "antigo_dono": "Gruk dos Astros"
+        },
+        {
+          "evento": "REENCONTRADO",
+          "momento": "2026-07-10T14:48:32+00:00",
+          "geracao": 8,
+          "personagem": "Velka dos Ossos",
+          "classe": "Bruxa"
+        }
+      ]
+    },
+    {
+      "id": "ART-693DB66483",
+      "nome": "Presa Imutável de Fenrir",
+      "raridade": "EPICO",
+      "multiplicador": 1.3,
+      "criador": "Morgana Pedra-Partida",
+      "geracao_criacao": 8,
+      "donos": [
+        "Morgana Pedra-Partida",
+        "Kael da Lua Fria"
+      ],
+      "energia_acumulada": 0.6,
+      "conselhos": 0,
+      "estado": "ROUBADO_PELO_ESQUADRAO_NEGRO",
+      "universo_origem": 1783716108367178646,
+      "portador_atual": "Zareth Anti-Humano",
+      "vezes_encontrado": 1,
+      "execucoes_sobrevividas": 6,
+      "historia": [
+        {
+          "evento": "MATERIALIZADO_NA_ARCA",
+          "momento": "2026-07-10T20:41:48+00:00",
+          "criador": "Morgana Pedra-Partida"
+        },
+        {
+          "evento": "REENCONTRADO",
+          "momento": "2026-07-10T20:41:48+00:00",
+          "geracao": 10,
+          "personagem": "Kael da Lua Fria",
+          "classe": "Cronomante"
+        },
+        {
+          "evento": "ROUBADO_PELO_ESQUADRAO_NEGRO",
+          "momento": "2026-07-11T09:21:54+00:00",
+          "mago": "Zareth Anti-Humano"
+        }
+      ],
+      "corrupcao_sombria": 0.2056
+    },
+    {
+      "id": "ART-F46159D799",
+      "nome": "Presa Imutável de Fenrir",
+      "raridade": "RARO",
+      "multiplicador": 1.15,
+      "criador": "Morgana dos Astros",
+      "geracao_criacao": 8,
+      "donos": [
+        "Morgana dos Astros",
+        "Selene dos Astros"
+      ],
+      "energia_acumulada": 0.1,
+      "conselhos": 0,
+      "estado": "ROUBADO_PELO_ESQUADRAO_NEGRO",
+      "universo_origem": 1783761708457386197,
+      "portador_atual": "Morthak da Sombra",
+      "vezes_encontrado": 1,
+      "execucoes_sobrevividas": 1,
+      "historia": [
+        {
+          "evento": "MATERIALIZADO_NA_ARCA",
+          "momento": "2026-07-11T09:21:48+00:00",
+          "criador": "Morgana dos Astros"
+        },
+        {
+          "evento": "REENCONTRADO",
+          "momento": "2026-07-11T09:21:48+00:00",
+          "geracao": 9,
+          "personagem": "Selene dos Astros",
+          "classe": "Vidente"
+        },
+        {
+          "evento": "ROUBADO_PELO_ESQUADRAO_NEGRO",
+          "momento": "2026-07-11T09:21:48+00:00",
+          "mago": "Morthak da Sombra"
+        }
+      ],
+      "corrupcao_sombria": 0.4962
+    },
+    {
+      "id": "ART-67230294CE",
+      "nome": "Livro dos Ecos",
+      "raridade": "MITICO",
+      "multiplicador": 2.0,
+      "criador": "Selene da Névoa",
+      "geracao_criacao": 13,
+      "donos": [
+        "Selene da Névoa",
+        "Lyra Pedra-Partida"
+      ],
+      "energia_acumulada": 0.1,
+      "conselhos": 0,
+      "estado": "ENCONTRADO",
+      "universo_origem": 1783761708457386197,
+      "portador_atual": "Lyra Pedra-Partida",
+      "vezes_encontrado": 1,
+      "execucoes_sobrevividas": 1,
+      "historia": [
+        {
+          "evento": "MATERIALIZADO_NA_ARCA",
+          "momento": "2026-07-11T09:21:48+00:00",
+          "criador": "Selene da Névoa"
+        },
+        {
+          "evento": "REENCONTRADO",
+          "momento": "2026-07-11T09:21:54+00:00",
+          "geracao": 3,
+          "personagem": "Lyra Pedra-Partida",
+          "classe": "Bruxa"
+        }
+      ]
+    }
+  ],
+  "livros": [
+    {
+      "nome": "Grimório de Todas as Extrações",
+      "tipo": "historico_completo",
+      "atualizado_em": "2026-07-11T09:21:54+00:00"
+    },
+    {
+      "nome": "Livro das Chamas Frequentes",
+      "tipo": "numeros_quentes",
+      "atualizado_em": "2026-07-11T09:21:54+00:00"
+    },
+    {
+      "nome": "Livro dos Esquecidos",
+      "tipo": "numeros_frios",
+      "atualizado_em": "2026-07-11T09:21:54+00:00"
+    },
+    {
+      "nome": "Livro dos Pares Sagrados",
+      "tipo": "pares_mais_frequentes",
+      "atualizado_em": "2026-07-11T09:21:54+00:00"
+    },
+    {
+      "nome": "Livro dos Trios Proibidos",
+      "tipo": "trios_mais_frequentes",
+      "atualizado_em": "2026-07-11T09:21:54+00:00"
+    },
+    {
+      "nome": "Atlas das Doze Luzes",
+      "tipo": "estatisticas_estrelas",
+      "atualizado_em": "2026-07-11T09:21:54+00:00"
+    },
+    {
+      "nome": "Crónica dos Números Ausentes",
+      "tipo": "atrasos",
+      "atualizado_em": "2026-07-11T09:21:54+00:00"
+    },
+    {
+      "nome": "Geometria Secreta da Teia",
+      "tipo": "gaps",
+      "atualizado_em": "2026-07-11T09:21:54+00:00"
+    },
+    {
+      "nome": "Livro das Extrações por Cumprir",
+      "tipo": null,
+      "atualizado_em": "2026-07-11T09:21:54+00:00"
+    }
+  ],
+  "reflexos_sombrios": [
+    {
+      "nome": "Atlas das Doze Luzes",
+      "tipo": "COPIA_SOMBRIA",
+      "estrelas": [
+        {
+          "estrela": 2,
+          "frequencia": 3,
+          "atraso": 1
+        },
+        {
+          "estrela": 5,
+          "frequencia": 3,
+          "atraso": 0
+        },
+        {
+          "estrela": 6,
+          "frequencia": 3,
+          "atraso": 2
+        },
+        {
+          "estrela": 1,
+          "frequencia": 1,
+          "atraso": 1
+        },
+        {
+          "estrela": 4,
+          "frequencia": 1,
+          "atraso": 6
+        },
+        {
+          "estrela": 7,
+          "frequencia": 1,
+          "atraso": 5
+        },
+        {
+          "estrela": 8,
+          "frequencia": 1,
+          "atraso": 0
+        },
+        {
+          "estrela": 9,
+          "frequencia": 1,
+          "atraso": 6
+        },
+        {
+          "estrela": 11,
+          "frequencia": 1,
+          "atraso": 3
+        },
+        {
+          "estrela": 12,
+          "frequencia": 1,
+          "atraso": 3
+        },
+        {
+          "estrela": 3,
+          "frequencia": 0,
+          "atraso": 8
+        },
+        {
+          "estrela": 10,
+          "frequencia": 0,
+          "atraso": 8
+        }
+      ],
+      "atualizado_em": "2026-07-11T09:21:29+00:00",
+      "fidelidade": 0.7372,
+      "corrupcao": 0.2628,
+      "criado_em": "2026-07-11T09:21:29+00:00",
+      "original": "livro_estrelas.json",
+      "roubado_por": "Kharon dos Ecos Mortos",
+      "id": "LIVRO-NEGRO-2B5038C4"
+    },
+    {
+      "nome": "Grimório de Todas as Extrações",
+      "tipo": "COPIA_SOMBRIA",
+      "total_extracoes": 8,
+      "extracoes": [
+        {
+          "data": "2026-06-12",
+          "numeros": [
+            3,
+            33,
+            36,
+            45,
+            46
+          ],
+          "estrelas": [
+            5,
+            6
+          ],
+          "jackpot": 95000000,
+          "vencedores": 0
+        },
+        {
+          "data": "2026-06-16",
+          "numeros": [
+            18,
+            25,
+            31,
+            37,
+            45
+          ],
+          "estrelas": [
+            4,
+            9
+          ],
+          "jackpot": 105000000,
+          "vencedores": 0
+        },
+        {
+          "data": "2026-06-19",
+          "numeros": [
+            8,
+            34,
+            39,
+            41,
+            42
+          ],
+          "estrelas": [
+            2,
+            7
+          ],
+          "jackpot": 118000000,
+          "vencedores": 0
+        },
+        {
+          "data": "2026-06-23",
+          "numeros": [
+            3,
+            33,
+            36,
+            45,
+            46
+          ],
+          "estrelas": [
+            5,
+            6
+          ],
+          "jackpot": 130000000,
+          "vencedores": 0
+        },
+        {
+          "data": "2026-06-26",
+          "numeros": [
+            6,
+            16,
+            26,
+            34,
+            35
+          ],
+          "estrelas": [
+            11,
+            12
+          ],
+          "jackpot": 142000000,
+          "vencedores": 0
+        },
+        {
+          "data": "2026-06-30",
+          "numeros": [
+            1,
+            8,
+            37,
+            44,
+            48
+          ],
+          "estrelas": [
+            2,
+            6
+          ],
+          "jackpot": 158000000,
+          "vencedores": 0
+        },
+        {
+          "data": "2026-07-03",
+          "numeros": [
+            2,
+            12,
+            17,
+            25,
+            39
+          ],
+          "estrelas": [
+            1,
+            2
+          ],
+          "jackpot": 166000000,
+          "vencedores": 0
+        },
+        {
+          "data": "2026-07-07",
+          "numeros": [
+            5,
+            29,
+            33,
+            45,
+            47
+          ],
+          "estrelas": [
+            5,
+            8
+          ],
+          "jackpot": 178000000,
+          "vencedores": 0
+        }
+      ],
+      "nota": "Fonte canónica local usada para reconstruir os restantes livros.",
+      "atualizado_em": "2026-07-11T09:21:29+00:00",
+      "fidelidade": 0.704,
+      "corrupcao": 0.296,
+      "criado_em": "2026-07-11T09:21:29+00:00",
+      "original": "grimorio_extracoes.json",
+      "roubado_por": "Veyron Eclipse",
+      "id": "LIVRO-NEGRO-1C7D705C"
+    },
+    {
+      "nome": "Geometria Secreta da Teia",
+      "tipo": "COPIA_SOMBRIA",
+      "gaps": [
+        {
+          "gap": 1,
+          "vezes": 4
+        },
+        {
+          "gap": 7,
+          "vezes": 3
+        },
+        {
+          "gap": 8,
+          "vezes": 3
+        },
+        {
+          "gap": 10,
+          "vezes": 3
+        },
+        {
+          "gap": 30,
+          "vezes": 2
+        },
+        {
+          "gap": 3,
+          "vezes": 2
+        },
+        {
+          "gap": 9,
+          "vezes": 2
+        },
+        {
+          "gap": 6,
+          "vezes": 2
+        },
+        {
+          "gap": 5,
+          "vezes": 2
+        },
+        {
+          "gap": 2,
+          "vezes": 2
+        },
+        {
+          "gap": 4,
+          "vezes": 2
+        },
+        {
+          "gap": 26,
+          "vezes": 1
+        },
+        {
+          "gap": 29,
+          "vezes": 1
+        },
+        {
+          "gap": 14,
+          "vezes": 1
+        },
+        {
+          "gap": 24,
+          "vezes": 1
+        },
+        {
+          "gap": 12,
+          "vezes": 1
+        }
+      ],
+      "atualizado_em": "2026-07-11T09:21:35+00:00",
+      "fidelidade": 0.7644,
+      "corrupcao": 0.2356,
+      "criado_em": "2026-07-11T09:21:36+00:00",
+      "original": "livro_gaps.json",
+      "roubado_por": "Morthak da Sombra",
+      "id": "LIVRO-NEGRO-DF68A330"
+    },
+    {
+      "nome": "Livro dos Pares Sagrados",
+      "tipo": "COPIA_SOMBRIA",
+      "pares": [
+        {
+          "numeros": [
+            33,
+            45
+          ],
+          "vezes": 3
+        },
+        {
+          "numeros": [
+            3,
+            33
+          ],
+          "vezes": 2
+        },
+        {
+          "numeros": [
+            3,
+            36
+          ],
+          "vezes": 2
+        },
+        {
+          "numeros": [
+            3,
+            45
+          ],
+          "vezes": 2
+        },
+        {
+          "numeros": [
+            3,
+            46
+          ],
+          "vezes": 2
+        },
+        {
+          "numeros": [
+            33,
+            36
+          ],
+          "vezes": 2
+        },
+        {
+          "numeros": [
+            33,
+            46
+          ],
+          "vezes": 2
+        },
+        {
+          "numeros": [
+            36,
+            45
+          ],
+          "vezes": 2
+        },
+        {
+          "numeros": [
+            36,
+            46
+          ],
+          "vezes": 2
+        },
+        {
+          "numeros": [
+            45,
+            46
+          ],
+          "vezes": 2
+        },
+        {
+          "numeros": [
+            18,
+            25
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            18,
+            31
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            18,
+            37
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            18,
+            45
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            25,
+            31
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            25,
+            37
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            25,
+            45
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            31,
+            37
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            31,
+            45
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            37,
+            45
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            8,
+            34
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            8,
+            39
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            8,
+            41
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            8,
+            42
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            34,
+            39
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            34,
+            41
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            34,
+            42
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            39,
+            41
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            39,
+            42
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            41,
+            42
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            6,
+            16
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            6,
+            26
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            6,
+            34
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            6,
+            35
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            16,
+            26
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            16,
+            34
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            16,
+            35
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            26,
+            34
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            26,
+            35
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            34,
+            35
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            1,
+            8
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            1,
+            37
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            1,
+            44
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            1,
+            48
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            8,
+            37
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            8,
+            44
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            8,
+            48
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            37,
+            44
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            37,
+            48
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            44,
+            48
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            2,
+            12
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            2,
+            17
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            2,
+            25
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            2,
+            39
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            12,
+            17
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            12,
+            25
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            12,
+            39
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            17,
+            25
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            17,
+            39
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            25,
+            39
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            5,
+            29
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            5,
+            33
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            5,
+            45
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            5,
+            47
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            29,
+            33
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            29,
+            45
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            29,
+            47
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            33,
+            47
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            45,
+            47
+          ],
+          "vezes": 1
+        }
+      ],
+      "atualizado_em": "2026-07-11T09:21:42+00:00",
+      "fidelidade": 0.6847,
+      "corrupcao": 0.3153,
+      "criado_em": "2026-07-11T09:21:42+00:00",
+      "original": "livro_pares_sagrados.json",
+      "roubado_por": "Veyron Eclipse",
+      "id": "LIVRO-NEGRO-6349CA4D"
+    },
+    {
+      "nome": "Geometria Secreta da Teia",
+      "tipo": "COPIA_SOMBRIA",
+      "gaps": [
+        {
+          "gap": 1,
+          "vezes": 4
+        },
+        {
+          "gap": 7,
+          "vezes": 3
+        },
+        {
+          "gap": 8,
+          "vezes": 3
+        },
+        {
+          "gap": 10,
+          "vezes": 3
+        },
+        {
+          "gap": 30,
+          "vezes": 2
+        },
+        {
+          "gap": 3,
+          "vezes": 2
+        },
+        {
+          "gap": 9,
+          "vezes": 2
+        },
+        {
+          "gap": 6,
+          "vezes": 2
+        },
+        {
+          "gap": 5,
+          "vezes": 2
+        },
+        {
+          "gap": 2,
+          "vezes": 2
+        },
+        {
+          "gap": 4,
+          "vezes": 2
+        },
+        {
+          "gap": 26,
+          "vezes": 1
+        },
+        {
+          "gap": 29,
+          "vezes": 1
+        },
+        {
+          "gap": 14,
+          "vezes": 1
+        },
+        {
+          "gap": 24,
+          "vezes": 1
+        },
+        {
+          "gap": 12,
+          "vezes": 1
+        }
+      ],
+      "atualizado_em": "2026-07-11T09:21:48+00:00",
+      "fidelidade": 0.7419,
+      "corrupcao": 0.2581,
+      "criado_em": "2026-07-11T09:21:48+00:00",
+      "original": "livro_gaps.json",
+      "roubado_por": "Zareth Anti-Humano",
+      "id": "LIVRO-NEGRO-E63575C1"
+    },
+    {
+      "nome": "Grimório de Todas as Extrações",
+      "tipo": "COPIA_SOMBRIA",
+      "total_extracoes": 8,
+      "extracoes": [
+        {
+          "data": "2026-06-12",
+          "numeros": [
+            3,
+            33,
+            36,
+            45,
+            46
+          ],
+          "estrelas": [
+            5,
+            6
+          ],
+          "jackpot": 95000000,
+          "vencedores": 0
+        },
+        {
+          "data": "2026-06-16",
+          "numeros": [
+            18,
+            25,
+            31,
+            37,
+            45
+          ],
+          "estrelas": [
+            4,
+            9
+          ],
+          "jackpot": 105000000,
+          "vencedores": 0
+        },
+        {
+          "data": "2026-06-19",
+          "numeros": [
+            8,
+            34,
+            39,
+            41,
+            42
+          ],
+          "estrelas": [
+            2,
+            7
+          ],
+          "jackpot": 118000000,
+          "vencedores": 0
+        },
+        {
+          "data": "2026-06-23",
+          "numeros": [
+            3,
+            33,
+            36,
+            45,
+            46
+          ],
+          "estrelas": [
+            5,
+            6
+          ],
+          "jackpot": 130000000,
+          "vencedores": 0
+        },
+        {
+          "data": "2026-06-26",
+          "numeros": [
+            6,
+            16,
+            26,
+            34,
+            35
+          ],
+          "estrelas": [
+            11,
+            12
+          ],
+          "jackpot": 142000000,
+          "vencedores": 0
+        },
+        {
+          "data": "2026-06-30",
+          "numeros": [
+            1,
+            8,
+            37,
+            44,
+            48
+          ],
+          "estrelas": [
+            2,
+            6
+          ],
+          "jackpot": 158000000,
+          "vencedores": 0
+        },
+        {
+          "data": "2026-07-03",
+          "numeros": [
+            2,
+            12,
+            17,
+            25,
+            39
+          ],
+          "estrelas": [
+            1,
+            2
+          ],
+          "jackpot": 166000000,
+          "vencedores": 0
+        },
+        {
+          "data": "2026-07-07",
+          "numeros": [
+            5,
+            29,
+            33,
+            45,
+            47
+          ],
+          "estrelas": [
+            5,
+            8
+          ],
+          "jackpot": 178000000,
+          "vencedores": 0
+        }
+      ],
+      "nota": "Fonte canónica local usada para reconstruir os restantes livros.",
+      "atualizado_em": "2026-07-11T09:21:48+00:00",
+      "fidelidade": 0.8254,
+      "corrupcao": 0.1746,
+      "criado_em": "2026-07-11T09:21:48+00:00",
+      "original": "grimorio_extracoes.json",
+      "roubado_por": "Morthak da Sombra",
+      "id": "LIVRO-NEGRO-B6C6D818"
+    },
+    {
+      "nome": "Livro dos Trios Proibidos",
+      "tipo": "COPIA_SOMBRIA",
+      "trios": [
+        {
+          "numeros": [
+            3,
+            33,
+            36
+          ],
+          "vezes": 2
+        },
+        {
+          "numeros": [
+            3,
+            33,
+            45
+          ],
+          "vezes": 2
+        },
+        {
+          "numeros": [
+            3,
+            33,
+            46
+          ],
+          "vezes": 2
+        },
+        {
+          "numeros": [
+            3,
+            36,
+            45
+          ],
+          "vezes": 2
+        },
+        {
+          "numeros": [
+            3,
+            36,
+            46
+          ],
+          "vezes": 2
+        },
+        {
+          "numeros": [
+            3,
+            45,
+            46
+          ],
+          "vezes": 2
+        },
+        {
+          "numeros": [
+            33,
+            36,
+            45
+          ],
+          "vezes": 2
+        },
+        {
+          "numeros": [
+            33,
+            36,
+            46
+          ],
+          "vezes": 2
+        },
+        {
+          "numeros": [
+            33,
+            45,
+            46
+          ],
+          "vezes": 2
+        },
+        {
+          "numeros": [
+            36,
+            45,
+            46
+          ],
+          "vezes": 2
+        },
+        {
+          "numeros": [
+            18,
+            25,
+            31
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            18,
+            25,
+            37
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            18,
+            25,
+            45
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            18,
+            31,
+            37
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            18,
+            31,
+            45
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            18,
+            37,
+            45
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            25,
+            31,
+            37
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            25,
+            31,
+            45
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            25,
+            37,
+            45
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            31,
+            37,
+            45
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            8,
+            34,
+            39
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            8,
+            34,
+            41
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            8,
+            34,
+            42
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            8,
+            39,
+            41
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            8,
+            39,
+            42
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            8,
+            41,
+            42
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            34,
+            39,
+            41
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            34,
+            39,
+            42
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            34,
+            41,
+            42
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            39,
+            41,
+            42
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            6,
+            16,
+            26
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            6,
+            16,
+            34
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            6,
+            16,
+            35
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            6,
+            26,
+            34
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            6,
+            26,
+            35
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            6,
+            34,
+            35
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            16,
+            26,
+            34
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            16,
+            26,
+            35
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            16,
+            34,
+            35
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            26,
+            34,
+            35
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            1,
+            8,
+            37
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            1,
+            8,
+            44
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            1,
+            8,
+            48
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            1,
+            37,
+            44
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            1,
+            37,
+            48
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            1,
+            44,
+            48
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            8,
+            37,
+            44
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            8,
+            37,
+            48
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            8,
+            44,
+            48
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            37,
+            44,
+            48
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            2,
+            12,
+            17
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            2,
+            12,
+            25
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            2,
+            12,
+            39
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            2,
+            17,
+            25
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            2,
+            17,
+            39
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            2,
+            25,
+            39
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            12,
+            17,
+            25
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            12,
+            17,
+            39
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            12,
+            25,
+            39
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            17,
+            25,
+            39
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            5,
+            29,
+            33
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            5,
+            29,
+            45
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            5,
+            29,
+            47
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            5,
+            33,
+            45
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            5,
+            33,
+            47
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            5,
+            45,
+            47
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            29,
+            33,
+            45
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            29,
+            33,
+            47
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            29,
+            45,
+            47
+          ],
+          "vezes": 1
+        },
+        {
+          "numeros": [
+            33,
+            45,
+            47
+          ],
+          "vezes": 1
+        }
+      ],
+      "atualizado_em": "2026-07-11T09:21:54+00:00",
+      "fidelidade": 0.9342,
+      "corrupcao": 0.0658,
+      "criado_em": "2026-07-11T09:21:54+00:00",
+      "original": "livro_trios_proibidos.json",
+      "roubado_por": "Kharon dos Ecos Mortos",
+      "id": "LIVRO-NEGRO-B0CCEF6F"
+    },
+    {
+      "nome": "Livro dos Esquecidos",
+      "tipo": "COPIA_SOMBRIA",
+      "numeros": [
+        {
+          "numero": 4,
+          "frequencia": 0,
+          "atraso": 8
+        },
+        {
+          "numero": 7,
+          "frequencia": 0,
+          "atraso": 8
+        },
+        {
+          "numero": 9,
+          "frequencia": 0,
+          "atraso": 8
+        },
+        {
+          "numero": 10,
+          "frequencia": 0,
+          "atraso": 8
+        },
+        {
+          "numero": 11,
+          "frequencia": 0,
+          "atraso": 8
+        },
+        {
+          "numero": 13,
+          "frequencia": 0,
+          "atraso": 8
+        },
+        {
+          "numero": 14,
+          "frequencia": 0,
+          "atraso": 8
+        },
+        {
+          "numero": 15,
+          "frequencia": 0,
+          "atraso": 8
+        },
+        {
+          "numero": 19,
+          "frequencia": 0,
+          "atraso": 8
+        },
+        {
+          "numero": 20,
+          "frequencia": 0,
+          "atraso": 8
+        },
+        {
+          "numero": 21,
+          "frequencia": 0,
+          "atraso": 8
+        },
+        {
+          "numero": 22,
+          "frequencia": 0,
+          "atraso": 8
+        },
+        {
+          "numero": 23,
+          "frequencia": 0,
+          "atraso": 8
+        },
+        {
+          "numero": 24,
+          "frequencia": 0,
+          "atraso": 8
+        },
+        {
+          "numero": 27,
+          "frequencia": 0,
+          "atraso": 8
+        },
+        {
+          "numero": 28,
+          "frequencia": 0,
+          "atraso": 8
+        },
+        {
+          "numero": 30,
+          "frequencia": 0,
+          "atraso": 8
+        },
+        {
+          "numero": 32,
+          "frequencia": 0,
+          "atraso": 8
+        },
+        {
+          "numero": 38,
+          "frequencia": 0,
+          "atraso": 8
+        },
+        {
+          "numero": 40,
+          "frequencia": 0,
+          "atraso": 8
+        },
+        {
+          "numero": 43,
+          "frequencia": 0,
+          "atraso": 8
+        },
+        {
+          "numero": 49,
+          "frequencia": 0,
+          "atraso": 8
+        },
+        {
+          "numero": 50,
+          "frequencia": 0,
+          "atraso": 8
+        },
+        {
+          "numero": 18,
+          "frequencia": 1,
+          "atraso": 6
+        },
+        {
+          "numero": 31,
+          "frequencia": 1,
+          "atraso": 6
+        },
+        {
+          "numero": 41,
+          "frequencia": 1,
+          "atraso": 5
+        },
+        {
+          "numero": 42,
+          "frequencia": 1,
+          "atraso": 5
+        },
+        {
+          "numero": 6,
+          "frequencia": 1,
+          "atraso": 3
+        },
+        {
+          "numero": 16,
+          "frequencia": 1,
+          "atraso": 3
+        },
+        {
+          "numero": 26,
+          "frequencia": 1,
+          "atraso": 3
+        },
+        {
+          "numero": 35,
+          "frequencia": 1,
+          "atraso": 3
+        },
+        {
+          "numero": 1,
+          "frequencia": 1,
+          "atraso": 2
+        },
+        {
+          "numero": 44,
+          "frequencia": 1,
+          "atraso": 2
+        },
+        {
+          "numero": 48,
+          "frequencia": 1,
+          "atraso": 2
+        },
+        {
+          "numero": 2,
+          "frequencia": 1,
+          "atraso": 1
+        },
+        {
+          "numero": 12,
+          "frequencia": 1,
+          "atraso": 1
+        },
+        {
+          "numero": 17,
+          "frequencia": 1,
+          "atraso": 1
+        },
+        {
+          "numero": 5,
+          "frequencia": 1,
+          "atraso": 0
+        },
+        {
+          "numero": 29,
+          "frequencia": 1,
+          "atraso": 0
+        },
+        {
+          "numero": 47,
+          "frequencia": 1,
+          "atraso": 0
+        },
+        {
+          "numero": 3,
+          "frequencia": 2,
+          "atraso": 4
+        },
+        {
+          "numero": 36,
+          "frequencia": 2,
+          "atraso": 4
+        },
+        {
+          "numero": 46,
+          "frequencia": 2,
+          "atraso": 4
+        },
+        {
+          "numero": 34,
+          "frequencia": 2,
+          "atraso": 3
+        },
+        {
+          "numero": 8,
+          "frequencia": 2,
+          "atraso": 2
+        },
+        {
+          "numero": 37,
+          "frequencia": 2,
+          "atraso": 2
+        },
+        {
+          "numero": 25,
+          "frequencia": 2,
+          "atraso": 1
+        },
+        {
+          "numero": 39,
+          "frequencia": 2,
+          "atraso": 1
+        },
+        {
+          "numero": 33,
+          "frequencia": 3,
+          "atraso": 0
+        },
+        {
+          "numero": 45,
+          "frequencia": 4,
+          "atraso": 0
+        }
+      ],
+      "atualizado_em": "2026-07-11T09:21:54+00:00",
+      "fidelidade": 0.746,
+      "corrupcao": 0.254,
+      "criado_em": "2026-07-11T09:21:54+00:00",
+      "original": "livro_numeros_frios.json",
+      "roubado_por": "Veyron Eclipse",
+      "id": "LIVRO-NEGRO-E3BC8F61"
+    }
+  ],
+  "reliquias_roubadas": [
+    {
+      "id": "ART-F46159D799",
+      "nome": "Presa Imutável de Fenrir",
+      "raridade": "RARO",
+      "multiplicador": 1.15,
+      "criador": "Morgana dos Astros",
+      "geracao_criacao": 8,
+      "donos": [
+        "Morgana dos Astros",
+        "Selene dos Astros"
+      ],
+      "energia_acumulada": 0.0,
+      "conselhos": 0,
+      "estado": "ROUBADO_PELO_ESQUADRAO_NEGRO",
+      "universo_origem": 1783761708457386197,
+      "portador_atual": "Morthak da Sombra",
+      "vezes_encontrado": 1,
+      "execucoes_sobrevividas": 0,
+      "historia": [
+        {
+          "evento": "MATERIALIZADO_NA_ARCA",
+          "momento": "2026-07-11T09:21:48+00:00",
+          "criador": "Morgana dos Astros"
+        },
+        {
+          "evento": "REENCONTRADO",
+          "momento": "2026-07-11T09:21:48+00:00",
+          "geracao": 9,
+          "personagem": "Selene dos Astros",
+          "classe": "Vidente"
+        },
+        {
+          "evento": "ROUBADO_PELO_ESQUADRAO_NEGRO",
+          "momento": "2026-07-11T09:21:48+00:00",
+          "mago": "Morthak da Sombra"
+        }
+      ],
+      "corrupcao_sombria": 0.4962
+    },
+    {
+      "id": "ART-693DB66483",
+      "nome": "Presa Imutável de Fenrir",
+      "raridade": "EPICO",
+      "multiplicador": 1.3,
+      "criador": "Morgana Pedra-Partida",
+      "geracao_criacao": 8,
+      "donos": [
+        "Morgana Pedra-Partida",
+        "Kael da Lua Fria"
+      ],
+      "energia_acumulada": 0.6,
+      "conselhos": 0,
+      "estado": "ROUBADO_PELO_ESQUADRAO_NEGRO",
+      "universo_origem": 1783716108367178646,
+      "portador_atual": "Zareth Anti-Humano",
+      "vezes_encontrado": 1,
+      "execucoes_sobrevividas": 6,
+      "historia": [
+        {
+          "evento": "MATERIALIZADO_NA_ARCA",
+          "momento": "2026-07-10T20:41:48+00:00",
+          "criador": "Morgana Pedra-Partida"
+        },
+        {
+          "evento": "REENCONTRADO",
+          "momento": "2026-07-10T20:41:48+00:00",
+          "geracao": 10,
+          "personagem": "Kael da Lua Fria",
+          "classe": "Cronomante"
+        },
+        {
+          "evento": "ROUBADO_PELO_ESQUADRAO_NEGRO",
+          "momento": "2026-07-11T09:21:54+00:00",
+          "mago": "Zareth Anti-Humano"
+        }
+      ],
+      "corrupcao_sombria": 0.2056
+    }
+  ],
+  "lendas": [
+    {
+      "arquivo_id": "Escolha Humana Consagrada pelos Clérigos",
+      "nome": "Escolha Humana Consagrada pelos Clérigos",
+      "classe": "Chave Humana Ritual",
+      "origem": "ritual_celeste",
+      "geracao": 14,
+      "grau": "IMORTAL",
+      "feito": "5 números + 2 estrelas",
+      "chave": {
+        "numeros": [
+          1,
+          10,
+          32,
+          36,
+          43
+        ],
+        "estrelas": [
+          5,
+          6
+        ]
+      },
+      "chave_real": {
+        "numeros": [
+          1,
+          10,
+          32,
+          36,
+          43
+        ],
+        "estrelas": [
+          5,
+          6
+        ]
+      },
+      "registado_em": "2026-07-10T20:41:59+00:00",
+      "estado": "ECO_LENDARIO"
+    }
+  ]
+}

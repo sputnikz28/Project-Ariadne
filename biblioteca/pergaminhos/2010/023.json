@@ -1,0 +1,87 @@
+{
+  "id": "PERG-2010-023",
+  "titulo": "Pergaminho da Extração 023/2010",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2010,
+  "numero_sorteio": "023/2010",
+  "data": "2010-06-04",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2010-06-04T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      4,
+      17,
+      34,
+      40,
+      42
+    ],
+    "estrelas": [
+      4,
+      9
+    ],
+    "formato": "4 17 34 40 42 + 4 9",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 137,
+    "media_numeros": 27.4,
+    "mediana_numeros": 34,
+    "desvio_padrao": 14.6369,
+    "amplitude": 38,
+    "pares": 4,
+    "impares": 1,
+    "gaps": [
+      13,
+      17,
+      6,
+      2
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 1,
+      "11-20": 1,
+      "31-40": 2,
+      "41-50": 1
+    },
+    "repetidos_sorteio_anterior": [
+      4
+    ],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Quarto minguante",
+    "iluminacao_lunar_percent": 51.679,
+    "idade_lunar_dias": 21.99,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2010",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2010",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2010_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "d282b4aebb2253dd9f286c55a01ce674c07c5d1d3f9a95de5d0e2167fcdc41e6",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

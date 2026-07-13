@@ -1,0 +1,86 @@
+{
+  "id": "PERG-2010-012",
+  "titulo": "Pergaminho da Extração 012/2010",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2010,
+  "numero_sorteio": "012/2010",
+  "data": "2010-03-19",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "19:00:00",
+    "timestamp_utc": "2010-03-19T19:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      10,
+      28,
+      30,
+      38,
+      39
+    ],
+    "estrelas": [
+      2,
+      7
+    ],
+    "formato": "10 28 30 38 39 + 2 7",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 145,
+    "media_numeros": 29,
+    "mediana_numeros": 30,
+    "desvio_padrao": 10.4307,
+    "amplitude": 29,
+    "pares": 4,
+    "impares": 1,
+    "gaps": [
+      18,
+      2,
+      8,
+      1
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 1,
+      "21-30": 2,
+      "31-40": 2
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": [
+      7
+    ]
+  },
+  "astronomia": {
+    "fase_lua": "Lua crescente",
+    "iluminacao_lunar_percent": 14.647,
+    "idade_lunar_dias": 3.692,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2010",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2010",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2010_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "3c653f2931b28831dfd07274f5825304b36c089a0cac641f897b4d75629370bc",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

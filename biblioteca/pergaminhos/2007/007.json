@@ -1,0 +1,85 @@
+{
+  "id": "PERG-2007-007",
+  "titulo": "Pergaminho da Extração 007/2007",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2007,
+  "numero_sorteio": "007/2007",
+  "data": "2007-02-16",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "19:00:00",
+    "timestamp_utc": "2007-02-16T19:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      8,
+      19,
+      20,
+      39,
+      50
+    ],
+    "estrelas": [
+      6,
+      9
+    ],
+    "formato": "8 19 20 39 50 + 6 9",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 136,
+    "media_numeros": 27.2,
+    "mediana_numeros": 20,
+    "desvio_padrao": 15.1446,
+    "amplitude": 42,
+    "pares": 3,
+    "impares": 2,
+    "gaps": [
+      11,
+      1,
+      19,
+      11
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 1,
+      "11-20": 2,
+      "31-40": 1,
+      "41-50": 1
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Lua nova",
+    "iluminacao_lunar_percent": 1.094,
+    "idade_lunar_dias": 28.546,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2007",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2007",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2007_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "3487014b3e396134903c3df34f59175912df4f676815e443fccb30935940dc16",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

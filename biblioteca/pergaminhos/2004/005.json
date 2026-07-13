@@ -1,0 +1,86 @@
+{
+  "id": "PERG-2004-005",
+  "titulo": "Pergaminho da Extração 005/2004",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2004,
+  "numero_sorteio": "005/2004",
+  "data": "2004-03-12",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "19:00:00",
+    "timestamp_utc": "2004-03-12T19:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      15,
+      24,
+      28,
+      44,
+      47
+    ],
+    "estrelas": [
+      4,
+      5
+    ],
+    "formato": "15 24 28 44 47 + 4 5",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 158,
+    "media_numeros": 31.6,
+    "mediana_numeros": 28,
+    "desvio_padrao": 12.1425,
+    "amplitude": 32,
+    "pares": 3,
+    "impares": 2,
+    "gaps": [
+      9,
+      4,
+      16,
+      3
+    ],
+    "distribuicao_por_dezenas": {
+      "11-20": 1,
+      "21-30": 2,
+      "41-50": 2
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": [
+      5
+    ]
+  },
+  "astronomia": {
+    "fase_lua": "Quarto minguante",
+    "iluminacao_lunar_percent": 62.307,
+    "idade_lunar_dias": 20.979,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2004",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2004",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2004_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "5f139716e3b5a9bd6b15ff49658e9866fe81e8f40c95383515931d62ec9a803b",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

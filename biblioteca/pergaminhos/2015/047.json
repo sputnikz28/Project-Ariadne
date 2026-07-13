@@ -1,0 +1,86 @@
+{
+  "id": "PERG-2015-047",
+  "titulo": "Pergaminho da Extração 047/2015",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2015,
+  "numero_sorteio": "047/2015",
+  "data": "2015-06-12",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2015-06-12T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      5,
+      8,
+      10,
+      11,
+      37
+    ],
+    "estrelas": [
+      7,
+      9
+    ],
+    "formato": "5 8 10 11 37 + 7 9",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 71,
+    "media_numeros": 14.2,
+    "mediana_numeros": 10,
+    "desvio_padrao": 11.5827,
+    "amplitude": 32,
+    "pares": 2,
+    "impares": 3,
+    "gaps": [
+      3,
+      2,
+      1,
+      26
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 3,
+      "11-20": 1,
+      "31-40": 1
+    },
+    "repetidos_sorteio_anterior": [
+      5
+    ],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Lua minguante",
+    "iluminacao_lunar_percent": 17.376,
+    "idade_lunar_dias": 25.489,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2015",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2015",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2015_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "7016f7a97cd460c780f4121b2258d0b86a5474082413a11d78832e95c9911633",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

@@ -1,0 +1,101 @@
+{
+  "era": 2,
+  "id": "H-00044",
+  "nome": "Lyra da Lua Fria",
+  "raca": "Vidente",
+  "casa": "Casa do Bosque",
+  "geracao": 1,
+  "pais": [],
+  "pontos": 204,
+  "titulo": "Observador Celeste",
+  "estado": "VIVO",
+  "amuletos": [
+    {
+      "id": "ART-532D4A0B9A",
+      "nome": "Espelho dos Sonhos Esquecidos",
+      "raridade": "COMUM",
+      "multiplicador": 1.05,
+      "criador": "Lyra da Lua Fria",
+      "geracao_criacao": 2,
+      "donos": [
+        "Lyra da Lua Fria"
+      ],
+      "energia_acumulada": 68.0,
+      "conselhos": 0,
+      "estado": "ATIVO"
+    }
+  ],
+  "melhores_chaves": [
+    {
+      "geracao": 1,
+      "numeros": [
+        3,
+        19,
+        33,
+        34,
+        45
+      ],
+      "estrelas": [
+        5,
+        9
+      ]
+    },
+    {
+      "geracao": 2,
+      "numeros": [
+        8,
+        19,
+        22,
+        39,
+        50
+      ],
+      "estrelas": [
+        4,
+        6
+      ]
+    },
+    {
+      "geracao": 3,
+      "numeros": [
+        3,
+        25,
+        33,
+        35,
+        48
+      ],
+      "estrelas": [
+        5,
+        9
+      ]
+    },
+    {
+      "geracao": 4,
+      "numeros": [
+        10,
+        12,
+        16,
+        25,
+        34
+      ],
+      "estrelas": [
+        2,
+        9
+      ]
+    },
+    {
+      "geracao": 5,
+      "numeros": [
+        6,
+        16,
+        25,
+        40,
+        45
+      ],
+      "estrelas": [
+        5,
+        6
+      ]
+    }
+  ],
+  "criada_em": "2026-07-11T09:21:37+00:00"
+}

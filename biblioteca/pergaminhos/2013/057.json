@@ -1,0 +1,85 @@
+{
+  "id": "PERG-2013-057",
+  "titulo": "Pergaminho da Extração 057/2013",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2013,
+  "numero_sorteio": "057/2013",
+  "data": "2013-07-16",
+  "dia_semana": "terça-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2013-07-16T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      19,
+      23,
+      34,
+      47,
+      50
+    ],
+    "estrelas": [
+      4,
+      6
+    ],
+    "formato": "19 23 34 47 50 + 4 6",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 173,
+    "media_numeros": 34.6,
+    "mediana_numeros": 34,
+    "desvio_padrao": 12.4032,
+    "amplitude": 31,
+    "pares": 2,
+    "impares": 3,
+    "gaps": [
+      4,
+      11,
+      13,
+      3
+    ],
+    "distribuicao_por_dezenas": {
+      "11-20": 1,
+      "21-30": 1,
+      "31-40": 1,
+      "41-50": 2
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Quarto crescente",
+    "iluminacao_lunar_percent": 56.68,
+    "idade_lunar_dias": 8.012,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2013",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2013",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2013_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "797cc943f87ca5127342ad029d5f3316d2021f83514ff497b87bc9a91a69d0fb",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

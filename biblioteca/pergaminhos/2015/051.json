@@ -1,0 +1,84 @@
+{
+  "id": "PERG-2015-051",
+  "titulo": "Pergaminho da Extração 051/2015",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2015,
+  "numero_sorteio": "051/2015",
+  "data": "2015-06-26",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2015-06-26T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      3,
+      6,
+      10,
+      19,
+      24
+    ],
+    "estrelas": [
+      5,
+      7
+    ],
+    "formato": "3 6 10 19 24 + 5 7",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 62,
+    "media_numeros": 12.4,
+    "mediana_numeros": 10,
+    "desvio_padrao": 7.9145,
+    "amplitude": 21,
+    "pares": 3,
+    "impares": 2,
+    "gaps": [
+      3,
+      4,
+      9,
+      5
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 3,
+      "11-20": 1,
+      "21-30": 1
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Gibosa crescente",
+    "iluminacao_lunar_percent": 71.292,
+    "idade_lunar_dias": 9.45,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2015",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2015",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2015_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "f2db1a70a4ec51fe21357b181be3c75e18c3d9ad3af0fa1313007c3eb0adbf5e",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

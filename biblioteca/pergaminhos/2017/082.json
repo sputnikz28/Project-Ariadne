@@ -1,0 +1,86 @@
+{
+  "id": "PERG-2017-082",
+  "titulo": "Pergaminho da Extração 082/2017",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2017,
+  "numero_sorteio": "082/2017",
+  "data": "2017-10-13",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2017-10-13T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      23,
+      29,
+      37,
+      45,
+      50
+    ],
+    "estrelas": [
+      5,
+      11
+    ],
+    "formato": "23 29 37 45 50 + 5 11",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 184,
+    "media_numeros": 36.8,
+    "mediana_numeros": 37,
+    "desvio_padrao": 9.9277,
+    "amplitude": 27,
+    "pares": 1,
+    "impares": 4,
+    "gaps": [
+      6,
+      8,
+      8,
+      5
+    ],
+    "distribuicao_por_dezenas": {
+      "21-30": 2,
+      "31-40": 1,
+      "41-50": 2
+    },
+    "repetidos_sorteio_anterior": [
+      37
+    ],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Quarto minguante",
+    "iluminacao_lunar_percent": 36.268,
+    "idade_lunar_dias": 23.455,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2017",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2017",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2017_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "0121184a4b90d2391724a0435d48a77fa078e003b87a19e0a7060175562a1fd5",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

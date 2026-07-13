@@ -1,0 +1,88 @@
+{
+  "id": "PERG-2021-004",
+  "titulo": "Pergaminho da Extração 004/2021",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2021,
+  "numero_sorteio": "004/2021",
+  "data": "2021-01-12",
+  "dia_semana": "terça-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "19:00:00",
+    "timestamp_utc": "2021-01-12T19:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      2,
+      10,
+      18,
+      34,
+      35
+    ],
+    "estrelas": [
+      6,
+      9
+    ],
+    "formato": "2 10 18 34 35 + 6 9",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 99,
+    "media_numeros": 19.8,
+    "mediana_numeros": 18,
+    "desvio_padrao": 13.0292,
+    "amplitude": 33,
+    "pares": 4,
+    "impares": 1,
+    "gaps": [
+      8,
+      8,
+      16,
+      1
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 2,
+      "11-20": 1,
+      "31-40": 2
+    },
+    "repetidos_sorteio_anterior": [
+      18
+    ],
+    "estrelas_repetidas_sorteio_anterior": [
+      6
+    ]
+  },
+  "astronomia": {
+    "fase_lua": "Lua nova",
+    "iluminacao_lunar_percent": 0.222,
+    "idade_lunar_dias": 29.087,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2021",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2021",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2021_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "600eafeb317e2eb4e788006b7c4570bc5e98f9c952308967c24dbe0923988cc8",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

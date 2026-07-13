@@ -1,0 +1,86 @@
+{
+  "id": "PERG-2016-105",
+  "titulo": "Pergaminho da Extração 105/2016",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2016,
+  "numero_sorteio": "105/2016",
+  "data": "2016-12-30",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "19:00:00",
+    "timestamp_utc": "2016-12-30T19:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      8,
+      10,
+      22,
+      29,
+      47
+    ],
+    "estrelas": [
+      1,
+      3
+    ],
+    "formato": "8 10 22 29 47 + 1 3",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 116,
+    "media_numeros": 23.2,
+    "mediana_numeros": 22,
+    "desvio_padrao": 14.1901,
+    "amplitude": 39,
+    "pares": 3,
+    "impares": 2,
+    "gaps": [
+      2,
+      12,
+      7,
+      18
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 2,
+      "21-30": 2,
+      "41-50": 1
+    },
+    "repetidos_sorteio_anterior": [
+      22
+    ],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Lua nova",
+    "iluminacao_lunar_percent": 2.21,
+    "idade_lunar_dias": 1.402,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2016",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2016",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2016_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "d41ad315635c62455cf3aefd73fc0f5cb66f46d08f8529eb8a0273fb4b6043d6",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

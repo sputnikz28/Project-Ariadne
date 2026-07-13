@@ -1,0 +1,101 @@
+{
+  "era": 5,
+  "id": "H-00001",
+  "nome": "Aruk da Lua Fria",
+  "raca": "Chefe Tribal",
+  "casa": "Casa das Estrelas",
+  "geracao": 1,
+  "pais": [],
+  "pontos": 185,
+  "titulo": "Observador Celeste",
+  "estado": "VIVO",
+  "amuletos": [
+    {
+      "id": "ART-E4D3FD6363",
+      "nome": "Fragmento Divino",
+      "raridade": "COMUM",
+      "multiplicador": 1.05,
+      "criador": "Aruk da Lua Fria",
+      "geracao_criacao": 9,
+      "donos": [
+        "Aruk da Lua Fria"
+      ],
+      "energia_acumulada": 40.75,
+      "conselhos": 0,
+      "estado": "ATIVO"
+    }
+  ],
+  "melhores_chaves": [
+    {
+      "geracao": 1,
+      "numeros": [
+        31,
+        45,
+        46,
+        48,
+        50
+      ],
+      "estrelas": [
+        4,
+        11
+      ]
+    },
+    {
+      "geracao": 2,
+      "numeros": [
+        23,
+        32,
+        39,
+        45,
+        50
+      ],
+      "estrelas": [
+        2,
+        7
+      ]
+    },
+    {
+      "geracao": 3,
+      "numeros": [
+        10,
+        15,
+        27,
+        34,
+        50
+      ],
+      "estrelas": [
+        6,
+        8
+      ]
+    },
+    {
+      "geracao": 4,
+      "numeros": [
+        8,
+        14,
+        36,
+        45,
+        50
+      ],
+      "estrelas": [
+        8,
+        12
+      ]
+    },
+    {
+      "geracao": 5,
+      "numeros": [
+        30,
+        33,
+        38,
+        45,
+        50
+      ],
+      "estrelas": [
+        5,
+        10
+      ]
+    }
+  ],
+  "criada_em": "2026-07-11T09:21:55+00:00"
+}

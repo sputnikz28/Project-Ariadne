@@ -1,0 +1,86 @@
+{
+  "era": 1,
+  "id": "H-00009",
+  "nome": "Morgana dos Astros",
+  "raca": "Goblin",
+  "casa": "Casa Lunar",
+  "geracao": 1,
+  "pais": [],
+  "pontos": 125,
+  "titulo": "Sussurrador do Destino",
+  "estado": "VIVO",
+  "amuletos": [],
+  "melhores_chaves": [
+    {
+      "geracao": 1,
+      "numeros": [
+        25,
+        31,
+        42,
+        46,
+        49
+      ],
+      "estrelas": [
+        7,
+        12
+      ]
+    },
+    {
+      "geracao": 2,
+      "numeros": [
+        17,
+        31,
+        35,
+        45,
+        46
+      ],
+      "estrelas": [
+        7,
+        9
+      ]
+    },
+    {
+      "geracao": 3,
+      "numeros": [
+        2,
+        39,
+        42,
+        45,
+        50
+      ],
+      "estrelas": [
+        3,
+        8
+      ]
+    },
+    {
+      "geracao": 4,
+      "numeros": [
+        2,
+        4,
+        42,
+        46,
+        48
+      ],
+      "estrelas": [
+        2,
+        3
+      ]
+    },
+    {
+      "geracao": 5,
+      "numeros": [
+        5,
+        41,
+        43,
+        47,
+        49
+      ],
+      "estrelas": [
+        4,
+        9
+      ]
+    }
+  ],
+  "criada_em": "2026-07-11T13:32:31+00:00"
+}

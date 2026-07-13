@@ -1,0 +1,84 @@
+{
+  "id": "PERG-2015-030",
+  "titulo": "Pergaminho da Extração 030/2015",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2015,
+  "numero_sorteio": "030/2015",
+  "data": "2015-04-14",
+  "dia_semana": "terça-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2015-04-14T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      24,
+      32,
+      34,
+      35,
+      49
+    ],
+    "estrelas": [
+      1,
+      2
+    ],
+    "formato": "24 32 34 35 49 + 1 2",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 174,
+    "media_numeros": 34.8,
+    "mediana_numeros": 34,
+    "desvio_padrao": 8.0846,
+    "amplitude": 25,
+    "pares": 3,
+    "impares": 2,
+    "gaps": [
+      8,
+      2,
+      1,
+      14
+    ],
+    "distribuicao_por_dezenas": {
+      "21-30": 1,
+      "31-40": 3,
+      "41-50": 1
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Lua minguante",
+    "iluminacao_lunar_percent": 21.895,
+    "idade_lunar_dias": 24.953,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2015",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2015",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2015_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "fd68a8ed3253765350ea022d4a2681ed962487d026e6a0de45eb1ae1af047f98",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

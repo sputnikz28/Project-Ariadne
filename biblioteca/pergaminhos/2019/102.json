@@ -1,0 +1,84 @@
+{
+  "id": "PERG-2019-102",
+  "titulo": "Pergaminho da Extração 102/2019",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2019,
+  "numero_sorteio": "102/2019",
+  "data": "2019-12-20",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "19:00:00",
+    "timestamp_utc": "2019-12-20T19:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      8,
+      24,
+      30,
+      32,
+      34
+    ],
+    "estrelas": [
+      3,
+      4
+    ],
+    "formato": "8 24 30 32 34 + 3 4",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 128,
+    "media_numeros": 25.6,
+    "mediana_numeros": 30,
+    "desvio_padrao": 9.4149,
+    "amplitude": 26,
+    "pares": 5,
+    "impares": 0,
+    "gaps": [
+      16,
+      6,
+      2,
+      2
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 1,
+      "21-30": 2,
+      "31-40": 2
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Quarto minguante",
+    "iluminacao_lunar_percent": 32.199,
+    "idade_lunar_dias": 23.859,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2019",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2019",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2019_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "d0e42da87ba89aafab9b3fd22ad9cfd31e7213f236c39437cc510c8d01920cc4",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

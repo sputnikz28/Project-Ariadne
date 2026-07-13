@@ -1,0 +1,87 @@
+{
+  "id": "PERG-2019-050",
+  "titulo": "Pergaminho da Extração 050/2019",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2019,
+  "numero_sorteio": "050/2019",
+  "data": "2019-06-21",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2019-06-21T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      5,
+      8,
+      9,
+      25,
+      39
+    ],
+    "estrelas": [
+      3,
+      7
+    ],
+    "formato": "5 8 9 25 39 + 3 7",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 86,
+    "media_numeros": 17.2,
+    "mediana_numeros": 9,
+    "desvio_padrao": 12.9368,
+    "amplitude": 34,
+    "pares": 1,
+    "impares": 4,
+    "gaps": [
+      3,
+      1,
+      16,
+      14
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 3,
+      "21-30": 1,
+      "31-40": 1
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": [
+      3,
+      7
+    ]
+  },
+  "astronomia": {
+    "fase_lua": "Gibosa minguante",
+    "iluminacao_lunar_percent": 82.144,
+    "idade_lunar_dias": 18.866,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2019",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2019",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2019_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "4671983c26a27a7ec9f22905ff649e51ddda3eca9e0863ee0f0ab651e71d6e29",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

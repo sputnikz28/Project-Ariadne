@@ -1,0 +1,86 @@
+{
+  "era": 2,
+  "id": "H-00026",
+  "nome": "Selene Pedra-Partida",
+  "raca": "Vidente",
+  "casa": "Casa Lunar",
+  "geracao": 1,
+  "pais": [],
+  "pontos": 227,
+  "titulo": "Leitor dos Sinais",
+  "estado": "VIVO",
+  "amuletos": [],
+  "melhores_chaves": [
+    {
+      "geracao": 1,
+      "numeros": [
+        14,
+        27,
+        31,
+        45,
+        46
+      ],
+      "estrelas": [
+        2,
+        6
+      ]
+    },
+    {
+      "geracao": 2,
+      "numeros": [
+        14,
+        18,
+        24,
+        25,
+        32
+      ],
+      "estrelas": [
+        4,
+        9
+      ]
+    },
+    {
+      "geracao": 3,
+      "numeros": [
+        6,
+        14,
+        27,
+        31,
+        37
+      ],
+      "estrelas": [
+        2,
+        6
+      ]
+    },
+    {
+      "geracao": 4,
+      "numeros": [
+        16,
+        18,
+        23,
+        46,
+        49
+      ],
+      "estrelas": [
+        2,
+        5
+      ]
+    },
+    {
+      "geracao": 5,
+      "numeros": [
+        2,
+        13,
+        37,
+        39,
+        50
+      ],
+      "estrelas": [
+        5,
+        6
+      ]
+    }
+  ],
+  "criada_em": "2026-07-11T09:21:37+00:00"
+}

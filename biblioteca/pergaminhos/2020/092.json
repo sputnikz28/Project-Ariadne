@@ -1,0 +1,84 @@
+{
+  "id": "PERG-2020-092",
+  "titulo": "Pergaminho da Extração 092/2020",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2020,
+  "numero_sorteio": "092/2020",
+  "data": "2020-11-17",
+  "dia_semana": "terça-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "19:00:00",
+    "timestamp_utc": "2020-11-17T19:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      16,
+      19,
+      25,
+      30,
+      44
+    ],
+    "estrelas": [
+      2,
+      6
+    ],
+    "formato": "16 19 25 30 44 + 2 6",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 134,
+    "media_numeros": 26.8,
+    "mediana_numeros": 25,
+    "desvio_padrao": 9.8671,
+    "amplitude": 28,
+    "pares": 3,
+    "impares": 2,
+    "gaps": [
+      3,
+      6,
+      5,
+      14
+    ],
+    "distribuicao_por_dezenas": {
+      "11-20": 2,
+      "21-30": 2,
+      "41-50": 1
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Lua crescente",
+    "iluminacao_lunar_percent": 9.323,
+    "idade_lunar_dias": 2.917,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2020",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2020",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2020_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "cf50e5fba33b54945af8b10dbbe56ae2a41243f8ae747a6337e59551cc976561",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

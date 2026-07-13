@@ -1,0 +1,85 @@
+{
+  "id": "PERG-2008-045",
+  "titulo": "Pergaminho da Extração 045/2008",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2008,
+  "numero_sorteio": "045/2008",
+  "data": "2008-11-07",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "19:00:00",
+    "timestamp_utc": "2008-11-07T19:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      1,
+      9,
+      12,
+      17,
+      18
+    ],
+    "estrelas": [
+      3,
+      4
+    ],
+    "formato": "1 9 12 17 18 + 3 4",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 57,
+    "media_numeros": 11.4,
+    "mediana_numeros": 12,
+    "desvio_padrao": 6.1514,
+    "amplitude": 17,
+    "pares": 2,
+    "impares": 3,
+    "gaps": [
+      8,
+      3,
+      5,
+      1
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 2,
+      "11-20": 3
+    },
+    "repetidos_sorteio_anterior": [
+      18
+    ],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Quarto crescente",
+    "iluminacao_lunar_percent": 65.985,
+    "idade_lunar_dias": 8.912,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2008",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2008",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2008_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "2b88d1bd0910c629e13b7d2d7a6386696ba8b64ae968b59d7203b34fb3c17c11",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

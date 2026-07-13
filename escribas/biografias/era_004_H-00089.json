@@ -1,0 +1,89 @@
+{
+  "era": 4,
+  "id": "H-00089",
+  "nome": "Selene da Lua Fria",
+  "raca": "Vidente",
+  "casa": "Casa Tribal",
+  "geracao": 2,
+  "pais": [
+    "H-00016",
+    "H-00057"
+  ],
+  "pontos": 178,
+  "titulo": "Sussurrador do Destino",
+  "estado": "VIVO",
+  "amuletos": [],
+  "melhores_chaves": [
+    {
+      "geracao": 2,
+      "numeros": [
+        3,
+        17,
+        23,
+        33,
+        45
+      ],
+      "estrelas": [
+        4,
+        9
+      ]
+    },
+    {
+      "geracao": 3,
+      "numeros": [
+        9,
+        11,
+        18,
+        22,
+        25
+      ],
+      "estrelas": [
+        6,
+        9
+      ]
+    },
+    {
+      "geracao": 4,
+      "numeros": [
+        3,
+        20,
+        23,
+        42,
+        46
+      ],
+      "estrelas": [
+        6,
+        9
+      ]
+    },
+    {
+      "geracao": 5,
+      "numeros": [
+        1,
+        15,
+        25,
+        36,
+        43
+      ],
+      "estrelas": [
+        4,
+        5
+      ]
+    },
+    {
+      "geracao": 6,
+      "numeros": [
+        11,
+        25,
+        43,
+        45,
+        46
+      ],
+      "estrelas": [
+        2,
+        6
+      ]
+    }
+  ],
+  "criada_em": "2026-07-11T09:21:49+00:00"
+}

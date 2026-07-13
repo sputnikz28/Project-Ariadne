@@ -1,0 +1,101 @@
+{
+  "era": 5,
+  "id": "H-00056",
+  "nome": "Gruk dos Astros",
+  "raca": "Elfo",
+  "casa": "Casa dos Ossos",
+  "geracao": 1,
+  "pais": [],
+  "pontos": 145,
+  "titulo": "Observador Celeste",
+  "estado": "VIVO",
+  "amuletos": [
+    {
+      "id": "ART-5C2107A5F2",
+      "nome": "Livro dos Ecos",
+      "raridade": "COMUM",
+      "multiplicador": 1.05,
+      "criador": "Gruk dos Astros",
+      "geracao_criacao": 7,
+      "donos": [
+        "Gruk dos Astros"
+      ],
+      "energia_acumulada": 46.75,
+      "conselhos": 0,
+      "estado": "ATIVO"
+    }
+  ],
+  "melhores_chaves": [
+    {
+      "geracao": 1,
+      "numeros": [
+        11,
+        17,
+        25,
+        34,
+        36
+      ],
+      "estrelas": [
+        5,
+        6
+      ]
+    },
+    {
+      "geracao": 2,
+      "numeros": [
+        10,
+        19,
+        29,
+        32,
+        47
+      ],
+      "estrelas": [
+        4,
+        6
+      ]
+    },
+    {
+      "geracao": 3,
+      "numeros": [
+        8,
+        19,
+        35,
+        40,
+        46
+      ],
+      "estrelas": [
+        2,
+        4
+      ]
+    },
+    {
+      "geracao": 4,
+      "numeros": [
+        12,
+        15,
+        34,
+        40,
+        45
+      ],
+      "estrelas": [
+        5,
+        9
+      ]
+    },
+    {
+      "geracao": 5,
+      "numeros": [
+        9,
+        16,
+        34,
+        41,
+        46
+      ],
+      "estrelas": [
+        5,
+        6
+      ]
+    }
+  ],
+  "criada_em": "2026-07-11T09:21:55+00:00"
+}

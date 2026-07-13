@@ -1,0 +1,84 @@
+{
+  "id": "PERG-2020-035",
+  "titulo": "Pergaminho da Extração 035/2020",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2020,
+  "numero_sorteio": "035/2020",
+  "data": "2020-05-01",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2020-05-01T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      19,
+      20,
+      38,
+      45,
+      47
+    ],
+    "estrelas": [
+      2,
+      6
+    ],
+    "formato": "19 20 38 45 47 + 2 6",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 169,
+    "media_numeros": 33.8,
+    "mediana_numeros": 38,
+    "desvio_padrao": 12.0565,
+    "amplitude": 28,
+    "pares": 2,
+    "impares": 3,
+    "gaps": [
+      1,
+      18,
+      7,
+      2
+    ],
+    "distribuicao_por_dezenas": {
+      "11-20": 2,
+      "31-40": 1,
+      "41-50": 2
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Quarto crescente",
+    "iluminacao_lunar_percent": 59.883,
+    "idade_lunar_dias": 8.318,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2020",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2020",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2020_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "020bb78bacde38ecec0e220af1ce936cb6803c818a5de86df916e8b568c70772",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

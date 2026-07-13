@@ -1,0 +1,87 @@
+{
+  "id": "PERG-2012-047",
+  "titulo": "Pergaminho da Extração 047/2012",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2012,
+  "numero_sorteio": "047/2012",
+  "data": "2012-06-12",
+  "dia_semana": "terça-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2012-06-12T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      8,
+      15,
+      26,
+      30,
+      48
+    ],
+    "estrelas": [
+      9,
+      10
+    ],
+    "formato": "8 15 26 30 48 + 9 10",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 127,
+    "media_numeros": 25.4,
+    "mediana_numeros": 26,
+    "desvio_padrao": 13.7346,
+    "amplitude": 40,
+    "pares": 4,
+    "impares": 1,
+    "gaps": [
+      7,
+      11,
+      4,
+      18
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 1,
+      "11-20": 1,
+      "21-30": 2,
+      "41-50": 1
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": [
+      9
+    ]
+  },
+  "astronomia": {
+    "fase_lua": "Quarto minguante",
+    "iluminacao_lunar_percent": 37.251,
+    "idade_lunar_dias": 23.36,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2012",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2012",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2012_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "06a5162066ba1a352fb77c81e6ace804bb3a4a306edeb320b085d47888bc29b8",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

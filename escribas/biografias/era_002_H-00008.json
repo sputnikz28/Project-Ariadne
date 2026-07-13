@@ -1,0 +1,86 @@
+{
+  "era": 2,
+  "id": "H-00008",
+  "nome": "Kael da Lua Fria",
+  "raca": "Vidente",
+  "casa": "Casa das Estrelas",
+  "geracao": 1,
+  "pais": [],
+  "pontos": 171,
+  "titulo": "Leitor dos Sinais",
+  "estado": "VIVO",
+  "amuletos": [],
+  "melhores_chaves": [
+    {
+      "geracao": 1,
+      "numeros": [
+        2,
+        3,
+        17,
+        34,
+        45
+      ],
+      "estrelas": [
+        2,
+        4
+      ]
+    },
+    {
+      "geracao": 2,
+      "numeros": [
+        8,
+        13,
+        22,
+        25,
+        46
+      ],
+      "estrelas": [
+        2,
+        9
+      ]
+    },
+    {
+      "geracao": 3,
+      "numeros": [
+        8,
+        15,
+        40,
+        46,
+        49
+      ],
+      "estrelas": [
+        4,
+        6
+      ]
+    },
+    {
+      "geracao": 4,
+      "numeros": [
+        3,
+        4,
+        16,
+        31,
+        39
+      ],
+      "estrelas": [
+        4,
+        9
+      ]
+    },
+    {
+      "geracao": 5,
+      "numeros": [
+        18,
+        22,
+        33,
+        36,
+        37
+      ],
+      "estrelas": [
+        4,
+        9
+      ]
+    }
+  ],
+  "criada_em": "2026-07-11T13:32:34+00:00"
+}

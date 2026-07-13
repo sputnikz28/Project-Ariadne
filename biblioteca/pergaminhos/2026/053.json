@@ -1,0 +1,188 @@
+{
+  "id": "PERG-2026-053",
+  "titulo": "Pergaminho da Extração 053/2026",
+  "biblioteca": "Grande Grimório das Extrações",
+  "estado": "SELADO",
+  "raridade": "Sagrado",
+  "data": {
+    "extracao": "2026-07-03",
+    "dia_semana": "sexta-feira",
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "timestamp_utc": "2026-07-03T18:00:00+00:00"
+  },
+  "extracao": {
+    "numero_sorteio": "053/2026",
+    "numeros": [
+      2,
+      12,
+      17,
+      25,
+      39
+    ],
+    "estrelas": [
+      1,
+      2
+    ],
+    "ordem_saida": {
+      "numeros": [
+        12,
+        2,
+        25,
+        39,
+        17
+      ],
+      "estrelas": [
+        2,
+        1
+      ],
+      "formato": "12 2 25 39 17 + 2 1"
+    },
+    "ordem_saida_disponivel": true
+  },
+  "estatisticas": {
+    "soma": 95,
+    "media": 19,
+    "mediana": 17,
+    "desvio_padrao": 12.474,
+    "amplitude": 37,
+    "pares": 2,
+    "impares": 3,
+    "gaps": [
+      10,
+      5,
+      8,
+      14
+    ],
+    "distribuicao_dezenas": {
+      "01-10": 1,
+      "11-20": 2,
+      "21-30": 1,
+      "31-40": 1
+    },
+    "repetidos_anterior": [],
+    "estrelas_repetidas_anterior": [
+      2
+    ]
+  },
+  "astronomia": {
+    "fase_lua": "Gibosa minguante",
+    "iluminacao_percent": 87.313,
+    "idade_lunar_dias": 18.189,
+    "eclipse": false
+  },
+  "premios": {
+    "categorias": [
+      {
+        "categoria": 1,
+        "acertos": "5 números + 2 estrelas",
+        "vencedores_portugal": 0,
+        "vencedores_total": 1,
+        "percentagem_portugal_no_total": 0.0
+      },
+      {
+        "categoria": 2,
+        "acertos": "5 números + 1 estrela",
+        "vencedores_portugal": 0,
+        "vencedores_total": 3,
+        "percentagem_portugal_no_total": 0.0
+      },
+      {
+        "categoria": 3,
+        "acertos": "5 números + 0 estrelas",
+        "vencedores_portugal": 1,
+        "vencedores_total": 9,
+        "percentagem_portugal_no_total": 11.111111
+      },
+      {
+        "categoria": 4,
+        "acertos": "4 números + 2 estrelas",
+        "vencedores_portugal": 6,
+        "vencedores_total": 50,
+        "percentagem_portugal_no_total": 12.0
+      },
+      {
+        "categoria": 5,
+        "acertos": "4 números + 1 estrela",
+        "vencedores_portugal": 83,
+        "vencedores_total": 996,
+        "percentagem_portugal_no_total": 8.333333
+      },
+      {
+        "categoria": 6,
+        "acertos": "3 números + 2 estrelas",
+        "vencedores_portugal": 124,
+        "vencedores_total": 1600,
+        "percentagem_portugal_no_total": 7.75
+      },
+      {
+        "categoria": 7,
+        "acertos": "4 números + 0 estrelas",
+        "vencedores_portugal": 162,
+        "vencedores_total": 2073,
+        "percentagem_portugal_no_total": 7.814761
+      },
+      {
+        "categoria": 8,
+        "acertos": "2 números + 2 estrelas",
+        "vencedores_portugal": 1811,
+        "vencedores_total": 22846,
+        "percentagem_portugal_no_total": 7.926989
+      },
+      {
+        "categoria": 9,
+        "acertos": "3 números + 1 estrela",
+        "vencedores_portugal": 3311,
+        "vencedores_total": 40821,
+        "percentagem_portugal_no_total": 8.111021
+      },
+      {
+        "categoria": 10,
+        "acertos": "3 números + 0 estrelas",
+        "vencedores_portugal": 6660,
+        "vencedores_total": 88162,
+        "percentagem_portugal_no_total": 7.554275
+      },
+      {
+        "categoria": 11,
+        "acertos": "1 número + 2 estrelas",
+        "vencedores_portugal": 9275,
+        "vencedores_total": 113324,
+        "percentagem_portugal_no_total": 8.184498
+      },
+      {
+        "categoria": 12,
+        "acertos": "2 números + 1 estrela",
+        "vencedores_portugal": 43333,
+        "vencedores_total": 543566,
+        "percentagem_portugal_no_total": 7.971985
+      },
+      {
+        "categoria": 13,
+        "acertos": "2 números + 0 estrelas",
+        "vencedores_portugal": 90714,
+        "vencedores_total": 1195498,
+        "percentagem_portugal_no_total": 7.587968
+      }
+    ],
+    "houve_vencedor_1_premio_total": true,
+    "houve_vencedor_1_premio_portugal": false,
+    "total_vencedores_todas_categorias": 2008949,
+    "total_vencedores_portugal_todas_categorias": 155480
+  },
+  "qualidade_dados": {
+    "fonte_resultado": "texto ou imagem fornecidos pelo utilizador",
+    "transcricao_manual": true,
+    "ordem_saida_confirmada": true,
+    "dados_financeiros_disponiveis": true,
+    "categorias_premio_disponiveis": true,
+    "campos_em_falta": []
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "selo": "Biblioteca Eterna",
+    "sha256": "e00adcfc52d07d4fdc883eb6895414a9857915e3d475e5e8e8c56f2f4c906a75",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

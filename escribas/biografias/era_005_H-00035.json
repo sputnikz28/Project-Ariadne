@@ -1,0 +1,86 @@
+{
+  "era": 5,
+  "id": "H-00035",
+  "nome": "Aion da Lua Fria",
+  "raca": "Vidente",
+  "casa": "Casa Tribal",
+  "geracao": 1,
+  "pais": [],
+  "pontos": 201,
+  "titulo": "Leitor dos Sinais",
+  "estado": "VIVO",
+  "amuletos": [],
+  "melhores_chaves": [
+    {
+      "geracao": 1,
+      "numeros": [
+        16,
+        27,
+        41,
+        45,
+        46
+      ],
+      "estrelas": [
+        2,
+        4
+      ]
+    },
+    {
+      "geracao": 2,
+      "numeros": [
+        25,
+        28,
+        37,
+        39,
+        50
+      ],
+      "estrelas": [
+        5,
+        9
+      ]
+    },
+    {
+      "geracao": 3,
+      "numeros": [
+        10,
+        22,
+        34,
+        36,
+        45
+      ],
+      "estrelas": [
+        5,
+        9
+      ]
+    },
+    {
+      "geracao": 4,
+      "numeros": [
+        25,
+        33,
+        34,
+        38,
+        46
+      ],
+      "estrelas": [
+        4,
+        5
+      ]
+    },
+    {
+      "geracao": 5,
+      "numeros": [
+        10,
+        30,
+        33,
+        37,
+        45
+      ],
+      "estrelas": [
+        2,
+        4
+      ]
+    }
+  ],
+  "criada_em": "2026-07-11T09:21:55+00:00"
+}

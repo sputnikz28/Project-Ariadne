@@ -1,0 +1,86 @@
+{
+  "id": "PERG-2023-104",
+  "titulo": "Pergaminho da Extração 104/2023",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2023,
+  "numero_sorteio": "104/2023",
+  "data": "2023-12-29",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "19:00:00",
+    "timestamp_utc": "2023-12-29T19:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      2,
+      3,
+      19,
+      36,
+      37
+    ],
+    "estrelas": [
+      6,
+      9
+    ],
+    "formato": "2 3 19 36 37 + 6 9",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 97,
+    "media_numeros": 19.4,
+    "mediana_numeros": 19,
+    "desvio_padrao": 15.2132,
+    "amplitude": 35,
+    "pares": 2,
+    "impares": 3,
+    "gaps": [
+      1,
+      16,
+      17,
+      1
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 2,
+      "11-20": 1,
+      "31-40": 2
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": [
+      9
+    ]
+  },
+  "astronomia": {
+    "fase_lua": "Gibosa minguante",
+    "iluminacao_lunar_percent": 92.532,
+    "idade_lunar_dias": 17.367,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2023",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2023",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2023_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "7af8b8bd034049561ad9fcdd6e7ad25d118c41dc473d883f844a34460f48b920",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

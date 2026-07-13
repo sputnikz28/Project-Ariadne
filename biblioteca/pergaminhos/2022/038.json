@@ -1,0 +1,88 @@
+{
+  "id": "PERG-2022-038",
+  "titulo": "Pergaminho da Extração 038/2022",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2022,
+  "numero_sorteio": "038/2022",
+  "data": "2022-05-13",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2022-05-13T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      3,
+      11,
+      17,
+      45,
+      48
+    ],
+    "estrelas": [
+      4,
+      8
+    ],
+    "formato": "3 11 17 45 48 + 4 8",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 124,
+    "media_numeros": 24.8,
+    "mediana_numeros": 17,
+    "desvio_padrao": 18.291,
+    "amplitude": 45,
+    "pares": 1,
+    "impares": 4,
+    "gaps": [
+      8,
+      6,
+      28,
+      3
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 1,
+      "11-20": 2,
+      "41-50": 2
+    },
+    "repetidos_sorteio_anterior": [
+      3
+    ],
+    "estrelas_repetidas_sorteio_anterior": [
+      4
+    ]
+  },
+  "astronomia": {
+    "fase_lua": "Gibosa crescente",
+    "iluminacao_lunar_percent": 92.062,
+    "idade_lunar_dias": 12.081,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2022",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2022",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2022_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "47ebf0ecd7b9c914d33b6e73e52ef2cf1eb56dd9ce54e0540ade4b2b3014e1cf",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

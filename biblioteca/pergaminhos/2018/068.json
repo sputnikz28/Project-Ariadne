@@ -1,0 +1,87 @@
+{
+  "id": "PERG-2018-068",
+  "titulo": "Pergaminho da Extração 068/2018",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2018,
+  "numero_sorteio": "068/2018",
+  "data": "2018-08-24",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2018-08-24T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      3,
+      14,
+      31,
+      36,
+      50
+    ],
+    "estrelas": [
+      1,
+      12
+    ],
+    "formato": "3 14 31 36 50 + 1 12",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 134,
+    "media_numeros": 26.8,
+    "mediana_numeros": 31,
+    "desvio_padrao": 16.5578,
+    "amplitude": 47,
+    "pares": 3,
+    "impares": 2,
+    "gaps": [
+      11,
+      17,
+      5,
+      14
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 1,
+      "11-20": 1,
+      "31-40": 2,
+      "41-50": 1
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": [
+      12
+    ]
+  },
+  "astronomia": {
+    "fase_lua": "Lua cheia",
+    "iluminacao_lunar_percent": 97.226,
+    "idade_lunar_dias": 13.193,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2018",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2018",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2018_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "f1335503ce4b88e6196ff86e09f1ef8a13076441caf40c23e0d16d443820fdac",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

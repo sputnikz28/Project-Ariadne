@@ -1,0 +1,86 @@
+{
+  "era": 1,
+  "id": "H-00065",
+  "nome": "Morgana da Lua Fria",
+  "raca": "Elfo",
+  "casa": "Casa dos Ossos",
+  "geracao": 1,
+  "pais": [],
+  "pontos": 139,
+  "titulo": "Leitor dos Sinais",
+  "estado": "VIVO",
+  "amuletos": [],
+  "melhores_chaves": [
+    {
+      "geracao": 1,
+      "numeros": [
+        18,
+        22,
+        31,
+        35,
+        39
+      ],
+      "estrelas": [
+        5,
+        6
+      ]
+    },
+    {
+      "geracao": 2,
+      "numeros": [
+        1,
+        20,
+        24,
+        31,
+        40
+      ],
+      "estrelas": [
+        4,
+        6
+      ]
+    },
+    {
+      "geracao": 3,
+      "numeros": [
+        14,
+        25,
+        26,
+        28,
+        43
+      ],
+      "estrelas": [
+        2,
+        4
+      ]
+    },
+    {
+      "geracao": 4,
+      "numeros": [
+        4,
+        9,
+        26,
+        44,
+        47
+      ],
+      "estrelas": [
+        2,
+        6
+      ]
+    },
+    {
+      "geracao": 5,
+      "numeros": [
+        9,
+        10,
+        25,
+        39,
+        48
+      ],
+      "estrelas": [
+        5,
+        9
+      ]
+    }
+  ],
+  "criada_em": "2026-07-11T13:32:31+00:00"
+}

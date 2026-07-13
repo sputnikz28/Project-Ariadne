@@ -1,0 +1,84 @@
+{
+  "id": "PERG-2022-082",
+  "titulo": "Pergaminho da Extração 082/2022",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2022,
+  "numero_sorteio": "082/2022",
+  "data": "2022-10-14",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2022-10-14T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      24,
+      28,
+      29,
+      34,
+      48
+    ],
+    "estrelas": [
+      3,
+      7
+    ],
+    "formato": "24 28 29 34 48 + 3 7",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 163,
+    "media_numeros": 32.6,
+    "mediana_numeros": 29,
+    "desvio_padrao": 8.3331,
+    "amplitude": 24,
+    "pares": 4,
+    "impares": 1,
+    "gaps": [
+      4,
+      1,
+      5,
+      14
+    ],
+    "distribuicao_por_dezenas": {
+      "21-30": 3,
+      "31-40": 1,
+      "41-50": 1
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Gibosa minguante",
+    "iluminacao_lunar_percent": 76.858,
+    "idade_lunar_dias": 19.483,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2022",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2022",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2022_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "be5fa73e8d134167e235edd47b1eb01c755011ca2ba022ebad34b04db9dbda6a",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

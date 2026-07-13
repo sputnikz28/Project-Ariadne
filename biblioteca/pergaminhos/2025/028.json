@@ -1,0 +1,86 @@
+{
+  "id": "PERG-2025-028",
+  "titulo": "Pergaminho da Extração 028/2025",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2025,
+  "numero_sorteio": "028/2025",
+  "data": "2025-04-08",
+  "dia_semana": "terça-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2025-04-08T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      3,
+      14,
+      15,
+      48,
+      49
+    ],
+    "estrelas": [
+      1,
+      7
+    ],
+    "formato": "3 14 15 48 49 + 1 7",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 129,
+    "media_numeros": 25.8,
+    "mediana_numeros": 15,
+    "desvio_padrao": 19.0095,
+    "amplitude": 46,
+    "pares": 2,
+    "impares": 3,
+    "gaps": [
+      11,
+      1,
+      33,
+      1
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 1,
+      "11-20": 2,
+      "41-50": 2
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": [
+      7
+    ]
+  },
+  "astronomia": {
+    "fase_lua": "Gibosa crescente",
+    "iluminacao_lunar_percent": 84.145,
+    "idade_lunar_dias": 10.916,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2025",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2025",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2025_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "f746a60800fb26f75f8225c4571f78988c6fd7d5e8b899a5cbbab986201acbb1",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

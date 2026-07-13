@@ -1,0 +1,84 @@
+{
+  "id": "PERG-2025-096",
+  "titulo": "Pergaminho da Extração 096/2025",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2025,
+  "numero_sorteio": "096/2025",
+  "data": "2025-12-02",
+  "dia_semana": "terça-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "19:00:00",
+    "timestamp_utc": "2025-12-02T19:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      4,
+      13,
+      14,
+      20,
+      41
+    ],
+    "estrelas": [
+      6,
+      12
+    ],
+    "formato": "4 13 14 20 41 + 6 12",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 92,
+    "media_numeros": 18.4,
+    "mediana_numeros": 14,
+    "desvio_padrao": 12.4032,
+    "amplitude": 37,
+    "pares": 3,
+    "impares": 2,
+    "gaps": [
+      9,
+      1,
+      6,
+      21
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 1,
+      "11-20": 3,
+      "41-50": 1
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Gibosa crescente",
+    "iluminacao_lunar_percent": 92.848,
+    "idade_lunar_dias": 12.22,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2025",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2025",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2025_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "6865de900be72cf859744685c8d814f048a1e9c7506b96d948f504f02fc13ed0",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

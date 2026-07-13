@@ -1,0 +1,85 @@
+{
+  "id": "PERG-2022-042",
+  "titulo": "Pergaminho da Extração 042/2022",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2022,
+  "numero_sorteio": "042/2022",
+  "data": "2022-05-27",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2022-05-27T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      15,
+      23,
+      28,
+      34,
+      48
+    ],
+    "estrelas": [
+      3,
+      5
+    ],
+    "formato": "15 23 28 34 48 + 3 5",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 148,
+    "media_numeros": 29.6,
+    "mediana_numeros": 28,
+    "desvio_padrao": 11.1104,
+    "amplitude": 33,
+    "pares": 3,
+    "impares": 2,
+    "gaps": [
+      8,
+      5,
+      6,
+      14
+    ],
+    "distribuicao_por_dezenas": {
+      "11-20": 1,
+      "21-30": 2,
+      "31-40": 1,
+      "41-50": 1
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Lua minguante",
+    "iluminacao_lunar_percent": 6.893,
+    "idade_lunar_dias": 27.034,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2022",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2022",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2022_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "1eb6bf8a4ae9d676d2dd2f2f7cfb6f8cb11508e2d03beb319da3024f7ed66ef4",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

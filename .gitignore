@@ -1,0 +1,62 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Runtime data (generated during simulation)
+dados/
+relatorios/gerados/
+axiomantes/experiencias/
+campanhas/
+
+# Ariadne cache (rebuilt automatically)
+biblioteca/consultas/
+
+# Kors papiros (generated during simulation)
+biblioteca/kors_negros/papiros/*/
+
+# Books generated at runtime (rebuilt by Cartographers)
+biblioteca/livros/cartografos/*.json
+
+# Amulets runtime data
+amuletos/livros/
+amuletos/extracoes_futuras/
+
+# Ordem Élfica runtime
+ordem_elfica/arquivo_missoes/
+ordem_elfica/estado_ordem.json
+
+# Esquadrão Negro runtime
+esquadrao_negro/grimorio_negro.json
+esquadrao_negro/arquivo_rituais/
+esquadrao_negro/biblioteca_sombria/reflexos_corrompidos/
+
+# Artefactos (generated at runtime)
+artefactos/reliquias/*.json
+
+# Lendas geradas em runtime
+lendas/ecos_ancestrais.json
+lendas/livro_personagens_lendarias.json
+
+# Environments
+.env
+.venv
+venv/
+env/
+
+# IDEs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini

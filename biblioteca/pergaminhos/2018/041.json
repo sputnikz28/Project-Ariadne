@@ -1,0 +1,85 @@
+{
+  "id": "PERG-2018-041",
+  "titulo": "Pergaminho da Extração 041/2018",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2018,
+  "numero_sorteio": "041/2018",
+  "data": "2018-05-22",
+  "dia_semana": "terça-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2018-05-22T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      1,
+      11,
+      37,
+      41,
+      48
+    ],
+    "estrelas": [
+      8,
+      12
+    ],
+    "formato": "1 11 37 41 48 + 8 12",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 138,
+    "media_numeros": 27.6,
+    "mediana_numeros": 37,
+    "desvio_padrao": 18.2603,
+    "amplitude": 47,
+    "pares": 1,
+    "impares": 4,
+    "gaps": [
+      10,
+      26,
+      4,
+      7
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 1,
+      "11-20": 1,
+      "31-40": 1,
+      "41-50": 2
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Quarto crescente",
+    "iluminacao_lunar_percent": 56.603,
+    "idade_lunar_dias": 8.005,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2018",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2018",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2018_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "9bd4d6ff2116b6f86660043f835e6d2923f0df4c9277fdca4ae0e858f0b07593",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

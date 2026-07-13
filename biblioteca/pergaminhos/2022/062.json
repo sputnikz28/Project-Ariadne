@@ -1,0 +1,87 @@
+{
+  "id": "PERG-2022-062",
+  "titulo": "Pergaminho da Extração 062/2022",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2022,
+  "numero_sorteio": "062/2022",
+  "data": "2022-08-05",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2022-08-05T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      3,
+      29,
+      33,
+      35,
+      44
+    ],
+    "estrelas": [
+      8,
+      10
+    ],
+    "formato": "3 29 33 35 44 + 8 10",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 144,
+    "media_numeros": 28.8,
+    "mediana_numeros": 33,
+    "desvio_padrao": 13.8043,
+    "amplitude": 41,
+    "pares": 1,
+    "impares": 4,
+    "gaps": [
+      26,
+      4,
+      2,
+      9
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 1,
+      "21-30": 1,
+      "31-40": 2,
+      "41-50": 1
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": [
+      8
+    ]
+  },
+  "astronomia": {
+    "fase_lua": "Quarto crescente",
+    "iluminacao_lunar_percent": 53.17,
+    "idade_lunar_dias": 7.681,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2022",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2022",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2022_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "abd90622a15927edddd3b2990a7939aeb44c7cfbe1ccff40b93fcdffe55b193f",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

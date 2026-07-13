@@ -1,0 +1,31 @@
+{
+  "nome": "Kors de Elarion",
+  "versao": "7.2",
+  "descricao": "Facção dos Kors, filhos da observação e do silêncio de Elarion.",
+  "peso_conselho": 1.0,
+  "aviso": "Os Kors observam padrões históricos. Estas observações não aumentam a probabilidade de prever sorteios futuros.",
+  "membros": [
+    {
+      "nome": "Aelyra dos Silêncios",
+      "cor": "Branca",
+      "deusa": "Aelyra",
+      "estrategia": "Os 15 números mais atrasados — aqueles que dormem há mais sorteios."
+    },
+    {
+      "nome": "Kael da Chama Fria",
+      "cor": "Vermelha",
+      "estrategia": "Os números menos frequentes na história completa do Euromilhões."
+    },
+    {
+      "nome": "Sylvara das Passagens",
+      "cor": "Verde",
+      "estrategia": "O padrão de transição entre a penúltima e a última chave sorteada."
+    },
+    {
+      "nome": "Nyxara das Sombras Semanais",
+      "cor": "Preta",
+      "deusa": "Nyxara",
+      "estrategia": "Os ecos históricos da semana ISO atual; cria papiros semanais na biblioteca."
+    }
+  ]
+}

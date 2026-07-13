@@ -1,0 +1,86 @@
+{
+  "id": "PERG-2025-002",
+  "titulo": "Pergaminho da Extração 002/2025",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2025,
+  "numero_sorteio": "002/2025",
+  "data": "2025-01-07",
+  "dia_semana": "terça-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "19:00:00",
+    "timestamp_utc": "2025-01-07T19:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      20,
+      33,
+      35,
+      41,
+      47
+    ],
+    "estrelas": [
+      4,
+      12
+    ],
+    "formato": "20 33 35 41 47 + 4 12",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 176,
+    "media_numeros": 35.2,
+    "mediana_numeros": 35,
+    "desvio_padrao": 9.0421,
+    "amplitude": 27,
+    "pares": 1,
+    "impares": 4,
+    "gaps": [
+      13,
+      2,
+      6,
+      6
+    ],
+    "distribuicao_por_dezenas": {
+      "11-20": 1,
+      "31-40": 2,
+      "41-50": 2
+    },
+    "repetidos_sorteio_anterior": [
+      35
+    ],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Quarto crescente",
+    "iluminacao_lunar_percent": 59.016,
+    "idade_lunar_dias": 8.235,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2025",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2025",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2025_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "d9b227507d681b768440a329ca584d6c786e70c6481d633d471595088c6ae595",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

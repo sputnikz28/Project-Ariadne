@@ -1,0 +1,88 @@
+{
+  "id": "PERG-2011-066",
+  "titulo": "Pergaminho da Extração 066/2011",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2011,
+  "numero_sorteio": "066/2011",
+  "data": "2011-10-21",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2011-10-21T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      2,
+      19,
+      33,
+      37,
+      46
+    ],
+    "estrelas": [
+      5,
+      8
+    ],
+    "formato": "2 19 33 37 46 + 5 8",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 137,
+    "media_numeros": 27.4,
+    "mediana_numeros": 33,
+    "desvio_padrao": 15.3961,
+    "amplitude": 44,
+    "pares": 2,
+    "impares": 3,
+    "gaps": [
+      17,
+      14,
+      4,
+      9
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 1,
+      "11-20": 1,
+      "31-40": 2,
+      "41-50": 1
+    },
+    "repetidos_sorteio_anterior": [
+      37,
+      46
+    ],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Quarto minguante",
+    "iluminacao_lunar_percent": 32.943,
+    "idade_lunar_dias": 23.784,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2011",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2011",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2011_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "04ec73f0a45ba7b21165735b7a8acaa5a470c22263e42cf8e8af215069799e5f",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

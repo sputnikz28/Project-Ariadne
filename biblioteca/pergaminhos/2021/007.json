@@ -1,0 +1,86 @@
+{
+  "id": "PERG-2021-007",
+  "titulo": "Pergaminho da Extração 007/2021",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2021,
+  "numero_sorteio": "007/2021",
+  "data": "2021-01-22",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "19:00:00",
+    "timestamp_utc": "2021-01-22T19:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      8,
+      16,
+      42,
+      44,
+      47
+    ],
+    "estrelas": [
+      6,
+      7
+    ],
+    "formato": "8 16 42 44 47 + 6 7",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 157,
+    "media_numeros": 31.4,
+    "mediana_numeros": 42,
+    "desvio_padrao": 16.1196,
+    "amplitude": 39,
+    "pares": 4,
+    "impares": 1,
+    "gaps": [
+      8,
+      26,
+      2,
+      3
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 1,
+      "11-20": 1,
+      "41-50": 3
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": [
+      6
+    ]
+  },
+  "astronomia": {
+    "fase_lua": "Quarto crescente",
+    "iluminacao_lunar_percent": 67.684,
+    "idade_lunar_dias": 9.082,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2021",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2021",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2021_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "3ca82076a1e1d36a6be1f0931c801f0f6d49fd3f3662daeb74cf478d1f657b90",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

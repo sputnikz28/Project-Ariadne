@@ -1,0 +1,84 @@
+{
+  "id": "PERG-2017-098",
+  "titulo": "Pergaminho da Extração 098/2017",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2017,
+  "numero_sorteio": "098/2017",
+  "data": "2017-12-08",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "19:00:00",
+    "timestamp_utc": "2017-12-08T19:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      4,
+      22,
+      30,
+      32,
+      34
+    ],
+    "estrelas": [
+      3,
+      4
+    ],
+    "formato": "4 22 30 32 34 + 3 4",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 122,
+    "media_numeros": 24.4,
+    "mediana_numeros": 30,
+    "desvio_padrao": 10.9836,
+    "amplitude": 30,
+    "pares": 5,
+    "impares": 0,
+    "gaps": [
+      18,
+      8,
+      2,
+      2
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 1,
+      "21-30": 2,
+      "31-40": 2
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Quarto minguante",
+    "iluminacao_lunar_percent": 66.501,
+    "idade_lunar_dias": 20.567,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2017",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2017",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2017_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "12e831289dfb243c65c3b4b64f45d8de32d588788e43aaab38d5306278b428bb",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

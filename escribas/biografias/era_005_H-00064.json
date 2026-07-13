@@ -1,0 +1,86 @@
+{
+  "era": 5,
+  "id": "H-00064",
+  "nome": "Aruk dos Ossos",
+  "raca": "Bruxa",
+  "casa": "Casa Lunar",
+  "geracao": 1,
+  "pais": [],
+  "pontos": 169,
+  "titulo": "Sussurrador do Destino",
+  "estado": "VIVO",
+  "amuletos": [],
+  "melhores_chaves": [
+    {
+      "geracao": 1,
+      "numeros": [
+        3,
+        12,
+        24,
+        43,
+        46
+      ],
+      "estrelas": [
+        6,
+        10
+      ]
+    },
+    {
+      "geracao": 2,
+      "numeros": [
+        16,
+        23,
+        31,
+        37,
+        49
+      ],
+      "estrelas": [
+        1,
+        6
+      ]
+    },
+    {
+      "geracao": 3,
+      "numeros": [
+        23,
+        36,
+        37,
+        38,
+        43
+      ],
+      "estrelas": [
+        3,
+        6
+      ]
+    },
+    {
+      "geracao": 4,
+      "numeros": [
+        10,
+        18,
+        21,
+        24,
+        25
+      ],
+      "estrelas": [
+        5,
+        12
+      ]
+    },
+    {
+      "geracao": 5,
+      "numeros": [
+        18,
+        30,
+        33,
+        45,
+        49
+      ],
+      "estrelas": [
+        9,
+        12
+      ]
+    }
+  ],
+  "criada_em": "2026-07-11T09:21:55+00:00"
+}

@@ -1,0 +1,84 @@
+{
+  "id": "PERG-2019-047",
+  "titulo": "Pergaminho da Extração 047/2019",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2019,
+  "numero_sorteio": "047/2019",
+  "data": "2019-06-11",
+  "dia_semana": "terça-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2019-06-11T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      25,
+      27,
+      39,
+      42,
+      46
+    ],
+    "estrelas": [
+      11,
+      12
+    ],
+    "formato": "25 27 39 42 46 + 11 12",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 179,
+    "media_numeros": 35.8,
+    "mediana_numeros": 39,
+    "desvio_padrao": 8.3283,
+    "amplitude": 21,
+    "pares": 2,
+    "impares": 3,
+    "gaps": [
+      2,
+      12,
+      3,
+      4
+    ],
+    "distribuicao_por_dezenas": {
+      "21-30": 2,
+      "31-40": 1,
+      "41-50": 2
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Quarto crescente",
+    "iluminacao_lunar_percent": 66.877,
+    "idade_lunar_dias": 9.001,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2019",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2019",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2019_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "3103c68112183c569a5344cde03ad44be4787f151916e232348c47c751950912",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

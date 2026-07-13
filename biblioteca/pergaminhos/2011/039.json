@@ -1,0 +1,87 @@
+{
+  "id": "PERG-2011-039",
+  "titulo": "Pergaminho da Extração 039/2011",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2011,
+  "numero_sorteio": "039/2011",
+  "data": "2011-07-19",
+  "dia_semana": "terça-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2011-07-19T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      3,
+      16,
+      25,
+      26,
+      35
+    ],
+    "estrelas": [
+      5,
+      9
+    ],
+    "formato": "3 16 25 26 35 + 5 9",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 105,
+    "media_numeros": 21,
+    "mediana_numeros": 25,
+    "desvio_padrao": 10.8259,
+    "amplitude": 32,
+    "pares": 2,
+    "impares": 3,
+    "gaps": [
+      13,
+      9,
+      1,
+      9
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 1,
+      "11-20": 1,
+      "21-30": 2,
+      "31-40": 1
+    },
+    "repetidos_sorteio_anterior": [
+      26
+    ],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Gibosa minguante",
+    "iluminacao_lunar_percent": 80.759,
+    "idade_lunar_dias": 19.034,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2011",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2011",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2011_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "6ea17c6c3ec15a1086eaa6cf0c2f9e2eb85d6cec00976b744213891c0f46b9bb",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

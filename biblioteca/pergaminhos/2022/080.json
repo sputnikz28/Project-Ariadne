@@ -1,0 +1,87 @@
+{
+  "id": "PERG-2022-080",
+  "titulo": "Pergaminho da Extração 080/2022",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2022,
+  "numero_sorteio": "080/2022",
+  "data": "2022-10-07",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2022-10-07T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      26,
+      27,
+      42,
+      45,
+      50
+    ],
+    "estrelas": [
+      1,
+      12
+    ],
+    "formato": "26 27 42 45 50 + 1 12",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 190,
+    "media_numeros": 38,
+    "mediana_numeros": 42,
+    "desvio_padrao": 9.7365,
+    "amplitude": 24,
+    "pares": 3,
+    "impares": 2,
+    "gaps": [
+      1,
+      15,
+      3,
+      5
+    ],
+    "distribuicao_por_dezenas": {
+      "21-30": 2,
+      "41-50": 3
+    },
+    "repetidos_sorteio_anterior": [
+      42
+    ],
+    "estrelas_repetidas_sorteio_anterior": [
+      12
+    ]
+  },
+  "astronomia": {
+    "fase_lua": "Gibosa crescente",
+    "iluminacao_lunar_percent": 94.463,
+    "idade_lunar_dias": 12.532,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2022",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2022",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2022_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "c02e7c0658f559bc4e943b6955245c3129fab96957c9b6d08d9377ac26a77e0d",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

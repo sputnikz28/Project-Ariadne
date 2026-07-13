@@ -1,0 +1,85 @@
+{
+  "id": "PERG-2010-024",
+  "titulo": "Pergaminho da Extração 024/2010",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2010,
+  "numero_sorteio": "024/2010",
+  "data": "2010-06-11",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2010-06-11T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      2,
+      22,
+      24,
+      36,
+      44
+    ],
+    "estrelas": [
+      1,
+      2
+    ],
+    "formato": "2 22 24 36 44 + 1 2",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 128,
+    "media_numeros": 25.6,
+    "mediana_numeros": 24,
+    "desvio_padrao": 14.2773,
+    "amplitude": 42,
+    "pares": 5,
+    "impares": 0,
+    "gaps": [
+      20,
+      2,
+      12,
+      8
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 1,
+      "21-30": 2,
+      "31-40": 1,
+      "41-50": 1
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Lua nova",
+    "iluminacao_lunar_percent": 0.665,
+    "idade_lunar_dias": 28.763,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2010",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2010",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2010_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "cce4a36c25f18ca28b32cdc0147cdf9b8161745a54a2b1f01a791e58feb8538c",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

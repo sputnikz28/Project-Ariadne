@@ -1,0 +1,85 @@
+{
+  "id": "PERG-2026-010",
+  "titulo": "Pergaminho da Extração 010/2026",
+  "biblioteca": "Grande Grimório das Extrações",
+  "estado": "SELADO",
+  "raridade": "Sagrado",
+  "data": {
+    "extracao": "2026-02-03",
+    "dia_semana": "terça-feira",
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "timestamp_utc": "2026-02-03T19:00:00+00:00"
+  },
+  "extracao": {
+    "numero_sorteio": "010/2026",
+    "numeros": [
+      26,
+      27,
+      28,
+      34,
+      37
+    ],
+    "estrelas": [
+      4,
+      9
+    ],
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma": 152,
+    "media": 30.4,
+    "mediana": 28,
+    "desvio_padrao": 4.3174,
+    "amplitude": 11,
+    "pares": 3,
+    "impares": 2,
+    "gaps": [
+      1,
+      1,
+      6,
+      3
+    ],
+    "distribuicao_dezenas": {
+      "21-30": 3,
+      "31-40": 2
+    },
+    "repetidos_anterior": [],
+    "estrelas_repetidas_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Gibosa minguante",
+    "iluminacao_percent": 95.711,
+    "idade_lunar_dias": 16.726,
+    "eclipse": false
+  },
+  "premios": {
+    "categorias": null,
+    "houve_vencedor_1_premio_total": null,
+    "houve_vencedor_1_premio_portugal": null,
+    "total_vencedores_todas_categorias": null,
+    "total_vencedores_portugal_todas_categorias": null
+  },
+  "qualidade_dados": {
+    "fonte_resultado": "texto ou imagem fornecidos pelo utilizador",
+    "transcricao_manual": true,
+    "ordem_saida_confirmada": false,
+    "dados_financeiros_disponiveis": false,
+    "categorias_premio_disponiveis": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "receita_liquida_apostas_eur",
+      "montante_para_premios_eur",
+      "jackpot_previsto",
+      "categorias_premio"
+    ]
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "selo": "Biblioteca Eterna",
+    "sha256": "cc19b96c6b49ed9d31e473eccf9e15ca0159d804a6a364f989979232a93563c7",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

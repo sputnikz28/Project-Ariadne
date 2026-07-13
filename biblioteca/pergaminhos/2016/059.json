@@ -1,0 +1,88 @@
+{
+  "id": "PERG-2016-059",
+  "titulo": "Pergaminho da Extração 059/2016",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2016,
+  "numero_sorteio": "059/2016",
+  "data": "2016-07-22",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2016-07-22T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      7,
+      24,
+      26,
+      37,
+      45
+    ],
+    "estrelas": [
+      5,
+      9
+    ],
+    "formato": "7 24 26 37 45 + 5 9",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 139,
+    "media_numeros": 27.8,
+    "mediana_numeros": 26,
+    "desvio_padrao": 12.8903,
+    "amplitude": 38,
+    "pares": 2,
+    "impares": 3,
+    "gaps": [
+      17,
+      2,
+      11,
+      8
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 1,
+      "21-30": 2,
+      "31-40": 1,
+      "41-50": 1
+    },
+    "repetidos_sorteio_anterior": [
+      24,
+      37
+    ],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Gibosa minguante",
+    "iluminacao_lunar_percent": 90.934,
+    "idade_lunar_dias": 17.64,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2016",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2016",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2016_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "f62a3ef078d7f87809ba7d719d1773bd5d31ac38e41df8d78a5eb56129d0f54a",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

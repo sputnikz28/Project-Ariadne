@@ -1,0 +1,85 @@
+{
+  "id": "PERG-2020-044",
+  "titulo": "Pergaminho da Extração 044/2020",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2020,
+  "numero_sorteio": "044/2020",
+  "data": "2020-06-02",
+  "dia_semana": "terça-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2020-06-02T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      10,
+      12,
+      22,
+      26,
+      49
+    ],
+    "estrelas": [
+      7,
+      11
+    ],
+    "formato": "10 12 22 26 49 + 7 11",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 119,
+    "media_numeros": 23.8,
+    "mediana_numeros": 22,
+    "desvio_padrao": 13.9485,
+    "amplitude": 39,
+    "pares": 4,
+    "impares": 1,
+    "gaps": [
+      2,
+      10,
+      4,
+      23
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 1,
+      "11-20": 1,
+      "21-30": 2,
+      "41-50": 1
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Gibosa crescente",
+    "iluminacao_lunar_percent": 87.458,
+    "idade_lunar_dias": 11.363,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2020",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2020",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2020_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "f6545a6de4055086ecda7588e3e4a2ce54b4dfffe40e694096408b169d93c076",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

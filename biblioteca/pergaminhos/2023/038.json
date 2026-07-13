@@ -1,0 +1,87 @@
+{
+  "id": "PERG-2023-038",
+  "titulo": "Pergaminho da Extração 038/2023",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2023,
+  "numero_sorteio": "038/2023",
+  "data": "2023-05-12",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2023-05-12T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      9,
+      10,
+      13,
+      39,
+      44
+    ],
+    "estrelas": [
+      4,
+      6
+    ],
+    "formato": "9 10 13 39 44 + 4 6",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 115,
+    "media_numeros": 23,
+    "mediana_numeros": 13,
+    "desvio_padrao": 15.2447,
+    "amplitude": 35,
+    "pares": 2,
+    "impares": 3,
+    "gaps": [
+      1,
+      3,
+      26,
+      5
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 2,
+      "11-20": 1,
+      "31-40": 1,
+      "41-50": 1
+    },
+    "repetidos_sorteio_anterior": [
+      13
+    ],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Quarto minguante",
+    "iluminacao_lunar_percent": 48.301,
+    "idade_lunar_dias": 22.308,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2023",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2023",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2023_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "7a448bec084759e516534e8383fb0cbf5e338d9b4c6dd03ec62660753baa86d8",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

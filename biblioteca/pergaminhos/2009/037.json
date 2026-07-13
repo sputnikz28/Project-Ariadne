@@ -1,0 +1,84 @@
+{
+  "id": "PERG-2009-037",
+  "titulo": "Pergaminho da Extração 037/2009",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2009,
+  "numero_sorteio": "037/2009",
+  "data": "2009-09-11",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2009-09-11T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      12,
+      15,
+      35,
+      42,
+      43
+    ],
+    "estrelas": [
+      4,
+      6
+    ],
+    "formato": "12 15 35 42 43 + 4 6",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 147,
+    "media_numeros": 29.4,
+    "mediana_numeros": 35,
+    "desvio_padrao": 13.3056,
+    "amplitude": 31,
+    "pares": 2,
+    "impares": 3,
+    "gaps": [
+      3,
+      20,
+      7,
+      1
+    ],
+    "distribuicao_por_dezenas": {
+      "11-20": 2,
+      "31-40": 1,
+      "41-50": 2
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Quarto minguante",
+    "iluminacao_lunar_percent": 53.871,
+    "idade_lunar_dias": 21.784,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2009",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2009",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2009_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "5ffc07868228e6b66f6707c0e88353a60003485a2bb65d9eb1534c686a2dc774",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

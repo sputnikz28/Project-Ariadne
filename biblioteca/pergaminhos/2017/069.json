@@ -1,0 +1,86 @@
+{
+  "id": "PERG-2017-069",
+  "titulo": "Pergaminho da Extração 069/2017",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2017,
+  "numero_sorteio": "069/2017",
+  "data": "2017-08-29",
+  "dia_semana": "terça-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2017-08-29T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      4,
+      12,
+      15,
+      32,
+      38
+    ],
+    "estrelas": [
+      1,
+      5
+    ],
+    "formato": "4 12 15 32 38 + 1 5",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 101,
+    "media_numeros": 20.2,
+    "mediana_numeros": 15,
+    "desvio_padrao": 12.7499,
+    "amplitude": 34,
+    "pares": 4,
+    "impares": 1,
+    "gaps": [
+      8,
+      3,
+      17,
+      6
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 1,
+      "11-20": 2,
+      "31-40": 2
+    },
+    "repetidos_sorteio_anterior": [
+      15
+    ],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Quarto crescente",
+    "iluminacao_lunar_percent": 53.888,
+    "idade_lunar_dias": 7.749,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2017",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2017",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2017_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "90604d428c58196335876e4e81be730e7c06308ba9ff3d26dafed3850adfc201",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

@@ -1,0 +1,89 @@
+{
+  "id": "PERG-2015-020",
+  "titulo": "Pergaminho da Extração 020/2015",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2015,
+  "numero_sorteio": "020/2015",
+  "data": "2015-03-10",
+  "dia_semana": "terça-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "19:00:00",
+    "timestamp_utc": "2015-03-10T19:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      2,
+      6,
+      23,
+      30,
+      31
+    ],
+    "estrelas": [
+      2,
+      10
+    ],
+    "formato": "2 6 23 30 31 + 2 10",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 92,
+    "media_numeros": 18.4,
+    "mediana_numeros": 23,
+    "desvio_padrao": 12.1425,
+    "amplitude": 29,
+    "pares": 3,
+    "impares": 2,
+    "gaps": [
+      4,
+      17,
+      7,
+      1
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 2,
+      "21-30": 2,
+      "31-40": 1
+    },
+    "repetidos_sorteio_anterior": [
+      23,
+      30
+    ],
+    "estrelas_repetidas_sorteio_anterior": [
+      2
+    ]
+  },
+  "astronomia": {
+    "fase_lua": "Gibosa minguante",
+    "iluminacao_lunar_percent": 78.469,
+    "idade_lunar_dias": 19.301,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2015",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2015",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2015_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "a8f69b664f80e61f980c310427b8ed42961b9d9a403afa2d2f801ec958840a84",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

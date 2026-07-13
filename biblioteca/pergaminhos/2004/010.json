@@ -1,0 +1,84 @@
+{
+  "id": "PERG-2004-010",
+  "titulo": "Pergaminho da Extração 010/2004",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2004,
+  "numero_sorteio": "010/2004",
+  "data": "2004-04-16",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2004-04-16T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      14,
+      15,
+      28,
+      35,
+      40
+    ],
+    "estrelas": [
+      1,
+      3
+    ],
+    "formato": "14 15 28 35 40 + 1 3",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 132,
+    "media_numeros": 26.4,
+    "mediana_numeros": 28,
+    "desvio_padrao": 10.4422,
+    "amplitude": 26,
+    "pares": 3,
+    "impares": 2,
+    "gaps": [
+      1,
+      13,
+      7,
+      5
+    ],
+    "distribuicao_por_dezenas": {
+      "11-20": 2,
+      "21-30": 1,
+      "31-40": 2
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Lua minguante",
+    "iluminacao_lunar_percent": 7.903,
+    "idade_lunar_dias": 26.852,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2004",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2004",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2004_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "c45c82dd8dc2ab50bb7a99ebd74c3b9a8b3d06f440c3766f13f672053cda674e",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

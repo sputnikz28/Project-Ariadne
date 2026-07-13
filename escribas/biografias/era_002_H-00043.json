@@ -1,0 +1,101 @@
+{
+  "era": 2,
+  "id": "H-00043",
+  "nome": "Selene do Bosque",
+  "raca": "Vidente",
+  "casa": "Casa do Caos",
+  "geracao": 1,
+  "pais": [],
+  "pontos": 168,
+  "titulo": "Observador Celeste",
+  "estado": "VIVO",
+  "amuletos": [
+    {
+      "id": "ART-57AF0DCADD",
+      "nome": "Fragmento Divino",
+      "raridade": "COMUM",
+      "multiplicador": 1.05,
+      "criador": "Selene do Bosque",
+      "geracao_criacao": 11,
+      "donos": [
+        "Selene do Bosque"
+      ],
+      "energia_acumulada": 24.7,
+      "conselhos": 0,
+      "estado": "ATIVO"
+    }
+  ],
+  "melhores_chaves": [
+    {
+      "geracao": 1,
+      "numeros": [
+        18,
+        31,
+        37,
+        38,
+        45
+      ],
+      "estrelas": [
+        5,
+        9
+      ]
+    },
+    {
+      "geracao": 2,
+      "numeros": [
+        3,
+        31,
+        35,
+        37,
+        48
+      ],
+      "estrelas": [
+        2,
+        9
+      ]
+    },
+    {
+      "geracao": 3,
+      "numeros": [
+        2,
+        25,
+        35,
+        39,
+        50
+      ],
+      "estrelas": [
+        5,
+        9
+      ]
+    },
+    {
+      "geracao": 4,
+      "numeros": [
+        3,
+        22,
+        36,
+        46,
+        47
+      ],
+      "estrelas": [
+        2,
+        9
+      ]
+    },
+    {
+      "geracao": 5,
+      "numeros": [
+        3,
+        5,
+        13,
+        30,
+        37
+      ],
+      "estrelas": [
+        2,
+        9
+      ]
+    }
+  ],
+  "criada_em": "2026-07-11T13:32:34+00:00"
+}

@@ -1,0 +1,88 @@
+{
+  "id": "PERG-2016-095",
+  "titulo": "Pergaminho da Extração 095/2016",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2016,
+  "numero_sorteio": "095/2016",
+  "data": "2016-11-25",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "19:00:00",
+    "timestamp_utc": "2016-11-25T19:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      5,
+      11,
+      17,
+      23,
+      28
+    ],
+    "estrelas": [
+      10,
+      11
+    ],
+    "formato": "5 11 17 23 28 + 10 11",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 84,
+    "media_numeros": 16.8,
+    "mediana_numeros": 17,
+    "desvio_padrao": 8.2073,
+    "amplitude": 23,
+    "pares": 1,
+    "impares": 4,
+    "gaps": [
+      6,
+      6,
+      6,
+      5
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 1,
+      "11-20": 2,
+      "21-30": 2
+    },
+    "repetidos_sorteio_anterior": [
+      5
+    ],
+    "estrelas_repetidas_sorteio_anterior": [
+      10
+    ]
+  },
+  "astronomia": {
+    "fase_lua": "Lua minguante",
+    "iluminacao_lunar_percent": 11.911,
+    "idade_lunar_dias": 26.218,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2016",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2016",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2016_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "0b1d023568faa96730206b90e0b44c125de4077f3eb91138b948c3e895e81097",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

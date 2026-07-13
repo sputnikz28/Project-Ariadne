@@ -1,0 +1,168 @@
+{
+  "nome": "Índice Global dos Pergaminhos de Ariadne",
+  "versao": "1.0",
+  "criado_em": "2026-07-11T16:33:23",
+  "intervalo_anos": [
+    2004,
+    2025
+  ],
+  "quantidade_anos": 22,
+  "quantidade_total_pergaminhos": 1907,
+  "anos": [
+    {
+      "ano": 2004,
+      "quantidade_sorteios": 47,
+      "pasta": "biblioteca/pergaminhos/2004",
+      "indice": "biblioteca/pergaminhos/2004/indice.json",
+      "fonte": "biblioteca/fontes/euromilhoes_2004_dataset_completo.json"
+    },
+    {
+      "ano": 2005,
+      "quantidade_sorteios": 52,
+      "pasta": "biblioteca/pergaminhos/2005",
+      "indice": "biblioteca/pergaminhos/2005/indice.json",
+      "fonte": "biblioteca/fontes/euromilhoes_2005_dataset_completo.json"
+    },
+    {
+      "ano": 2006,
+      "quantidade_sorteios": 52,
+      "pasta": "biblioteca/pergaminhos/2006",
+      "indice": "biblioteca/pergaminhos/2006/indice.json",
+      "fonte": "biblioteca/fontes/euromilhoes_2006_dataset_completo.json"
+    },
+    {
+      "ano": 2007,
+      "quantidade_sorteios": 52,
+      "pasta": "biblioteca/pergaminhos/2007",
+      "indice": "biblioteca/pergaminhos/2007/indice.json",
+      "fonte": "biblioteca/fontes/euromilhoes_2007_dataset_completo.json"
+    },
+    {
+      "ano": 2008,
+      "quantidade_sorteios": 52,
+      "pasta": "biblioteca/pergaminhos/2008",
+      "indice": "biblioteca/pergaminhos/2008/indice.json",
+      "fonte": "biblioteca/fontes/euromilhoes_2008_dataset_completo.json"
+    },
+    {
+      "ano": 2009,
+      "quantidade_sorteios": 52,
+      "pasta": "biblioteca/pergaminhos/2009",
+      "indice": "biblioteca/pergaminhos/2009/indice.json",
+      "fonte": "biblioteca/fontes/euromilhoes_2009_dataset_completo.json"
+    },
+    {
+      "ano": 2010,
+      "quantidade_sorteios": 53,
+      "pasta": "biblioteca/pergaminhos/2010",
+      "indice": "biblioteca/pergaminhos/2010/indice.json",
+      "fonte": "biblioteca/fontes/euromilhoes_2010_dataset_completo.json"
+    },
+    {
+      "ano": 2011,
+      "quantidade_sorteios": 86,
+      "pasta": "biblioteca/pergaminhos/2011",
+      "indice": "biblioteca/pergaminhos/2011/indice.json",
+      "fonte": "biblioteca/fontes/euromilhoes_2011_dataset_completo.json"
+    },
+    {
+      "ano": 2012,
+      "quantidade_sorteios": 104,
+      "pasta": "biblioteca/pergaminhos/2012",
+      "indice": "biblioteca/pergaminhos/2012/indice.json",
+      "fonte": "biblioteca/fontes/euromilhoes_2012_dataset_completo.json"
+    },
+    {
+      "ano": 2013,
+      "quantidade_sorteios": 105,
+      "pasta": "biblioteca/pergaminhos/2013",
+      "indice": "biblioteca/pergaminhos/2013/indice.json",
+      "fonte": "biblioteca/fontes/euromilhoes_2013_dataset_completo.json"
+    },
+    {
+      "ano": 2014,
+      "quantidade_sorteios": 104,
+      "pasta": "biblioteca/pergaminhos/2014",
+      "indice": "biblioteca/pergaminhos/2014/indice.json",
+      "fonte": "biblioteca/fontes/euromilhoes_2014_dataset_completo.json"
+    },
+    {
+      "ano": 2015,
+      "quantidade_sorteios": 104,
+      "pasta": "biblioteca/pergaminhos/2015",
+      "indice": "biblioteca/pergaminhos/2015/indice.json",
+      "fonte": "biblioteca/fontes/euromilhoes_2015_dataset_completo.json"
+    },
+    {
+      "ano": 2016,
+      "quantidade_sorteios": 105,
+      "pasta": "biblioteca/pergaminhos/2016",
+      "indice": "biblioteca/pergaminhos/2016/indice.json",
+      "fonte": "biblioteca/fontes/euromilhoes_2016_dataset_completo.json"
+    },
+    {
+      "ano": 2017,
+      "quantidade_sorteios": 104,
+      "pasta": "biblioteca/pergaminhos/2017",
+      "indice": "biblioteca/pergaminhos/2017/indice.json",
+      "fonte": "biblioteca/fontes/euromilhoes_2017_dataset_completo.json"
+    },
+    {
+      "ano": 2018,
+      "quantidade_sorteios": 104,
+      "pasta": "biblioteca/pergaminhos/2018",
+      "indice": "biblioteca/pergaminhos/2018/indice.json",
+      "fonte": "biblioteca/fontes/euromilhoes_2018_dataset_completo.json"
+    },
+    {
+      "ano": 2019,
+      "quantidade_sorteios": 105,
+      "pasta": "biblioteca/pergaminhos/2019",
+      "indice": "biblioteca/pergaminhos/2019/indice.json",
+      "fonte": "biblioteca/fontes/euromilhoes_2019_dataset_completo.json"
+    },
+    {
+      "ano": 2020,
+      "quantidade_sorteios": 104,
+      "pasta": "biblioteca/pergaminhos/2020",
+      "indice": "biblioteca/pergaminhos/2020/indice.json",
+      "fonte": "biblioteca/fontes/euromilhoes_2020_dataset_completo.json"
+    },
+    {
+      "ano": 2021,
+      "quantidade_sorteios": 105,
+      "pasta": "biblioteca/pergaminhos/2021",
+      "indice": "biblioteca/pergaminhos/2021/indice.json",
+      "fonte": "biblioteca/fontes/euromilhoes_2021_dataset_completo.json"
+    },
+    {
+      "ano": 2022,
+      "quantidade_sorteios": 104,
+      "pasta": "biblioteca/pergaminhos/2022",
+      "indice": "biblioteca/pergaminhos/2022/indice.json",
+      "fonte": "biblioteca/fontes/euromilhoes_2022_dataset_completo.json"
+    },
+    {
+      "ano": 2023,
+      "quantidade_sorteios": 104,
+      "pasta": "biblioteca/pergaminhos/2023",
+      "indice": "biblioteca/pergaminhos/2023/indice.json",
+      "fonte": "biblioteca/fontes/euromilhoes_2023_dataset_completo.json"
+    },
+    {
+      "ano": 2024,
+      "quantidade_sorteios": 105,
+      "pasta": "biblioteca/pergaminhos/2024",
+      "indice": "biblioteca/pergaminhos/2024/indice.json",
+      "fonte": "biblioteca/fontes/euromilhoes_2024_dataset_completo.json"
+    },
+    {
+      "ano": 2025,
+      "quantidade_sorteios": 104,
+      "pasta": "biblioteca/pergaminhos/2025",
+      "indice": "biblioteca/pergaminhos/2025/indice.json",
+      "fonte": "biblioteca/fontes/euromilhoes_2025_dataset_completo.json"
+    }
+  ],
+  "nota": "Cada sorteio foi convertido num pergaminho independente. Os ficheiros anuais originais permanecem em biblioteca/fontes."
+}

@@ -1,0 +1,86 @@
+{
+  "id": "PERG-2022-094",
+  "titulo": "Pergaminho da Extração 094/2022",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2022,
+  "numero_sorteio": "094/2022",
+  "data": "2022-11-25",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "19:00:00",
+    "timestamp_utc": "2022-11-25T19:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      19,
+      21,
+      35,
+      37,
+      39
+    ],
+    "estrelas": [
+      2,
+      6
+    ],
+    "formato": "19 21 35 37 39 + 2 6",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 151,
+    "media_numeros": 30.2,
+    "mediana_numeros": 35,
+    "desvio_padrao": 8.4475,
+    "amplitude": 20,
+    "pares": 0,
+    "impares": 5,
+    "gaps": [
+      2,
+      14,
+      2,
+      2
+    ],
+    "distribuicao_por_dezenas": {
+      "11-20": 1,
+      "21-30": 1,
+      "31-40": 3
+    },
+    "repetidos_sorteio_anterior": [
+      21
+    ],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Lua crescente",
+    "iluminacao_lunar_percent": 4.721,
+    "idade_lunar_dias": 2.059,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2022",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2022",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2022_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "5f4585cadf7bf3f03f80242e33eee6aea026a56d3716ea622f324dae35eb7694",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

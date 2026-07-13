@@ -1,0 +1,85 @@
+{
+  "id": "PERG-2016-002",
+  "titulo": "Pergaminho da Extração 002/2016",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2016,
+  "numero_sorteio": "002/2016",
+  "data": "2016-01-05",
+  "dia_semana": "terça-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "19:00:00",
+    "timestamp_utc": "2016-01-05T19:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      6,
+      10,
+      31,
+      36,
+      39
+    ],
+    "estrelas": [
+      6,
+      10
+    ],
+    "formato": "6 10 31 36 39 + 6 10",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 122,
+    "media_numeros": 24.4,
+    "mediana_numeros": 31,
+    "desvio_padrao": 13.6909,
+    "amplitude": 33,
+    "pares": 3,
+    "impares": 2,
+    "gaps": [
+      4,
+      21,
+      5,
+      3
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 2,
+      "31-40": 3
+    },
+    "repetidos_sorteio_anterior": [
+      39
+    ],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Lua minguante",
+    "iluminacao_lunar_percent": 18.547,
+    "idade_lunar_dias": 25.346,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2016",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2016",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2016_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "241a202dbddfbc3998c2e6cd4cf3952f4afbeb3bf1fd7daf1188d16acd0475ca",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

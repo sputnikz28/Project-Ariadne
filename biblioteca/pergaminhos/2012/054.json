@@ -1,0 +1,87 @@
+{
+  "id": "PERG-2012-054",
+  "titulo": "Pergaminho da Extração 054/2012",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2012,
+  "numero_sorteio": "054/2012",
+  "data": "2012-07-06",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2012-07-06T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      31,
+      32,
+      38,
+      40,
+      42
+    ],
+    "estrelas": [
+      1,
+      3
+    ],
+    "formato": "31 32 38 40 42 + 1 3",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 183,
+    "media_numeros": 36.6,
+    "mediana_numeros": 38,
+    "desvio_padrao": 4.3635,
+    "amplitude": 11,
+    "pares": 4,
+    "impares": 1,
+    "gaps": [
+      1,
+      6,
+      2,
+      2
+    ],
+    "distribuicao_por_dezenas": {
+      "31-40": 4,
+      "41-50": 1
+    },
+    "repetidos_sorteio_anterior": [
+      40
+    ],
+    "estrelas_repetidas_sorteio_anterior": [
+      3
+    ]
+  },
+  "astronomia": {
+    "fase_lua": "Gibosa minguante",
+    "iluminacao_lunar_percent": 88.825,
+    "idade_lunar_dias": 17.969,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2012",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2012",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2012_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "09976bd4eb4a0b55ef3c2dfa5a39211a5b1a211afe14e1933620374c7c9e5b55",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

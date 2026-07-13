@@ -1,0 +1,86 @@
+{
+  "id": "PERG-2010-021",
+  "titulo": "Pergaminho da Extração 021/2010",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2010,
+  "numero_sorteio": "021/2010",
+  "data": "2010-05-21",
+  "dia_semana": "sexta-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2010-05-21T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      7,
+      19,
+      30,
+      38,
+      50
+    ],
+    "estrelas": [
+      4,
+      7
+    ],
+    "formato": "7 19 30 38 50 + 4 7",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 144,
+    "media_numeros": 28.8,
+    "mediana_numeros": 30,
+    "desvio_padrao": 14.8782,
+    "amplitude": 43,
+    "pares": 3,
+    "impares": 2,
+    "gaps": [
+      12,
+      11,
+      8,
+      12
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 1,
+      "11-20": 1,
+      "21-30": 1,
+      "31-40": 1,
+      "41-50": 1
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Quarto crescente",
+    "iluminacao_lunar_percent": 58.742,
+    "idade_lunar_dias": 8.209,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2010",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2010",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2010_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "a7c0b36c255a219d9834fc30a61eac9a576890afcd9b2e94357b8a0df969e3ab",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

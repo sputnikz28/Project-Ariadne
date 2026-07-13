@@ -1,0 +1,83 @@
+{
+  "id": "PERG-2012-081",
+  "titulo": "Pergaminho da Extração 081/2012",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2012,
+  "numero_sorteio": "081/2012",
+  "data": "2012-10-09",
+  "dia_semana": "terça-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2012-10-09T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      2,
+      8,
+      10,
+      23,
+      25
+    ],
+    "estrelas": [
+      8,
+      9
+    ],
+    "formato": "2 8 10 23 25 + 8 9",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 68,
+    "media_numeros": 13.6,
+    "mediana_numeros": 10,
+    "desvio_padrao": 8.9129,
+    "amplitude": 23,
+    "pares": 3,
+    "impares": 2,
+    "gaps": [
+      6,
+      2,
+      13,
+      2
+    ],
+    "distribuicao_por_dezenas": {
+      "01-10": 3,
+      "21-30": 2
+    },
+    "repetidos_sorteio_anterior": [],
+    "estrelas_repetidas_sorteio_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Quarto minguante",
+    "iluminacao_lunar_percent": 35.932,
+    "idade_lunar_dias": 23.488,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2012",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2012",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2012_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "58b017d6398bf755089ca7fdba0f8250f2a49379bb70732e0edc28c740c1184b",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

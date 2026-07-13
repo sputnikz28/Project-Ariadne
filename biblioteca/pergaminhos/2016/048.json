@@ -1,0 +1,88 @@
+{
+  "id": "PERG-2016-048",
+  "titulo": "Pergaminho da Extração 048/2016",
+  "biblioteca": "Biblioteca Eterna de Ariadne",
+  "estado": "SELADO",
+  "ano": 2016,
+  "numero_sorteio": "048/2016",
+  "data": "2016-06-14",
+  "dia_semana": "terça-feira",
+  "horario": {
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "hora_utc": "18:00:00",
+    "timestamp_utc": "2016-06-14T18:00:00+00:00"
+  },
+  "extracao": {
+    "numeros": [
+      13,
+      34,
+      39,
+      42,
+      50
+    ],
+    "estrelas": [
+      9,
+      11
+    ],
+    "formato": "13 34 39 42 50 + 9 11",
+    "ordem_saida": null,
+    "ordem_saida_disponivel": false
+  },
+  "estatisticas": {
+    "soma_numeros": 178,
+    "media_numeros": 35.6,
+    "mediana_numeros": 39,
+    "desvio_padrao": 12.4354,
+    "amplitude": 37,
+    "pares": 3,
+    "impares": 2,
+    "gaps": [
+      21,
+      5,
+      3,
+      8
+    ],
+    "distribuicao_por_dezenas": {
+      "11-20": 1,
+      "31-40": 2,
+      "41-50": 2
+    },
+    "repetidos_sorteio_anterior": [
+      42
+    ],
+    "estrelas_repetidas_sorteio_anterior": [
+      9
+    ]
+  },
+  "astronomia": {
+    "fase_lua": "Gibosa crescente",
+    "iluminacao_lunar_percent": 72.234,
+    "idade_lunar_dias": 9.548,
+    "eclipse": false
+  },
+  "financeiro": null,
+  "premios": null,
+  "qualidade_dados": {
+    "fonte_resultado": "EuroMillones.com — página anual de 2016",
+    "url_fonte": "https://www.euromillones.com/pt/resultados/euromilhoes--resultados-ano-2016",
+    "ordem_saida_confirmada": false,
+    "campos_em_falta": [
+      "ordem_saida",
+      "estatisticas_financeiras",
+      "premios"
+    ]
+  },
+  "fonte": {
+    "ficheiro": "euromilhoes_2016_dataset_completo.json",
+    "schema_version": "1.1",
+    "pais_fonte": "Portugal"
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "guardia": "Ariadne",
+    "sha256_chave": "90e667f810bb1473d877385b1850ec3ea8e4a075390e4f4a8c95ff44afd748d6",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}
