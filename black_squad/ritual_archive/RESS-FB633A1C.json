@@ -1,0 +1,21 @@
+{
+  "id": "RESS-FB633A1C",
+  "nome": "Íria da Névoa Azul Eclipse",
+  "classe": "Lenda Ressuscitada",
+  "origem": "Era dos Primeiros Oráculos",
+  "chave": [
+    [
+      4,
+      17,
+      23,
+      34,
+      46
+    ],
+    [
+      3,
+      9
+    ]
+  ],
+  "corrupcao": 0.2944,
+  "ressuscitado_por": "Veyron Eclipse"
+}

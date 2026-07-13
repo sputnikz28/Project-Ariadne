@@ -1,0 +1,41 @@
+{
+  "nivel": 15,
+  "conhecimento": {
+    "desvio_padrao": true,
+    "anti_popularidade": true,
+    "diversificacao": true,
+    "frequencias": true,
+    "pares": true,
+    "trios": true,
+    "gaps": true,
+    "historico": true,
+    "necromancia": true
+  },
+  "livros_copiados": [
+    "livro_gaps.json",
+    "livro_proximas_extracoes.json",
+    "livro_numeros_frios.json",
+    "livro_estrelas.json",
+    "grimorio_extracoes.json",
+    "livro_numeros_quentes.json",
+    "livro_pares_sagrados.json",
+    "livro_trios_proibidos.json",
+    "livro_atrasos.json"
+  ],
+  "reliquias_roubadas": [
+    "ART-F46159D799",
+    "ART-5637DEC365",
+    "ART-67230294CE",
+    "ART-EXEMPLO001",
+    "ART-F445271008"
+  ],
+  "lendas_ressuscitadas": [
+    "RESS-FB633A1C",
+    "RESS-33AFFF35",
+    "RESS-C3CCDA9F",
+    "RESS-2B0A102F",
+    "RESS-C18573CA",
+    "RESS-F8CE9D66"
+  ],
+  "execucoes": 24
+}

@@ -1,0 +1,19 @@
+{
+  "tipo": "PAPIRO_KOR_PRETO",
+  "semana_iso": 28,
+  "criado_em": "2026-07-12T00:33:27",
+  "teste": true,
+  "chave_proposta": {
+    "numeros": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "estrelas": [
+      1,
+      2
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "id": "MIS-2FBE5805",
+  "momento": "2026-07-11T17:13:34+00:00",
+  "tipo_alvo": "RELIQUIA",
+  "alvo": "ART-693DB66483.json",
+  "equipa": [
+    "Arya da Lâmina Verde",
+    "Kael da Folha Negra"
+  ],
+  "poder": 0.8122,
+  "defesa": 0.9,
+  "sucesso": false,
+  "resultado": "A equipa foi detetada pelas Sentinelas Negras.",
+  "ninja_corrompido": "Kael da Folha Negra"
+}

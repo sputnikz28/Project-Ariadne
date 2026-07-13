@@ -1,0 +1,17 @@
+╔════════════════════════════════════════════════════╗
+             📜 CRÓNICA DA ERA 1
+╚════════════════════════════════════════════════════╝
+
+Semente do universo: 1783776750689192668
+Chave original: [[3, 8, 33, 37, 45], [3, 6]]
+Chave corrompida: [[6, 32, 37, 38, 43], [3, 6]]
+Indivíduos únicos: 744
+Chaves das raças antigas: 1008
+Magos Negros: 5
+Missões Élficas nesta era: 3
+Artefactos persistentes: 5
+Livros proibidos: 9
+Reflexos sombrios: 10
+Lendas: 1
+
+Os Escribas fecharam os portões do arquivo e selaram esta era.

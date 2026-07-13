@@ -1,0 +1,14 @@
+{
+  "id": "MIS-9C456E47",
+  "momento": "2026-07-11T13:32:33+00:00",
+  "tipo_alvo": "LIVRO",
+  "alvo": "LIVRO-NEGRO-DF68A330.json",
+  "equipa": [
+    "Elyndor Sem Pegadas",
+    "Thalion Passo Silencioso"
+  ],
+  "poder": 0.81,
+  "defesa": 0.85,
+  "sucesso": false,
+  "resultado": "A equipa foi detetada pelas Sentinelas Negras."
+}

@@ -1,0 +1,30 @@
+╔════════════════════════════════════════════════════╗
+         🌌 V6 — CRÓNICAS DAS CINCO ERAS
+╚════════════════════════════════════════════════════╝
+
+Campanha: Mundo Clássico
+Rodadas: 2
+
+ERA 1
+  Seed: 1783776750689192668
+  Conselho: [[3, 8, 33, 37, 45], [3, 6]]
+  Linha corrompida: [[6, 32, 37, 38, 43], [3, 6]]
+  Indivíduos: 744
+  Artefactos: 5
+  Livros: 9
+  Lendas: 1
+
+ERA 2
+  Seed: 1783776752932848032
+  Conselho: [[3, 8, 25, 36, 46], [5, 6]]
+  Linha corrompida: [[1, 10, 26, 33, 43], [5, 6]]
+  Indivíduos: 744
+  Artefactos: 5
+  Livros: 9
+  Lendas: 1
+
+🏛️ CONSELHO DOS CONSELHOS
+Números: [3, 8, 25, 33, 36]
+Estrelas: [6, 3]
+
+Os Escribas selaram as cinco eras no Atlas do Universo.

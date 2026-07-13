@@ -1,0 +1,68 @@
+{
+  "tipo": "DESCRITIVO_NAO_PREDITIVO",
+  "total_pergaminhos": 55,
+  "numeros_atrasados": [
+    {
+      "numero": 21,
+      "atraso": 48
+    },
+    {
+      "numero": 24,
+      "atraso": 37
+    },
+    {
+      "numero": 15,
+      "atraso": 36
+    },
+    {
+      "numero": 50,
+      "atraso": 35
+    },
+    {
+      "numero": 27,
+      "atraso": 28
+    },
+    {
+      "numero": 11,
+      "atraso": 27
+    },
+    {
+      "numero": 13,
+      "atraso": 23
+    },
+    {
+      "numero": 30,
+      "atraso": 22
+    },
+    {
+      "numero": 40,
+      "atraso": 22
+    },
+    {
+      "numero": 19,
+      "atraso": 18
+    },
+    {
+      "numero": 32,
+      "atraso": 17
+    },
+    {
+      "numero": 10,
+      "atraso": 16
+    },
+    {
+      "numero": 43,
+      "atraso": 16
+    },
+    {
+      "numero": 20,
+      "atraso": 15
+    },
+    {
+      "numero": 38,
+      "atraso": 15
+    }
+  ],
+  "aviso": "Observação histórica; não aumenta a probabilidade de prever um sorteio futuro.",
+  "criada_em": "2026-07-13T11:22:54"
+}

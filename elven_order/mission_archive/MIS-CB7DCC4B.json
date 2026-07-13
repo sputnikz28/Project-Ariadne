@@ -1,0 +1,14 @@
+{
+  "id": "MIS-CB7DCC4B",
+  "momento": "2026-07-11T13:32:33+00:00",
+  "tipo_alvo": "LIVRO",
+  "alvo": "LIVRO-NEGRO-B0CCEF6F.json",
+  "equipa": [
+    "Arya da Lâmina Verde",
+    "Kael da Folha Negra"
+  ],
+  "poder": 0.7657,
+  "defesa": 0.85,
+  "sucesso": false,
+  "resultado": "A equipa foi detetada pelas Sentinelas Negras."
+}

@@ -186,7 +186,7 @@ Consultas reutilizadas quando possível.
 
 | Facção | Módulo | O que produz |
 |--------|--------|-------------|
-| Cartógrafos do Caos | `faccoes/cartografos_caos/` | 5 livros analíticos em `biblioteca/livros/cartografos/` (V8) |
+| Cartógrafos do Caos | `faccoes/cartografos_caos/` | 5 livros analíticos em `biblioteca/books/cartographers/` (V8) |
 | Monges e Escribas | `amuletos/biblioteca.py` | Livros reconstruíveis, índices |
 
 ## Vilões e mecânicas narrativas
@@ -222,7 +222,7 @@ lang = pt   # pt · es · fr · nl · de · en · gb (gb=alias de en; inválido�
 ### API pública
 
 ```python
-from i18n.traducoes import t, lang_de_cfg
+from i18n.translations import t, lang_de_cfg
 
 lang = lang_de_cfg(cfg)          # lê e valida lang do ConfigParser; fallback 'pt'
 t('veredicto_acaso', lang)       # devolve string traduzida; fallback pt se chave ausente
@@ -280,7 +280,7 @@ O campo `lang` é gravado em cada experiência JSON dos Axiomantes (`ritual.py �
 | `numeros_menos_frequentes(limite)` | V7.2 | Menos frequentes no histórico completo normalizado |
 | `padrao_transicao()` | V7.2 | Análise penúltima→última chave (chegados, saídos, persistentes) |
 | `ecos_semanais(semana_iso)` | V7.2 | Sorteios da mesma semana ISO em todos os anos |
-| `criar_papiro(semana_iso, dados)` | V7.2 | Grava papiro em `biblioteca/kors_negros/papiros/` |
+| `criar_papiro(semana_iso, dados)` | V7.2 | Grava papiro em `biblioteca/black_kors/papyri/` |
 | `historico_completo(desde, ate, ultimos)` | V8 | Todos os sorteios de todos os anos (1962 draws, 2004-2026) |
 | `ultima_chave_conhecida()` | V8.1 | Último sorteio registado (data, numeros, estrelas) |
 
@@ -319,7 +319,7 @@ chave (números chegados, persistentes, vizinhos).
 Estratégia: `ariadne.ecos_semanais(semana_iso)` → sorteios da mesma semana
 ISO em todos os anos disponíveis. Cria papiros em:
 
-    biblioteca/kors_negros/papiros/semana_XX/
+    biblioteca/black_kors/papyri/week_XX/
 
 ### Novos métodos Ariadne (biblioteca/ariadne/motor.py)
 
@@ -327,7 +327,7 @@ ISO em todos os anos disponíveis. Cria papiros em:
 -   `numeros_menos_frequentes(limite)` — frequência histórica de saidas_de_bolas_normalizado.json
 -   `padrao_transicao()` — análise penúltima → última chave
 -   `ecos_semanais(semana_iso)` — sorteios da mesma semana ISO em todos os anos
--   `criar_papiro(semana_iso, dados)` — grava papiro em biblioteca/kors_negros/papiros/
+-   `criar_papiro(semana_iso, dados)` — grava papiro em biblioteca/black_kors/papyri/
 
 ### Integração
 
@@ -342,7 +342,7 @@ ISO em todos os anos disponíveis. Cria papiros em:
 ## Cartógrafos do Caos
 
 Cinco analistas implementados em `faccoes/cartografos_caos/`. Não geram chaves —
-produzem livros analíticos em `biblioteca/livros/cartografos/` para consulta por
+produzem livros analíticos em `biblioteca/books/cartographers/` para consulta por
 outras facções (Treefolks, Kors, Vampiros).
 
 Todo o acesso a dados é via `ariadne.historico_completo()` — nunca directo aos fontes.
@@ -447,7 +447,7 @@ Regra anti-previsibilidade: penaliza chaves com 4 ou 5 números do top-5 (demasi
 | `limiar_cobertura` | 0.50 | Cobertura mínima para abrir o Portal |
 | `excesso_minimo` | 0.0 | Excesso mínimo sobre o esperado |
 | `n_candidatos` | 50000 | Chaves inéditas avaliadas (50K ≈ 1.5s; 250K ≈ 4s) |
-| `guardar_experiencia` | true | Grava JSON em `axiomantes/experiencias/` |
+| `guardar_experiencia` | true | Grava JSON em `axiomantes/experiences/` |
 
 ### Estrutura de ficheiros
 
@@ -458,7 +458,7 @@ Regra anti-previsibilidade: penaliza chaves com 4 ou 5 números do top-5 (demasi
 | `faccoes/axiomantes/ritual.py` | análise completa + Trinta Ecos + salva experiência |
 | `faccoes/axiomantes/conselho.py` | ponto de entrada para main.py |
 | `faccoes/axiomantes/config.json` | metadados e linhagens |
-| `axiomantes/experiencias/` | relatórios JSON por execução |
+| `axiomantes/experiences/` | relatórios JSON por execução |
 
 ### Integração
 

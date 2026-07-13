@@ -1,0 +1,28 @@
+{
+  "ecos": [
+    {
+      "id": "ECO-IRIA-V1",
+      "nome": "Íria da Névoa Azul",
+      "classe": "Vidente",
+      "origem": "Era dos Primeiros Oráculos",
+      "geracao_origem": 12,
+      "estrategia": "2 quentes, 2 frios, 1 número baixo, estrelas semi-fixas",
+      "pontuacao_historica": 18.4,
+      "chave_memoria": {
+        "numeros": [
+          4,
+          17,
+          23,
+          34,
+          46
+        ],
+        "estrelas": [
+          3,
+          9
+        ]
+      },
+      "estado": "ECO_ADORMECIDO",
+      "nota": "Só entra no Livro das Lendas quando um resultado real confirmar pelo menos 3 números e 2 estrelas."
+    }
+  ]
+}

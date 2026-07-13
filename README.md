@@ -147,7 +147,7 @@ Guardians of the Labyrinth of 139,838,160 chambers. They traverse the full Eurom
 All factions query data exclusively through Ariadne. No faction reads raw datasets directly. This enforces clean data access and makes all queries cacheable and reproducible.
 
 ```python
-from biblioteca.ariadne.motor import Ariadne
+from library.ariadne.motor import Ariadne
 
 a = Ariadne()
 
@@ -183,14 +183,14 @@ a.criar_papiro(semana_iso=28, dados={...})
 biblioteca/
 ├── ariadne/            ← Ariadne engine (motor.py)
 ├── fontes/             ← immutable annual datasets 2004–2026
-├── pergaminhos/
+├── scrolls/
 │   ├── 2004/ … 2025/   ← compact format (1,907 scrolls)
 │   └── 2026/           ← full format with astronomy (55 scrolls)
-├── livros/
+├── books/
 │   └── cartografos/    ← 5 analytical books (Cartographers)
 ├── indices/            ← pairs, triples, frequencies, moon phases
-├── consultas/          ← Ariadne query cache
-└── kors_negros/
+├── cache/          ← Ariadne query cache
+└── black_kors/
     └── papiros/        ← Nyxara's weekly papyri
 ```
 
@@ -216,7 +216,7 @@ The-Eternal-Library/
 │       └── conselho.py         ← Council integration
 │
 ├── axiomantes/
-│   └── experiencias/           ← per-run ritual reports (JSON)
+│   └── experiences/           ← per-run ritual reports (JSON)
 │
 ├── i18n/
 │   └── traducoes.py            ← 6 languages × 25 translation keys

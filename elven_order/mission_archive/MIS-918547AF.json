@@ -1,0 +1,14 @@
+{
+  "id": "MIS-918547AF",
+  "momento": "2026-07-11T23:37:41+00:00",
+  "tipo_alvo": "RELIQUIA",
+  "alvo": "ART-5637DEC365.json",
+  "equipa": [
+    "Thalion Passo Silencioso",
+    "Kael da Folha Negra"
+  ],
+  "poder": 0.8092,
+  "defesa": 0.9,
+  "sucesso": false,
+  "resultado": "A equipa foi detetada pelas Sentinelas Negras."
+}

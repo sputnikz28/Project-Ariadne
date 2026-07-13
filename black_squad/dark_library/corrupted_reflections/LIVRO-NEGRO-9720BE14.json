@@ -1,0 +1,73 @@
+{
+  "nome": "Atlas das Doze Luzes",
+  "tipo": "COPIA_SOMBRIA",
+  "estrelas": [
+    {
+      "estrela": 2,
+      "frequencia": 390,
+      "atraso": 0
+    },
+    {
+      "estrela": 3,
+      "frequencia": 385,
+      "atraso": 1
+    },
+    {
+      "estrela": 8,
+      "frequencia": 374,
+      "atraso": 6
+    },
+    {
+      "estrela": 9,
+      "frequencia": 361,
+      "atraso": 3
+    },
+    {
+      "estrela": 6,
+      "frequencia": 353,
+      "atraso": 5
+    },
+    {
+      "estrela": 5,
+      "frequencia": 351,
+      "atraso": 1
+    },
+    {
+      "estrela": 7,
+      "frequencia": 348,
+      "atraso": 2
+    },
+    {
+      "estrela": 1,
+      "frequencia": 336,
+      "atraso": 4
+    },
+    {
+      "estrela": 4,
+      "frequencia": 308,
+      "atraso": 12
+    },
+    {
+      "estrela": 10,
+      "frequencia": 279,
+      "atraso": 0
+    },
+    {
+      "estrela": 11,
+      "frequencia": 264,
+      "atraso": 7
+    },
+    {
+      "estrela": 12,
+      "frequencia": 175,
+      "atraso": 13
+    }
+  ],
+  "atualizado_em": "2026-07-11T23:35:18+00:00",
+  "fidelidade": 0.7002,
+  "corrupcao": 0.2998,
+  "criado_em": "2026-07-11T23:35:19+00:00",
+  "original": "livro_estrelas.json",
+  "roubado_por": "Zareth Anti-Humano",
+  "id": "LIVRO-NEGRO-9720BE14"
+}

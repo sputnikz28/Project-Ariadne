@@ -1,0 +1,87 @@
+{
+  "tipo": "DESCRITIVO_NAO_PREDITIVO",
+  "numeros_menos_frequentes": [
+    {
+      "numero": 22,
+      "aparicoes_totais": 154
+    },
+    {
+      "numero": 33,
+      "aparicoes_totais": 173
+    },
+    {
+      "numero": 46,
+      "aparicoes_totais": 174
+    },
+    {
+      "numero": 12,
+      "aparicoes_totais": 175
+    },
+    {
+      "numero": 18,
+      "aparicoes_totais": 176
+    },
+    {
+      "numero": 40,
+      "aparicoes_totais": 178
+    },
+    {
+      "numero": 32,
+      "aparicoes_totais": 179
+    },
+    {
+      "numero": 43,
+      "aparicoes_totais": 180
+    },
+    {
+      "numero": 41,
+      "aparicoes_totais": 181
+    },
+    {
+      "numero": 47,
+      "aparicoes_totais": 183
+    },
+    {
+      "numero": 2,
+      "aparicoes_totais": 184
+    },
+    {
+      "numero": 36,
+      "aparicoes_totais": 184
+    },
+    {
+      "numero": 9,
+      "aparicoes_totais": 185
+    },
+    {
+      "numero": 1,
+      "aparicoes_totais": 186
+    },
+    {
+      "numero": 31,
+      "aparicoes_totais": 186
+    },
+    {
+      "numero": 8,
+      "aparicoes_totais": 188
+    },
+    {
+      "numero": 28,
+      "aparicoes_totais": 189
+    },
+    {
+      "numero": 3,
+      "aparicoes_totais": 191
+    },
+    {
+      "numero": 11,
+      "aparicoes_totais": 191
+    },
+    {
+      "numero": 6,
+      "aparicoes_totais": 193
+    }
+  ],
+  "aviso": "Observação histórica; não aumenta a probabilidade de prever um sorteio futuro.",
+  "criada_em": "2026-07-13T11:22:54"
+}

@@ -1,0 +1,464 @@
+{
+  "titulo": "Livro dos Ciclos Eternos",
+  "autor": "Vesara dos Intervalos",
+  "especialidade": "Atrasos históricos, médias, máximos, ciclos completos",
+  "tipo": "DESCRITIVO_NAO_PREDITIVO",
+  "criado_em": "2026-07-13T11:22:54",
+  "aviso": "Observação histórica; não aumenta a probabilidade de prever um sorteio futuro.",
+  "total_sorteios": 1962,
+  "analise_por_numero": {
+    "1": {
+      "aparicoes": 186,
+      "atraso_atual": 3,
+      "atraso_medio": 10.5,
+      "atraso_max": 59,
+      "atraso_min": 1,
+      "variancia": 102.9
+    },
+    "2": {
+      "aparicoes": 184,
+      "atraso_atual": 0,
+      "atraso_medio": 10.7,
+      "atraso_max": 49,
+      "atraso_min": 1,
+      "variancia": 100.6
+    },
+    "3": {
+      "aparicoes": 191,
+      "atraso_atual": 5,
+      "atraso_medio": 10.2,
+      "atraso_max": 66,
+      "atraso_min": 1,
+      "variancia": 99.2
+    },
+    "4": {
+      "aparicoes": 200,
+      "atraso_atual": 8,
+      "atraso_medio": 9.8,
+      "atraso_max": 57,
+      "atraso_min": 1,
+      "variancia": 76.5
+    },
+    "5": {
+      "aparicoes": 201,
+      "atraso_atual": 1,
+      "atraso_medio": 9.8,
+      "atraso_max": 53,
+      "atraso_min": 1,
+      "variancia": 77.5
+    },
+    "6": {
+      "aparicoes": 193,
+      "atraso_atual": 4,
+      "atraso_medio": 10.1,
+      "atraso_max": 56,
+      "atraso_min": 1,
+      "variancia": 83.4
+    },
+    "7": {
+      "aparicoes": 200,
+      "atraso_atual": 8,
+      "atraso_medio": 9.8,
+      "atraso_max": 52,
+      "atraso_min": 1,
+      "variancia": 91.5
+    },
+    "8": {
+      "aparicoes": 188,
+      "atraso_atual": 3,
+      "atraso_medio": 10.4,
+      "atraso_max": 58,
+      "atraso_min": 1,
+      "variancia": 84.2
+    },
+    "9": {
+      "aparicoes": 185,
+      "atraso_atual": 11,
+      "atraso_medio": 10.5,
+      "atraso_max": 77,
+      "atraso_min": 1,
+      "variancia": 102.3
+    },
+    "10": {
+      "aparicoes": 212,
+      "atraso_atual": 16,
+      "atraso_medio": 9.2,
+      "atraso_max": 57,
+      "atraso_min": 1,
+      "variancia": 73.5
+    },
+    "11": {
+      "aparicoes": 191,
+      "atraso_atual": 27,
+      "atraso_medio": 10.1,
+      "atraso_max": 61,
+      "atraso_min": 1,
+      "variancia": 102.2
+    },
+    "12": {
+      "aparicoes": 196,
+      "atraso_atual": 2,
+      "atraso_medio": 10.0,
+      "atraso_max": 51,
+      "atraso_min": 1,
+      "variancia": 70.9
+    },
+    "13": {
+      "aparicoes": 202,
+      "atraso_atual": 23,
+      "atraso_medio": 9.6,
+      "atraso_max": 59,
+      "atraso_min": 1,
+      "variancia": 107.2
+    },
+    "14": {
+      "aparicoes": 203,
+      "atraso_atual": 0,
+      "atraso_medio": 9.7,
+      "atraso_max": 53,
+      "atraso_min": 1,
+      "variancia": 77.4
+    },
+    "15": {
+      "aparicoes": 199,
+      "atraso_atual": 36,
+      "atraso_medio": 9.7,
+      "atraso_max": 51,
+      "atraso_min": 1,
+      "variancia": 73.8
+    },
+    "16": {
+      "aparicoes": 193,
+      "atraso_atual": 4,
+      "atraso_medio": 10.2,
+      "atraso_max": 88,
+      "atraso_min": 1,
+      "variancia": 119.1
+    },
+    "17": {
+      "aparicoes": 215,
+      "atraso_atual": 2,
+      "atraso_medio": 9.1,
+      "atraso_max": 65,
+      "atraso_min": 1,
+      "variancia": 73.9
+    },
+    "18": {
+      "aparicoes": 176,
+      "atraso_atual": 7,
+      "atraso_medio": 11.1,
+      "atraso_max": 52,
+      "atraso_min": 1,
+      "variancia": 110.7
+    },
+    "19": {
+      "aparicoes": 217,
+      "atraso_atual": 18,
+      "atraso_medio": 9.0,
+      "atraso_max": 44,
+      "atraso_min": 1,
+      "variancia": 66.1
+    },
+    "20": {
+      "aparicoes": 203,
+      "atraso_atual": 15,
+      "atraso_medio": 9.6,
+      "atraso_max": 68,
+      "atraso_min": 1,
+      "variancia": 96.2
+    },
+    "21": {
+      "aparicoes": 212,
+      "atraso_atual": 48,
+      "atraso_medio": 9.0,
+      "atraso_max": 53,
+      "atraso_min": 1,
+      "variancia": 75.4
+    },
+    "22": {
+      "aparicoes": 154,
+      "atraso_atual": 8,
+      "atraso_medio": 12.7,
+      "atraso_max": 58,
+      "atraso_min": 1,
+      "variancia": 136.2
+    },
+    "23": {
+      "aparicoes": 221,
+      "atraso_atual": 8,
+      "atraso_medio": 8.8,
+      "atraso_max": 47,
+      "atraso_min": 1,
+      "variancia": 70.9
+    },
+    "24": {
+      "aparicoes": 199,
+      "atraso_atual": 37,
+      "atraso_medio": 9.7,
+      "atraso_max": 61,
+      "atraso_min": 1,
+      "variancia": 106.0
+    },
+    "25": {
+      "aparicoes": 206,
+      "atraso_atual": 2,
+      "atraso_medio": 9.5,
+      "atraso_max": 63,
+      "atraso_min": 1,
+      "variancia": 75.1
+    },
+    "26": {
+      "aparicoes": 205,
+      "atraso_atual": 4,
+      "atraso_medio": 9.5,
+      "atraso_max": 71,
+      "atraso_min": 1,
+      "variancia": 83.4
+    },
+    "27": {
+      "aparicoes": 205,
+      "atraso_atual": 28,
+      "atraso_medio": 9.4,
+      "atraso_max": 71,
+      "atraso_min": 1,
+      "variancia": 90.0
+    },
+    "28": {
+      "aparicoes": 189,
+      "atraso_atual": 0,
+      "atraso_medio": 10.4,
+      "atraso_max": 49,
+      "atraso_min": 1,
+      "variancia": 97.8
+    },
+    "29": {
+      "aparicoes": 217,
+      "atraso_atual": 1,
+      "atraso_medio": 9.1,
+      "atraso_max": 45,
+      "atraso_min": 1,
+      "variancia": 54.5
+    },
+    "30": {
+      "aparicoes": 194,
+      "atraso_atual": 22,
+      "atraso_medio": 10.0,
+      "atraso_max": 60,
+      "atraso_min": 1,
+      "variancia": 93.8
+    },
+    "31": {
+      "aparicoes": 186,
+      "atraso_atual": 7,
+      "atraso_medio": 10.5,
+      "atraso_max": 61,
+      "atraso_min": 1,
+      "variancia": 86.7
+    },
+    "32": {
+      "aparicoes": 179,
+      "atraso_atual": 17,
+      "atraso_medio": 10.9,
+      "atraso_max": 48,
+      "atraso_min": 1,
+      "variancia": 96.6
+    },
+    "33": {
+      "aparicoes": 173,
+      "atraso_atual": 0,
+      "atraso_medio": 11.3,
+      "atraso_max": 45,
+      "atraso_min": 1,
+      "variancia": 91.7
+    },
+    "34": {
+      "aparicoes": 197,
+      "atraso_atual": 4,
+      "atraso_medio": 9.9,
+      "atraso_max": 55,
+      "atraso_min": 1,
+      "variancia": 97.8
+    },
+    "35": {
+      "aparicoes": 206,
+      "atraso_atual": 4,
+      "atraso_medio": 9.5,
+      "atraso_max": 57,
+      "atraso_min": 1,
+      "variancia": 84.3
+    },
+    "36": {
+      "aparicoes": 184,
+      "atraso_atual": 5,
+      "atraso_medio": 10.7,
+      "atraso_max": 44,
+      "atraso_min": 1,
+      "variancia": 84.5
+    },
+    "37": {
+      "aparicoes": 210,
+      "atraso_atual": 3,
+      "atraso_medio": 9.3,
+      "atraso_max": 45,
+      "atraso_min": 1,
+      "variancia": 65.3
+    },
+    "38": {
+      "aparicoes": 199,
+      "atraso_atual": 15,
+      "atraso_medio": 9.8,
+      "atraso_max": 43,
+      "atraso_min": 1,
+      "variancia": 66.4
+    },
+    "39": {
+      "aparicoes": 193,
+      "atraso_atual": 2,
+      "atraso_medio": 10.2,
+      "atraso_max": 46,
+      "atraso_min": 1,
+      "variancia": 95.6
+    },
+    "40": {
+      "aparicoes": 178,
+      "atraso_atual": 22,
+      "atraso_medio": 10.9,
+      "atraso_max": 41,
+      "atraso_min": 1,
+      "variancia": 87.8
+    },
+    "41": {
+      "aparicoes": 181,
+      "atraso_atual": 6,
+      "atraso_medio": 10.9,
+      "atraso_max": 47,
+      "atraso_min": 1,
+      "variancia": 97.4
+    },
+    "42": {
+      "aparicoes": 222,
+      "atraso_atual": 6,
+      "atraso_medio": 8.8,
+      "atraso_max": 51,
+      "atraso_min": 1,
+      "variancia": 70.7
+    },
+    "43": {
+      "aparicoes": 180,
+      "atraso_atual": 16,
+      "atraso_medio": 10.8,
+      "atraso_max": 76,
+      "atraso_min": 1,
+      "variancia": 134.7
+    },
+    "44": {
+      "aparicoes": 224,
+      "atraso_atual": 3,
+      "atraso_medio": 8.7,
+      "atraso_max": 49,
+      "atraso_min": 1,
+      "variancia": 58.7
+    },
+    "45": {
+      "aparicoes": 206,
+      "atraso_atual": 1,
+      "atraso_medio": 9.5,
+      "atraso_max": 46,
+      "atraso_min": 1,
+      "variancia": 72.6
+    },
+    "46": {
+      "aparicoes": 174,
+      "atraso_atual": 5,
+      "atraso_medio": 11.2,
+      "atraso_max": 67,
+      "atraso_min": 1,
+      "variancia": 117.8
+    },
+    "47": {
+      "aparicoes": 183,
+      "atraso_atual": 1,
+      "atraso_medio": 10.7,
+      "atraso_max": 83,
+      "atraso_min": 1,
+      "variancia": 132.0
+    },
+    "48": {
+      "aparicoes": 193,
+      "atraso_atual": 0,
+      "atraso_medio": 10.2,
+      "atraso_max": 83,
+      "atraso_min": 1,
+      "variancia": 104.9
+    },
+    "49": {
+      "aparicoes": 196,
+      "atraso_atual": 10,
+      "atraso_medio": 10.0,
+      "atraso_max": 45,
+      "atraso_min": 1,
+      "variancia": 74.3
+    },
+    "50": {
+      "aparicoes": 209,
+      "atraso_atual": 35,
+      "atraso_medio": 9.2,
+      "atraso_max": 55,
+      "atraso_min": 1,
+      "variancia": 78.6
+    }
+  },
+  "ciclos_completos": {
+    "quantidade": 45,
+    "media_sorteios": 42.6,
+    "menor_ciclo": 25,
+    "maior_ciclo": 74,
+    "lista": [
+      66,
+      28,
+      27,
+      29,
+      54,
+      72,
+      70,
+      25,
+      59,
+      44,
+      30,
+      32,
+      40,
+      44,
+      42,
+      52,
+      34,
+      59,
+      37,
+      35,
+      74,
+      40,
+      39,
+      26,
+      35,
+      37,
+      35,
+      31,
+      42,
+      25,
+      49,
+      62,
+      44,
+      51,
+      45,
+      33,
+      42,
+      43,
+      33,
+      55,
+      42,
+      35,
+      35,
+      47,
+      36
+    ]
+  }
+}

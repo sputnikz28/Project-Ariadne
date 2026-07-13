@@ -1,0 +1,14 @@
+{
+  "id": "MIS-0555150E",
+  "momento": "2026-07-11T09:21:49+00:00",
+  "tipo_alvo": "LIVRO",
+  "alvo": "LIVRO-NEGRO-4C67AE4F.json",
+  "equipa": [
+    "Kael da Folha Negra",
+    "Thalion Passo Silencioso"
+  ],
+  "poder": 0.7368,
+  "defesa": 0.7,
+  "sucesso": true,
+  "resultado": "Cópia sombria recuperada e isolada."
+}

@@ -24,14 +24,14 @@ Simulador narrativo e estatístico do Euromilhões. O projeto explora padrões h
 biblioteca/
 ├── ariadne/              ← motor.py — classe Ariadne (12 métodos)
 ├── fontes/               ← datasets anuais 2004-2026 (imutáveis)
-├── pergaminhos/
+├── scrolls/
 │   ├── 2004/ … 2025/     ← formato compacto (data como string)
 │   └── 2026/             ← formato completo (55 pergaminhos com astronomia)
-├── livros/
+├── books/
 │   └── cartografos/      ← 5 livros analíticos gerados pelos Cartógrafos
 ├── indices/              ← duplas.json, triplas.json
-├── consultas/            ← cache de consultas Ariadne
-└── kors_negros/
+├── cache/            ← cache de consultas Ariadne
+└── black_kors/
     └── papiros/          ← papiros semanais da Nyxara (semana_01/ … semana_53/)
 
 faccoes/
@@ -40,7 +40,7 @@ faccoes/
 └── axiomantes/           ← Axiomantes de Nemerion (V8.1)
 
 axiomantes/
-└── experiencias/         ← relatórios JSON por execução do ritual
+└── experiences/         ← relatórios JSON por execução do ritual
 ```
 
 ---
@@ -74,10 +74,10 @@ Quatro observadores que consultam exclusivamente Ariadne — nunca lêem dataset
 | Branco | Aelyra dos Silêncios | 15 números mais atrasados |
 | Vermelho | Kael da Chama Fria | Números menos frequentes no histórico completo |
 | Verde | Sylvara das Passagens | Padrão penúltima→última chave (chegados, persistentes, vizinhos) |
-| Preto | Nyxara das Sombras Semanais | Ecos da semana ISO · grava papiro em `biblioteca/kors_negros/` |
+| Preto | Nyxara das Sombras Semanais | Ecos da semana ISO · grava papiro em `biblioteca/black_kors/` |
 
 ### Cartógrafos do Caos (V8)
-Cinco analistas que **não geram chaves** — produzem livros analíticos para consulta por outras facções. Correm antes de todos os outros e escrevem em `biblioteca/livros/cartografos/`.
+Cinco analistas que **não geram chaves** — produzem livros analíticos para consulta por outras facções. Correm antes de todos os outros e escrevem em `biblioteca/books/cartographers/`.
 
 | Cartógrafo | Livro gerado | O que analisa |
 |-----------|-------------|--------------|
@@ -158,7 +158,7 @@ PERFIL DOS ECOS (29 chaves)
 
 Chave escolhida:  9  10  31  34  37  ⭐  2  10
 ```
-Experiência completa em `axiomantes/experiencias/experiencia_YYYYMMDD_HHMMSS.json`.
+Experiência completa em `axiomantes/experiences/experiencia_YYYYMMDD_HHMMSS.json`.
 
 > **Aviso:** A posição numa permutação pseudoaleatória não altera a probabilidade real de qualquer chave. Uma cobertura ≥ 50% é esperada quando se percorre ≥ 50% do universo. Isto é sempre compatível com o acaso.
 
@@ -176,7 +176,7 @@ Experiência completa em `axiomantes/experiencias/experiencia_YYYYMMDD_HHMMSS.js
 ## Ariadne — métodos disponíveis
 
 ```python
-from biblioteca.ariadne.motor import Ariadne
+from library.ariadne.motor import Ariadne
 a = Ariadne()
 
 # Pergaminhos 2026

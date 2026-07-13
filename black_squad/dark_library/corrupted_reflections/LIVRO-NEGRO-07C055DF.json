@@ -1,0 +1,325 @@
+{
+  "nome": "Crónica dos Números Ausentes",
+  "tipo": "COPIA_SOMBRIA",
+  "numeros": [
+    {
+      "numero": 2,
+      "atraso": 37,
+      "frequencia": 184
+    },
+    {
+      "numero": 16,
+      "atraso": 36,
+      "frequencia": 193
+    },
+    {
+      "numero": 18,
+      "atraso": 34,
+      "frequencia": 176
+    },
+    {
+      "numero": 21,
+      "atraso": 32,
+      "frequencia": 212
+    },
+    {
+      "numero": 14,
+      "atraso": 30,
+      "frequencia": 203
+    },
+    {
+      "numero": 11,
+      "atraso": 27,
+      "frequencia": 191
+    },
+    {
+      "numero": 37,
+      "atraso": 25,
+      "frequencia": 210
+    },
+    {
+      "numero": 47,
+      "atraso": 22,
+      "frequencia": 183
+    },
+    {
+      "numero": 27,
+      "atraso": 19,
+      "frequencia": 205
+    },
+    {
+      "numero": 15,
+      "atraso": 17,
+      "frequencia": 199
+    },
+    {
+      "numero": 32,
+      "atraso": 16,
+      "frequencia": 179
+    },
+    {
+      "numero": 31,
+      "atraso": 14,
+      "frequencia": 186
+    },
+    {
+      "numero": 41,
+      "atraso": 14,
+      "frequencia": 181
+    },
+    {
+      "numero": 23,
+      "atraso": 11,
+      "frequencia": 221
+    },
+    {
+      "numero": 44,
+      "atraso": 11,
+      "frequencia": 224
+    },
+    {
+      "numero": 19,
+      "atraso": 10,
+      "frequencia": 217
+    },
+    {
+      "numero": 4,
+      "atraso": 9,
+      "frequencia": 200
+    },
+    {
+      "numero": 29,
+      "atraso": 9,
+      "frequencia": 217
+    },
+    {
+      "numero": 35,
+      "atraso": 9,
+      "frequencia": 206
+    },
+    {
+      "numero": 39,
+      "atraso": 9,
+      "frequencia": 193
+    },
+    {
+      "numero": 25,
+      "atraso": 8,
+      "frequencia": 206
+    },
+    {
+      "numero": 34,
+      "atraso": 8,
+      "frequencia": 197
+    },
+    {
+      "numero": 45,
+      "atraso": 8,
+      "frequencia": 206
+    },
+    {
+      "numero": 9,
+      "atraso": 7,
+      "frequencia": 185
+    },
+    {
+      "numero": 22,
+      "atraso": 7,
+      "frequencia": 154
+    },
+    {
+      "numero": 28,
+      "atraso": 6,
+      "frequencia": 189
+    },
+    {
+      "numero": 6,
+      "atraso": 5,
+      "frequencia": 193
+    },
+    {
+      "numero": 26,
+      "atraso": 5,
+      "frequencia": 205
+    },
+    {
+      "numero": 48,
+      "atraso": 5,
+      "frequencia": 193
+    },
+    {
+      "numero": 17,
+      "atraso": 4,
+      "frequencia": 215
+    },
+    {
+      "numero": 24,
+      "atraso": 4,
+      "frequencia": 199
+    },
+    {
+      "numero": 30,
+      "atraso": 4,
+      "frequencia": 194
+    },
+    {
+      "numero": 3,
+      "atraso": 3,
+      "frequencia": 191
+    },
+    {
+      "numero": 13,
+      "atraso": 3,
+      "frequencia": 202
+    },
+    {
+      "numero": 42,
+      "atraso": 3,
+      "frequencia": 222
+    },
+    {
+      "numero": 49,
+      "atraso": 3,
+      "frequencia": 196
+    },
+    {
+      "numero": 8,
+      "atraso": 2,
+      "frequencia": 188
+    },
+    {
+      "numero": 10,
+      "atraso": 2,
+      "frequencia": 212
+    },
+    {
+      "numero": 33,
+      "atraso": 2,
+      "frequencia": 173
+    },
+    {
+      "numero": 38,
+      "atraso": 2,
+      "frequencia": 199
+    },
+    {
+      "numero": 1,
+      "atraso": 1,
+      "frequencia": 186
+    },
+    {
+      "numero": 12,
+      "atraso": 1,
+      "frequencia": 196
+    },
+    {
+      "numero": 36,
+      "atraso": 1,
+      "frequencia": 184
+    },
+    {
+      "numero": 43,
+      "atraso": 1,
+      "frequencia": 180
+    },
+    {
+      "numero": 46,
+      "atraso": 1,
+      "frequencia": 174
+    },
+    {
+      "numero": 5,
+      "atraso": 0,
+      "frequencia": 201
+    },
+    {
+      "numero": 7,
+      "atraso": 0,
+      "frequencia": 200
+    },
+    {
+      "numero": 20,
+      "atraso": 0,
+      "frequencia": 203
+    },
+    {
+      "numero": 40,
+      "atraso": 0,
+      "frequencia": 178
+    },
+    {
+      "numero": 50,
+      "atraso": 0,
+      "frequencia": 209
+    }
+  ],
+  "estrelas": [
+    {
+      "estrela": 12,
+      "atraso": 13,
+      "frequencia": 175
+    },
+    {
+      "estrela": 4,
+      "atraso": 12,
+      "frequencia": 308
+    },
+    {
+      "estrela": 11,
+      "atraso": 7,
+      "frequencia": 264
+    },
+    {
+      "estrela": 8,
+      "atraso": 6,
+      "frequencia": 374
+    },
+    {
+      "estrela": 6,
+      "atraso": 5,
+      "frequencia": 353
+    },
+    {
+      "estrela": 1,
+      "atraso": 4,
+      "frequencia": 336
+    },
+    {
+      "estrela": 9,
+      "atraso": 3,
+      "frequencia": 361
+    },
+    {
+      "estrela": 7,
+      "atraso": 2,
+      "frequencia": 348
+    },
+    {
+      "estrela": 3,
+      "atraso": 1,
+      "frequencia": 385
+    },
+    {
+      "estrela": 5,
+      "atraso": 1,
+      "frequencia": 351
+    },
+    {
+      "estrela": 2,
+      "atraso": 0,
+      "frequencia": 390
+    },
+    {
+      "estrela": 10,
+      "atraso": 0,
+      "frequencia": 279
+    }
+  ],
+  "atualizado_em": "2026-07-11T23:37:45+00:00",
+  "fidelidade": 0.8072,
+  "corrupcao": 0.1928,
+  "criado_em": "2026-07-11T23:37:45+00:00",
+  "original": "livro_atrasos.json",
+  "roubado_por": "Veyron Eclipse",
+  "id": "LIVRO-NEGRO-07C055DF"
+}

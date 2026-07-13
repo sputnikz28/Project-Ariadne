@@ -1,0 +1,36 @@
+{
+  "seed": 42,
+  "chave_alvo": {
+    "numeros": [
+      2,
+      14,
+      28,
+      33,
+      48
+    ],
+    "estrelas": [
+      8,
+      10
+    ],
+    "data": "2026-07-10",
+    "id": "PERG-2026-055"
+  },
+  "posicao_alvo": 62136237,
+  "universo_total": 139838160,
+  "fracao_universo_pct": 44.4344,
+  "periodo_anos": 1,
+  "historico_comparacao": 54,
+  "matches_antes_marco": 21,
+  "matches_depois_marco": 33,
+  "cobertura_pct": 38.8889,
+  "esperado_num": 24.0,
+  "excesso_pct": -5.5455,
+  "espaco_medio_obs": 2824374,
+  "espaco_teorico": 71273,
+  "veredicto": "ABAIXO DO ESPERADO",
+  "portal_aberto": false,
+  "chave_proposta": null,
+  "posicao_proposta": null,
+  "aviso": "A posição de uma chave numa permutação pseudoaleatória não altera a sua probabilidade real. Qualquer taxa de cobertura >= 50% é esperada quando se percorre >= 50% do universo. Isto é compatível com o acaso.",
+  "criado_em": "2026-07-13T11:00:16"
+}

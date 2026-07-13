@@ -1,0 +1,21 @@
+{
+  "id": "RESS-C18573CA",
+  "nome": "Íria da Névoa Azul Eclipse",
+  "classe": "Lenda Ressuscitada",
+  "origem": "Era dos Primeiros Oráculos",
+  "chave": [
+    [
+      4,
+      17,
+      23,
+      34,
+      46
+    ],
+    [
+      3,
+      9
+    ]
+  ],
+  "corrupcao": 0.1652,
+  "ressuscitado_por": "Zareth Anti-Humano"
+}

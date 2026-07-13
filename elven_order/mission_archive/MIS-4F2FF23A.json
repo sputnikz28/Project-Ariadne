@@ -1,0 +1,15 @@
+{
+  "id": "MIS-4F2FF23A",
+  "momento": "2026-07-11T23:38:22+00:00",
+  "tipo_alvo": "LIVRO",
+  "alvo": "LIVRO-NEGRO-10B7198D.json",
+  "equipa": [
+    "Thalion Passo Silencioso",
+    "Kael da Folha Negra"
+  ],
+  "poder": 0.7237,
+  "defesa": 0.9,
+  "sucesso": false,
+  "resultado": "A equipa foi detetada pelas Sentinelas Negras.",
+  "ninja_corrompido": "Thalion Passo Silencioso"
+}

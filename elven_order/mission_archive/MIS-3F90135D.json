@@ -1,0 +1,14 @@
+{
+  "id": "MIS-3F90135D",
+  "momento": "2026-07-11T09:21:43+00:00",
+  "tipo_alvo": "LIVRO",
+  "alvo": "LIVRO-NEGRO-6349CA4D.json",
+  "equipa": [
+    "Arya da Lâmina Verde",
+    "Thalion Passo Silencioso"
+  ],
+  "poder": 0.7653,
+  "defesa": 0.65,
+  "sucesso": false,
+  "resultado": "A equipa foi detetada pelas Sentinelas Negras."
+}

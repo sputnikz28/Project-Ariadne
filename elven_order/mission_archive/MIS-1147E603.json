@@ -1,0 +1,14 @@
+{
+  "id": "MIS-1147E603",
+  "momento": "2026-07-11T09:21:19+00:00",
+  "tipo_alvo": "LIVRO",
+  "alvo": "LIVRO-NEGRO-146E1E79.json",
+  "equipa": [
+    "Elyndor Sem Pegadas",
+    "Kael da Folha Negra"
+  ],
+  "poder": 0.7543,
+  "defesa": 0.45,
+  "sucesso": true,
+  "resultado": "Cópia sombria recuperada e isolada."
+}

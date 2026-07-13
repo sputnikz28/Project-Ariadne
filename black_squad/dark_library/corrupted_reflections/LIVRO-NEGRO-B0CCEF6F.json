@@ -1,0 +1,573 @@
+{
+  "nome": "Livro dos Trios Proibidos",
+  "tipo": "COPIA_SOMBRIA",
+  "trios": [
+    {
+      "numeros": [
+        3,
+        33,
+        36
+      ],
+      "vezes": 2
+    },
+    {
+      "numeros": [
+        3,
+        33,
+        45
+      ],
+      "vezes": 2
+    },
+    {
+      "numeros": [
+        3,
+        33,
+        46
+      ],
+      "vezes": 2
+    },
+    {
+      "numeros": [
+        3,
+        36,
+        45
+      ],
+      "vezes": 2
+    },
+    {
+      "numeros": [
+        3,
+        36,
+        46
+      ],
+      "vezes": 2
+    },
+    {
+      "numeros": [
+        3,
+        45,
+        46
+      ],
+      "vezes": 2
+    },
+    {
+      "numeros": [
+        33,
+        36,
+        45
+      ],
+      "vezes": 2
+    },
+    {
+      "numeros": [
+        33,
+        36,
+        46
+      ],
+      "vezes": 2
+    },
+    {
+      "numeros": [
+        33,
+        45,
+        46
+      ],
+      "vezes": 2
+    },
+    {
+      "numeros": [
+        36,
+        45,
+        46
+      ],
+      "vezes": 2
+    },
+    {
+      "numeros": [
+        18,
+        25,
+        31
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        18,
+        25,
+        37
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        18,
+        25,
+        45
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        18,
+        31,
+        37
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        18,
+        31,
+        45
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        18,
+        37,
+        45
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        25,
+        31,
+        37
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        25,
+        31,
+        45
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        25,
+        37,
+        45
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        31,
+        37,
+        45
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        8,
+        34,
+        39
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        8,
+        34,
+        41
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        8,
+        34,
+        42
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        8,
+        39,
+        41
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        8,
+        39,
+        42
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        8,
+        41,
+        42
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        34,
+        39,
+        41
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        34,
+        39,
+        42
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        34,
+        41,
+        42
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        39,
+        41,
+        42
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        6,
+        16,
+        26
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        6,
+        16,
+        34
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        6,
+        16,
+        35
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        6,
+        26,
+        34
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        6,
+        26,
+        35
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        6,
+        34,
+        35
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        16,
+        26,
+        34
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        16,
+        26,
+        35
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        16,
+        34,
+        35
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        26,
+        34,
+        35
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        1,
+        8,
+        37
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        1,
+        8,
+        44
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        1,
+        8,
+        48
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        1,
+        37,
+        44
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        1,
+        37,
+        48
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        1,
+        44,
+        48
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        8,
+        37,
+        44
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        8,
+        37,
+        48
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        8,
+        44,
+        48
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        37,
+        44,
+        48
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        2,
+        12,
+        17
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        2,
+        12,
+        25
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        2,
+        12,
+        39
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        2,
+        17,
+        25
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        2,
+        17,
+        39
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        2,
+        25,
+        39
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        12,
+        17,
+        25
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        12,
+        17,
+        39
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        12,
+        25,
+        39
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        17,
+        25,
+        39
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        5,
+        29,
+        33
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        5,
+        29,
+        45
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        5,
+        29,
+        47
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        5,
+        33,
+        45
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        5,
+        33,
+        47
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        5,
+        45,
+        47
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        29,
+        33,
+        45
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        29,
+        33,
+        47
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        29,
+        45,
+        47
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        33,
+        45,
+        47
+      ],
+      "vezes": 1
+    }
+  ],
+  "atualizado_em": "2026-07-11T09:21:54+00:00",
+  "fidelidade": 0.9342,
+  "corrupcao": 0.0658,
+  "criado_em": "2026-07-11T09:21:54+00:00",
+  "original": "livro_trios_proibidos.json",
+  "roubado_por": "Kharon dos Ecos Mortos",
+  "id": "LIVRO-NEGRO-B0CCEF6F"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "MIS-E5F2055B",
+  "momento": "2026-07-11T23:35:20+00:00",
+  "tipo_alvo": "LIVRO",
+  "alvo": "LIVRO-NEGRO-ED6A818D.json",
+  "equipa": [
+    "Elyndor Sem Pegadas",
+    "Kael da Folha Negra"
+  ],
+  "poder": 0.7715,
+  "defesa": 0.9,
+  "sucesso": false,
+  "resultado": "A equipa foi detetada pelas Sentinelas Negras."
+}

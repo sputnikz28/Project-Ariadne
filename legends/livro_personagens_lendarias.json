@@ -1,0 +1,44 @@
+{
+  "nome": "Livro das Personagens Lendárias",
+  "criterio_minimo": "3 números + 2 estrelas",
+  "personagens": [
+    {
+      "arquivo_id": "Escolha Humana Consagrada pelos Clérigos",
+      "nome": "Escolha Humana Consagrada pelos Clérigos",
+      "classe": "Chave Humana Ritual",
+      "origem": "ritual_celeste",
+      "geracao": 14,
+      "grau": "IMORTAL",
+      "feito": "5 números + 2 estrelas",
+      "chave": {
+        "numeros": [
+          1,
+          10,
+          32,
+          36,
+          43
+        ],
+        "estrelas": [
+          5,
+          6
+        ]
+      },
+      "chave_real": {
+        "numeros": [
+          1,
+          10,
+          32,
+          36,
+          43
+        ],
+        "estrelas": [
+          5,
+          6
+        ]
+      },
+      "registado_em": "2026-07-10T20:41:59+00:00",
+      "estado": "ECO_LENDARIO"
+    }
+  ],
+  "ultima_atualizacao": "2026-07-10T20:41:59+00:00"
+}

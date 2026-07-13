@@ -2,33 +2,33 @@ import json
 import random
 import time
 from configparser import ConfigParser
-from configuracao import carregar_config
+from configuration import carregar_config
 from datetime import datetime
 from pathlib import Path
 
-from mundo.construtor import construir
-from mundo.extracao import simular_extracao
-from mundo.energia_celeste import calcular_ritual
-from mundo.virus_malphas import escolher_portador
-from mundo.guerra_conselho import resolver
-from evolucao.estatisticas import calcular
-from evolucao.genetico import executar
-from racas.extras import anoes, fadas, melforks, lobisomens, treefolks, superiores
-from racas.cronomantes import criar_cronomantes
-from racas.esqueletos import criar_representantes as criar_esqueletos
-from conselho.conselho import filtrar, votar, corromper
-from relatorios.escritor import gerar
-from amuletos.biblioteca import sincronizar_fontes, construir_livros, atualizar_livro_proxima_extracao
-from artefactos.arca import preparar_nova_execucao, carregar_todos
-from esquadrao_negro.magos_negros import criar_magos, tentar_ressuscitar_lenda
-from ordem_elfica.ninjas import criar_ninjas, executar_missoes
-from esquadrao_negro.persistencia import carregar_grimorio
-from mundo.conviccao_sombria import criar_mantra
-from biblioteca.ariadne.motor import Ariadne
-from faccoes.kors.conselho import conselho_kors
-from faccoes.cartografos_caos.conselho import executar_cartografos
-from faccoes.axiomantes.conselho import axiomantes as axiomantes_ritual
-from i18n.traducoes import t, lang_de_cfg
+from world.construtor import construir
+from world.extracao import simular_extracao
+from world.energia_celeste import calcular_ritual
+from world.virus_malphas import escolher_portador
+from world.guerra_conselho import resolver
+from evolution.estatisticas import calcular
+from evolution.genetico import executar
+from races.extras import anoes, fadas, melforks, lobisomens, treefolks, superiores
+from races.cronomantes import criar_cronomantes
+from races.esqueletos import criar_representantes as criar_esqueletos
+from council.conselho import filtrar, votar, corromper
+from reports.escritor import gerar
+from amulets.biblioteca import sincronizar_fontes, construir_livros, atualizar_livro_proxima_extracao
+from artefacts.arca import preparar_nova_execucao, carregar_todos
+from black_squad.magos_negros import criar_magos, tentar_ressuscitar_lenda
+from elven_order.ninjas import criar_ninjas, executar_missoes
+from black_squad.persistencia import carregar_grimorio
+from world.conviccao_sombria import criar_mantra
+from library.ariadne.motor import Ariadne
+from factions.kors.conselho import conselho_kors
+from factions.cartografos_caos.conselho import executar_cartografos
+from factions.axiomantes.conselho import axiomantes as axiomantes_ritual
+from i18n.translations import t, lang_de_cfg
 
 
 def readj(p, d):
@@ -225,12 +225,12 @@ def main():
     externos.append(registo_externo('Conselho Original', 'Conselho Final', res['chave'], 'chave_conselho', geracao_final, 'Conselho'))
     externos.append(registo_externo(corr['entidade'], 'Entidade Maléfica', corr['chave_corrompida'], 'corrupcao_final', geracao_final, 'Abismo'))
 
-    arq = readj('dados/arquivo_destino.json', [])
+    arq = readj('data/arquivo_destino.json', [])
     arq.extend(evo['registos'])
     arq.extend(externos)
-    writej('dados/arquivo_destino.json', arq)
+    writej('data/arquivo_destino.json', arq)
 
-    mem = readj('dados/memoria_conselhos.json', [])
+    mem = readj('data/memoria_conselhos.json', [])
     mem.append({
         'data_execucao': datetime.now().isoformat(timespec='seconds'),
         'mundo': mundo,
@@ -241,11 +241,11 @@ def main():
         'total_chaves_racas_antigas': len(evo['registos']),
         'total_registos_externos': len(externos),
     })
-    writej('dados/memoria_conselhos.json', mem)
-    writej('dados/populacao_final.json', [h.to_dict() for h in evo['populacao_final']])
-    writej('dados/todos_individuos.json', [h.to_dict() for h in sorted(evo['todos'].values(), key=lambda x: x.id)])
+    writej('data/memoria_conselhos.json', mem)
+    writej('data/populacao_final.json', [h.to_dict() for h in evo['populacao_final']])
+    writej('data/todos_individuos.json', [h.to_dict() for h in sorted(evo['todos'].values(), key=lambda x: x.id)])
 
-    rel = Path('relatorios/gerados') / f"relatorio_v4_1_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt"
+    rel = Path('reports/generated') / f"relatorio_v4_1_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt"
     gerar({
         'mundo': mundo,
         'historico': hist,

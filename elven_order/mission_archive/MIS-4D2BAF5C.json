@@ -1,0 +1,14 @@
+{
+  "id": "MIS-4D2BAF5C",
+  "momento": "2026-07-11T09:21:30+00:00",
+  "tipo_alvo": "LIVRO",
+  "alvo": "LIVRO-NEGRO-D0CD8C5F.json",
+  "equipa": [
+    "Kael da Folha Negra",
+    "Arya da Lâmina Verde"
+  ],
+  "poder": 0.7082,
+  "defesa": 0.55,
+  "sucesso": true,
+  "resultado": "Cópia sombria recuperada e isolada."
+}

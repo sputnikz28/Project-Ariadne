@@ -1,0 +1,496 @@
+{
+  "nome": "Livro dos Pares Sagrados",
+  "tipo": "COPIA_SOMBRIA",
+  "pares": [
+    {
+      "numeros": [
+        33,
+        45
+      ],
+      "vezes": 3
+    },
+    {
+      "numeros": [
+        3,
+        33
+      ],
+      "vezes": 2
+    },
+    {
+      "numeros": [
+        3,
+        36
+      ],
+      "vezes": 2
+    },
+    {
+      "numeros": [
+        3,
+        45
+      ],
+      "vezes": 2
+    },
+    {
+      "numeros": [
+        3,
+        46
+      ],
+      "vezes": 2
+    },
+    {
+      "numeros": [
+        33,
+        36
+      ],
+      "vezes": 2
+    },
+    {
+      "numeros": [
+        33,
+        46
+      ],
+      "vezes": 2
+    },
+    {
+      "numeros": [
+        36,
+        45
+      ],
+      "vezes": 2
+    },
+    {
+      "numeros": [
+        36,
+        46
+      ],
+      "vezes": 2
+    },
+    {
+      "numeros": [
+        45,
+        46
+      ],
+      "vezes": 2
+    },
+    {
+      "numeros": [
+        18,
+        25
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        18,
+        31
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        18,
+        37
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        18,
+        45
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        25,
+        31
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        25,
+        37
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        25,
+        45
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        31,
+        37
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        31,
+        45
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        37,
+        45
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        8,
+        34
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        8,
+        39
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        8,
+        41
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        8,
+        42
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        34,
+        39
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        34,
+        41
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        34,
+        42
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        39,
+        41
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        39,
+        42
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        41,
+        42
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        6,
+        16
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        6,
+        26
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        6,
+        34
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        6,
+        35
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        16,
+        26
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        16,
+        34
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        16,
+        35
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        26,
+        34
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        26,
+        35
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        34,
+        35
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        1,
+        8
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        1,
+        37
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        1,
+        44
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        1,
+        48
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        8,
+        37
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        8,
+        44
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        8,
+        48
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        37,
+        44
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        37,
+        48
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        44,
+        48
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        2,
+        12
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        2,
+        17
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        2,
+        25
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        2,
+        39
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        12,
+        17
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        12,
+        25
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        12,
+        39
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        17,
+        25
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        17,
+        39
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        25,
+        39
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        5,
+        29
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        5,
+        33
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        5,
+        45
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        5,
+        47
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        29,
+        33
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        29,
+        45
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        29,
+        47
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        33,
+        47
+      ],
+      "vezes": 1
+    },
+    {
+      "numeros": [
+        45,
+        47
+      ],
+      "vezes": 1
+    }
+  ],
+  "atualizado_em": "2026-07-11T09:21:42+00:00",
+  "fidelidade": 0.6847,
+  "corrupcao": 0.3153,
+  "criado_em": "2026-07-11T09:21:42+00:00",
+  "original": "livro_pares_sagrados.json",
+  "roubado_por": "Veyron Eclipse",
+  "id": "LIVRO-NEGRO-6349CA4D"
+}

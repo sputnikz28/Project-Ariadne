@@ -1,0 +1,14 @@
+{
+  "id": "MIS-44B840CA",
+  "momento": "2026-07-11T17:26:24+00:00",
+  "tipo_alvo": "RELIQUIA",
+  "alvo": "ART-EXEMPLO001.json",
+  "equipa": [
+    "Elyndor Sem Pegadas",
+    "Thalion Passo Silencioso"
+  ],
+  "poder": 0.829,
+  "defesa": 0.9,
+  "sucesso": false,
+  "resultado": "A equipa foi detetada pelas Sentinelas Negras."
+}

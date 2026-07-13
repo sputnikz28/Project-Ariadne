@@ -1,0 +1,73 @@
+{
+  "nome": "Atlas das Doze Luzes",
+  "tipo": "COPIA_SOMBRIA",
+  "estrelas": [
+    {
+      "estrela": 2,
+      "frequencia": 3,
+      "atraso": 1
+    },
+    {
+      "estrela": 5,
+      "frequencia": 3,
+      "atraso": 0
+    },
+    {
+      "estrela": 6,
+      "frequencia": 3,
+      "atraso": 2
+    },
+    {
+      "estrela": 1,
+      "frequencia": 1,
+      "atraso": 1
+    },
+    {
+      "estrela": 4,
+      "frequencia": 1,
+      "atraso": 6
+    },
+    {
+      "estrela": 7,
+      "frequencia": 1,
+      "atraso": 5
+    },
+    {
+      "estrela": 8,
+      "frequencia": 1,
+      "atraso": 0
+    },
+    {
+      "estrela": 9,
+      "frequencia": 1,
+      "atraso": 6
+    },
+    {
+      "estrela": 11,
+      "frequencia": 1,
+      "atraso": 3
+    },
+    {
+      "estrela": 12,
+      "frequencia": 1,
+      "atraso": 3
+    },
+    {
+      "estrela": 3,
+      "frequencia": 0,
+      "atraso": 8
+    },
+    {
+      "estrela": 10,
+      "frequencia": 0,
+      "atraso": 8
+    }
+  ],
+  "atualizado_em": "2026-07-11T09:21:29+00:00",
+  "fidelidade": 0.7372,
+  "corrupcao": 0.2628,
+  "criado_em": "2026-07-11T09:21:29+00:00",
+  "original": "livro_estrelas.json",
+  "roubado_por": "Kharon dos Ecos Mortos",
+  "id": "LIVRO-NEGRO-2B5038C4"
+}

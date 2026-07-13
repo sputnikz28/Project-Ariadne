@@ -1,0 +1,62 @@
+{
+  "tipo": "DESCRITIVO_NAO_PREDITIVO",
+  "penultima": {
+    "id": "PERG-2026-054",
+    "data": "2026-07-07",
+    "numeros": [
+      5,
+      29,
+      33,
+      45,
+      47
+    ],
+    "estrelas": [
+      5,
+      8
+    ],
+    "soma": 159
+  },
+  "ultima": {
+    "id": "PERG-2026-055",
+    "data": "2026-07-10",
+    "numeros": [
+      2,
+      14,
+      28,
+      33,
+      48
+    ],
+    "estrelas": [
+      8,
+      10
+    ],
+    "soma": 125
+  },
+  "persistentes": [
+    33
+  ],
+  "saidos": [
+    5,
+    29,
+    45,
+    47
+  ],
+  "chegados": [
+    2,
+    14,
+    28,
+    48
+  ],
+  "estrelas_persistentes": [
+    8
+  ],
+  "estrelas_saidas": [
+    5
+  ],
+  "estrelas_chegadas": [
+    10
+  ],
+  "delta_soma": -34,
+  "aviso": "Observação histórica; não aumenta a probabilidade de prever um sorteio futuro.",
+  "criada_em": "2026-07-13T11:22:54"
+}

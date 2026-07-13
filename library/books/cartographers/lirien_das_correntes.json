@@ -1,0 +1,436 @@
+{
+  "titulo": "Livro das Tendências e Correntes",
+  "autor": "Lirien das Correntes",
+  "especialidade": "Tendências por janela, baixos vs altos, dígitos finais",
+  "tipo": "DESCRITIVO_NAO_PREDITIVO",
+  "criado_em": "2026-07-13T11:22:54",
+  "aviso": "Observação histórica; não aumenta a probabilidade de prever um sorteio futuro.",
+  "total_sorteios": 1962,
+  "tendencias_por_numero": {
+    "1": {
+      "ultimos_50": 4,
+      "ultimos_100": 7,
+      "ultimos_200": 17,
+      "historico_total": 186,
+      "tendencia": -0.74
+    },
+    "2": {
+      "ultimos_50": 6,
+      "ultimos_100": 10,
+      "ultimos_200": 16,
+      "historico_total": 184,
+      "tendencia": 1.31
+    },
+    "3": {
+      "ultimos_50": 4,
+      "ultimos_100": 7,
+      "ultimos_200": 18,
+      "historico_total": 191,
+      "tendencia": -0.87
+    },
+    "4": {
+      "ultimos_50": 8,
+      "ultimos_100": 13,
+      "ultimos_200": 22,
+      "historico_total": 200,
+      "tendencia": 2.9
+    },
+    "5": {
+      "ultimos_50": 7,
+      "ultimos_100": 16,
+      "ultimos_200": 20,
+      "historico_total": 201,
+      "tendencia": 1.88
+    },
+    "6": {
+      "ultimos_50": 7,
+      "ultimos_100": 15,
+      "ultimos_200": 21,
+      "historico_total": 193,
+      "tendencia": 2.08
+    },
+    "7": {
+      "ultimos_50": 3,
+      "ultimos_100": 8,
+      "ultimos_200": 20,
+      "historico_total": 200,
+      "tendencia": -2.1
+    },
+    "8": {
+      "ultimos_50": 5,
+      "ultimos_100": 13,
+      "ultimos_200": 28,
+      "historico_total": 188,
+      "tendencia": 0.21
+    },
+    "9": {
+      "ultimos_50": 3,
+      "ultimos_100": 9,
+      "ultimos_200": 19,
+      "historico_total": 185,
+      "tendencia": -1.71
+    },
+    "10": {
+      "ultimos_50": 7,
+      "ultimos_100": 12,
+      "ultimos_200": 23,
+      "historico_total": 212,
+      "tendencia": 1.6
+    },
+    "11": {
+      "ultimos_50": 2,
+      "ultimos_100": 6,
+      "ultimos_200": 13,
+      "historico_total": 191,
+      "tendencia": -2.87
+    },
+    "12": {
+      "ultimos_50": 5,
+      "ultimos_100": 9,
+      "ultimos_200": 16,
+      "historico_total": 196,
+      "tendencia": 0.01
+    },
+    "13": {
+      "ultimos_50": 7,
+      "ultimos_100": 16,
+      "ultimos_200": 24,
+      "historico_total": 202,
+      "tendencia": 1.85
+    },
+    "14": {
+      "ultimos_50": 8,
+      "ultimos_100": 14,
+      "ultimos_200": 24,
+      "historico_total": 203,
+      "tendencia": 2.83
+    },
+    "15": {
+      "ultimos_50": 1,
+      "ultimos_100": 4,
+      "ultimos_200": 17,
+      "historico_total": 199,
+      "tendencia": -4.07
+    },
+    "16": {
+      "ultimos_50": 6,
+      "ultimos_100": 9,
+      "ultimos_200": 17,
+      "historico_total": 193,
+      "tendencia": 1.08
+    },
+    "17": {
+      "ultimos_50": 8,
+      "ultimos_100": 16,
+      "ultimos_200": 24,
+      "historico_total": 215,
+      "tendencia": 2.52
+    },
+    "18": {
+      "ultimos_50": 6,
+      "ultimos_100": 11,
+      "ultimos_200": 19,
+      "historico_total": 176,
+      "tendencia": 1.51
+    },
+    "19": {
+      "ultimos_50": 5,
+      "ultimos_100": 7,
+      "ultimos_200": 19,
+      "historico_total": 217,
+      "tendencia": -0.53
+    },
+    "20": {
+      "ultimos_50": 3,
+      "ultimos_100": 5,
+      "ultimos_200": 17,
+      "historico_total": 203,
+      "tendencia": -2.17
+    },
+    "21": {
+      "ultimos_50": 1,
+      "ultimos_100": 5,
+      "ultimos_200": 15,
+      "historico_total": 212,
+      "tendencia": -4.4
+    },
+    "22": {
+      "ultimos_50": 4,
+      "ultimos_100": 6,
+      "ultimos_200": 13,
+      "historico_total": 154,
+      "tendencia": 0.08
+    },
+    "23": {
+      "ultimos_50": 6,
+      "ultimos_100": 7,
+      "ultimos_200": 18,
+      "historico_total": 221,
+      "tendencia": 0.37
+    },
+    "24": {
+      "ultimos_50": 4,
+      "ultimos_100": 11,
+      "ultimos_200": 25,
+      "historico_total": 199,
+      "tendencia": -1.07
+    },
+    "25": {
+      "ultimos_50": 4,
+      "ultimos_100": 11,
+      "ultimos_200": 22,
+      "historico_total": 206,
+      "tendencia": -1.25
+    },
+    "26": {
+      "ultimos_50": 7,
+      "ultimos_100": 12,
+      "ultimos_200": 16,
+      "historico_total": 205,
+      "tendencia": 1.78
+    },
+    "27": {
+      "ultimos_50": 6,
+      "ultimos_100": 10,
+      "ultimos_200": 20,
+      "historico_total": 205,
+      "tendencia": 0.78
+    },
+    "28": {
+      "ultimos_50": 7,
+      "ultimos_100": 10,
+      "ultimos_200": 16,
+      "historico_total": 189,
+      "tendencia": 2.18
+    },
+    "29": {
+      "ultimos_50": 4,
+      "ultimos_100": 13,
+      "ultimos_200": 31,
+      "historico_total": 217,
+      "tendencia": -1.53
+    },
+    "30": {
+      "ultimos_50": 1,
+      "ultimos_100": 7,
+      "ultimos_200": 18,
+      "historico_total": 194,
+      "tendencia": -3.94
+    },
+    "31": {
+      "ultimos_50": 6,
+      "ultimos_100": 12,
+      "ultimos_200": 18,
+      "historico_total": 186,
+      "tendencia": 1.26
+    },
+    "32": {
+      "ultimos_50": 1,
+      "ultimos_100": 5,
+      "ultimos_200": 12,
+      "historico_total": 179,
+      "tendencia": -3.56
+    },
+    "33": {
+      "ultimos_50": 6,
+      "ultimos_100": 8,
+      "ultimos_200": 21,
+      "historico_total": 173,
+      "tendencia": 1.59
+    },
+    "34": {
+      "ultimos_50": 6,
+      "ultimos_100": 11,
+      "ultimos_200": 18,
+      "historico_total": 197,
+      "tendencia": 0.98
+    },
+    "35": {
+      "ultimos_50": 6,
+      "ultimos_100": 12,
+      "ultimos_200": 21,
+      "historico_total": 206,
+      "tendencia": 0.75
+    },
+    "36": {
+      "ultimos_50": 3,
+      "ultimos_100": 7,
+      "ultimos_200": 18,
+      "historico_total": 184,
+      "tendencia": -1.69
+    },
+    "37": {
+      "ultimos_50": 9,
+      "ultimos_100": 12,
+      "ultimos_200": 21,
+      "historico_total": 210,
+      "tendencia": 3.65
+    },
+    "38": {
+      "ultimos_50": 4,
+      "ultimos_100": 6,
+      "ultimos_200": 13,
+      "historico_total": 199,
+      "tendencia": -1.07
+    },
+    "39": {
+      "ultimos_50": 3,
+      "ultimos_100": 10,
+      "ultimos_200": 20,
+      "historico_total": 193,
+      "tendencia": -1.92
+    },
+    "40": {
+      "ultimos_50": 4,
+      "ultimos_100": 10,
+      "ultimos_200": 17,
+      "historico_total": 178,
+      "tendencia": -0.54
+    },
+    "41": {
+      "ultimos_50": 8,
+      "ultimos_100": 14,
+      "ultimos_200": 29,
+      "historico_total": 181,
+      "tendencia": 3.39
+    },
+    "42": {
+      "ultimos_50": 7,
+      "ultimos_100": 16,
+      "ultimos_200": 30,
+      "historico_total": 222,
+      "tendencia": 1.34
+    },
+    "43": {
+      "ultimos_50": 4,
+      "ultimos_100": 10,
+      "ultimos_200": 16,
+      "historico_total": 180,
+      "tendencia": -0.59
+    },
+    "44": {
+      "ultimos_50": 5,
+      "ultimos_100": 16,
+      "ultimos_200": 25,
+      "historico_total": 224,
+      "tendencia": -0.71
+    },
+    "45": {
+      "ultimos_50": 5,
+      "ultimos_100": 10,
+      "ultimos_200": 25,
+      "historico_total": 206,
+      "tendencia": -0.25
+    },
+    "46": {
+      "ultimos_50": 7,
+      "ultimos_100": 11,
+      "ultimos_200": 22,
+      "historico_total": 174,
+      "tendencia": 2.57
+    },
+    "47": {
+      "ultimos_50": 7,
+      "ultimos_100": 11,
+      "ultimos_200": 28,
+      "historico_total": 183,
+      "tendencia": 2.34
+    },
+    "48": {
+      "ultimos_50": 4,
+      "ultimos_100": 11,
+      "ultimos_200": 21,
+      "historico_total": 193,
+      "tendencia": -0.92
+    },
+    "49": {
+      "ultimos_50": 3,
+      "ultimos_100": 5,
+      "ultimos_200": 22,
+      "historico_total": 196,
+      "tendencia": -1.99
+    },
+    "50": {
+      "ultimos_50": 3,
+      "ultimos_100": 4,
+      "ultimos_200": 15,
+      "historico_total": 209,
+      "tendencia": -2.33
+    }
+  },
+  "em_subida": [
+    37,
+    41,
+    4,
+    14,
+    46,
+    17,
+    47,
+    28,
+    6,
+    5
+  ],
+  "em_descida": [
+    21,
+    15,
+    30,
+    32,
+    11,
+    50,
+    20,
+    7,
+    49,
+    39
+  ],
+  "baixos_vs_altos": {
+    "baixos_1_25": 4927,
+    "altos_26_50": 4883,
+    "pct_baixos": 50.2,
+    "pct_altos": 49.8,
+    "distribuicao_por_sorteio": {
+      "3B-2A": 659,
+      "2B-3A": 646,
+      "4B-1A": 286,
+      "1B-4A": 284,
+      "5B-0A": 46,
+      "0B-5A": 41
+    }
+  },
+  "digitos_finais": {
+    "0": 996,
+    "1": 956,
+    "2": 935,
+    "3": 967,
+    "4": 1023,
+    "5": 1018,
+    "6": 949,
+    "7": 1013,
+    "8": 945,
+    "9": 1008
+  },
+  "gaps": {
+    "media": 8.53,
+    "mais_frequentes": [
+      {
+        "gap": 1,
+        "contagem": 770
+      },
+      {
+        "gap": 2,
+        "contagem": 715
+      },
+      {
+        "gap": 3,
+        "contagem": 682
+      },
+      {
+        "gap": 4,
+        "contagem": 585
+      },
+      {
+        "gap": 5,
+        "contagem": 549
+      }
+    ]
+  }
+}

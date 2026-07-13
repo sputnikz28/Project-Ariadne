@@ -1,0 +1,143 @@
+{
+  "nome": "Grimório de Todas as Extrações",
+  "tipo": "COPIA_SOMBRIA",
+  "total_extracoes": 8,
+  "extracoes": [
+    {
+      "data": "2026-06-12",
+      "numeros": [
+        3,
+        33,
+        36,
+        45,
+        46
+      ],
+      "estrelas": [
+        5,
+        6
+      ],
+      "jackpot": 95000000,
+      "vencedores": 0
+    },
+    {
+      "data": "2026-06-16",
+      "numeros": [
+        18,
+        25,
+        31,
+        37,
+        45
+      ],
+      "estrelas": [
+        4,
+        9
+      ],
+      "jackpot": 105000000,
+      "vencedores": 0
+    },
+    {
+      "data": "2026-06-19",
+      "numeros": [
+        8,
+        34,
+        39,
+        41,
+        42
+      ],
+      "estrelas": [
+        2,
+        7
+      ],
+      "jackpot": 118000000,
+      "vencedores": 0
+    },
+    {
+      "data": "2026-06-23",
+      "numeros": [
+        3,
+        33,
+        36,
+        45,
+        46
+      ],
+      "estrelas": [
+        5,
+        6
+      ],
+      "jackpot": 130000000,
+      "vencedores": 0
+    },
+    {
+      "data": "2026-06-26",
+      "numeros": [
+        6,
+        16,
+        26,
+        34,
+        35
+      ],
+      "estrelas": [
+        11,
+        12
+      ],
+      "jackpot": 142000000,
+      "vencedores": 0
+    },
+    {
+      "data": "2026-06-30",
+      "numeros": [
+        1,
+        8,
+        37,
+        44,
+        48
+      ],
+      "estrelas": [
+        2,
+        6
+      ],
+      "jackpot": 158000000,
+      "vencedores": 0
+    },
+    {
+      "data": "2026-07-03",
+      "numeros": [
+        2,
+        12,
+        17,
+        25,
+        39
+      ],
+      "estrelas": [
+        1,
+        2
+      ],
+      "jackpot": 166000000,
+      "vencedores": 0
+    },
+    {
+      "data": "2026-07-07",
+      "numeros": [
+        5,
+        29,
+        33,
+        45,
+        47
+      ],
+      "estrelas": [
+        5,
+        8
+      ],
+      "jackpot": 178000000,
+      "vencedores": 0
+    }
+  ],
+  "nota": "Fonte canónica local usada para reconstruir os restantes livros.",
+  "atualizado_em": "2026-07-11T09:21:29+00:00",
+  "fidelidade": 0.704,
+  "corrupcao": 0.296,
+  "criado_em": "2026-07-11T09:21:29+00:00",
+  "original": "grimorio_extracoes.json",
+  "roubado_por": "Veyron Eclipse",
+  "id": "LIVRO-NEGRO-1C7D705C"
+}

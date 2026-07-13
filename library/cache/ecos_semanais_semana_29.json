@@ -1,0 +1,675 @@
+{
+  "tipo": "DESCRITIVO_NAO_PREDITIVO",
+  "semana_iso": 29,
+  "total_ecos": 37,
+  "ecos": [
+    {
+      "id": "PERG-2004-023",
+      "data": "2004-07-16",
+      "ano_iso": 2004,
+      "semana_iso": 29,
+      "numeros": [
+        24,
+        26,
+        31,
+        38,
+        50
+      ],
+      "estrelas": [
+        5,
+        8
+      ],
+      "soma": null
+    },
+    {
+      "id": "PERG-2005-029",
+      "data": "2005-07-22",
+      "ano_iso": 2005,
+      "semana_iso": 29,
+      "numeros": [
+        3,
+        14,
+        41,
+        48,
+        49
+      ],
+      "estrelas": [
+        1,
+        4
+      ],
+      "soma": null
+    },
+    {
+      "id": "PERG-2006-029",
+      "data": "2006-07-21",
+      "ano_iso": 2006,
+      "semana_iso": 29,
+      "numeros": [
+        2,
+        4,
+        9,
+        38,
+        50
+      ],
+      "estrelas": [
+        6,
+        8
+      ],
+      "soma": null
+    },
+    {
+      "id": "PERG-2007-029",
+      "data": "2007-07-20",
+      "ano_iso": 2007,
+      "semana_iso": 29,
+      "numeros": [
+        10,
+        21,
+        25,
+        26,
+        50
+      ],
+      "estrelas": [
+        4,
+        9
+      ],
+      "soma": null
+    },
+    {
+      "id": "PERG-2008-029",
+      "data": "2008-07-18",
+      "ano_iso": 2008,
+      "semana_iso": 29,
+      "numeros": [
+        10,
+        14,
+        16,
+        29,
+        44
+      ],
+      "estrelas": [
+        5,
+        6
+      ],
+      "soma": null
+    },
+    {
+      "id": "PERG-2009-029",
+      "data": "2009-07-17",
+      "ano_iso": 2009,
+      "semana_iso": 29,
+      "numeros": [
+        2,
+        8,
+        17,
+        32,
+        50
+      ],
+      "estrelas": [
+        3,
+        7
+      ],
+      "soma": null
+    },
+    {
+      "id": "PERG-2010-030",
+      "data": "2010-07-23",
+      "ano_iso": 2010,
+      "semana_iso": 29,
+      "numeros": [
+        4,
+        13,
+        35,
+        37,
+        46
+      ],
+      "estrelas": [
+        3,
+        9
+      ],
+      "soma": null
+    },
+    {
+      "id": "PERG-2011-039",
+      "data": "2011-07-19",
+      "ano_iso": 2011,
+      "semana_iso": 29,
+      "numeros": [
+        3,
+        16,
+        25,
+        26,
+        35
+      ],
+      "estrelas": [
+        5,
+        9
+      ],
+      "soma": null
+    },
+    {
+      "id": "PERG-2011-040",
+      "data": "2011-07-22",
+      "ano_iso": 2011,
+      "semana_iso": 29,
+      "numeros": [
+        4,
+        15,
+        23,
+        49,
+        50
+      ],
+      "estrelas": [
+        2,
+        6
+      ],
+      "soma": null
+    },
+    {
+      "id": "PERG-2012-057",
+      "data": "2012-07-17",
+      "ano_iso": 2012,
+      "semana_iso": 29,
+      "numeros": [
+        2,
+        7,
+        24,
+        43,
+        46
+      ],
+      "estrelas": [
+        8,
+        10
+      ],
+      "soma": null
+    },
+    {
+      "id": "PERG-2012-058",
+      "data": "2012-07-20",
+      "ano_iso": 2012,
+      "semana_iso": 29,
+      "numeros": [
+        10,
+        19,
+        23,
+        45,
+        49
+      ],
+      "estrelas": [
+        9,
+        10
+      ],
+      "soma": null
+    },
+    {
+      "id": "PERG-2013-057",
+      "data": "2013-07-16",
+      "ano_iso": 2013,
+      "semana_iso": 29,
+      "numeros": [
+        19,
+        23,
+        34,
+        47,
+        50
+      ],
+      "estrelas": [
+        4,
+        6
+      ],
+      "soma": null
+    },
+    {
+      "id": "PERG-2013-058",
+      "data": "2013-07-19",
+      "ano_iso": 2013,
+      "semana_iso": 29,
+      "numeros": [
+        13,
+        16,
+        24,
+        26,
+        35
+      ],
+      "estrelas": [
+        2,
+        5
+      ],
+      "soma": null
+    },
+    {
+      "id": "PERG-2014-056",
+      "data": "2014-07-15",
+      "ano_iso": 2014,
+      "semana_iso": 29,
+      "numeros": [
+        15,
+        18,
+        20,
+        27,
+        34
+      ],
+      "estrelas": [
+        1,
+        3
+      ],
+      "soma": null
+    },
+    {
+      "id": "PERG-2014-057",
+      "data": "2014-07-18",
+      "ano_iso": 2014,
+      "semana_iso": 29,
+      "numeros": [
+        1,
+        11,
+        29,
+        41,
+        43
+      ],
+      "estrelas": [
+        3,
+        11
+      ],
+      "soma": null
+    },
+    {
+      "id": "PERG-2015-056",
+      "data": "2015-07-14",
+      "ano_iso": 2015,
+      "semana_iso": 29,
+      "numeros": [
+        6,
+        18,
+        19,
+        34,
+        36
+      ],
+      "estrelas": [
+        1,
+        8
+      ],
+      "soma": null
+    },
+    {
+      "id": "PERG-2015-057",
+      "data": "2015-07-17",
+      "ano_iso": 2015,
+      "semana_iso": 29,
+      "numeros": [
+        1,
+        21,
+        22,
+        43,
+        48
+      ],
+      "estrelas": [
+        7,
+        9
+      ],
+      "soma": null
+    },
+    {
+      "id": "PERG-2016-058",
+      "data": "2016-07-19",
+      "ano_iso": 2016,
+      "semana_iso": 29,
+      "numeros": [
+        19,
+        24,
+        28,
+        36,
+        37
+      ],
+      "estrelas": [
+        3,
+        6
+      ],
+      "soma": null
+    },
+    {
+      "id": "PERG-2016-059",
+      "data": "2016-07-22",
+      "ano_iso": 2016,
+      "semana_iso": 29,
+      "numeros": [
+        7,
+        24,
+        26,
+        37,
+        45
+      ],
+      "estrelas": [
+        5,
+        9
+      ],
+      "soma": null
+    },
+    {
+      "id": "PERG-2017-057",
+      "data": "2017-07-18",
+      "ano_iso": 2017,
+      "semana_iso": 29,
+      "numeros": [
+        1,
+        25,
+        27,
+        41,
+        45
+      ],
+      "estrelas": [
+        5,
+        7
+      ],
+      "soma": null
+    },
+    {
+      "id": "PERG-2017-058",
+      "data": "2017-07-21",
+      "ano_iso": 2017,
+      "semana_iso": 29,
+      "numeros": [
+        1,
+        8,
+        9,
+        26,
+        49
+      ],
+      "estrelas": [
+        5,
+        9
+      ],
+      "soma": null
+    },
+    {
+      "id": "PERG-2018-057",
+      "data": "2018-07-17",
+      "ano_iso": 2018,
+      "semana_iso": 29,
+      "numeros": [
+        4,
+        6,
+        27,
+        48,
+        50
+      ],
+      "estrelas": [
+        1,
+        11
+      ],
+      "soma": null
+    },
+    {
+      "id": "PERG-2018-058",
+      "data": "2018-07-20",
+      "ano_iso": 2018,
+      "semana_iso": 29,
+      "numeros": [
+        2,
+        15,
+        40,
+        43,
+        46
+      ],
+      "estrelas": [
+        3,
+        6
+      ],
+      "soma": null
+    },
+    {
+      "id": "PERG-2019-057",
+      "data": "2019-07-16",
+      "ano_iso": 2019,
+      "semana_iso": 29,
+      "numeros": [
+        3,
+        5,
+        13,
+        18,
+        39
+      ],
+      "estrelas": [
+        7,
+        8
+      ],
+      "soma": null
+    },
+    {
+      "id": "PERG-2019-058",
+      "data": "2019-07-19",
+      "ano_iso": 2019,
+      "semana_iso": 29,
+      "numeros": [
+        13,
+        14,
+        17,
+        26,
+        28
+      ],
+      "estrelas": [
+        2,
+        7
+      ],
+      "soma": null
+    },
+    {
+      "id": "PERG-2020-056",
+      "data": "2020-07-14",
+      "ano_iso": 2020,
+      "semana_iso": 29,
+      "numeros": [
+        11,
+        22,
+        30,
+        37,
+        47
+      ],
+      "estrelas": [
+        9,
+        10
+      ],
+      "soma": null
+    },
+    {
+      "id": "PERG-2020-057",
+      "data": "2020-07-17",
+      "ano_iso": 2020,
+      "semana_iso": 29,
+      "numeros": [
+        7,
+        15,
+        27,
+        41,
+        43
+      ],
+      "estrelas": [
+        7,
+        9
+      ],
+      "soma": null
+    },
+    {
+      "id": "PERG-2021-058",
+      "data": "2021-07-20",
+      "ano_iso": 2021,
+      "semana_iso": 29,
+      "numeros": [
+        3,
+        12,
+        19,
+        41,
+        48
+      ],
+      "estrelas": [
+        6,
+        9
+      ],
+      "soma": null
+    },
+    {
+      "id": "PERG-2021-059",
+      "data": "2021-07-23",
+      "ano_iso": 2021,
+      "semana_iso": 29,
+      "numeros": [
+        23,
+        24,
+        26,
+        34,
+        50
+      ],
+      "estrelas": [
+        2,
+        4
+      ],
+      "soma": null
+    },
+    {
+      "id": "PERG-2022-057",
+      "data": "2022-07-19",
+      "ano_iso": 2022,
+      "semana_iso": 29,
+      "numeros": [
+        6,
+        23,
+        27,
+        40,
+        41
+      ],
+      "estrelas": [
+        2,
+        12
+      ],
+      "soma": null
+    },
+    {
+      "id": "PERG-2022-058",
+      "data": "2022-07-22",
+      "ano_iso": 2022,
+      "semana_iso": 29,
+      "numeros": [
+        16,
+        18,
+        29,
+        32,
+        50
+      ],
+      "estrelas": [
+        4,
+        11
+      ],
+      "soma": null
+    },
+    {
+      "id": "PERG-2023-057",
+      "data": "2023-07-18",
+      "ano_iso": 2023,
+      "semana_iso": 29,
+      "numeros": [
+        4,
+        12,
+        34,
+        35,
+        45
+      ],
+      "estrelas": [
+        1,
+        9
+      ],
+      "soma": null
+    },
+    {
+      "id": "PERG-2023-058",
+      "data": "2023-07-21",
+      "ano_iso": 2023,
+      "semana_iso": 29,
+      "numeros": [
+        7,
+        31,
+        33,
+        35,
+        36
+      ],
+      "estrelas": [
+        7,
+        10
+      ],
+      "soma": null
+    },
+    {
+      "id": "PERG-2024-057",
+      "data": "2024-07-16",
+      "ano_iso": 2024,
+      "semana_iso": 29,
+      "numeros": [
+        2,
+        32,
+        35,
+        36,
+        39
+      ],
+      "estrelas": [
+        7,
+        8
+      ],
+      "soma": null
+    },
+    {
+      "id": "PERG-2024-058",
+      "data": "2024-07-19",
+      "ano_iso": 2024,
+      "semana_iso": 29,
+      "numeros": [
+        15,
+        22,
+        35,
+        44,
+        48
+      ],
+      "estrelas": [
+        6,
+        7
+      ],
+      "soma": null
+    },
+    {
+      "id": "PERG-2025-056",
+      "data": "2025-07-15",
+      "ano_iso": 2025,
+      "semana_iso": 29,
+      "numeros": [
+        24,
+        38,
+        41,
+        45,
+        49
+      ],
+      "estrelas": [
+        1,
+        6
+      ],
+      "soma": null
+    },
+    {
+      "id": "PERG-2025-057",
+      "data": "2025-07-18",
+      "ano_iso": 2025,
+      "semana_iso": 29,
+      "numeros": [
+        13,
+        19,
+        25,
+        42,
+        45
+      ],
+      "estrelas": [
+        2,
+        9
+      ],
+      "soma": null
+    }
+  ],
+  "aviso": "Observação histórica; não aumenta a probabilidade de prever um sorteio futuro.",
+  "criada_em": "2026-07-13T11:22:54"
+}

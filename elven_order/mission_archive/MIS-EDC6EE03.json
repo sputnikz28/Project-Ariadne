@@ -1,0 +1,14 @@
+{
+  "id": "MIS-EDC6EE03",
+  "momento": "2026-07-11T23:37:41+00:00",
+  "tipo_alvo": "LIVRO",
+  "alvo": "LIVRO-NEGRO-E26AF3BF.json",
+  "equipa": [
+    "Elyndor Sem Pegadas",
+    "Arya da Lâmina Verde"
+  ],
+  "poder": 0.7118,
+  "defesa": 0.9,
+  "sucesso": false,
+  "resultado": "A equipa foi detetada pelas Sentinelas Negras."
+}

@@ -1,0 +1,15 @@
+{
+  "id": "MIS-C911BC72",
+  "momento": "2026-07-11T23:37:47+00:00",
+  "tipo_alvo": "RELIQUIA",
+  "alvo": "ART-EXEMPLO001.json",
+  "equipa": [
+    "Arya da Lâmina Verde",
+    "Elyndor Sem Pegadas"
+  ],
+  "poder": 0.7305,
+  "defesa": 0.9,
+  "sucesso": false,
+  "resultado": "A equipa foi detetada pelas Sentinelas Negras.",
+  "ninja_corrompido": "Elyndor Sem Pegadas"
+}

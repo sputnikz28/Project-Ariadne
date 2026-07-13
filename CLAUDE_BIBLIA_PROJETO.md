@@ -120,9 +120,9 @@ Personagens
 ``` text
 biblioteca/
     fontes/
-    pergaminhos/
-    livros/
-    consultas/
+    scrolls/
+    books/
+    cache/
     indices/
     artefactos/
     reliquias/
@@ -304,7 +304,7 @@ Estrutura:
 
 ``` text
 biblioteca/
-    kors_negros/
+    black_kors/
         papiros/
             semana_01/
             ...

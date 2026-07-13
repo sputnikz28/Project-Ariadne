@@ -1,0 +1,46 @@
+{
+  "nome": "Livro das Extrações por Cumprir",
+  "extracoes": [
+    {
+      "livro": "Livro das Extrações por Cumprir",
+      "data": "2026-07-10",
+      "hora_local": "20:00",
+      "local": "Paris",
+      "timezone": "Europe/Paris",
+      "estado": "aguarda_extracao",
+      "jackpot": 178000000,
+      "ultima_chave_conhecida": {
+        "data": "2026-07-07",
+        "numeros": [
+          5,
+          29,
+          33,
+          45,
+          47
+        ],
+        "estrelas": [
+          5,
+          8
+        ],
+        "jackpot": 178000000,
+        "vencedores": 0
+      },
+      "chave_real": null,
+      "confirmada_por": [],
+      "conselho": {
+        "chave_original": null,
+        "estrelas_originais": null,
+        "chave_corrompida": null,
+        "estrelas_corrompidas": null
+      }
+    }
+  ],
+  "atualizado_em": "2026-07-11T13:32:30+00:00",
+  "tipo": "COPIA_SOMBRIA",
+  "fidelidade": 0.8785,
+  "corrupcao": 0.1215,
+  "criado_em": "2026-07-11T13:32:30+00:00",
+  "original": "livro_proximas_extracoes.json",
+  "roubado_por": "Veyron Eclipse",
+  "id": "LIVRO-NEGRO-E22E1880"
+}

@@ -1,0 +1,161 @@
+{
+  "id": "20260711_133229",
+  "nome": "Mundo Clássico",
+  "rodadas": 2,
+  "criada_em": "2026-07-11T13:32:34",
+  "eras": [
+    {
+      "era": 1,
+      "seed": "1783776750689192668",
+      "energia_celeste": "5.303",
+      "almas": "724",
+      "individuos": 744,
+      "chaves_antigas": 1008,
+      "magos_negros": 5,
+      "missoes_elficas": 3,
+      "esqueletos": 4,
+      "invocacoes_sombrias": 54,
+      "chave_original": [
+        [
+          3,
+          8,
+          33,
+          37,
+          45
+        ],
+        [
+          3,
+          6
+        ]
+      ],
+      "chave_corrompida": [
+        [
+          6,
+          32,
+          37,
+          38,
+          43
+        ],
+        [
+          3,
+          6
+        ]
+      ],
+      "relatorio": "relatorios/gerados/relatorio_v4_1_20260711_133231.txt",
+      "inventario": "escribas/inventarios/inventario_era_001.json",
+      "cronica": "escribas/cronicas/cronica_era_001.txt",
+      "biografias": [
+        "escribas/biografias/era_001_H-00087.json",
+        "escribas/biografias/era_001_H-00001.json",
+        "escribas/biografias/era_001_H-00043.json",
+        "escribas/biografias/era_001_H-00076.json",
+        "escribas/biografias/era_001_H-00065.json",
+        "escribas/biografias/era_001_H-00030.json",
+        "escribas/biografias/era_001_H-00055.json",
+        "escribas/biografias/era_001_H-00034.json",
+        "escribas/biografias/era_001_H-00019.json",
+        "escribas/biografias/era_001_H-00035.json",
+        "escribas/biografias/era_001_H-00009.json",
+        "escribas/biografias/era_001_H-00052.json"
+      ],
+      "inventario_resumido": {
+        "raridades": {
+          "EPICO": 2,
+          "RARO": 1,
+          "MITICO": 1,
+          "LENDARIO": 1
+        },
+        "estados": {
+          "ENCONTRADO": 2,
+          "ROUBADO_PELO_ESQUADRAO_NEGRO": 3
+        },
+        "artefactos": 5,
+        "livros": 9,
+        "lendas": 1
+      }
+    },
+    {
+      "era": 2,
+      "seed": "1783776752932848032",
+      "energia_celeste": "6.064",
+      "almas": "724",
+      "individuos": 744,
+      "chaves_antigas": 1008,
+      "magos_negros": 5,
+      "missoes_elficas": 3,
+      "esqueletos": 4,
+      "invocacoes_sombrias": 54,
+      "chave_original": [
+        [
+          3,
+          8,
+          25,
+          36,
+          46
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "chave_corrompida": [
+        [
+          1,
+          10,
+          26,
+          33,
+          43
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "relatorio": "relatorios/gerados/relatorio_v4_1_20260711_133233.txt",
+      "inventario": "escribas/inventarios/inventario_era_002.json",
+      "cronica": "escribas/cronicas/cronica_era_002.txt",
+      "biografias": [
+        "escribas/biografias/era_002_H-00050.json",
+        "escribas/biografias/era_002_H-00039.json",
+        "escribas/biografias/era_002_H-00008.json",
+        "escribas/biografias/era_002_H-00016.json",
+        "escribas/biografias/era_002_H-00043.json",
+        "escribas/biografias/era_002_H-00197.json",
+        "escribas/biografias/era_002_H-00018.json",
+        "escribas/biografias/era_002_H-00034.json",
+        "escribas/biografias/era_002_H-00025.json",
+        "escribas/biografias/era_002_H-00036.json",
+        "escribas/biografias/era_002_H-00032.json",
+        "escribas/biografias/era_002_H-00055.json"
+      ],
+      "inventario_resumido": {
+        "raridades": {
+          "EPICO": 2,
+          "RARO": 1,
+          "MITICO": 1,
+          "LENDARIO": 1
+        },
+        "estados": {
+          "ENCONTRADO": 2,
+          "ROUBADO_PELO_ESQUADRAO_NEGRO": 3
+        },
+        "artefactos": 5,
+        "livros": 9,
+        "lendas": 1
+      }
+    }
+  ],
+  "conselho_dos_conselhos": {
+    "numeros": [
+      3,
+      8,
+      25,
+      33,
+      36
+    ],
+    "estrelas": [
+      6,
+      3
+    ]
+  }
+}

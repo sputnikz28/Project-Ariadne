@@ -1,0 +1,21 @@
+{
+  "id": "RESS-F8CE9D66",
+  "nome": "Íria da Névoa Azul Eclipse",
+  "classe": "Lenda Ressuscitada",
+  "origem": "Era dos Primeiros Oráculos",
+  "chave": [
+    [
+      4,
+      17,
+      23,
+      34,
+      46
+    ],
+    [
+      3,
+      9
+    ]
+  ],
+  "corrupcao": 0.2923,
+  "ressuscitado_por": "Nyx do Desvio"
+}

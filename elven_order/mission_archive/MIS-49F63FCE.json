@@ -1,0 +1,14 @@
+{
+  "id": "MIS-49F63FCE",
+  "momento": "2026-07-11T23:35:20+00:00",
+  "tipo_alvo": "RELIQUIA",
+  "alvo": "ART-693DB66483.json",
+  "equipa": [
+    "Kael da Folha Negra",
+    "Arya da Lâmina Verde"
+  ],
+  "poder": 0.7938,
+  "defesa": 0.9,
+  "sucesso": true,
+  "resultado": "Relíquia recuperada e devolvida à Arca."
+}

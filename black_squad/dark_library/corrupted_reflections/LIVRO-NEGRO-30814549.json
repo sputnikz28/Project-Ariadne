@@ -1,0 +1,263 @@
+{
+  "nome": "Livro dos Esquecidos",
+  "tipo": "COPIA_SOMBRIA",
+  "numeros": [
+    {
+      "numero": 4,
+      "frequencia": 0,
+      "atraso": 8
+    },
+    {
+      "numero": 7,
+      "frequencia": 0,
+      "atraso": 8
+    },
+    {
+      "numero": 9,
+      "frequencia": 0,
+      "atraso": 8
+    },
+    {
+      "numero": 10,
+      "frequencia": 0,
+      "atraso": 8
+    },
+    {
+      "numero": 11,
+      "frequencia": 0,
+      "atraso": 8
+    },
+    {
+      "numero": 13,
+      "frequencia": 0,
+      "atraso": 8
+    },
+    {
+      "numero": 14,
+      "frequencia": 0,
+      "atraso": 8
+    },
+    {
+      "numero": 15,
+      "frequencia": 0,
+      "atraso": 8
+    },
+    {
+      "numero": 19,
+      "frequencia": 0,
+      "atraso": 8
+    },
+    {
+      "numero": 20,
+      "frequencia": 0,
+      "atraso": 8
+    },
+    {
+      "numero": 21,
+      "frequencia": 0,
+      "atraso": 8
+    },
+    {
+      "numero": 22,
+      "frequencia": 0,
+      "atraso": 8
+    },
+    {
+      "numero": 23,
+      "frequencia": 0,
+      "atraso": 8
+    },
+    {
+      "numero": 24,
+      "frequencia": 0,
+      "atraso": 8
+    },
+    {
+      "numero": 27,
+      "frequencia": 0,
+      "atraso": 8
+    },
+    {
+      "numero": 28,
+      "frequencia": 0,
+      "atraso": 8
+    },
+    {
+      "numero": 30,
+      "frequencia": 0,
+      "atraso": 8
+    },
+    {
+      "numero": 32,
+      "frequencia": 0,
+      "atraso": 8
+    },
+    {
+      "numero": 38,
+      "frequencia": 0,
+      "atraso": 8
+    },
+    {
+      "numero": 40,
+      "frequencia": 0,
+      "atraso": 8
+    },
+    {
+      "numero": 43,
+      "frequencia": 0,
+      "atraso": 8
+    },
+    {
+      "numero": 49,
+      "frequencia": 0,
+      "atraso": 8
+    },
+    {
+      "numero": 50,
+      "frequencia": 0,
+      "atraso": 8
+    },
+    {
+      "numero": 18,
+      "frequencia": 1,
+      "atraso": 6
+    },
+    {
+      "numero": 31,
+      "frequencia": 1,
+      "atraso": 6
+    },
+    {
+      "numero": 41,
+      "frequencia": 1,
+      "atraso": 5
+    },
+    {
+      "numero": 42,
+      "frequencia": 1,
+      "atraso": 5
+    },
+    {
+      "numero": 6,
+      "frequencia": 1,
+      "atraso": 3
+    },
+    {
+      "numero": 16,
+      "frequencia": 1,
+      "atraso": 3
+    },
+    {
+      "numero": 26,
+      "frequencia": 1,
+      "atraso": 3
+    },
+    {
+      "numero": 35,
+      "frequencia": 1,
+      "atraso": 3
+    },
+    {
+      "numero": 1,
+      "frequencia": 1,
+      "atraso": 2
+    },
+    {
+      "numero": 44,
+      "frequencia": 1,
+      "atraso": 2
+    },
+    {
+      "numero": 48,
+      "frequencia": 1,
+      "atraso": 2
+    },
+    {
+      "numero": 2,
+      "frequencia": 1,
+      "atraso": 1
+    },
+    {
+      "numero": 12,
+      "frequencia": 1,
+      "atraso": 1
+    },
+    {
+      "numero": 17,
+      "frequencia": 1,
+      "atraso": 1
+    },
+    {
+      "numero": 5,
+      "frequencia": 1,
+      "atraso": 0
+    },
+    {
+      "numero": 29,
+      "frequencia": 1,
+      "atraso": 0
+    },
+    {
+      "numero": 47,
+      "frequencia": 1,
+      "atraso": 0
+    },
+    {
+      "numero": 3,
+      "frequencia": 2,
+      "atraso": 4
+    },
+    {
+      "numero": 36,
+      "frequencia": 2,
+      "atraso": 4
+    },
+    {
+      "numero": 46,
+      "frequencia": 2,
+      "atraso": 4
+    },
+    {
+      "numero": 34,
+      "frequencia": 2,
+      "atraso": 3
+    },
+    {
+      "numero": 8,
+      "frequencia": 2,
+      "atraso": 2
+    },
+    {
+      "numero": 37,
+      "frequencia": 2,
+      "atraso": 2
+    },
+    {
+      "numero": 25,
+      "frequencia": 2,
+      "atraso": 1
+    },
+    {
+      "numero": 39,
+      "frequencia": 2,
+      "atraso": 1
+    },
+    {
+      "numero": 33,
+      "frequencia": 3,
+      "atraso": 0
+    },
+    {
+      "numero": 45,
+      "frequencia": 4,
+      "atraso": 0
+    }
+  ],
+  "atualizado_em": "2026-07-11T13:32:30+00:00",
+  "fidelidade": 0.6709,
+  "corrupcao": 0.3291,
+  "criado_em": "2026-07-11T13:32:30+00:00",
+  "original": "livro_numeros_frios.json",
+  "roubado_por": "Nyx do Desvio",
+  "id": "LIVRO-NEGRO-30814549"
+}
