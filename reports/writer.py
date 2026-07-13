@@ -48,13 +48,13 @@ def motivo_eliminacao(heroi):
         ],
     }
     base = heroi.raca.replace('Renascido ', '')
-    opcoes = motivos.get(base, ['O destino escolheu outro caminho.'])
-    indice = sum(ord(c) for c in heroi.id) % len(opcoes)
-    return opcoes[indice]
+    options = motivos.get(base, ['O destino escolheu outro caminho.'])
+    indice = sum(ord(c) for c in heroi.id) % len(options)
+    return options[indice]
 
 
 def gerar_lore(ctx):
-    mundo = ctx['mundo']
+    world = ctx['mundo']
     hist = ctx['historico']
     ultima = hist[-1]
     pop = ctx['evolucao']['populacao_final']
@@ -66,8 +66,8 @@ def gerar_lore(ctx):
     a('              🌌 O LIVRO DO DESTINO')
     a('╚════════════════════════════════════════════════════╝')
     a('')
-    a(f"No dia {mundo['data']}, em {mundo['local']}, o relógio marcou {mundo['hora']}.")
-    a(f"Era {mundo['dia']}, durante o {mundo['estacao']}, sob uma Lua {mundo['fase_lua']}.")
+    a(f"No dia {world['data']}, em {world['local']}, o relógio marcou {world['hora']}.")
+    a(f"Era {world['dia']}, durante o {world['estacao']}, sob uma Lua {world['fase_lua']}.")
     a('Os portões do Grande Conselho abriram-se poucos instantes antes da extração.')
     a('')
     a('A última chave conhecida pelos antigos era:')
@@ -77,25 +77,25 @@ def gerar_lore(ctx):
     a('Nenhuma criatura podia consultar resultados posteriores à data configurada.')
     a('')
     a('╔════════════════════════════════════════════════════╗')
-    a(f"  🌌 CONSELHO DO EUROMILHÕES — TEMPLO DE {mundo['local'].upper()}")
+    a(f"  🌌 CONSELHO DO EUROMILHÕES — TEMPLO DE {world['local'].upper()}")
     a('╚════════════════════════════════════════════════════╝')
     a('')
-    a(f"O jackpot de {mundo['jackpot']:,} moedas de ouro chamou os Goblins das cavernas.".replace(',', '.'))
-    a(f"A pressão do destino já durava {mundo['pressao_destino']} sorteios sem vencedor.")
+    a(f"O jackpot de {world['jackpot']:,} moedas de ouro chamou os Goblins das cavernas.".replace(',', '.'))
+    a(f"A pressão do destino já durava {world['pressao_destino']} sorteios sem vencedor.")
     a('')
 
-    videntes = [h for h in pop if h.raca.endswith('Vidente') and h.chaves]
-    tribais = [h for h in pop if h.raca.endswith('Chefe Tribal') and h.chaves]
-    bruxas = [h for h in pop if h.raca.endswith('Bruxa') and h.chaves]
-    elfos = [h for h in pop if h.raca.endswith('Elfo') and h.chaves]
-    goblins = [h for h in pop if h.raca.endswith('Goblin') and h.chaves]
-    shamans = [h for h in pop if h.raca.endswith('Shaman') and h.chaves]
+    videntes = [h for h in pop if h.raca.endswith('Vidente') and h.keys]
+    tribais = [h for h in pop if h.raca.endswith('Chefe Tribal') and h.keys]
+    bruxas = [h for h in pop if h.raca.endswith('Bruxa') and h.keys]
+    elfos = [h for h in pop if h.raca.endswith('Elfo') and h.keys]
+    goblins = [h for h in pop if h.raca.endswith('Goblin') and h.keys]
+    shamans = [h for h in pop if h.raca.endswith('Shaman') and h.keys]
 
     if videntes:
         h = max(videntes, key=lambda x: x.pontos)
-        ch = h.chaves[-1]
+        ch = h.keys[-1]
         a('🔮 AS VIDENTES ENTRAM EM TRANSE')
-        a(f'{h.nome} fecha os olhos e murmura:')
+        a(f'{h.name} fecha os olhos e murmura:')
         a('"Vejo uma pedra antiga... mas a sua sombra move-se quando tento lembrar."')
         a(f"Visão incompleta: {fmt((ch['numeros'], ch['estrelas']))}")
         a(f"Clareza do sonho: {round(h.genoma.get('clareza', 0) * 100)}%")
@@ -103,18 +103,18 @@ def gerar_lore(ctx):
 
     if bruxas:
         h = max(bruxas, key=lambda x: x.pontos)
-        ch = h.chaves[-1]
+        ch = h.keys[-1]
         a('🧙 O CÍRCULO DAS BRUXAS')
-        a(f'{h.nome} lança ao caldeirão dois números quentes, dois frios e uma gota de caos.')
+        a(f'{h.name} lança ao caldeirão dois números quentes, dois frios e uma gota de caos.')
         a(f"Da névoa surge: {fmt((ch['numeros'], ch['estrelas']))}")
         a('')
 
     if tribais:
         h = max(tribais, key=lambda x: x.pontos)
-        ch = h.chaves[-1]
+        ch = h.keys[-1]
         ossos = h.genoma.get('ossos', [])
         a('🦴 OS CHEFES TRIBAIS LANÇAM OS OSSOS')
-        a(f'{h.nome} atira cinco ossos sobre a pedra ancestral.')
+        a(f'{h.name} atira cinco ossos sobre a pedra ancestral.')
         if ossos:
             a('Símbolos revelados: ' + ' · '.join(ossos))
         a(f"Os espíritos respondem: {fmt((ch['numeros'], ch['estrelas']))}")
@@ -122,27 +122,27 @@ def gerar_lore(ctx):
 
     if elfos:
         h = max(elfos, key=lambda x: x.pontos)
-        ch = h.chaves[-1]
+        ch = h.keys[-1]
         a('🧝 A HARMONIA DOS ELFOS')
-        a(f'{h.nome} procura equilíbrio entre baixos, altos, pares, ímpares e gaps.')
+        a(f'{h.name} procura equilíbrio entre baixos, altos, pares, ímpares e gaps.')
         a(f"Chave harmonizada: {fmt((ch['numeros'], ch['estrelas']))}")
         a(f"Soma {sum(ch['numeros'])} | gaps {gaps(ch['numeros'])}")
         a('')
 
     if goblins:
         h = max(goblins, key=lambda x: x.pontos)
-        ch = h.chaves[-1]
-        ganancia = min(99, round(30 + mundo['jackpot'] / 3_000_000))
+        ch = h.keys[-1]
+        ganancia = min(99, round(30 + world['jackpot'] / 3_000_000))
         a('👹 A FEBRE DO TESOURO GOBLIN')
         a(f'Ganância: {barra(ganancia, 100)} {ganancia}%')
-        a(f'{h.nome} escolhe: {fmt((ch["numeros"], ch["estrelas"]))}')
+        a(f'{h.name} escolhe: {fmt((ch["numeros"], ch["estrelas"]))}')
         a('')
 
     if shamans:
         h = max(shamans, key=lambda x: x.pontos)
-        ch = h.chaves[-1]
+        ch = h.keys[-1]
         a('🪶 O RITUAL DOS SHAMANS')
-        a(f'{h.nome} escuta a última chave através do ciclo lunar.')
+        a(f'{h.name} escuta a última chave através do ciclo lunar.')
         a(f"Eco transformado: {fmt((ch['numeros'], ch['estrelas']))}")
         a('')
 
@@ -151,7 +151,7 @@ def gerar_lore(ctx):
     a(f"{len(ctx['evolucao']['ressuscitados'])} regressaram ao mundo dos vivos.")
     if ctx['evolucao']['ressuscitados']:
         r = ctx['evolucao']['ressuscitados'][0]
-        a(f"A primeira a regressar foi {r.nome}, agora conhecida como {r.raca}.")
+        a(f"A primeira a regressar foi {r.name}, agora conhecida como {r.raca}.")
     a('')
 
     ritual = ctx.get('ritual', {})
@@ -204,10 +204,10 @@ def gerar_lore(ctx):
 
 
     a('🌑 A BIBLIOTECA SOMBRIA')
-    grimorio=ctx.get('grimorio_negro',{})
-    a(f"Nível do Grimório Negro: {grimorio.get('nivel',1)}")
-    a(f"Livros copiados: {len(grimorio.get('livros_copiados',[]))}")
-    a(f"Relíquias roubadas ainda em posse: {len(grimorio.get('reliquias_roubadas',[]))}")
+    grimoire=ctx.get('grimorio_negro',{})
+    a(f"Nível do Grimório Negro: {grimoire.get('nivel',1)}")
+    a(f"Livros copiados: {len(grimoire.get('livros_copiados',[]))}")
+    a(f"Relíquias roubadas ainda em posse: {len(grimoire.get('reliquias_roubadas',[]))}")
     for ev in ctx.get('eventos_sombrios',[])[:8]:
         if ev.get('tipo')=='COPIA_LIVRO':
             a(f"{ev['mago']} criou {ev['copia']} a partir de {ev['livro']} com corrupção {ev['corrupcao']:.2%}.")
@@ -252,7 +252,7 @@ def gerar_lore(ctx):
         a('')
 
     a('🏛️ O CONSELHO FECHA AS PORTAS')
-    a(f"O herói dominante era {melhor.nome}, da raça {melhor.raca}, com {melhor.pontos} pontos.")
+    a(f"O herói dominante era {melhor.name}, da raça {melhor.raca}, com {melhor.pontos} pontos.")
     a(f"A chave original escolhida foi: {fmt(ctx['corr']['chave_original'])}")
     a('')
     a('😈 NO ÚLTIMO SEGUNDO, O PORTAL ABRE-SE')
@@ -269,7 +269,7 @@ def gerar_lore(ctx):
     return linhas
 
 
-def gerar(ctx, path):
+def generate(ctx, path):
     l = []
     a = l.append
     l.extend(gerar_lore(ctx))
@@ -288,12 +288,12 @@ def gerar(ctx, path):
 
     a('\n🏆 MELHORES HERÓIS')
     for h in sorted(ctx['evolucao']['populacao_final'], key=lambda x: x.pontos, reverse=True)[:15]:
-        a(f'{h.id} | {h.nome} | {h.raca} | {h.casa} | {h.pontos} | {h.titulo} | amuletos: {h.amuletos}')
+        a(f'{h.id} | {h.name} | {h.raca} | {h.casa} | {h.pontos} | {h.titulo} | amuletos: {h.amuletos}')
 
     a('\n☁️ CAMINHO DAS 1000 ALMAS')
     a(f"Almas: {len(ctx['evolucao']['cemiterio'])} | Ressuscitados: {len(ctx['evolucao']['ressuscitados'])}")
     for h in ctx['evolucao']['ressuscitados'][:20]:
-        a(f'- {h.nome} regressou como {h.raca} após {h.treinos} treinos')
+        a(f'- {h.name} regressou como {h.raca} após {h.treinos} treinos')
 
     ritual = ctx.get('ritual', {})
     if ritual.get('ativo'):
@@ -390,8 +390,8 @@ def gerar(ctx, path):
     a('\n╔════════════════════════════════════════════════════╗')
     a('   📚 ARQUIVO COMPLETO DE TODOS OS INDIVÍDUOS')
     a('╚════════════════════════════════════════════════════╝')
-    todos = sorted(ctx['evolucao']['todos'].values(), key=lambda h: (h.geracao, h.id))
-    total_chaves = sum(len(h.chaves) for h in todos)
+    todos = sorted(ctx['evolucao']['todos'].values(), key=lambda h: (h.generation, h.id))
+    total_chaves = sum(len(h.keys) for h in todos)
     a(f'Total de indivíduos únicos: {len(todos)}')
     a(f'Total de chaves das raças antigas: {total_chaves}')
     a('Inclui vivos, eliminados, almas, ressuscitados e indivíduos comuns.')
@@ -399,11 +399,11 @@ def gerar(ctx, path):
     for h in todos:
         a('\n' + '━' * 52)
         a(f'ID: {h.id}')
-        a(f'Nome: {h.nome}')
+        a(f'Nome: {h.name}')
         a(f'Raça: {h.raca}')
         a(f'Casa: {h.casa}')
         a(f'Estado final: {h.estado}')
-        a(f'Geração de nascimento: {h.geracao}')
+        a(f'Geração de nascimento: {h.generation}')
         a(f'Pais: {h.pais if h.pais else "—"}')
         a(f'Pontuação acumulada: {h.pontos}')
         a(f'Título máximo/registado: {h.titulo}')
@@ -411,8 +411,8 @@ def gerar(ctx, path):
         a(f'Treinos espirituais: {h.treinos}')
         if h.estado != 'VIVO':
             a(f'Motivo narrativo da eliminação: {motivo_eliminacao(h)}')
-        a(f'Número de chaves geradas: {len(h.chaves)}')
-        for ch in h.chaves:
+        a(f'Número de chaves geradas: {len(h.keys)}')
+        for ch in h.keys:
             a(
                 f"  Geração {ch['geracao']:>3}: "
                 f"{fmt((ch['numeros'], ch['estrelas']))} | "

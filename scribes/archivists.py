@@ -19,7 +19,7 @@ def ler(path, padrao):
         return padrao
 
 
-def guardar(path, dados):
+def save(path, dados):
     path = Path(path)
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(dados, indent=2, ensure_ascii=False), encoding="utf-8")
@@ -38,23 +38,23 @@ def inventariar_era(era, resumo_execucao):
     artefactos = listar_json("artefactos/reliquias")
     reflexos = listar_json("black_squad/dark_library/corrupted_reflections")
     roubadas = listar_json("black_squad/dark_library/stolen_relics")
-    missoes = listar_json("elven_order/mission_archive")
-    livros = listar_json("amuletos/books")
+    missions = listar_json("elven_order/mission_archive")
+    books = listar_json("amuletos/books")
     lendas = ler("lendas/livro_personagens_lendarias.json", {"personagens": []}).get("personagens", [])
-    individuos = ler("data/todos_individuos.json", [])
+    individuals = ler("data/todos_individuos.json", [])
 
-    inventario = {
+    inventory = {
         "era": era,
         "criado_em": agora(),
         "resumo_execucao": resumo_execucao,
         "contagens": {
             "artefactos_persistentes": len(artefactos),
-            "livros_proibidos": len(livros),
+            "livros_proibidos": len(books),
             "reflexos_sombrios": len(reflexos),
             "reliquias_roubadas": len(roubadas),
-            "missoes_elficas": len(missoes),
+            "missoes_elficas": len(missions),
             "lendas": len(lendas),
-            "individuos_registados": len(individuos),
+            "individuos_registados": len(individuals),
         },
         "artefactos": artefactos,
         "livros": [
@@ -63,21 +63,21 @@ def inventariar_era(era, resumo_execucao):
                 "tipo": l.get("tipo"),
                 "atualizado_em": l.get("atualizado_em"),
             }
-            for l in livros
+            for l in books
         ],
         "reflexos_sombrios": reflexos,
         "reliquias_roubadas": roubadas,
         "lendas": lendas,
     }
-    guardar(BASE / "inventarios" / f"inventario_era_{era:03d}.json", inventario)
-    return inventario
+    save(BASE / "inventarios" / f"inventario_era_{era:03d}.json", inventory)
+    return inventory
 
 
-def criar_biografias(era, maximo=12):
-    individuos = ler("data/todos_individuos.json", [])
-    individuos = sorted(individuos, key=lambda x: x.get("pontos", 0), reverse=True)[:maximo]
+def create_biographies(era, maximo=12):
+    individuals = ler("data/todos_individuos.json", [])
+    individuals = sorted(individuals, key=lambda x: x.get("pontos", 0), reverse=True)[:maximo]
     criadas = []
-    for pessoa in individuos:
+    for pessoa in individuals:
         bio = {
             "era": era,
             "id": pessoa.get("id"),
@@ -99,33 +99,33 @@ def criar_biografias(era, maximo=12):
         }
         nome_seguro = "".join(c for c in (pessoa.get("id") or "sem_id") if c.isalnum() or c in "-_")
         path = BASE / "biografias" / f"era_{era:03d}_{nome_seguro}.json"
-        guardar(path, bio)
+        save(path, bio)
         criadas.append(str(path))
     return criadas
 
 
-def atualizar_atlas(era, inventario):
+def atualizar_atlas(era, inventory):
     atlas_path = BASE / "atlas" / "atlas_do_universo.json"
     atlas = ler(atlas_path, {"nome": "Atlas do Universo", "eras": []})
     atlas["eras"].append({
         "era": era,
         "momento": agora(),
-        "contagens": inventario["contagens"],
-        "chave_original": inventario["resumo_execucao"].get("chave_original"),
-        "chave_corrompida": inventario["resumo_execucao"].get("chave_corrompida"),
-        "seed": inventario["resumo_execucao"].get("seed"),
+        "contagens": inventory["contagens"],
+        "chave_original": inventory["resumo_execucao"].get("chave_original"),
+        "chave_corrompida": inventory["resumo_execucao"].get("chave_corrompida"),
+        "seed": inventory["resumo_execucao"].get("seed"),
     })
     atlas["total_eras"] = len(atlas["eras"])
-    guardar(atlas_path, atlas)
+    save(atlas_path, atlas)
     return atlas
 
 
-def criar_museu(era, inventario):
+def create_museum(era, inventory):
     salas = {
-        "Sala I — Relíquias Persistentes": inventario["artefactos"],
-        "Sala II — Reflexos Sombrios": inventario["reflexos_sombrios"],
-        "Sala III — Relíquias Roubadas": inventario["reliquias_roubadas"],
-        "Sala IV — Personagens Lendárias": inventario["lendas"],
+        "Sala I — Relíquias Persistentes": inventory["artefactos"],
+        "Sala II — Reflexos Sombrios": inventory["reflexos_sombrios"],
+        "Sala III — Relíquias Roubadas": inventory["reliquias_roubadas"],
+        "Sala IV — Personagens Lendárias": inventory["lendas"],
     }
     museu = {
         "era": era,
@@ -133,12 +133,12 @@ def criar_museu(era, inventario):
         "criado_em": agora(),
         "salas": salas,
     }
-    guardar(BASE / "museu" / f"museu_era_{era:03d}.json", museu)
+    save(BASE / "museu" / f"museu_era_{era:03d}.json", museu)
     return museu
 
 
-def escrever_cronica(era, inventario):
-    r = inventario["resumo_execucao"]
+def write_chronicle(era, inventory):
+    r = inventory["resumo_execucao"]
     linhas = [
         "╔════════════════════════════════════════════════════╗",
         f"             📜 CRÓNICA DA ERA {era}",
@@ -151,10 +151,10 @@ def escrever_cronica(era, inventario):
         f"Chaves das raças antigas: {r.get('chaves_antigas')}",
         f"Magos Negros: {r.get('magos_negros')}",
         f"Missões Élficas nesta era: {r.get('missoes_elficas')}",
-        f"Artefactos persistentes: {inventario['contagens']['artefactos_persistentes']}",
-        f"Livros proibidos: {inventario['contagens']['livros_proibidos']}",
-        f"Reflexos sombrios: {inventario['contagens']['reflexos_sombrios']}",
-        f"Lendas: {inventario['contagens']['lendas']}",
+        f"Artefactos persistentes: {inventory['contagens']['artefactos_persistentes']}",
+        f"Livros proibidos: {inventory['contagens']['livros_proibidos']}",
+        f"Reflexos sombrios: {inventory['contagens']['reflexos_sombrios']}",
+        f"Lendas: {inventory['contagens']['lendas']}",
         "",
         "Os Escribas fecharam os portões do arquivo e selaram esta era.",
     ]
@@ -163,13 +163,13 @@ def escrever_cronica(era, inventario):
     return path
 
 
-def inventario_resumido(inventario):
-    raridades = Counter(a.get("raridade", "DESCONHECIDA") for a in inventario["artefactos"])
-    estados = Counter(a.get("estado", "DESCONHECIDO") for a in inventario["artefactos"])
+def summary_inventory(inventory):
+    raridades = Counter(a.get("raridade", "DESCONHECIDA") for a in inventory["artefactos"])
+    estados = Counter(a.get("estado", "DESCONHECIDO") for a in inventory["artefactos"])
     return {
         "raridades": dict(raridades),
         "estados": dict(estados),
-        "artefactos": inventario["contagens"]["artefactos_persistentes"],
-        "livros": inventario["contagens"]["livros_proibidos"],
-        "lendas": inventario["contagens"]["lendas"],
+        "artefactos": inventory["contagens"]["artefactos_persistentes"],
+        "livros": inventory["contagens"]["livros_proibidos"],
+        "lendas": inventory["contagens"]["lendas"],
     }

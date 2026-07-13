@@ -1,73 +1,73 @@
 import random
-from races.antigas import normalizar
+from races.antigas import normalize
 
 
 def kors_verde(ariadne):
-    transicao = ariadne.padrao_transicao()
-    if not transicao.get("ultima"):
+    transition = ariadne.transition_pattern()
+    if not transition.get("ultima"):
         return None
 
-    persistentes = transicao.get("persistentes", [])
-    chegados = transicao.get("chegados", [])
-    ests_chegadas = transicao.get("estrelas_chegadas", [])
-    ests_persistentes = transicao.get("estrelas_persistentes", [])
+    persistentes = transition.get("persistentes", [])
+    chegados = transition.get("chegados", [])
+    ests_chegadas = transition.get("estrelas_chegadas", [])
+    ests_persistentes = transition.get("estrelas_persistentes", [])
 
     # Base: numbers that just arrived in the last draw
-    candidatos = list(chegados)
+    candidates = list(chegados)
 
     # Anchor with 1-2 persistent numbers
     if persistentes:
-        candidatos.extend(random.sample(persistentes, min(2, len(persistentes))))
+        candidates.extend(random.sample(persistentes, min(2, len(persistentes))))
 
     # Add neighbours of arrived numbers to expand the pool
     for n in chegados:
         for adj in (n - 1, n + 1):
-            if 1 <= adj <= 50 and adj not in candidatos:
-                candidatos.append(adj)
+            if 1 <= adj <= 50 and adj not in candidates:
+                candidates.append(adj)
 
     # Deduplicate (preserve order)
     vistos = set()
-    candidatos_uniq = []
-    for n in candidatos:
+    unique_candidates = []
+    for n in candidates:
         if n not in vistos:
             vistos.add(n)
-            candidatos_uniq.append(n)
-    candidatos = candidatos_uniq
+            unique_candidates.append(n)
+    candidates = unique_candidates
 
     # Fill to at least 5
-    if len(candidatos) < 5:
-        ultima_nums = set(transicao["ultima"]["numeros"])
+    if len(candidates) < 5:
+        ultima_nums = set(transition["ultima"]["numeros"])
         restante = [n for n in range(1, 51) if n not in vistos and n not in ultima_nums]
         random.shuffle(restante)
-        candidatos.extend(restante[: 5 - len(candidatos)])
+        candidates.extend(restante[: 5 - len(candidates)])
 
-    nums = sorted(random.sample(candidatos, 5) if len(candidatos) >= 5 else candidatos[:5])
+    nums = sorted(random.sample(candidates, 5) if len(candidates) >= 5 else candidates[:5])
 
     # Stars: prefer newly arrived or persistent stars
     pool_ests = list(dict.fromkeys(ests_chegadas + ests_persistentes))
     if len(pool_ests) >= 2:
-        estrelas = sorted(random.sample(pool_ests, 2))
+        stars = sorted(random.sample(pool_ests, 2))
     elif len(pool_ests) == 1:
         outras = [e for e in range(1, 13) if e not in pool_ests]
-        estrelas = sorted(pool_ests + [random.choice(outras)])
+        stars = sorted(pool_ests + [random.choice(outras)])
     else:
-        estrelas = sorted(random.sample(range(1, 13), 2))
+        stars = sorted(random.sample(range(1, 13), 2))
 
-    chave = normalizar(nums, estrelas)
+    key = normalize(nums, stars)
 
     return {
         "nome": "Sylvara das Passagens",
         "classe": "Kor Verde",
         "tipo": "Kor Verde",
-        "chave": chave,
+        "chave": key,
         "peso": 1.0,
         "doutrina": "A passagem entre dois momentos revela o ritmo do universo.",
         "transicao": {
-            "penultima": transicao["penultima"]["id"],
-            "ultima": transicao["ultima"]["id"],
+            "penultima": transition["penultima"]["id"],
+            "ultima": transition["ultima"]["id"],
             "persistentes": persistentes,
             "chegados": chegados,
-            "saidos": transicao.get("saidos", []),
-            "delta_soma": transicao.get("delta_soma"),
+            "saidos": transition.get("saidos", []),
+            "delta_soma": transition.get("delta_soma"),
         },
     }

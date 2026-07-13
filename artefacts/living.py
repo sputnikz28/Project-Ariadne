@@ -2,7 +2,7 @@
 import random
 import uuid
 
-from artefacts.arca import talvez_materializar
+from artefacts.arca import maybe_materialize
 
 RARIDADES = [
     ("COMUM", 0.55, 1.05),
@@ -12,7 +12,7 @@ RARIDADES = [
     ("MITICO", 0.01, 2.00),
 ]
 
-NOMES = [
+NAMES = [
     "Osso Lunar",
     "Espelho dos Sonhos Esquecidos",
     "Livro dos Ecos",
@@ -26,29 +26,29 @@ NOMES = [
 def raridade():
     rolagem = random.random()
     acumulado = 0.0
-    for nome, probabilidade, multiplicador in RARIDADES:
+    for name, probabilidade, multiplicador in RARIDADES:
         acumulado += probabilidade
         if rolagem <= acumulado:
-            return nome, multiplicador
+            return name, multiplicador
     return "COMUM", 1.05
 
 
-def forjar(criador, geracao, config=None, seed=None):
+def forjar(criador, generation, config=None, seed=None):
     rar, multiplicador = raridade()
     artefacto = {
         "id": "ART-" + uuid.uuid4().hex[:10].upper(),
-        "nome": random.choice(NOMES),
+        "nome": random.choice(NAMES),
         "raridade": rar,
         "multiplicador": multiplicador,
-        "criador": criador.nome,
-        "geracao_criacao": geracao,
-        "donos": [criador.nome],
+        "criador": criador.name,
+        "geracao_criacao": generation,
+        "donos": [criador.name],
         "energia_acumulada": 0.0,
         "conselhos": 0,
         "estado": "ATIVO",
     }
     if config is not None:
-        talvez_materializar(config, artefacto, seed)
+        maybe_materialize(config, artefacto, seed)
     return artefacto
 
 
@@ -64,17 +64,17 @@ def evoluir(herois, taxa):
 
 
 def herdar(eliminado, elite):
-    eventos = []
+    events = []
     if not elite:
-        return eventos
+        return events
 
     for artefacto in list(eliminado.amuletos):
         destino = random.choice(elite)
         if isinstance(artefacto, dict):
-            artefacto.setdefault("donos", []).append(destino.nome)
+            artefacto.setdefault("donos", []).append(destino.name)
             artefacto["estado"] = "HERDADO"
         destino.amuletos.append(artefacto)
-        eventos.append((eliminado.nome, destino.nome, artefacto))
+        events.append((eliminado.name, destino.name, artefacto))
 
     eliminado.amuletos = []
-    return eventos
+    return events

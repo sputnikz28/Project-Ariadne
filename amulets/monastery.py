@@ -1,8 +1,8 @@
 
 import random
-from amulets.persistencia import ler_json, LIVROS
+from amulets.persistencia import ler_json, BOOKS
 
-MAPA_LIVROS = {
+BOOKS_MAP = {
     "quentes": "livro_numeros_quentes.json",
     "frios": "livro_numeros_frios.json",
     "historico": "grimorio_extracoes.json",
@@ -14,31 +14,31 @@ MAPA_LIVROS = {
 }
 
 
-def _classes(config, chave):
+def _faction_classes(config, key):
     return {
-        x.strip() for x in config.get("MONGES_E_ESCRIBAS", chave, fallback="").split(",")
+        x.strip() for x in config.get("MONGES_E_ESCRIBAS", key, fallback="").split(",")
         if x.strip()
     }
 
 
-def livros_permitidos(config, classe):
-    classe = classe.replace("Renascido ", "")
-    if classe in _classes(config, "acesso_total"):
-        return list(MAPA_LIVROS)
+def livros_permitidos(config, faction_class):
+    faction_class = faction_class.replace("Renascido ", "")
+    if faction_class in _faction_classes(config, "acesso_total"):
+        return list(BOOKS_MAP)
 
     permitidos = []
-    if classe in _classes(config, "acesso_quentes_frios"):
+    if faction_class in _faction_classes(config, "acesso_quentes_frios"):
         permitidos += ["quentes", "frios", "atrasos"]
-    if classe in _classes(config, "acesso_historico"):
+    if faction_class in _faction_classes(config, "acesso_historico"):
         permitidos += ["historico", "estrelas", "atrasos"]
-    if classe in _classes(config, "acesso_pares_trios"):
+    if faction_class in _faction_classes(config, "acesso_pares_trios"):
         permitidos += ["pares", "trios"]
-    if classe in _classes(config, "acesso_gaps"):
+    if faction_class in _faction_classes(config, "acesso_gaps"):
         permitidos += ["gaps"]
     return sorted(set(permitidos))
 
 
-def conceder_audiencia(config, heroi, geracao, eventos):
+def conceder_audiencia(config, heroi, generation, events):
     permitidos = livros_permitidos(config, heroi.raca)
     if not permitidos:
         return []
@@ -49,34 +49,34 @@ def conceder_audiencia(config, heroi, geracao, eventos):
     escolhidos = random.sample(permitidos, min(maximo, len(permitidos)))
     conhecimentos = []
 
-    for tipo in escolhidos:
-        livro = ler_json(LIVROS / MAPA_LIVROS[tipo], {})
-        resumo = {"tipo": tipo, "livro": livro.get("nome", MAPA_LIVROS[tipo])}
-        if tipo == "quentes":
+    for kind in escolhidos:
+        livro = ler_json(BOOKS / BOOKS_MAP[kind], {})
+        resumo = {"tipo": kind, "livro": livro.get("nome", BOOKS_MAP[kind])}
+        if kind == "quentes":
             resumo["numeros"] = [x["numero"] for x in livro.get("numeros", [])[:5]]
-        elif tipo == "frios":
+        elif kind == "frios":
             resumo["numeros"] = [x["numero"] for x in livro.get("numeros", [])[:5]]
-        elif tipo == "atrasos":
+        elif kind == "atrasos":
             resumo["numeros"] = [x["numero"] for x in livro.get("numeros", [])[:5]]
-        elif tipo == "estrelas":
+        elif kind == "estrelas":
             resumo["estrelas"] = [x["estrela"] for x in livro.get("estrelas", [])[:4]]
-        elif tipo == "pares":
+        elif kind == "pares":
             resumo["pares"] = [x["numeros"] for x in livro.get("pares", [])[:3]]
-        elif tipo == "trios":
+        elif kind == "trios":
             resumo["trios"] = [x["numeros"] for x in livro.get("trios", [])[:2]]
-        elif tipo == "gaps":
+        elif kind == "gaps":
             resumo["gaps"] = [x["gap"] for x in livro.get("gaps", [])[:5]]
-        elif tipo == "historico":
+        elif kind == "historico":
             resumo["total_extracoes"] = livro.get("total_extracoes", 0)
 
         conhecimentos.append(resumo)
-        eventos.append({
-            "geracao": geracao,
+        events.append({
+            "geracao": generation,
             "id": heroi.id,
-            "nome": heroi.nome,
+            "nome": heroi.name,
             "classe": heroi.raca,
             "livro": resumo["livro"],
-            "tipo": tipo,
+            "tipo": kind,
             "autorizado": True,
         })
 

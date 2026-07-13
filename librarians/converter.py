@@ -5,39 +5,39 @@ from pathlib import Path
 from datetime import datetime, timezone
 
 
-def guardar_json(path, dados):
+def save_json(path, dados):
     path = Path(path)
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(dados, indent=2, ensure_ascii=False), encoding="utf-8")
 
 
-def criar_pergaminho(sorteio):
-    numero = sorteio["numero_sorteio"].split("/")[0]
-    chave = sorteio["chave"]
-    stats = sorteio.get("estatisticas_chave") or {}
-    astronomia = sorteio.get("astronomia") or {}
-    horario = sorteio.get("horario") or {}
-    premios = sorteio.get("premios") or {}
+def criar_pergaminho(draw):
+    numero = draw["numero_sorteio"].split("/")[0]
+    key = draw["chave"]
+    stats = draw.get("estatisticas_chave") or {}
+    astronomia = draw.get("astronomia") or {}
+    horario = draw.get("horario") or {}
+    premios = draw.get("premios") or {}
 
-    pergaminho = {
+    scroll = {
         "id": f"PERG-2026-{numero}",
-        "titulo": f"Pergaminho da Extração {sorteio['numero_sorteio']}",
+        "titulo": f"Pergaminho da Extração {draw['numero_sorteio']}",
         "biblioteca": "Grande Grimório das Extrações",
         "estado": "SELADO",
         "raridade": "Sagrado",
         "data": {
-            "extracao": sorteio["data"],
-            "dia_semana": sorteio.get("dia_semana"),
+            "extracao": draw["data"],
+            "dia_semana": draw.get("dia_semana"),
             "hora_paris": horario.get("hora_paris"),
             "hora_portugal": horario.get("hora_portugal"),
             "timestamp_utc": horario.get("timestamp_utc"),
         },
         "extracao": {
-            "numero_sorteio": sorteio["numero_sorteio"],
-            "numeros": chave["numeros"],
-            "estrelas": chave["estrelas"],
-            "ordem_saida": sorteio.get("ordem_saida"),
-            "ordem_saida_disponivel": sorteio.get("ordem_saida_disponivel", False),
+            "numero_sorteio": draw["numero_sorteio"],
+            "numeros": key["numeros"],
+            "estrelas": key["estrelas"],
+            "ordem_saida": draw.get("ordem_saida"),
+            "ordem_saida_disponivel": draw.get("ordem_saida_disponivel", False),
         },
         "estatisticas": {
             "soma": stats.get("soma_numeros"),
@@ -59,27 +59,27 @@ def criar_pergaminho(sorteio):
             "eclipse": astronomia.get("eclipse_no_instante"),
         },
         "premios": premios,
-        "qualidade_dados": sorteio.get("qualidade_dados"),
+        "qualidade_dados": draw.get("qualidade_dados"),
         "assinatura": {
             "escriba": "Orion dos Arquivos",
             "selo": "Biblioteca Eterna",
             "sha256": hashlib.sha256(
-                json.dumps(chave, sort_keys=True).encode("utf-8")
+                json.dumps(key, sort_keys=True).encode("utf-8")
             ).hexdigest(),
             "integridade": "100%",
         },
         "anotacoes": [],
     }
-    return pergaminho
+    return scroll
 
 
 def importar_dataset(caminho_dataset, pasta_destino):
     dataset = json.loads(Path(caminho_dataset).read_text(encoding="utf-8"))
     criados = []
-    for sorteio in dataset.get("sorteios", []):
-        pergaminho = criar_pergaminho(sorteio)
-        numero = sorteio["numero_sorteio"].split("/")[0]
+    for draw in dataset.get("sorteios", []):
+        scroll = criar_pergaminho(draw)
+        numero = draw["numero_sorteio"].split("/")[0]
         path = Path(pasta_destino) / f"{numero}.json"
-        guardar_json(path, pergaminho)
+        save_json(path, scroll)
         criados.append(path)
     return criados

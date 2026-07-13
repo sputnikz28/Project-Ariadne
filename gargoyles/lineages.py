@@ -4,7 +4,7 @@ import random
 from pathlib import Path
 
 
-def carregar_duplas():
+def load_pairs():
     return json.loads(Path("library/indices/duplas.json").read_text(encoding="utf-8"))
 
 
@@ -18,7 +18,7 @@ def completar(dupla):
 
 
 def linhagem_pedra():
-    dados = carregar_duplas()
+    dados = load_pairs()
     candidatas = dados.get("duplas_mais_comuns", [])[:30]
     dupla = random.choice(candidatas)["numeros"] if candidatas else random.sample(range(1, 51), 2)
     return {
@@ -32,7 +32,7 @@ def linhagem_pedra():
 
 
 def linhagem_espelho():
-    dados = carregar_duplas()
+    dados = load_pairs()
     candidatas = dados.get("duplas_consecutivas", [])[:30] or dados.get("duplas_mais_comuns", [])[:30]
     dupla = random.choice(candidatas)["numeros"] if candidatas else [16, 17]
     return {
@@ -45,5 +45,5 @@ def linhagem_espelho():
     }
 
 
-def criar_gargulas():
+def create_gargoyles():
     return [linhagem_pedra(), linhagem_espelho()]

@@ -1,18 +1,18 @@
 from collections import Counter
-from .base import CartografoDoCaos
+from .base import CartographerOfChaos
 
 
-class CartografoDasTendencias(CartografoDoCaos):
-    nome = "Lirien das Correntes"
+class CartografoDasTendencias(CartographerOfChaos):
+    name = "Lirien das Correntes"
     especialidade = "Tendências por janela, baixos vs altos, dígitos finais"
 
-    def analisar(self, historico):
-        total = len(historico)
+    def analisar(self, history):
+        total = len(history)
         if total == 0:
             return {"titulo": "Livro das Tendências e Correntes", "total_sorteios": 0}
 
         def freq_janela(n):
-            recentes = historico[-n:] if n < total else historico
+            recentes = history[-n:] if n < total else history
             cnt = Counter()
             for draw in recentes:
                 for num in draw["numeros"]:
@@ -40,19 +40,19 @@ class CartografoDasTendencias(CartografoDoCaos):
         em_descida = sorted(range(1, 51), key=lambda n: tendencias[n]["tendencia"])[:10]
 
         # Baixos (1-25) vs Altos (26-50)
-        baixos = sum(1 for draw in historico for n in draw["numeros"] if n <= 25)
+        baixos = sum(1 for draw in history for n in draw["numeros"] if n <= 25)
         altos = total * 5 - baixos
         dist_ba = Counter()
-        for draw in historico:
+        for draw in history:
             b = sum(1 for n in draw["numeros"] if n <= 25)
             dist_ba[f"{b}B-{5-b}A"] += 1
 
         # Dígito final
-        digitos = Counter(n % 10 for draw in historico for n in draw["numeros"])
+        digitos = Counter(n % 10 for draw in history for n in draw["numeros"])
 
         # Gaps histogram (across all draws)
         all_gaps = []
-        for draw in historico:
+        for draw in history:
             s = sorted(draw["numeros"])
             all_gaps.extend(s[i + 1] - s[i] for i in range(4))
         gap_hist = Counter(all_gaps)

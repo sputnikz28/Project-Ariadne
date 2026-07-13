@@ -4,7 +4,7 @@ import random
 from pathlib import Path
 
 
-def carregar_triplas():
+def load_triples():
     return json.loads(Path("library/indices/triplas.json").read_text(encoding="utf-8"))
 
 
@@ -18,34 +18,34 @@ def completar(tripla):
 
 
 def linhagem_sanguinea():
-    dados = carregar_triplas()
+    dados = load_triples()
     candidatas = dados.get("triplas_mais_comuns", [])[:20]
     escolha = random.choice(candidatas)["numeros"] if candidatas else random.sample(range(1, 51), 3)
-    chave = completar(escolha)
+    key = completar(escolha)
     return {
         "nome": "Conde Vaelor da Linhagem Sanguínea",
         "classe": "Vampiro",
         "linhagem": "Sanguínea",
         "doutrina": "Triplas frequentes inseridas numa chave equilibrada.",
         "tripla": escolha,
-        "chave": chave,
+        "chave": key,
     }
 
 
 def linhagem_sombria():
-    dados = carregar_triplas()
+    dados = load_triples()
     candidatas = dados.get("triplas_consecutivas", [])[:20] or dados.get("triplas_mais_comuns", [])[:20]
     escolha = random.choice(candidatas)["numeros"] if candidatas else [16, 17, 18]
-    chave = completar(escolha)
+    key = completar(escolha)
     return {
         "nome": "Lady Nyx da Linhagem Sombria",
         "classe": "Vampiro",
         "linhagem": "Sombria",
         "doutrina": "Triplas consecutivas, harmónicas e repetitivas.",
         "tripla": escolha,
-        "chave": chave,
+        "chave": key,
     }
 
 
-def criar_vampiros():
+def create_vampires():
     return [linhagem_sanguinea(), linhagem_sombria()]

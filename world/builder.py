@@ -1,9 +1,9 @@
 from datetime import datetime
-from sources.fontes import obter_historico, obter_lua, obter_jackpot
+from sources.fontes import get_history, obter_lua, obter_jackpot
 
 
-def construir(cfg):
-    hist,fh=obter_historico(cfg)
+def build(cfg):
+    hist,fh=get_history(cfg)
     data=cfg['MUNDO']['data']; hora=cfg['MUNDO']['hora']
     visivel=[s for s in hist if s['data']<data]
     if not visivel: visivel=hist
@@ -15,5 +15,5 @@ def construir(cfg):
     for s in reversed(visivel):
         if s.get('vencedores',0)==0: pressao+=1
         else: break
-    mundo={'data':data,'hora':hora,'local':cfg['MUNDO']['local'],'pais':cfg['MUNDO']['pais'],'timezone':cfg['MUNDO']['timezone'],'dia':dias[dt.weekday()],'estacao':est,'fase_lua':lua['fase'],'idade_lua':lua['idade_dias'],'jackpot':jackpot,'pressao_destino':pressao,'fontes':{'historico':fh,'jackpot':fj,'lua':lua['fonte']}}
-    return mundo,visivel
+    world={'data':data,'hora':hora,'local':cfg['MUNDO']['local'],'pais':cfg['MUNDO']['pais'],'timezone':cfg['MUNDO']['timezone'],'dia':dias[dt.weekday()],'estacao':est,'fase_lua':lua['fase'],'idade_lua':lua['idade_dias'],'jackpot':jackpot,'pressao_destino':pressao,'fontes':{'historico':fh,'jackpot':fj,'lua':lua['fonte']}}
+    return world,visivel

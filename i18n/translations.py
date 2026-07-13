@@ -248,13 +248,13 @@ _T['gb'] = _T['en']
 CODIGOS_VALIDOS = frozenset(_T)
 
 
-def t(chave, lang='pt'):
+def t(key, lang='pt'):
     """
     Devolve a string traduzida para lang.
     Fallback: tenta 'pt'; se a chave não existir em lado nenhum, devolve a própria chave.
     """
     idioma = _T.get(lang) or _T['pt']
-    return idioma.get(chave) or _T['pt'].get(chave, chave)
+    return idioma.get(key) or _T['pt'].get(key, key)
 
 
 def lang_de_cfg(cfg):

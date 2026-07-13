@@ -1,18 +1,18 @@
 import random
 from collections import Counter
-from .base import CartografoDoCaos
+from .base import CartographerOfChaos
 
 
-class MongeDoAcaso(CartografoDoCaos):
-    nome = "Thalvos do Acaso Esperado"
+class MongeDoAcaso(CartographerOfChaos):
+    name = "Thalvos do Acaso Esperado"
     especialidade = "Monte Carlo — compara o real com o esperado aleatório"
 
-    def __init__(self, ariadne, n_simulacoes=100_000):
+    def __init__(self, ariadne, n_simulations=100_000):
         super().__init__(ariadne)
-        self.n_simulacoes = n_simulacoes
+        self.n_simulations = n_simulations
 
-    def analisar(self, historico):
-        total = len(historico)
+    def analisar(self, history):
+        total = len(history)
         if total == 0:
             return {"titulo": "Livro do Acaso Esperado", "total_sorteios": 0}
 
@@ -21,7 +21,7 @@ class MongeDoAcaso(CartografoDoCaos):
         somas_reais = []
         baixos_reais = 0
         pares_reais = 0
-        for draw in historico:
+        for draw in history:
             nums = draw["numeros"]
             for n in nums:
                 freq_real[n] += 1
@@ -36,7 +36,7 @@ class MongeDoAcaso(CartografoDoCaos):
         somas_sim = []
         baixos_sim = 0
         pares_sim = 0
-        n = self.n_simulacoes
+        n = self.n_simulations
         for _ in range(n):
             nums = random.sample(range(1, 51), 5)
             for num in nums:
@@ -51,18 +51,18 @@ class MongeDoAcaso(CartografoDoCaos):
         total_nums_sim = n * 5
 
         # Per-number deviation
-        desvios = []
+        deviations = []
         for num in range(1, 51):
             pct_real = freq_real.get(num, 0) / total_nums_real * 100
             pct_sim = freq_sim.get(num, 0) / total_nums_sim * 100
-            desvios.append({
+            deviations.append({
                 "numero": num,
                 "freq_real": freq_real.get(num, 0),
                 "pct_real": round(pct_real, 3),
                 "pct_esperada": round(pct_sim, 3),
                 "desvio": round(pct_real - pct_sim, 3),
             })
-        desvios.sort(key=lambda x: abs(x["desvio"]), reverse=True)
+        deviations.sort(key=lambda x: abs(x["desvio"]), reverse=True)
 
         soma_media_real = round(sum(somas_reais) / total, 2)
         soma_media_sim = round(sum(somas_sim) / n, 2)
@@ -76,7 +76,7 @@ class MongeDoAcaso(CartografoDoCaos):
             "titulo": "Livro do Acaso Esperado",
             "total_sorteios": total,
             "simulacoes": n,
-            "top_desvios": desvios[:20],
+            "top_desvios": deviations[:20],
             "soma": {
                 "media_real": soma_media_real,
                 "media_simulada": soma_media_sim,

@@ -1,51 +1,51 @@
 import random
-from races.antigas import normalizar
+from races.antigas import normalize
 
 
-def gerar_chave_temporal(nome, extracao, mundo, indice=0):
-    if not extracao.get('eventos'):
+def generate_temporal_key(name, extraction, world, indice=0):
+    if not extraction.get('eventos'):
         return {
-            'nome': nome,
+            'nome': name,
             'tipo': 'Cronomante',
-            'chave': normalizar(random.sample(range(1, 51), 5), random.sample(range(1, 13), 2)),
+            'chave': normalize(random.sample(range(1, 51), 5), random.sample(range(1, 13), 2)),
             'precisao_temporal': 0.0,
             'assinatura_temporal': [],
         }
 
-    idade_lua = float(mundo.get('idade_lua', 0.0))
+    idade_lua = float(world.get('idade_lua', 0.0))
     assinatura = []
-    numeros = []
-    estrelas = []
+    numbers = []
+    stars = []
 
-    for evento in extracao['eventos'][:5]:
-        energia = (
+    for evento in extraction['eventos'][:5]:
+        energy = (
             evento['segundo']
             + (evento['milissegundo'] % 100)
             + idade_lua
             + indice * 3
         )
-        valor = int(energia % 50) + 1
-        assinatura.append(round(energia, 3))
-        numeros.append(valor)
+        valor = int(energy % 50) + 1
+        assinatura.append(round(energy, 3))
+        numbers.append(valor)
 
-    for evento in extracao['eventos'][5:]:
-        energia = evento['segundo'] + (evento['milissegundo'] % 12) + indice
-        estrelas.append(int(energia % 12) + 1)
+    for evento in extraction['eventos'][5:]:
+        energy = evento['segundo'] + (evento['milissegundo'] % 12) + indice
+        stars.append(int(energy % 12) + 1)
 
-    chave = normalizar(numeros, estrelas)
-    precisao = round(max(0.05, 0.65 - abs(extracao['atraso_arranque'] - 8.0) / 30.0), 3)
+    key = normalize(numbers, stars)
+    precisao = round(max(0.05, 0.65 - abs(extraction['atraso_arranque'] - 8.0) / 30.0), 3)
     return {
-        'nome': nome,
+        'nome': name,
         'tipo': 'Cronomante',
-        'chave': chave,
+        'chave': key,
         'precisao_temporal': precisao,
         'assinatura_temporal': assinatura,
     }
 
 
-def criar_cronomantes(cfg, extracao, mundo):
+def create_chronomancers(cfg, extraction, world):
     quantidade = cfg.getint('EXTRACAO', 'quantidade_cronomantes', fallback=4)
-    nomes = [
+    names = [
         'Aurel dos Segundos Perdidos',
         'Chrona da Ampulheta Partida',
         'Kairon do Último Instante',
@@ -53,6 +53,6 @@ def criar_cronomantes(cfg, extracao, mundo):
         'Nym do Relógio Lunar',
     ]
     return [
-        gerar_chave_temporal(nomes[i % len(nomes)], extracao, mundo, i)
+        generate_temporal_key(names[i % len(names)], extraction, world, i)
         for i in range(quantidade)
     ]

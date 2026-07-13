@@ -1,20 +1,20 @@
 
 import json
 from pathlib import Path
-from vampires.linhagens import criar_vampiros
-from gargoyles.linhagens import criar_gargulas
+from vampires.linhagens import create_vampires
+from gargoyles.linhagens import create_gargoyles
 from treefolks.investigator import investigar_lua_cheia
 from library.ariadne.motor import Ariadne
 
 
-def fmt(chave):
-    return f"{' - '.join(map(str, chave[0]))} | Estrelas: {' - '.join(map(str, chave[1]))}"
+def fmt(key):
+    return f"{' - '.join(map(str, key[0]))} | Estrelas: {' - '.join(map(str, key[1]))}"
 
 
 def main():
     ariadne = Ariadne()
-    vampiros = criar_vampiros()
-    gargulas = criar_gargulas()
+    vampiros = create_vampires()
+    gargulas = create_gargoyles()
     treefolk = investigar_lua_cheia()
 
     linhas = [
@@ -22,7 +22,7 @@ def main():
         "           📖 V7 — BIBLIOTECA ETERNA",
         "╚════════════════════════════════════════════════════╝",
         "",
-        f"Pergaminhos catalogados: {len(ariadne.pergaminhos)}",
+        f"Pergaminhos catalogados: {len(ariadne.scrolls)}",
         "",
         "🧛 VAMPIROS — MESTRES DAS TRIPLAS",
     ]

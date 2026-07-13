@@ -28,15 +28,15 @@ def main():
     args = parser.parse_args()
 
     arquivo = json.loads(Path("data/arquivo_destino.json").read_text(encoding="utf-8"))
-    alvo_n = set(args.numeros)
-    alvo_e = set(args.estrelas)
-    resultados = []
+    alvo_n = set(args.numbers)
+    alvo_e = set(args.stars)
+    results = []
 
     for registo in arquivo:
         acertos_n = len(set(registo["numeros"]) & alvo_n)
         acertos_e = len(set(registo["estrelas"]) & alvo_e)
         pontos = acertos_n * 10 + acertos_e * 5 + (8 if acertos_n >= 3 else 0) + (5 if acertos_e == 2 else 0)
-        resultados.append({
+        results.append({
             **registo,
             "acertos_numeros": acertos_n,
             "acertos_estrelas": acertos_e,
@@ -44,23 +44,23 @@ def main():
             "titulo_resultado": titulo(acertos_n, acertos_e),
         })
 
-    resultados.sort(
+    results.sort(
         key=lambda x: (x["acertos_numeros"], x["acertos_estrelas"], x["pontos_resultado"]),
         reverse=True,
     )
 
-    chave_real = {
-        "numeros": sorted(args.numeros),
-        "estrelas": sorted(args.estrelas),
+    actual_key = {
+        "numeros": sorted(args.numbers),
+        "estrelas": sorted(args.stars),
     }
-    novas_lendas = registar_lendas(resultados, chave_real, min_numeros=3, min_estrelas=2)
+    novas_lendas = registar_lendas(results, actual_key, min_numbers=3, min_stars=2)
 
     linhas = [
         "╔════════════════════════════════════════════════════╗",
         "       ⏳ JULGAMENTO PÓS-SORTEIO DO DESTINO",
         "╚════════════════════════════════════════════════════╝",
         "",
-        f"Chave real: {' - '.join(map(str, chave_real['numeros']))} | Estrelas: {' - '.join(map(str, chave_real['estrelas']))}",
+        f"Chave real: {' - '.join(map(str, actual_key['numeros']))} | Estrelas: {' - '.join(map(str, actual_key['estrelas']))}",
         f"Registos pesquisados: {len(arquivo)}",
         f"Novas lendas registadas: {len(novas_lendas)}",
         "",
@@ -74,7 +74,7 @@ def main():
             )
         linhas.append("")
 
-    for i, r in enumerate(resultados[:args.top], 1):
+    for i, r in enumerate(results[:args.top], 1):
         linhas.append(
             f"{i:>3}. Geração {r['geracao']} | {r['nome']} | {r['classe']} | "
             f"{r['numeros']} ⭐ {r['estrelas']} | "

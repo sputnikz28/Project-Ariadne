@@ -1,17 +1,17 @@
 from collections import defaultdict
-from .base import CartografoDoCaos
+from .base import CartographerOfChaos
 
 
-class CronistaDoCiclos(CartografoDoCaos):
-    nome = "Vesara dos Intervalos"
+class CronistaDoCiclos(CartographerOfChaos):
+    name = "Vesara dos Intervalos"
     especialidade = "Atrasos históricos, médias, máximos, ciclos completos"
 
-    def analisar(self, historico):
-        total = len(historico)
+    def analisar(self, history):
+        total = len(history)
 
         # Per-number: list of draw indices where it appeared
         aparicoes = defaultdict(list)
-        for idx, draw in enumerate(historico):
+        for idx, draw in enumerate(history):
             for n in draw["numeros"]:
                 aparicoes[n].append(idx)
 
@@ -52,7 +52,7 @@ class CronistaDoCiclos(CartografoDoCaos):
         ciclos = []
         vistos = set()
         inicio = 0
-        for idx, draw in enumerate(historico):
+        for idx, draw in enumerate(history):
             for n in draw["numeros"]:
                 vistos.add(n)
             if len(vistos) == 50:

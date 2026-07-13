@@ -4,8 +4,8 @@ Integração com main.py: devolve lista de dicts com nome/chave/peso.
 Só vota quando o Portal das Chaves Inéditas está aberto.
 """
 
-from races.antigas import normalizar
-from .ritual import executar_ritual
+from races.antigas import normalize
+from .ritual import execute_ritual
 from i18n.translations import t
 
 
@@ -15,34 +15,34 @@ def axiomantes(ariadne, seed, cfg=None):
 
     Cada dict contém: nome, classe, tipo, chave, peso, e 'ritual' com todas as métricas.
     """
-    resultado = executar_ritual(ariadne, seed, cfg)
-    if not resultado:
+    result = execute_ritual(ariadne, seed, cfg)
+    if not result:
         return []
 
-    peso = 0.75
+    weight = 0.75
     if cfg:
-        peso = cfg.getfloat('AXIOMANTES', 'peso_conselho', fallback=0.75)
+        weight = cfg.getfloat('AXIOMANTES', 'peso_conselho', fallback=0.75)
 
-    if not resultado['portal_aberto'] or not resultado['chave_proposta']:
+    if not result['portal_aberto'] or not result['chave_proposta']:
         # Portal fechado: Axiomantes observam mas não votam
         return []
 
-    nums, ests = resultado['chave_proposta']
-    chave_norm = normalizar(nums, ests)
+    nums, ests = result['chave_proposta']
+    chave_norm = normalize(nums, ests)
 
     return [{
         'nome': 'Axiomantes de Nemerion',
         'classe': 'Axiomante',
         'tipo': 'Axiomante',
         'chave': chave_norm,
-        'peso': peso,
-        'ritual': resultado,
+        'peso': weight,
+        'ritual': result,
         'doutrina': (
-            f"[{resultado.get('lang','pt').upper()}] "
-            f"Marco: {resultado['posicao_alvo']:,}/{resultado['universo_total']:,} · "
-            f"Ecos: {resultado['n_ecos']} · Cobertura: {resultado['cobertura_pct']:.2f}% "
-            f"(excesso: {resultado['excesso_pct']:+.2f}%) · "
-            f"Score: {resultado.get('score_proposta', 0):.1f}/100 · "
-            f"{resultado['veredicto']}"
+            f"[{result.get('lang','pt').upper()}] "
+            f"Marco: {result['posicao_alvo']:,}/{result['universo_total']:,} · "
+            f"Ecos: {result['n_ecos']} · Cobertura: {result['cobertura_pct']:.2f}% "
+            f"(excesso: {result['excesso_pct']:+.2f}%) · "
+            f"Score: {result.get('score_proposta', 0):.1f}/100 · "
+            f"{result['veredicto']}"
         ),
     }]

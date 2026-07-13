@@ -8,36 +8,36 @@ e pontua chaves inéditas por afinidade com esse perfil.
 from collections import Counter
 from math import sqrt
 
-from .labirinto import chave_na_posicao, UNIVERSO
+from .labirinto import key_at_position, UNIVERSE
 
 
-def calcular_perfil(ecos):
+def calculate_profile(echoes):
     """
     Constrói o perfil estatístico a partir dos ecos (chaves históricas antes do marco).
     ecos: lista de {'numeros': [...], 'estrelas': [...], ...}
     """
-    if not ecos:
+    if not echoes:
         return None
 
-    n = len(ecos)
-    somas = [sum(e['numeros']) for e in ecos]
+    n = len(echoes)
+    somas = [sum(e['numeros']) for e in echoes]
     soma_media = sum(somas) / n
     variancia = sum((s - soma_media) ** 2 for s in somas) / n
-    desvio_soma = sqrt(variancia)
+    sum_deviation = sqrt(variancia)
 
-    paridades = Counter()
+    parities = Counter()
     baixos_altos = Counter()
     freq_nums = Counter()
     freq_ests = Counter()
     gaps_medios = []
     amplitudes = []
 
-    for e in ecos:
+    for e in echoes:
         ns = sorted(e['numeros'])
         es = e['estrelas']
 
         n_pares = sum(1 for x in ns if x % 2 == 0)
-        paridades[(n_pares, 5 - n_pares)] += 1
+        parities[(n_pares, 5 - n_pares)] += 1
 
         n_baixos = sum(1 for x in ns if x <= 25)
         baixos_altos[(n_baixos, 5 - n_baixos)] += 1
@@ -55,12 +55,12 @@ def calcular_perfil(ecos):
     return {
         'n_ecos': n,
         'soma_media': round(soma_media, 1),
-        'desvio_soma': round(desvio_soma, 1),
+        'desvio_soma': round(sum_deviation, 1),
         'faixa_soma_preferida': [
-            int(soma_media - desvio_soma),
-            int(soma_media + desvio_soma),
+            int(soma_media - sum_deviation),
+            int(soma_media + sum_deviation),
         ],
-        'paridades_preferidas': [p for p, _ in paridades.most_common(2)],
+        'paridades_preferidas': [p for p, _ in parities.most_common(2)],
         'baixos_altos_preferidos': [ba for ba, _ in baixos_altos.most_common(2)],
         'numeros_mais_frequentes': [num for num, _ in freq_nums.most_common(10)],
         'numeros_menos_frequentes': [num for num, _ in reversed(freq_nums.most_common())][: 10],
@@ -77,7 +77,7 @@ def calcular_perfil(ecos):
 _SCORE_AFINIDADE_NUMS = [0.0, 5.0, 10.0, 20.0, 15.0, 10.0]
 
 
-def score_chave(nums, ests, perfil):
+def score_chave(nums, ests, profile):
     """
     Pontua (nums, ests) de 0 a 100 com base no perfil dos Ecos.
 
@@ -98,7 +98,7 @@ def score_chave(nums, ests, perfil):
     ns = sorted(nums)
 
     # --- Soma (20 pts) ---
-    faixa = perfil['faixa_soma_preferida']
+    faixa = profile['faixa_soma_preferida']
     if faixa[0] <= soma <= faixa[1]:
         score += 20.0
     else:
@@ -107,85 +107,85 @@ def score_chave(nums, ests, perfil):
 
     # --- Paridade (15 pts) ---
     n_pares = sum(1 for x in nums if x % 2 == 0)
-    par_chave = (n_pares, 5 - n_pares)
-    pref = perfil['paridades_preferidas']
-    if pref and par_chave == pref[0]:
+    key_pair = (n_pares, 5 - n_pares)
+    pref = profile['paridades_preferidas']
+    if pref and key_pair == pref[0]:
         score += 15.0
-    elif len(pref) > 1 and par_chave == pref[1]:
+    elif len(pref) > 1 and key_pair == pref[1]:
         score += 10.0
 
     # --- Baixos/altos (15 pts) ---
     n_baixos = sum(1 for x in nums if x <= 25)
     ba_chave = (n_baixos, 5 - n_baixos)
-    ba_pref = perfil['baixos_altos_preferidos']
+    ba_pref = profile['baixos_altos_preferidos']
     if ba_pref and ba_chave == ba_pref[0]:
         score += 15.0
     elif len(ba_pref) > 1 and ba_chave == ba_pref[1]:
         score += 10.0
 
     # --- Afinidade com números frequentes (20 pts) ---
-    top5 = set(perfil['numeros_mais_frequentes'][:5])
+    top5 = set(profile['numeros_mais_frequentes'][:5])
     afinidade = len(set(nums) & top5)
     score += _SCORE_AFINIDADE_NUMS[afinidade]
 
     # --- Bónus: 1-2 números raramente vistos (5 pts) ---
-    raros = set(perfil['numeros_menos_frequentes'][:5])
+    raros = set(profile['numeros_menos_frequentes'][:5])
     n_raros = len(set(nums) & raros)
     if 1 <= n_raros <= 2:
         score += 5.0
 
     # --- Afinidade com estrelas (15 pts) ---
-    top3_ests = set(perfil['estrelas_mais_frequentes'][:3])
+    top3_ests = set(profile['estrelas_mais_frequentes'][:3])
     afinidade_ests = len(set(ests) & top3_ests)
     score += afinidade_ests * 7.5
 
     # --- Gap médio (10 pts) ---
     gaps = [ns[i + 1] - ns[i] for i in range(4)]
     gap_chave = sum(gaps) / 4
-    diff_gap = abs(gap_chave - perfil['gap_medio'])
+    diff_gap = abs(gap_chave - profile['gap_medio'])
     score += max(0.0, 10.0 - diff_gap * 0.8)
 
     # --- Amplitude (5 pts) ---
-    amplitude = ns[-1] - ns[0]
-    diff_amp = abs(amplitude - perfil['amplitude_media'])
+    span = ns[-1] - ns[0]
+    diff_amp = abs(span - profile['amplitude_media'])
     score += max(0.0, 5.0 - diff_amp * 0.15)
 
     return min(100.0, round(score, 1))
 
 
-def escolher_por_perfil(pos_alvo, seed, perfil, chaves_historicas, n_candidatos):
+def choose_by_profile(pos_alvo, seed, profile, historical_keys, n_candidates):
     """
     Avalia n_candidatos chaves inéditas após o marco e devolve a de maior score.
     Começa no espaço_médio após o marco; avança posição a posição.
     """
-    salto = max(1, perfil.get('gap_medio', 1))
-    pos = int(pos_alvo + salto) % UNIVERSO
+    salto = max(1, profile.get('gap_medio', 1))
+    pos = int(pos_alvo + salto) % UNIVERSE
 
     melhor_score = -1.0
-    melhor_chave = None
+    best_key = None
     melhor_pos = None
-    n_ineditas = 0
+    n_undrawn = 0
     n_total = 0
 
-    while n_ineditas < n_candidatos:
-        nums, ests = chave_na_posicao(pos, seed)
+    while n_undrawn < n_candidates:
+        nums, ests = key_at_position(pos, seed)
         n_total += 1
 
         key_t = (tuple(nums), tuple(ests))
-        if key_t not in chaves_historicas:
-            n_ineditas += 1
-            s = score_chave(nums, ests, perfil)
+        if key_t not in historical_keys:
+            n_undrawn += 1
+            s = score_chave(nums, ests, profile)
             if s > melhor_score:
                 melhor_score = s
-                melhor_chave = [list(nums), list(ests)]
+                best_key = [list(nums), list(ests)]
                 melhor_pos = pos
 
-        pos = (pos + 1) % UNIVERSO
+        pos = (pos + 1) % UNIVERSE
 
     return {
-        'chave': melhor_chave,
+        'chave': best_key,
         'posicao': melhor_pos,
         'score': melhor_score,
         'candidatos_avaliados': n_total,
-        'ineditas_avaliadas': n_ineditas,
+        'ineditas_avaliadas': n_undrawn,
     }

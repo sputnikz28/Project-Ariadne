@@ -22,13 +22,13 @@ def ler(path, padrao):
         return padrao
 
 
-def guardar(path, dados):
+def save(path, dados):
     path = Path(path)
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(dados, indent=2, ensure_ascii=False), encoding="utf-8")
 
 
-def carregar_grimorio():
+def load_grimoire():
     return ler(GRIMORIO, {
         "nivel": 1,
         "conhecimento": {},
@@ -39,5 +39,5 @@ def carregar_grimorio():
     })
 
 
-def guardar_grimorio(dados):
-    guardar(GRIMORIO, dados)
+def save_grimoire(dados):
+    save(GRIMORIO, dados)

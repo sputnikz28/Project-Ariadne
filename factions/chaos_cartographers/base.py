@@ -15,23 +15,23 @@ def _slug(texto):
     return re.sub(r"[-\s]+", "_", norm).strip("_")
 
 
-class CartografoDoCaos(ABC):
-    nome: str
+class CartographerOfChaos(ABC):
+    name: str
     especialidade: str
 
     def __init__(self, ariadne):
         self.ariadne = ariadne
 
     @abstractmethod
-    def analisar(self, historico):
+    def analisar(self, history):
         """Receive the full historico list and return a result dict (must include 'titulo')."""
 
     def criar_livro(self, titulo, dados):
         LIVROS_PATH.mkdir(parents=True, exist_ok=True)
-        path = LIVROS_PATH / f"{_slug(self.nome)}.json"
+        path = LIVROS_PATH / f"{_slug(self.name)}.json"
         livro = {
             "titulo": titulo,
-            "autor": self.nome,
+            "autor": self.name,
             "especialidade": self.especialidade,
             "tipo": "DESCRITIVO_NAO_PREDITIVO",
             "criado_em": datetime.now().isoformat(timespec="seconds"),
@@ -41,13 +41,13 @@ class CartografoDoCaos(ABC):
         path.write_text(json.dumps(livro, indent=2, ensure_ascii=False), encoding="utf-8")
         return str(path)
 
-    def executar(self, historico):
-        resultado = self.analisar(historico)
-        titulo = resultado.pop("titulo")
-        caminho = self.criar_livro(titulo, resultado)
+    def execute(self, history):
+        result = self.analisar(history)
+        titulo = result.pop("titulo")
+        caminho = self.criar_livro(titulo, result)
         return {
-            "cartografo": self.nome,
+            "cartografo": self.name,
             "livro_titulo": titulo,
             "livro_path": caminho,
-            "total_sorteios": resultado.get("total_sorteios", 0),
+            "total_sorteios": result.get("total_sorteios", 0),
         }

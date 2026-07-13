@@ -1,14 +1,14 @@
 from collections import Counter, defaultdict
-from .base import CartografoDoCaos
+from .base import CartographerOfChaos
 
 
-class CartografoDasConstelacoes(CartografoDoCaos):
-    nome = "Eldran das Constelações"
+class CartografoDasConstelacoes(CartographerOfChaos):
+    name = "Eldran das Constelações"
     especialidade = "Rede de coocorrência e centralidade entre números"
 
-    def analisar(self, historico):
+    def analisar(self, history):
         cooc = defaultdict(Counter)
-        for draw in historico:
+        for draw in history:
             nums = sorted(draw["numeros"])
             for i in range(len(nums)):
                 for j in range(i + 1, len(nums)):
@@ -39,7 +39,7 @@ class CartografoDasConstelacoes(CartografoDoCaos):
 
         return {
             "titulo": "Livro das Constelações Numéricas",
-            "total_sorteios": len(historico),
+            "total_sorteios": len(history),
             "top_centralidade": [{"numero": n, "peso": c} for n, c in top_central[:20]],
             "top_pares": top_pares[:30],
             "vizinhos": {str(n): viz for n, viz in vizinhos.items()},

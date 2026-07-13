@@ -5,9 +5,9 @@ from .aleatoriedade import MongeDoAcaso
 from .markov import OracleDeMarkov
 
 
-def executar_cartografos(ariadne, cfg=None):
+def execute_cartographers(ariadne, cfg=None):
     """Load historico once, run all 5 Cartógrafos, return list of results."""
-    historico = ariadne.historico_completo()
+    history = ariadne.full_history()
 
     n_mc = 100_000
     if cfg:
@@ -20,15 +20,15 @@ def executar_cartografos(ariadne, cfg=None):
         CartografoDasConstelacoes(ariadne),
         CronistaDoCiclos(ariadne),
         CartografoDasTendencias(ariadne),
-        MongeDoAcaso(ariadne, n_simulacoes=n_mc),
+        MongeDoAcaso(ariadne, n_simulations=n_mc),
         OracleDeMarkov(ariadne),
     ]
 
-    resultados = []
+    results = []
     for c in cartografos:
         try:
-            resultados.append(c.executar(historico))
+            results.append(c.execute(history))
         except Exception as e:
-            resultados.append({"cartografo": c.nome, "erro": str(e), "livro_path": None})
+            results.append({"cartografo": c.name, "erro": str(e), "livro_path": None})
 
-    return resultados
+    return results

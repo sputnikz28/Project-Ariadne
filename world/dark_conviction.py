@@ -2,7 +2,7 @@
 import random
 
 
-def criar_mantra(config, chave, entidade, energia_sombria=0.0):
+def create_mantra(config, key, entidade, dark_energy=0.0):
     if not config.getboolean("CONVICCAO_SOMBRIA", "ativa", fallback=True):
         return {"ativo": False, "mantras": []}
 
@@ -13,13 +13,13 @@ def criar_mantra(config, chave, entidade, energia_sombria=0.0):
         config.getfloat("CONVICCAO_SOMBRIA", "intensidade_min", fallback=0.60),
         config.getfloat("CONVICCAO_SOMBRIA", "intensidade_max", fallback=1.00),
     )
-    intensidade = min(1.0, intensidade + energia_sombria / 1000.0)
-    obsessivo = random.choice(chave[0])
+    intensidade = min(1.0, intensidade + dark_energy / 1000.0)
+    obsessivo = random.choice(key[0])
 
     mantras = []
-    for numero in chave[0]:
+    for numero in key[0]:
         mantras.extend([f"SAI {numero}!"] * rep_n)
-    for estrela in chave[1]:
+    for estrela in key[1]:
         mantras.extend([f"ESTRELA {estrela}, APARECE!"] * rep_e)
     mantras.extend([f"SAI {obsessivo}!"] * rep_obs)
 

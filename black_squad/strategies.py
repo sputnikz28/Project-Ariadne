@@ -4,7 +4,7 @@ import random
 from collections import Counter
 
 
-def desvio_padrao(nums):
+def std_deviation(nums):
     media = sum(nums) / len(nums)
     return math.sqrt(sum((n - media) ** 2 for n in nums) / len(nums))
 
@@ -22,21 +22,21 @@ def penalizacao_popularidade(nums):
     return datas * 3 + sequencia * 5 + redondos + padrao_visual * 4
 
 
-def pontuar_chave(chave, estat, grimorio, config):
-    nums, ests = chave
-    desvio = desvio_padrao(nums)
+def score_key(key, estat, grimoire, config):
+    nums, ests = key
+    deviation = std_deviation(nums)
     gs = gaps(nums)
     popularidade = penalizacao_popularidade(nums)
     distribuicao = len({(n - 1) // 10 for n in nums}) / 5
     gap_score = min(1.0, len(set(gs)) / 4)
     freq = sum(estat["freq_norm"].get(n, 0) for n in nums) / 5
 
-    if not grimorio.get("conhecimento", {}).get("frequencias"):
+    if not grimoire.get("conhecimento", {}).get("frequencias"):
         freq *= 0.25
 
     score = (
         config.getfloat("ESTRATEGIA_NEGRA", "peso_desvio_padrao", fallback=0.25)
-        * min(1.0, desvio / 16)
+        * min(1.0, deviation / 16)
         + config.getfloat("ESTRATEGIA_NEGRA", "peso_anti_popularidade", fallback=0.25)
         * max(0.0, 1 - popularidade / 25)
         + config.getfloat("ESTRATEGIA_NEGRA", "peso_distribuicao", fallback=0.20)
@@ -49,7 +49,7 @@ def pontuar_chave(chave, estat, grimorio, config):
     return round(score * 100, 4)
 
 
-def gerar_chave_promissora(estat, grimorio, config):
+def generate_promising_key(estat, grimoire, config):
     total = config.getint("ESTRATEGIA_NEGRA", "candidatas_geradas", fallback=3000)
     minimo_desvio = config.getfloat("ESTRATEGIA_NEGRA", "desvio_minimo", fallback=10.0)
     max_datas = config.getint("ESTRATEGIA_NEGRA", "max_numeros_ate_31", fallback=3)
@@ -60,23 +60,23 @@ def gerar_chave_promissora(estat, grimorio, config):
         ests = sorted(random.sample(range(1, 13), 2))
         if sum(n <= 31 for n in nums) > max_datas:
             continue
-        if desvio_padrao(nums) < minimo_desvio:
+        if std_deviation(nums) < minimo_desvio:
             continue
-        score = pontuar_chave((nums, ests), estat, grimorio, config)
+        score = score_key((nums, ests), estat, grimoire, config)
         melhores.append((score, nums, ests))
 
     if not melhores:
         nums = sorted(random.sample(range(1, 51), 5))
         ests = sorted(random.sample(range(1, 13), 2))
-        return (nums, ests), pontuar_chave((nums, ests), estat, grimorio, config)
+        return (nums, ests), score_key((nums, ests), estat, grimoire, config)
 
     score, nums, ests = max(melhores, key=lambda x: x[0])
     return (nums, ests), score
 
 
-def diversificar(chaves, quantidade):
+def diversificar(keys, quantidade):
     escolhidas = []
-    restantes = list(chaves)
+    restantes = list(keys)
     if not restantes:
         return escolhidas
     escolhidas.append(max(restantes, key=lambda x: x.get("score", 0)))

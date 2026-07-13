@@ -1,6 +1,6 @@
 
 from datetime import datetime
-from races.antigas import normalizar
+from races.antigas import normalize
 
 
 def _lista_int(texto):
@@ -32,12 +32,12 @@ def _multiplicador_amuletos(amuletos, cfg):
 
     total = 1.0
     for amuleto in amuletos or []:
-        nome = amuleto.get("nome") if isinstance(amuleto, dict) else str(amuleto)
-        total *= tabela.get(nome, 1.0)
+        name = amuleto.get("nome") if isinstance(amuleto, dict) else str(amuleto)
+        total *= tabela.get(name, 1.0)
     return total
 
 
-def calcular_ritual(cfg, mundo, evolucao):
+def calculate_ritual(cfg, world, evolution_data):
     ativo = cfg.getboolean("RITUAL_CELESTE", "ativo", fallback=False)
     if not ativo:
         return {
@@ -47,36 +47,36 @@ def calcular_ritual(cfg, mundo, evolucao):
             "chave_humana": None,
         }
 
-    energia_por_ponto = cfg.getfloat("RITUAL_CELESTE", "energia_por_ponto", fallback=0.001)
+    energy_per_point = cfg.getfloat("RITUAL_CELESTE", "energia_por_ponto", fallback=0.001)
     usar_almas = cfg.getboolean("RITUAL_CELESTE", "usar_almas", fallback=True)
     usar_ressuscitados = cfg.getboolean("RITUAL_CELESTE", "usar_ressuscitados", fallback=True)
 
-    almas = []
+    souls = []
     if usar_almas:
-        almas.extend(evolucao.get("cemiterio", []))
+        souls.extend(evolution_data.get("cemiterio", []))
     if usar_ressuscitados:
-        almas.extend(evolucao.get("ressuscitados", []))
+        souls.extend(evolution_data.get("ressuscitados", []))
 
     # Evita duplicação por ID.
     unicas = {}
-    for alma in almas:
+    for alma in souls:
         unicas[alma.id] = alma
-    almas = list(unicas.values())
+    souls = list(unicas.values())
 
-    contribuicoes = []
+    contributions = []
     total = 0.0
     mult_ress = cfg.getfloat("RITUAL_CELESTE", "multiplicador_ressuscitado", fallback=2.0)
 
-    for alma in almas:
+    for alma in souls:
         score = max(0, float(alma.pontos))
         mult_titulo = _multiplicador_titulo(alma.titulo, cfg)
         mult_estado = mult_ress if "RESSUSCITADO" in alma.estado or alma.raca.startswith("Renascido ") else 1.0
         mult_amuletos = _multiplicador_amuletos(alma.amuletos, cfg)
-        energia = score * energia_por_ponto * mult_titulo * mult_estado * mult_amuletos
+        energy = score * energy_per_point * mult_titulo * mult_estado * mult_amuletos
 
-        contribuicoes.append({
+        contributions.append({
             "id": alma.id,
-            "nome": alma.nome,
+            "nome": alma.name,
             "raca": alma.raca,
             "estado": alma.estado,
             "score": score,
@@ -85,18 +85,18 @@ def calcular_ritual(cfg, mundo, evolucao):
             "multiplicador_titulo": round(mult_titulo, 3),
             "multiplicador_estado": round(mult_estado, 3),
             "multiplicador_amuletos": round(mult_amuletos, 3),
-            "energia": round(energia, 6),
+            "energia": round(energy, 6),
         })
-        total += energia
+        total += energy
 
-    contribuicoes.sort(key=lambda x: x["energia"], reverse=True)
+    contributions.sort(key=lambda x: x["energia"], reverse=True)
 
     nums = _lista_int(cfg.get("RITUAL_CELESTE", "chave_numeros", fallback="1,10,32,36,43"))
     ests = _lista_int(cfg.get("RITUAL_CELESTE", "chave_estrelas", fallback="5,6"))
-    chave_humana = normalizar(nums, ests)
+    chave_humana = normalize(nums, ests)
 
-    data_hora_inicio = f"{mundo['data']} {cfg.get('RITUAL_CELESTE', 'inicio', fallback='00:00:00')}"
-    data_hora_fim = f"{mundo['data']} {cfg.get('RITUAL_CELESTE', 'libertacao', fallback='20:00:00')}"
+    data_hora_inicio = f"{world['data']} {cfg.get('RITUAL_CELESTE', 'inicio', fallback='00:00:00')}"
+    data_hora_fim = f"{world['data']} {cfg.get('RITUAL_CELESTE', 'libertacao', fallback='20:00:00')}"
     inicio = datetime.strptime(data_hora_inicio, "%Y-%m-%d %H:%M:%S")
     fim = datetime.strptime(data_hora_fim, "%Y-%m-%d %H:%M:%S")
     duracao_horas = max(0.0, (fim - inicio).total_seconds() / 3600.0)
@@ -106,17 +106,17 @@ def calcular_ritual(cfg, mundo, evolucao):
         "inicio": inicio.isoformat(),
         "libertacao": fim.isoformat(),
         "duracao_horas": round(duracao_horas, 3),
-        "almas_presentes": len(almas),
-        "energia_por_ponto": energia_por_ponto,
+        "almas_presentes": len(souls),
+        "energia_por_ponto": energy_per_point,
         "energia_total": round(total, 6),
-        "score_total": round(sum(x["score"] for x in contribuicoes), 3),
+        "score_total": round(sum(x["score"] for x in contributions), 3),
         "score_medio": round(
-            (sum(x["score"] for x in contribuicoes) / len(contribuicoes))
-            if contribuicoes else 0.0,
+            (sum(x["score"] for x in contributions) / len(contributions))
+            if contributions else 0.0,
             3,
         ),
-        "contribuicoes": contribuicoes,
-        "top_contribuidores": contribuicoes[:20],
+        "contribuicoes": contributions,
+        "top_contribuidores": contributions[:20],
         "chave_humana": chave_humana,
         "peso_no_conselho": cfg.getfloat("RITUAL_CELESTE", "peso_no_conselho", fallback=1.5),
         "aviso": "Energia narrativa; não altera a probabilidade matemática do sorteio.",

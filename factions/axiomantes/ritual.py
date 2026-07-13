@@ -10,14 +10,14 @@ import json
 from datetime import date, datetime
 from pathlib import Path
 
-from .labirinto import UNIVERSO, posicao_de_chave
-from .perfil import calcular_perfil, escolher_por_perfil
+from .labirinto import UNIVERSE, key_position
+from .profile import calculate_profile, choose_by_profile
 from i18n.translations import t, lang_de_cfg
 
 BASE_AXIOMANTES = Path(__file__).parent.parent.parent / "axiomantes"
 
 
-def _salvar_experiencia(dados):
+def _save_experience(dados):
     pasta = BASE_AXIOMANTES / "experiencias"
     pasta.mkdir(parents=True, exist_ok=True)
     ts = datetime.now().strftime("%Y%m%d_%H%M%S")
@@ -26,7 +26,7 @@ def _salvar_experiencia(dados):
     return str(path)
 
 
-def executar_ritual(ariadne, seed, cfg=None):
+def execute_ritual(ariadne, seed, cfg=None):
     """
     Ritual dos Trinta Ecos:
 
@@ -36,49 +36,49 @@ def executar_ritual(ariadne, seed, cfg=None):
     4. Pontuação de n_candidatos chaves inéditas
     5. Chave escolhida = melhor score
     """
-    periodo_anos = 1
-    limiar_cobertura = 0.50
-    excesso_minimo = 0.0
-    n_candidatos = 50_000
-    guardar_experiencia = True
+    period_years = 1
+    coverage_threshold = 0.50
+    min_excess = 0.0
+    n_candidates = 50_000
+    save_experience = True
 
     lang = lang_de_cfg(cfg)
 
     if cfg:
-        periodo_anos    = cfg.getint('AXIOMANTES', 'periodo_anos', fallback=1)
-        limiar_cobertura = cfg.getfloat('AXIOMANTES', 'limiar_cobertura', fallback=0.50)
-        excesso_minimo  = cfg.getfloat('AXIOMANTES', 'excesso_minimo', fallback=0.0)
-        n_candidatos    = cfg.getint('AXIOMANTES', 'n_candidatos', fallback=50_000)
-        guardar_experiencia = cfg.getboolean('AXIOMANTES', 'guardar_experiencia', fallback=True)
+        period_years    = cfg.getint('AXIOMANTES', 'periodo_anos', fallback=1)
+        coverage_threshold = cfg.getfloat('AXIOMANTES', 'limiar_cobertura', fallback=0.50)
+        min_excess  = cfg.getfloat('AXIOMANTES', 'excesso_minimo', fallback=0.0)
+        n_candidates    = cfg.getint('AXIOMANTES', 'n_candidatos', fallback=50_000)
+        save_experience = cfg.getboolean('AXIOMANTES', 'guardar_experiencia', fallback=True)
 
-    historico_completo = ariadne.historico_completo()
-    if not historico_completo:
+    full_history = ariadne.full_history()
+    if not full_history:
         return None
 
     # --- Marco ---
-    alvo = historico_completo[-1]
+    alvo = full_history[-1]
     nums_alvo = alvo['numeros']
     ests_alvo = alvo['estrelas']
-    pos_alvo = posicao_de_chave(nums_alvo, ests_alvo, seed)
-    fracao_universo = pos_alvo / UNIVERSO
+    pos_alvo = key_position(nums_alvo, ests_alvo, seed)
+    universe_fraction = pos_alvo / UNIVERSE
 
     # --- Período de comparação ---
     data_alvo = date.fromisoformat(alvo['data'])
-    data_inicio_str = f"{data_alvo.year - periodo_anos + 1}-01-01"
+    data_inicio_str = f"{data_alvo.year - period_years + 1}-01-01"
 
-    historico_periodo = [
-        h for h in historico_completo
+    period_history = [
+        h for h in full_history
         if h['data'] >= data_inicio_str and h['id'] != alvo['id']
     ]
 
     # --- Posições das chaves do período ---
-    ecos = []          # chaves antes do marco (com dados completos)
-    depois = []        # posições depois do marco
+    echoes = []          # chaves antes do marco (com dados completos)
+    after_anchor = []        # posições depois do marco
 
-    for h in historico_periodo:
-        pos = posicao_de_chave(h['numeros'], h['estrelas'], seed)
+    for h in period_history:
+        pos = key_position(h['numeros'], h['estrelas'], seed)
         if pos < pos_alvo:
-            ecos.append({
+            echoes.append({
                 'id': h['id'],
                 'data': h['data'],
                 'numeros': h['numeros'],
@@ -86,44 +86,44 @@ def executar_ritual(ariadne, seed, cfg=None):
                 'posicao': pos,
             })
         else:
-            depois.append(pos)
+            after_anchor.append(pos)
 
-    total_periodo = len(historico_periodo)
-    n_ecos = len(ecos)
-    cobertura = n_ecos / total_periodo if total_periodo > 0 else 0.0
-    excesso = cobertura - fracao_universo
+    total_period = len(period_history)
+    n_echoes = len(echoes)
+    coverage = n_echoes / total_period if total_period > 0 else 0.0
+    excess = coverage - universe_fraction
 
-    esperado_num = round(total_periodo * fracao_universo, 1)
-    espaco_medio_obs = round(pos_alvo / (n_ecos + 1)) if n_ecos > 0 else None
-    espaco_teorico = round(UNIVERSO / max(len(historico_completo), 1))
+    esperado_num = round(total_period * universe_fraction, 1)
+    espaco_medio_obs = round(pos_alvo / (n_echoes + 1)) if n_echoes > 0 else None
+    espaco_teorico = round(UNIVERSE / max(len(full_history), 1))
 
     # --- Veredicto ---
-    if excesso >= 0.10:
-        veredicto = t('veredicto_desvio', lang)
-    elif excesso >= 0.05:
-        veredicto = t('veredicto_ligeiro', lang)
-    elif excesso >= -0.05:
-        veredicto = t('veredicto_acaso', lang)
+    if excess >= 0.10:
+        verdict = t('veredicto_desvio', lang)
+    elif excess >= 0.05:
+        verdict = t('veredicto_ligeiro', lang)
+    elif excess >= -0.05:
+        verdict = t('veredicto_acaso', lang)
     else:
-        veredicto = t('veredicto_abaixo', lang)
+        verdict = t('veredicto_abaixo', lang)
 
     # --- Perfil dos Ecos ---
-    perfil = calcular_perfil(ecos) if ecos else None
+    profile = calculate_profile(echoes) if echoes else None
 
     # --- Portal das Chaves Inéditas ---
-    portal_aberto = (cobertura >= limiar_cobertura) and (excesso >= excesso_minimo)
+    portal_aberto = (coverage >= coverage_threshold) and (excess >= min_excess)
 
-    seleccao = None
-    if portal_aberto and perfil:
-        chaves_historicas = {
+    selection = None
+    if portal_aberto and profile:
+        historical_keys = {
             (tuple(sorted(h['numeros'])), tuple(sorted(h['estrelas'])))
-            for h in historico_completo
+            for h in full_history
         }
-        seleccao = escolher_por_perfil(
-            pos_alvo, seed, perfil, chaves_historicas, n_candidatos
+        selection = choose_by_profile(
+            pos_alvo, seed, profile, historical_keys, n_candidates
         )
 
-    resultado = {
+    result = {
         'seed': seed,
         'chave_alvo': {
             'numeros': nums_alvo,
@@ -132,31 +132,31 @@ def executar_ritual(ariadne, seed, cfg=None):
             'id': alvo['id'],
         },
         'posicao_alvo': pos_alvo,
-        'universo_total': UNIVERSO,
-        'fracao_universo_pct': round(fracao_universo * 100, 4),
-        'periodo_anos': periodo_anos,
-        'historico_comparacao': total_periodo,
-        'n_ecos': n_ecos,
-        'n_depois': len(depois),
-        'cobertura_pct': round(cobertura * 100, 4),
+        'universo_total': UNIVERSE,
+        'fracao_universo_pct': round(universe_fraction * 100, 4),
+        'periodo_anos': period_years,
+        'historico_comparacao': total_period,
+        'n_ecos': n_echoes,
+        'n_depois': len(after_anchor),
+        'cobertura_pct': round(coverage * 100, 4),
         'esperado_num': esperado_num,
-        'excesso_pct': round(excesso * 100, 4),
+        'excesso_pct': round(excess * 100, 4),
         'espaco_medio_obs': espaco_medio_obs,
         'espaco_teorico': espaco_teorico,
-        'veredicto': veredicto,
+        'veredicto': verdict,
         'portal_aberto': portal_aberto,
-        'perfil': perfil,
-        'seleccao': seleccao,
+        'perfil': profile,
+        'seleccao': selection,
         # campos de conveniência para main.py / conselho
-        'chave_proposta': seleccao['chave'] if seleccao else None,
-        'posicao_proposta': seleccao['posicao'] if seleccao else None,
-        'score_proposta': seleccao['score'] if seleccao else None,
+        'chave_proposta': selection['chave'] if selection else None,
+        'posicao_proposta': selection['posicao'] if selection else None,
+        'score_proposta': selection['score'] if selection else None,
         'aviso': t('aviso', lang),
         'lang': lang,
         'criado_em': datetime.now().isoformat(timespec='seconds'),
     }
 
-    if guardar_experiencia:
-        resultado['experiencia_path'] = _salvar_experiencia(resultado)
+    if save_experience:
+        result['experiencia_path'] = _save_experience(result)
 
-    return resultado
+    return result

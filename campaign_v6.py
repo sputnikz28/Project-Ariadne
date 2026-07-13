@@ -6,17 +6,17 @@ import subprocess
 import sys
 import time
 from configparser import ConfigParser
-from configuration import carregar_config
+from configuration import load_config
 from datetime import datetime
 from pathlib import Path
 
 from scribes.arquivistas import (
     inventariar_era,
-    criar_biografias,
+    create_biographies,
     atualizar_atlas,
-    criar_museu,
-    escrever_cronica,
-    inventario_resumido,
+    create_museum,
+    write_chronicle,
+    summary_inventory,
 )
 
 
@@ -25,7 +25,7 @@ def extrair(pattern, texto, padrao=None):
     return m.group(1).strip() if m else padrao
 
 
-def parse_chave(texto):
+def parse_key(texto):
     try:
         return json.loads(texto.replace("(", "[").replace(")", "]").replace("'", '"'))
     except Exception:
@@ -33,9 +33,9 @@ def parse_chave(texto):
 
 
 def main():
-    cfg = carregar_config("config.txt")
+    cfg = load_config("config.txt")
     rodadas = cfg.getint("CAMPANHA", "numero_de_rodadas", fallback=5)
-    nome = cfg.get("UNIVERSO", "nome", fallback="Crónicas das Eras")
+    name = cfg.get("UNIVERSO", "nome", fallback="Crónicas das Eras")
     pausa = cfg.getint("CAMPANHA", "pausa_entre_rodadas_ms", fallback=0) / 1000.0
     max_bios = cfg.getint("ESCRIBAS_V6", "max_biografias_por_rodada", fallback=12)
 
@@ -70,49 +70,49 @@ def main():
             "missoes_elficas": int(extrair(r"Missões Élficas:\s*(\d+)", stdout, "0")),
             "esqueletos": int(extrair(r"Esqueletos:\s*(\d+)", stdout, "0")),
             "invocacoes_sombrias": int(extrair(r"Invocações sombrias:\s*(\d+)", stdout, "0")),
-            "chave_original": parse_chave(extrair(r"Chave original:\s*(.+)", stdout)),
-            "chave_corrompida": parse_chave(extrair(r"Chave corrompida:\s*(.+)", stdout)),
+            "chave_original": parse_key(extrair(r"Chave original:\s*(.+)", stdout)),
+            "chave_corrompida": parse_key(extrair(r"Chave corrompida:\s*(.+)", stdout)),
             "relatorio": str(relatorio) if relatorio else None,
         }
 
-        inventario = inventariar_era(era, resumo)
-        biografias = criar_biografias(era, max_bios)
-        atlas = atualizar_atlas(era, inventario)
-        museu = criar_museu(era, inventario)
-        cronica = escrever_cronica(era, inventario)
+        inventory = inventariar_era(era, resumo)
+        biografias = create_biographies(era, max_bios)
+        atlas = atualizar_atlas(era, inventory)
+        museu = create_museum(era, inventory)
+        chronicle = write_chronicle(era, inventory)
 
         resumo["inventario"] = f"escribas/inventarios/inventario_era_{era:03d}.json"
-        resumo["cronica"] = str(cronica)
+        resumo["cronica"] = str(chronicle)
         resumo["biografias"] = biografias
-        resumo["inventario_resumido"] = inventario_resumido(inventario)
+        resumo["inventario_resumido"] = summary_inventory(inventory)
         resumos.append(resumo)
 
         if relatorio and relatorio.exists():
             shutil.copy2(relatorio, pasta / f"relatorio_era_{era:03d}.txt")
-        shutil.copy2(cronica, pasta / f"cronica_era_{era:03d}.txt")
+        shutil.copy2(chronicle, pasta / f"cronica_era_{era:03d}.txt")
 
         print(f"Era {era}/{rodadas} concluída — Conselho: {resumo['chave_original']}")
         if pausa:
             time.sleep(pausa)
 
-    numeros = {}
-    estrelas = {}
+    numbers = {}
+    stars = {}
     for r in resumos:
-        chave = r["chave_original"]
-        if isinstance(chave, list) and len(chave) == 2:
-            for n in chave[0]:
-                numeros[n] = numeros.get(n, 0) + 1
-            for e in chave[1]:
-                estrelas[e] = estrelas.get(e, 0) + 1
+        key = r["chave_original"]
+        if isinstance(key, list) and len(key) == 2:
+            for n in key[0]:
+                numbers[n] = numbers.get(n, 0) + 1
+            for e in key[1]:
+                stars[e] = stars.get(e, 0) + 1
 
     conselho_dos_conselhos = {
-        "numeros": [n for n, _ in sorted(numeros.items(), key=lambda x: (-x[1], x[0]))[:5]],
-        "estrelas": [e for e, _ in sorted(estrelas.items(), key=lambda x: (-x[1], x[0]))[:2]],
+        "numeros": [n for n, _ in sorted(numbers.items(), key=lambda x: (-x[1], x[0]))[:5]],
+        "estrelas": [e for e, _ in sorted(stars.items(), key=lambda x: (-x[1], x[0]))[:2]],
     }
 
     campanha = {
         "id": campanha_id,
-        "nome": nome,
+        "nome": name,
         "rodadas": rodadas,
         "criada_em": datetime.now().isoformat(timespec="seconds"),
         "eras": resumos,
@@ -128,7 +128,7 @@ def main():
         "         🌌 V6 — CRÓNICAS DAS CINCO ERAS",
         "╚════════════════════════════════════════════════════╝",
         "",
-        f"Campanha: {nome}",
+        f"Campanha: {name}",
         f"Rodadas: {rodadas}",
         "",
     ]

@@ -1,6 +1,6 @@
 from collections import Counter
 
-def calcular(hist):
+def calculate(hist):
     fn,fe=Counter(),Counter(); un={n:None for n in range(1,51)}; ue={e:None for e in range(1,13)}; somas=[]
     for i,s in enumerate(hist):
         fn.update(s['numeros']); fe.update(s['estrelas']); somas.append(sum(s['numeros']))

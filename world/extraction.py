@@ -2,25 +2,25 @@ from datetime import datetime, timedelta
 import random
 
 
-def simular_extracao(cfg, mundo):
+def simulate_draw(cfg, world):
     if not cfg.getboolean('EXTRACAO', 'ativo', fallback=True):
         return {'ativo': False, 'inicio_oficial': None, 'atraso_arranque': 0.0, 'eventos': []}
 
     inicio = datetime.strptime(
-        f"{mundo['data']} {cfg.get('EXTRACAO', 'hora_oficial', fallback='20:00:00')}",
+        f"{world['data']} {cfg.get('EXTRACAO', 'hora_oficial', fallback='20:00:00')}",
         '%Y-%m-%d %H:%M:%S'
     )
-    atraso = random.uniform(
+    delay = random.uniform(
         cfg.getfloat('EXTRACAO', 'delay_arranque_min', fallback=2.0),
         cfg.getfloat('EXTRACAO', 'delay_arranque_max', fallback=15.0),
     )
     media = cfg.getfloat('EXTRACAO', 'tempo_medio_bola', fallback=7.5)
     variacao = cfg.getfloat('EXTRACAO', 'variacao_segundos', fallback=2.0)
-    instante = inicio + timedelta(seconds=atraso)
-    eventos = []
+    instante = inicio + timedelta(seconds=delay)
+    events = []
 
     for indice in range(1, 8):
-        eventos.append({
+        events.append({
             'ordem': indice,
             'tipo': 'numero' if indice <= 5 else 'estrela',
             'instante_iso': instante.isoformat(timespec='milliseconds'),
@@ -35,6 +35,6 @@ def simular_extracao(cfg, mundo):
     return {
         'ativo': True,
         'inicio_oficial': inicio.isoformat(),
-        'atraso_arranque': round(atraso, 3),
-        'eventos': eventos,
+        'atraso_arranque': round(delay, 3),
+        'eventos': events,
     }

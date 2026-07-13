@@ -4,7 +4,7 @@ from library.ariadne.motor import Ariadne
 
 def investigar_lua_cheia():
     ariadne = Ariadne()
-    resposta = ariadne.procurar_lua("Lua cheia")
+    resposta = ariadne.search_moon("Lua cheia")
     quantidade = resposta["scrolls_encontrados"]
     confianca = min(0.20, quantidade / 1000.0)
     return {

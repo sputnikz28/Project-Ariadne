@@ -1,7 +1,7 @@
 
 import argparse
 from pathlib import Path
-from amulets.persistencia import ler_json, guardar_json
+from amulets.persistencia import ler_json, save_json
 
 
 def main():
@@ -17,9 +17,9 @@ def main():
     if not reg:
         raise SystemExit("Livro não encontrado ou inválido.")
     reg["estado"]="extraida"
-    reg["chave_real"]={"numeros":sorted(args.numeros),"estrelas":sorted(args.estrelas)}
+    reg["chave_real"]={"numeros":sorted(args.numbers),"estrelas":sorted(args.stars)}
     reg["confirmada_por"]=args.fontes
-    guardar_json(path,reg)
+    save_json(path,reg)
     print("Extração selada:",path)
 
 

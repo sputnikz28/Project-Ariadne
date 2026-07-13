@@ -22,7 +22,7 @@ def _agora():
     return datetime.now(timezone.utc).isoformat(timespec="seconds")
 
 
-def guardar(artefacto):
+def save(artefacto):
     BASE.mkdir(parents=True, exist_ok=True)
     (BASE / f"{artefacto['id']}.json").write_text(
         json.dumps(artefacto, indent=2, ensure_ascii=False),
@@ -30,7 +30,7 @@ def guardar(artefacto):
     )
 
 
-def carregar_todos():
+def load_all():
     BASE.mkdir(parents=True, exist_ok=True)
     saida = []
     for path in BASE.glob("ART-*.json"):
@@ -41,15 +41,15 @@ def carregar_todos():
     return saida
 
 
-def compatibilidade(classe, artefacto):
-    classe = classe.replace("Renascido ", "")
+def compatibilidade(faction_class, artefacto):
+    faction_class = faction_class.replace("Renascido ", "")
     for palavra, classes in COMPATIBILIDADE.items():
         if palavra.lower() in artefacto.get("nome", "").lower():
-            return classe in classes
-    return classe not in {"Goblin"}
+            return faction_class in classes
+    return faction_class not in {"Goblin"}
 
 
-def talvez_materializar(config, artefacto, seed):
+def maybe_materialize(config, artefacto, seed):
     if not config.getboolean("ARCA_ARTEFACTOS", "ativa", fallback=True):
         return False
     minima = config.get("ARCA_ARTEFACTOS", "raridade_minima", fallback="RARO").upper()
@@ -71,17 +71,17 @@ def talvez_materializar(config, artefacto, seed):
             "criador": artefacto.get("criador"),
         }],
     })
-    guardar(persistente)
+    save(persistente)
     return True
 
 
-def preparar_nova_execucao(config):
+def prepare_new_run(config):
     incremento = config.getfloat("ARCA_ARTEFACTOS", "energia_evolucao_por_execucao", fallback=0.10)
-    for art in carregar_todos():
+    for art in load_all():
         art["execucoes_sobrevividas"] = art.get("execucoes_sobrevividas", 0) + 1
         art["energia_acumulada"] = round(art.get("energia_acumulada", 0.0) + incremento, 4)
         evoluir_raridade(art)
-        guardar(art)
+        save(art)
 
 
 def evoluir_raridade(art):
@@ -99,19 +99,19 @@ def evoluir_raridade(art):
         art["raridade"], art["multiplicador"] = "EPICO", 1.3
 
 
-def tentar_encontrar(config, herois, geracao, contador_execucao, eventos):
+def tentar_encontrar(config, herois, generation, run_counter, events):
     if not config.getboolean("ARCA_ARTEFACTOS", "permitir_redescoberta", fallback=True):
-        return contador_execucao
+        return run_counter
     maximo = config.getint("ARCA_ARTEFACTOS", "max_encontrados_por_execucao", fallback=3)
-    if contador_execucao >= maximo:
-        return contador_execucao
+    if run_counter >= maximo:
+        return run_counter
 
     chance = config.getfloat("ARCA_ARTEFACTOS", "chance_encontro_por_geracao", fallback=0.025)
-    perdidos = [a for a in carregar_todos() if a.get("estado") == "PERDIDO"]
+    perdidos = [a for a in load_all() if a.get("estado") == "PERDIDO"]
     random.shuffle(perdidos)
 
     for heroi in herois:
-        if contador_execucao >= maximo or not perdidos:
+        if run_counter >= maximo or not perdidos:
             break
         compativeis = [a for a in perdidos if compatibilidade(heroi.raca, a)]
         if not compativeis or random.random() > chance:
@@ -119,31 +119,31 @@ def tentar_encontrar(config, herois, geracao, contador_execucao, eventos):
 
         art = random.choice(compativeis)
         art["estado"] = "ENCONTRADO"
-        art["portador_atual"] = heroi.nome
-        art.setdefault("donos", []).append(heroi.nome)
+        art["portador_atual"] = heroi.name
+        art.setdefault("donos", []).append(heroi.name)
         art["vezes_encontrado"] = art.get("vezes_encontrado", 0) + 1
         art.setdefault("historia", []).append({
             "evento": "REENCONTRADO",
             "momento": _agora(),
-            "geracao": geracao,
-            "personagem": heroi.nome,
+            "geracao": generation,
+            "personagem": heroi.name,
             "classe": heroi.raca,
         })
-        guardar(art)
+        save(art)
         heroi.amuletos.append(art)
-        eventos.append({
+        events.append({
             "evento": "REDESCOBERTA_PERSISTENTE",
-            "geracao": geracao,
-            "dono": heroi.nome,
+            "geracao": generation,
+            "dono": heroi.name,
             "artefacto": art,
         })
         perdidos.remove(art)
-        contador_execucao += 1
+        run_counter += 1
 
-    return contador_execucao
+    return run_counter
 
 
-def marcar_perdido(artefacto, antigo_dono, geracao):
+def marcar_perdido(artefacto, antigo_dono, generation):
     if not isinstance(artefacto, dict) or not artefacto.get("id"):
         return
     path = BASE / f"{artefacto['id']}.json"
@@ -154,7 +154,7 @@ def marcar_perdido(artefacto, antigo_dono, geracao):
     artefacto.setdefault("historia", []).append({
         "evento": "PERDIDO_APOS_ELIMINACAO",
         "momento": _agora(),
-        "geracao": geracao,
+        "geracao": generation,
         "antigo_dono": antigo_dono,
     })
-    guardar(artefacto)
+    save(artefacto)

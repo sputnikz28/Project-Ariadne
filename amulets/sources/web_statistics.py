@@ -7,12 +7,12 @@ from urllib.request import Request, urlopen
 from urllib.error import URLError, HTTPError
 from pathlib import Path
 
-from amulets.persistencia import CACHE, guardar_json
+from amulets.persistencia import CACHE, save_json
 
 
-def descarregar(nome, url, timeout=8):
-    resultado = {
-        "fonte": nome,
+def unload(name, url, timeout=8):
+    result = {
+        "fonte": name,
         "url": url,
         "consultado_em": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "estado": "falhou",
@@ -21,8 +21,8 @@ def descarregar(nome, url, timeout=8):
         "estatisticas_extraidas": {},
     }
     if not url:
-        resultado["erro"] = "URL vazia"
-        return resultado
+        result["erro"] = "URL vazia"
+        return result
 
     try:
         req = Request(url, headers={
@@ -32,18 +32,18 @@ def descarregar(nome, url, timeout=8):
             bruto = resposta.read()
             charset = resposta.headers.get_content_charset() or "utf-8"
         html = bruto.decode(charset, errors="replace")
-        resultado["estado"] = "ok"
-        resultado["tamanho"] = len(bruto)
-        resultado["conteudo_sha256"] = hashlib.sha256(bruto).hexdigest()
-        resultado["estatisticas_extraidas"] = extrair_frequencias_genericas(html)
-        cache_path = CACHE / f"{nome}.html"
+        result["estado"] = "ok"
+        result["tamanho"] = len(bruto)
+        result["conteudo_sha256"] = hashlib.sha256(bruto).hexdigest()
+        result["estatisticas_extraidas"] = extrair_frequencias_genericas(html)
+        cache_path = CACHE / f"{name}.html"
         cache_path.parent.mkdir(parents=True, exist_ok=True)
         cache_path.write_text(html, encoding="utf-8")
     except (URLError, HTTPError, TimeoutError, OSError, ValueError) as erro:
-        resultado["erro"] = str(erro)
+        result["erro"] = str(erro)
 
-    guardar_json(CACHE / f"{nome}_estado.json", resultado)
-    return resultado
+    save_json(CACHE / f"{name}_estado.json", result)
+    return result
 
 
 def extrair_frequencias_genericas(html):
@@ -56,7 +56,7 @@ def extrair_frequencias_genericas(html):
     texto = re.sub(r"<[^>]+>", " ", texto)
     texto = re.sub(r"\s+", " ", texto)
 
-    candidatos = {}
+    candidates = {}
     # Padrões frequentes em tabelas de estatística: número seguido de contagem.
     for numero in range(1, 51):
         padroes = [
@@ -68,5 +68,5 @@ def extrair_frequencias_genericas(html):
             valores.extend(int(x) for x in re.findall(padrao, texto, flags=re.I))
         valores = [v for v in valores if 0 <= v <= 5000]
         if valores:
-            candidatos[str(numero)] = max(valores)
-    return candidatos
+            candidates[str(numero)] = max(valores)
+    return candidates

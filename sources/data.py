@@ -12,12 +12,12 @@ def ler_json(path, default):
         return default
 
 
-def guardar_json(path, data):
+def save_json(path, data):
     p = Path(path); p.parent.mkdir(parents=True, exist_ok=True)
     p.write_text(json.dumps(data, indent=2, ensure_ascii=False), encoding='utf-8')
 
 
-def obter_historico(cfg):
+def get_history(cfg):
     url = cfg.get('FONTES','euromilhoes_url',fallback='').strip()
     if cfg.getboolean('FONTES','usar_api_euromilhoes',fallback=True) and url:
         try:
@@ -32,7 +32,7 @@ def obter_historico(cfg):
                     out.append({'data':str(date)[:10],'numeros':sorted(map(int,nums))[:5],'estrelas':sorted(map(int,stars))[:2],'jackpot':int(x.get('jackpot') or 0),'vencedores':int(x.get('winners') or 0)})
             out.sort(key=lambda z:z['data'])
             if out:
-                guardar_json('data/historico_cache.json',out)
+                save_json('data/historico_cache.json',out)
                 return out,'api_euromilhoes'
         except Exception:
             pass
@@ -54,7 +54,7 @@ def obter_lua(cfg):
     return {'fase':fase,'idade_dias':round(idade,2),'fonte':'calculo_local_fallback'}
 
 
-def obter_jackpot(cfg,historico):
-    if historico and historico[-1].get('jackpot'):
-        return historico[-1]['jackpot'],'historico/cache'
+def obter_jackpot(cfg,history):
+    if history and history[-1].get('jackpot'):
+        return history[-1]['jackpot'],'historico/cache'
     return 0,'indisponivel'

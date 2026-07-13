@@ -4,7 +4,7 @@ from .verde import kors_verde
 from .preto import kors_preto
 
 
-def conselho_kors(ariadne, semana_iso=None):
+def kors_council(ariadne, semana_iso=None):
     """Return list of Kor dicts ready for main.py candidate list."""
     kors = []
     for fn in (
@@ -13,7 +13,7 @@ def conselho_kors(ariadne, semana_iso=None):
         lambda: kors_verde(ariadne),
         lambda: kors_preto(ariadne, semana_iso),
     ):
-        resultado = fn()
-        if resultado:
-            kors.append(resultado)
+        result = fn()
+        if result:
+            kors.append(result)
     return kors

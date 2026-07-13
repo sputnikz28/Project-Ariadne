@@ -15,8 +15,8 @@ def ler_json(path, padrao=None):
         return {} if padrao is None else padrao
 
 
-def guardar_consulta(nome, consulta):
-    path = BASE / "consultas" / f"{nome}.json"
+def save_query(name, consulta):
+    path = BASE / "consultas" / f"{name}.json"
     path.write_text(json.dumps(consulta, indent=2, ensure_ascii=False), encoding="utf-8")
     return path
 
@@ -24,9 +24,9 @@ def guardar_consulta(nome, consulta):
 class Ariadne:
     def __init__(self):
         self.catalogo = ler_json(BASE / "catalogo/catalogo.json", {})
-        self.pergaminhos = sorted((BASE / "scrolls/2026").glob("*.json"))
+        self.scrolls = sorted((BASE / "scrolls/2026").glob("*.json"))
 
-    def estado_pergaminho(self, numero):
+    def scroll_state(self, numero):
         path = BASE / "scrolls/2026" / f"{int(numero):03d}.json"
         if not path.exists():
             return {"encontrado": False, "estado": "AUSENTE"}
@@ -38,15 +38,15 @@ class Ariadne:
             "integridade": p.get("assinatura", {}).get("integridade"),
         }
 
-    def procurar_lua(self, fase):
+    def search_moon(self, fase):
         encontrados = []
-        for path in self.pergaminhos:
+        for path in self.scrolls:
             p = ler_json(path)
             if (p.get("astronomia", {}).get("fase_lua") or "").lower() == fase.lower():
                 encontrados.append(p)
 
-        numeros = Counter(n for p in encontrados for n in p["extracao"]["numeros"])
-        estrelas = Counter(e for p in encontrados for e in p["extracao"]["estrelas"])
+        numbers = Counter(n for p in encontrados for n in p["extracao"]["numeros"])
+        stars = Counter(e for p in encontrados for e in p["extracao"]["estrelas"])
         somas = [p["estatisticas"]["soma"] for p in encontrados if p["estatisticas"]["soma"] is not None]
 
         resposta = {
@@ -54,23 +54,23 @@ class Ariadne:
             "tipo": "DESCRITIVO_NAO_PREDITIVO",
             "scrolls_encontrados": len(encontrados),
             "numeros_mais_frequentes": [
-                {"numero": n, "frequencia": f} for n, f in numeros.most_common(10)
+                {"numero": n, "frequencia": f} for n, f in numbers.most_common(10)
             ],
             "estrelas_mais_frequentes": [
-                {"estrela": e, "frequencia": f} for e, f in estrelas.most_common(5)
+                {"estrela": e, "frequencia": f} for e, f in stars.most_common(5)
             ],
             "soma_media": sum(somas) / len(somas) if somas else None,
             "aviso": "Observação histórica; não aumenta a probabilidade de prever um sorteio futuro.",
             "criada_em": datetime.now().isoformat(timespec="seconds"),
         }
-        guardar_consulta(f"lua_{fase.lower().replace(' ', '_')}", resposta)
+        save_query(f"lua_{fase.lower().replace(' ', '_')}", resposta)
         return resposta
 
-    def duplas(self, limite=10):
+    def pairs(self, limite=10):
         dados = ler_json(BASE / "indices/duplas.json", {})
         return dados.get("duplas_mais_comuns", [])[:limite]
 
-    def triplas(self, limite=10):
+    def triples(self, limite=10):
         dados = ler_json(BASE / "indices/triplas.json", {})
         return dados.get("triplas_mais_comuns", [])[:limite]
 
@@ -81,22 +81,22 @@ class Ariadne:
                 return item
         return None
 
-    def numeros_atrasados(self, limite=15):
+    def overdue_numbers(self, limite=15):
         """Numbers with greatest gap (draws) since last appearance in 2026 pergaminhos."""
         ultimo_visto = {}
-        for idx, path in enumerate(self.pergaminhos):
+        for idx, path in enumerate(self.scrolls):
             p = ler_json(path)
             for n in p.get("extracao", {}).get("numeros", []):
                 ultimo_visto[n] = idx
 
-        total = len(self.pergaminhos)
+        total = len(self.scrolls)
         atrasados = []
         for n in range(1, 51):
             if n in ultimo_visto:
-                atraso = total - 1 - ultimo_visto[n]
+                delay = total - 1 - ultimo_visto[n]
             else:
-                atraso = total
-            atrasados.append({"numero": n, "atraso": atraso})
+                delay = total
+            atrasados.append({"numero": n, "atraso": delay})
 
         atrasados.sort(key=lambda x: x["atraso"], reverse=True)
         resposta = {
@@ -106,33 +106,33 @@ class Ariadne:
             "aviso": "Observação histórica; não aumenta a probabilidade de prever um sorteio futuro.",
             "criada_em": datetime.now().isoformat(timespec="seconds"),
         }
-        guardar_consulta("numeros_atrasados", resposta)
+        save_query("numeros_atrasados", resposta)
         return atrasados[:limite]
 
-    def numeros_menos_frequentes(self, limite=20):
+    def least_frequent_numbers(self, limite=20):
         """Historically least frequent numbers from saidas_de_bolas_normalizado.json."""
         livro = ler_json(BASE / "fontes/saidas_de_bolas_normalizado.json", {"numeros": []})
         todos = sorted(livro["numeros"], key=lambda x: x.get("aparicoes_totais", 0))
-        resultado = [
+        result = [
             {"numero": x["numero"], "aparicoes_totais": x.get("aparicoes_totais", 0)}
             for x in todos[:limite]
         ]
         resposta = {
             "tipo": "DESCRITIVO_NAO_PREDITIVO",
-            "numeros_menos_frequentes": resultado,
+            "numeros_menos_frequentes": result,
             "aviso": "Observação histórica; não aumenta a probabilidade de prever um sorteio futuro.",
             "criada_em": datetime.now().isoformat(timespec="seconds"),
         }
-        guardar_consulta("numeros_menos_frequentes", resposta)
-        return resultado
+        save_query("numeros_menos_frequentes", resposta)
+        return result
 
-    def padrao_transicao(self):
+    def transition_pattern(self):
         """Pattern between penultimate and last key in 2026 pergaminhos."""
-        if len(self.pergaminhos) < 2:
+        if len(self.scrolls) < 2:
             return {"encontrado": False, "aviso": "Menos de 2 pergaminhos disponíveis."}
 
-        pen = ler_json(self.pergaminhos[-2])
-        ult = ler_json(self.pergaminhos[-1])
+        pen = ler_json(self.scrolls[-2])
+        ult = ler_json(self.scrolls[-1])
         nums_pen = set(pen.get("extracao", {}).get("numeros", []))
         nums_ult = set(ult.get("extracao", {}).get("numeros", []))
         ests_pen = set(pen.get("extracao", {}).get("estrelas", []))
@@ -166,17 +166,17 @@ class Ariadne:
             "aviso": "Observação histórica; não aumenta a probabilidade de prever um sorteio futuro.",
             "criada_em": datetime.now().isoformat(timespec="seconds"),
         }
-        guardar_consulta("padrao_transicao", resposta)
+        save_query("padrao_transicao", resposta)
         return resposta
 
-    def ecos_semanais(self, semana_iso):
+    def weekly_echoes(self, semana_iso):
         """All draws from the same ISO week across all available pergaminho folders."""
-        ecos = []
-        pergaminhos_raiz = BASE / "scrolls"
-        if not pergaminhos_raiz.exists():
+        echoes = []
+        scrolls_root = BASE / "scrolls"
+        if not scrolls_root.exists():
             return {"tipo": "DESCRITIVO_NAO_PREDITIVO", "semana_iso": int(semana_iso), "total_ecos": 0, "ecos": []}
 
-        for pasta_ano in sorted(pergaminhos_raiz.iterdir()):
+        for pasta_ano in sorted(scrolls_root.iterdir()):
             if not pasta_ano.is_dir():
                 continue
             for path in sorted(pasta_ano.glob("*.json")):
@@ -196,7 +196,7 @@ class Ariadne:
                     d = date.fromisoformat(data_str)
                     iso = d.isocalendar()
                     if iso[1] == int(semana_iso):
-                        ecos.append({
+                        echoes.append({
                             "id": p.get("id"),
                             "data": data_str,
                             "ano_iso": iso[0],
@@ -211,22 +211,22 @@ class Ariadne:
         resposta = {
             "tipo": "DESCRITIVO_NAO_PREDITIVO",
             "semana_iso": int(semana_iso),
-            "total_ecos": len(ecos),
-            "ecos": ecos,
+            "total_ecos": len(echoes),
+            "ecos": echoes,
             "aviso": "Observação histórica; não aumenta a probabilidade de prever um sorteio futuro.",
             "criada_em": datetime.now().isoformat(timespec="seconds"),
         }
-        guardar_consulta(f"ecos_semanais_semana_{int(semana_iso):02d}", resposta)
+        save_query(f"ecos_semanais_semana_{int(semana_iso):02d}", resposta)
         return resposta
 
-    def historico_completo(self, desde=None, ate=None, ultimos=None):
+    def full_history(self, desde=None, ate=None, ultimos=None):
         """All draws from all pergaminho folders, sorted by date."""
-        historico = []
-        pergaminhos_raiz = BASE / "scrolls"
-        if not pergaminhos_raiz.exists():
+        history = []
+        scrolls_root = BASE / "scrolls"
+        if not scrolls_root.exists():
             return []
 
-        for pasta_ano in sorted(pergaminhos_raiz.iterdir()):
+        for pasta_ano in sorted(scrolls_root.iterdir()):
             if not pasta_ano.is_dir():
                 continue
             for path in sorted(pasta_ano.glob("*.json")):
@@ -242,41 +242,41 @@ class Ariadne:
                     continue
                 if not data_str:
                     continue
-                numeros = p.get("extracao", {}).get("numeros", [])
-                estrelas = p.get("extracao", {}).get("estrelas", [])
-                if not numeros or len(numeros) != 5:
+                numbers = p.get("extracao", {}).get("numeros", [])
+                stars = p.get("extracao", {}).get("estrelas", [])
+                if not numbers or len(numbers) != 5:
                     continue
                 try:
                     d = date.fromisoformat(data_str)
                 except (ValueError, AttributeError):
                     continue
-                historico.append({
+                history.append({
                     "id": p.get("id"),
                     "data": data_str,
                     "_data_obj": d,
                     "ano": d.year,
                     "semana_iso": d.isocalendar()[1],
-                    "numeros": numeros,
-                    "estrelas": estrelas,
+                    "numeros": numbers,
+                    "estrelas": stars,
                     "soma": p.get("estatisticas", {}).get("soma"),
                 })
 
-        historico.sort(key=lambda x: x["_data_obj"])
-        for h in historico:
+        history.sort(key=lambda x: x["_data_obj"])
+        for h in history:
             h.pop("_data_obj")
 
         if desde:
-            historico = [h for h in historico if h["data"] >= desde]
+            history = [h for h in history if h["data"] >= desde]
         if ate:
-            historico = [h for h in historico if h["data"] <= ate]
+            history = [h for h in history if h["data"] <= ate]
         if ultimos:
-            historico = historico[-ultimos:]
+            history = history[-ultimos:]
 
-        return historico
+        return history
 
-    def ultima_chave_conhecida(self):
+    def last_known_key(self):
         """Devolve o último sorteio registado (data, numeros, estrelas)."""
-        todos = self.historico_completo()
+        todos = self.full_history()
         if not todos:
             return None
         u = todos[-1]
@@ -287,7 +287,7 @@ class Ariadne:
             'estrelas': u['estrelas'],
         }
 
-    def criar_papiro(self, semana_iso, dados):
+    def create_papyrus(self, semana_iso, dados):
         """Saves a Kor Preto papiro to biblioteca/black_kors/papyri/week_XX/."""
         pasta = BASE / f"black_kors/papyri/week_{int(semana_iso):02d}"
         pasta.mkdir(parents=True, exist_ok=True)
