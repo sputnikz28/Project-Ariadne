@@ -1375,5 +1375,107 @@
     "total_individuos": 744,
     "total_chaves_racas_antigas": 1008,
     "total_registos_externos": 88
+  },
+  {
+    "data_execucao": "2026-07-13T16:41:23",
+    "mundo": {
+      "data": "2026-07-14",
+      "hora": "20:01",
+      "local": "Paris",
+      "pais": "França",
+      "timezone": "Europe/Paris",
+      "dia": "terça",
+      "estacao": "verão",
+      "fase_lua": "nova",
+      "idade_lua": 0.04,
+      "jackpot": 0,
+      "pressao_destino": 1962,
+      "fontes": {
+        "historico": "api_euromilhoes",
+        "jackpot": "indisponivel",
+        "lua": "calculo_local_fallback"
+      }
+    },
+    "original": [
+      [
+        10,
+        18,
+        19,
+        21,
+        23
+      ],
+      [
+        3,
+        11
+      ]
+    ],
+    "corrompida": [
+      [
+        8,
+        10,
+        16,
+        20,
+        21
+      ],
+      [
+        3,
+        12
+      ]
+    ],
+    "entidade": "Malphas, o Quebra-Conselhos",
+    "total_individuos": 744,
+    "total_chaves_racas_antigas": 1008,
+    "total_registos_externos": 90
+  },
+  {
+    "data_execucao": "2026-07-13T16:41:44",
+    "mundo": {
+      "data": "2026-07-14",
+      "hora": "20:01",
+      "local": "Paris",
+      "pais": "França",
+      "timezone": "Europe/Paris",
+      "dia": "terça",
+      "estacao": "verão",
+      "fase_lua": "nova",
+      "idade_lua": 0.04,
+      "jackpot": 0,
+      "pressao_destino": 1962,
+      "fontes": {
+        "historico": "api_euromilhoes",
+        "jackpot": "indisponivel",
+        "lua": "calculo_local_fallback"
+      }
+    },
+    "original": [
+      [
+        2,
+        10,
+        18,
+        21,
+        50
+      ],
+      [
+        2,
+        6
+      ]
+    ],
+    "corrompida": [
+      [
+        4,
+        8,
+        18,
+        24,
+        48
+      ],
+      [
+        3,
+        7
+      ]
+    ],
+    "entidade": "Malphas, o Quebra-Conselhos",
+    "total_individuos": 744,
+    "total_chaves_racas_antigas": 1008,
+    "total_registos_externos": 89
   }
 ]

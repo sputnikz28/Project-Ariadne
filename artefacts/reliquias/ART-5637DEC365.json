@@ -9,13 +9,13 @@
     "Aruk da Lua Fria",
     "Gruk Pedra-Partida"
   ],
-  "energia_acumulada": 1.9,
+  "energia_acumulada": 2.1,
   "conselhos": 0,
   "estado": "ROUBADO_PELO_ESQUADRAO_NEGRO",
   "universo_origem": 1783776750689192668,
   "portador_atual": "Sable das Matrizes",
   "vezes_encontrado": 1,
-  "execucoes_sobrevividas": 19,
+  "execucoes_sobrevividas": 21,
   "historia": [
     {
       "evento": "MATERIALIZADO_NA_ARCA",

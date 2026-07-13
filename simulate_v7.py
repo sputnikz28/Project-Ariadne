@@ -1,9 +1,9 @@
 
 import json
 from pathlib import Path
-from vampires.lineages import create_vampires
-from gargoyles.lineages import create_gargoyles
-from treefolks.investigator import investigar_lua_cheia
+from races.vampires.lineages import create_vampires
+from races.gargoyles.lineages import create_gargoyles
+from races.treefolks.investigator import investigar_lua_cheia
 from library.ariadne.engine import Ariadne
 
 

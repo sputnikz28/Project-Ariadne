@@ -1,0 +1,196 @@
+{
+  "seed": 1783957298990990700,
+  "chave_alvo": {
+    "numeros": [
+      2,
+      14,
+      28,
+      33,
+      48
+    ],
+    "estrelas": [
+      8,
+      10
+    ],
+    "data": "2026-07-10",
+    "id": "PERG-2026-055"
+  },
+  "posicao_alvo": 69319994,
+  "universo_total": 139838160,
+  "fracao_universo_pct": 49.5716,
+  "periodo_anos": 1,
+  "historico_comparacao": 54,
+  "n_ecos": 28,
+  "n_depois": 26,
+  "cobertura_pct": 51.8519,
+  "esperado_num": 26.8,
+  "excesso_pct": 2.2803,
+  "espaco_medio_obs": 2390345,
+  "espaco_teorico": 71273,
+  "veredicto": "COMPATÍVEL COM O ACASO",
+  "portal_aberto": true,
+  "perfil": {
+    "n_ecos": 28,
+    "soma_media": 122.9,
+    "desvio_soma": 24.2,
+    "faixa_soma_preferida": [
+      98,
+      147
+    ],
+    "paridades_preferidas": [
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        2
+      ]
+    ],
+    "baixos_altos_preferidos": [
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        2
+      ]
+    ],
+    "numeros_mais_frequentes": [
+      44,
+      17,
+      42,
+      4,
+      35,
+      27,
+      46,
+      5,
+      13,
+      14
+    ],
+    "numeros_menos_frequentes": [
+      7,
+      49,
+      45,
+      36,
+      32,
+      40,
+      21,
+      11,
+      29,
+      25
+    ],
+    "estrelas_mais_frequentes": [
+      5,
+      6,
+      2,
+      1,
+      9,
+      12
+    ],
+    "gap_medio": 8.9,
+    "amplitude_media": 35.6,
+    "distribuicao_numerica": {
+      "1": 3,
+      "2": 4,
+      "3": 3,
+      "4": 5,
+      "5": 4,
+      "6": 4,
+      "7": 1,
+      "8": 3,
+      "9": 2,
+      "10": 3,
+      "11": 1,
+      "12": 4,
+      "13": 4,
+      "14": 4,
+      "16": 3,
+      "17": 6,
+      "18": 3,
+      "19": 2,
+      "20": 2,
+      "21": 1,
+      "22": 3,
+      "23": 3,
+      "24": 3,
+      "25": 2,
+      "26": 3,
+      "27": 4,
+      "28": 4,
+      "29": 1,
+      "31": 4,
+      "32": 1,
+      "33": 2,
+      "34": 2,
+      "35": 5,
+      "36": 1,
+      "37": 4,
+      "38": 3,
+      "39": 2,
+      "40": 1,
+      "41": 4,
+      "42": 5,
+      "43": 2,
+      "44": 6,
+      "45": 1,
+      "46": 4,
+      "47": 2,
+      "48": 2,
+      "49": 1,
+      "50": 3
+    },
+    "distribuicao_estrelas": {
+      "1": 5,
+      "2": 6,
+      "3": 4,
+      "4": 2,
+      "5": 8,
+      "6": 7,
+      "7": 2,
+      "8": 4,
+      "9": 5,
+      "10": 4,
+      "11": 4,
+      "12": 5
+    }
+  },
+  "seleccao": {
+    "chave": [
+      [
+        4,
+        7,
+        35,
+        42,
+        45
+      ],
+      [
+        5,
+        6
+      ]
+    ],
+    "posicao": 69333341,
+    "score": 100.0,
+    "candidatos_avaliados": 50000,
+    "ineditas_avaliadas": 50000
+  },
+  "chave_proposta": [
+    [
+      4,
+      7,
+      35,
+      42,
+      45
+    ],
+    [
+      5,
+      6
+    ]
+  ],
+  "posicao_proposta": 69333341,
+  "score_proposta": 100.0,
+  "aviso": "A posição de uma chave numa permutação pseudoaleatória não altera a sua probabilidade real. Uma taxa de cobertura >= 50% é esperada quando se percorre >= 50% do universo. O perfil dos Ecos reflecte regularidades do passado que não têm poder preditivo matemático.",
+  "lang": "pt",
+  "criado_em": "2026-07-13T16:41:43"
+}

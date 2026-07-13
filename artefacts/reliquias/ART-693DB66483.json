@@ -9,13 +9,13 @@
     "Morgana Pedra-Partida",
     "Kael da Lua Fria"
   ],
-  "energia_acumulada": 1.5,
+  "energia_acumulada": 1.7,
   "conselhos": 0,
   "estado": "RECUPERADO_PELA_ORDEM_ELFICA",
   "universo_origem": 1783716108367178646,
   "portador_atual": null,
   "vezes_encontrado": 1,
-  "execucoes_sobrevividas": 15,
+  "execucoes_sobrevividas": 17,
   "historia": [
     {
       "evento": "MATERIALIZADO_NA_ARCA",
