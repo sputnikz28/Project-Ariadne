@@ -1,0 +1,11 @@
+{
+  "id": "cla_anao",
+  "name": "Clãs Anões das Montanhas",
+  "version": "1.0",
+  "home": "Fortaleza das Montanhas",
+  "config_section": "ANOES",
+  "weight_key": "peso_conselho",
+  "default_weight": 0.35,
+  "votes": true,
+  "description": "Each clan builds a pool from hot+cold+last-draw numbers; combinatorial filtering by sum range."
+}

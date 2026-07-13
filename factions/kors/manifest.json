@@ -1,0 +1,11 @@
+{
+  "id": "kors_elarion",
+  "name": "Kors de Elarion",
+  "version": "1.0",
+  "home": "Elarion",
+  "config_section": "KORS",
+  "weight_key": "peso_conselho",
+  "default_weight": 1.0,
+  "votes": true,
+  "description": "Four Kors observe through Ariadne: overdue numbers, least frequent, transitions, weekly echoes."
+}

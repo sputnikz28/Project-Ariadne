@@ -1,0 +1,11 @@
+{
+  "id": "treefolk",
+  "name": "Treefolks da Floresta Ancestral",
+  "version": "1.0",
+  "home": "Floresta Ancestral",
+  "config_section": "TREEFOLKS",
+  "weight_key": "peso_conselho",
+  "default_weight": 0.90,
+  "votes": true,
+  "description": "ML-inspired scoring: frequency + delay weighted selection; measures statistical ghost."
+}

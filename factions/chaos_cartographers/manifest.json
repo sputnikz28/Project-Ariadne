@@ -1,0 +1,7 @@
+{
+  "id": "chaos_cartographers",
+  "name": "Cartógrafos do Caos",
+  "version": "1.0",
+  "votes": false,
+  "description": "Analytical faction: produces 5 library books (constellations, cycles, trends, randomness, markov). Does not vote in the Council."
+}

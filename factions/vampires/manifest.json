@@ -1,0 +1,11 @@
+{
+  "id": "vampiro",
+  "name": "Vampiros de Elarion",
+  "version": "1.0",
+  "home": "Cripta Eterna",
+  "config_section": "VAMPIROS",
+  "weight_key": "peso_conselho",
+  "default_weight": 0.90,
+  "votes": true,
+  "description": "Sanguinea lineage uses frequent triples; Sombria lineage uses consecutive triples."
+}

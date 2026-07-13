@@ -1,0 +1,11 @@
+{
+  "id": "axiomantes_nemerion",
+  "name": "Axiomantes de Nemerion",
+  "version": "1.0",
+  "home": "Cidadela de Nemerion",
+  "config_section": "AXIOMANTES",
+  "weight_key": "peso_conselho",
+  "default_weight": 0.75,
+  "votes": true,
+  "description": "Combinatorial labyrinth of 139M chambers + Feistel permutation. Only votes when portal is open."
+}

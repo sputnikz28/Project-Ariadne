@@ -1,0 +1,11 @@
+{
+  "id": "fada",
+  "name": "Fadas Lunélia",
+  "version": "1.0",
+  "home": "Jardim Eterno",
+  "config_section": "FADAS",
+  "weight_key": "peso_conselho",
+  "default_weight": 1.0,
+  "votes": true,
+  "description": "Weighted sampling with everyday-number bias; enforces hot+cold mix and sum band 100-170."
+}

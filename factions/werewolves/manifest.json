@@ -1,0 +1,11 @@
+{
+  "id": "lobisomem",
+  "name": "Lobisomens de Fenrir",
+  "version": "1.0",
+  "home": "Floresta da Lua Cheia",
+  "config_section": "LOBISOMENS",
+  "weight_key": "peso_conselho",
+  "default_weight": 0.80,
+  "votes": true,
+  "description": "Monte Carlo simulation with fitness scoring; only active on full-moon weeks."
+}

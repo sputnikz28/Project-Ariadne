@@ -1,0 +1,11 @@
+{
+  "id": "cronomante",
+  "name": "Cronomantes da Ordem do Tempo",
+  "version": "1.0",
+  "home": "Ordem do Tempo",
+  "config_section": "EXTRACAO",
+  "weight_key": "peso_cronomantes",
+  "default_weight": 1.0,
+  "votes": true,
+  "description": "Derives keys from sub-second extraction event timing and lunar age."
+}

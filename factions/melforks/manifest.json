@@ -1,0 +1,11 @@
+{
+  "id": "melfork",
+  "name": "Melforks Genéticos",
+  "version": "1.0",
+  "home": "Laboratório Genético",
+  "config_section": "MELFORKS",
+  "weight_key": "peso_conselho",
+  "default_weight": 1.0,
+  "votes": true,
+  "description": "Micro genetic algorithm: elite crossover + fitness scoring of statistical balance."
+}

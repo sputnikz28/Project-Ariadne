@@ -303,61 +303,115 @@ Facção em `factions/axiomantes/`. Percorrem o Labirinto de 139.838.160 câmara
 
 ---
 
-# Arquitetura V9 (Plugin Loader — implementado)
+# Arquitetura V9 (Plugin Architecture — implementado)
+
+## Módulo `core/`
+
+```
+core/
+    __init__.py
+    strategy.py      ← Proposal dataclass + Faction ABC
+    registry.py      ← FactionRegistry (discover + register + all)
+    plugin_loader.py ← CompatFaction wrapper + load_faction()
+```
+
+### `Proposal` e `Faction` (`core/strategy.py`)
+
+```python
+@dataclass
+class Proposal:
+    name: str
+    key: tuple          # ([nums], [stars])
+    weight: float
+    origin: str = ""    # campo 'origem' no arquivo_destino
+    home: str = ""      # campo 'casa' no registo_externo
+    faction_class: str = ""
+    extra: dict = field(default_factory=dict)
+
+class Faction(ABC):
+    manifest: dict = {}
+    @abstractmethod
+    def propose(self, context: dict) -> list[Proposal]: ...
+```
+
+### `FactionRegistry` (`core/registry.py`)
+
+```python
+registry = FactionRegistry().discover("factions")
+for faction in registry.all():
+    proposals = faction.propose(context)
+```
+
+`discover()` percorre `factions/<name>/` por ordem alfabética. Pastas começadas por `_` são ignoradas.
+
+### Resolução por pasta (`core/plugin_loader.py → load_faction`)
+
+1. `manifest.json` com `"class"` + `strategy.py` → instancia a classe (futuro nativo)
+2. `council.py` com `FACTION_META` + `council()` → envolve num `CompatFaction`
+3. Caso contrário → `None` (pasta ignorada)
+
+`CompatFaction.propose()` trata 3 formatos de retorno de `council()`:
+- Lista de dicts simples `{'nome', 'chave', 'peso', ...}`
+- Estrutura de clãs anões: dict com `'carteira'` (lista de chaves)
+- Dict de lobisomens: `{'ativo', 'simulacoes', 'finalistas'}`
+
+### `manifest.json` (por facção)
+
+```json
+{
+  "id": "vampiro",
+  "name": "Vampiros de Elarion",
+  "version": "1.0",
+  "home": "Cripta Eterna",
+  "config_section": "VAMPIROS",
+  "weight_key": "peso_conselho",
+  "default_weight": 0.90,
+  "votes": true,
+  "description": "..."
+}
+```
+
+`"votes": false` → facção analítica (chaos_cartographers); excluída do Conselho.
+
+## Facções no sistema de plugins
 
 ```
 factions/
-    kors/                    ✅ V7.2
-    chaos_cartographers/     ✅ V8  (analítico, sem FACTION_META)
-    axiomantes/              ✅ V8.1
-    vampires/                ✅ V8  (migrado de vampires/)
-    gargoyles/               ✅ V8  (migrado de gargoyles/)
-    treefolks/               ✅ V9  (migrado de races/extras.py)
-    skeletons/               ✅ V9  (migrado de races/skeletons.py)
-    chronomancers/           ✅ V9  (migrado de races/chronomancers.py)
-    melforks/                ✅ V9  (migrado de races/extras.py)
-    dwarves/                 ✅ V9  (migrado de races/extras.py)
-    faeries/                 ✅ V9  (migrado de races/extras.py)
-    werewolves/              ✅ V9  (migrado de races/extras.py)
-    loader.py                ✅ V9  discover_factions() — auto-discovery
+    axiomantes/           ✅ V8.1 + manifest.json
+    chaos_cartographers/  ✅ V8   manifest.json (votes: false) — analítico
+    chronomancers/        ✅ V9   migrado de races/chronomancers.py
+    dwarves/              ✅ V9   migrado de races/extras.py
+    faeries/              ✅ V9   migrado de races/extras.py
+    gargoyles/            ✅ V8   migrado + manifest.json
+    kors/                 ✅ V7.2 + manifest.json
+    melforks/             ✅ V9   migrado de races/extras.py
+    skeletons/            ✅ V9   migrado de races/skeletons.py
+    treefolks/            ✅ V9   migrado de races/extras.py
+    vampires/             ✅ V8   migrado + manifest.json
+    werewolves/           ✅ V9   migrado de races/extras.py
+    loader.py             ✅ V9   discover_factions() (compat legacy)
 ```
 
-### Interface padrão de facção
+## `main.py` — sem lógica de facção
 
 ```python
-FACTION_META = {
-    'name': str,           # nome de exibição
-    'origin': str,         # campo 'origem' no arquivo_destino
-    'home': str,           # campo 'casa' no registo_externo
-    'config_section': str, # secção [X] em config.txt
-    'weight_key': str,     # chave de peso em config.txt
-    'default_weight': float,
-}
-
-def council(ariadne=None, seed=None, cfg=None, ctx=None) -> list[dict]:
-    # cada dict: {'nome': str, 'chave': ([nums], [stars]), 'peso': float, ...}
-    ...
+context = {**ctx, 'ariadne': ariadne, 'cfg': cfg}  # cfg obrigatório
+registry = FactionRegistry().discover("factions")
+all_proposals = []
+for faction in registry.all():
+    all_proposals.extend(faction.propose(context))
 ```
 
-### Plugin loader
+Adicionar uma nova facção = criar `factions/<nova>/council.py` + `manifest.json`.
+**Zero alterações a `main.py`.**
 
-```python
-from factions.loader import discover_factions
+## Ainda fora do sistema de plugins (por design)
 
-for mod in discover_factions("factions"):
-    # mod.FACTION_META — metadados
-    # mod.council(ariadne, seed, cfg, ctx) — devolve candidatos
-    results = mod.council(ariadne, seed, cfg, ctx)
-```
-
-`discover_factions()` carrega todos os módulos `factions/<name>/council.py` que tenham `FACTION_META` e `council`. O `chaos_cartographers` não tem `FACTION_META` (analítico) e é excluído automaticamente.
-
-## Ainda fora do sistema de plugins (pendente)
-
-- **Clérigos** — algoritmo genético `evolution/genetic.py` (complexo demais; fica explícito)
-- **Esquadrão Negro** — estado persistente (grimório, eventos); fica explícito
-- **Ordem Élfica** — não vota directamente; fica explícito
-- **Seres Superiores** — retorno duplo `(vis, deus)` com pesos diferentes; fica explícito
+- **Clérigos** — algoritmo genético `evolution/genetic.py`; retorno complexo
+- **Esquadrão Negro** — estado persistente (grimório, eventos)
+- **Ordem Élfica** — não vota directamente
+- **Seres Superiores** — retorno duplo `(vis, deus)` com pesos diferentes
+- **Cartógrafos do Caos** — analítico; chamado explicitamente via `execute_cartographers()`
 
 ## Candidatos para V10
 
@@ -365,6 +419,7 @@ for mod in discover_factions("factions"):
 - Heatmaps — matriz visual de pares/triplas (CSV/JSON para visualização)
 - Treefolks consultando os livros dos Cartógrafos directamente
 - Ranking em ascensão por janela temporal
+- `reports/writer.py` consumindo `Proposal` directamente (remover `_rebuild_report_factions`)
 
 ---
 

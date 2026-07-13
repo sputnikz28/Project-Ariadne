@@ -1,0 +1,11 @@
+{
+  "id": "esqueleto",
+  "name": "Esqueletos das Catacumbas Numéricas",
+  "version": "1.0",
+  "home": "Catacumbas Numéricas",
+  "config_section": "ESQUELETOS",
+  "weight_key": "peso_conselho",
+  "default_weight": 0.80,
+  "votes": true,
+  "description": "Sliding window of 25 numbers; ritual constrains selection to a moving interval."
+}

@@ -1,0 +1,11 @@
+{
+  "id": "gargula",
+  "name": "Gárgulas do Torreão de Pedra",
+  "version": "1.0",
+  "home": "Torreão de Pedra",
+  "config_section": "GARGULAS",
+  "weight_key": "peso_conselho",
+  "default_weight": 0.85,
+  "votes": true,
+  "description": "Stone lineage uses consistent pairs; Mirror lineage uses consecutive pairs."
+}

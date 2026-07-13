@@ -14,13 +14,6 @@ from world.council_war import resolve
 from evolution.statistics import calculate
 from evolution.genetic import execute
 from races.extras import superiors
-from factions.treefolks.council import council as treefolks_council
-from factions.skeletons.council import council as skeletons_council
-from factions.chronomancers.council import council as chronomancers_council
-from factions.melforks.council import council as melforks_council
-from factions.dwarves.council import council as dwarves_council
-from factions.faeries.council import council as faeries_council
-from factions.werewolves.council import council as werewolves_council
 from council.council import filter_candidates, vote, corrupt
 from reports.writer import generate
 from amulets.books import synchronize_sources, build_books, update_next_draw_book
@@ -30,11 +23,8 @@ from elven_order.ninjas import create_ninjas, execute_missions
 from black_squad.persistence import load_grimoire
 from world.dark_conviction import create_mantra
 from library.ariadne.engine import Ariadne
-from factions.kors.council import kors_council
 from factions.chaos_cartographers.council import execute_cartographers
-from factions.axiomantes.council import axiomantes as axiomantes_ritual
-from factions.vampires.council import vampires as vampires_faction
-from factions.gargoyles.council import gargoyles as gargoyles_faction
+from core.registry import FactionRegistry
 from i18n.translations import t, lang_de_cfg
 
 
@@ -65,6 +55,58 @@ def registo_externo(name, faction_class, key, origem, generation, casa=None, ext
     return r
 
 
+def _rebuild_report_factions(proposals):
+    """Reconstruct faction-specific data for the legacy report writer.
+
+    Can be removed once reports/writer.py is updated to consume Proposal objects
+    directly instead of faction-keyed dicts.
+    """
+    result = {key: [] for key in ('fadas', 'tree', 'melf', 'cronomantes', 'esqueletos')}
+
+    for p in proposals:
+        d = {'nome': p.name, 'tipo': p.faction_class, 'chave': p.key, **p.extra}
+        if p.origin == 'fada':
+            result['fadas'].append(d)
+        elif p.origin == 'treefolk':
+            result['tree'].append(d)
+        elif p.origin == 'melfork':
+            result['melf'].append(d)
+        elif p.origin == 'cronomante':
+            result['cronomantes'].append(d)
+        elif p.origin == 'esqueleto':
+            result['esqueletos'].append(d)
+
+    # Dwarves — reconstruct nested clan structure
+    clans: dict = {}
+    for p in proposals:
+        if p.origin != 'cla_anao':
+            continue
+        cn = p.extra.get('clan_nome', '')
+        if cn not in clans:
+            clans[cn] = {
+                'nome': cn,
+                'lider': p.extra.get('lider', ''),
+                'pool': p.extra.get('pool', []),
+                'estrelas_pool': p.extra.get('estrelas_pool', []),
+                'carteira': [],
+            }
+        clans[cn]['carteira'].append(p.key)
+    result['anoes'] = list(clans.values())
+
+    # Werewolves — reconstruct {'ativo', 'simulacoes', 'finalistas'}
+    lob_props = [p for p in proposals if p.origin == 'lobisomem']
+    result['lob'] = {
+        'ativo': bool(lob_props),
+        'simulacoes': lob_props[0].extra.get('simulacoes', 0) if lob_props else 0,
+        'finalistas': [
+            {'nome': p.name, 'tipo': p.faction_class, 'chave': p.key,
+             'fitness': p.extra.get('fitness', 0)}
+            for p in lob_props
+        ],
+    }
+    return result
+
+
 def main():
     cfg = load_config('config.txt')
     modo_semente = cfg.get('SIMULACAO', 'modo_semente', fallback='fixo').strip().lower()
@@ -77,20 +119,20 @@ def main():
     extraction = simulate_draw(cfg, world)
     fontes_biblioteca = synchronize_sources(cfg)
     biblioteca = build_books(cfg, hist, world)
-    ctx = {'mundo': world, 'historico': hist, 'estatisticas': est, 'extracao': extraction, 'biblioteca': biblioteca, 'seed': seed}
+    ctx = {
+        'mundo': world, 'historico': hist, 'estatisticas': est,
+        'extracao': extraction, 'biblioteca': biblioteca, 'seed': seed,
+    }
     ariadne = Ariadne()
 
+    # ── Genetic algorithm (Clerics) ─────────────────────────────────────────
     evo = execute(cfg, ctx)
     ritual = calculate_ritual(cfg, world, evo)
-    vis, deus = superiors(ctx)
-    ac = dwarves_council(ariadne, seed, cfg, ctx)
-    fs = faeries_council(ariadne, seed, cfg, ctx)
-    ms = melforks_council(ariadne, seed, cfg, ctx)
-    lob = werewolves_council(ariadne, seed, cfg, ctx)
-    tr = treefolks_council(ariadne, seed, cfg, ctx)
-    cronos = chronomancers_council(ariadne, seed, cfg, ctx)
-    esqueletos = skeletons_council(ariadne, seed, cfg, ctx)
 
+    # ── Superiors (complex dual return — explicit) ───────────────────────────
+    vis, deus = superiors(ctx)
+
+    # ── Black Squad & Elven Order (stateful — explicit) ──────────────────────
     dark_events = []
     magos_negros, black_grimoire = create_mages(cfg, ctx, dark_events)
     eco_ressuscitado = tentar_ressuscitar_lenda(cfg, dark_events)
@@ -99,15 +141,26 @@ def main():
     ninjas_elficos = create_ninjas(cfg)
     estado_ordem = execute_missions(cfg, ninjas_elficos, elven_events)
 
+    # ── Analytical faction (does not vote — explicit) ────────────────────────
     cartografos = execute_cartographers(ariadne, cfg)
-    kors = kors_council(ariadne)
-    ax = axiomantes_ritual(ariadne, seed, cfg)
-    vampiros = vampires_faction(ariadne, seed, cfg)
-    gargulas = gargoyles_faction(ariadne, seed, cfg)
 
+    # ── Auto-discover and run all voter factions via registry ─────────────────
+    context = {**ctx, 'ariadne': ariadne, 'cfg': cfg}
+    registry = FactionRegistry().discover("factions")
+
+    all_proposals = []
+    for faction in registry.all():
+        try:
+            all_proposals.extend(faction.propose(context))
+        except Exception as e:
+            print(f"Warning: {faction.name} failed: {e}")
+
+    # ── Build candidate list and external registry ────────────────────────────
     cand = []
     externos = []
+    final_generation = cfg.getint('SIMULACAO', 'geracoes')
 
+    # Celestial ritual (human key from clerics)
     if ritual.get('ativo') and ritual.get('chave_humana'):
         cand.append((
             'Escolha Humana Consagrada pelos Clérigos',
@@ -119,7 +172,7 @@ def main():
             'Chave Humana Ritual',
             ritual['chave_humana'],
             'ritual_celeste',
-            cfg.getint('SIMULACAO', 'geracoes'),
+            final_generation,
             'Templo dos Clérigos',
             {
                 'energia_total': ritual['energia_total'],
@@ -127,13 +180,14 @@ def main():
                 'peso_no_conselho': ritual['peso_no_conselho'],
             },
         ))
-    final_generation = cfg.getint('SIMULACAO', 'geracoes')
 
+    # Genetic algorithm finalists (Clerics)
     for h in evo['populacao_final'][:cfg.getint('SIMULACAO', 'conselho_final')]:
         if h.keys:
             u = h.keys[-1]
             cand.append((f'{h.name} ({h.raca})', (u['numeros'], u['estrelas']), 1.0))
 
+    # Superiors
     for v in vis:
         cand.append((v['nome'], v['chave'], 1.0))
         externos.append(registo_externo(v['nome'], v['tipo'], v['chave'], 'ser_superior', final_generation, 'Panteão'))
@@ -141,88 +195,22 @@ def main():
     cand.append((deus['nome'], deus['chave'], 1.4))
     externos.append(registo_externo(deus['nome'], deus['tipo'], deus['chave'], 'deus', final_generation, 'Panteão'))
 
-    for c in ac:
-        for i, ch in enumerate(c['carteira']):
-            name = f"{c['nome']} #{i + 1}"
-            cand.append((name, ch, .35))
-            externos.append(registo_externo(name, 'Clã Anão', ch, 'cla_anao', final_generation, c['nome'], {'lider': c['lider']}))
-
-    for x in fs:
-        cand.append((x['nome'], x['chave'], 1.0))
-        externos.append(registo_externo(x['nome'], x['tipo'], x['chave'], 'fada', final_generation))
-
-    for x in ms:
-        cand.append((x['nome'], x['chave'], 1.0))
-        externos.append(registo_externo(x['nome'], x['tipo'], x['chave'], 'melfork', final_generation, extra={'fitness': x['fitness']}))
-
-    for x in lob['finalistas']:
-        cand.append((x['nome'], x['chave'], .8))
-        externos.append(registo_externo(x['nome'], x['tipo'], x['chave'], 'lobisomem', final_generation, extra={'fitness': x['fitness']}))
-
-    for x in tr:
-        cand.append((x['nome'], x['chave'], x['peso']))
-        externos.append(registo_externo(x['nome'], x['tipo'], x['chave'], 'treefolk', final_generation, extra={
-            'modelo': x['modelo'], 'treino': x['treino'], 'teste': x['teste'], 'fantasma': x['fantasma']
-        }))
-
-
-    for x in cronos:
-        cand.append((x['nome'], x['chave'], 1.0))
-        externos.append(registo_externo(x['nome'], x['tipo'], x['chave'], 'cronomante', final_generation, 'Ordem do Tempo', {
-            'precisao_temporal': x['precisao_temporal'],
-            'assinatura_temporal': x['assinatura_temporal'],
-            'eventos_extracao': extraction['eventos'],
-        }))
-
-    for x in esqueletos:
-        peso_esqueleto = cfg.getfloat('ESQUELETOS', 'peso_conselho', fallback=0.80)
-        cand.append((x['nome'], x['chave'], peso_esqueleto))
+    # All plugin factions (unified loop — no faction-specific code here)
+    for p in all_proposals:
+        cand.append((p.name, p.key, p.weight))
         externos.append(registo_externo(
-            x['nome'], x['tipo'], x['chave'], 'esqueleto',
-            final_generation, 'Catacumbas Numéricas',
-            {'ritual_osseo': x['ritual']}
+            p.name, p.faction_class or p.origin, p.key,
+            p.origin, final_generation, p.home, p.extra or None,
         ))
 
-    peso_kors = cfg.getfloat('KORS', 'peso_conselho', fallback=1.0)
-    for x in kors:
-        cand.append((x['nome'], x['chave'], peso_kors))
-        extra_kor = {k: v for k, v in x.items() if k not in ('nome', 'classe', 'tipo', 'chave', 'peso')}
-        externos.append(registo_externo(
-            x['nome'], x['classe'], x['chave'], 'kors_elarion',
-            final_generation, 'Elarion', extra_kor,
-        ))
-
-    for x in ax:
-        cand.append((x['nome'], x['chave'], x['peso']))
-        extra_ax = {k: v for k, v in x.items() if k not in ('nome', 'classe', 'tipo', 'chave', 'peso')}
-        externos.append(registo_externo(
-            x['nome'], x['classe'], x['chave'], 'axiomantes_nemerion',
-            final_generation, 'Cidadela de Nemerion', extra_ax,
-        ))
-
-    peso_vampiros = cfg.getfloat('VAMPIROS', 'peso_conselho', fallback=0.90)
-    for x in vampiros:
-        cand.append((x['nome'], x['chave'], peso_vampiros))
-        externos.append(registo_externo(
-            x['nome'], x['tipo'], x['chave'], 'vampiro',
-            final_generation, 'Cripta Eterna', {'linhagem': x['linhagem']}
-        ))
-
-    peso_gargulas = cfg.getfloat('GARGULAS', 'peso_conselho', fallback=0.85)
-    for x in gargulas:
-        cand.append((x['nome'], x['chave'], peso_gargulas))
-        externos.append(registo_externo(
-            x['nome'], x['tipo'], x['chave'], 'gargula',
-            final_generation, 'Torreão de Pedra', {'linhagem': x['linhagem']}
-        ))
-
+    # Black Squad
+    peso_negro = cfg.getfloat('ESQUADRAO_NEGRO', 'peso_conselho', fallback=0.85)
     for x in magos_negros:
-        peso_negro = cfg.getfloat('ESQUADRAO_NEGRO', 'peso_conselho', fallback=0.85)
         cand.append((x['nome'], x['chave'], peso_negro))
         externos.append(registo_externo(
             x['nome'], x['tipo'], x['chave'], 'esquadrao_negro',
             final_generation, 'Biblioteca Sombria',
-            {'score_negro': x['score'], 'nivel_grimorio': x['nivel_grimorio']}
+            {'score_negro': x['score'], 'nivel_grimorio': x['nivel_grimorio']},
         ))
 
     if eco_ressuscitado:
@@ -231,25 +219,27 @@ def main():
         externos.append(registo_externo(
             eco_ressuscitado['nome'], eco_ressuscitado['classe'], echo_key,
             'necromancia_estatistica', final_generation, 'Ritual Negro',
-            {'corrupcao': eco_ressuscitado['corrupcao'], 'ressuscitado_por': eco_ressuscitado['ressuscitado_por']}
+            {'corrupcao': eco_ressuscitado['corrupcao'], 'ressuscitado_por': eco_ressuscitado['ressuscitado_por']},
         ))
 
+    # ── Council vote ──────────────────────────────────────────────────────────
     ace, events, rej = filter_candidates(cand)
     res = vote(ace)
-    herois_conselho=evo['populacao_final'][:cfg.getint('SIMULACAO','conselho_final')]
-    portador=choose_carrier(cfg,herois_conselho)
-    guerra=resolve(cfg,res['chave'],portador,ritual)
-    corr=guerra['corrupcao'] if guerra and guerra.get('corrupcao') else corrupt(cfg,res['chave'])
+    herois_conselho = evo['populacao_final'][:cfg.getint('SIMULACAO', 'conselho_final')]
+    portador = choose_carrier(cfg, herois_conselho)
+    guerra = resolve(cfg, res['chave'], portador, ritual)
+    corr = guerra['corrupcao'] if guerra and guerra.get('corrupcao') else corrupt(cfg, res['chave'])
     conviction = create_mantra(
         cfg, res['chave'], corr['entidade'],
-        dark_energy=black_grimoire.get('nivel', 1) * 10
+        dark_energy=black_grimoire.get('nivel', 1) * 10,
     )
 
-    update_next_draw_book(world,res,corr)
+    update_next_draw_book(world, res, corr)
 
     externos.append(registo_externo('Conselho Original', 'Conselho Final', res['chave'], 'chave_conselho', final_generation, 'Conselho'))
     externos.append(registo_externo(corr['entidade'], 'Entidade Maléfica', corr['chave_corrompida'], 'corrupcao_final', final_generation, 'Abismo'))
 
+    # ── Persist data ──────────────────────────────────────────────────────────
     arq = readj('data/arquivo_destino.json', [])
     arq.extend(evo['registos'])
     arq.extend(externos)
@@ -270,6 +260,8 @@ def main():
     writej('data/populacao_final.json', [h.to_dict() for h in evo['populacao_final']])
     writej('data/todos_individuos.json', [h.to_dict() for h in sorted(evo['todos'].values(), key=lambda x: x.id)])
 
+    # ── Generate report ───────────────────────────────────────────────────────
+    report_factions = _rebuild_report_factions(all_proposals)
     rel = Path('reports/generated') / f"relatorio_v4_1_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt"
     generate({
         'mundo': world,
@@ -277,12 +269,11 @@ def main():
         'evolucao': evo,
         'visoes': vis,
         'deus': deus,
-        'anoes': ac,
-        'fadas': fs,
-        'tree': tr,
-        'melf': ms,
-        'lob': lob,
-        'cronomantes': cronos,
+        'anoes': report_factions['anoes'],
+        'fadas': report_factions['fadas'],
+        'tree': report_factions['tree'],
+        'melf': report_factions['melf'],
+        'lob': report_factions['lob'],
         'extracao': extraction,
         'ritual': ritual,
         'guerra_conselho': guerra,
@@ -302,15 +293,12 @@ def main():
         'ninjas_elficos': ninjas_elficos,
         'eventos_elficos': elven_events,
         'estado_ordem_elfica': estado_ordem,
-        'esqueletos': esqueletos,
+        'esqueletos': report_factions['esqueletos'],
         'conviccao_sombria': conviction,
-        'kors': kors,
         'cartografos': cartografos,
-        'axiomantes': ax,
-        'vampiros': vampiros,
-        'gargulas': gargulas,
     }, rel)
 
+    # ── Summary ───────────────────────────────────────────────────────────────
     lang = lang_de_cfg(cfg)
     print(t('simulacao_concluida', lang))
     print(f"{t('semente', lang)}:", seed)
@@ -327,20 +315,26 @@ def main():
     print('Nível do Grimório Negro:', load_grimoire().get('nivel'))
     print(f"{t('magos_negros', lang)}:", len(magos_negros))
     print(f"{t('missoes_elficas', lang)}:", len(elven_events))
-    print(f"{t('esqueletos', lang)}:", len(esqueletos))
     print(f"{t('invocacoes', lang)}:", conviction.get('total_invocacoes', 0))
-    print(f"{t('kors', lang)}:", len(kors))
-    print("Vampiros de Elarion:", len(vampiros))
-    print("Gárgulas do Torreão:", len(gargulas))
+
+    # Plugin factions summary — auto-generated, no hardcoded names
+    for faction in registry.all():
+        n = len([p for p in all_proposals if p.origin == faction.origin])
+        if n:
+            print(f"{faction.name}: {n}")
+
+    # Axiomantes portal status (special message)
+    ax_proposals = [p for p in all_proposals if p.origin == 'axiomantes_nemerion']
+    if ax_proposals:
+        r = ax_proposals[0].extra.get('ritual', {})
+        print(f"Axiomantes de Nemerion: {t('portal_aberto_msg', lang)} "
+              f"| Cobertura {r.get('cobertura_pct', 0):.2f}% | {r.get('veredicto', '?')}")
+    else:
+        print(f"Axiomantes de Nemerion: {t('portal_fechado_msg', lang)}")
+
     livros_criados = [c['livro_path'] for c in cartografos if c.get('livro_path')]
     print(f"{t('cartografos', lang)}:", len(cartografos),
           f"| {t('livros_label', lang)}:", len(livros_criados))
-    if ax:
-        r = ax[0]['ritual']
-        print(f"Axiomantes de Nemerion: {t('portal_aberto_msg', lang)} "
-              f"| Cobertura {r['cobertura_pct']:.2f}% | {r['veredicto']}")
-    else:
-        print(f"Axiomantes de Nemerion: {t('portal_fechado_msg', lang)}")
 
 
 if __name__ == '__main__':
