@@ -1222,5 +1222,158 @@
     "total_individuos": 744,
     "total_chaves_racas_antigas": 1008,
     "total_registos_externos": 86
+  },
+  {
+    "data_execucao": "2026-07-13T15:57:25",
+    "mundo": {
+      "data": "2026-07-14",
+      "hora": "20:01",
+      "local": "Paris",
+      "pais": "França",
+      "timezone": "Europe/Paris",
+      "dia": "terça",
+      "estacao": "verão",
+      "fase_lua": "nova",
+      "idade_lua": 0.04,
+      "jackpot": 0,
+      "pressao_destino": 1962,
+      "fontes": {
+        "historico": "api_euromilhoes",
+        "jackpot": "indisponivel",
+        "lua": "calculo_local_fallback"
+      }
+    },
+    "original": [
+      [
+        10,
+        21,
+        23,
+        44,
+        50
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "corrompida": [
+      [
+        8,
+        24,
+        26,
+        42,
+        50
+      ],
+      [
+        3,
+        12
+      ]
+    ],
+    "entidade": "Malphas, o Quebra-Conselhos",
+    "total_individuos": 744,
+    "total_chaves_racas_antigas": 1008,
+    "total_registos_externos": 89
+  },
+  {
+    "data_execucao": "2026-07-13T16:11:15",
+    "mundo": {
+      "data": "2026-07-14",
+      "hora": "20:01",
+      "local": "Paris",
+      "pais": "França",
+      "timezone": "Europe/Paris",
+      "dia": "terça",
+      "estacao": "verão",
+      "fase_lua": "nova",
+      "idade_lua": 0.04,
+      "jackpot": 0,
+      "pressao_destino": 1962,
+      "fontes": {
+        "historico": "api_euromilhoes",
+        "jackpot": "indisponivel",
+        "lua": "calculo_local_fallback"
+      }
+    },
+    "original": [
+      [
+        2,
+        19,
+        21,
+        29,
+        44
+      ],
+      [
+        2,
+        9
+      ]
+    ],
+    "corrompida": [
+      [
+        5,
+        21,
+        24,
+        29,
+        43
+      ],
+      [
+        1,
+        9
+      ]
+    ],
+    "entidade": "Aion dos Ossos, Quebra-Conselhos",
+    "total_individuos": 744,
+    "total_chaves_racas_antigas": 1008,
+    "total_registos_externos": 24
+  },
+  {
+    "data_execucao": "2026-07-13T16:17:48",
+    "mundo": {
+      "data": "2026-07-14",
+      "hora": "20:01",
+      "local": "Paris",
+      "pais": "França",
+      "timezone": "Europe/Paris",
+      "dia": "terça",
+      "estacao": "verão",
+      "fase_lua": "nova",
+      "idade_lua": 0.04,
+      "jackpot": 0,
+      "pressao_destino": 1962,
+      "fontes": {
+        "historico": "cache_historico",
+        "jackpot": "indisponivel",
+        "lua": "calculo_local_fallback"
+      }
+    },
+    "original": [
+      [
+        10,
+        23,
+        33,
+        44,
+        50
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "corrompida": [
+      [
+        13,
+        23,
+        34,
+        41,
+        47
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "entidade": "Malphas, o Quebra-Conselhos",
+    "total_individuos": 744,
+    "total_chaves_racas_antigas": 1008,
+    "total_registos_externos": 88
   }
 ]

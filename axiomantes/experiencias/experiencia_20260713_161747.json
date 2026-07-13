@@ -1,0 +1,40 @@
+{
+  "seed": 1783955864467870600,
+  "chave_alvo": {
+    "numeros": [
+      2,
+      14,
+      28,
+      33,
+      48
+    ],
+    "estrelas": [
+      8,
+      10
+    ],
+    "data": "2026-07-10",
+    "id": "PERG-2026-055"
+  },
+  "posicao_alvo": 121316,
+  "universo_total": 139838160,
+  "fracao_universo_pct": 0.0868,
+  "periodo_anos": 1,
+  "historico_comparacao": 54,
+  "n_ecos": 0,
+  "n_depois": 54,
+  "cobertura_pct": 0.0,
+  "esperado_num": 0.0,
+  "excesso_pct": -0.0868,
+  "espaco_medio_obs": null,
+  "espaco_teorico": 71273,
+  "veredicto": "COMPATÍVEL COM O ACASO",
+  "portal_aberto": false,
+  "perfil": null,
+  "seleccao": null,
+  "chave_proposta": null,
+  "posicao_proposta": null,
+  "score_proposta": null,
+  "aviso": "A posição de uma chave numa permutação pseudoaleatória não altera a sua probabilidade real. Uma taxa de cobertura >= 50% é esperada quando se percorre >= 50% do universo. O perfil dos Ecos reflecte regularidades do passado que não têm poder preditivo matemático.",
+  "lang": "pt",
+  "criado_em": "2026-07-13T16:17:47"
+}

@@ -27,25 +27,25 @@
   "conselho": {
     "chave_original": [
       10,
-      19,
-      21,
       23,
+      33,
+      44,
       50
     ],
     "estrelas_originais": [
       2,
-      12
+      3
     ],
     "chave_corrompida": [
-      7,
-      21,
-      22,
-      26,
-      48
+      13,
+      23,
+      34,
+      41,
+      47
     ],
     "estrelas_corrompidas": [
-      3,
-      12
+      2,
+      3
     ]
   }
 }

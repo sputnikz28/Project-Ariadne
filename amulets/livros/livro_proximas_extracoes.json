@@ -3,7 +3,7 @@
   "extracoes": [
     {
       "livro": "Livro das Extrações por Cumprir",
-      "data": "2026-07-11",
+      "data": "2026-07-14",
       "hora_local": "20:01",
       "local": "Paris",
       "timezone": "Europe/Paris",
@@ -35,5 +35,5 @@
       }
     }
   ],
-  "atualizado_em": "2026-07-13T10:22:51+00:00"
+  "atualizado_em": "2026-07-13T15:17:44+00:00"
 }
