@@ -11,11 +11,11 @@ def ler(path, padrao):
 
 
 def main():
-    atlas = ler("escribas/atlas/atlas_do_universo.json", {"eras": []})
-    inventarios = list(Path("escribas/inventarios").glob("inventario_era_*.json"))
-    cronicas = list(Path("escribas/cronicas").glob("cronica_era_*.txt"))
-    bios = list(Path("escribas/biografias").glob("*.json"))
-    museus = list(Path("escribas/museu").glob("*.json"))
+    atlas = ler("scribes/atlas/atlas_do_universo.json", {"eras": []})
+    inventarios = list(Path("scribes/inventories").glob("inventario_era_*.json"))
+    cronicas = list(Path("scribes/chronicles").glob("cronica_era_*.txt"))
+    bios = list(Path("scribes/biographies").glob("*.json"))
+    museus = list(Path("scribes/museu").glob("*.json"))
 
     print("📚 Eras no Atlas:", len(atlas.get("eras", [])))
     print("📦 Inventários:", len(inventarios))

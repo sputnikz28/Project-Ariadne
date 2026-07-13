@@ -82,7 +82,7 @@ def execute_missions(config, ninjas, events):
                 dados["estado"] = "RECUPERADO_PELA_ORDEM_ELFICA"
                 dados["recuperado_em"] = agora()
                 dados["purificado"] = random.random() < chance_purificar
-                destino = Path("amuletos/cache/recovered_knowledge") / path.name
+                destino = Path("amulets/cache/recovered_knowledge") / path.name
                 save(destino, dados)
                 path.unlink(missing_ok=True)
                 missao["resultado"] = "Cópia sombria recuperada e isolada."

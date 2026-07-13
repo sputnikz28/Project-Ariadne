@@ -3,7 +3,7 @@ import json
 from pathlib import Path
 from datetime import datetime, timezone
 
-BASE = Path("amuletos")
+BASE = Path("amulets")
 BOOKS = BASE / "livros"
 CACHE = BASE / "cache"
 FUTURAS = BASE / "future_draws"

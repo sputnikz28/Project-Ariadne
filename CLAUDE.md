@@ -1,8 +1,9 @@
 # CLAUDE.md
 
-# Oráculos do Euromilhões --- Especificação do Projeto (V1 → V8)
+# Oráculos do Euromilhões — Especificação do Projeto (V1 → V8.1)
 
 > Documento de contexto para desenvolvimento contínuo.
+> **Open source:** https://github.com/tsilva28/Project-Ariadne (MIT License)
 
 ## Objetivo
 
@@ -11,155 +12,18 @@ Euromilhões. O projeto **não pretende prever resultados**, mas explorar
 estratégias, estatísticas, simulações e personagens que consultam uma
 Biblioteca de conhecimento.
 
-------------------------------------------------------------------------
+---
 
-# V1
+# V1 — V6 (resumo)
 
--   Conselho inicial de personagens.
--   Geração de chaves.
--   Relatórios.
+- **V1** — Conselho inicial de personagens; geração de chaves; relatórios.
+- **V2** — Estratégias distintas por personagem; Conselho escolhe chave final.
+- **V3** — Campanhas, gerações e evolução; personagens lendárias; ranking histórico.
+- **V4** — Amuletos vivos; Artefactos; Relíquias persistentes; Biblioteca com livros proibidos; Esquadrão Negro; Ordem Élfica.
+- **V5** — Ariadne concebida como guardiã; Pergaminhos; Crónicas; Treefolks; Vampiros; Gárgulas.
+- **V6** — Configuração por `config.txt`; campanhas multi-era; Esqueletos; Vilão Malphas.
 
-# V2
-
--   Introdução de estratégias distintas por personagem.
--   Conselho escolhe chave final.
-
-# V3
-
--   Campanhas, gerações e evolução das personagens.
--   Personagens lendárias.
--   Ranking histórico.
-
-# V4
-
-## V4.4
-
--   Amuletos vivos.
--   Artefactos.
--   Relíquias persistentes.
-
-## Biblioteca
-
--   Livros proibidos.
--   Monges e Escribas.
--   Apenas algumas classes podem consultar certos livros.
-
-## Esquadrão Negro
-
--   Roubo de livros.
--   Biblioteca Negra.
-
-## Ordem Élfica
-
--   Missões para recuperar livros e relíquias.
-
-# V5
-
-## Biblioteca Eterna
-
--   Ariadne concebida como guardiã.
--   Pergaminhos.
--   Crónicas.
--   Artefactos persistentes.
--   Livros de estatísticas.
-
-## Novas classes
-
--   Treefolks investigadores.
--   Vampiros (triplas).
--   Gárgulas (duplas).
-
-# V6
-
--   Configuração por ficheiro config.
--   Número de rondas configurável.
--   Inventário de artefactos.
--   Estratégia dos Esqueletos (janela de 25 números).
--   Vilão que incentiva simbolicamente os números escolhidos.
-
-# V7
-
-## Biblioteca Eterna
-
-Estrutura:
-
--   fontes
--   pergaminhos
--   livros
--   consultas
--   índices
--   artefactos
--   relíquias
--   amuletos
-
-### Ariadne
-
-Consulta: - pergaminhos - índices - livros
-
-### Dados
-
--   Dataset 2026
--   Excel "Saídas de Bolas"
--   55 pergaminhos
-
-### Livros
-
--   Livro das Pedras Eternas
--   Livro dos Pactos de Pedra
--   Livro do Sangue Triplo
--   Livro Lunar
-
-### Vampiros
-
--   Linhagem Sanguínea
--   Linhagem Sombria
-
-### Gárgulas
-
--   Pedra
--   Espelho
-
-### Treefolks
-
-Investigação estatística e deteção de "fantasmas estatísticos".
-
-# V7.1
-
-## Ariadne Fonte-Viva
-
-Mudança arquitetural principal:
-
-Personagens → Ariadne → Consultas → Livros reconstruíveis → Fontes
-originais
-
-### Fontes
-
-Cada ano possui um dataset completo preservado.
-
-    biblioteca/fontes/
-        2004/
-        ...
-        2026/
-
-### Pergaminhos
-
-São vistas leves. Referenciam: - fonte original - índice do sorteio -
-hash da chave
-
-### Livros reconstruíveis
-
--   Frequências
--   Duplas
--   Triplas
--   Lua
-
-Reconstruídos automaticamente.
-
-### Cache
-
-Consultas reutilizadas quando possível.
-
-------------------------------------------------------------------------
+---
 
 # Universo
 
@@ -167,40 +31,40 @@ Consultas reutilizadas quando possível.
 
 | Facção | Módulo | Estratégia |
 |--------|--------|-----------|
-| Clérigos | `racas/antigas.py` + `evolucao/` | Algoritmo genético, 14 gerações |
-| Melforks | `racas/extras.py` | Algoritmo genético especializado |
-| Anões | `racas/extras.py` | Combinatória por clãs (3 × 15 chaves) |
-| Fadas | `racas/extras.py` | Ponderação por números quotidianos |
-| Lobisomens | `racas/extras.py` | Monte Carlo de aptidão (fase lunar) |
+| Clérigos | `races/legacy.py` + `evolution/` | Algoritmo genético, 14 gerações |
+| Melforks | `races/extras.py` | Algoritmo genético especializado |
+| Anões | `races/extras.py` | Combinatória por clãs (3 × 15 chaves) |
+| Fadas | `races/extras.py` | Ponderação por números quotidianos |
+| Lobisomens | `races/extras.py` | Monte Carlo de aptidão (fase lunar) |
 | Treefolks | `treefolks/` | Consulta Ariadne; mede fantasmas estatísticos |
-| Vampiros | `vampiros/` | Triplas frequentes e consecutivas |
-| Gárgulas | `gargulas/` | Duplas frequentes e consecutivas |
-| Cronomantes | `racas/cronomantes.py` | Energia dos eventos de extração |
-| Esqueletos | `racas/esqueletos.py` | Janela móvel de 25 números |
-| Esquadrão Negro | `esquadrao_negro/` | Anti-popularidade; grimório roubado |
-| Ordem Élfica | `ordem_elfica/` | Missões de recuperação (não vota directamente) |
-| Kors de Elarion | `faccoes/kors/` | Observação via Ariadne (V7.2) |
-| Axiomantes de Nemerion | `faccoes/axiomantes/` | Labirinto combinatório + Feistel (V8.1) |
+| Vampiros | `vampires/` | Triplas frequentes e consecutivas |
+| Gárgulas | `gargoyles/` | Duplas frequentes e consecutivas |
+| Cronomantes | `races/chronomancers.py` | Energia dos eventos de extração |
+| Esqueletos | `races/skeletons.py` | Janela móvel de 25 números |
+| Esquadrão Negro | `black_squad/` | Anti-popularidade; grimório roubado |
+| Ordem Élfica | `elven_order/` | Missões de recuperação (não vota directamente) |
+| Kors de Elarion | `factions/kors/` | Observação via Ariadne (V7.2) |
+| Axiomantes de Nemerion | `factions/axiomantes/` | Labirinto combinatório + Feistel (V8.1) |
 
 ## Facções analíticas (não geram chaves)
 
 | Facção | Módulo | O que produz |
 |--------|--------|-------------|
-| Cartógrafos do Caos | `faccoes/cartografos_caos/` | 5 livros analíticos em `biblioteca/books/cartographers/` (V8) |
-| Monges e Escribas | `amuletos/biblioteca.py` | Livros reconstruíveis, índices |
+| Cartógrafos do Caos | `factions/chaos_cartographers/` | 5 livros analíticos em `library/books/cartographers/` (V8) |
+| Monges e Escribas | `amulets/books.py` | Livros reconstruíveis, índices |
 
 ## Vilões e mecânicas narrativas
 
 - **Malphas** — corrompe a chave final com deslocamentos aleatórios
-- **Vírus de Malphas** — infecciona heróis; bónus de score mas revelado no Conselho
+- **Vírus de Malphas** — infecta heróis; bónus de score mas revelado no Conselho
 - **Guerra do Conselho** — Ordem Élfica tenta purificar; Malphas corrompe
 - **Convicção Sombria** — mantra que reforça simbolicamente a chave
 
-------------------------------------------------------------------------
+---
 
 ## Internacionalização (`i18n/`)
 
-Módulo `i18n/traducoes.py` — 6 línguas × 25 chaves para os 9 países participantes do Euromilhões.
+Módulo `i18n/translations.py` — 6 línguas × 25 chaves para os 9 países participantes do Euromilhões.
 
 ### Configuração
 
@@ -228,7 +92,7 @@ lang = lang_de_cfg(cfg)          # lê e valida lang do ConfigParser; fallback '
 t('veredicto_acaso', lang)       # devolve string traduzida; fallback pt se chave ausente
 ```
 
-### Tabela de chaves de tradução
+### Tabela de chaves de tradução (25 chaves)
 
 | Chave | Utilizado em | Descrição |
 |-------|-------------|-----------|
@@ -238,8 +102,8 @@ t('veredicto_acaso', lang)       # devolve string traduzida; fallback pt se chav
 | `veredicto_abaixo` | `ritual.py` | Excesso < -5% |
 | `portal_aberto` | `ritual.py` | Status curto: "ABERTO" / "OPEN" / etc. |
 | `portal_fechado` | `ritual.py` | Status curto: "FECHADO" / "CLOSED" / etc. |
-| `portal_aberto_msg` | `conselho.py`, `main.py` | Mensagem longa: "Portal ABERTO" |
-| `portal_fechado_msg` | `conselho.py`, `main.py` | Mensagem longa com nota de abstenção |
+| `portal_aberto_msg` | `council.py`, `main.py` | Mensagem longa: "Portal ABERTO" |
+| `portal_fechado_msg` | `council.py`, `main.py` | Mensagem longa com nota de abstenção |
 | `aviso` | `ritual.py` | Disclaimer obrigatório (parágrafo longo) |
 | `simulacao_concluida` | `main.py` | Linha de fim de simulação |
 | `semente` | `main.py` | Label da semente do universo |
@@ -260,29 +124,29 @@ t('veredicto_acaso', lang)       # devolve string traduzida; fallback pt se chav
 
 ### O que NÃO se traduz
 
-Nomes próprios do universo narrativo ficam sempre em português:
+Nomes próprios do universo narrativo ficam sempre em português/original:
 Kors de Elarion · Axiomantes de Nemerion · Ariadne · Malphas · Ordem Élfica · Esquadrão Negro · Cartógrafos do Caos · etc.
 
-O campo `lang` é gravado em cada experiência JSON dos Axiomantes (`ritual.py → resultado['lang']`).
+O campo `lang` é gravado em cada experiência JSON dos Axiomantes (`ritual.py → result['lang']`).
 
-------------------------------------------------------------------------
+---
 
-## Referência: métodos Ariadne (`biblioteca/ariadne/motor.py`)
+## Referência: métodos Ariadne (`library/ariadne/engine.py`)
 
 | Método | Introduzido | O que faz |
 |--------|-------------|----------|
-| `estado_pergaminho(n)` | V7 | Estado e integridade do pergaminho N de 2026 |
-| `procurar_lua(fase)` | V7 | Frequências nos sorteios com dada fase lunar |
-| `duplas(limite)` | V7 | Duplas mais frequentes de `indices/duplas.json` |
-| `triplas(limite)` | V7 | Triplas mais frequentes de `indices/triplas.json` |
+| `scroll_state(n)` | V7 | Estado e integridade do pergaminho N de 2026 |
+| `search_moon(fase)` | V7 | Frequências nos sorteios com dada fase lunar |
+| `pairs(limite)` | V7 | Duplas mais frequentes de `indices/duplas.json` |
+| `triples(limite)` | V7 | Triplas mais frequentes de `indices/triplas.json` |
 | `numero(n)` | V7 | Frequência histórica de um número (normalizado) |
-| `numeros_atrasados(limite)` | V7.2 | Números com maior atraso nos pergaminhos 2026 |
-| `numeros_menos_frequentes(limite)` | V7.2 | Menos frequentes no histórico completo normalizado |
-| `padrao_transicao()` | V7.2 | Análise penúltima→última chave (chegados, saídos, persistentes) |
-| `ecos_semanais(semana_iso)` | V7.2 | Sorteios da mesma semana ISO em todos os anos |
-| `criar_papiro(semana_iso, dados)` | V7.2 | Grava papiro em `biblioteca/black_kors/papyri/` |
-| `historico_completo(desde, ate, ultimos)` | V8 | Todos os sorteios de todos os anos (1962 draws, 2004-2026) |
-| `ultima_chave_conhecida()` | V8.1 | Último sorteio registado (data, numeros, estrelas) |
+| `overdue_numbers(limite)` | V7.2 | Números com maior atraso nos pergaminhos 2026 |
+| `least_frequent_numbers(limite)` | V7.2 | Menos frequentes no histórico completo normalizado |
+| `transition_pattern()` | V7.2 | Análise penúltima→última chave (chegados, saídos, persistentes) |
+| `weekly_echoes(semana_iso)` | V7.2 | Sorteios da mesma semana ISO em todos os anos |
+| `create_papyrus(semana_iso, dados)` | V7.2 | Grava papiro em `library/black_kors/papyri/` |
+| `full_history(desde, ate, ultimos)` | V8 | Todos os sorteios de todos os anos (1962 draws, 2004–2026) |
+| `last_known_key()` | V8.1 | Último sorteio registado (data, numeros, estrelas) |
 
 **Nota sobre formatos de pergaminho:**
 - 2026: `"data": {"extracao": "YYYY-MM-DD", ...}` (dict com astronomia completa)
@@ -290,122 +154,102 @@ O campo `lang` é gravado em cada experiência JSON dos Axiomantes (`ritual.py �
 
 Ariadne trata ambos os formatos de forma transparente.
 
-------------------------------------------------------------------------
+---
 
-# V7.2
+# V7 — Biblioteca Eterna
 
-## Kors de Elarion
+Estrutura da `library/`:
 
-Facção implementada em `faccoes/kors/`. Toda a informação flui exclusivamente
-através de Ariadne — os Kors nunca lêem datasets diretamente.
+```
+library/
+├── ariadne/       ← engine.py (Ariadne)
+├── sources/       ← datasets anuais imutáveis 2004–2026
+├── scrolls/       ← pergaminhos JSON (1962 sorteios)
+├── books/         ← livros reconstruíveis
+│   └── cartographers/ ← 5 livros analíticos (Cartógrafos)
+├── indices/       ← duplas, triplas, frequências, fases lunares
+├── catalogue/     ← catálogo e inventário V7
+├── cache/         ← consultas Ariadne em cache
+└── black_kors/
+    └── papyri/    ← papiros semanais de Nyxara
+```
 
-### Kor Branco — Aelyra dos Silêncios
+---
 
-Estratégia: `ariadne.numeros_atrasados(15)` → 15 números mais atrasados,
-seleção ponderada pelo atraso.
+# V7.2 — Kors de Elarion
 
-### Kor Vermelho — Kael da Chama Fria
+Facção em `factions/kors/`. Toda a informação flui exclusivamente através de Ariadne.
 
-Estratégia: `ariadne.numeros_menos_frequentes(20)` → números menos frequentes
-no histórico completo, seleção inversa à frequência.
-
-### Kor Verde — Sylvara das Passagens
-
-Estratégia: `ariadne.padrao_transicao()` → padrão entre penúltima e última
-chave (números chegados, persistentes, vizinhos).
-
-### Kor Preto — Nyxara das Sombras Semanais
-
-Estratégia: `ariadne.ecos_semanais(semana_iso)` → sorteios da mesma semana
-ISO em todos os anos disponíveis. Cria papiros em:
-
-    biblioteca/black_kors/papyri/week_XX/
-
-### Novos métodos Ariadne (biblioteca/ariadne/motor.py)
-
--   `numeros_atrasados(limite)` — atraso por número nos pergaminhos 2026
--   `numeros_menos_frequentes(limite)` — frequência histórica de saidas_de_bolas_normalizado.json
--   `padrao_transicao()` — análise penúltima → última chave
--   `ecos_semanais(semana_iso)` — sorteios da mesma semana ISO em todos os anos
--   `criar_papiro(semana_iso, dados)` — grava papiro em biblioteca/black_kors/papyri/
+| Kor | Ficheiro | Estratégia |
+|-----|---------|-----------|
+| Branco — Aelyra dos Silêncios | `factions/kors/white.py` | `ariadne.overdue_numbers(15)` → 15 mais atrasados |
+| Vermelho — Kael da Chama Fria | `factions/kors/red.py` | `ariadne.least_frequent_numbers(20)` → menos frequentes |
+| Verde — Sylvara das Passagens | `factions/kors/green.py` | `ariadne.transition_pattern()` → padrão penúltima→última |
+| Preto — Nyxara das Sombras | `factions/kors/black.py` | `ariadne.weekly_echoes(semana_iso)` + cria papiros |
 
 ### Integração
 
--   `faccoes/kors/conselho.py` → `conselho_kors(ariadne)` chamado em `main.py`
--   Origem no arquivo: `kors_elarion`
--   Peso configurável em `[KORS] peso_conselho` em config.txt
+- `factions/kors/council.py` → `kors_council(ariadne)` chamado em `main.py`
+- Origem no arquivo: `kors_elarion`
+- Peso configurável em `[KORS] peso_conselho` em `config.txt`
 
-------------------------------------------------------------------------
+---
 
-# V8
+# V8 — Cartógrafos do Caos
 
-## Cartógrafos do Caos
-
-Cinco analistas implementados em `faccoes/cartografos_caos/`. Não geram chaves —
-produzem livros analíticos em `biblioteca/books/cartographers/` para consulta por
-outras facções (Treefolks, Kors, Vampiros).
-
-Todo o acesso a dados é via `ariadne.historico_completo()` — nunca directo aos fontes.
+Cinco analistas em `factions/chaos_cartographers/`. Não geram chaves — produzem livros analíticos em `library/books/cartographers/`.
 
 | Cartógrafo | Ficheiro | Livro gerado |
 |-----------|---------|-------------|
-| Eldran das Constelações | `constelacoes.py` | Livro das Constelações Numéricas |
-| Vesara dos Intervalos | `ciclos.py` | Livro dos Ciclos Eternos |
-| Lirien das Correntes | `tendencias.py` | Livro das Tendências e Correntes |
-| Thalvos do Acaso Esperado | `aleatoriedade.py` | Livro do Acaso Esperado |
+| Eldran das Constelações | `constellations.py` | Livro das Constelações Numéricas |
+| Vesara dos Intervalos | `cycles.py` | Livro dos Ciclos Eternos |
+| Lirien das Correntes | `trends.py` | Livro das Tendências e Correntes |
+| Thalvos do Acaso Esperado | `randomness.py` | Livro do Acaso Esperado |
 | Oryn dos Ecos Sequenciais | `markov.py` | Livro dos Ecos Sequenciais |
 
 ### Novos métodos Ariadne (V8)
 
-- `historico_completo(desde, ate, ultimos)` — todos os sorteios de todos os anos (2004-2026); suporta ambos os formatos de pergaminho (string e dict)
+- `full_history(desde, ate, ultimos)` — todos os sorteios 2004–2026; suporta ambos os formatos de pergaminho
 
 ### Integração
 
-- `faccoes/cartografos_caos/conselho.py` → `executar_cartografos(ariadne, cfg)` chamado em `main.py`
-- Corre antes dos Kors (usa a mesma instância Ariadne)
+- `factions/chaos_cartographers/council.py` → `execute_cartographers(ariadne, cfg)` chamado em `main.py`
+- Corre antes dos Kors (mesma instância Ariadne)
 - Monte Carlo configurável em `[CARTOGRAFOS_CAOS] monte_carlo_simulacoes`
 
-------------------------------------------------------------------------
+---
 
-# V8.1
+# V8.1 — Axiomantes de Nemerion
 
-## Axiomantes de Nemerion
-
-Facção implementada em `faccoes/axiomantes/`. Percorrem o Labirinto de 139.838.160
-câmaras usando uma permutação Feistel reproduzível — sem repetições, sem guardar 139M linhas
-em memória. A posição de qualquer chave é calculada em O(1) via Feistel inverso.
+Facção em `factions/axiomantes/`. Percorrem o Labirinto de 139.838.160 câmaras usando uma permutação Feistel reproduzível.
 
 ### Matemática
 
 - **Universo**: C(50,5) × C(12,2) = 2.118.760 × 66 = **139.838.160 combinações**
-- **Rank/unrank**: combinatório → índice e vice-versa (algoritmo combinádico)
-  - `rank_chave([2,14,28,33,48], [8,10])` → inteiro único em [0, 139.838.159]
-  - `unrank_chave(103.811.641)` → ([2,14,28,33,48], [8,10])
-- **Feistel (_H = 11826, 4 rondas)**: bijecção sobre [0, _H²-1]; cycle-walk para valores ≥ UNIVERSO
-  - `posicao_de_chave(nums, ests, seed)` — posição via Feistel⁻¹; O(1)
-  - `chave_na_posicao(pos, seed)` — chave via Feistel; O(1)
+- **Rank/unrank** (algoritmo combinádico):
+  - `rank_key([2,14,28,33,48], [8,10])` → inteiro único em [0, 139.838.159]
+  - `unrank_key(103.811.641)` → ([2,14,28,33,48], [8,10])
+- **Feistel (_H = 11826, 4 rondas)**: bijecção sobre [0, _H²-1]; cycle-walk para valores ≥ UNIVERSE
+  - `key_position(nums, ests, seed)` — posição via Feistel⁻¹; O(1)
+  - `key_at_position(pos, seed)` — chave via Feistel; O(1)
 
-### Ritual dos Trinta Ecos
+### Ritual dos Trinta Ecos (`factions/axiomantes/ritual.py → execute_ritual`)
 
-Fluxo completo (`ritual.py → executar_ritual`):
-
-1. `ariadne.historico_completo()` → marco = último sorteio registado
-2. `posicao_de_chave(marco, seed)` → posição do marco na sequência Feistel
-3. Para cada sorteio do período (`periodo_anos` em config): calcula posição → separa **ecos** (antes do marco) dos restantes
-4. Métricas: `cobertura%`, `fracao_universo%`, `excesso%`, `espaco_medio_obs`, `espaco_teorico`
-5. **Portal aberto** se `cobertura >= limiar_cobertura AND excesso >= excesso_minimo`
+1. `ariadne.full_history()` → anchor = último sorteio registado (`ariadne.last_known_key()`)
+2. `key_position(anchor, seed)` → posição do anchor na sequência Feistel
+3. Para cada sorteio do período (`periodo_anos` em config): calcula posição → separa **echoes** (antes do anchor) dos restantes
+4. Métricas: `coverage%`, `universe_fraction%`, `excess%`, `espaco_medio_obs`, `espaco_teorico`
+5. **Portal aberto** se `coverage >= coverage_threshold AND excess >= min_excess`
 6. Se portal aberto:
-   - `calcular_perfil(ecos)` → perfil estatístico dos ecos
-   - `escolher_por_perfil(...)` → avalia `n_candidatos` chaves inéditas por score
+   - `calculate_profile(echoes)` → perfil estatístico dos ecos
+   - `choose_by_profile(...)` → avalia `n_candidates` chaves inéditas por score
    - Devolve a chave com maior pontuação
 
-### Perfil dos Ecos (`perfil.py → calcular_perfil`)
-
-Calculado a partir das chaves históricas encontradas antes do marco:
+### Perfil dos Ecos (`factions/axiomantes/profile.py → calculate_profile`)
 
 | Campo | Como se calcula |
 |-------|----------------|
-| `soma_media`, `desvio_soma` | média e desvio-padrão das somas dos 5 números |
+| `soma_media`, `sum_deviation` | média e desvio-padrão das somas dos 5 números |
 | `faixa_soma_preferida` | `[media - desvio, media + desvio]` |
 | `paridades_preferidas` | top-2 combinações (nPares, nÍmpares) por frequência |
 | `baixos_altos_preferidos` | top-2 combinações (n≤25, n>25) por frequência |
@@ -414,10 +258,8 @@ Calculado a partir das chaves históricas encontradas antes do marco:
 | `estrelas_mais_frequentes` | top-6 estrelas por ocorrências nos ecos |
 | `gap_medio` | média dos gaps consecutivos por chave, depois média global |
 | `amplitude_media` | média de (max - min) por chave |
-| `distribuicao_numerica` | dict {numero: contagem} para todos os presentes |
-| `distribuicao_estrelas` | dict {estrela: contagem} |
 
-### Pontuação de chaves (`perfil.py → score_chave`) — 0 a 100 pts
+### Pontuação de chaves (`profile.py → score_key`) — 0 a 100 pts
 
 | Dimensão | Pts máx | Lógica |
 |---------|---------|--------|
@@ -430,15 +272,7 @@ Calculado a partir das chaves históricas encontradas antes do marco:
 | Amplitude próxima do perfil | 5 | decai 0.15 pt por unidade de diferença |
 | Bónus: 1-2 números raramente vistos | +5 | fomenta diversidade; cap final 100 |
 
-Regra anti-previsibilidade: penaliza chaves com 4 ou 5 números do top-5 (demasiado óbvias).
-
-### Aviso obrigatório (presente em todos os relatórios)
-
-> "A posição de uma chave numa permutação pseudoaleatória não altera a sua probabilidade
-> real. Uma taxa de cobertura ≥ 50% é esperada quando se percorre ≥ 50% do universo.
-> O perfil dos Ecos reflecte regularidades do passado que não têm poder preditivo matemático."
-
-### Parâmetros de config (`[AXIOMANTES]` em config.txt)
+### Parâmetros de config (`[AXIOMANTES]` em `config.txt`)
 
 | Parâmetro | Default | Descrição |
 |-----------|---------|-----------|
@@ -453,61 +287,55 @@ Regra anti-previsibilidade: penaliza chaves com 4 ou 5 números do top-5 (demasi
 
 | Ficheiro | Conteúdo |
 |---------|---------|
-| `faccoes/axiomantes/labirinto.py` | rank/unrank + Feistel permutation |
-| `faccoes/axiomantes/perfil.py` | Perfil dos Ecos + pontuação de chaves |
-| `faccoes/axiomantes/ritual.py` | análise completa + Trinta Ecos + salva experiência |
-| `faccoes/axiomantes/conselho.py` | ponto de entrada para main.py |
-| `faccoes/axiomantes/config.json` | metadados e linhagens |
+| `factions/axiomantes/labyrinth.py` | rank/unrank + Feistel permutation |
+| `factions/axiomantes/profile.py` | Perfil dos Ecos + pontuação de chaves |
+| `factions/axiomantes/ritual.py` | análise completa + Trinta Ecos + grava experiência |
+| `factions/axiomantes/council.py` | ponto de entrada para `main.py` |
+| `factions/axiomantes/config.json` | metadados e linhagens |
 | `axiomantes/experiences/` | relatórios JSON por execução |
 
 ### Integração
 
-- `faccoes/axiomantes/conselho.py` → `axiomantes(ariadne, seed, cfg)` chamado em `main.py`
+- `factions/axiomantes/council.py` → `axiomantes(ariadne, seed, cfg)` chamado em `main.py`
 - Recebe o mesmo `seed` da simulação → ritual reproduzível
 - Só vota quando portal aberto (caso contrário devolve `[]`)
-- Peso configurável em `[AXIOMANTES] peso_conselho` em config.txt
+- Peso configurável em `[AXIOMANTES] peso_conselho` em `config.txt`
 
-------------------------------------------------------------------------
+---
 
 # Arquitetura futura (V9)
 
-O directório `faccoes/` já existe com `kors/` e `cartografos_caos/`.
-O próximo passo é migrar as facções antigas para o mesmo padrão:
-
-    faccoes/
-        kors/                  ✅ V7.2
-        cartografos_caos/      ✅ V8
-        axiomantes/            ✅ V8.1
-        vampiros/              🔲 migrar de vampiros/
-        gargulas/              🔲 migrar de gargulas/
-        treefolks/             🔲 migrar de treefolks/
-        clerigos/              🔲 migrar de racas/ + evolucao/
-        esquadrao_negro/       🔲 migrar de esquadrao_negro/
+```
+factions/
+    kors/                    ✅ V7.2
+    chaos_cartographers/     ✅ V8
+    axiomantes/              ✅ V8.1
+    vampires/                🔲 migrar de vampires/
+    gargoyles/               🔲 migrar de gargoyles/
+    treefolks/               🔲 migrar de treefolks/
+    clerics/                 🔲 migrar de races/ + evolution/
+    black_squad/             🔲 migrar de black_squad/
+```
 
 Cada facção seguirá o padrão:
-
--   `config.json` — metadados, peso, descrição
--   `conselho.py` — ponto de entrada único
--   ficheiros de estratégia individuais
-
-Ariadne carregará automaticamente `faccoes/*/config.json` para descobrir facções.
+- `config.json` — metadados, peso, descrição
+- `council.py` — ponto de entrada único
+- ficheiros de estratégia individuais
 
 ## Candidatos para V9
 
--   Entropia — medir o "caos" dos sorteios por ano
--   Heatmaps — matriz visual de pares/triplas (output CSV/JSON para visualização)
--   Treefolks consultando os livros dos Cartógrafos directamente
--   Ranking em ascensão por janela temporal
+- Entropia — medir o "caos" dos sorteios por ano
+- Heatmaps — matriz visual de pares/triplas (CSV/JSON para visualização)
+- Treefolks consultando os livros dos Cartógrafos directamente
+- Ranking em ascensão por janela temporal
 
-------------------------------------------------------------------------
+---
 
 # Princípios
 
--   As fontes originais são imutáveis.
--   Pergaminhos são vistas.
--   Livros são reconstruíveis.
--   Consultas funcionam como cache.
--   Todo o conhecimento passa por Ariadne.
--   O projeto é um simulador estatístico e narrativo; os padrões
-    históricos não aumentam a probabilidade matemática de prever um
-    sorteio futuro.
+- As fontes originais são imutáveis (`library/sources/`).
+- Pergaminhos são vistas (`library/scrolls/`).
+- Livros são reconstruíveis (`library/books/`).
+- Consultas funcionam como cache (`library/cache/`).
+- Todo o conhecimento passa por Ariadne (`library/ariadne/engine.py`).
+- O projeto é um simulador estatístico e narrativo; os padrões históricos não aumentam a probabilidade matemática de prever um sorteio futuro.

@@ -13,7 +13,7 @@ def ler(path, padrao):
 def main():
     grimoire = ler("black_squad/dark_library/grimorio_negro.json", {})
     ordem = ler("elven_order/estado_ordem.json", {})
-    lendas = ler("lendas/livro_personagens_lendarias.json", {"personagens": []})
+    lendas = ler("legends/livro_personagens_lendarias.json", {"personagens": []})
     reflexos = list(Path("black_squad/dark_library/corrupted_reflections").glob("*.json"))
     roubadas = list(Path("black_squad/dark_library/stolen_relics").glob("*.json"))
     missions = list(Path("elven_order/mission_archive").glob("*.json"))

@@ -5,7 +5,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 
-BASE = Path("escribas")
+BASE = Path("scribes")
 
 
 def agora():
@@ -35,12 +35,12 @@ def listar_json(pasta):
 
 
 def inventariar_era(era, resumo_execucao):
-    artefactos = listar_json("artefactos/reliquias")
+    artefactos = listar_json("artefacts/reliquias")
     reflexos = listar_json("black_squad/dark_library/corrupted_reflections")
     roubadas = listar_json("black_squad/dark_library/stolen_relics")
     missions = listar_json("elven_order/mission_archive")
-    books = listar_json("amuletos/books")
-    lendas = ler("lendas/livro_personagens_lendarias.json", {"personagens": []}).get("personagens", [])
+    books = listar_json("amulets/livros")
+    lendas = ler("legends/livro_personagens_lendarias.json", {"personagens": []}).get("personagens", [])
     individuals = ler("data/todos_individuos.json", [])
 
     inventory = {

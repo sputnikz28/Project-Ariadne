@@ -147,32 +147,32 @@ Guardians of the Labyrinth of 139,838,160 chambers. They traverse the full Eurom
 All factions query data exclusively through Ariadne. No faction reads raw datasets directly. This enforces clean data access and makes all queries cacheable and reproducible.
 
 ```python
-from library.ariadne.motor import Ariadne
+from library.ariadne.engine import Ariadne
 
 a = Ariadne()
 
 # Scrolls (real draws)
-a.historico_completo()                    # full history
-a.historico_completo(desde="2024-01-01") # since date
-a.historico_completo(ultimos=100)         # last N draws
-a.ultima_chave_conhecida()               # most recent draw
+a.full_history()                    # full history
+a.full_history(desde="2024-01-01") # since date
+a.full_history(ultimos=100)         # last N draws
+a.last_known_key()                  # most recent draw
 
 # Indices
-a.duplas(limite=10)         # most frequent pairs
-a.triplas(limite=10)        # most frequent triples
+a.pairs(limite=10)          # most frequent pairs
+a.triples(limite=10)        # most frequent triples
 
 # Number analysis
-a.numeros_atrasados(15)             # 15 most overdue numbers
-a.numeros_menos_frequentes(20)      # 20 least frequent
-a.padrao_transicao()                # penultimate→last transition pattern
-a.ecos_semanais(semana_iso=28)      # weekly echoes (ISO week)
+a.overdue_numbers(15)               # 15 most overdue numbers
+a.least_frequent_numbers(20)        # 20 least frequent
+a.transition_pattern()              # penultimate→last transition pattern
+a.weekly_echoes(semana_iso=28)      # weekly echoes (ISO week)
 
 # 2026 scrolls (with astronomy metadata)
-a.estado_pergaminho(55)
-a.procurar_lua("Lua cheia")
+a.scroll_state(55)
+a.search_moon("Lua cheia")
 
 # Kors papyrus
-a.criar_papiro(semana_iso=28, dados={...})
+a.create_papyrus(semana_iso=28, dados={...})
 ```
 
 ---
@@ -180,18 +180,18 @@ a.criar_papiro(semana_iso=28, dados={...})
 ## The Eternal Library (persistent knowledge)
 
 ```
-biblioteca/
-├── ariadne/            ← Ariadne engine (motor.py)
-├── fontes/             ← immutable annual datasets 2004–2026
+library/
+├── ariadne/            ← Ariadne engine (engine.py)
+├── sources/            ← immutable annual datasets 2004–2026
 ├── scrolls/
 │   ├── 2004/ … 2025/   ← compact format (1,907 scrolls)
 │   └── 2026/           ← full format with astronomy (55 scrolls)
 ├── books/
-│   └── cartografos/    ← 5 analytical books (Cartographers)
+│   └── cartographers/  ← 5 analytical books (Cartographers)
 ├── indices/            ← pairs, triples, frequencies, moon phases
-├── cache/          ← Ariadne query cache
+├── cache/              ← Ariadne query cache
 └── black_kors/
-    └── papiros/        ← Nyxara's weekly papyri
+    └── papyri/         ← Nyxara's weekly papyri
 ```
 
 ---
@@ -199,41 +199,41 @@ biblioteca/
 ## File structure
 
 ```
-The-Eternal-Library/
+Project-Ariadne/
 │
 ├── main.py                     ← simulation entry point
 ├── config.txt                  ← all parameters
 ├── requirements.txt            ← stdlib only (no external ML libs)
 │
-├── biblioteca/                 ← Ariadne + all persistent data
-├── faccoes/                    ← V7+ factions (package format)
+├── library/                    ← Ariadne + all persistent data
+├── factions/                   ← V7+ factions (package format)
 │   ├── kors/                   ← Kors de Elarion (V7.2)
-│   ├── cartografos_caos/       ← Cartographers of Chaos (V8)
+│   ├── chaos_cartographers/    ← Cartographers of Chaos (V8)
 │   └── axiomantes/             ← Axiomantes de Nemerion (V8.1)
-│       ├── labirinto.py        ← combinadic rank/unrank + Feistel
-│       ├── perfil.py           ← Echo Profile + scoring
+│       ├── labyrinth.py        ← combinadic rank/unrank + Feistel
+│       ├── profile.py          ← Echo Profile + scoring
 │       ├── ritual.py           ← Ritual of Thirty Echoes
-│       └── conselho.py         ← Council integration
+│       └── council.py          ← Council integration
 │
 ├── axiomantes/
-│   └── experiences/           ← per-run ritual reports (JSON)
+│   └── experiences/            ← per-run ritual reports (JSON)
 │
 ├── i18n/
-│   └── traducoes.py            ← 6 languages × 25 translation keys
+│   └── translations.py         ← 6 languages × 25 translation keys
 │
-├── racas/                      ← legacy factions (V1–V6)
-├── evolucao/                   ← genetic algorithm engine
-├── conselho/                   ← Council filter + vote
-├── mundo/                      ← world state, simulation context
-├── mundos/                     ← world profiles (config variants)
-├── esquadrao_negro/            ← Black Squad + grimoire
-├── ordem_elfica/               ← Elven Order + missions
-├── amuletos/                   ← amulets + library sync
-├── artefactos/                 ← artefacts + relics
-├── lendas/                     ← legendary characters
-├── escribas/                   ← scribes + chronicles
-├── relatorios/                 ← report writer
-├── campanhas/                  ← multi-era campaign runs
+├── races/                      ← legacy factions (V1–V6)
+├── evolution/                  ← genetic algorithm engine
+├── council/                    ← Council filter + vote
+├── world/                      ← world state, simulation context
+├── worlds/                     ← world profiles (config variants)
+├── black_squad/                ← Black Squad + grimoire
+├── elven_order/                ← Elven Order + missions
+├── amulets/                    ← amulets + library sync
+├── artefacts/                  ← artefacts + relics
+├── legends/                    ← legendary characters
+├── scribes/                    ← scribes + chronicles
+├── reports/                    ← report writer
+├── campaigns/                  ← multi-era campaign runs
 └── docs/                       ← (planned)
 ```
 
@@ -251,16 +251,16 @@ cd eternal-library
 python main.py
 
 # Consult Ariadne directly
-python consultar_ariadne.py duplas --limite 10
-python consultar_ariadne.py numero 17
-python consultar_ariadne.py lua "Lua cheia"
-python consultar_ariadne.py pergaminho 55
+python query_ariadne.py pairs --limite 10
+python query_ariadne.py numero 17
+python query_ariadne.py lua "Lua cheia"
+python query_ariadne.py pergaminho 55
 
 # Multi-era campaign
-python campanha_v6.py
+python campaign_v6.py
 
 # Validate config
-python validar_config.py
+python validate_config.py
 ```
 
 ---
@@ -326,10 +326,10 @@ A faction is a Python module that:
 
 1. Accepts `ariadne` (Ariadne instance), `seed` (int), and optionally `cfg` (ConfigParser)
 2. Queries data exclusively through `ariadne`
-3. Returns a list of dicts: `[{'nome': str, 'chave': ([nums], [stars]), 'peso': float, ...}]`
+3. Returns a list of dicts: `[{'name': str, 'key': ([nums], [stars]), 'weight': float, ...}]`
 4. Gets registered in `main.py` with a voting weight
 
-Look at `faccoes/kors/conselho.py` for the simplest example, or `faccoes/axiomantes/conselho.py` for a full implementation with config, logging and Council integration.
+Look at `factions/kors/council.py` for the simplest example, or `factions/axiomantes/council.py` for a full implementation with config, logging and Council integration.
 
 ---
 

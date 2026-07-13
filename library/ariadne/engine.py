@@ -5,7 +5,7 @@ from collections import Counter
 from datetime import datetime, date
 
 
-BASE = Path("biblioteca")
+BASE = Path("library")
 
 
 def ler_json(path, padrao=None):
@@ -16,14 +16,14 @@ def ler_json(path, padrao=None):
 
 
 def save_query(name, consulta):
-    path = BASE / "consultas" / f"{name}.json"
+    path = BASE / "cache" / f"{name}.json"
     path.write_text(json.dumps(consulta, indent=2, ensure_ascii=False), encoding="utf-8")
     return path
 
 
 class Ariadne:
     def __init__(self):
-        self.catalogo = ler_json(BASE / "catalogo/catalogo.json", {})
+        self.catalogo = ler_json(BASE / "catalogue/catalogo.json", {})
         self.scrolls = sorted((BASE / "scrolls/2026").glob("*.json"))
 
     def scroll_state(self, numero):
@@ -75,7 +75,7 @@ class Ariadne:
         return dados.get("triplas_mais_comuns", [])[:limite]
 
     def numero(self, numero):
-        livro = ler_json(BASE / "fontes/saidas_de_bolas_normalizado.json", {"numeros": []})
+        livro = ler_json(BASE / "sources/saidas_de_bolas_normalizado.json", {"numeros": []})
         for item in livro["numeros"]:
             if item["numero"] == int(numero):
                 return item
@@ -111,7 +111,7 @@ class Ariadne:
 
     def least_frequent_numbers(self, limite=20):
         """Historically least frequent numbers from saidas_de_bolas_normalizado.json."""
-        livro = ler_json(BASE / "fontes/saidas_de_bolas_normalizado.json", {"numeros": []})
+        livro = ler_json(BASE / "sources/saidas_de_bolas_normalizado.json", {"numeros": []})
         todos = sorted(livro["numeros"], key=lambda x: x.get("aparicoes_totais", 0))
         result = [
             {"numero": x["numero"], "aparicoes_totais": x.get("aparicoes_totais", 0)}

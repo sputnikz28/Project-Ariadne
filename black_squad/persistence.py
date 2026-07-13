@@ -3,10 +3,10 @@ import json
 from pathlib import Path
 from datetime import datetime, timezone
 
-BASE = Path("esquadrao_negro")
+BASE = Path("black_squad")
 SOMBRA = BASE / "dark_library"
-REFLEXOS = SOMBRA / "reflexos_corrompidos"
-ROUBADAS = SOMBRA / "reliquias_roubadas"
+REFLEXOS = SOMBRA / "corrupted_reflections"
+ROUBADAS = SOMBRA / "stolen_relics"
 RITUAIS = BASE / "ritual_archive"
 GRIMORIO = SOMBRA / "grimorio_negro.json"
 

@@ -154,8 +154,8 @@ def tentar_ressuscitar_lenda(config, events):
     if random.random() > config.getfloat("ESQUADRAO_NEGRO", "chance_ressuscitar_lenda", fallback=0.15):
         return None
 
-    livro = ler_json("lendas/livro_personagens_lendarias.json", {"personagens": []})
-    echoes = ler_json("lendas/ecos_ancestrais.json", {"ecos": []})
+    livro = ler_json("legends/livro_personagens_lendarias.json", {"personagens": []})
+    echoes = ler_json("legends/ecos_ancestrais.json", {"ecos": []})
     candidates = livro.get("personagens", []) + echoes.get("ecos", [])
     if not candidates:
         return None

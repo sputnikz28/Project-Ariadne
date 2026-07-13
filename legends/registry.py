@@ -4,7 +4,7 @@ from pathlib import Path
 from datetime import datetime, timezone
 
 
-LIVRO = Path("lendas/livro_personagens_lendarias.json")
+LIVRO = Path("legends/livro_personagens_lendarias.json")
 
 
 def ler():

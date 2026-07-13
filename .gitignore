@@ -10,40 +10,40 @@ build/
 .eggs/
 
 # Runtime data (generated during simulation)
-dados/
-relatorios/gerados/
-axiomantes/experiencias/
-campanhas/
+data/
+reports/generated/
+axiomantes/experiences/
+campaigns/
 
 # Ariadne cache (rebuilt automatically)
-biblioteca/consultas/
+library/cache/
 
-# Kors papiros (generated during simulation)
-biblioteca/kors_negros/papiros/*/
+# Kors papyri (generated during simulation)
+library/black_kors/papyri/*/
 
 # Books generated at runtime (rebuilt by Cartographers)
-biblioteca/livros/cartografos/*.json
+library/books/cartographers/*.json
 
 # Amulets runtime data
-amuletos/livros/
-amuletos/extracoes_futuras/
+amulets/livros/
+amulets/future_draws/
 
-# Ordem Élfica runtime
-ordem_elfica/arquivo_missoes/
-ordem_elfica/estado_ordem.json
+# Elven Order runtime
+elven_order/mission_archive/
+elven_order/estado_ordem.json
 
-# Esquadrão Negro runtime
-esquadrao_negro/grimorio_negro.json
-esquadrao_negro/biblioteca_sombria/grimorio_negro.json
-esquadrao_negro/arquivo_rituais/
-esquadrao_negro/biblioteca_sombria/reflexos_corrompidos/
+# Black Squad runtime
+black_squad/dark_library/grimorio_negro.json
+black_squad/grimorio_negro.json
+black_squad/ritual_archive/
+black_squad/dark_library/corrupted_reflections/
 
-# Artefactos (generated at runtime)
-artefactos/reliquias/*.json
+# Artefacts (generated at runtime)
+artefacts/reliquias/*.json
 
-# Lendas geradas em runtime
-lendas/ecos_ancestrais.json
-lendas/livro_personagens_lendarias.json
+# Legends generated at runtime
+legends/ecos_ancestrais.json
+legends/livro_personagens_lendarias.json
 
 # Environments
 .env

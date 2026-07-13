@@ -4,7 +4,7 @@ import random
 from pathlib import Path
 from datetime import datetime, timezone
 
-BASE = Path("artefactos/reliquias")
+BASE = Path("artefacts/reliquias")
 ORDEM = {"COMUM": 0, "RARO": 1, "EPICO": 2, "LENDARIO": 3, "MITICO": 4}
 
 COMPATIBILIDADE = {
