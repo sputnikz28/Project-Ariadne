@@ -1,6 +1,6 @@
 
 from datetime import datetime
-from races.antigas import normalize
+from races.legacy import normalize
 
 
 def _lista_int(texto):

@@ -1,7 +1,7 @@
-from .branco import kors_branco
-from .vermelho import kors_vermelho
-from .verde import kors_verde
-from .preto import kors_preto
+from .white import kors_branco
+from .red import kors_vermelho
+from .green import kors_verde
+from .black import kors_preto
 
 
 def kors_council(ariadne, semana_iso=None):

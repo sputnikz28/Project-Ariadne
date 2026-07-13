@@ -1,6 +1,6 @@
 
 import random
-from amulets.persistencia import ler_json, BOOKS
+from amulets.persistence import ler_json, BOOKS
 
 BOOKS_MAP = {
     "quentes": "livro_numeros_quentes.json",

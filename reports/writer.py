@@ -1,6 +1,6 @@
 from pathlib import Path
 from datetime import datetime
-from races.antigas import gaps
+from races.legacy import gaps
 
 
 def fmt(ch):

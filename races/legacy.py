@@ -97,12 +97,12 @@ def generate(h, ctx):
     raca = h.raca.replace("Renascido ", "")
 
     if raca == "Esqueleto":
-        from races.esqueletos import generate as gerar_esqueleto
+        from races.skeletons import generate as gerar_esqueleto
         key, _ritual = gerar_esqueleto(h, ctx, 25, 6)
         return aplicar_conhecimento(key, hidden_numbers, hidden_stars)
 
     if raca == "Cronomante":
-        from races.cronomantes import generate_temporal_key
+        from races.chronomancers import generate_temporal_key
         key = generate_temporal_key(
             h.name,
             ctx.get("extracao", {}),

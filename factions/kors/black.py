@@ -1,7 +1,7 @@
 import random
 from collections import Counter
 from datetime import date
-from races.antigas import normalize
+from races.legacy import normalize
 
 
 def kors_preto(ariadne, semana_iso=None):

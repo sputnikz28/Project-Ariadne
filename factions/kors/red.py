@@ -1,5 +1,5 @@
 import random
-from races.antigas import normalize
+from races.legacy import normalize
 
 
 def kors_vermelho(ariadne):

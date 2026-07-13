@@ -2,7 +2,7 @@
 import random
 import uuid
 
-from artefacts.arca import maybe_materialize
+from artefacts.ark import maybe_materialize
 
 RARIDADES = [
     ("COMUM", 0.55, 1.05),

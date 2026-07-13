@@ -1,6 +1,6 @@
 
 import random
-from races.antigas import normalize
+from races.legacy import normalize
 
 
 def generate(heroi, contexto, numbers_width=25, stars_width=6):

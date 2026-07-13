@@ -1,10 +1,10 @@
 
 import json
 from pathlib import Path
-from vampires.linhagens import create_vampires
-from gargoyles.linhagens import create_gargoyles
+from vampires.lineages import create_vampires
+from gargoyles.lineages import create_gargoyles
 from treefolks.investigator import investigar_lua_cheia
-from library.ariadne.motor import Ariadne
+from library.ariadne.engine import Ariadne
 
 
 def fmt(key):

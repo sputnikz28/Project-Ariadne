@@ -4,8 +4,8 @@ from itertools import combinations
 from pathlib import Path
 from datetime import datetime
 
-from amulets.persistencia import save_book, save_json, FUTURAS
-from amulets.fontes.web_estatisticas import unload
+from amulets.persistence import save_book, save_json, FUTURAS
+from amulets.sources.web_statistics import unload
 
 
 def _normalizar_historico(history):
@@ -193,7 +193,7 @@ def build_books(config, history, world):
 def update_next_draw_book(world, result, corruption):
     identificador = f"{world['data']}_{world['local'].lower().replace(' ', '_')}_{world['hora'].replace(':', '')}.json"
     path = FUTURAS / identificador
-    from amulets.persistencia import ler_json
+    from amulets.persistence import ler_json
     registo = ler_json(path, {})
     if not registo:
         return

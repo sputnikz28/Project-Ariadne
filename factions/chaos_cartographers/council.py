@@ -1,7 +1,7 @@
-from .constelacoes import CartografoDasConstelacoes
-from .ciclos import CronistaDoCiclos
-from .tendencias import CartografoDasTendencias
-from .aleatoriedade import MongeDoAcaso
+from .constellations import CartografoDasConstelacoes
+from .cycles import CronistaDoCiclos
+from .trends import CartografoDasTendencias
+from .randomness import MongeDoAcaso
 from .markov import OracleDeMarkov
 
 

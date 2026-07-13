@@ -6,28 +6,30 @@ from configuration import load_config
 from datetime import datetime
 from pathlib import Path
 
-from world.construtor import build
+from world.builder import build
 from world.extraction import simulate_draw
-from world.energia_celeste import calculate_ritual
-from world.virus_malphas import choose_carrier
-from world.guerra_conselho import resolve
-from evolution.estatisticas import calculate
-from evolution.genetico import execute
+from world.celestial_energy import calculate_ritual
+from world.malphas_virus import choose_carrier
+from world.council_war import resolve
+from evolution.statistics import calculate
+from evolution.genetic import execute
 from races.extras import dwarves, faeries, melforks, werewolves, treefolks, superiors
-from races.cronomantes import create_chronomancers
-from races.esqueletos import create_representatives as criar_esqueletos
-from council.conselho import filter_candidates, vote, corrupt
-from reports.escritor import generate
-from amulets.biblioteca import synchronize_sources, build_books, update_next_draw_book
-from artefacts.arca import prepare_new_run, load_all
-from black_squad.magos_negros import create_mages, tentar_ressuscitar_lenda
+from races.chronomancers import create_chronomancers
+from races.skeletons import create_representatives as criar_esqueletos
+from council.council import filter_candidates, vote, corrupt
+from reports.writer import generate
+from amulets.books import synchronize_sources, build_books, update_next_draw_book
+from artefacts.ark import prepare_new_run, load_all
+from black_squad.black_mages import create_mages, tentar_ressuscitar_lenda
 from elven_order.ninjas import create_ninjas, execute_missions
-from black_squad.persistencia import load_grimoire
-from world.conviccao_sombria import create_mantra
-from library.ariadne.motor import Ariadne
-from factions.kors.conselho import kors_council
-from factions.cartografos_caos.conselho import execute_cartographers
-from factions.axiomantes.conselho import axiomantes as axiomantes_ritual
+from black_squad.persistence import load_grimoire
+from world.dark_conviction import create_mantra
+from library.ariadne.engine import Ariadne
+from factions.kors.council import kors_council
+from factions.chaos_cartographers.council import execute_cartographers
+from factions.axiomantes.council import axiomantes as axiomantes_ritual
+from factions.vampires.council import vampires as vampires_faction
+from factions.gargoyles.council import gargoyles as gargoyles_faction
 from i18n.translations import t, lang_de_cfg
 
 
@@ -95,6 +97,8 @@ def main():
     cartografos = execute_cartographers(ariadne, cfg)
     kors = kors_council(ariadne)
     ax = axiomantes_ritual(ariadne, seed, cfg)
+    vampiros = vampires_faction(ariadne, seed, cfg)
+    gargulas = gargoyles_faction(ariadne, seed, cfg)
 
     cand = []
     externos = []
@@ -191,6 +195,22 @@ def main():
             final_generation, 'Cidadela de Nemerion', extra_ax,
         ))
 
+    peso_vampiros = cfg.getfloat('VAMPIROS', 'peso_conselho', fallback=0.90)
+    for x in vampiros:
+        cand.append((x['nome'], x['chave'], peso_vampiros))
+        externos.append(registo_externo(
+            x['nome'], x['tipo'], x['chave'], 'vampiro',
+            final_generation, 'Cripta Eterna', {'linhagem': x['linhagem']}
+        ))
+
+    peso_gargulas = cfg.getfloat('GARGULAS', 'peso_conselho', fallback=0.85)
+    for x in gargulas:
+        cand.append((x['nome'], x['chave'], peso_gargulas))
+        externos.append(registo_externo(
+            x['nome'], x['tipo'], x['chave'], 'gargula',
+            final_generation, 'Torreão de Pedra', {'linhagem': x['linhagem']}
+        ))
+
     for x in magos_negros:
         peso_negro = cfg.getfloat('ESQUADRAO_NEGRO', 'peso_conselho', fallback=0.85)
         cand.append((x['nome'], x['chave'], peso_negro))
@@ -282,6 +302,8 @@ def main():
         'kors': kors,
         'cartografos': cartografos,
         'axiomantes': ax,
+        'vampiros': vampiros,
+        'gargulas': gargulas,
     }, rel)
 
     lang = lang_de_cfg(cfg)
@@ -303,6 +325,8 @@ def main():
     print(f"{t('esqueletos', lang)}:", len(esqueletos))
     print(f"{t('invocacoes', lang)}:", conviction.get('total_invocacoes', 0))
     print(f"{t('kors', lang)}:", len(kors))
+    print("Vampiros de Elarion:", len(vampiros))
+    print("Gárgulas do Torreão:", len(gargulas))
     livros_criados = [c['livro_path'] for c in cartografos if c.get('livro_path')]
     print(f"{t('cartografos', lang)}:", len(cartografos),
           f"| {t('livros_label', lang)}:", len(livros_criados))

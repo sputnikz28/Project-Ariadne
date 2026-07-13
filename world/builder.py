@@ -1,5 +1,5 @@
 from datetime import datetime
-from sources.fontes import get_history, obter_lua, obter_jackpot
+from sources.data import get_history, obter_lua, obter_jackpot
 
 
 def build(cfg):

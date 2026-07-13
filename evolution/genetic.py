@@ -1,9 +1,9 @@
 import random
-from races.antigas import create,generate
-from artefacts.vivos import forjar,evoluir,herdar
-from world.virus_malphas import infetar
-from amulets.mosteiro import conceder_audiencia
-from artefacts.arca import tentar_encontrar, marcar_perdido
+from races.legacy import create,generate
+from artefacts.living import forjar,evoluir,herdar
+from world.malphas_virus import infetar
+from amulets.monastery import conceder_audiencia
+from artefacts.ark import tentar_encontrar, marcar_perdido
 
 def avaliar(ch,alvo):
     an=len(set(ch[0])&set(alvo["numeros"]));ae=len(set(ch[1])&set(alvo["estrelas"]));p=an*10+ae*5+(8 if an>=3 else 0)+(5 if ae==2 else 0)

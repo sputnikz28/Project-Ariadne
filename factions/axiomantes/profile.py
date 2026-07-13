@@ -8,7 +8,7 @@ e pontua chaves inéditas por afinidade com esse perfil.
 from collections import Counter
 from math import sqrt
 
-from .labirinto import key_at_position, UNIVERSE
+from .labyrinth import key_at_position, UNIVERSE
 
 
 def calculate_profile(echoes):

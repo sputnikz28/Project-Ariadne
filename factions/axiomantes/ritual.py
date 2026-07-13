@@ -10,7 +10,7 @@ import json
 from datetime import date, datetime
 from pathlib import Path
 
-from .labirinto import UNIVERSE, key_position
+from .labyrinth import UNIVERSE, key_position
 from .profile import calculate_profile, choose_by_profile
 from i18n.translations import t, lang_de_cfg
 

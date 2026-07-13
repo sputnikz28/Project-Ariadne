@@ -1,7 +1,7 @@
 
 from configparser import ConfigParser
-from world.construtor import build
-from amulets.biblioteca import synchronize_sources, build_books
+from world.builder import build
+from amulets.books import synchronize_sources, build_books
 
 
 def main():

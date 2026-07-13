@@ -1,5 +1,5 @@
 import random
-from races.antigas import normalize
+from races.legacy import normalize
 
 
 def generate_temporal_key(name, extraction, world, indice=0):

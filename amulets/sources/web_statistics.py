@@ -7,7 +7,7 @@ from urllib.request import Request, urlopen
 from urllib.error import URLError, HTTPError
 from pathlib import Path
 
-from amulets.persistencia import CACHE, save_json
+from amulets.persistence import CACHE, save_json
 
 
 def unload(name, url, timeout=8):

@@ -4,7 +4,7 @@ Integração com main.py: devolve lista de dicts com nome/chave/peso.
 Só vota quando o Portal das Chaves Inéditas está aberto.
 """
 
-from races.antigas import normalize
+from races.legacy import normalize
 from .ritual import execute_ritual
 from i18n.translations import t
 

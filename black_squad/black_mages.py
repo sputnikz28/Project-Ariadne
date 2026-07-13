@@ -5,12 +5,12 @@ import shutil
 import uuid
 from pathlib import Path
 
-from black_squad.persistencia import (
+from black_squad.persistence import (
     REFLEXOS, ROUBADAS, RITUAIS, agora, load_grimoire, save, save_grimoire
 )
-from black_squad.estrategias import generate_promising_key, diversificar
-from amulets.persistencia import BOOKS, ler_json
-from artefacts.arca import load_all, save as save_relic
+from black_squad.strategies import generate_promising_key, diversificar
+from amulets.persistence import BOOKS, ler_json
+from artefacts.ark import load_all, save as save_relic
 
 
 NAMES = [

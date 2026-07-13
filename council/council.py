@@ -1,6 +1,6 @@
 import random
 from collections import Counter
-from races.antigas import normalize,gaps
+from races.legacy import normalize,gaps
 
 def filter_candidates(cands):
     z=[]; events=[]

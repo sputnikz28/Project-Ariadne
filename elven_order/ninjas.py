@@ -5,10 +5,10 @@ import uuid
 from pathlib import Path
 from datetime import datetime, timezone
 
-from black_squad.persistencia import (
+from black_squad.persistence import (
     REFLEXOS, ROUBADAS, load_grimoire, save_grimoire, ler, save
 )
-from artefacts.arca import save as save_relic
+from artefacts.ark import save as save_relic
 
 
 NAMES = [

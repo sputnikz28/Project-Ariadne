@@ -1,7 +1,7 @@
 import random,heapq
 from itertools import combinations
 from collections import Counter
-from races.antigas import normalize,gaps
+from races.legacy import normalize,gaps
 
 
 def dwarves(cfg,ctx):

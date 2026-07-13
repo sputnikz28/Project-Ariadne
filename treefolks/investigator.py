@@ -1,5 +1,5 @@
 
-from library.ariadne.motor import Ariadne
+from library.ariadne.engine import Ariadne
 
 
 def investigar_lua_cheia():
