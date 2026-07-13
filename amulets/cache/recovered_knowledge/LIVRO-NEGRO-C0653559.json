@@ -1,6 +1,6 @@
 {
   "nome": "Livro dos Trios Proibidos",
-  "tipo": "trios_mais_frequentes",
+  "tipo": "COPIA_SOMBRIA",
   "trios": [
     {
       "numeros": [
@@ -803,5 +803,14 @@
       "vezes": 4
     }
   ],
-  "atualizado_em": "2026-07-13T15:52:46+00:00"
+  "atualizado_em": "2026-07-13T15:51:28+00:00",
+  "fidelidade": 0.7162,
+  "corrupcao": 0.2838,
+  "criado_em": "2026-07-13T15:51:28+00:00",
+  "original": "livro_trios_proibidos.json",
+  "roubado_por": "Nyx do Desvio",
+  "id": "LIVRO-NEGRO-C0653559",
+  "estado": "RECUPERADO_PELA_ORDEM_ELFICA",
+  "recuperado_em": "2026-07-13T15:52:48+00:00",
+  "purificado": true
 }

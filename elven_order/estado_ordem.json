@@ -1,8 +1,8 @@
 {
-  "nivel": 3,
-  "missoes": 59,
-  "sucessos": 7,
-  "falhas": 52,
+  "nivel": 4,
+  "missoes": 64,
+  "sucessos": 9,
+  "falhas": 55,
   "itens_recuperados": [
     "LIVRO-NEGRO-314668B5.json",
     "LIVRO-NEGRO-146E1E79.json",
@@ -10,6 +10,8 @@
     "LIVRO-NEGRO-8DC42BA0.json",
     "LIVRO-NEGRO-4C67AE4F.json",
     "LIVRO-NEGRO-C43CA672.json",
-    "ART-693DB66483"
+    "ART-693DB66483",
+    "LIVRO-NEGRO-C0653559.json",
+    "LIVRO-NEGRO-DF68A330.json"
   ]
 }

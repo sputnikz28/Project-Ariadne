@@ -1,1139 +1,16 @@
 [
   {
-    "id": "H-00032",
-    "name": "Aion da Lua Fria",
-    "raca": "Bruxa",
-    "casa": "Casa dos Ossos",
-    "generation": 1,
-    "pais": [],
-    "genoma": {
-      "clareza": 0.3246190917598504,
-      "confusao": 0.7892148244533868,
-      "caos": 0.2927355592181651,
-      "memoria": 3,
-      "virus_malphas": "Espelho Negro",
-      "infeccao_oculta": true,
-      "geracao_infeccao": 4,
-      "conhecimento_oculto": [
-        {
-          "tipo": "frios",
-          "livro": "Livro dos Esquecidos",
-          "numeros": [
-            22,
-            33,
-            46,
-            18,
-            40
-          ]
-        },
-        {
-          "tipo": "quentes",
-          "livro": "Livro das Chamas Frequentes",
-          "numeros": [
-            44,
-            42,
-            23,
-            19,
-            29
-          ]
-        }
-      ]
-    },
-    "pontos": 183,
-    "titulo": "Errante das Sombras",
-    "keys": [
-      {
-        "geracao": 1,
-        "numeros": [
-          22,
-          25,
-          41,
-          42,
-          44
-        ],
-        "estrelas": [
-          8,
-          10
-        ]
-      },
-      {
-        "geracao": 2,
-        "numeros": [
-          10,
-          18,
-          23,
-          40,
-          47
-        ],
-        "estrelas": [
-          3,
-          4
-        ]
-      },
-      {
-        "geracao": 3,
-        "numeros": [
-          6,
-          18,
-          25,
-          33,
-          37
-        ],
-        "estrelas": [
-          8,
-          11
-        ]
-      },
-      {
-        "geracao": 4,
-        "numeros": [
-          35,
-          37,
-          40,
-          41,
-          45
-        ],
-        "estrelas": [
-          8,
-          10
-        ]
-      },
-      {
-        "geracao": 5,
-        "numeros": [
-          18,
-          19,
-          21,
-          22,
-          47
-        ],
-        "estrelas": [
-          3,
-          12
-        ]
-      },
-      {
-        "geracao": 6,
-        "numeros": [
-          33,
-          35,
-          37,
-          40,
-          42
-        ],
-        "estrelas": [
-          8,
-          10
-        ]
-      },
-      {
-        "geracao": 7,
-        "numeros": [
-          3,
-          19,
-          22,
-          29,
-          36
-        ],
-        "estrelas": [
-          2,
-          10
-        ]
-      },
-      {
-        "geracao": 8,
-        "numeros": [
-          9,
-          37,
-          39,
-          43,
-          50
-        ],
-        "estrelas": [
-          8,
-          10
-        ]
-      },
-      {
-        "geracao": 9,
-        "numeros": [
-          13,
-          19,
-          29,
-          47,
-          50
-        ],
-        "estrelas": [
-          9,
-          12
-        ]
-      },
-      {
-        "geracao": 10,
-        "numeros": [
-          11,
-          25,
-          32,
-          36,
-          50
-        ],
-        "estrelas": [
-          4,
-          6
-        ]
-      },
-      {
-        "geracao": 11,
-        "numeros": [
-          11,
-          23,
-          44,
-          47,
-          50
-        ],
-        "estrelas": [
-          3,
-          11
-        ]
-      },
-      {
-        "geracao": 12,
-        "numeros": [
-          9,
-          19,
-          32,
-          37,
-          41
-        ],
-        "estrelas": [
-          2,
-          4
-        ]
-      },
-      {
-        "geracao": 13,
-        "numeros": [
-          25,
-          36,
-          37,
-          40,
-          46
-        ],
-        "estrelas": [
-          4,
-          9
-        ]
-      },
-      {
-        "geracao": 14,
-        "numeros": [
-          17,
-          23,
-          29,
-          32,
-          46
-        ],
-        "estrelas": [
-          8,
-          10
-        ]
-      }
-    ],
-    "amuletos": [],
-    "estado": "VIVO",
-    "treinos": 0
-  },
-  {
-    "id": "H-00133",
-    "name": "Kael do Bosque",
-    "raca": "Vidente",
-    "casa": "Casa do Bosque",
-    "generation": 3,
-    "pais": [
-      "H-00013",
-      "H-00104"
-    ],
-    "genoma": {
-      "clareza": 0.7961170588936579,
-      "confusao": 0.550155561401815,
-      "caos": 0.23774047054538916,
-      "memoria": 4,
-      "virus_malphas": "Paradoxo Temporal",
-      "infeccao_oculta": true,
-      "geracao_infeccao": 9
-    },
-    "pontos": 154,
-    "titulo": "Errante das Sombras",
-    "keys": [
-      {
-        "geracao": 3,
-        "numeros": [
-          14,
-          25,
-          28,
-          44,
-          49
-        ],
-        "estrelas": [
-          6,
-          8
-        ]
-      },
-      {
-        "geracao": 4,
-        "numeros": [
-          2,
-          5,
-          12,
-          19,
-          29
-        ],
-        "estrelas": [
-          3,
-          6
-        ]
-      },
-      {
-        "geracao": 5,
-        "numeros": [
-          1,
-          10,
-          19,
-          28,
-          40
-        ],
-        "estrelas": [
-          2,
-          9
-        ]
-      },
-      {
-        "geracao": 6,
-        "numeros": [
-          10,
-          13,
-          41,
-          44,
-          45
-        ],
-        "estrelas": [
-          2,
-          3
-        ]
-      },
-      {
-        "geracao": 7,
-        "numeros": [
-          7,
-          23,
-          25,
-          28,
-          37
-        ],
-        "estrelas": [
-          2,
-          8
-        ]
-      },
-      {
-        "geracao": 8,
-        "numeros": [
-          6,
-          17,
-          28,
-          37,
-          43
-        ],
-        "estrelas": [
-          2,
-          3
-        ]
-      },
-      {
-        "geracao": 9,
-        "numeros": [
-          23,
-          29,
-          36,
-          39,
-          41
-        ],
-        "estrelas": [
-          2,
-          3
-        ]
-      },
-      {
-        "geracao": 10,
-        "numeros": [
-          5,
-          29,
-          40,
-          41,
-          44
-        ],
-        "estrelas": [
-          8,
-          9
-        ]
-      },
-      {
-        "geracao": 11,
-        "numeros": [
-          9,
-          19,
-          26,
-          32,
-          42
-        ],
-        "estrelas": [
-          3,
-          9
-        ]
-      },
-      {
-        "geracao": 12,
-        "numeros": [
-          13,
-          19,
-          22,
-          23,
-          25
-        ],
-        "estrelas": [
-          6,
-          9
-        ]
-      },
-      {
-        "geracao": 13,
-        "numeros": [
-          34,
-          37,
-          41,
-          42,
-          49
-        ],
-        "estrelas": [
-          3,
-          6
-        ]
-      },
-      {
-        "geracao": 14,
-        "numeros": [
-          2,
-          18,
-          25,
-          30,
-          45
-        ],
-        "estrelas": [
-          2,
-          8
-        ]
-      }
-    ],
-    "amuletos": [],
-    "estado": "VIVO",
-    "treinos": 0
-  },
-  {
-    "id": "H-00056",
-    "name": "Kael da Névoa",
-    "raca": "Bruxa",
-    "casa": "Casa dos Ossos",
-    "generation": 1,
-    "pais": [],
-    "genoma": {
-      "clareza": 0.034183657460478245,
-      "confusao": 0.8404879051356933,
-      "caos": 0.3277346781780497,
-      "memoria": 4,
-      "conhecimento_oculto": [
-        {
-          "tipo": "quentes",
-          "livro": "Livro das Chamas Frequentes",
-          "numeros": [
-            44,
-            42,
-            23,
-            19,
-            29
-          ]
-        },
-        {
-          "tipo": "frios",
-          "livro": "Livro dos Esquecidos",
-          "numeros": [
-            22,
-            33,
-            46,
-            18,
-            40
-          ]
-        }
-      ],
-      "virus_malphas": "Semente da Corrupção",
-      "infeccao_oculta": true,
-      "geracao_infeccao": 9
-    },
-    "pontos": 149,
-    "titulo": "Errante das Sombras",
-    "keys": [
-      {
-        "geracao": 1,
-        "numeros": [
-          9,
-          10,
-          18,
-          25,
-          37
-        ],
-        "estrelas": [
-          3,
-          11
-        ]
-      },
-      {
-        "geracao": 2,
-        "numeros": [
-          7,
-          17,
-          22,
-          25,
-          33
-        ],
-        "estrelas": [
-          9,
-          12
-        ]
-      },
-      {
-        "geracao": 3,
-        "numeros": [
-          10,
-          19,
-          32,
-          37,
-          40
-        ],
-        "estrelas": [
-          1,
-          9
-        ]
-      },
-      {
-        "geracao": 4,
-        "numeros": [
-          32,
-          35,
-          37,
-          42,
-          47
-        ],
-        "estrelas": [
-          2,
-          4
-        ]
-      },
-      {
-        "geracao": 5,
-        "numeros": [
-          22,
-          29,
-          33,
-          42,
-          49
-        ],
-        "estrelas": [
-          6,
-          10
-        ]
-      },
-      {
-        "geracao": 6,
-        "numeros": [
-          18,
-          21,
-          25,
-          40,
-          46
-        ],
-        "estrelas": [
-          9,
-          11
-        ]
-      },
-      {
-        "geracao": 7,
-        "numeros": [
-          7,
-          37,
-          42,
-          46,
-          47
-        ],
-        "estrelas": [
-          3,
-          12
-        ]
-      },
-      {
-        "geracao": 8,
-        "numeros": [
-          9,
-          21,
-          32,
-          33,
-          46
-        ],
-        "estrelas": [
-          6,
-          11
-        ]
-      },
-      {
-        "geracao": 9,
-        "numeros": [
-          21,
-          29,
-          37,
-          43,
-          46
-        ],
-        "estrelas": [
-          2,
-          4
-        ]
-      },
-      {
-        "geracao": 10,
-        "numeros": [
-          23,
-          25,
-          32,
-          38,
-          47
-        ],
-        "estrelas": [
-          8,
-          11
-        ]
-      },
-      {
-        "geracao": 11,
-        "numeros": [
-          14,
-          18,
-          23,
-          25,
-          33
-        ],
-        "estrelas": [
-          2,
-          12
-        ]
-      },
-      {
-        "geracao": 12,
-        "numeros": [
-          22,
-          30,
-          32,
-          37,
-          45
-        ],
-        "estrelas": [
-          8,
-          10
-        ]
-      },
-      {
-        "geracao": 13,
-        "numeros": [
-          11,
-          17,
-          42,
-          43,
-          46
-        ],
-        "estrelas": [
-          3,
-          12
-        ]
-      },
-      {
-        "geracao": 14,
-        "numeros": [
-          23,
-          40,
-          44,
-          46,
-          47
-        ],
-        "estrelas": [
-          3,
-          12
-        ]
-      }
-    ],
-    "amuletos": [
-      {
-        "id": "ART-321105CA3E",
-        "nome": "Fragmento Divino",
-        "raridade": "COMUM",
-        "multiplicador": 1.05,
-        "criador": "Kael da Névoa",
-        "geracao_criacao": 10,
-        "donos": [
-          "Kael da Névoa"
-        ],
-        "energia_acumulada": 28.3,
-        "conselhos": 0,
-        "estado": "ATIVO"
-      }
-    ],
-    "estado": "VIVO",
-    "treinos": 0
-  },
-  {
-    "id": "H-00172",
-    "name": "Velka da Lua Fria",
-    "raca": "Bruxa",
-    "casa": "Casa do Caos",
-    "generation": 3,
-    "pais": [
-      "H-00008",
-      "H-00014"
-    ],
-    "genoma": {
-      "clareza": 0.40369151649462764,
-      "confusao": 0.7675766909639942,
-      "caos": 0.3048812022971652,
-      "memoria": 1,
-      "conhecimento_oculto": [
-        {
-          "tipo": "quentes",
-          "livro": "Livro das Chamas Frequentes",
-          "numeros": [
-            44,
-            42,
-            23,
-            19,
-            29
-          ]
-        },
-        {
-          "tipo": "atrasos",
-          "livro": "Crónica dos Números Ausentes",
-          "numeros": [
-            2,
-            16,
-            18,
-            21,
-            14
-          ]
-        }
-      ]
-    },
-    "pontos": 148,
-    "titulo": "Sussurrador do Destino",
-    "keys": [
-      {
-        "geracao": 3,
-        "numeros": [
-          2,
-          23,
-          25,
-          33,
-          43
-        ],
-        "estrelas": [
-          2,
-          4
-        ]
-      },
-      {
-        "geracao": 4,
-        "numeros": [
-          9,
-          21,
-          44,
-          47,
-          48
-        ],
-        "estrelas": [
-          8,
-          11
-        ]
-      },
-      {
-        "geracao": 5,
-        "numeros": [
-          18,
-          21,
-          22,
-          42,
-          43
-        ],
-        "estrelas": [
-          1,
-          3
-        ]
-      },
-      {
-        "geracao": 6,
-        "numeros": [
-          29,
-          33,
-          40,
-          44,
-          47
-        ],
-        "estrelas": [
-          2,
-          12
-        ]
-      },
-      {
-        "geracao": 7,
-        "numeros": [
-          2,
-          6,
-          23,
-          40,
-          43
-        ],
-        "estrelas": [
-          2,
-          12
-        ]
-      },
-      {
-        "geracao": 8,
-        "numeros": [
-          9,
-          36,
-          44,
-          45,
-          50
-        ],
-        "estrelas": [
-          9,
-          12
-        ]
-      },
-      {
-        "geracao": 9,
-        "numeros": [
-          1,
-          10,
-          29,
-          33,
-          42
-        ],
-        "estrelas": [
-          1,
-          6
-        ]
-      },
-      {
-        "geracao": 10,
-        "numeros": [
-          19,
-          35,
-          43,
-          45,
-          47
-        ],
-        "estrelas": [
-          4,
-          9
-        ]
-      },
-      {
-        "geracao": 11,
-        "numeros": [
-          9,
-          17,
-          32,
-          47,
-          50
-        ],
-        "estrelas": [
-          1,
-          9
-        ]
-      },
-      {
-        "geracao": 12,
-        "numeros": [
-          2,
-          10,
-          21,
-          40,
-          45
-        ],
-        "estrelas": [
-          9,
-          12
-        ]
-      },
-      {
-        "geracao": 13,
-        "numeros": [
-          11,
-          21,
-          22,
-          41,
-          44
-        ],
-        "estrelas": [
-          2,
-          12
-        ]
-      },
-      {
-        "geracao": 14,
-        "numeros": [
-          9,
-          33,
-          37,
-          38,
-          44
-        ],
-        "estrelas": [
-          1,
-          8
-        ]
-      }
-    ],
-    "amuletos": [],
-    "estado": "VIVO",
-    "treinos": 0
-  },
-  {
-    "id": "H-00115",
-    "name": "Thara Pedra-Partida",
-    "raca": "Vidente",
+    "id": "H-00024",
+    "name": "Gruk Pedra-Partida",
+    "raca": "Cronomante",
     "casa": "Casa Tribal",
-    "generation": 2,
-    "pais": [
-      "H-00063",
-      "H-00048"
-    ],
+    "generation": 1,
+    "pais": [],
     "genoma": {
-      "clareza": 0.7208732086883664,
-      "confusao": 0.6683936022743222,
-      "caos": 0.217109468719065,
-      "memoria": 7
-    },
-    "pontos": 138,
-    "titulo": "Errante das Sombras",
-    "keys": [
-      {
-        "geracao": 2,
-        "numeros": [
-          14,
-          21,
-          25,
-          33,
-          44
-        ],
-        "estrelas": [
-          8,
-          9
-        ]
-      },
-      {
-        "geracao": 3,
-        "numeros": [
-          15,
-          16,
-          17,
-          21,
-          50
-        ],
-        "estrelas": [
-          6,
-          8
-        ]
-      },
-      {
-        "geracao": 4,
-        "numeros": [
-          21,
-          22,
-          31,
-          35,
-          45
-        ],
-        "estrelas": [
-          6,
-          9
-        ]
-      },
-      {
-        "geracao": 5,
-        "numeros": [
-          17,
-          29,
-          35,
-          47,
-          50
-        ],
-        "estrelas": [
-          2,
-          8
-        ]
-      },
-      {
-        "geracao": 6,
-        "numeros": [
-          20,
-          29,
-          30,
-          37,
-          45
-        ],
-        "estrelas": [
-          2,
-          8
-        ]
-      },
-      {
-        "geracao": 7,
-        "numeros": [
-          1,
-          12,
-          29,
-          34,
-          42
-        ],
-        "estrelas": [
-          6,
-          8
-        ]
-      },
-      {
-        "geracao": 8,
-        "numeros": [
-          6,
-          21,
-          25,
-          26,
-          29
-        ],
-        "estrelas": [
-          2,
-          3
-        ]
-      },
-      {
-        "geracao": 9,
-        "numeros": [
-          10,
-          17,
-          21,
-          42,
-          47
-        ],
-        "estrelas": [
-          3,
-          9
-        ]
-      },
-      {
-        "geracao": 10,
-        "numeros": [
-          1,
-          8,
-          27,
-          37,
-          50
-        ],
-        "estrelas": [
-          3,
-          8
-        ]
-      },
-      {
-        "geracao": 11,
-        "numeros": [
-          7,
-          9,
-          12,
-          29,
-          37
-        ],
-        "estrelas": [
-          3,
-          9
-        ]
-      },
-      {
-        "geracao": 12,
-        "numeros": [
-          23,
-          28,
-          36,
-          37,
-          44
-        ],
-        "estrelas": [
-          8,
-          9
-        ]
-      },
-      {
-        "geracao": 13,
-        "numeros": [
-          5,
-          10,
-          19,
-          42,
-          45
-        ],
-        "estrelas": [
-          3,
-          6
-        ]
-      },
-      {
-        "geracao": 14,
-        "numeros": [
-          19,
-          26,
-          30,
-          43,
-          45
-        ],
-        "estrelas": [
-          2,
-          8
-        ]
-      }
-    ],
-    "amuletos": [],
-    "estado": "VIVO",
-    "treinos": 0
-  },
-  {
-    "id": "H-00140",
-    "name": "Aruk dos Ossos",
-    "raca": "Elfo",
-    "casa": "Casa do Caos",
-    "generation": 3,
-    "pais": [
-      "H-00040",
-      "H-00101"
-    ],
-    "genoma": {
-      "clareza": 0.41597738756840197,
-      "confusao": 0.7650087513040889,
-      "caos": 0.6826288312079631,
-      "memoria": 3,
+      "clareza": 0.2975582380271058,
+      "confusao": 0.2817912522002234,
+      "caos": 0.46683729301067456,
+      "memoria": 7,
       "conhecimento_oculto": [
         {
           "tipo": "gaps",
@@ -1145,341 +22,324 @@
             4,
             5
           ]
+        },
+        {
+          "tipo": "historico",
+          "livro": "Grimório de Todas as Extrações",
+          "total_extracoes": 1962
         }
       ],
-      "virus_malphas": "Paradoxo Temporal",
+      "virus_malphas": "Praga da Ganância",
       "infeccao_oculta": true,
-      "geracao_infeccao": 8
+      "geracao_infeccao": 11
     },
-    "pontos": 134,
-    "titulo": "Leitor dos Sinais",
-    "keys": [
-      {
-        "geracao": 3,
-        "numeros": [
-          21,
-          23,
-          25,
-          30,
-          48
-        ],
-        "estrelas": [
-          2,
-          9
-        ]
-      },
-      {
-        "geracao": 4,
-        "numeros": [
-          21,
-          22,
-          30,
-          37,
-          41
-        ],
-        "estrelas": [
-          3,
-          6
-        ]
-      },
-      {
-        "geracao": 5,
-        "numeros": [
-          3,
-          4,
-          22,
-          37,
-          47
-        ],
-        "estrelas": [
-          8,
-          9
-        ]
-      },
-      {
-        "geracao": 6,
-        "numeros": [
-          18,
-          23,
-          31,
-          46,
-          47
-        ],
-        "estrelas": [
-          2,
-          6
-        ]
-      },
-      {
-        "geracao": 7,
-        "numeros": [
-          6,
-          7,
-          25,
-          32,
-          49
-        ],
-        "estrelas": [
-          6,
-          8
-        ]
-      },
-      {
-        "geracao": 8,
-        "numeros": [
-          18,
-          19,
-          21,
-          32,
-          40
-        ],
-        "estrelas": [
-          3,
-          9
-        ]
-      },
-      {
-        "geracao": 9,
-        "numeros": [
-          10,
-          16,
-          33,
-          35,
-          47
-        ],
-        "estrelas": [
-          2,
-          3
-        ]
-      },
-      {
-        "geracao": 10,
-        "numeros": [
-          2,
-          20,
-          24,
-          35,
-          49
-        ],
-        "estrelas": [
-          6,
-          8
-        ]
-      },
-      {
-        "geracao": 11,
-        "numeros": [
-          16,
-          23,
-          26,
-          41,
-          46
-        ],
-        "estrelas": [
-          6,
-          9
-        ]
-      },
-      {
-        "geracao": 12,
-        "numeros": [
-          7,
-          17,
-          34,
-          44,
-          49
-        ],
-        "estrelas": [
-          2,
-          8
-        ]
-      },
-      {
-        "geracao": 13,
-        "numeros": [
-          19,
-          20,
-          32,
-          43,
-          47
-        ],
-        "estrelas": [
-          2,
-          6
-        ]
-      },
-      {
-        "geracao": 14,
-        "numeros": [
-          9,
-          18,
-          21,
-          31,
-          36
-        ],
-        "estrelas": [
-          6,
-          9
-        ]
-      }
-    ],
-    "amuletos": [],
-    "estado": "VIVO",
-    "treinos": 0
-  },
-  {
-    "id": "H-00026",
-    "name": "Gruk dos Astros",
-    "raca": "Vidente",
-    "casa": "Casa do Caos",
-    "generation": 1,
-    "pais": [],
-    "genoma": {
-      "clareza": 0.145595483711895,
-      "confusao": 0.5088892122825744,
-      "caos": 0.03510819505766272,
-      "memoria": 8,
-      "virus_malphas": "Paradoxo Temporal",
-      "infeccao_oculta": true,
-      "geracao_infeccao": 8
-    },
-    "pontos": 126,
-    "titulo": "Errante das Sombras",
+    "pontos": 165,
+    "titulo": "Sussurrador do Destino",
     "keys": [
       {
         "geracao": 1,
         "numeros": [
-          1,
-          25,
-          29,
-          30,
-          44
+          16,
+          21,
+          24,
+          26,
+          39
         ],
         "estrelas": [
-          3,
+          5,
           8
         ]
       },
       {
         "geracao": 2,
         "numeros": [
-          10,
-          17,
-          20,
+          16,
           21,
-          46
+          24,
+          26,
+          39
         ],
         "estrelas": [
-          6,
-          9
+          5,
+          8
         ]
       },
       {
         "geracao": 3,
         "numeros": [
-          12,
+          14,
           16,
-          25,
-          44,
-          46
+          21,
+          26,
+          39
         ],
         "estrelas": [
-          3,
+          5,
           8
         ]
       },
       {
         "geracao": 4,
         "numeros": [
-          8,
+          16,
           21,
-          22,
-          24,
-          50
+          26,
+          39,
+          44
         ],
         "estrelas": [
-          2,
-          3
+          5,
+          8
         ]
       },
       {
         "geracao": 5,
         "numeros": [
-          17,
-          23,
+          2,
+          21,
           24,
           26,
-          35
+          39
         ],
         "estrelas": [
-          6,
-          9
+          5,
+          8
         ]
       },
       {
         "geracao": 6,
         "numeros": [
-          1,
-          4,
-          10,
-          23,
-          42
+          18,
+          21,
+          24,
+          26,
+          39
         ],
         "estrelas": [
-          8,
-          9
+          5,
+          8
         ]
       },
       {
         "geracao": 7,
         "numeros": [
-          17,
-          20,
-          23,
-          35,
-          37
+          16,
+          21,
+          24,
+          26,
+          39
         ],
         "estrelas": [
-          2,
-          9
+          5,
+          8
         ]
       },
       {
         "geracao": 8,
         "numeros": [
-          5,
-          17,
-          30,
-          36,
-          42
+          16,
+          21,
+          24,
+          26,
+          39
         ],
         "estrelas": [
-          6,
+          5,
           8
         ]
       },
       {
         "geracao": 9,
         "numeros": [
-          5,
-          23,
-          25,
-          34,
-          35
+          16,
+          21,
+          24,
+          26,
+          39
         ],
         "estrelas": [
-          3,
+          5,
           8
         ]
       },
       {
         "geracao": 10,
         "numeros": [
-          12,
-          23,
-          34,
-          42,
+          16,
+          21,
+          24,
+          26,
+          39
+        ],
+        "estrelas": [
+          5,
+          8
+        ]
+      },
+      {
+        "geracao": 11,
+        "numeros": [
+          16,
+          21,
+          24,
+          26,
+          39
+        ],
+        "estrelas": [
+          5,
+          8
+        ]
+      },
+      {
+        "geracao": 12,
+        "numeros": [
+          16,
+          18,
+          21,
+          24,
+          26
+        ],
+        "estrelas": [
+          5,
+          8
+        ]
+      },
+      {
+        "geracao": 13,
+        "numeros": [
+          16,
+          21,
+          24,
+          26,
+          39
+        ],
+        "estrelas": [
+          5,
+          8
+        ]
+      },
+      {
+        "geracao": 14,
+        "numeros": [
+          16,
+          21,
+          24,
+          26,
+          39
+        ],
+        "estrelas": [
+          5,
+          8
+        ]
+      }
+    ],
+    "amuletos": [
+      {
+        "id": "ART-5A188C9A54",
+        "nome": "Presa Imutável de Fenrir",
+        "raridade": "COMUM",
+        "multiplicador": 1.05,
+        "criador": "Gruk Pedra-Partida",
+        "geracao_criacao": 13,
+        "donos": [
+          "Gruk Pedra-Partida"
+        ],
+        "energia_acumulada": 8.25,
+        "conselhos": 0,
+        "estado": "ATIVO"
+      }
+    ],
+    "estado": "VIVO",
+    "treinos": 0
+  },
+  {
+    "id": "H-00070",
+    "name": "Aion dos Ossos",
+    "raca": "Esqueleto",
+    "casa": "Casa Lunar",
+    "generation": 1,
+    "pais": [],
+    "genoma": {
+      "clareza": 0.9943484094078102,
+      "confusao": 0.4159121743141604,
+      "caos": 0.5499553028074878,
+      "memoria": 7,
+      "ultimo_ritual_osseo": {
+        "inicio_numeros": 1,
+        "fim_numeros": 25,
+        "largura_numeros": 25,
+        "inicio_estrelas": 7,
+        "fim_estrelas": 12,
+        "largura_estrelas": 6
+      }
+    },
+    "pontos": 158,
+    "titulo": "Leitor dos Sinais",
+    "keys": [
+      {
+        "geracao": 1,
+        "numeros": [
+          27,
+          32,
+          35,
+          44,
           48
+        ],
+        "estrelas": [
+          3,
+          7
+        ]
+      },
+      {
+        "geracao": 2,
+        "numeros": [
+          16,
+          20,
+          22,
+          28,
+          32
+        ],
+        "estrelas": [
+          3,
+          7
+        ]
+      },
+      {
+        "geracao": 3,
+        "numeros": [
+          29,
+          33,
+          36,
+          37,
+          40
+        ],
+        "estrelas": [
+          7,
+          10
+        ]
+      },
+      {
+        "geracao": 4,
+        "numeros": [
+          15,
+          21,
+          25,
+          26,
+          32
+        ],
+        "estrelas": [
+          6,
+          9
+        ]
+      },
+      {
+        "geracao": 5,
+        "numeros": [
+          14,
+          15,
+          24,
+          29,
+          31
         ],
         "estrelas": [
           3,
@@ -1487,90 +347,27 @@
         ]
       },
       {
-        "geracao": 11,
+        "geracao": 6,
         "numeros": [
-          8,
-          23,
-          29,
-          41,
-          42
-        ],
-        "estrelas": [
-          2,
-          8
-        ]
-      },
-      {
-        "geracao": 12,
-        "numeros": [
-          10,
-          12,
-          18,
-          29,
-          45
-        ],
-        "estrelas": [
-          3,
-          9
-        ]
-      },
-      {
-        "geracao": 13,
-        "numeros": [
-          18,
-          21,
-          23,
-          34,
-          44
-        ],
-        "estrelas": [
-          8,
-          9
-        ]
-      },
-      {
-        "geracao": 14,
-        "numeros": [
-          7,
-          8,
           19,
-          42,
-          50
+          22,
+          26,
+          30,
+          40
         ],
         "estrelas": [
           2,
-          8
+          3
         ]
-      }
-    ],
-    "amuletos": [],
-    "estado": "VIVO",
-    "treinos": 0
-  },
-  {
-    "id": "H-00048",
-    "name": "Kael da Névoa",
-    "raca": "Goblin",
-    "casa": "Casa Tribal",
-    "generation": 1,
-    "pais": [],
-    "genoma": {
-      "clareza": 0.6594714480410975,
-      "confusao": 0.21689150556808656,
-      "caos": 0.006152674406410541,
-      "memoria": 1
-    },
-    "pontos": 125,
-    "titulo": "Sussurrador do Destino",
-    "keys": [
+      },
       {
-        "geracao": 1,
+        "geracao": 7,
         "numeros": [
-          8,
-          15,
-          31,
-          38,
-          41
+          16,
+          19,
+          25,
+          28,
+          29
         ],
         "estrelas": [
           5,
@@ -1578,13 +375,69 @@
         ]
       },
       {
-        "geracao": 2,
+        "geracao": 8,
         "numeros": [
-          2,
+          16,
+          19,
+          20,
+          25,
+          34
+        ],
+        "estrelas": [
+          9,
+          10
+        ]
+      },
+      {
+        "geracao": 9,
+        "numeros": [
+          21,
+          23,
+          25,
+          35,
+          38
+        ],
+        "estrelas": [
+          7,
+          8
+        ]
+      },
+      {
+        "geracao": 10,
+        "numeros": [
           4,
-          5,
+          8,
           10,
-          32
+          12,
+          15
+        ],
+        "estrelas": [
+          6,
+          8
+        ]
+      },
+      {
+        "geracao": 11,
+        "numeros": [
+          28,
+          34,
+          40,
+          41,
+          50
+        ],
+        "estrelas": [
+          8,
+          10
+        ]
+      },
+      {
+        "geracao": 12,
+        "numeros": [
+          23,
+          30,
+          33,
+          38,
+          40
         ],
         "estrelas": [
           7,
@@ -1592,171 +445,31 @@
         ]
       },
       {
-        "geracao": 3,
+        "geracao": 13,
         "numeros": [
-          14,
-          23,
-          32,
-          39,
-          45
-        ],
-        "estrelas": [
-          4,
-          10
-        ]
-      },
-      {
-        "geracao": 4,
-        "numeros": [
-          8,
-          10,
-          17,
-          24,
-          36
-        ],
-        "estrelas": [
-          10,
-          12
-        ]
-      },
-      {
-        "geracao": 5,
-        "numeros": [
-          3,
-          15,
-          22,
-          31,
-          33
-        ],
-        "estrelas": [
-          9,
-          12
-        ]
-      },
-      {
-        "geracao": 6,
-        "numeros": [
-          13,
-          19,
-          31,
-          32,
+          18,
+          25,
+          33,
+          37,
           39
         ],
         "estrelas": [
-          5,
+          4,
           6
-        ]
-      },
-      {
-        "geracao": 7,
-        "numeros": [
-          11,
-          17,
-          46,
-          47,
-          48
-        ],
-        "estrelas": [
-          2,
-          5
-        ]
-      },
-      {
-        "geracao": 8,
-        "numeros": [
-          8,
-          14,
-          16,
-          30,
-          31
-        ],
-        "estrelas": [
-          2,
-          7
-        ]
-      },
-      {
-        "geracao": 9,
-        "numeros": [
-          11,
-          13,
-          17,
-          29,
-          44
-        ],
-        "estrelas": [
-          7,
-          12
-        ]
-      },
-      {
-        "geracao": 10,
-        "numeros": [
-          9,
-          21,
-          22,
-          30,
-          35
-        ],
-        "estrelas": [
-          1,
-          6
-        ]
-      },
-      {
-        "geracao": 11,
-        "numeros": [
-          10,
-          14,
-          31,
-          34,
-          44
-        ],
-        "estrelas": [
-          3,
-          9
-        ]
-      },
-      {
-        "geracao": 12,
-        "numeros": [
-          5,
-          8,
-          16,
-          33,
-          47
-        ],
-        "estrelas": [
-          3,
-          4
-        ]
-      },
-      {
-        "geracao": 13,
-        "numeros": [
-          2,
-          7,
-          9,
-          20,
-          32
-        ],
-        "estrelas": [
-          2,
-          12
         ]
       },
       {
         "geracao": 14,
         "numeros": [
-          11,
-          14,
-          15,
-          27,
-          47
+          4,
+          9,
+          10,
+          18,
+          24
         ],
         "estrelas": [
-          11,
-          12
+          9,
+          11
         ]
       }
     ],
@@ -1765,63 +478,71 @@
     "treinos": 0
   },
   {
-    "id": "H-00104",
-    "name": "Morgana da Névoa",
-    "raca": "Vidente",
-    "casa": "Casa do Bosque",
+    "id": "H-00083",
+    "name": "Velka da Névoa",
+    "raca": "Esqueleto",
+    "casa": "Casa dos Ossos",
     "generation": 2,
     "pais": [
-      "H-00055",
-      "H-00019"
+      "H-00007",
+      "H-00036"
     ],
     "genoma": {
-      "clareza": 0.6730074833767371,
-      "confusao": 0.5708124691197332,
-      "caos": 0.7818307446229165,
-      "memoria": 5,
-      "virus_malphas": "Praga da Ganância",
+      "clareza": 0.15101087660863632,
+      "confusao": 0.20990596988846166,
+      "caos": 0.6373308435729468,
+      "memoria": 8,
+      "ultimo_ritual_osseo": {
+        "inicio_numeros": 6,
+        "fim_numeros": 30,
+        "largura_numeros": 25,
+        "inicio_estrelas": 5,
+        "fim_estrelas": 10,
+        "largura_estrelas": 6
+      },
+      "virus_malphas": "Paradoxo Temporal",
       "infeccao_oculta": true,
-      "geracao_infeccao": 4
+      "geracao_infeccao": 11
     },
-    "pontos": 113,
-    "titulo": "Sussurrador do Destino",
+    "pontos": 145,
+    "titulo": "Errante das Sombras",
     "keys": [
       {
         "geracao": 2,
         "numeros": [
-          2,
-          4,
-          19,
+          17,
+          18,
           21,
-          47
+          22,
+          26
         ],
         "estrelas": [
-          8,
-          9
+          4,
+          8
         ]
       },
       {
         "geracao": 3,
         "numeros": [
+          5,
+          8,
+          11,
           23,
-          26,
-          37,
-          39,
-          43
+          25
         ],
         "estrelas": [
-          8,
-          9
+          1,
+          6
         ]
       },
       {
         "geracao": 4,
         "numeros": [
-          2,
-          9,
-          10,
-          29,
-          35
+          23,
+          24,
+          26,
+          28,
+          47
         ],
         "estrelas": [
           6,
@@ -1831,14 +552,14 @@
       {
         "geracao": 5,
         "numeros": [
-          6,
+          3,
+          7,
           9,
-          21,
-          25,
-          48
+          17,
+          25
         ],
         "estrelas": [
-          2,
+          7,
           9
         ]
       },
@@ -1846,65 +567,216 @@
         "geracao": 6,
         "numeros": [
           7,
-          19,
-          34,
-          37,
-          45
+          15,
+          18,
+          25,
+          30
         ],
         "estrelas": [
           2,
-          8
+          5
         ]
       },
       {
         "geracao": 7,
         "numeros": [
-          9,
-          29,
-          36,
+          25,
+          33,
+          38,
           41,
-          45
+          48
         ],
         "estrelas": [
-          2,
-          6
+          5,
+          7
         ]
       },
       {
         "geracao": 8,
         "numeros": [
           25,
-          29,
-          36,
-          44,
-          45
+          28,
+          30,
+          35,
+          40
         ],
         "estrelas": [
           3,
-          9
+          6
         ]
       },
       {
         "geracao": 9,
         "numeros": [
-          12,
-          19,
-          21,
-          31,
-          32
+          24,
+          27,
+          28,
+          41,
+          44
         ],
         "estrelas": [
-          2,
-          6
+          9,
+          10
         ]
       },
       {
         "geracao": 10,
         "numeros": [
-          12,
-          24,
+          26,
+          35,
+          41,
           42,
-          47,
+          45
+        ],
+        "estrelas": [
+          5,
+          7
+        ]
+      },
+      {
+        "geracao": 11,
+        "numeros": [
+          13,
+          20,
+          23,
+          36,
+          37
+        ],
+        "estrelas": [
+          7,
+          8
+        ]
+      },
+      {
+        "geracao": 12,
+        "numeros": [
+          13,
+          14,
+          28,
+          31,
+          32
+        ],
+        "estrelas": [
+          2,
+          7
+        ]
+      },
+      {
+        "geracao": 13,
+        "numeros": [
+          10,
+          17,
+          18,
+          23,
+          26
+        ],
+        "estrelas": [
+          9,
+          10
+        ]
+      },
+      {
+        "geracao": 14,
+        "numeros": [
+          17,
+          23,
+          25,
+          26,
+          30
+        ],
+        "estrelas": [
+          6,
+          9
+        ]
+      }
+    ],
+    "amuletos": [
+      {
+        "id": "ART-3C2C3C790F",
+        "nome": "Livro dos Ecos",
+        "raridade": "COMUM",
+        "multiplicador": 1.05,
+        "criador": "Velka da Névoa",
+        "geracao_criacao": 4,
+        "donos": [
+          "Velka da Névoa"
+        ],
+        "energia_acumulada": 58.65,
+        "conselhos": 0,
+        "estado": "ATIVO"
+      },
+      {
+        "id": "ART-CC76FDFDD0",
+        "nome": "Coroa Quebrada de Malphas",
+        "raridade": "COMUM",
+        "multiplicador": 1.05,
+        "criador": "Velka da Névoa",
+        "geracao_criacao": 5,
+        "donos": [
+          "Velka da Névoa"
+        ],
+        "energia_acumulada": 54.25,
+        "conselhos": 0,
+        "estado": "ATIVO"
+      }
+    ],
+    "estado": "VIVO",
+    "treinos": 0
+  },
+  {
+    "id": "H-00135",
+    "name": "Thara do Bosque",
+    "raca": "Vidente",
+    "casa": "Casa dos Ossos",
+    "generation": 3,
+    "pais": [
+      "H-00044",
+      "H-00054"
+    ],
+    "genoma": {
+      "clareza": 0.41378380497837275,
+      "confusao": 0.019697347958552713,
+      "caos": 0.15660307257412076,
+      "memoria": 4
+    },
+    "pontos": 138,
+    "titulo": "Errante das Sombras",
+    "keys": [
+      {
+        "geracao": 3,
+        "numeros": [
+          2,
+          23,
+          25,
+          33,
+          45
+        ],
+        "estrelas": [
+          3,
+          6
+        ]
+      },
+      {
+        "geracao": 4,
+        "numeros": [
+          9,
+          17,
+          21,
+          45,
+          47
+        ],
+        "estrelas": [
+          3,
+          8
+        ]
+      },
+      {
+        "geracao": 5,
+        "numeros": [
+          11,
+          20,
+          27,
+          37,
           50
         ],
         "estrelas": [
@@ -1913,39 +785,485 @@
         ]
       },
       {
-        "geracao": 11,
+        "geracao": 6,
         "numeros": [
-          3,
-          25,
-          26,
-          44,
-          46
+          10,
+          28,
+          29,
+          30,
+          37
         ],
         "estrelas": [
-          3,
+          2,
+          6
+        ]
+      },
+      {
+        "geracao": 7,
+        "numeros": [
+          17,
+          19,
+          26,
+          38,
+          48
+        ],
+        "estrelas": [
+          2,
           8
+        ]
+      },
+      {
+        "geracao": 8,
+        "numeros": [
+          21,
+          37,
+          39,
+          45,
+          47
+        ],
+        "estrelas": [
+          2,
+          9
+        ]
+      },
+      {
+        "geracao": 9,
+        "numeros": [
+          25,
+          37,
+          38,
+          45,
+          49
+        ],
+        "estrelas": [
+          6,
+          9
+        ]
+      },
+      {
+        "geracao": 10,
+        "numeros": [
+          4,
+          8,
+          10,
+          12,
+          25
+        ],
+        "estrelas": [
+          2,
+          6
+        ]
+      },
+      {
+        "geracao": 11,
+        "numeros": [
+          4,
+          28,
+          30,
+          45,
+          50
+        ],
+        "estrelas": [
+          2,
+          6
         ]
       },
       {
         "geracao": 12,
         "numeros": [
-          8,
-          17,
-          24,
-          25,
-          32
+          11,
+          23,
+          33,
+          42,
+          44
         ],
         "estrelas": [
-          3,
+          2,
           8
         ]
       },
       {
         "geracao": 13,
         "numeros": [
+          16,
+          17,
+          25,
+          28,
+          38
+        ],
+        "estrelas": [
+          2,
+          9
+        ]
+      },
+      {
+        "geracao": 14,
+        "numeros": [
+          2,
+          21,
+          30,
+          37,
+          40
+        ],
+        "estrelas": [
+          8,
+          9
+        ]
+      }
+    ],
+    "amuletos": [
+      {
+        "id": "ART-30D8E053BD",
+        "nome": "Coroa Quebrada de Malphas",
+        "raridade": "COMUM",
+        "multiplicador": 1.05,
+        "criador": "Thara do Bosque",
+        "geracao_criacao": 8,
+        "donos": [
+          "Thara do Bosque"
+        ],
+        "energia_acumulada": 38.4,
+        "conselhos": 0,
+        "estado": "ATIVO"
+      }
+    ],
+    "estado": "VIVO",
+    "treinos": 0
+  },
+  {
+    "id": "H-00044",
+    "name": "Aruk Pedra-Partida",
+    "raca": "Vidente",
+    "casa": "Casa dos Ossos",
+    "generation": 1,
+    "pais": [],
+    "genoma": {
+      "clareza": 0.8131712785891139,
+      "confusao": 0.09141332993686113,
+      "caos": 0.2348481447688463,
+      "memoria": 1
+    },
+    "pontos": 135,
+    "titulo": "Sussurrador do Destino",
+    "keys": [
+      {
+        "geracao": 1,
+        "numeros": [
+          6,
+          7,
+          25,
+          45,
+          49
+        ],
+        "estrelas": [
           3,
+          9
+        ]
+      },
+      {
+        "geracao": 2,
+        "numeros": [
+          21,
+          30,
+          35,
+          44,
+          47
+        ],
+        "estrelas": [
+          3,
+          6
+        ]
+      },
+      {
+        "geracao": 3,
+        "numeros": [
+          1,
+          8,
+          25,
+          28,
+          42
+        ],
+        "estrelas": [
+          6,
+          9
+        ]
+      },
+      {
+        "geracao": 4,
+        "numeros": [
+          17,
+          29,
+          32,
+          33,
+          50
+        ],
+        "estrelas": [
+          6,
+          8
+        ]
+      },
+      {
+        "geracao": 5,
+        "numeros": [
+          8,
+          20,
+          34,
+          45,
+          50
+        ],
+        "estrelas": [
+          2,
+          8
+        ]
+      },
+      {
+        "geracao": 6,
+        "numeros": [
           19,
           23,
+          33,
+          39,
+          44
+        ],
+        "estrelas": [
+          3,
+          6
+        ]
+      },
+      {
+        "geracao": 7,
+        "numeros": [
+          6,
+          17,
+          25,
+          35,
+          37
+        ],
+        "estrelas": [
+          3,
+          6
+        ]
+      },
+      {
+        "geracao": 8,
+        "numeros": [
+          10,
+          25,
+          26,
+          31,
+          47
+        ],
+        "estrelas": [
+          2,
+          6
+        ]
+      },
+      {
+        "geracao": 9,
+        "numeros": [
+          29,
+          42,
+          47,
+          48,
+          49
+        ],
+        "estrelas": [
+          2,
+          9
+        ]
+      },
+      {
+        "geracao": 10,
+        "numeros": [
+          23,
+          27,
+          37,
+          45,
+          46
+        ],
+        "estrelas": [
+          2,
+          3
+        ]
+      },
+      {
+        "geracao": 11,
+        "numeros": [
+          10,
+          11,
+          23,
+          34,
+          47
+        ],
+        "estrelas": [
+          8,
+          9
+        ]
+      },
+      {
+        "geracao": 12,
+        "numeros": [
+          2,
+          7,
+          23,
+          32,
+          44
+        ],
+        "estrelas": [
+          3,
+          6
+        ]
+      },
+      {
+        "geracao": 13,
+        "numeros": [
+          4,
+          37,
+          42,
+          47,
+          50
+        ],
+        "estrelas": [
+          3,
+          6
+        ]
+      },
+      {
+        "geracao": 14,
+        "numeros": [
+          2,
+          6,
+          10,
+          25,
+          27
+        ],
+        "estrelas": [
+          2,
+          6
+        ]
+      }
+    ],
+    "amuletos": [],
+    "estado": "VIVO",
+    "treinos": 0
+  },
+  {
+    "id": "H-00082",
+    "name": "Selene dos Astros",
+    "raca": "Esqueleto",
+    "casa": "Casa Lunar",
+    "generation": 2,
+    "pais": [
+      "H-00070",
+      "H-00036"
+    ],
+    "genoma": {
+      "clareza": 0.29930018255320134,
+      "confusao": 0.7301032793291017,
+      "caos": 0.9753525350188149,
+      "memoria": 5,
+      "ultimo_ritual_osseo": {
+        "inicio_numeros": 12,
+        "fim_numeros": 36,
+        "largura_numeros": 25,
+        "inicio_estrelas": 2,
+        "fim_estrelas": 7,
+        "largura_estrelas": 6
+      }
+    },
+    "pontos": 135,
+    "titulo": "Leitor dos Sinais",
+    "keys": [
+      {
+        "geracao": 2,
+        "numeros": [
+          16,
+          17,
+          21,
+          25,
+          26
+        ],
+        "estrelas": [
+          4,
+          7
+        ]
+      },
+      {
+        "geracao": 3,
+        "numeros": [
+          8,
+          14,
+          16,
+          20,
+          28
+        ],
+        "estrelas": [
+          5,
+          6
+        ]
+      },
+      {
+        "geracao": 4,
+        "numeros": [
+          25,
+          27,
+          28,
+          32,
+          33
+        ],
+        "estrelas": [
+          2,
+          5
+        ]
+      },
+      {
+        "geracao": 5,
+        "numeros": [
+          26,
+          29,
+          40,
+          42,
+          43
+        ],
+        "estrelas": [
+          5,
+          9
+        ]
+      },
+      {
+        "geracao": 6,
+        "numeros": [
+          8,
+          15,
+          19,
+          20,
+          32
+        ],
+        "estrelas": [
+          4,
+          5
+        ]
+      },
+      {
+        "geracao": 7,
+        "numeros": [
+          6,
+          8,
+          9,
+          23,
+          24
+        ],
+        "estrelas": [
+          6,
+          7
+        ]
+      },
+      {
+        "geracao": 8,
+        "numeros": [
+          9,
+          12,
+          25,
           28,
           29
         ],
@@ -1955,1418 +1273,87 @@
         ]
       },
       {
-        "geracao": 14,
-        "numeros": [
-          23,
-          27,
-          33,
-          41,
-          50
-        ],
-        "estrelas": [
-          2,
-          9
-        ]
-      }
-    ],
-    "amuletos": [],
-    "estado": "VIVO",
-    "treinos": 0
-  },
-  {
-    "id": "H-00002",
-    "name": "Aion dos Ossos",
-    "raca": "Bruxa",
-    "casa": "Casa do Caos",
-    "generation": 1,
-    "pais": [],
-    "genoma": {
-      "clareza": 0.08545082743219923,
-      "confusao": 0.880159565142877,
-      "caos": 0.6365163041813695,
-      "memoria": 6,
-      "conhecimento_oculto": [
-        {
-          "tipo": "quentes",
-          "livro": "Livro das Chamas Frequentes",
-          "numeros": [
-            44,
-            42,
-            23,
-            19,
-            29
-          ]
-        },
-        {
-          "tipo": "atrasos",
-          "livro": "Crónica dos Números Ausentes",
-          "numeros": [
-            2,
-            16,
-            18,
-            21,
-            14
-          ]
-        }
-      ]
-    },
-    "pontos": 105,
-    "titulo": "Sussurrador do Destino",
-    "keys": [
-      {
-        "geracao": 1,
-        "numeros": [
-          21,
-          25,
-          42,
-          43,
-          46
-        ],
-        "estrelas": [
-          8,
-          10
-        ]
-      },
-      {
-        "geracao": 2,
-        "numeros": [
-          2,
-          21,
-          29,
-          40,
-          44
-        ],
-        "estrelas": [
-          3,
-          10
-        ]
-      },
-      {
-        "geracao": 3,
+        "geracao": 9,
         "numeros": [
           22,
-          25,
-          30,
-          32,
-          44
-        ],
-        "estrelas": [
-          3,
-          12
-        ]
-      },
-      {
-        "geracao": 4,
-        "numeros": [
-          2,
-          17,
-          23,
+          27,
+          29,
           34,
-          36
-        ],
-        "estrelas": [
-          2,
-          11
-        ]
-      },
-      {
-        "geracao": 5,
-        "numeros": [
-          2,
-          9,
-          19,
-          24,
           45
         ],
         "estrelas": [
-          4,
-          6
-        ]
-      },
-      {
-        "geracao": 6,
-        "numeros": [
-          9,
-          33,
-          37,
-          45,
-          49
-        ],
-        "estrelas": [
-          4,
-          9
-        ]
-      },
-      {
-        "geracao": 7,
-        "numeros": [
-          37,
-          43,
-          44,
-          47,
-          48
-        ],
-        "estrelas": [
-          1,
-          8
-        ]
-      },
-      {
-        "geracao": 8,
-        "numeros": [
-          23,
-          25,
-          29,
-          41,
-          42
-        ],
-        "estrelas": [
-          2,
-          12
-        ]
-      },
-      {
-        "geracao": 9,
-        "numeros": [
-          29,
-          33,
-          41,
-          42,
-          44
-        ],
-        "estrelas": [
-          4,
+          6,
           9
         ]
       },
       {
         "geracao": 10,
         "numeros": [
-          2,
-          24,
-          37,
-          42,
-          46
-        ],
-        "estrelas": [
-          8,
-          10
-        ]
-      },
-      {
-        "geracao": 11,
-        "numeros": [
-          25,
-          32,
-          42,
-          43,
-          44
-        ],
-        "estrelas": [
-          6,
-          11
-        ]
-      },
-      {
-        "geracao": 12,
-        "numeros": [
-          9,
-          17,
-          21,
-          32,
-          37
-        ],
-        "estrelas": [
-          2,
-          12
-        ]
-      },
-      {
-        "geracao": 13,
-        "numeros": [
-          3,
-          18,
-          44,
-          47,
-          50
-        ],
-        "estrelas": [
-          2,
-          4
-        ]
-      },
-      {
-        "geracao": 14,
-        "numeros": [
-          2,
-          9,
-          30,
-          33,
-          50
-        ],
-        "estrelas": [
-          1,
-          3
-        ]
-      }
-    ],
-    "amuletos": [],
-    "estado": "VIVO",
-    "treinos": 0
-  },
-  {
-    "id": "H-00011",
-    "name": "Gruk Pedra-Partida",
-    "raca": "Cronomante",
-    "casa": "Casa Lunar",
-    "generation": 1,
-    "pais": [],
-    "genoma": {
-      "clareza": 0.8996463207093105,
-      "confusao": 0.22280620544693786,
-      "caos": 0.1442249900428607,
-      "memoria": 8,
-      "conhecimento_oculto": [
-        {
-          "tipo": "estrelas",
-          "livro": "Atlas das Doze Luzes",
-          "estrelas": [
-            2,
-            3,
-            8,
-            9
-          ]
-        },
-        {
-          "tipo": "atrasos",
-          "livro": "Crónica dos Números Ausentes",
-          "numeros": [
-            2,
-            16,
-            18,
-            21,
-            14
-          ]
-        }
-      ],
-      "virus_malphas": "Semente da Corrupção",
-      "infeccao_oculta": true,
-      "geracao_infeccao": 7
-    },
-    "pontos": 105,
-    "titulo": "Leitor dos Sinais",
-    "keys": [
-      {
-        "geracao": 1,
-        "numeros": [
-          9,
-          14,
-          20,
-          25,
-          27
-        ],
-        "estrelas": [
-          3,
-          8
-        ]
-      },
-      {
-        "geracao": 2,
-        "numeros": [
-          9,
-          14,
-          20,
-          25,
-          27
-        ],
-        "estrelas": [
-          8,
-          11
-        ]
-      },
-      {
-        "geracao": 3,
-        "numeros": [
-          9,
-          14,
-          20,
-          25,
-          27
-        ],
-        "estrelas": [
-          8,
-          10
-        ]
-      },
-      {
-        "geracao": 4,
-        "numeros": [
+          5,
           14,
           16,
-          20,
-          25,
-          27
-        ],
-        "estrelas": [
-          2,
-          8
-        ]
-      },
-      {
-        "geracao": 5,
-        "numeros": [
-          9,
-          14,
-          20,
           21,
-          25
-        ],
-        "estrelas": [
-          8,
-          9
-        ]
-      },
-      {
-        "geracao": 6,
-        "numeros": [
-          9,
-          14,
-          20,
-          25,
-          27
-        ],
-        "estrelas": [
-          5,
-          8
-        ]
-      },
-      {
-        "geracao": 7,
-        "numeros": [
-          2,
-          9,
-          14,
-          20,
-          27
-        ],
-        "estrelas": [
-          4,
-          8
-        ]
-      },
-      {
-        "geracao": 8,
-        "numeros": [
-          9,
-          14,
-          20,
-          25,
-          27
+          29
         ],
         "estrelas": [
           2,
-          8
-        ]
-      },
-      {
-        "geracao": 9,
-        "numeros": [
-          2,
-          9,
-          14,
-          20,
-          27
-        ],
-        "estrelas": [
-          3,
-          8
-        ]
-      },
-      {
-        "geracao": 10,
-        "numeros": [
-          9,
-          14,
-          20,
-          25,
-          27
-        ],
-        "estrelas": [
-          2,
-          8
-        ]
-      },
-      {
-        "geracao": 11,
-        "numeros": [
-          9,
-          14,
-          20,
-          25,
-          27
-        ],
-        "estrelas": [
-          2,
-          8
-        ]
-      },
-      {
-        "geracao": 12,
-        "numeros": [
-          9,
-          14,
-          16,
-          25,
-          27
-        ],
-        "estrelas": [
-          8,
-          12
-        ]
-      },
-      {
-        "geracao": 13,
-        "numeros": [
-          9,
-          14,
-          20,
-          21,
-          25
-        ],
-        "estrelas": [
-          8,
-          9
-        ]
-      },
-      {
-        "geracao": 14,
-        "numeros": [
-          9,
-          14,
-          18,
-          20,
-          27
-        ],
-        "estrelas": [
-          8,
-          9
-        ]
-      }
-    ],
-    "amuletos": [],
-    "estado": "VIVO",
-    "treinos": 0
-  },
-  {
-    "id": "H-00101",
-    "name": "Selene dos Astros",
-    "raca": "Cronomante",
-    "casa": "Casa do Caos",
-    "generation": 2,
-    "pais": [
-      "H-00008",
-      "H-00014"
-    ],
-    "genoma": {
-      "clareza": 0.8815362797429241,
-      "confusao": 0.14742650703404692,
-      "caos": 0.270253407884415,
-      "memoria": 2,
-      "conhecimento_oculto": [
-        {
-          "tipo": "atrasos",
-          "livro": "Crónica dos Números Ausentes",
-          "numeros": [
-            2,
-            16,
-            18,
-            21,
-            14
-          ]
-        },
-        {
-          "tipo": "estrelas",
-          "livro": "Atlas das Doze Luzes",
-          "estrelas": [
-            2,
-            3,
-            8,
-            9
-          ]
-        }
-      ],
-      "virus_malphas": "Praga da Ganância",
-      "infeccao_oculta": true,
-      "geracao_infeccao": 4
-    },
-    "pontos": 105,
-    "titulo": "Leitor dos Sinais",
-    "keys": [
-      {
-        "geracao": 2,
-        "numeros": [
-          6,
-          11,
-          17,
-          22,
-          24
-        ],
-        "estrelas": [
-          1,
-          7
-        ]
-      },
-      {
-        "geracao": 3,
-        "numeros": [
-          6,
-          11,
-          17,
-          22,
-          24
-        ],
-        "estrelas": [
-          7,
-          9
-        ]
-      },
-      {
-        "geracao": 4,
-        "numeros": [
-          6,
-          11,
-          17,
-          22,
-          24
-        ],
-        "estrelas": [
-          5,
-          9
-        ]
-      },
-      {
-        "geracao": 5,
-        "numeros": [
-          6,
-          11,
-          17,
-          22,
-          24
-        ],
-        "estrelas": [
-          2,
-          6
-        ]
-      },
-      {
-        "geracao": 6,
-        "numeros": [
-          6,
-          11,
-          17,
-          22,
-          24
-        ],
-        "estrelas": [
-          7,
-          12
-        ]
-      },
-      {
-        "geracao": 7,
-        "numeros": [
-          6,
-          11,
-          17,
-          22,
-          24
-        ],
-        "estrelas": [
-          2,
-          7
-        ]
-      },
-      {
-        "geracao": 8,
-        "numeros": [
-          6,
-          11,
-          17,
-          22,
-          24
-        ],
-        "estrelas": [
-          7,
-          9
-        ]
-      },
-      {
-        "geracao": 9,
-        "numeros": [
-          6,
-          11,
-          17,
-          22,
-          24
-        ],
-        "estrelas": [
-          7,
-          9
-        ]
-      },
-      {
-        "geracao": 10,
-        "numeros": [
-          6,
-          11,
-          17,
-          22,
-          24
-        ],
-        "estrelas": [
-          3,
-          10
-        ]
-      },
-      {
-        "geracao": 11,
-        "numeros": [
-          6,
-          11,
-          17,
-          22,
-          24
-        ],
-        "estrelas": [
-          6,
-          8
-        ]
-      },
-      {
-        "geracao": 12,
-        "numeros": [
-          6,
-          11,
-          17,
-          22,
-          24
-        ],
-        "estrelas": [
-          7,
-          8
-        ]
-      },
-      {
-        "geracao": 13,
-        "numeros": [
-          6,
-          11,
-          17,
-          21,
-          24
-        ],
-        "estrelas": [
-          3,
-          7
-        ]
-      },
-      {
-        "geracao": 14,
-        "numeros": [
-          6,
-          11,
-          17,
-          22,
-          24
-        ],
-        "estrelas": [
-          2,
-          4
-        ]
-      }
-    ],
-    "amuletos": [],
-    "estado": "VIVO",
-    "treinos": 0
-  },
-  {
-    "id": "H-00017",
-    "name": "Elarion do Bosque",
-    "raca": "Chefe Tribal",
-    "casa": "Casa das Estrelas",
-    "generation": 1,
-    "pais": [],
-    "genoma": {
-      "clareza": 0.31831680308364874,
-      "confusao": 0.7352256645527907,
-      "caos": 0.7175225613822999,
-      "memoria": 8,
-      "ossos": [
-        "sol",
-        "montanha",
-        "fogo",
-        "corvo",
-        "corvo"
-      ]
-    },
-    "pontos": 95,
-    "titulo": "Errante das Sombras",
-    "keys": [
-      {
-        "geracao": 1,
-        "numeros": [
-          18,
-          23,
-          25,
-          41,
-          50
-        ],
-        "estrelas": [
-          2,
-          10
-        ]
-      },
-      {
-        "geracao": 2,
-        "numeros": [
-          18,
-          23,
-          28,
-          33,
-          50
-        ],
-        "estrelas": [
-          5,
-          8
-        ]
-      },
-      {
-        "geracao": 3,
-        "numeros": [
-          4,
-          31,
-          36,
-          45,
-          50
-        ],
-        "estrelas": [
-          3,
           5
         ]
       },
       {
-        "geracao": 4,
+        "geracao": 11,
         "numeros": [
-          4,
-          27,
-          42,
-          43,
-          50
-        ],
-        "estrelas": [
-          5,
-          8
-        ]
-      },
-      {
-        "geracao": 5,
-        "numeros": [
-          6,
-          26,
-          33,
-          38,
-          50
-        ],
-        "estrelas": [
-          4,
-          6
-        ]
-      },
-      {
-        "geracao": 6,
-        "numeros": [
-          1,
-          15,
-          45,
-          48,
-          50
-        ],
-        "estrelas": [
-          1,
-          7
-        ]
-      },
-      {
-        "geracao": 7,
-        "numeros": [
-          5,
+          16,
           17,
-          34,
-          39,
-          50
+          19,
+          22,
+          23
         ],
         "estrelas": [
-          1,
-          11
+          9,
+          10
         ]
       },
       {
-        "geracao": 8,
+        "geracao": 12,
         "numeros": [
-          1,
+          5,
+          9,
+          17,
+          26,
+          27
+        ],
+        "estrelas": [
+          8,
+          12
+        ]
+      },
+      {
+        "geracao": 13,
+        "numeros": [
+          9,
+          11,
           14,
-          33,
-          45,
-          50
+          19,
+          20
         ],
         "estrelas": [
-          2,
-          4
+          4,
+          9
         ]
       },
       {
-        "geracao": 9,
+        "geracao": 14,
         "numeros": [
-          31,
-          37,
-          41,
-          48,
-          50
+          13,
+          16,
+          24,
+          27,
+          34
         ],
         "estrelas": [
           5,
           7
-        ]
-      },
-      {
-        "geracao": 10,
-        "numeros": [
-          17,
-          21,
-          27,
-          39,
-          50
-        ],
-        "estrelas": [
-          2,
-          4
-        ]
-      },
-      {
-        "geracao": 11,
-        "numeros": [
-          16,
-          38,
-          41,
-          46,
-          50
-        ],
-        "estrelas": [
-          6,
-          8
-        ]
-      },
-      {
-        "geracao": 12,
-        "numeros": [
-          1,
-          21,
-          30,
-          44,
-          50
-        ],
-        "estrelas": [
-          6,
-          8
-        ]
-      },
-      {
-        "geracao": 13,
-        "numeros": [
-          6,
-          13,
-          31,
-          35,
-          50
-        ],
-        "estrelas": [
-          2,
-          3
-        ]
-      },
-      {
-        "geracao": 14,
-        "numeros": [
-          15,
-          16,
-          37,
-          47,
-          50
-        ],
-        "estrelas": [
-          1,
-          11
-        ]
-      }
-    ],
-    "amuletos": [],
-    "estado": "VIVO",
-    "treinos": 0
-  },
-  {
-    "id": "H-00063",
-    "name": "Selene dos Astros",
-    "raca": "Vidente",
-    "casa": "Casa Tribal",
-    "generation": 1,
-    "pais": [],
-    "genoma": {
-      "clareza": 0.42917023241725605,
-      "confusao": 0.8555106165193075,
-      "caos": 0.4528989270959364,
-      "memoria": 7
-    },
-    "pontos": 95,
-    "titulo": "Errante das Sombras",
-    "keys": [
-      {
-        "geracao": 1,
-        "numeros": [
-          3,
-          11,
-          23,
-          25,
-          26
-        ],
-        "estrelas": [
-          6,
-          9
-        ]
-      },
-      {
-        "geracao": 2,
-        "numeros": [
-          13,
-          21,
-          33,
-          39,
-          44
-        ],
-        "estrelas": [
-          6,
-          8
-        ]
-      },
-      {
-        "geracao": 3,
-        "numeros": [
-          4,
-          17,
-          21,
-          34,
-          44
-        ],
-        "estrelas": [
-          2,
-          3
-        ]
-      },
-      {
-        "geracao": 4,
-        "numeros": [
-          11,
-          22,
-          37,
-          42,
-          45
-        ],
-        "estrelas": [
-          3,
-          9
-        ]
-      },
-      {
-        "geracao": 5,
-        "numeros": [
-          2,
-          14,
-          23,
-          37,
-          43
-        ],
-        "estrelas": [
-          3,
-          6
-        ]
-      },
-      {
-        "geracao": 6,
-        "numeros": [
-          1,
-          28,
-          39,
-          42,
-          45
-        ],
-        "estrelas": [
-          8,
-          9
-        ]
-      },
-      {
-        "geracao": 7,
-        "numeros": [
-          7,
-          19,
-          20,
-          42,
-          50
-        ],
-        "estrelas": [
-          8,
-          9
-        ]
-      },
-      {
-        "geracao": 8,
-        "numeros": [
-          5,
-          10,
-          11,
-          23,
-          45
-        ],
-        "estrelas": [
-          6,
-          8
-        ]
-      },
-      {
-        "geracao": 9,
-        "numeros": [
-          10,
-          21,
-          29,
-          42,
-          50
-        ],
-        "estrelas": [
-          3,
-          9
-        ]
-      },
-      {
-        "geracao": 10,
-        "numeros": [
-          4,
-          9,
-          17,
-          21,
-          45
-        ],
-        "estrelas": [
-          2,
-          3
-        ]
-      },
-      {
-        "geracao": 11,
-        "numeros": [
-          12,
-          23,
-          25,
-          37,
-          44
-        ],
-        "estrelas": [
-          3,
-          9
-        ]
-      },
-      {
-        "geracao": 12,
-        "numeros": [
-          12,
-          22,
-          37,
-          41,
-          42
-        ],
-        "estrelas": [
-          2,
-          3
-        ]
-      },
-      {
-        "geracao": 13,
-        "numeros": [
-          7,
-          18,
-          37,
-          42,
-          50
-        ],
-        "estrelas": [
-          6,
-          9
-        ]
-      },
-      {
-        "geracao": 14,
-        "numeros": [
-          10,
-          25,
-          38,
-          45,
-          47
-        ],
-        "estrelas": [
-          2,
-          8
-        ]
-      }
-    ],
-    "amuletos": [],
-    "estado": "VIVO",
-    "treinos": 0
-  },
-  {
-    "id": "H-00008",
-    "name": "Velka dos Ossos",
-    "raca": "Bruxa",
-    "casa": "Casa Lunar",
-    "generation": 1,
-    "pais": [],
-    "genoma": {
-      "clareza": 0.5773424489828008,
-      "confusao": 0.8171968781400152,
-      "caos": 0.9731885524624675,
-      "memoria": 3,
-      "conhecimento_oculto": [
-        {
-          "tipo": "frios",
-          "livro": "Livro dos Esquecidos",
-          "numeros": [
-            22,
-            33,
-            46,
-            18,
-            40
-          ]
-        },
-        {
-          "tipo": "atrasos",
-          "livro": "Crónica dos Números Ausentes",
-          "numeros": [
-            2,
-            16,
-            18,
-            21,
-            14
-          ]
-        }
-      ],
-      "virus_malphas": "Espelho Negro",
-      "infeccao_oculta": true,
-      "geracao_infeccao": 6
-    },
-    "pontos": 91,
-    "titulo": "Errante das Sombras",
-    "keys": [
-      {
-        "geracao": 1,
-        "numeros": [
-          18,
-          29,
-          43,
-          45,
-          47
-        ],
-        "estrelas": [
-          1,
-          8
-        ]
-      },
-      {
-        "geracao": 2,
-        "numeros": [
-          17,
-          23,
-          32,
-          43,
-          47
-        ],
-        "estrelas": [
-          4,
-          8
-        ]
-      },
-      {
-        "geracao": 3,
-        "numeros": [
-          21,
-          22,
-          23,
-          40,
-          47
-        ],
-        "estrelas": [
-          8,
-          12
-        ]
-      },
-      {
-        "geracao": 4,
-        "numeros": [
-          9,
-          21,
-          41,
-          42,
-          50
-        ],
-        "estrelas": [
-          6,
-          11
-        ]
-      },
-      {
-        "geracao": 5,
-        "numeros": [
-          2,
-          18,
-          21,
-          45,
-          46
-        ],
-        "estrelas": [
-          9,
-          12
-        ]
-      },
-      {
-        "geracao": 6,
-        "numeros": [
-          21,
-          22,
-          29,
-          31,
-          47
-        ],
-        "estrelas": [
-          4,
-          9
-        ]
-      },
-      {
-        "geracao": 7,
-        "numeros": [
-          18,
-          19,
-          21,
-          31,
-          46
-        ],
-        "estrelas": [
-          8,
-          12
-        ]
-      },
-      {
-        "geracao": 8,
-        "numeros": [
-          17,
-          18,
-          28,
-          29,
-          32
-        ],
-        "estrelas": [
-          3,
-          4
-        ]
-      },
-      {
-        "geracao": 9,
-        "numeros": [
-          2,
-          9,
-          13,
-          19,
-          21
-        ],
-        "estrelas": [
-          8,
-          11
-        ]
-      },
-      {
-        "geracao": 10,
-        "numeros": [
-          9,
-          18,
-          19,
-          29,
-          36
-        ],
-        "estrelas": [
-          2,
-          12
-        ]
-      },
-      {
-        "geracao": 11,
-        "numeros": [
-          9,
-          10,
-          17,
-          18,
-          50
-        ],
-        "estrelas": [
-          3,
-          12
-        ]
-      },
-      {
-        "geracao": 12,
-        "numeros": [
-          19,
-          26,
-          29,
-          41,
-          46
-        ],
-        "estrelas": [
-          8,
-          12
-        ]
-      },
-      {
-        "geracao": 13,
-        "numeros": [
-          1,
-          25,
-          32,
-          44,
-          46
-        ],
-        "estrelas": [
-          1,
-          8
-        ]
-      },
-      {
-        "geracao": 14,
-        "numeros": [
-          19,
-          32,
-          33,
-          42,
-          46
-        ],
-        "estrelas": [
-          4,
-          9
         ]
       }
     ],
@@ -3376,275 +1363,30 @@
   },
   {
     "id": "H-00078",
-    "name": "Morgana dos Astros",
-    "raca": "Vidente",
-    "casa": "Casa do Bosque",
-    "generation": 2,
-    "pais": [
-      "H-00055",
-      "H-00008"
-    ],
-    "genoma": {
-      "clareza": 0.9803756366445172,
-      "confusao": 0.2128298537169182,
-      "caos": 0.027805970503343547,
-      "memoria": 2
-    },
-    "pontos": 90,
-    "titulo": "Errante das Sombras",
-    "keys": [
-      {
-        "geracao": 2,
-        "numeros": [
-          13,
-          17,
-          21,
-          26,
-          42
-        ],
-        "estrelas": [
-          3,
-          9
-        ]
-      },
-      {
-        "geracao": 3,
-        "numeros": [
-          16,
-          24,
-          37,
-          44,
-          45
-        ],
-        "estrelas": [
-          3,
-          9
-        ]
-      },
-      {
-        "geracao": 4,
-        "numeros": [
-          1,
-          22,
-          25,
-          42,
-          44
-        ],
-        "estrelas": [
-          2,
-          6
-        ]
-      },
-      {
-        "geracao": 5,
-        "numeros": [
-          3,
-          27,
-          29,
-          37,
-          44
-        ],
-        "estrelas": [
-          8,
-          9
-        ]
-      },
-      {
-        "geracao": 6,
-        "numeros": [
-          13,
-          19,
-          25,
-          27,
-          47
-        ],
-        "estrelas": [
-          2,
-          6
-        ]
-      },
-      {
-        "geracao": 7,
-        "numeros": [
-          15,
-          19,
-          38,
-          40,
-          44
-        ],
-        "estrelas": [
-          2,
-          8
-        ]
-      },
-      {
-        "geracao": 8,
-        "numeros": [
-          16,
-          23,
-          29,
-          31,
-          36
-        ],
-        "estrelas": [
-          6,
-          9
-        ]
-      },
-      {
-        "geracao": 9,
-        "numeros": [
-          7,
-          10,
-          11,
-          17,
-          45
-        ],
-        "estrelas": [
-          2,
-          6
-        ]
-      },
-      {
-        "geracao": 10,
-        "numeros": [
-          38,
-          39,
-          42,
-          45,
-          50
-        ],
-        "estrelas": [
-          3,
-          8
-        ]
-      },
-      {
-        "geracao": 11,
-        "numeros": [
-          12,
-          18,
-          25,
-          29,
-          45
-        ],
-        "estrelas": [
-          3,
-          9
-        ]
-      },
-      {
-        "geracao": 12,
-        "numeros": [
-          10,
-          23,
-          35,
-          42,
-          50
-        ],
-        "estrelas": [
-          3,
-          8
-        ]
-      },
-      {
-        "geracao": 13,
-        "numeros": [
-          4,
-          10,
-          42,
-          44,
-          48
-        ],
-        "estrelas": [
-          2,
-          8
-        ]
-      },
-      {
-        "geracao": 14,
-        "numeros": [
-          15,
-          16,
-          17,
-          19,
-          44
-        ],
-        "estrelas": [
-          8,
-          9
-        ]
-      }
-    ],
-    "amuletos": [],
-    "estado": "VIVO",
-    "treinos": 0
-  },
-  {
-    "id": "H-00039",
-    "name": "Velka da Névoa",
+    "name": "Kael dos Astros",
     "raca": "Goblin",
     "casa": "Casa Lunar",
-    "generation": 1,
-    "pais": [],
+    "generation": 2,
+    "pais": [
+      "H-00054",
+      "H-00046"
+    ],
     "genoma": {
-      "clareza": 0.3496856996486911,
-      "confusao": 0.09977718387202528,
-      "caos": 0.5996037854867216,
-      "memoria": 2
+      "clareza": 0.3596093156276189,
+      "confusao": 0.38492254787204006,
+      "caos": 0.8894449119165039,
+      "memoria": 4
     },
-    "pontos": 85,
-    "titulo": "Errante das Sombras",
+    "pontos": 125,
+    "titulo": "Sussurrador do Destino",
     "keys": [
-      {
-        "geracao": 1,
-        "numeros": [
-          3,
-          4,
-          13,
-          37,
-          39
-        ],
-        "estrelas": [
-          3,
-          7
-        ]
-      },
       {
         "geracao": 2,
         "numeros": [
-          2,
-          4,
-          25,
-          35,
-          47
-        ],
-        "estrelas": [
-          2,
-          11
-        ]
-      },
-      {
-        "geracao": 3,
-        "numeros": [
-          4,
-          11,
-          15,
-          26,
-          42
-        ],
-        "estrelas": [
-          1,
-          9
-        ]
-      },
-      {
-        "geracao": 4,
-        "numeros": [
-          1,
-          7,
-          13,
-          15,
+          5,
+          12,
+          16,
+          21,
           22
         ],
         "estrelas": [
@@ -3653,360 +1395,171 @@
         ]
       },
       {
-        "geracao": 5,
+        "geracao": 3,
         "numeros": [
-          7,
-          23,
-          27,
-          33,
-          44
-        ],
-        "estrelas": [
-          5,
-          10
-        ]
-      },
-      {
-        "geracao": 6,
-        "numeros": [
-          8,
-          13,
-          17,
-          29,
-          42
-        ],
-        "estrelas": [
           6,
-          9
-        ]
-      },
-      {
-        "geracao": 7,
-        "numeros": [
-          4,
-          8,
-          24,
-          32,
-          50
-        ],
-        "estrelas": [
-          4,
-          8
-        ]
-      },
-      {
-        "geracao": 8,
-        "numeros": [
-          2,
-          9,
-          25,
-          30,
-          43
-        ],
-        "estrelas": [
-          1,
-          9
-        ]
-      },
-      {
-        "geracao": 9,
-        "numeros": [
-          5,
-          6,
-          7,
-          17,
-          38
-        ],
-        "estrelas": [
-          10,
-          12
-        ]
-      },
-      {
-        "geracao": 10,
-        "numeros": [
-          2,
-          21,
-          29,
-          38,
-          43
-        ],
-        "estrelas": [
-          4,
-          6
-        ]
-      },
-      {
-        "geracao": 11,
-        "numeros": [
-          2,
-          25,
-          35,
-          43,
-          50
-        ],
-        "estrelas": [
-          4,
-          8
-        ]
-      },
-      {
-        "geracao": 12,
-        "numeros": [
-          1,
-          17,
-          26,
-          27,
-          42
-        ],
-        "estrelas": [
-          10,
-          11
-        ]
-      },
-      {
-        "geracao": 13,
-        "numeros": [
-          5,
-          18,
-          28,
-          32,
+          16,
+          19,
+          34,
           36
         ],
         "estrelas": [
           1,
-          2
-        ]
-      },
-      {
-        "geracao": 14,
-        "numeros": [
-          19,
-          21,
-          26,
-          43,
-          45
-        ],
-        "estrelas": [
-          10,
-          12
-        ]
-      }
-    ],
-    "amuletos": [],
-    "estado": "VIVO",
-    "treinos": 0
-  },
-  {
-    "id": "H-00055",
-    "name": "Aruk do Bosque",
-    "raca": "Vidente",
-    "casa": "Casa do Bosque",
-    "generation": 1,
-    "pais": [],
-    "genoma": {
-      "clareza": 0.057702665708832535,
-      "confusao": 0.23785352000063908,
-      "caos": 0.08853177656897326,
-      "memoria": 5
-    },
-    "pontos": 85,
-    "titulo": "Errante das Sombras",
-    "keys": [
-      {
-        "geracao": 1,
-        "numeros": [
-          9,
-          17,
-          41,
-          43,
-          50
-        ],
-        "estrelas": [
-          2,
-          3
-        ]
-      },
-      {
-        "geracao": 2,
-        "numeros": [
-          16,
-          21,
-          25,
-          35,
-          43
-        ],
-        "estrelas": [
-          3,
-          9
-        ]
-      },
-      {
-        "geracao": 3,
-        "numeros": [
-          10,
-          14,
-          19,
-          30,
-          45
-        ],
-        "estrelas": [
-          6,
-          8
+          11
         ]
       },
       {
         "geracao": 4,
         "numeros": [
-          2,
-          17,
-          25,
+          9,
+          13,
           29,
-          36
+          31,
+          33
         ],
         "estrelas": [
-          8,
-          9
+          3,
+          12
         ]
       },
       {
         "geracao": 5,
         "numeros": [
-          5,
-          14,
-          27,
-          37,
+          2,
+          7,
+          13,
+          24,
           44
         ],
         "estrelas": [
-          2,
+          5,
           8
         ]
       },
       {
         "geracao": 6,
         "numeros": [
-          7,
-          10,
-          17,
-          25,
-          32
+          13,
+          22,
+          41,
+          43,
+          44
         ],
         "estrelas": [
-          6,
-          8
+          1,
+          6
         ]
       },
       {
         "geracao": 7,
         "numeros": [
-          10,
-          17,
-          25,
-          33,
-          50
+          7,
+          30,
+          31,
+          39,
+          44
         ],
         "estrelas": [
-          3,
-          8
+          2,
+          7
         ]
       },
       {
         "geracao": 8,
         "numeros": [
-          19,
-          20,
-          23,
-          26,
-          34
+          2,
+          7,
+          21,
+          43,
+          45
         ],
         "estrelas": [
           2,
-          9
+          4
         ]
       },
       {
         "geracao": 9,
         "numeros": [
-          8,
-          21,
-          25,
-          37,
-          50
+          7,
+          18,
+          19,
+          27,
+          42
         ],
         "estrelas": [
-          3,
-          9
+          2,
+          5
         ]
       },
       {
         "geracao": 10,
         "numeros": [
-          11,
-          25,
-          31,
-          39,
+          3,
+          23,
+          24,
+          30,
           42
         ],
         "estrelas": [
-          3,
-          6
+          5,
+          12
         ]
       },
       {
         "geracao": 11,
         "numeros": [
-          10,
-          19,
-          23,
-          28,
-          36
+          5,
+          12,
+          22,
+          25,
+          38
         ],
         "estrelas": [
-          6,
-          9
+          4,
+          5
         ]
       },
       {
         "geracao": 12,
         "numeros": [
-          27,
+          9,
+          17,
           38,
-          42,
-          44,
-          49
+          41,
+          43
         ],
         "estrelas": [
           2,
-          3
+          8
         ]
       },
       {
         "geracao": 13,
         "numeros": [
-          4,
-          5,
-          10,
-          21,
-          47
+          7,
+          12,
+          27,
+          44,
+          49
         ],
         "estrelas": [
-          2,
-          3
+          7,
+          12
         ]
       },
       {
         "geracao": 14,
         "numeros": [
-          21,
-          30,
-          43,
-          44,
-          45
+          12,
+          24,
+          35,
+          37,
+          42
         ],
         "estrelas": [
-          2,
-          8
+          7,
+          11
         ]
       }
     ],
@@ -4015,17 +1568,17 @@
     "treinos": 0
   },
   {
-    "id": "H-00019",
-    "name": "Selene da Lua Fria",
-    "raca": "Elfo",
-    "casa": "Casa do Caos",
+    "id": "H-00038",
+    "name": "Aion Pedra-Partida",
+    "raca": "Cronomante",
+    "casa": "Casa Lunar",
     "generation": 1,
     "pais": [],
     "genoma": {
-      "clareza": 0.4950563158746156,
-      "confusao": 0.3620876215078369,
-      "caos": 0.8839683506753953,
-      "memoria": 5,
+      "clareza": 0.11530389705227151,
+      "confusao": 0.612021105973868,
+      "caos": 0.7175738746482453,
+      "memoria": 2,
       "conhecimento_oculto": [
         {
           "tipo": "gaps",
@@ -4036,6 +1589,2287 @@
             3,
             4,
             5
+          ]
+        },
+        {
+          "tipo": "historico",
+          "livro": "Grimório de Todas as Extrações",
+          "total_extracoes": 1962
+        }
+      ]
+    },
+    "pontos": 125,
+    "titulo": "Sussurrador do Destino",
+    "keys": [
+      {
+        "geracao": 1,
+        "numeros": [
+          16,
+          21,
+          24,
+          26,
+          39
+        ],
+        "estrelas": [
+          5,
+          8
+        ]
+      },
+      {
+        "geracao": 2,
+        "numeros": [
+          16,
+          21,
+          24,
+          26,
+          39
+        ],
+        "estrelas": [
+          5,
+          8
+        ]
+      },
+      {
+        "geracao": 3,
+        "numeros": [
+          16,
+          21,
+          24,
+          26,
+          39
+        ],
+        "estrelas": [
+          8,
+          11
+        ]
+      },
+      {
+        "geracao": 4,
+        "numeros": [
+          16,
+          21,
+          24,
+          26,
+          39
+        ],
+        "estrelas": [
+          5,
+          8
+        ]
+      },
+      {
+        "geracao": 5,
+        "numeros": [
+          16,
+          21,
+          24,
+          26,
+          39
+        ],
+        "estrelas": [
+          5,
+          8
+        ]
+      },
+      {
+        "geracao": 6,
+        "numeros": [
+          16,
+          18,
+          24,
+          26,
+          39
+        ],
+        "estrelas": [
+          5,
+          8
+        ]
+      },
+      {
+        "geracao": 7,
+        "numeros": [
+          2,
+          21,
+          24,
+          26,
+          39
+        ],
+        "estrelas": [
+          5,
+          8
+        ]
+      },
+      {
+        "geracao": 8,
+        "numeros": [
+          16,
+          21,
+          24,
+          26,
+          39
+        ],
+        "estrelas": [
+          5,
+          8
+        ]
+      },
+      {
+        "geracao": 9,
+        "numeros": [
+          16,
+          18,
+          21,
+          26,
+          39
+        ],
+        "estrelas": [
+          5,
+          8
+        ]
+      },
+      {
+        "geracao": 10,
+        "numeros": [
+          16,
+          21,
+          24,
+          26,
+          39
+        ],
+        "estrelas": [
+          2,
+          5
+        ]
+      },
+      {
+        "geracao": 11,
+        "numeros": [
+          16,
+          21,
+          24,
+          26,
+          39
+        ],
+        "estrelas": [
+          3,
+          8
+        ]
+      },
+      {
+        "geracao": 12,
+        "numeros": [
+          16,
+          21,
+          24,
+          26,
+          39
+        ],
+        "estrelas": [
+          8,
+          9
+        ]
+      },
+      {
+        "geracao": 13,
+        "numeros": [
+          16,
+          21,
+          24,
+          26,
+          39
+        ],
+        "estrelas": [
+          2,
+          5
+        ]
+      },
+      {
+        "geracao": 14,
+        "numeros": [
+          16,
+          21,
+          24,
+          26,
+          39
+        ],
+        "estrelas": [
+          5,
+          8
+        ]
+      }
+    ],
+    "amuletos": [],
+    "estado": "VIVO",
+    "treinos": 0
+  },
+  {
+    "id": "H-00093",
+    "name": "Morgana do Bosque",
+    "raca": "Bruxa",
+    "casa": "Casa Lunar",
+    "generation": 2,
+    "pais": [
+      "H-00022",
+      "H-00020"
+    ],
+    "genoma": {
+      "clareza": 0.3936101076434795,
+      "confusao": 0.06835780787626722,
+      "caos": 0.6292204673130101,
+      "memoria": 1,
+      "conhecimento_oculto": [
+        {
+          "tipo": "atrasos",
+          "livro": "Crónica dos Números Ausentes",
+          "numeros": [
+            2,
+            16,
+            18,
+            21,
+            14
+          ]
+        },
+        {
+          "tipo": "quentes",
+          "livro": "Livro das Chamas Frequentes",
+          "numeros": [
+            44,
+            42,
+            23,
+            19,
+            29
+          ]
+        }
+      ]
+    },
+    "pontos": 113,
+    "titulo": "Errante das Sombras",
+    "keys": [
+      {
+        "geracao": 2,
+        "numeros": [
+          4,
+          21,
+          22,
+          37,
+          43
+        ],
+        "estrelas": [
+          6,
+          11
+        ]
+      },
+      {
+        "geracao": 3,
+        "numeros": [
+          18,
+          20,
+          29,
+          36,
+          42
+        ],
+        "estrelas": [
+          3,
+          4
+        ]
+      },
+      {
+        "geracao": 4,
+        "numeros": [
+          18,
+          25,
+          33,
+          47,
+          50
+        ],
+        "estrelas": [
+          6,
+          10
+        ]
+      },
+      {
+        "geracao": 5,
+        "numeros": [
+          21,
+          32,
+          33,
+          36,
+          45
+        ],
+        "estrelas": [
+          6,
+          10
+        ]
+      },
+      {
+        "geracao": 6,
+        "numeros": [
+          14,
+          21,
+          29,
+          32,
+          43
+        ],
+        "estrelas": [
+          2,
+          10
+        ]
+      },
+      {
+        "geracao": 7,
+        "numeros": [
+          13,
+          19,
+          44,
+          46,
+          47
+        ],
+        "estrelas": [
+          9,
+          10
+        ]
+      },
+      {
+        "geracao": 8,
+        "numeros": [
+          23,
+          25,
+          40,
+          44,
+          46
+        ],
+        "estrelas": [
+          1,
+          6
+        ]
+      },
+      {
+        "geracao": 9,
+        "numeros": [
+          7,
+          23,
+          29,
+          43,
+          46
+        ],
+        "estrelas": [
+          6,
+          12
+        ]
+      },
+      {
+        "geracao": 10,
+        "numeros": [
+          19,
+          21,
+          31,
+          33,
+          47
+        ],
+        "estrelas": [
+          3,
+          12
+        ]
+      },
+      {
+        "geracao": 11,
+        "numeros": [
+          18,
+          19,
+          36,
+          37,
+          47
+        ],
+        "estrelas": [
+          4,
+          8
+        ]
+      },
+      {
+        "geracao": 12,
+        "numeros": [
+          18,
+          25,
+          29,
+          34,
+          40
+        ],
+        "estrelas": [
+          1,
+          3
+        ]
+      },
+      {
+        "geracao": 13,
+        "numeros": [
+          10,
+          22,
+          23,
+          32,
+          37
+        ],
+        "estrelas": [
+          3,
+          11
+        ]
+      },
+      {
+        "geracao": 14,
+        "numeros": [
+          2,
+          35,
+          37,
+          45,
+          47
+        ],
+        "estrelas": [
+          4,
+          8
+        ]
+      }
+    ],
+    "amuletos": [],
+    "estado": "VIVO",
+    "treinos": 0
+  },
+  {
+    "id": "H-00034",
+    "name": "Velka da Névoa",
+    "raca": "Cronomante",
+    "casa": "Casa Tribal",
+    "generation": 1,
+    "pais": [],
+    "genoma": {
+      "clareza": 0.11637820331731707,
+      "confusao": 0.7723037740699609,
+      "caos": 0.07515204766836259,
+      "memoria": 4,
+      "conhecimento_oculto": [
+        {
+          "tipo": "atrasos",
+          "livro": "Crónica dos Números Ausentes",
+          "numeros": [
+            2,
+            16,
+            18,
+            21,
+            14
+          ]
+        },
+        {
+          "tipo": "gaps",
+          "livro": "Geometria Secreta da Teia",
+          "gaps": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        }
+      ]
+    },
+    "pontos": 105,
+    "titulo": "Errante das Sombras",
+    "keys": [
+      {
+        "geracao": 1,
+        "numeros": [
+          25,
+          30,
+          33,
+          35,
+          48
+        ],
+        "estrelas": [
+          8,
+          11
+        ]
+      },
+      {
+        "geracao": 2,
+        "numeros": [
+          25,
+          30,
+          33,
+          35,
+          48
+        ],
+        "estrelas": [
+          8,
+          11
+        ]
+      },
+      {
+        "geracao": 3,
+        "numeros": [
+          25,
+          30,
+          33,
+          35,
+          48
+        ],
+        "estrelas": [
+          8,
+          11
+        ]
+      },
+      {
+        "geracao": 4,
+        "numeros": [
+          25,
+          30,
+          33,
+          35,
+          48
+        ],
+        "estrelas": [
+          8,
+          11
+        ]
+      },
+      {
+        "geracao": 5,
+        "numeros": [
+          14,
+          30,
+          33,
+          35,
+          48
+        ],
+        "estrelas": [
+          8,
+          11
+        ]
+      },
+      {
+        "geracao": 6,
+        "numeros": [
+          25,
+          30,
+          33,
+          35,
+          48
+        ],
+        "estrelas": [
+          8,
+          11
+        ]
+      },
+      {
+        "geracao": 7,
+        "numeros": [
+          21,
+          25,
+          30,
+          33,
+          48
+        ],
+        "estrelas": [
+          8,
+          11
+        ]
+      },
+      {
+        "geracao": 8,
+        "numeros": [
+          16,
+          25,
+          33,
+          35,
+          48
+        ],
+        "estrelas": [
+          8,
+          11
+        ]
+      },
+      {
+        "geracao": 9,
+        "numeros": [
+          25,
+          30,
+          33,
+          35,
+          48
+        ],
+        "estrelas": [
+          8,
+          11
+        ]
+      },
+      {
+        "geracao": 10,
+        "numeros": [
+          25,
+          30,
+          33,
+          35,
+          48
+        ],
+        "estrelas": [
+          8,
+          11
+        ]
+      },
+      {
+        "geracao": 11,
+        "numeros": [
+          25,
+          30,
+          33,
+          35,
+          48
+        ],
+        "estrelas": [
+          8,
+          11
+        ]
+      },
+      {
+        "geracao": 12,
+        "numeros": [
+          25,
+          30,
+          33,
+          35,
+          48
+        ],
+        "estrelas": [
+          8,
+          11
+        ]
+      },
+      {
+        "geracao": 13,
+        "numeros": [
+          14,
+          25,
+          30,
+          33,
+          48
+        ],
+        "estrelas": [
+          8,
+          11
+        ]
+      },
+      {
+        "geracao": 14,
+        "numeros": [
+          2,
+          25,
+          33,
+          35,
+          48
+        ],
+        "estrelas": [
+          8,
+          11
+        ]
+      }
+    ],
+    "amuletos": [],
+    "estado": "VIVO",
+    "treinos": 0
+  },
+  {
+    "id": "H-00109",
+    "name": "Lyra do Bosque",
+    "raca": "Goblin",
+    "casa": "Casa Lunar",
+    "generation": 2,
+    "pais": [
+      "H-00004",
+      "H-00009"
+    ],
+    "genoma": {
+      "clareza": 0.8130094617419306,
+      "confusao": 0.03539661329533472,
+      "caos": 0.5516768511796362,
+      "memoria": 2,
+      "virus_malphas": "Semente da Corrupção",
+      "infeccao_oculta": true,
+      "geracao_infeccao": 3
+    },
+    "pontos": 104,
+    "titulo": "Sussurrador do Destino",
+    "keys": [
+      {
+        "geracao": 2,
+        "numeros": [
+          3,
+          6,
+          17,
+          22,
+          35
+        ],
+        "estrelas": [
+          3,
+          9
+        ]
+      },
+      {
+        "geracao": 3,
+        "numeros": [
+          4,
+          10,
+          27,
+          44,
+          49
+        ],
+        "estrelas": [
+          1,
+          7
+        ]
+      },
+      {
+        "geracao": 4,
+        "numeros": [
+          18,
+          27,
+          31,
+          35,
+          48
+        ],
+        "estrelas": [
+          3,
+          8
+        ]
+      },
+      {
+        "geracao": 5,
+        "numeros": [
+          14,
+          16,
+          27,
+          47,
+          49
+        ],
+        "estrelas": [
+          6,
+          11
+        ]
+      },
+      {
+        "geracao": 6,
+        "numeros": [
+          2,
+          5,
+          32,
+          39,
+          43
+        ],
+        "estrelas": [
+          2,
+          5
+        ]
+      },
+      {
+        "geracao": 7,
+        "numeros": [
+          15,
+          25,
+          30,
+          31,
+          50
+        ],
+        "estrelas": [
+          7,
+          12
+        ]
+      },
+      {
+        "geracao": 8,
+        "numeros": [
+          7,
+          15,
+          21,
+          23,
+          48
+        ],
+        "estrelas": [
+          3,
+          11
+        ]
+      },
+      {
+        "geracao": 9,
+        "numeros": [
+          1,
+          23,
+          27,
+          33,
+          47
+        ],
+        "estrelas": [
+          5,
+          9
+        ]
+      },
+      {
+        "geracao": 10,
+        "numeros": [
+          15,
+          19,
+          20,
+          27,
+          30
+        ],
+        "estrelas": [
+          3,
+          9
+        ]
+      },
+      {
+        "geracao": 11,
+        "numeros": [
+          8,
+          14,
+          35,
+          37,
+          49
+        ],
+        "estrelas": [
+          2,
+          7
+        ]
+      },
+      {
+        "geracao": 12,
+        "numeros": [
+          9,
+          25,
+          36,
+          45,
+          48
+        ],
+        "estrelas": [
+          6,
+          10
+        ]
+      },
+      {
+        "geracao": 13,
+        "numeros": [
+          12,
+          18,
+          30,
+          43,
+          49
+        ],
+        "estrelas": [
+          1,
+          10
+        ]
+      },
+      {
+        "geracao": 14,
+        "numeros": [
+          13,
+          36,
+          40,
+          42,
+          48
+        ],
+        "estrelas": [
+          6,
+          9
+        ]
+      }
+    ],
+    "amuletos": [],
+    "estado": "VIVO",
+    "treinos": 0
+  },
+  {
+    "id": "H-00102",
+    "name": "Aion dos Astros",
+    "raca": "Esqueleto",
+    "casa": "Casa Lunar",
+    "generation": 2,
+    "pais": [
+      "H-00070",
+      "H-00053"
+    ],
+    "genoma": {
+      "clareza": 0.45950345872235154,
+      "confusao": 0.8409861668455952,
+      "caos": 0.27090313156927215,
+      "memoria": 3,
+      "ultimo_ritual_osseo": {
+        "inicio_numeros": 15,
+        "fim_numeros": 39,
+        "largura_numeros": 25,
+        "inicio_estrelas": 6,
+        "fim_estrelas": 11,
+        "largura_estrelas": 6
+      },
+      "virus_malphas": "Semente da Corrupção",
+      "infeccao_oculta": true,
+      "geracao_infeccao": 5
+    },
+    "pontos": 103,
+    "titulo": "Observador Celeste",
+    "keys": [
+      {
+        "geracao": 2,
+        "numeros": [
+          4,
+          6,
+          15,
+          17,
+          19
+        ],
+        "estrelas": [
+          4,
+          8
+        ]
+      },
+      {
+        "geracao": 3,
+        "numeros": [
+          21,
+          22,
+          28,
+          35,
+          41
+        ],
+        "estrelas": [
+          9,
+          11
+        ]
+      },
+      {
+        "geracao": 4,
+        "numeros": [
+          8,
+          18,
+          19,
+          20,
+          27
+        ],
+        "estrelas": [
+          3,
+          6
+        ]
+      },
+      {
+        "geracao": 5,
+        "numeros": [
+          4,
+          11,
+          16,
+          21,
+          24
+        ],
+        "estrelas": [
+          6,
+          9
+        ]
+      },
+      {
+        "geracao": 6,
+        "numeros": [
+          21,
+          27,
+          36,
+          43,
+          45
+        ],
+        "estrelas": [
+          3,
+          5
+        ]
+      },
+      {
+        "geracao": 7,
+        "numeros": [
+          6,
+          10,
+          12,
+          14,
+          19
+        ],
+        "estrelas": [
+          4,
+          8
+        ]
+      },
+      {
+        "geracao": 8,
+        "numeros": [
+          22,
+          24,
+          29,
+          32,
+          38
+        ],
+        "estrelas": [
+          10,
+          12
+        ]
+      },
+      {
+        "geracao": 9,
+        "numeros": [
+          26,
+          27,
+          30,
+          43,
+          45
+        ],
+        "estrelas": [
+          5,
+          9
+        ]
+      },
+      {
+        "geracao": 10,
+        "numeros": [
+          14,
+          24,
+          29,
+          35,
+          38
+        ],
+        "estrelas": [
+          1,
+          5
+        ]
+      },
+      {
+        "geracao": 11,
+        "numeros": [
+          18,
+          22,
+          25,
+          26,
+          29
+        ],
+        "estrelas": [
+          9,
+          10
+        ]
+      },
+      {
+        "geracao": 12,
+        "numeros": [
+          28,
+          34,
+          41,
+          46,
+          48
+        ],
+        "estrelas": [
+          8,
+          9
+        ]
+      },
+      {
+        "geracao": 13,
+        "numeros": [
+          7,
+          8,
+          9,
+          14,
+          27
+        ],
+        "estrelas": [
+          3,
+          4
+        ]
+      },
+      {
+        "geracao": 14,
+        "numeros": [
+          18,
+          21,
+          30,
+          32,
+          34
+        ],
+        "estrelas": [
+          6,
+          7
+        ]
+      }
+    ],
+    "amuletos": [],
+    "estado": "VIVO",
+    "treinos": 0
+  },
+  {
+    "id": "H-00017",
+    "name": "Velka dos Astros",
+    "raca": "Vidente",
+    "casa": "Casa Tribal",
+    "generation": 1,
+    "pais": [],
+    "genoma": {
+      "clareza": 0.5028186278677295,
+      "confusao": 0.47094540039257027,
+      "caos": 0.81678922435998,
+      "memoria": 6
+    },
+    "pontos": 100,
+    "titulo": "Errante das Sombras",
+    "keys": [
+      {
+        "geracao": 1,
+        "numeros": [
+          10,
+          11,
+          19,
+          41,
+          44
+        ],
+        "estrelas": [
+          3,
+          6
+        ]
+      },
+      {
+        "geracao": 2,
+        "numeros": [
+          1,
+          9,
+          19,
+          30,
+          45
+        ],
+        "estrelas": [
+          3,
+          9
+        ]
+      },
+      {
+        "geracao": 3,
+        "numeros": [
+          14,
+          19,
+          42,
+          44,
+          50
+        ],
+        "estrelas": [
+          6,
+          9
+        ]
+      },
+      {
+        "geracao": 4,
+        "numeros": [
+          7,
+          16,
+          23,
+          44,
+          50
+        ],
+        "estrelas": [
+          2,
+          3
+        ]
+      },
+      {
+        "geracao": 5,
+        "numeros": [
+          10,
+          25,
+          28,
+          29,
+          38
+        ],
+        "estrelas": [
+          2,
+          3
+        ]
+      },
+      {
+        "geracao": 6,
+        "numeros": [
+          22,
+          25,
+          38,
+          44,
+          49
+        ],
+        "estrelas": [
+          6,
+          9
+        ]
+      },
+      {
+        "geracao": 7,
+        "numeros": [
+          13,
+          17,
+          35,
+          45,
+          47
+        ],
+        "estrelas": [
+          8,
+          9
+        ]
+      },
+      {
+        "geracao": 8,
+        "numeros": [
+          10,
+          14,
+          25,
+          29,
+          36
+        ],
+        "estrelas": [
+          8,
+          9
+        ]
+      },
+      {
+        "geracao": 9,
+        "numeros": [
+          10,
+          28,
+          30,
+          46,
+          50
+        ],
+        "estrelas": [
+          6,
+          9
+        ]
+      },
+      {
+        "geracao": 10,
+        "numeros": [
+          5,
+          25,
+          29,
+          43,
+          49
+        ],
+        "estrelas": [
+          3,
+          9
+        ]
+      },
+      {
+        "geracao": 11,
+        "numeros": [
+          17,
+          18,
+          19,
+          25,
+          34
+        ],
+        "estrelas": [
+          6,
+          8
+        ]
+      },
+      {
+        "geracao": 12,
+        "numeros": [
+          13,
+          23,
+          30,
+          36,
+          44
+        ],
+        "estrelas": [
+          3,
+          6
+        ]
+      },
+      {
+        "geracao": 13,
+        "numeros": [
+          10,
+          15,
+          17,
+          21,
+          28
+        ],
+        "estrelas": [
+          2,
+          8
+        ]
+      },
+      {
+        "geracao": 14,
+        "numeros": [
+          7,
+          17,
+          19,
+          44,
+          46
+        ],
+        "estrelas": [
+          3,
+          6
+        ]
+      }
+    ],
+    "amuletos": [],
+    "estado": "VIVO",
+    "treinos": 0
+  },
+  {
+    "id": "H-00046",
+    "name": "Velka dos Ossos",
+    "raca": "Goblin",
+    "casa": "Casa do Caos",
+    "generation": 1,
+    "pais": [],
+    "genoma": {
+      "clareza": 0.5258226060778106,
+      "confusao": 0.6392172786250744,
+      "caos": 0.5185835835876094,
+      "memoria": 5
+    },
+    "pontos": 100,
+    "titulo": "Observador Celeste",
+    "keys": [
+      {
+        "geracao": 1,
+        "numeros": [
+          3,
+          11,
+          26,
+          47,
+          49
+        ],
+        "estrelas": [
+          3,
+          4
+        ]
+      },
+      {
+        "geracao": 2,
+        "numeros": [
+          5,
+          15,
+          24,
+          40,
+          46
+        ],
+        "estrelas": [
+          6,
+          12
+        ]
+      },
+      {
+        "geracao": 3,
+        "numeros": [
+          11,
+          14,
+          31,
+          48,
+          49
+        ],
+        "estrelas": [
+          4,
+          11
+        ]
+      },
+      {
+        "geracao": 4,
+        "numeros": [
+          16,
+          20,
+          37,
+          42,
+          50
+        ],
+        "estrelas": [
+          4,
+          6
+        ]
+      },
+      {
+        "geracao": 5,
+        "numeros": [
+          7,
+          10,
+          32,
+          41,
+          50
+        ],
+        "estrelas": [
+          3,
+          5
+        ]
+      },
+      {
+        "geracao": 6,
+        "numeros": [
+          10,
+          19,
+          28,
+          38,
+          40
+        ],
+        "estrelas": [
+          5,
+          7
+        ]
+      },
+      {
+        "geracao": 7,
+        "numeros": [
+          1,
+          5,
+          32,
+          36,
+          41
+        ],
+        "estrelas": [
+          6,
+          7
+        ]
+      },
+      {
+        "geracao": 8,
+        "numeros": [
+          2,
+          11,
+          23,
+          35,
+          38
+        ],
+        "estrelas": [
+          5,
+          9
+        ]
+      },
+      {
+        "geracao": 9,
+        "numeros": [
+          6,
+          13,
+          17,
+          34,
+          45
+        ],
+        "estrelas": [
+          4,
+          10
+        ]
+      },
+      {
+        "geracao": 10,
+        "numeros": [
+          4,
+          5,
+          29,
+          44,
+          45
+        ],
+        "estrelas": [
+          5,
+          10
+        ]
+      },
+      {
+        "geracao": 11,
+        "numeros": [
+          8,
+          17,
+          18,
+          20,
+          40
+        ],
+        "estrelas": [
+          3,
+          11
+        ]
+      },
+      {
+        "geracao": 12,
+        "numeros": [
+          1,
+          3,
+          30,
+          31,
+          37
+        ],
+        "estrelas": [
+          6,
+          7
+        ]
+      },
+      {
+        "geracao": 13,
+        "numeros": [
+          3,
+          10,
+          25,
+          30,
+          48
+        ],
+        "estrelas": [
+          2,
+          9
+        ]
+      },
+      {
+        "geracao": 14,
+        "numeros": [
+          2,
+          4,
+          34,
+          39,
+          40
+        ],
+        "estrelas": [
+          1,
+          5
+        ]
+      }
+    ],
+    "amuletos": [],
+    "estado": "VIVO",
+    "treinos": 0
+  },
+  {
+    "id": "H-00092",
+    "name": "Selene Pedra-Partida",
+    "raca": "Bruxa",
+    "casa": "Casa Lunar",
+    "generation": 2,
+    "pais": [
+      "H-00037",
+      "H-00020"
+    ],
+    "genoma": {
+      "clareza": 0.3291273379044978,
+      "confusao": 0.8293249155877797,
+      "caos": 0.7784596164326318,
+      "memoria": 8,
+      "conhecimento_oculto": [
+        {
+          "tipo": "frios",
+          "livro": "Livro dos Esquecidos",
+          "numeros": [
+            22,
+            33,
+            46,
+            18,
+            40
+          ]
+        },
+        {
+          "tipo": "atrasos",
+          "livro": "Crónica dos Números Ausentes",
+          "numeros": [
+            2,
+            16,
+            18,
+            21,
+            14
+          ]
+        }
+      ]
+    },
+    "pontos": 100,
+    "titulo": "Sussurrador do Destino",
+    "keys": [
+      {
+        "geracao": 2,
+        "numeros": [
+          4,
+          18,
+          41,
+          44,
+          45
+        ],
+        "estrelas": [
+          4,
+          8
+        ]
+      },
+      {
+        "geracao": 3,
+        "numeros": [
+          10,
+          18,
+          22,
+          24,
+          33
+        ],
+        "estrelas": [
+          2,
+          10
+        ]
+      },
+      {
+        "geracao": 4,
+        "numeros": [
+          2,
+          19,
+          36,
+          41,
+          49
+        ],
+        "estrelas": [
+          2,
+          4
+        ]
+      },
+      {
+        "geracao": 5,
+        "numeros": [
+          9,
+          33,
+          40,
+          42,
+          45
+        ],
+        "estrelas": [
+          2,
+          11
+        ]
+      },
+      {
+        "geracao": 6,
+        "numeros": [
+          2,
+          18,
+          25,
+          29,
+          46
+        ],
+        "estrelas": [
+          9,
+          12
+        ]
+      },
+      {
+        "geracao": 7,
+        "numeros": [
+          17,
+          18,
+          32,
+          39,
+          50
+        ],
+        "estrelas": [
+          3,
+          11
+        ]
+      },
+      {
+        "geracao": 8,
+        "numeros": [
+          17,
+          21,
+          33,
+          37,
+          40
+        ],
+        "estrelas": [
+          1,
+          3
+        ]
+      },
+      {
+        "geracao": 9,
+        "numeros": [
+          2,
+          14,
+          17,
+          29,
+          36
+        ],
+        "estrelas": [
+          3,
+          4
+        ]
+      },
+      {
+        "geracao": 10,
+        "numeros": [
+          13,
+          19,
+          36,
+          45,
+          46
+        ],
+        "estrelas": [
+          9,
+          11
+        ]
+      },
+      {
+        "geracao": 11,
+        "numeros": [
+          10,
+          16,
+          18,
+          36,
+          43
+        ],
+        "estrelas": [
+          6,
+          12
+        ]
+      },
+      {
+        "geracao": 12,
+        "numeros": [
+          9,
+          19,
+          22,
+          23,
+          42
+        ],
+        "estrelas": [
+          1,
+          3
+        ]
+      },
+      {
+        "geracao": 13,
+        "numeros": [
+          20,
+          22,
+          32,
+          42,
+          50
+        ],
+        "estrelas": [
+          2,
+          11
+        ]
+      },
+      {
+        "geracao": 14,
+        "numeros": [
+          9,
+          18,
+          23,
+          32,
+          42
+        ],
+        "estrelas": [
+          1,
+          3
+        ]
+      }
+    ],
+    "amuletos": [],
+    "estado": "VIVO",
+    "treinos": 0
+  },
+  {
+    "id": "H-00065",
+    "name": "Aruk do Bosque",
+    "raca": "Elfo",
+    "casa": "Casa Lunar",
+    "generation": 1,
+    "pais": [],
+    "genoma": {
+      "clareza": 0.7193285529934076,
+      "confusao": 0.34578394996224404,
+      "caos": 0.31943793652874763,
+      "memoria": 2,
+      "conhecimento_oculto": [
+        {
+          "tipo": "gaps",
+          "livro": "Geometria Secreta da Teia",
+          "gaps": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        }
+      ],
+      "virus_malphas": "Paradoxo Temporal",
+      "infeccao_oculta": true,
+      "geracao_infeccao": 4
+    },
+    "pontos": 96,
+    "titulo": "Errante das Sombras",
+    "keys": [
+      {
+        "geracao": 1,
+        "numeros": [
+          19,
+          21,
+          26,
+          41,
+          44
+        ],
+        "estrelas": [
+          2,
+          8
+        ]
+      },
+      {
+        "geracao": 2,
+        "numeros": [
+          10,
+          11,
+          18,
+          31,
+          38
+        ],
+        "estrelas": [
+          2,
+          6
+        ]
+      },
+      {
+        "geracao": 3,
+        "numeros": [
+          8,
+          13,
+          19,
+          28,
+          37
+        ],
+        "estrelas": [
+          2,
+          6
+        ]
+      },
+      {
+        "geracao": 4,
+        "numeros": [
+          6,
+          11,
+          13,
+          32,
+          39
+        ],
+        "estrelas": [
+          2,
+          8
+        ]
+      },
+      {
+        "geracao": 5,
+        "numeros": [
+          8,
+          21,
+          27,
+          36,
+          41
+        ],
+        "estrelas": [
+          3,
+          6
+        ]
+      },
+      {
+        "geracao": 6,
+        "numeros": [
+          1,
+          17,
+          23,
+          32,
+          34
+        ],
+        "estrelas": [
+          8,
+          9
+        ]
+      },
+      {
+        "geracao": 7,
+        "numeros": [
+          4,
+          24,
+          29,
+          39,
+          48
+        ],
+        "estrelas": [
+          2,
+          6
+        ]
+      },
+      {
+        "geracao": 8,
+        "numeros": [
+          2,
+          13,
+          18,
+          35,
+          37
+        ],
+        "estrelas": [
+          6,
+          8
+        ]
+      },
+      {
+        "geracao": 9,
+        "numeros": [
+          4,
+          14,
+          33,
+          41,
+          42
+        ],
+        "estrelas": [
+          6,
+          8
+        ]
+      },
+      {
+        "geracao": 10,
+        "numeros": [
+          7,
+          16,
+          23,
+          29,
+          40
+        ],
+        "estrelas": [
+          2,
+          8
+        ]
+      },
+      {
+        "geracao": 11,
+        "numeros": [
+          16,
+          24,
+          25,
+          27,
+          28
+        ],
+        "estrelas": [
+          3,
+          9
+        ]
+      },
+      {
+        "geracao": 12,
+        "numeros": [
+          11,
+          24,
+          26,
+          33,
+          43
+        ],
+        "estrelas": [
+          6,
+          9
+        ]
+      },
+      {
+        "geracao": 13,
+        "numeros": [
+          11,
+          14,
+          24,
+          40,
+          45
+        ],
+        "estrelas": [
+          2,
+          3
+        ]
+      },
+      {
+        "geracao": 14,
+        "numeros": [
+          7,
+          8,
+          28,
+          43,
+          49
+        ],
+        "estrelas": [
+          2,
+          8
+        ]
+      }
+    ],
+    "amuletos": [],
+    "estado": "VIVO",
+    "treinos": 0
+  },
+  {
+    "id": "H-00037",
+    "name": "Lyra do Bosque",
+    "raca": "Bruxa",
+    "casa": "Casa Lunar",
+    "generation": 1,
+    "pais": [],
+    "genoma": {
+      "clareza": 0.1431967093917439,
+      "confusao": 0.8762196252558992,
+      "caos": 0.7933141386478123,
+      "memoria": 7,
+      "conhecimento_oculto": [
+        {
+          "tipo": "quentes",
+          "livro": "Livro das Chamas Frequentes",
+          "numeros": [
+            44,
+            42,
+            23,
+            19,
+            29
+          ]
+        },
+        {
+          "tipo": "frios",
+          "livro": "Livro dos Esquecidos",
+          "numeros": [
+            22,
+            33,
+            46,
+            18,
+            40
+          ]
+        }
+      ]
+    },
+    "pontos": 90,
+    "titulo": "Sussurrador do Destino",
+    "keys": [
+      {
+        "geracao": 1,
+        "numeros": [
+          15,
+          19,
+          22,
+          25,
+          41
+        ],
+        "estrelas": [
+          8,
+          12
+        ]
+      },
+      {
+        "geracao": 2,
+        "numeros": [
+          21,
+          29,
+          36,
+          45,
+          46
+        ],
+        "estrelas": [
+          2,
+          11
+        ]
+      },
+      {
+        "geracao": 3,
+        "numeros": [
+          29,
+          39,
+          40,
+          43,
+          45
+        ],
+        "estrelas": [
+          2,
+          12
+        ]
+      },
+      {
+        "geracao": 4,
+        "numeros": [
+          16,
+          17,
+          19,
+          33,
+          43
+        ],
+        "estrelas": [
+          1,
+          6
+        ]
+      },
+      {
+        "geracao": 5,
+        "numeros": [
+          2,
+          23,
+          36,
+          42,
+          44
+        ],
+        "estrelas": [
+          6,
+          10
+        ]
+      },
+      {
+        "geracao": 6,
+        "numeros": [
+          19,
+          29,
+          32,
+          40,
+          42
+        ],
+        "estrelas": [
+          6,
+          12
+        ]
+      },
+      {
+        "geracao": 7,
+        "numeros": [
+          37,
+          39,
+          42,
+          45,
+          47
+        ],
+        "estrelas": [
+          8,
+          11
+        ]
+      },
+      {
+        "geracao": 8,
+        "numeros": [
+          2,
+          10,
+          16,
+          29,
+          49
+        ],
+        "estrelas": [
+          3,
+          10
+        ]
+      },
+      {
+        "geracao": 9,
+        "numeros": [
+          9,
+          17,
+          18,
+          20,
+          50
+        ],
+        "estrelas": [
+          1,
+          3
+        ]
+      },
+      {
+        "geracao": 10,
+        "numeros": [
+          2,
+          9,
+          17,
+          31,
+          42
+        ],
+        "estrelas": [
+          9,
+          12
+        ]
+      },
+      {
+        "geracao": 11,
+        "numeros": [
+          22,
+          29,
+          37,
+          40,
+          47
+        ],
+        "estrelas": [
+          1,
+          2
+        ]
+      },
+      {
+        "geracao": 12,
+        "numeros": [
+          10,
+          18,
+          19,
+          33,
+          41
+        ],
+        "estrelas": [
+          9,
+          10
+        ]
+      },
+      {
+        "geracao": 13,
+        "numeros": [
+          32,
+          35,
+          37,
+          40,
+          44
+        ],
+        "estrelas": [
+          6,
+          11
+        ]
+      },
+      {
+        "geracao": 14,
+        "numeros": [
+          9,
+          21,
+          25,
+          29,
+          44
+        ],
+        "estrelas": [
+          1,
+          8
+        ]
+      }
+    ],
+    "amuletos": [],
+    "estado": "VIVO",
+    "treinos": 0
+  },
+  {
+    "id": "H-00003",
+    "name": "Thara dos Ossos",
+    "raca": "Bruxa",
+    "casa": "Casa Tribal",
+    "generation": 1,
+    "pais": [],
+    "genoma": {
+      "clareza": 0.35871711004684814,
+      "confusao": 0.6585728359408107,
+      "caos": 0.40683550448819805,
+      "memoria": 6,
+      "conhecimento_oculto": [
+        {
+          "tipo": "atrasos",
+          "livro": "Crónica dos Números Ausentes",
+          "numeros": [
+            2,
+            16,
+            18,
+            21,
+            14
+          ]
+        },
+        {
+          "tipo": "frios",
+          "livro": "Livro dos Esquecidos",
+          "numeros": [
+            22,
+            33,
+            46,
+            18,
+            40
           ]
         }
       ]
@@ -4046,196 +3880,196 @@
       {
         "geracao": 1,
         "numeros": [
-          21,
-          24,
-          26,
+          17,
           31,
-          43
+          37,
+          40,
+          44
         ],
         "estrelas": [
-          3,
-          6
+          1,
+          9
         ]
       },
       {
         "geracao": 2,
         "numeros": [
-          6,
+          10,
           17,
-          27,
-          28,
-          36
+          29,
+          41,
+          46
         ],
         "estrelas": [
-          2,
-          9
+          3,
+          4
         ]
       },
       {
         "geracao": 3,
         "numeros": [
-          12,
-          16,
           24,
-          31,
-          33
+          29,
+          33,
+          42,
+          43
         ],
         "estrelas": [
           3,
-          6
+          10
         ]
       },
       {
         "geracao": 4,
         "numeros": [
-          11,
+          2,
+          13,
           18,
-          26,
-          35,
-          46
+          23,
+          36
         ],
         "estrelas": [
-          2,
-          6
+          8,
+          12
         ]
       },
       {
         "geracao": 5,
         "numeros": [
-          5,
-          14,
-          24,
-          28,
-          35
+          21,
+          23,
+          32,
+          38,
+          43
         ],
         "estrelas": [
-          2,
-          3
+          9,
+          12
         ]
       },
       {
         "geracao": 6,
         "numeros": [
-          11,
-          12,
-          28,
-          33,
-          39
+          17,
+          18,
+          20,
+          45,
+          46
         ],
         "estrelas": [
-          2,
-          9
+          4,
+          8
         ]
       },
       {
         "geracao": 7,
         "numeros": [
-          16,
-          21,
-          38,
-          40,
+          10,
+          19,
+          31,
+          43,
           47
         ],
         "estrelas": [
-          2,
-          9
+          6,
+          12
         ]
       },
       {
         "geracao": 8,
         "numeros": [
-          6,
-          13,
-          23,
-          28,
-          48
+          10,
+          18,
+          19,
+          21,
+          46
         ],
         "estrelas": [
-          3,
-          9
+          2,
+          11
         ]
       },
       {
         "geracao": 9,
         "numeros": [
-          19,
-          20,
-          28,
-          34,
-          35
+          10,
+          14,
+          18,
+          21,
+          36
         ],
         "estrelas": [
-          2,
-          8
+          8,
+          10
         ]
       },
       {
         "geracao": 10,
         "numeros": [
-          5,
-          20,
-          32,
-          35,
-          46
+          21,
+          41,
+          44,
+          49,
+          50
         ],
         "estrelas": [
-          3,
-          6
+          1,
+          3
         ]
       },
       {
         "geracao": 11,
         "numeros": [
-          3,
-          23,
-          36,
-          48,
-          49
+          14,
+          19,
+          29,
+          40,
+          46
         ],
         "estrelas": [
           2,
-          6
+          12
         ]
       },
       {
         "geracao": 12,
         "numeros": [
-          7,
-          8,
-          18,
-          35,
-          48
+          19,
+          37,
+          44,
+          46,
+          47
         ],
         "estrelas": [
           8,
-          9
+          12
         ]
       },
       {
         "geracao": 13,
         "numeros": [
-          15,
-          16,
-          29,
-          36,
+          22,
+          23,
+          32,
+          46,
           50
         ],
         "estrelas": [
-          6,
-          9
+          8,
+          12
         ]
       },
       {
         "geracao": 14,
         "numeros": [
-          3,
-          12,
-          26,
-          41,
-          43
+          14,
+          21,
+          29,
+          37,
+          40
         ],
         "estrelas": [
-          6,
+          4,
           9
         ]
       }
@@ -4245,67 +4079,57 @@
     "treinos": 0
   },
   {
-    "id": "H-00014",
-    "name": "Velka Pedra-Partida",
-    "raca": "Cronomante",
-    "casa": "Casa do Caos",
+    "id": "H-00004",
+    "name": "Lyra dos Astros",
+    "raca": "Goblin",
+    "casa": "Casa dos Ossos",
     "generation": 1,
     "pais": [],
     "genoma": {
-      "clareza": 0.6561026326344536,
-      "confusao": 0.5991089865701116,
-      "caos": 0.37644880432866,
-      "memoria": 4,
-      "conhecimento_oculto": [
-        {
-          "tipo": "atrasos",
-          "livro": "Crónica dos Números Ausentes",
-          "numeros": [
-            2,
-            16,
-            18,
-            21,
-            14
-          ]
-        },
-        {
-          "tipo": "gaps",
-          "livro": "Geometria Secreta da Teia",
-          "gaps": [
-            1,
-            2,
-            3,
-            4,
-            5
-          ]
-        }
-      ]
+      "clareza": 0.3448993101373141,
+      "confusao": 0.2654999313466587,
+      "caos": 0.5145630459637258,
+      "memoria": 4
     },
-    "pontos": 75,
-    "titulo": "Errante das Sombras",
+    "pontos": 80,
+    "titulo": "Observador Celeste",
     "keys": [
       {
         "geracao": 1,
         "numeros": [
-          8,
-          13,
-          14,
-          15,
-          47
+          10,
+          26,
+          29,
+          36,
+          44
         ],
         "estrelas": [
-          3,
-          4
+          1,
+          11
         ]
       },
       {
         "geracao": 2,
         "numeros": [
-          2,
-          8,
-          13,
           15,
-          47
+          21,
+          23,
+          26,
+          45
+        ],
+        "estrelas": [
+          6,
+          7
+        ]
+      },
+      {
+        "geracao": 3,
+        "numeros": [
+          4,
+          6,
+          12,
+          23,
+          45
         ],
         "estrelas": [
           4,
@@ -4313,30 +4137,16 @@
         ]
       },
       {
-        "geracao": 3,
-        "numeros": [
-          2,
-          8,
-          13,
-          15,
-          47
-        ],
-        "estrelas": [
-          2,
-          4
-        ]
-      },
-      {
         "geracao": 4,
         "numeros": [
-          2,
-          8,
-          13,
-          15,
-          47
+          11,
+          12,
+          16,
+          30,
+          45
         ],
         "estrelas": [
-          4,
+          6,
           9
         ]
       },
@@ -4344,140 +4154,357 @@
         "geracao": 5,
         "numeros": [
           2,
-          8,
-          13,
-          15,
+          12,
+          23,
+          43,
           47
         ],
         "estrelas": [
-          4,
-          9
+          1,
+          10
         ]
       },
       {
         "geracao": 6,
         "numeros": [
-          2,
-          8,
-          13,
-          15,
-          47
+          1,
+          12,
+          23,
+          38,
+          43
         ],
         "estrelas": [
-          4,
-          10
+          10,
+          12
         ]
       },
       {
         "geracao": 7,
         "numeros": [
           2,
-          8,
-          13,
-          15,
-          47
+          19,
+          28,
+          40,
+          42
         ],
         "estrelas": [
-          4,
-          6
+          8,
+          11
         ]
       },
       {
         "geracao": 8,
         "numeros": [
-          2,
-          8,
-          13,
-          15,
-          47
+          28,
+          29,
+          36,
+          44,
+          45
         ],
         "estrelas": [
-          4,
+          3,
           12
         ]
       },
       {
         "geracao": 9,
         "numeros": [
-          2,
-          8,
-          13,
-          15,
-          47
+          19,
+          23,
+          31,
+          34,
+          36
         ],
         "estrelas": [
-          4,
-          9
+          2,
+          3
         ]
       },
       {
         "geracao": 10,
         "numeros": [
-          2,
-          8,
+          9,
           13,
+          23,
+          40,
+          41
+        ],
+        "estrelas": [
+          8,
+          11
+        ]
+      },
+      {
+        "geracao": 11,
+        "numeros": [
+          3,
+          11,
+          19,
+          28,
+          39
+        ],
+        "estrelas": [
+          3,
+          6
+        ]
+      },
+      {
+        "geracao": 12,
+        "numeros": [
+          10,
           15,
+          16,
+          29,
+          33
+        ],
+        "estrelas": [
+          5,
+          12
+        ]
+      },
+      {
+        "geracao": 13,
+        "numeros": [
+          3,
+          5,
+          7,
+          31,
+          49
+        ],
+        "estrelas": [
+          7,
+          8
+        ]
+      },
+      {
+        "geracao": 14,
+        "numeros": [
+          6,
+          16,
+          30,
+          32,
           47
         ],
         "estrelas": [
-          4,
+          7,
+          12
+        ]
+      }
+    ],
+    "amuletos": [],
+    "estado": "VIVO",
+    "treinos": 0
+  },
+  {
+    "id": "H-00054",
+    "name": "Thara Pedra-Partida",
+    "raca": "Vidente",
+    "casa": "Casa Lunar",
+    "generation": 1,
+    "pais": [],
+    "genoma": {
+      "clareza": 0.4163725723027144,
+      "confusao": 0.17218104280519697,
+      "caos": 0.857622304509921,
+      "memoria": 4
+    },
+    "pontos": 60,
+    "titulo": "Errante das Sombras",
+    "keys": [
+      {
+        "geracao": 1,
+        "numeros": [
+          12,
+          21,
+          37,
+          38,
+          41
+        ],
+        "estrelas": [
+          6,
+          9
+        ]
+      },
+      {
+        "geracao": 2,
+        "numeros": [
+          18,
+          21,
+          25,
+          42,
+          44
+        ],
+        "estrelas": [
+          3,
+          9
+        ]
+      },
+      {
+        "geracao": 3,
+        "numeros": [
+          27,
+          29,
+          39,
+          40,
+          42
+        ],
+        "estrelas": [
+          3,
+          9
+        ]
+      },
+      {
+        "geracao": 4,
+        "numeros": [
+          12,
+          25,
+          34,
+          37,
+          48
+        ],
+        "estrelas": [
+          3,
+          9
+        ]
+      },
+      {
+        "geracao": 5,
+        "numeros": [
+          1,
+          6,
+          23,
+          29,
+          40
+        ],
+        "estrelas": [
+          6,
+          9
+        ]
+      },
+      {
+        "geracao": 6,
+        "numeros": [
+          13,
+          19,
+          29,
+          46,
+          47
+        ],
+        "estrelas": [
+          2,
+          8
+        ]
+      },
+      {
+        "geracao": 7,
+        "numeros": [
+          13,
+          23,
+          42,
+          49,
+          50
+        ],
+        "estrelas": [
+          6,
+          9
+        ]
+      },
+      {
+        "geracao": 8,
+        "numeros": [
+          6,
+          17,
+          29,
+          30,
+          42
+        ],
+        "estrelas": [
+          2,
+          6
+        ]
+      },
+      {
+        "geracao": 9,
+        "numeros": [
+          19,
+          23,
+          26,
+          32,
+          44
+        ],
+        "estrelas": [
+          2,
+          6
+        ]
+      },
+      {
+        "geracao": 10,
+        "numeros": [
+          6,
+          17,
+          29,
+          42,
+          45
+        ],
+        "estrelas": [
+          2,
           6
         ]
       },
       {
         "geracao": 11,
         "numeros": [
-          2,
-          8,
-          13,
-          15,
-          47
+          5,
+          10,
+          28,
+          41,
+          44
         ],
         "estrelas": [
-          3,
-          4
+          2,
+          3
         ]
       },
       {
         "geracao": 12,
         "numeros": [
-          2,
           8,
-          15,
-          27,
-          47
+          10,
+          22,
+          29,
+          50
         ],
         "estrelas": [
-          4,
-          5
+          8,
+          9
         ]
       },
       {
         "geracao": 13,
         "numeros": [
-          2,
-          8,
-          13,
-          15,
-          47
+          1,
+          12,
+          17,
+          23,
+          32
         ],
         "estrelas": [
-          4,
-          5
+          3,
+          9
         ]
       },
       {
         "geracao": 14,
         "numeros": [
-          2,
-          8,
-          13,
-          15,
-          47
+          11,
+          19,
+          21,
+          38,
+          45
         ],
         "estrelas": [
-          2,
-          4
+          6,
+          9
         ]
       }
     ],

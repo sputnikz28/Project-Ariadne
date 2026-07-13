@@ -26,26 +26,26 @@
   "confirmada_por": [],
   "conselho": {
     "chave_original": [
-      2,
       10,
-      18,
-      21,
+      17,
+      23,
+      29,
       50
     ],
     "estrelas_originais": [
-      2,
-      6
+      3,
+      8
     ],
     "chave_corrompida": [
-      4,
-      8,
-      18,
-      24,
-      48
+      9,
+      19,
+      21,
+      32,
+      47
     ],
     "estrelas_corrompidas": [
-      3,
-      7
+      4,
+      8
     ]
   }
 }
