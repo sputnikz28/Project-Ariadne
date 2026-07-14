@@ -1,0 +1,118 @@
+{
+  "raca": "Mystics",
+  "descricao": "Duas grandes linhagens de tradição mística no universo de Project Ariadne: os Místicos da Natureza e os Místicos da Profecia. Nenhuma ordem gera chaves por vantagem estatística real — todas são avaliadas exactamente pelos mesmos Juízes e pelo mesmo motor de Backtesting que as raças matemáticas.",
+  "linhagens": [
+    {
+      "id": "nature_mystics",
+      "nome": "Nature Mystics",
+      "filosofia": "Harmonia com a natureza: ciclos lunares, estações, equinócios, solstícios e ritmos ambientais como espelho do acaso.",
+      "ordens": ["druids", "moon_priests", "star_gazers"]
+    },
+    {
+      "id": "prophecy_mystics",
+      "nome": "Prophecy Mystics",
+      "filosofia": "Interpretação do destino através de símbolos, rituais e tradições ancestrais: visões, ecos históricos, ensembles e acaso simbólico.",
+      "ordens": ["shamans", "witches", "seers", "oracles", "bone_readers"]
+    }
+  ],
+  "ordens": [
+    {
+      "id": "druids",
+      "nome": "Druids",
+      "titulo": "Mestres das Florestas e dos Ciclos Lunares",
+      "linhagem": "nature_mystics",
+      "casa": "Círculo do Carvalho Eterno",
+      "filosofia": "A floresta lembra-se de tudo o que a lua já lhe ensinou. Um druida não prevê o sorteio — escuta o calendário da terra.",
+      "papel_analitico_futuro": ["fases lunares", "estações", "solstícios", "equinócios", "ciclos de semana ISO"],
+      "artefactos": ["oak_staff", "moon_branch"],
+      "pasta_races": "races/mystics/nature/druids",
+      "faccao": "factions/druids"
+    },
+    {
+      "id": "moon_priests",
+      "nome": "Moon Priests",
+      "titulo": "Guardiões dos Templos Lunares",
+      "linhagem": "nature_mystics",
+      "casa": "Templo da Lua Prateada",
+      "filosofia": "Cada fase da lua é uma pergunta feita ao céu. Os Sacerdotes da Lua não respondem — registam a pergunta com exactidão.",
+      "papel_analitico_futuro": ["lua nova", "lua cheia", "eclipses", "calendários lunares"],
+      "artefactos": ["silver_crescent", "lunar_chalice"],
+      "pasta_races": "races/mystics/nature/moon_priests",
+      "faccao": "factions/moon_priests"
+    },
+    {
+      "id": "star_gazers",
+      "nome": "Star Gazers",
+      "titulo": "Mestres da Observação Celeste",
+      "linhagem": "nature_mystics",
+      "casa": "Observatório de Vidro Celeste",
+      "filosofia": "Enquanto os Sacerdotes da Lua olham para um único astro, os Observadores de Estrelas cartografam o céu inteiro — incluindo as duas estrelas do Euromilhões.",
+      "papel_analitico_futuro": ["estrelas do Euromilhões", "combinações estelares", "simbolismo celeste"],
+      "artefactos": ["celestial_astrolabe", "star_compass"],
+      "pasta_races": "races/mystics/nature/star_gazers",
+      "faccao": "factions/star_gazers",
+      "nota": "Não pertence explicitamente a nenhuma linhagem na lore original; associado aos Nature Mystics por partilhar o domínio dos 'ciclos celestes'."
+    },
+    {
+      "id": "shamans",
+      "nome": "Shamans",
+      "titulo": "Vozes dos Espíritos Ancestrais",
+      "linhagem": "prophecy_mystics",
+      "casa": "Tendas do Vento Ancestral",
+      "filosofia": "O comum já foi contado. Um xamã escuta o que os antepassados sussurram sobre o que ainda não aconteceu — o raro, o desviante, o inesperado.",
+      "papel_analitico_futuro": ["eventos raros", "outliers", "acaso simbólico", "padrões históricos invulgares"],
+      "artefactos": ["spirit_drum", "ancestral_mask"],
+      "pasta_races": "races/mystics/prophecy/shamans",
+      "faccao": "factions/shamans"
+    },
+    {
+      "id": "witches",
+      "nome": "Witches",
+      "titulo": "Mestras das Misturas Mágicas",
+      "linhagem": "prophecy_mystics",
+      "casa": "Caldeirão das Encruzilhadas",
+      "filosofia": "Nenhuma estratégia sozinha vê o quadro completo. Uma bruxa mistura o que sobra de todas as outras ordens num só caldeirão.",
+      "papel_analitico_futuro": ["combinação de estratégias", "votação ponderada", "geração híbrida de chaves", "métodos de ensemble"],
+      "artefactos": ["cauldron_of_echoes", "crystal_vial"],
+      "pasta_races": "races/mystics/prophecy/witches",
+      "faccao": "factions/witches"
+    },
+    {
+      "id": "seers",
+      "nome": "Seers",
+      "titulo": "Mestres das Visões",
+      "linhagem": "prophecy_mystics",
+      "casa": "Torre dos Olhos Abertos",
+      "filosofia": "Uma visão não é uma certeza — é uma tendência que ainda não se revelou por inteiro. Os Videntes observam a evolução, não o instante.",
+      "papel_analitico_futuro": ["deteção de tendências", "evolução histórica", "padrões recorrentes"],
+      "artefactos": ["veil_of_tomorrow", "hourglass_of_echoes"],
+      "pasta_races": "races/mystics/prophecy/seers",
+      "faccao": "factions/seers"
+    },
+    {
+      "id": "oracles",
+      "nome": "Oracles",
+      "titulo": "Intérpretes do Conselho",
+      "linhagem": "prophecy_mystics",
+      "casa": "Salão dos Espelhos Silenciosos",
+      "filosofia": "Um oráculo nunca propõe uma chave — julga as que já foram propostas. A sua voz não compete com o Conselho; observa-o.",
+      "papel_analitico_futuro": ["ranking de propostas", "estimativa de confiança", "meta-análise"],
+      "artefactos": ["eye_of_prophecy", "mirror_of_destiny"],
+      "pasta_races": "races/mystics/prophecy/oracles",
+      "faccao": "factions/oracles",
+      "nota_arquitetura": "Não gera chaves por design. O placeholder actual regista-se normalmente no FactionRegistry e abstém-se (devolve []); a meta-análise real fica para trabalho futuro."
+    },
+    {
+      "id": "bone_readers",
+      "nome": "Bone Readers",
+      "titulo": "Adivinhos Tribais Ancestrais",
+      "linhagem": "prophecy_mystics",
+      "casa": "Fossa dos Ossos Sagrados",
+      "filosofia": "Os ossos caem onde a mão não pode escolher. É essa a sua honestidade: um gerador de acaso simbólico mais antigo do que qualquer algoritmo.",
+      "papel_analitico_futuro": ["geradores rituais pseudo-aleatórios", "sementes rituais", "combinações simbólicas"],
+      "artefactos": ["sacred_bones", "ivory_dice"],
+      "pasta_races": "races/mystics/prophecy/bone_readers",
+      "faccao": "factions/bone_readers"
+    }
+  ]
+}

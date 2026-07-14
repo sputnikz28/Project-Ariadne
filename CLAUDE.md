@@ -45,6 +45,14 @@ Biblioteca de conhecimento.
 | Ordem Élfica | `orders/elven_order/` | Missões de recuperação (não vota directamente) |
 | Kors de Elarion | `factions/kors/` | Observação via Ariadne (V7.2) |
 | Axiomantes de Nemerion | `factions/axiomantes/` | Labirinto combinatório + Feistel (V8.1) |
+| Druids | `factions/druids/` ← `races/mystics/nature/druids/` | Placeholder — sem algoritmo; abstém-se sempre (V10) |
+| Moon Priests | `factions/moon_priests/` ← `races/mystics/nature/moon_priests/` | Placeholder — sem algoritmo; abstém-se sempre (V10) |
+| Star Gazers | `factions/star_gazers/` ← `races/mystics/nature/star_gazers/` | Placeholder — sem algoritmo; abstém-se sempre (V10) |
+| Shamans | `factions/shamans/` ← `races/mystics/prophecy/shamans/` | Placeholder — sem algoritmo; abstém-se sempre (V10) |
+| Witches | `factions/witches/` ← `races/mystics/prophecy/witches/` | Placeholder — sem algoritmo; abstém-se sempre (V10) |
+| Seers | `factions/seers/` ← `races/mystics/prophecy/seers/` | Placeholder — sem algoritmo; abstém-se sempre (V10) |
+| Oracles | `factions/oracles/` ← `races/mystics/prophecy/oracles/` | Placeholder — não gera chaves por design; abstém-se sempre (V10) |
+| Bone Readers | `factions/bone_readers/` ← `races/mystics/prophecy/bone_readers/` | Placeholder — sem algoritmo; abstém-se sempre (V10) |
 
 ## Facções analíticas (não geram chaves)
 
@@ -303,6 +311,27 @@ Facção em `factions/axiomantes/`. Percorrem o Labirinto de 139.838.160 câmara
 
 ---
 
+# V10 — Mystics (arquitetura, lore e skeletons — sem algoritmos)
+
+Nova raça `races/mystics/` que recupera o espírito original da V1: intuição, rituais e tradição ancestral a par da matemática e da estatística. Dividida em duas linhagens:
+
+| Linhagem | Filosofia | Ordens |
+|---|---|---|
+| Nature Mystics | Harmonia com a natureza — ciclos lunares, estações, ciclos celestes | Druids, Moon Priests, Star Gazers |
+| Prophecy Mystics | Interpretação do destino através de símbolos e rituais | Shamans, Witches, Seers, Oracles, Bone Readers |
+
+**Ficheiros de dados** (`races/mystics/`): `lore.md` (história completa), `orders.json` (8 ordens), `characters.json` (16 personagens, 2 por ordem), `artifacts.json` (16 artefactos, 2 por ordem), mais uma pasta `nature/<ordem>/` ou `prophecy/<ordem>/` por ordem com um `README.md` próprio.
+
+**Plugins** (`factions/{druids,moon_priests,star_gazers,shamans,witches,seers,oracles,bone_readers}/`): cada um com `manifest.json`, `council.py` (caminho activo, regista-se via `FactionRegistry`), `strategy.py` (skeleton nativo `core.strategy.Faction`, ainda não referenciado em `manifest.json`) e `README.md`. **Todos os `council()` devolvem sempre `[]`** — abstenção válida, não erro — até existir algoritmo real.
+
+**Oracles** são um caso especial: por design nunca geram chaves — interpretam as propostas do Conselho. Por agora registam-se e abstêm-se como as restantes; a meta-análise fica para trabalho futuro (ver `factions/oracles/council.py`).
+
+**Princípio inegociável:** nenhuma ordem mística deve, por design, superar as facções matemáticas — todas passam pelos mesmos Juízes e pelo mesmo motor de Backtesting. A crença nunca substitui a estatística (ver `races/mystics/lore.md`).
+
+**Zero alterações a `main.py`** — o resumo de facções já era genérico (`# Plugin factions summary — auto-generated, no hardcoded names`), por isso as 8 novas ordens aparecem automaticamente assim que `FactionRegistry.discover("factions")` as encontra.
+
+---
+
 # Arquitetura V9 (Plugin Architecture — implementado)
 
 ## Módulo `core/`
@@ -392,6 +421,14 @@ factions/
     treefolks/            ✅ V9   migrado de races/extras.py
     vampires/             ✅ V8   migrado + manifest.json
     werewolves/           ✅ V9   migrado de races/extras.py
+    druids/               ✅ V10  placeholder (races/mystics/nature/druids/) — abstém-se
+    moon_priests/         ✅ V10  placeholder (races/mystics/nature/moon_priests/) — abstém-se
+    star_gazers/          ✅ V10  placeholder (races/mystics/nature/star_gazers/) — abstém-se
+    shamans/              ✅ V10  placeholder (races/mystics/prophecy/shamans/) — abstém-se
+    witches/              ✅ V10  placeholder (races/mystics/prophecy/witches/) — abstém-se
+    seers/                ✅ V10  placeholder (races/mystics/prophecy/seers/) — abstém-se
+    oracles/              ✅ V10  placeholder (races/mystics/prophecy/oracles/) — não gera chaves por design
+    bone_readers/         ✅ V10  placeholder (races/mystics/prophecy/bone_readers/) — abstém-se
     loader.py             ✅ V9   discover_factions() (compat legacy)
 ```
 

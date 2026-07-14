@@ -1,0 +1,11 @@
+{
+  "id": "bone_readers",
+  "name": "Bone Readers",
+  "version": "1.0",
+  "home": "Fossa dos Ossos Sagrados",
+  "config_section": "BONE_READERS",
+  "weight_key": "peso_conselho",
+  "default_weight": 0.5,
+  "votes": true,
+  "description": "Prophecy Mystics — ancient tribal diviners who cast sacred bones to reveal hidden paths. Placeholder faction: no prediction algorithm implemented yet; abstains every run. Future role: pseudo-random ritual generators, ritual seeds, symbolic combinations."
+}

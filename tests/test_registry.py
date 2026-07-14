@@ -63,6 +63,15 @@ class TestDiscover(unittest.TestCase):
         self.assertIn("axiomantes_nemerion", ids)
         self.assertIn("kors_elarion", ids)
 
+    def test_discover_finds_the_new_mystics_factions(self):
+        registry = FactionRegistry().discover("factions")
+        ids = {f.origin for f in registry.all()}
+        for mystic_id in (
+            "druids", "moon_priests", "star_gazers", "shamans",
+            "witches", "seers", "oracles", "bone_readers",
+        ):
+            self.assertIn(mystic_id, ids)
+
     def test_discover_excludes_analytical_non_voting_factions(self):
         registry = FactionRegistry().discover("factions")
         ids = {f.origin for f in registry.all()}
@@ -70,9 +79,10 @@ class TestDiscover(unittest.TestCase):
 
     def test_discover_finds_exactly_the_expected_number_of_voting_factions(self):
         registry = FactionRegistry().discover("factions")
-        # 13 faction directories under factions/ minus chaos_cartographers
-        # (analytical, votes: false) = 11 voting factions.
-        self.assertEqual(registry.count(), 11)
+        # 20 faction directories under factions/ (12 pre-Mystics + 8 new
+        # Mystics orders) minus chaos_cartographers (analytical,
+        # votes: false) = 19 voting factions.
+        self.assertEqual(registry.count(), 19)
 
 
 if __name__ == "__main__":

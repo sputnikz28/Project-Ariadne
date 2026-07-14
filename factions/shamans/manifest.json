@@ -1,0 +1,11 @@
+{
+  "id": "shamans",
+  "name": "Shamans",
+  "version": "1.0",
+  "home": "Tendas do Vento Ancestral",
+  "config_section": "SHAMANS",
+  "weight_key": "peso_conselho",
+  "default_weight": 0.5,
+  "votes": true,
+  "description": "Prophecy Mystics — communicate with ancestral spirits. Placeholder faction: no prediction algorithm implemented yet; abstains every run. Future role: rare events, outliers, symbolic randomness, unusual historical patterns."
+}

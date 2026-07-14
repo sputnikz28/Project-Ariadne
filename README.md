@@ -82,6 +82,7 @@ Each faction represents a distinct statistical philosophy:
 | **Kors de Elarion** | Four observers consulting exclusively Ariadne (V7.2) |
 | **Cartographers of Chaos** | Five analysts producing analytical books for other factions (V8) |
 | **Axiomantes de Nemerion** | Feistel permutation over 139M combinations — finds inédita keys by statistical profile (V8.1) |
+| **Druids, Moon Priests, Star Gazers, Shamans, Witches, Seers, Oracles, Bone Readers** | Mystics (V10) — placeholders only, always abstain. See [Mystics](#mystics-v10) below |
 
 ### Kors de Elarion (V7.2)
 
@@ -139,6 +140,35 @@ Guardians of the Labyrinth of 139,838,160 chambers. They traverse the full Eurom
 | Algorithm | Feistel (_H=11826, 4 rounds, Wang hash) |
 | Complexity | O(H) — H = number of historical draws; no 139M iteration |
 | Default candidates evaluated | 50,000 per run |
+
+---
+
+### Mystics (V10)
+
+A new race, `races/mystics/`, restoring Project Ariadne's original V1
+spirit: intuition, rituals and ancient tradition alongside statistics.
+Two lineages, eight orders, all currently **architecture and lore
+only — no prediction algorithm implemented yet**:
+
+| Lineage | Orders | Future analytical role |
+|---|---|---|
+| 🌿 Nature Mystics | Druids, Moon Priests, Star Gazers | lunar phases, seasons, solstices/equinoxes, ISO week cycles, celestial symbolism |
+| 🔮 Prophecy Mystics | Shamans, Witches, Seers, Oracles, Bone Readers | rare events, ensemble/hybrid strategies, trend detection, proposal meta-analysis, ritual pseudo-randomness |
+
+Every order has a matching `factions/<order>/` plugin (`manifest.json`
++ `council.py` + `strategy.py` + `README.md`) that registers correctly
+through `FactionRegistry` and **always abstains** — the same valid,
+non-error abstention behaviour as Axiomantes with a closed portal.
+Lore, characters (16, two per order) and artifacts (16, two per order)
+live in `races/mystics/{lore.md, orders.json, characters.json,
+artifacts.json}`, with a short README per order under
+`races/mystics/nature/` and `races/mystics/prophecy/`.
+
+**By design, these factions must never outperform the mathematical
+ones** — they're alternative methodologies, not a shortcut, and every
+proposal (mystical or mathematical) is filtered, voted and backtested
+through exactly the same Council, Judges and Backtesting engine. See
+[`races/mystics/lore.md`](races/mystics/lore.md) for the full history.
 
 ---
 
@@ -221,6 +251,7 @@ Project-Ariadne/
 │       ├── ritual.py            ← Ritual of Thirty Echoes
 │       └── council.py           ← Council integration
 ├── races/                       ← races, characters and lineages (legacy factions V1–V6)
+│   └── mystics/                 ← Mystics (V10) — lore, characters, artifacts; nature/ + prophecy/ lineages
 ├── orders/                      ← organisations and guilds
 │   ├── black_squad/             ← Black Squad + grimoire + dark_library
 │   ├── elven_order/             ← Elven Order + missions

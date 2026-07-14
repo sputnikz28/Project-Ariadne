@@ -1,0 +1,11 @@
+{
+  "id": "oracles",
+  "name": "Oracles",
+  "version": "1.0",
+  "home": "Salão dos Espelhos Silenciosos",
+  "config_section": "ORACLES",
+  "weight_key": "peso_conselho",
+  "default_weight": 0.5,
+  "votes": true,
+  "description": "Prophecy Mystics — they never generate keys directly; they interpret the proposals produced by the Grand Council. Placeholder faction: no meta-analysis algorithm implemented yet; abstains every run. Future role: proposal ranking, confidence estimation, meta-analysis."
+}
