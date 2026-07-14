@@ -6,7 +6,7 @@ Só vota quando o Portal das Chaves Inéditas está aberto.
 
 from races.legacy import normalize
 from .ritual import execute_ritual
-from i18n.translations import t
+from core.i18n.translations import t
 
 FACTION_META = {
     'name': 'Axiomantes de Nemerion',

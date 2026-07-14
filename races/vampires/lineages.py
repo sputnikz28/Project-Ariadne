@@ -5,7 +5,7 @@ from pathlib import Path
 
 
 def load_triples():
-    return json.loads(Path("library/indices/triplas.json").read_text(encoding="utf-8"))
+    return json.loads(Path("library/indexes/triplas.json").read_text(encoding="utf-8"))
 
 
 def completar(tripla):

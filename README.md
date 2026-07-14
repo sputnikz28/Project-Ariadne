@@ -205,38 +205,50 @@ Project-Ariadne/
 ├── config.txt                  ← all parameters
 ├── requirements.txt            ← stdlib only (no external ML libs)
 │
-├── library/                    ← Ariadne + all persistent data
-├── factions/                   ← V7+ factions (package format)
-│   ├── kors/                   ← Kors de Elarion (V7.2)
-│   ├── chaos_cartographers/    ← Cartographers of Chaos (V8)
-│   └── axiomantes/             ← Axiomantes de Nemerion (V8.1)
-│       ├── labyrinth.py        ← combinadic rank/unrank + Feistel
-│       ├── profile.py          ← Echo Profile + scoring
-│       ├── ritual.py           ← Ritual of Thirty Echoes
-│       └── council.py          ← Council integration
-│
-├── experiments/
-│   └── axiomancers/
-│       └── runs/                ← per-run ritual reports (JSON)
-│
-├── i18n/
-│   └── translations.py         ← 6 languages × 25 translation keys
-│
-├── races/                      ← legacy factions (V1–V6)
-├── evolution/                  ← genetic algorithm engine
-├── council/                    ← Council filter + vote
-├── world/                      ← world state, simulation context
-│   ├── engine/                 ← builder, extraction, celestial energy, dark conviction, council war, Malphas virus
-│   └── presets/                ← world profiles (config variants) + central loader
-├── black_squad/                ← Black Squad + grimoire
-├── elven_order/                ← Elven Order + missions
-├── amulets/                    ← amulets + library sync
-├── artefacts/                  ← artefacts + relics
-├── legends/                    ← legendary characters
-├── scribes/                    ← scribes + chronicles
-├── reports/                    ← report writer
-├── campaigns/                  ← multi-era campaign runs
-└── docs/                       ← (planned)
+├── core/                        ← framework engine
+│   ├── strategy.py / registry.py / plugin_loader.py  ← FactionRegistry + plugin architecture
+│   ├── evolution/               ← genetic algorithm engine (Clérigos and other factions)
+│   ├── i18n/                    ← translations.py — 6 languages × 25 translation keys
+│   └── data/                    ← loaders.py — reusable historical/jackpot/moon data access
+├── council/                     ← Grand Council filter + vote
+├── factions/                    ← V7+ executable faction plugins (package format)
+│   ├── kors/                    ← Kors de Elarion (V7.2)
+│   ├── chaos_cartographers/     ← Cartographers of Chaos (V8)
+│   └── axiomantes/              ← Axiomantes de Nemerion (V8.1)
+│       ├── labyrinth.py         ← combinadic rank/unrank + Feistel
+│       ├── profile.py           ← Echo Profile + scoring
+│       ├── ritual.py            ← Ritual of Thirty Echoes
+│       └── council.py           ← Council integration
+├── races/                       ← races, characters and lineages (legacy factions V1–V6)
+├── orders/                      ← organisations and guilds
+│   ├── black_squad/             ← Black Squad + grimoire + dark_library
+│   ├── elven_order/             ← Elven Order + missions
+│   ├── scribes/                 ← scribes + chronicles + atlas + museum
+│   └── librarians/              ← scroll conversion utilities
+├── library/                     ← Eternal Library and knowledge
+│   ├── ariadne/                 ← Ariadne engine
+│   ├── scrolls/                 ← per-draw views (2004–2026)
+│   ├── books/                   ← reconstructable books
+│   ├── indexes/                 ← pairs/triples/frequencies + normalized draw index
+│   ├── catalogue/, cache/, black_kors/
+├── artifacts/                   ← artefacts, relics and magical objects
+│   ├── ark.py / living.py       ← relics + living artifacts
+│   ├── relics/                  ← persistent relics (ART-*.json)
+│   └── amulets/                 ← amulets, monastery, generated books
+├── world/                       ← world engine + world presets
+│   ├── engine/                  ← builder, extraction, celestial energy, dark conviction, council war, Malphas virus
+│   └── presets/                 ← world profiles (config variants) + central loader
+├── datasets/                    ← historical and generated data
+│   ├── historical/euromillions/<year>/  ← immutable annual datasets
+│   ├── imports/                 ← raw import files (xlsx)
+│   └── generated/                ← simulations/ · world_state/ · temporary/
+├── experiments/                 ← simulation outputs and research
+│   ├── axiomancers/runs/        ← per-run Axiomantes ritual reports (JSON)
+│   └── reports/                 ← report writer + generated/ .txt reports
+├── campaigns/                   ← multi-era campaign runs
+├── docs/                        ← documentation
+│   └── lore/legends/            ← legendary characters registry
+└── tests/                       ← (planned)
 ```
 
 ---

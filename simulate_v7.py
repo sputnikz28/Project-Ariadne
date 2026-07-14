@@ -53,7 +53,7 @@ def main():
         "Ariadne recorda: padrões históricos não aumentam a probabilidade matemática do sorteio.",
     ]
 
-    out = Path("reports/generated/relatorio_v7_biblioteca_eterna.txt")
+    out = Path("experiments/reports/generated/relatorio_v7_biblioteca_eterna.txt")
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text("\n".join(linhas), encoding="utf-8")
     print("\n".join(linhas))

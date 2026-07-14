@@ -7,7 +7,7 @@ from pathlib import Path
 if hasattr(sys.stdout, 'reconfigure'):
     sys.stdout.reconfigure(encoding='utf-8', errors='replace')
 
-from legends.registry import registar_lendas
+from docs.lore.legends.registry import registar_lendas
 
 
 def titulo(n, e):
@@ -31,7 +31,7 @@ def main():
     parser.add_argument("--top", type=int, default=50)
     args = parser.parse_args()
 
-    arquivo = json.loads(Path("data/arquivo_destino.json").read_text(encoding="utf-8"))
+    arquivo = json.loads(Path("datasets/generated/simulations/arquivo_destino.json").read_text(encoding="utf-8"))
     alvo_n = set(args.numeros)
     alvo_e = set(args.estrelas)
     results = []
@@ -85,7 +85,7 @@ def main():
             f"{r['acertos_numeros']}N + {r['acertos_estrelas']}E | {r['titulo_resultado']}"
         )
 
-    saida = Path("reports/generated/comparacao_pos_sorteio.txt")
+    saida = Path("experiments/reports/generated/comparacao_pos_sorteio.txt")
     saida.write_text("\n".join(linhas), encoding="utf-8")
     print("\n".join(linhas))
     print("\nGuardado em:", saida)

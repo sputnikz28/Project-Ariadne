@@ -31,7 +31,7 @@ Biblioteca de conhecimento.
 
 | Facção | Módulo | Estratégia |
 |--------|--------|-----------|
-| Clérigos | `races/legacy.py` + `evolution/` | Algoritmo genético, 14 gerações |
+| Clérigos | `races/legacy.py` + `core/evolution/` | Algoritmo genético, 14 gerações |
 | Melforks | `factions/melforks/` ← `races/extras.py` | Algoritmo genético especializado |
 | Anões | `factions/dwarves/` ← `races/extras.py` | Combinatória por clãs (3 × 15 chaves) |
 | Fadas | `factions/faeries/` ← `races/extras.py` | Ponderação por números quotidianos |
@@ -41,8 +41,8 @@ Biblioteca de conhecimento.
 | Gárgulas | `factions/gargoyles/` | Duplas frequentes via Ariadne (V8) |
 | Cronomantes | `factions/chronomancers/` ← `races/chronomancers.py` | Energia dos eventos de extração |
 | Esqueletos | `factions/skeletons/` ← `races/skeletons.py` | Janela móvel de 25 números |
-| Esquadrão Negro | `black_squad/` | Anti-popularidade; grimório roubado |
-| Ordem Élfica | `elven_order/` | Missões de recuperação (não vota directamente) |
+| Esquadrão Negro | `orders/black_squad/` | Anti-popularidade; grimório roubado |
+| Ordem Élfica | `orders/elven_order/` | Missões de recuperação (não vota directamente) |
 | Kors de Elarion | `factions/kors/` | Observação via Ariadne (V7.2) |
 | Axiomantes de Nemerion | `factions/axiomantes/` | Labirinto combinatório + Feistel (V8.1) |
 
@@ -51,7 +51,7 @@ Biblioteca de conhecimento.
 | Facção | Módulo | O que produz |
 |--------|--------|-------------|
 | Cartógrafos do Caos | `factions/chaos_cartographers/` | 5 livros analíticos em `library/books/cartographers/` (V8) |
-| Monges e Escribas | `amulets/books.py` | Livros reconstruíveis, índices |
+| Monges e Escribas | `artifacts/amulets/books.py` | Livros reconstruíveis, índices |
 
 ## Vilões e mecânicas narrativas
 
@@ -313,6 +313,9 @@ core/
     strategy.py      ← Proposal dataclass + Faction ABC
     registry.py      ← FactionRegistry (discover + register + all)
     plugin_loader.py ← CompatFaction wrapper + load_faction()
+    evolution/       ← genetic algorithm engine (V10: moved from root evolution/)
+    i18n/            ← translations.py (V10: moved from root i18n/)
+    data/            ← loaders.py — historical/jackpot/moon data access (V10: moved from root sources/)
 ```
 
 ### `Proposal` e `Faction` (`core/strategy.py`)
@@ -419,13 +422,13 @@ Adicionar uma nova facção = criar `factions/<nova>/council.py` + `manifest.jso
 - Heatmaps — matriz visual de pares/triplas (CSV/JSON para visualização)
 - Treefolks consultando os livros dos Cartógrafos directamente
 - Ranking em ascensão por janela temporal
-- `reports/writer.py` consumindo `Proposal` directamente (remover `_rebuild_report_factions`)
+- `experiments/reports/writer.py` consumindo `Proposal` directamente (remover `_rebuild_report_factions`)
 
 ---
 
 # Princípios
 
-- As fontes originais são imutáveis (`library/sources/`).
+- As fontes históricas originais são imutáveis (`datasets/historical/euromillions/`).
 - Pergaminhos são vistas (`library/scrolls/`).
 - Livros são reconstruíveis (`library/books/`).
 - Consultas funcionam como cache (`library/cache/`).

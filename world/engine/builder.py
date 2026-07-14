@@ -1,5 +1,5 @@
 from datetime import datetime
-from sources.data import get_history, obter_lua, obter_jackpot
+from core.data.loaders import get_history, obter_lua, obter_jackpot
 
 
 def build(cfg):

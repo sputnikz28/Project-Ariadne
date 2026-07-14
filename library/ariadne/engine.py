@@ -67,15 +67,15 @@ class Ariadne:
         return resposta
 
     def pairs(self, limite=10):
-        dados = ler_json(BASE / "indices/duplas.json", {})
+        dados = ler_json(BASE / "indexes/duplas.json", {})
         return dados.get("duplas_mais_comuns", [])[:limite]
 
     def triples(self, limite=10):
-        dados = ler_json(BASE / "indices/triplas.json", {})
+        dados = ler_json(BASE / "indexes/triplas.json", {})
         return dados.get("triplas_mais_comuns", [])[:limite]
 
     def numero(self, numero):
-        livro = ler_json(BASE / "sources/saidas_de_bolas_normalizado.json", {"numeros": []})
+        livro = ler_json(BASE / "indexes/saidas_de_bolas_normalizado.json", {"numeros": []})
         for item in livro["numeros"]:
             if item["numero"] == int(numero):
                 return item
@@ -111,7 +111,7 @@ class Ariadne:
 
     def least_frequent_numbers(self, limite=20):
         """Historically least frequent numbers from saidas_de_bolas_normalizado.json."""
-        livro = ler_json(BASE / "sources/saidas_de_bolas_normalizado.json", {"numeros": []})
+        livro = ler_json(BASE / "indexes/saidas_de_bolas_normalizado.json", {"numeros": []})
         todos = sorted(livro["numeros"], key=lambda x: x.get("aparicoes_totais", 0))
         result = [
             {"numero": x["numero"], "aparicoes_totais": x.get("aparicoes_totais", 0)}

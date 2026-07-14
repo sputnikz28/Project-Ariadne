@@ -5,7 +5,7 @@ from pathlib import Path
 
 
 def load_pairs():
-    return json.loads(Path("library/indices/duplas.json").read_text(encoding="utf-8"))
+    return json.loads(Path("library/indexes/duplas.json").read_text(encoding="utf-8"))
 
 
 def completar(dupla):

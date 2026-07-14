@@ -1,0 +1,31 @@
+╔════════════════════════════════════════════════════╗
+           📖 V7 — BIBLIOTECA ETERNA
+╚════════════════════════════════════════════════════╝
+
+Pergaminhos catalogados: 55
+
+🧛 VAMPIROS — MESTRES DAS TRIPLAS
+Conde Vaelor da Linhagem Sanguínea | Linhagem Sanguínea
+Tripla: [1, 4, 41]
+Chave: 1 - 4 - 16 - 33 - 41 | Estrelas: 2 - 3
+
+Lady Nyx da Linhagem Sombria | Linhagem Sombria
+Tripla: [26, 27, 28]
+Chave: 21 - 26 - 27 - 28 - 34 | Estrelas: 4 - 11
+
+🗿 GÁRGULAS — GUARDIÃS DAS DUPLAS
+Gorath da Linhagem de Pedra | Linhagem Pedra
+Dupla: [10, 38]
+Chave: 10 - 12 - 28 - 31 - 38 | Estrelas: 5 - 10
+
+Seraphine da Linhagem do Espelho | Linhagem Espelho
+Dupla: [25, 26]
+Chave: 18 - 25 - 26 - 46 - 49 | Estrelas: 4 - 9
+
+🌳 TREEFOLK INVESTIGADOR
+Pergaminhos de Lua Cheia: 7
+Confiança: 0.007
+Fantasma estatístico: 0.993
+Conclusão: Amostra insuficiente para inferência.
+
+Ariadne recorda: padrões históricos não aumentam a probabilidade matemática do sorteio.

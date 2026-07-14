@@ -1,0 +1,326 @@
+{
+  "nome": "Atlas do Universo",
+  "eras": [
+    {
+      "era": 1,
+      "momento": "2026-07-11T09:21:30+00:00",
+      "contagens": {
+        "artefactos_persistentes": 2,
+        "livros_proibidos": 9,
+        "reflexos_sombrios": 2,
+        "reliquias_roubadas": 0,
+        "missoes_elficas": 5,
+        "lendas": 1,
+        "individuos_registados": 744
+      },
+      "chave_original": [
+        [
+          3,
+          33,
+          37,
+          45,
+          46
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "chave_corrompida": [
+        [
+          4,
+          33,
+          34,
+          47,
+          48
+        ],
+        [
+          5,
+          7
+        ]
+      ],
+      "seed": "1783761689629851377"
+    },
+    {
+      "era": 2,
+      "momento": "2026-07-11T09:21:37+00:00",
+      "contagens": {
+        "artefactos_persistentes": 2,
+        "livros_proibidos": 9,
+        "reflexos_sombrios": 4,
+        "reliquias_roubadas": 0,
+        "missoes_elficas": 7,
+        "lendas": 1,
+        "individuos_registados": 744
+      },
+      "chave_original": [
+        [
+          8,
+          33,
+          36,
+          39,
+          45
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "chave_corrompida": [
+        [
+          8,
+          33,
+          42,
+          47,
+          48
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "seed": "1783761695934226241"
+    },
+    {
+      "era": 3,
+      "momento": "2026-07-11T09:21:43+00:00",
+      "contagens": {
+        "artefactos_persistentes": 2,
+        "livros_proibidos": 9,
+        "reflexos_sombrios": 6,
+        "reliquias_roubadas": 0,
+        "missoes_elficas": 8,
+        "lendas": 1,
+        "individuos_registados": 744
+      },
+      "chave_original": [
+        [
+          3,
+          8,
+          25,
+          33,
+          36
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "chave_corrompida": [
+        [
+          6,
+          7,
+          22,
+          35,
+          39
+        ],
+        [
+          6,
+          8
+        ]
+      ],
+      "seed": "1783761702356959504"
+    },
+    {
+      "era": 4,
+      "momento": "2026-07-11T09:21:49+00:00",
+      "contagens": {
+        "artefactos_persistentes": 4,
+        "livros_proibidos": 9,
+        "reflexos_sombrios": 7,
+        "reliquias_roubadas": 1,
+        "missoes_elficas": 10,
+        "lendas": 1,
+        "individuos_registados": 744
+      },
+      "chave_original": [
+        [
+          3,
+          8,
+          25,
+          33,
+          36
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "chave_corrompida": [
+        [
+          4,
+          9,
+          25,
+          33,
+          35
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "seed": "1783761708457386197"
+    },
+    {
+      "era": 5,
+      "momento": "2026-07-11T09:21:55+00:00",
+      "contagens": {
+        "artefactos_persistentes": 4,
+        "livros_proibidos": 9,
+        "reflexos_sombrios": 8,
+        "reliquias_roubadas": 2,
+        "missoes_elficas": 13,
+        "lendas": 1,
+        "individuos_registados": 744
+      },
+      "chave_original": [
+        [
+          8,
+          25,
+          36,
+          37,
+          45
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "chave_corrompida": [
+        [
+          6,
+          25,
+          37,
+          38,
+          48
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "seed": "1783761714327997240"
+    },
+    {
+      "era": 1,
+      "momento": "2026-07-11T13:32:31+00:00",
+      "contagens": {
+        "artefactos_persistentes": 5,
+        "livros_proibidos": 9,
+        "reflexos_sombrios": 10,
+        "reliquias_roubadas": 3,
+        "missoes_elficas": 16,
+        "lendas": 1,
+        "individuos_registados": 744
+      },
+      "chave_original": [
+        [
+          3,
+          8,
+          33,
+          37,
+          45
+        ],
+        [
+          3,
+          6
+        ]
+      ],
+      "chave_corrompida": [
+        [
+          6,
+          32,
+          37,
+          38,
+          43
+        ],
+        [
+          3,
+          6
+        ]
+      ],
+      "seed": "1783776750689192668"
+    },
+    {
+      "era": 2,
+      "momento": "2026-07-11T13:32:34+00:00",
+      "contagens": {
+        "artefactos_persistentes": 5,
+        "livros_proibidos": 9,
+        "reflexos_sombrios": 12,
+        "reliquias_roubadas": 3,
+        "missoes_elficas": 19,
+        "lendas": 1,
+        "individuos_registados": 744
+      },
+      "chave_original": [
+        [
+          3,
+          8,
+          25,
+          36,
+          46
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "chave_corrompida": [
+        [
+          1,
+          10,
+          26,
+          33,
+          43
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "seed": "1783776752932848032"
+    },
+    {
+      "era": 1,
+      "momento": "2026-07-14T09:30:59+00:00",
+      "contagens": {
+        "artefactos_persistentes": 6,
+        "livros_proibidos": 9,
+        "reflexos_sombrios": 66,
+        "reliquias_roubadas": 5,
+        "missoes_elficas": 77,
+        "lendas": 53,
+        "individuos_registados": 744
+      },
+      "chave_original": [
+        [
+          10,
+          19,
+          33,
+          44,
+          50
+        ],
+        [
+          2,
+          6
+        ]
+      ],
+      "chave_corrompida": [
+        [
+          11,
+          17,
+          32,
+          43,
+          47
+        ],
+        [
+          1,
+          5
+        ]
+      ],
+      "seed": "1784021454194187700"
+    }
+  ],
+  "total_eras": 8
+}

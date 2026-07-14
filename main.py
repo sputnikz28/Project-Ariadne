@@ -11,21 +11,21 @@ from world.engine.extraction import simulate_draw
 from world.engine.celestial_energy import calculate_ritual
 from world.engine.malphas_virus import choose_carrier
 from world.engine.council_war import resolve
-from evolution.statistics import calculate
-from evolution.genetic import execute
+from core.evolution.statistics import calculate
+from core.evolution.genetic import execute
 from races.extras import superiors
 from council.council import filter_candidates, vote, corrupt
-from reports.writer import generate
-from amulets.books import synchronize_sources, build_books, update_next_draw_book
-from artefacts.ark import prepare_new_run, load_all
-from black_squad.black_mages import create_mages, tentar_ressuscitar_lenda
-from elven_order.ninjas import create_ninjas, execute_missions
-from black_squad.persistence import load_grimoire
+from experiments.reports.writer import generate
+from artifacts.amulets.books import synchronize_sources, build_books, update_next_draw_book
+from artifacts.ark import prepare_new_run, load_all
+from orders.black_squad.black_mages import create_mages, tentar_ressuscitar_lenda
+from orders.elven_order.ninjas import create_ninjas, execute_missions
+from orders.black_squad.persistence import load_grimoire
 from world.engine.dark_conviction import create_mantra
 from library.ariadne.engine import Ariadne
 from factions.chaos_cartographers.council import execute_cartographers
 from core.registry import FactionRegistry
-from i18n.translations import t, lang_de_cfg
+from core.i18n.translations import t, lang_de_cfg
 
 
 def readj(p, d):
@@ -240,12 +240,12 @@ def main():
     externos.append(registo_externo(corr['entidade'], 'Entidade Maléfica', corr['chave_corrompida'], 'corrupcao_final', final_generation, 'Abismo'))
 
     # ── Persist data ──────────────────────────────────────────────────────────
-    arq = readj('data/arquivo_destino.json', [])
+    arq = readj('datasets/generated/simulations/arquivo_destino.json', [])
     arq.extend(evo['registos'])
     arq.extend(externos)
-    writej('data/arquivo_destino.json', arq)
+    writej('datasets/generated/simulations/arquivo_destino.json', arq)
 
-    mem = readj('data/memoria_conselhos.json', [])
+    mem = readj('datasets/generated/simulations/memoria_conselhos.json', [])
     mem.append({
         'data_execucao': datetime.now().isoformat(timespec='seconds'),
         'mundo': world,
@@ -256,13 +256,13 @@ def main():
         'total_chaves_racas_antigas': len(evo['registos']),
         'total_registos_externos': len(externos),
     })
-    writej('data/memoria_conselhos.json', mem)
-    writej('data/populacao_final.json', [h.to_dict() for h in evo['populacao_final']])
-    writej('data/todos_individuos.json', [h.to_dict() for h in sorted(evo['todos'].values(), key=lambda x: x.id)])
+    writej('datasets/generated/simulations/memoria_conselhos.json', mem)
+    writej('datasets/generated/world_state/populacao_final.json', [h.to_dict() for h in evo['populacao_final']])
+    writej('datasets/generated/world_state/todos_individuos.json', [h.to_dict() for h in sorted(evo['todos'].values(), key=lambda x: x.id)])
 
     # ── Generate report ───────────────────────────────────────────────────────
     report_factions = _rebuild_report_factions(all_proposals)
-    rel = Path('reports/generated') / f"relatorio_v4_1_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt"
+    rel = Path('experiments/reports/generated') / f"relatorio_v4_1_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt"
     generate({
         'mundo': world,
         'historico': hist,

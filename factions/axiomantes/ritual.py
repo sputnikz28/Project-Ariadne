@@ -12,7 +12,7 @@ from pathlib import Path
 
 from .labyrinth import UNIVERSE, key_position
 from .profile import calculate_profile, choose_by_profile
-from i18n.translations import t, lang_de_cfg
+from core.i18n.translations import t, lang_de_cfg
 
 BASE_AXIOMANTES = Path(__file__).parent.parent.parent / "experiments" / "axiomancers"
 
