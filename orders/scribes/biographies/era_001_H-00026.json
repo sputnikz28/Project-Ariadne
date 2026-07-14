@@ -1,15 +1,86 @@
 {
   "era": 1,
   "id": "H-00026",
-  "nome": null,
-  "raca": "Esqueleto",
-  "casa": "Casa Tribal",
-  "geracao": null,
+  "nome": "Thara do Bosque",
+  "raca": "Goblin",
+  "casa": "Casa das Estrelas",
+  "geracao": 1,
   "pais": [],
-  "pontos": 125,
-  "titulo": "Observador Celeste",
+  "pontos": 136,
+  "titulo": "Errante das Sombras",
   "estado": "VIVO",
   "amuletos": [],
-  "melhores_chaves": [],
-  "criada_em": "2026-07-14T09:30:59+00:00"
+  "melhores_chaves": [
+    {
+      "geracao": 1,
+      "numeros": [
+        18,
+        35,
+        39,
+        45,
+        46
+      ],
+      "estrelas": [
+        10,
+        12
+      ]
+    },
+    {
+      "geracao": 2,
+      "numeros": [
+        30,
+        35,
+        40,
+        43,
+        45
+      ],
+      "estrelas": [
+        2,
+        7
+      ]
+    },
+    {
+      "geracao": 3,
+      "numeros": [
+        9,
+        36,
+        37,
+        46,
+        48
+      ],
+      "estrelas": [
+        4,
+        10
+      ]
+    },
+    {
+      "geracao": 4,
+      "numeros": [
+        8,
+        34,
+        37,
+        45,
+        47
+      ],
+      "estrelas": [
+        1,
+        10
+      ]
+    },
+    {
+      "geracao": 5,
+      "numeros": [
+        3,
+        41,
+        42,
+        44,
+        48
+      ],
+      "estrelas": [
+        2,
+        7
+      ]
+    }
+  ],
+  "criada_em": "2026-07-11T09:21:30+00:00"
 }

@@ -280,47 +280,7 @@
         ]
       ],
       "seed": "1783776752932848032"
-    },
-    {
-      "era": 1,
-      "momento": "2026-07-14T09:30:59+00:00",
-      "contagens": {
-        "artefactos_persistentes": 6,
-        "livros_proibidos": 9,
-        "reflexos_sombrios": 66,
-        "reliquias_roubadas": 5,
-        "missoes_elficas": 77,
-        "lendas": 53,
-        "individuos_registados": 744
-      },
-      "chave_original": [
-        [
-          10,
-          19,
-          33,
-          44,
-          50
-        ],
-        [
-          2,
-          6
-        ]
-      ],
-      "chave_corrompida": [
-        [
-          11,
-          17,
-          32,
-          43,
-          47
-        ],
-        [
-          1,
-          5
-        ]
-      ],
-      "seed": "1784021454194187700"
     }
   ],
-  "total_eras": 8
+  "total_eras": 7
 }
