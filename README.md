@@ -225,7 +225,8 @@ Project-Ariadne/
 ├── evolution/                  ← genetic algorithm engine
 ├── council/                    ← Council filter + vote
 ├── world/                      ← world state, simulation context
-├── worlds/                     ← world profiles (config variants)
+│   ├── engine/                 ← builder, extraction, celestial energy, dark conviction, council war, Malphas virus
+│   └── presets/                ← world profiles (config variants) + central loader
 ├── black_squad/                ← Black Squad + grimoire
 ├── elven_order/                ← Elven Order + missions
 ├── amulets/                    ← amulets + library sync

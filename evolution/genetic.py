@@ -1,7 +1,7 @@
 import random
 from races.legacy import create,generate
 from artefacts.living import forjar,evoluir,herdar
-from world.malphas_virus import infetar
+from world.engine.malphas_virus import infetar
 from amulets.monastery import conceder_audiencia
 from artefacts.ark import tentar_encontrar, marcar_perdido
 

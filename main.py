@@ -6,11 +6,11 @@ from configuration import load_config
 from datetime import datetime
 from pathlib import Path
 
-from world.builder import build
-from world.extraction import simulate_draw
-from world.celestial_energy import calculate_ritual
-from world.malphas_virus import choose_carrier
-from world.council_war import resolve
+from world.engine.builder import build
+from world.engine.extraction import simulate_draw
+from world.engine.celestial_energy import calculate_ritual
+from world.engine.malphas_virus import choose_carrier
+from world.engine.council_war import resolve
 from evolution.statistics import calculate
 from evolution.genetic import execute
 from races.extras import superiors
@@ -21,7 +21,7 @@ from artefacts.ark import prepare_new_run, load_all
 from black_squad.black_mages import create_mages, tentar_ressuscitar_lenda
 from elven_order.ninjas import create_ninjas, execute_missions
 from black_squad.persistence import load_grimoire
-from world.dark_conviction import create_mantra
+from world.engine.dark_conviction import create_mantra
 from library.ariadne.engine import Ariadne
 from factions.chaos_cartographers.council import execute_cartographers
 from core.registry import FactionRegistry
