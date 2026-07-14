@@ -14,11 +14,11 @@ from .labyrinth import UNIVERSE, key_position
 from .profile import calculate_profile, choose_by_profile
 from i18n.translations import t, lang_de_cfg
 
-BASE_AXIOMANTES = Path(__file__).parent.parent.parent / "axiomantes"
+BASE_AXIOMANTES = Path(__file__).parent.parent.parent / "experiments" / "axiomancers"
 
 
 def _save_experience(dados):
-    pasta = BASE_AXIOMANTES / "experiencias"
+    pasta = BASE_AXIOMANTES / "runs"
     pasta.mkdir(parents=True, exist_ok=True)
     ts = datetime.now().strftime("%Y%m%d_%H%M%S")
     path = pasta / f"experiencia_{ts}.json"

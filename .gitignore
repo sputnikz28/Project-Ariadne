@@ -12,7 +12,7 @@ build/
 # Runtime data (generated during simulation)
 data/
 reports/generated/
-axiomantes/experiences/
+experiments/axiomancers/runs/
 campaigns/
 
 # Ariadne cache (rebuilt automatically)

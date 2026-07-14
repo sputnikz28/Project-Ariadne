@@ -39,8 +39,9 @@ faccoes/
 ├── cartografos_caos/     ← Cartógrafos do Caos (V8)
 └── axiomantes/           ← Axiomantes de Nemerion (V8.1)
 
-axiomantes/
-└── experiences/         ← relatórios JSON por execução do ritual
+experiments/
+└── axiomancers/
+    └── runs/             ← relatórios JSON por execução do ritual
 ```
 
 ---
@@ -158,7 +159,7 @@ PERFIL DOS ECOS (29 chaves)
 
 Chave escolhida:  9  10  31  34  37  ⭐  2  10
 ```
-Experiência completa em `axiomantes/experiences/experiencia_YYYYMMDD_HHMMSS.json`.
+Experiência completa em `experiments/axiomancers/runs/experiencia_YYYYMMDD_HHMMSS.json`.
 
 > **Aviso:** A posição numa permutação pseudoaleatória não altera a probabilidade real de qualquer chave. Uma cobertura ≥ 50% é esperada quando se percorre ≥ 50% do universo. Isto é sempre compatível com o acaso.
 

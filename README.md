@@ -215,8 +215,9 @@ Project-Ariadne/
 │       ├── ritual.py           ← Ritual of Thirty Echoes
 │       └── council.py          ← Council integration
 │
-├── axiomantes/
-│   └── experiences/            ← per-run ritual reports (JSON)
+├── experiments/
+│   └── axiomancers/
+│       └── runs/                ← per-run ritual reports (JSON)
 │
 ├── i18n/
 │   └── translations.py         ← 6 languages × 25 translation keys

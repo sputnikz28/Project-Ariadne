@@ -281,7 +281,7 @@ Facção em `factions/axiomantes/`. Percorrem o Labirinto de 139.838.160 câmara
 | `limiar_cobertura` | 0.50 | Cobertura mínima para abrir o Portal |
 | `excesso_minimo` | 0.0 | Excesso mínimo sobre o esperado |
 | `n_candidatos` | 50000 | Chaves inéditas avaliadas (50K ≈ 1.5s; 250K ≈ 4s) |
-| `guardar_experiencia` | true | Grava JSON em `axiomantes/experiences/` |
+| `guardar_experiencia` | true | Grava JSON em `experiments/axiomancers/runs/` |
 
 ### Estrutura de ficheiros
 
@@ -292,7 +292,7 @@ Facção em `factions/axiomantes/`. Percorrem o Labirinto de 139.838.160 câmara
 | `factions/axiomantes/ritual.py` | análise completa + Trinta Ecos + grava experiência |
 | `factions/axiomantes/council.py` | ponto de entrada para `main.py` |
 | `factions/axiomantes/config.json` | metadados e linhagens |
-| `axiomantes/experiences/` | relatórios JSON por execução |
+| `experiments/axiomancers/runs/` | relatórios JSON por execução |
 
 ### Integração
 
