@@ -209,7 +209,8 @@ Project-Ariadne/
 │   ├── strategy.py / registry.py / plugin_loader.py  ← FactionRegistry + plugin architecture
 │   ├── evolution/               ← genetic algorithm engine (Clérigos and other factions)
 │   ├── i18n/                    ← translations.py — 6 languages × 25 translation keys
-│   └── data/                    ← loaders.py — reusable historical/jackpot/moon data access
+│   ├── data/                    ← loaders.py — reusable historical/jackpot/moon data access
+│   └── services/                ← scaffold for shared statistics services (empty — see core/services/__init__.py)
 ├── council/                     ← Grand Council filter + vote
 ├── factions/                    ← V7+ executable faction plugins (package format)
 │   ├── kors/                    ← Kors de Elarion (V7.2)
@@ -244,10 +245,17 @@ Project-Ariadne/
 │   └── generated/                ← simulations/ · campaigns/ · world_state/ · temporary/
 ├── experiments/                 ← simulation outputs and research
 │   ├── axiomancers/runs/        ← per-run Axiomantes ritual reports (JSON)
-│   └── reports/                 ← report writer + generated/ .txt reports
+│   ├── reports/                 ← report writer + generated/ .txt reports
+│   ├── figures/                 ← plots/visualisations (empty — structure only)
+│   ├── notebooks/               ← exploratory analysis notebooks (empty — structure only)
+│   └── benchmarks/              ← ad-hoc benchmark research sessions (empty — structure only)
+├── benchmarks/                  ← durable strategy-vs-baseline comparison results (empty — structure only)
+│   ├── random/                  ← random-baseline runs
+│   ├── reports/                 ← human-readable comparison reports
+│   └── rankings/                ← machine-readable leaderboards
 ├── docs/                        ← documentation
 │   └── lore/legends/            ← legendary characters registry
-└── tests/                       ← (planned)
+└── tests/                       ← unittest suite for the framework (registry, plugin_loader, council, models, backtesting)
 ```
 
 ---
@@ -274,6 +282,9 @@ python campaign_v6.py
 
 # Validate config
 python validate_config.py
+
+# Run the test suite
+python -m unittest discover -s tests
 ```
 
 ---
@@ -324,25 +335,93 @@ Set `lang = en` in `config.txt`. Invalid codes fall back silently to `pt`.
 
 ## Dataset
 
-- **1,962 real Euromillions draws** (2004–2026) stored as individual JSON scrolls
+- **1,962 real Euromillions draws** (2004–2026) stored as individual JSON scrolls (`library/scrolls/`)
 - **55 full 2026 scrolls** with astronomy metadata, statistics, and SHA-256 signature
-- **Annual datasets** 2004–2026 in `biblioteca/fontes/`
-- **Frequency indices** for pairs and triples
+- **Immutable annual datasets** 2004–2026 in `datasets/historical/euromillions/<year>/`
+- **Raw imports** (e.g. spreadsheet exports) in `datasets/imports/`
+- **Frequency indices** for pairs, triples and the normalized number index in `library/indexes/`
+- **Generated/runtime data** (simulation ledgers, world-state snapshots, campaign runs, disposable caches) in `datasets/generated/` — never committed as source data, always reproducible by re-running the simulator
 
 All data is stored locally. No API calls, no external services.
 
 ---
 
-## Adding a new faction
+## Plugin lifecycle
 
-A faction is a Python module that:
+A faction is a directory under `factions/<name>/`. `main.py` never
+references any specific faction by name — it only talks to
+`core.registry.FactionRegistry`:
 
-1. Accepts `ariadne` (Ariadne instance), `seed` (int), and optionally `cfg` (ConfigParser)
-2. Queries data exclusively through `ariadne`
-3. Returns a list of dicts: `[{'name': str, 'key': ([nums], [stars]), 'weight': float, ...}]`
-4. Gets registered in `main.py` with a voting weight
+```python
+registry = FactionRegistry().discover("factions")
+for faction in registry.all():
+    proposals = faction.propose(context)   # -> list[Proposal]
+```
 
-Look at `factions/kors/council.py` for the simplest example, or `factions/axiomantes/council.py` for a full implementation with config, logging and Council integration.
+**Adding a new faction never requires changing `main.py`.**
+
+1. Create `factions/<name>/manifest.json` — `id`, `name`, `home`,
+   `config_section`, `weight_key`, `default_weight`, `votes` (`false`
+   marks it analytical/non-voting, like `chaos_cartographers`).
+2. Implement the strategy, either:
+   - `council.py` with `FACTION_META = {...}` + `def council(ariadne, seed, cfg, ctx)`
+     returning a list of dicts, a dwarves-style clan list (`carteira`),
+     or a werewolves-style `{'ativo', 'simulacoes', 'finalistas'}` dict
+     — `core.plugin_loader.CompatFaction` normalizes all three shapes
+     into `Proposal` objects; **or**
+   - `strategy.py` with a class inheriting `core.strategy.Faction`,
+     implementing `propose(self, context) -> list[Proposal]` directly,
+     referenced by `"class"` in `manifest.json`.
+3. Query data exclusively through `ariadne` (the `Ariadne` instance in
+   `context`) — never read `library/` or `datasets/` files directly.
+
+`FactionRegistry.discover("factions")` walks `factions/` alphabetically
+at startup, skips `_`-prefixed directories, and silently skips any
+directory without a working `council.py`/`strategy.py` (analytical
+factions like `chaos_cartographers` are skipped this way, not treated
+as errors). A faction returning `[]` — a **valid abstention** (portal
+closed, inactive this run, etc.) — is not a failure; `main.py` only
+logs a warning when `propose()` raises an actual exception.
+
+Look at `factions/kors/council.py` for the simplest `council.py`
+example, or `factions/axiomantes/council.py` for a full implementation
+with config, logging and Council integration.
+
+---
+
+## Testing
+
+`tests/` uses Python's stdlib `unittest` — no external test framework,
+consistent with the project's stdlib-only philosophy. Run the suite
+with:
+
+```bash
+python -m unittest discover -s tests
+```
+
+**Philosophy:** tests target the *framework*, not the narrative
+content — `FactionRegistry`, `plugin_loader`, `council` (filtering,
+voting, corruption), the shared `Proposal`/`Faction` models, and the
+backtesting/scoring logic. Each test file covers exactly one module's
+responsibility so that a future refactor of the plugin architecture
+fails loudly and locally instead of silently breaking a faction three
+layers away. Faction-specific narrative logic (the 13 `factions/*/`
+strategies) is not under test — it doesn't affect framework stability
+and its "correctness" is largely narrative, not mechanical.
+
+---
+
+## Benchmarks
+
+`benchmarks/` is scaffolding for comparing faction/strategy
+performance against a random baseline (`benchmarks/random/`) with
+comparison reports (`benchmarks/reports/`) and machine-readable
+leaderboards (`benchmarks/rankings/`). No runner exists yet — the
+structure exists so that future benchmark tooling has a stable home
+from day one, instead of being bolted onto `experiments/` after the
+fact. `experiments/benchmarks/` is a related but distinct location for
+ad-hoc benchmark research sessions, as opposed to the durable/canonical
+results that belong in the top-level `benchmarks/`.
 
 ---
 

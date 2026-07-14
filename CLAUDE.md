@@ -410,7 +410,7 @@ Adicionar uma nova facção = criar `factions/<nova>/council.py` + `manifest.jso
 
 ## Ainda fora do sistema de plugins (por design)
 
-- **Clérigos** — algoritmo genético `evolution/genetic.py`; retorno complexo
+- **Clérigos** — algoritmo genético `core/evolution/genetic.py`; retorno complexo
 - **Esquadrão Negro** — estado persistente (grimório, eventos)
 - **Ordem Élfica** — não vota directamente
 - **Seres Superiores** — retorno duplo `(vis, deus)` com pesos diferentes
@@ -418,11 +418,50 @@ Adicionar uma nova facção = criar `factions/<nova>/council.py` + `manifest.jso
 
 ## Candidatos para V10
 
-- Entropia — medir o "caos" dos sorteios por ano
+- Entropia — medir o "caos" dos sorteios por ano (candidato a `EntropyService`, ver abaixo)
 - Heatmaps — matriz visual de pares/triplas (CSV/JSON para visualização)
 - Treefolks consultando os livros dos Cartógrafos directamente
 - Ranking em ascensão por janela temporal
 - `experiments/reports/writer.py` consumindo `Proposal` directamente (remover `_rebuild_report_factions`)
+
+---
+
+# Testes (`tests/`)
+
+Suite `unittest` da stdlib (sem dependências externas — consistente com `requirements.txt`). Correr com:
+
+```bash
+python -m unittest discover -s tests
+```
+
+| Ficheiro | Cobre |
+|---------|------|
+| `test_models.py` | `core/strategy.py` — `Proposal` (defaults, isolamento de `extra`) e `Faction` (ABC, propriedades `name`/`origin`/`home`) |
+| `test_registry.py` | `core/registry.py` — `register`/`all`/`count`, `discover()` (skip de `_prefixo`, skip de não-diretórios, contagem real de 11 facções votantes, exclusão das analíticas) |
+| `test_plugin_loader.py` | `core/plugin_loader.py` — `_load_manifest`, `load_faction` (ordem de resolução), `CompatFaction.propose()` para as 3 formas de retorno (lista simples, anões com `carteira`, lobisomens com `ativo`/`finalistas`) |
+| `test_council.py` | `council/council.py` — `filter_candidates` (mutação de soma fora do intervalo, rejeição por baixa energia), `vote` (agregação ponderada), `corrupt` (limites válidos, preservação da chave original) |
+| `test_backtesting.py` | `compare_result.py` — `titulo()` (todas as combinações), `avaliar_registo()` (pontuação, preservação de campos) |
+
+**Filosofia:** os testes cobrem a *framework* (registry, plugin_loader, council, modelos partilhados, pontuação do backtesting), não a lógica narrativa de cada facção — um refactor da arquitetura de plugins deve falhar aqui, localmente, em vez de partir silenciosamente uma facção three camadas depois. As 13 facções em `factions/*/` não têm testes dedicados; a sua "correção" é maioritariamente narrativa, não mecânica.
+
+# Serviços partilhados (`core/services/`)
+
+Scaffold — só `__init__.py` com documentação, **sem lógica migrada**. Auditoria feita (não é uma migração): existe hoje lógica estatística duplicada em vários pontos que estes serviços deverão eventualmente substituir:
+
+| Duplicação encontrada | Onde |
+|---|---|
+| Contagem de frequências (`Counter` sobre sorteios) | `core/evolution/statistics.py`, `factions/chaos_cartographers/{trends,randomness,cycles}.py`, `factions/axiomantes/profile.py` |
+| Quentes/frios | `core/evolution/statistics.py` vs `factions/chaos_cartographers/trends.py` vs `Ariadne.least_frequent_numbers()` — 3 fontes de verdade inconsistentes |
+| Atraso/"overdue" | `Ariadne.overdue_numbers()` (só pergaminhos 2026) vs `core/evolution/statistics.py` (histórico completo) vs `factions/chaos_cartographers/cycles.py` (mais detalhado: médio/máx/mín/variância) |
+| Gaps intra-chave | `races/legacy.py:gaps`, `factions/chaos_cartographers/trends.py`, `factions/axiomantes/profile.py` |
+| Pares/triplas | `Ariadne.pairs()/triples()` vs recomputação em `factions/chaos_cartographers/constellations.py` e `markov.py`; `races/vampires/lineages.py` e `races/gargoyles/lineages.py` leem `library/indexes/*.json` diretamente em vez de usar `Ariadne` |
+| Baixos/altos, pares/ímpares | `factions/chaos_cartographers/{trends,randomness}.py`, `factions/axiomantes/profile.py` |
+
+Serviços previstos (nomes indicativos): `StatisticsService`, `DelayService`, `PairService`, `TripleService`, `EntropyService`, `TrendService`. Migração fica para depois — **não implementar já**.
+
+# Benchmarks (`benchmarks/` e `experiments/benchmarks/`)
+
+Estrutura só, sem runner. `benchmarks/random/` (baseline aleatório), `benchmarks/reports/` (relatórios legíveis), `benchmarks/rankings/` (leaderboards em JSON). `experiments/benchmarks/` é para sessões de investigação ad-hoc, distinto do `benchmarks/` de topo (resultados duradouros/canónicos). Nenhum destes gera conteúdo automaticamente hoje.
 
 ---
 
