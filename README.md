@@ -241,11 +241,10 @@ Project-Ariadne/
 ├── datasets/                    ← historical and generated data
 │   ├── historical/euromillions/<year>/  ← immutable annual datasets
 │   ├── imports/                 ← raw import files (xlsx)
-│   └── generated/                ← simulations/ · world_state/ · temporary/
+│   └── generated/                ← simulations/ · campaigns/ · world_state/ · temporary/
 ├── experiments/                 ← simulation outputs and research
 │   ├── axiomancers/runs/        ← per-run Axiomantes ritual reports (JSON)
 │   └── reports/                 ← report writer + generated/ .txt reports
-├── campaigns/                   ← multi-era campaign runs
 ├── docs/                        ← documentation
 │   └── lore/legends/            ← legendary characters registry
 └── tests/                       ← (planned)

@@ -13,7 +13,6 @@ build/
 /datasets/generated/
 experiments/reports/generated/
 experiments/axiomancers/runs/
-campaigns/
 
 # Ariadne cache (rebuilt automatically)
 library/cache/

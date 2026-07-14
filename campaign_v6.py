@@ -40,7 +40,7 @@ def main():
     max_bios = cfg.getint("ESCRIBAS_V6", "max_biografias_por_rodada", fallback=12)
 
     campanha_id = datetime.now().strftime("%Y%m%d_%H%M%S")
-    pasta = Path("campaigns") / f"campanha_{campanha_id}"
+    pasta = Path("datasets/generated/campaigns") / f"campanha_{campanha_id}"
     pasta.mkdir(parents=True, exist_ok=True)
 
     resumos = []
