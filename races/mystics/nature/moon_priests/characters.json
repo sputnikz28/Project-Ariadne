@@ -1,0 +1,23 @@
+{
+  "raca": "Moon Priests",
+  "personagens": [
+    {
+      "id": "selwyn_nightveil",
+      "nome": "Selwyn Nightveil",
+      "titulo": "Alto Sacerdote da Lua Cheia",
+      "biografia": "Lidera as vigílias de eclipse no Templo da Lua Prateada há vinte e sete anos. Nunca perdeu uma única lua cheia.",
+      "personalidade": "Solene, cerimonioso, incapaz de conversa pequena.",
+      "artefactos_preferidos": ["silver_crescent"],
+      "especialidade_analitica_futura": "eclipses e luas cheias como marcadores de calendário"
+    },
+    {
+      "id": "lyanna_duskwhisper",
+      "nome": "Lyanna Duskwhisper",
+      "titulo": "Guardiã do Cálice Lunar",
+      "biografia": "Interpreta omens na água parada do Cálice Lunar desde criança. Os outros sacerdotes consultam-na antes de qualquer vigília importante.",
+      "personalidade": "Sonhadora, fala baixo, prefere o silêncio da noite.",
+      "artefactos_preferidos": ["lunar_chalice"],
+      "especialidade_analitica_futura": "calendário de lua nova e ciclos lunares completos"
+    }
+  ]
+}

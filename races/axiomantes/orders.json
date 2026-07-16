@@ -1,0 +1,17 @@
+{
+  "raca": "Axiomantes de Nemerion",
+  "descricao": "Uma única ordem, uma voz colectiva, sem hierarquia interna nomeada — deliberadamente, para espelhar a unidade do Labirinto.",
+  "casa": "place:cidadela_de_nemerion",
+  "ordens": [
+    {
+      "id": "cidadela_de_nemerion",
+      "nome": "Cidadela de Nemerion",
+      "membro": "character:axiomantes_voz_colectiva",
+      "filosofia": "Toda a chave já existe algures no Labirinto — a questão nunca é onde procurar, é se o portal está aberto.",
+      "metodo": "Combinatorial rank/unrank + permutação de Feistel; ritual dos Trinta Ecos determina se o portal abre.",
+      "artefactos": ["labirinto_de_nemerion", "portal_do_labirinto"],
+      "faccao": "factions/axiomantes",
+      "config_section": "AXIOMANTES"
+    }
+  ]
+}

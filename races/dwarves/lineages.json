@@ -1,0 +1,37 @@
+{
+  "raca": "Clãs Anões das Montanhas",
+  "descricao": "Chegados na Era III — O Mundo Vivo. Três clãs, cada um com forja, rei e doutrina próprios.",
+  "casa": "place:fortaleza_das_montanhas",
+  "linhagens": [
+    {
+      "id": "barbas_de_ferro",
+      "nome": "Barbas de Ferro",
+      "lider": "character:rei_thorin",
+      "filosofia": "O que já provou ser popular merece confiança renovada.",
+      "metodo": "Pool centrada em números quentes e no último sorteio.",
+      "artefactos": ["forja_de_barbas_de_ferro"],
+      "faccao": "factions/dwarves",
+      "config_section": "ANOES"
+    },
+    {
+      "id": "cristal_azul",
+      "nome": "Cristal Azul",
+      "lider": "character:rei_borin",
+      "filosofia": "O equilíbrio entre quentes e frios produz carteiras mais resistentes.",
+      "metodo": "Pool equilibrada entre números quentes e frios.",
+      "artefactos": ["cristal_de_borin"],
+      "faccao": "factions/dwarves",
+      "config_section": "ANOES"
+    },
+    {
+      "id": "forja_negra",
+      "nome": "Forja Negra",
+      "lider": "character:rei_dain",
+      "filosofia": "Quantidade é, também, uma forma de rigor.",
+      "metodo": "Mesma construção de pool, maior volume de chaves por sessão.",
+      "artefactos": ["martelo_da_forja_negra"],
+      "faccao": "factions/dwarves",
+      "config_section": "ANOES"
+    }
+  ]
+}

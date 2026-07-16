@@ -1,0 +1,17 @@
+{
+  "raca": "Lobisomens de Fenrir",
+  "descricao": "Os Lobisomens não têm clãs separados — toda a matilha honra um único nome, Fenrir, e actua (ou descansa) em bloco conforme o ciclo lunar.",
+  "casa": "place:floresta_da_lua_cheia",
+  "linhagens": [
+    {
+      "id": "matilha_de_fenrir",
+      "nome": "Matilha de Fenrir",
+      "lider": "character:fenrir_arquetipo",
+      "filosofia": "A matilha não aposta numa presa — persegue mil e escolhe as que sobrevivem.",
+      "metodo": "Monte Carlo com pontuação de aptidão; activa apenas em semanas de lua cheia (ou próxima).",
+      "artefactos": ["presa_imutavel_de_fenrir", "uivo_da_lua_cheia"],
+      "faccao": "factions/werewolves",
+      "config_section": "LOBISOMENS"
+    }
+  ]
+}

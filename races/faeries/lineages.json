@@ -1,0 +1,17 @@
+{
+  "raca": "Fadas Lunélia",
+  "descricao": "As Fadas Lunélia não reconhecem clãs formais — cada representante nasce independente a cada sessão do Conselho. Estrutura mantida como lineages.json por consistência entre raças, descrevendo aqui a única 'linhagem' reconhecida: o próprio Jardim.",
+  "casa": "place:jardim_eterno",
+  "linhagens": [
+    {
+      "id": "jardim_eterno",
+      "nome": "Linhagem do Jardim Eterno",
+      "lider": "character:lunelia_arquetipo",
+      "filosofia": "O acaso não é só estatística — é também aquilo que as pessoas escolhem sem saber porquê.",
+      "metodo": "Amostragem ponderada com viés para números quotidianos.",
+      "artefactos": ["petala_do_jardim_eterno", "colar_dos_numeros_quotidianos"],
+      "faccao": "factions/faeries",
+      "config_section": "FADAS"
+    }
+  ]
+}

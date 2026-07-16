@@ -1,0 +1,18 @@
+{
+  "raca": "Cartógrafos do Caos",
+  "descricao": "Cinco Cartógrafos, cinco livros analíticos por sessão, nenhum voto — a única ordem inteiramente analítica do Conselho junto com os Oracles (Mystics).",
+  "casa": "place:biblioteca_eterna",
+  "ordens": [
+    {
+      "id": "colegio_dos_cartografos",
+      "nome": "Colégio dos Cartógrafos do Caos",
+      "membros": ["character:eldran", "character:vesara", "character:lirien", "character:thalvos", "character:oryn"],
+      "filosofia": "Publicamos o mapa, nunca o caminho.",
+      "metodo": "Cinco análises independentes (coocorrência, ciclos, tendências, Monte Carlo, Markov), sempre publicadas em conjunto.",
+      "artefactos": ["livro_das_constelacoes", "livro_dos_intervalos", "livro_das_correntes", "livro_do_acaso_esperado", "livro_dos_ecos_sequenciais"],
+      "faccao": "factions/chaos_cartographers",
+      "config_section": "CARTOGRAFOS_CAOS",
+      "vota": false
+    }
+  ]
+}

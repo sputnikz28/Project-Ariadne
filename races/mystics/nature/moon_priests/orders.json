@@ -1,0 +1,18 @@
+{
+  "raca": "Moon Priests",
+  "linhagem": "nature_mystics",
+  "casa": "place:templo_da_lua_prateada",
+  "ordens": [
+    {
+      "id": "moon_priests",
+      "nome": "Moon Priests",
+      "titulo": "Guardiões dos Templos Lunares",
+      "membros": ["character:selwyn_nightveil", "character:lyanna_duskwhisper"],
+      "filosofia": "Cada fase da lua é uma pergunta feita ao céu. Os Sacerdotes da Lua não respondem — registam a pergunta com exactidão.",
+      "papel_analitico_futuro": ["lua nova", "lua cheia", "eclipses", "calendários lunares"],
+      "artefactos": ["silver_crescent", "lunar_chalice"],
+      "faccao": "factions/moon_priests",
+      "config_section": "MOON_PRIESTS"
+    }
+  ]
+}

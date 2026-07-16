@@ -1,0 +1,50 @@
+{
+  "raca": "Cartógrafos do Caos",
+  "personagens": [
+    {
+      "id": "eldran",
+      "nome": "Eldran das Constelações",
+      "titulo": "Cartógrafo das Constelações",
+      "biografia": "Mapeia a rede de coocorrência entre números — quais pares aparecem juntos com mais frequência, e qual a centralidade de cada número dentro dessa rede.",
+      "personalidade": "Visual, gosta de desenhar redes antes de as descrever por palavras.",
+      "artefactos_preferidos": ["livro_das_constelacoes"],
+      "metodo": "Rede de coocorrência e centralidade entre números, publicada como livro."
+    },
+    {
+      "id": "vesara",
+      "nome": "Vesara dos Intervalos",
+      "titulo": "Cronista dos Ciclos",
+      "biografia": "Regista atrasos históricos com precisão notarial — médias, máximos, ciclos completos de cada número.",
+      "personalidade": "Meticulosa, obcecada por ciclos completos, desconfortável com dados parciais.",
+      "artefactos_preferidos": ["livro_dos_intervalos"],
+      "metodo": "Atrasos históricos, médias, máximos e ciclos completos, publicados como livro."
+    },
+    {
+      "id": "lirien",
+      "nome": "Lirien das Correntes",
+      "titulo": "Cartógrafa das Tendências",
+      "biografia": "Segue tendências por janela temporal — baixos contra altos, dígitos finais, correntes que se formam e desfazem ao longo do tempo.",
+      "personalidade": "Observadora de mudanças graduais, paciente com tendências lentas.",
+      "artefactos_preferidos": ["livro_das_correntes"],
+      "metodo": "Tendências por janela, baixos vs altos, dígitos finais, publicadas como livro."
+    },
+    {
+      "id": "thalvos",
+      "nome": "Thalvos do Acaso Esperado",
+      "titulo": "Monge do Acaso",
+      "biografia": "Corre cem mil simulações de Monte Carlo a cada sessão, comparando sistematicamente o real com o esperado puramente aleatório.",
+      "personalidade": "Cético por vocação, desconfia de qualquer padrão que não sobreviva à simulação.",
+      "artefactos_preferidos": ["livro_do_acaso_esperado"],
+      "metodo": "Monte Carlo — compara o real com o esperado aleatório, publicado como livro."
+    },
+    {
+      "id": "oryn",
+      "nome": "Oryn dos Ecos Sequenciais",
+      "titulo": "Oráculo de Markov",
+      "biografia": "Estuda transições entre sorteios consecutivos — o que aparece depois de quê, vizinhança, sequências que se repetem.",
+      "personalidade": "Encadeado no próprio raciocínio, fala sempre em termos de 'depois disto, aquilo'.",
+      "artefactos_preferidos": ["livro_dos_ecos_sequenciais"],
+      "metodo": "Transições de Markov entre sorteios, publicadas como livro."
+    }
+  ]
+}

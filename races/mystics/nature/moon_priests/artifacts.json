@@ -1,0 +1,17 @@
+{
+  "raca": "Moon Priests",
+  "artefactos": [
+    {
+      "id": "silver_crescent",
+      "nome": "Silver Crescent",
+      "nome_pt": "Crescente de Prata",
+      "descricao": "Um adorno em forma de lua minguante, forjado com prata batida sob eclipse. Diz-se que aquece na noite de lua nova."
+    },
+    {
+      "id": "lunar_chalice",
+      "nome": "Lunar Chalice",
+      "nome_pt": "Cálice Lunar",
+      "descricao": "Um cálice de água parada onde a superfície nunca deixa de reflectir a fase actual da lua, mesmo em salas sem janelas."
+    }
+  ]
+}

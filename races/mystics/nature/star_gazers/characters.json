@@ -1,0 +1,23 @@
+{
+  "raca": "Star Gazers",
+  "personagens": [
+    {
+      "id": "orion_farsight",
+      "nome": "Orion Farsight",
+      "titulo": "Cartógrafo das Constelações",
+      "biografia": "Passou mais noites no Observatório de Vidro Celeste do que em qualquer cama. Mantém cadernos meticulosos que cruzam constelações reais com as duas estrelas de cada sorteio.",
+      "personalidade": "Meticuloso ao ponto da obsessão; anota tudo.",
+      "artefactos_preferidos": ["celestial_astrolabe"],
+      "especialidade_analitica_futura": "simbolismo de combinações estelares"
+    },
+    {
+      "id": "vesper_skyholt",
+      "nome": "Vesper Skyholt",
+      "titulo": "Guardiã da Bússola Estelar",
+      "biografia": "Nunca dorme duas noites sob o mesmo tecto — navega apenas por estrelas, seguindo a Bússola Estelar onde quer que a agulha aponte.",
+      "personalidade": "Inquieta, avessa a rotinas, fala pouco sobre o passado.",
+      "artefactos_preferidos": ["star_compass"],
+      "especialidade_analitica_futura": "as duas estrelas do Euromilhões como eixo analítico próprio"
+    }
+  ]
+}

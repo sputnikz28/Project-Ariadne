@@ -1,0 +1,23 @@
+{
+  "raca": "Treefolks da Floresta Ancestral",
+  "personagens": [
+    {
+      "id": "grande_carvalho_ancestral",
+      "nome": "Grande Carvalho Ancestral",
+      "titulo": "Treefolk Investigador",
+      "biografia": "A única figura fixa da raça — não gera chaves, investiga hipóteses sobre o próprio mundo. A sua pergunta mais persistente: a fase lunar altera os padrões observados nas extrações? Consulta Ariadne directamente através de `search_moon`, sempre concluindo que a amostra é insuficiente ou que os padrões são apenas descritivos.",
+      "personalidade": "Paciente ao extremo, cientificamente honesto, nunca declara uma conclusão que os dados não suportem.",
+      "artefactos_preferidos": ["pergaminho_de_lua_cheia"],
+      "metodo": "Não gera chaves — mede confiança e 'fantasma estatístico' sobre a hipótese lunar."
+    },
+    {
+      "id": "raiz_arquetipo",
+      "nome": "Raiz",
+      "titulo": "Representante Anónimo da Floresta",
+      "biografia": "Não é uma personagem fixa, mas um arquétipo: a cada sessão do Conselho nascem várias Raízes (Raiz-1, Raiz-2, ...), cada uma escolhendo aleatoriamente um 'modelo' de inspiração — Random Forest, Rede Neural, LSTM, Bayesiano — e reportando honestamente o seu próprio fantasma estatístico.",
+      "personalidade": "Varia por instância, mas partilha sempre a mesma honestidade metodológica.",
+      "artefactos_preferidos": [],
+      "metodo": "Pontuação inspirada em ML: frequência + atraso ponderados; reporta treino, teste e fantasma estatístico."
+    }
+  ]
+}

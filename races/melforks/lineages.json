@@ -1,0 +1,17 @@
+{
+  "raca": "Melforks Genéticos",
+  "descricao": "Os Melforks não têm clãs — apenas gerações. Cada sessão do Conselho corre o seu próprio ciclo evolutivo completo, do zero.",
+  "casa": "place:laboratorio_genetico",
+  "linhagens": [
+    {
+      "id": "linhagem_clerigo",
+      "nome": "Linhagem Clerical",
+      "lider": "character:clerigo_arquetipo",
+      "filosofia": "Não escolhemos a melhor chave — cultivamo-la.",
+      "metodo": "Algoritmo genético com crossover de elite e pontuação de aptidão partilhada com os Lobisomens.",
+      "artefactos": ["tubo_de_ensaio_ancestral", "registo_de_geracoes"],
+      "faccao": "factions/melforks",
+      "config_section": "MELFORKS"
+    }
+  ]
+}

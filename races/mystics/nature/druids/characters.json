@@ -1,0 +1,23 @@
+{
+  "raca": "Druids",
+  "personagens": [
+    {
+      "id": "thistlewood_greenbark",
+      "nome": "Thistlewood Greenbark",
+      "titulo": "Voz das Raízes Antigas",
+      "biografia": "O mais velho druida vivo do Círculo do Carvalho Eterno. Já não caminha entre as árvores — diz-se que caminha COM elas, um passo por estação. Passou os últimos quarenta solstícios a contar os anéis de crescimento de um único carvalho.",
+      "personalidade": "Paciente até à exasperação alheia; fala em parábolas sobre estações quando lhe perguntam algo directo.",
+      "artefactos_preferidos": ["oak_staff"],
+      "especialidade_analitica_futura": "solstícios e equinócios como pontos de viragem estatística"
+    },
+    {
+      "id": "wren_hollowmoss",
+      "nome": "Wren Hollowmoss",
+      "titulo": "Guardiã do Ramo Lunar",
+      "biografia": "A mais jovem druida a receber um Ramo Lunar em três gerações. Discute frequentemente com Thistlewood sobre a velocidade a que a floresta deveria partilhar os seus segredos.",
+      "personalidade": "Impulsiva, protectora do Círculo até à teimosia.",
+      "artefactos_preferidos": ["moon_branch"],
+      "especialidade_analitica_futura": "ciclos de semana ISO e ritmos naturais de curto prazo"
+    }
+  ]
+}

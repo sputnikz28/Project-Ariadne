@@ -1,0 +1,17 @@
+{
+  "raca": "Esqueletos das Catacumbas Numéricas",
+  "artefactos": [
+    {
+      "id": "ritual_da_janela_movel",
+      "nome": "Sliding Window Ritual",
+      "nome_pt": "Ritual da Janela Móvel",
+      "descricao": "Não é um objecto, mas o próprio ritual que dá nome à raça — restringe o intervalo de números e estrelas antes de qualquer escolha, deslocando-o a cada invocação."
+    },
+    {
+      "id": "corredor_sem_entrada_fixa",
+      "nome": "Corridor Without a Fixed Entrance",
+      "nome_pt": "Corredor Sem Entrada Fixa",
+      "descricao": "As próprias Catacumbas — nenhum corredor se repete, tal como nenhuma janela numérica se repete de sessão para sessão."
+    }
+  ]
+}

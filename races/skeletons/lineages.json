@@ -1,0 +1,17 @@
+{
+  "raca": "Esqueletos das Catacumbas Numéricas",
+  "descricao": "Chegados sozinhos na Era VI — Crónicas das Eras. Sem clãs; cinco relíquias nomeadas, cada uma um estilo de janela móvel.",
+  "casa": "place:catacumbas_numericas",
+  "linhagens": [
+    {
+      "id": "janela_movel",
+      "nome": "Linhagem da Janela Móvel",
+      "lider": "character:ossario_da_cripta",
+      "filosofia": "Restringir não é desistir — é escolher onde procurar antes de começar a procurar.",
+      "metodo": "Janela deslizante de largura configurável sobre números e estrelas.",
+      "artefactos": ["ritual_da_janela_movel", "corredor_sem_entrada_fixa"],
+      "faccao": "factions/skeletons",
+      "config_section": "ESQUELETOS"
+    }
+  ]
+}

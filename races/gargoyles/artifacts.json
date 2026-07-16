@@ -1,0 +1,26 @@
+{
+  "raca": "Gárgulas do Torreão de Pedra",
+  "artefactos": [
+    {
+      "id": "indice_duplas",
+      "nome": "Pair Index",
+      "nome_pt": "Índice de Duplas",
+      "linhagem": "ambas",
+      "descricao": "O ficheiro `library/indexes/duplas.json`, consultado directamente pelas duas Linhagens — regista toda dupla de números já sorteada e a sua frequência histórica."
+    },
+    {
+      "id": "asa_de_granito",
+      "nome": "Granite Wing",
+      "nome_pt": "Asa de Granito",
+      "linhagem": "pedra",
+      "descricao": "Um fragmento de asa partida que Gorath mantém junto de si — dizem que veio da primeira gárgula alguma vez esculpida no Torreão."
+    },
+    {
+      "id": "espelho_de_granito",
+      "nome": "Granite Mirror",
+      "nome_pt": "Espelho de Granito",
+      "linhagem": "espelho",
+      "descricao": "Uma placa de pedra polida até reflectir como vidro, onde Seraphine observa as duplas consecutivas antes de as propor ao Conselho."
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "raca": "Gárgulas do Torreão de Pedra",
+  "descricao": "Chegadas na Era VII — Biblioteca Eterna, ao lado dos Vampiros. Duas Linhagens, ambas mestras das duplas de números.",
+  "casa": "place:torreao_de_pedra",
+  "linhagens": [
+    {
+      "id": "pedra",
+      "nome": "Linhagem de Pedra",
+      "lider": "character:gorath",
+      "filosofia": "Pedra não esquece — uma dupla historicamente consistente é um hábito do universo, não uma coincidência.",
+      "metodo": "Escolhe entre as duplas historicamente mais comuns.",
+      "artefactos": ["asa_de_granito", "indice_duplas"],
+      "faccao": "factions/gargoyles",
+      "config_section": "GARGULAS"
+    },
+    {
+      "id": "espelho",
+      "nome": "Linhagem do Espelho",
+      "lider": "character:seraphine",
+      "filosofia": "Números consecutivos reflectem-se um no outro — a simetria é tão informativa quanto a frequência.",
+      "metodo": "Escolhe entre as duplas consecutivas mais comuns.",
+      "artefactos": ["espelho_de_granito", "indice_duplas"],
+      "faccao": "factions/gargoyles",
+      "config_section": "GARGULAS"
+    }
+  ]
+}

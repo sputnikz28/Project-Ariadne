@@ -1,0 +1,17 @@
+{
+  "raca": "Witches",
+  "artefactos": [
+    {
+      "id": "cauldron_of_echoes",
+      "nome": "Cauldron of Echoes",
+      "nome_pt": "Caldeirão dos Ecos",
+      "descricao": "Um caldeirão de ferro negro onde se misturam restos de estratégias alheias — chaves rejeitadas por outras ordens ganham aqui uma segunda vida."
+    },
+    {
+      "id": "crystal_vial",
+      "nome": "Crystal Vial",
+      "nome_pt": "Frasco de Cristal",
+      "descricao": "Um frasco minúsculo onde se engarrafam fragmentos de profecias falhadas, para uso posterior em misturas mais afortunadas."
+    }
+  ]
+}

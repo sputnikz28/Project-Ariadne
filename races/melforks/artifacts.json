@@ -1,0 +1,17 @@
+{
+  "raca": "Melforks Genéticos",
+  "artefactos": [
+    {
+      "id": "tubo_de_ensaio_ancestral",
+      "nome": "Ancestral Test Tube",
+      "nome_pt": "Tubo de Ensaio Ancestral",
+      "descricao": "Guarda-se no Laboratório desde a Era III — diz-se que contém uma amostra genética original dos primeiros Clérigos da Era II, ainda usada simbolicamente no início de cada novo ciclo evolutivo."
+    },
+    {
+      "id": "registo_de_geracoes",
+      "nome": "Generation Ledger",
+      "nome_pt": "Registo de Gerações",
+      "descricao": "Um livro que não regista indivíduos, apenas populações — quantas gerações, qual a aptidão média, quantos sobreviveram até à elite final."
+    }
+  ]
+}

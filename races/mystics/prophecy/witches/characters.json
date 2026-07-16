@@ -1,0 +1,23 @@
+{
+  "raca": "Witches",
+  "personagens": [
+    {
+      "id": "hessa_emberweave",
+      "nome": "Hessa Emberweave",
+      "titulo": "Mestra do Caldeirão dos Ecos",
+      "biografia": "Recolhe, sem pudor, as chaves rejeitadas de todas as outras ordens e facções — 'nada se perde no meu caldeirão'.",
+      "personalidade": "Astuta, oportunista, encara qualquer recusa do Conselho como um ingrediente.",
+      "artefactos_preferidos": ["cauldron_of_echoes"],
+      "especialidade_analitica_futura": "geração híbrida de chaves e métodos de ensemble"
+    },
+    {
+      "id": "fennira_duskbrew",
+      "nome": "Fennira Duskbrew",
+      "titulo": "Guardiã do Frasco de Cristal",
+      "biografia": "Engarrafa fragmentos de profecias falhadas de todas as ordens místicas, convencida de que uma previsão errada guarda uma pista útil.",
+      "personalidade": "Caprichosa, colecionadora compulsiva.",
+      "artefactos_preferidos": ["crystal_vial"],
+      "especialidade_analitica_futura": "votação ponderada entre estratégias concorrentes"
+    }
+  ]
+}

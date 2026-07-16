@@ -1,0 +1,33 @@
+{
+  "raca": "Kors de Elarion",
+  "artefactos": [
+    {
+      "id": "pergaminho_dos_atrasados",
+      "nome": "Scroll of the Overdue",
+      "nome_pt": "Pergaminho dos Atrasados",
+      "portador": "aelyra",
+      "descricao": "Actualizado a cada consulta a Ariadne, regista quanto tempo cada número dorme sem ser sorteado."
+    },
+    {
+      "id": "brasa_fria",
+      "nome": "Cold Ember",
+      "nome_pt": "Brasa Fria",
+      "portador": "kael_da_chama_fria",
+      "descricao": "Uma brasa que nunca se apaga nem se aquece — símbolo dos números menos frequentes de toda a história registada."
+    },
+    {
+      "id": "mapa_das_passagens",
+      "nome": "Map of Passages",
+      "nome_pt": "Mapa das Passagens",
+      "portador": "sylvara",
+      "descricao": "Um mapa que não regista lugares, mas transições — o que mudou entre um sorteio e o seguinte."
+    },
+    {
+      "id": "papiro_kor_preto",
+      "nome": "Black Kor Papyrus",
+      "nome_pt": "Papiro Kor Preto",
+      "portador": "nyxara",
+      "descricao": "O arquivo semanal de Nyxara, guardado em `library/black_kors/papyri/week_{iso}/` — um papiro por semana ISO, tipo `PAPIRO_KOR_PRETO`."
+    }
+  ]
+}

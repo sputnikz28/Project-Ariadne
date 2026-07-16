@@ -1,0 +1,25 @@
+{
+  "raca": "Gárgulas do Torreão de Pedra",
+  "personagens": [
+    {
+      "id": "gorath",
+      "nome": "Gorath",
+      "titulo": "Senhor da Linhagem de Pedra",
+      "linhagem": "pedra",
+      "biografia": "A gárgula mais antiga do Torreão, tão imóvel que os escribas juram já tê-la visto no mesmo lugar há gerações. Fala pouco e apenas de duplas: 'este par já se sentou junto trinta vezes — não é sorte, é hábito'.",
+      "personalidade": "Rígido, literal, desconfia de qualquer explicação que não caiba numa contagem simples.",
+      "artefactos_preferidos": ["indice_duplas", "asa_de_granito"],
+      "metodo": "Escolhe entre as duplas historicamente mais consistentes, completando a chave com números adicionais."
+    },
+    {
+      "id": "seraphine",
+      "nome": "Seraphine",
+      "titulo": "Senhora da Linhagem do Espelho",
+      "linhagem": "espelho",
+      "biografia": "Ao contrário de Gorath, Seraphine procura simetria: duplas consecutivas, números que parecem espelhar-se um no outro. Passa horas a observar as ameias do Torreão ao entardecer, quando diz que 'a pedra reflecte melhor'.",
+      "personalidade": "Contemplativa, atenta a padrões visuais, fala em metáforas de reflexo e simetria.",
+      "artefactos_preferidos": ["indice_duplas", "espelho_de_granito"],
+      "metodo": "Escolhe entre as duplas consecutivas mais frequentes, recorrendo às duplas gerais quando faltam dados."
+    }
+  ]
+}

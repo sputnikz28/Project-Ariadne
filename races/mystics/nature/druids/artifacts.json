@@ -1,0 +1,17 @@
+{
+  "raca": "Druids",
+  "artefactos": [
+    {
+      "id": "oak_staff",
+      "nome": "Oak Staff",
+      "nome_pt": "Cajado de Carvalho",
+      "descricao": "Talhado do coração de um carvalho que já viu quinhentos invernos. Ressoa levemente quando o solstício se aproxima."
+    },
+    {
+      "id": "moon_branch",
+      "nome": "Moon Branch",
+      "nome_pt": "Ramo Lunar",
+      "descricao": "Um ramo que nunca perde as folhas, cortado sob lua cheia e mantido vivo por seiva que segue o calendário lunar, não as estações."
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "raca": "Seers",
+  "personagens": [
+    {
+      "id": "isolde_farsight",
+      "nome": "Isolde Farsight",
+      "titulo": "Vidente da Torre Alta",
+      "biografia": "Vê padrões a formar-se ao longo de décadas de sorteios, não em instantes isolados. Diz que a sua maldição é ver a tendência antes de ela existir de facto.",
+      "personalidade": "Melancólica, rigorosa quanto a nunca afirmar mais do que observa.",
+      "artefactos_preferidos": ["veil_of_tomorrow"],
+      "especialidade_analitica_futura": "deteção de tendências ao longo de janelas temporais"
+    },
+    {
+      "id": "baltasar_windmere",
+      "nome": "Baltasar Windmere",
+      "titulo": "Guardião da Ampulheta dos Ecos",
+      "biografia": "Regista, com precisão quase notarial, cada número que já se repetiu vezes de mais para ser coincidência.",
+      "personalidade": "Metódico até à rigidez, fascinado por ciclos que se repetem.",
+      "artefactos_preferidos": ["hourglass_of_echoes"],
+      "especialidade_analitica_futura": "padrões recorrentes e evolução histórica"
+    }
+  ]
+}

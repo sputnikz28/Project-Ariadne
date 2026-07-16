@@ -1,0 +1,50 @@
+{
+  "raca": "Esqueletos das Catacumbas Numéricas",
+  "personagens": [
+    {
+      "id": "ossario_da_cripta",
+      "nome": "Ossário da Cripta",
+      "titulo": "Guardião da Primeira Janela",
+      "biografia": "A mais antiga das relíquias nomeadas — a primeira janela móvel alguma vez consultada nas Catacumbas.",
+      "personalidade": "Silencioso, metódico, nunca se desvia da largura configurada.",
+      "artefactos_preferidos": [],
+      "metodo": "Janela móvel de 25 números e 6 estrelas, deslocada aleatoriamente a cada ritual."
+    },
+    {
+      "id": "tibia_do_intervalo",
+      "nome": "Tíbia do Intervalo",
+      "titulo": "Marcador de Limites",
+      "biografia": "Marca o início e o fim de cada janela consultada — sem ela, dizem os Esqueletos, ninguém saberia onde uma janela acaba e a seguinte começa.",
+      "personalidade": "Preciso, obcecado por fronteiras.",
+      "artefactos_preferidos": [],
+      "metodo": "Janela móvel, mesma lógica de contenção que as restantes relíquias."
+    },
+    {
+      "id": "cranio_das_vinte_e_cinco_pedras",
+      "nome": "Crânio das Vinte e Cinco Pedras",
+      "titulo": "Contador da Largura Padrão",
+      "biografia": "Nomeado pela largura padrão da janela numérica — vinte e cinco pedras, uma por número possível dentro do intervalo escolhido.",
+      "personalidade": "Rígido, mas orgulhoso da própria consistência.",
+      "artefactos_preferidos": [],
+      "metodo": "Janela móvel de largura configurável, por defeito 25 números."
+    },
+    {
+      "id": "marfim_das_seis_estrelas",
+      "nome": "Marfim das Seis Estrelas",
+      "titulo": "Guardião do Intervalo Estelar",
+      "biografia": "Concentra-se apenas nas estrelas, restringindo o intervalo de doze para seis antes de qualquer ritual.",
+      "personalidade": "Focado, quase indiferente aos números principais.",
+      "artefactos_preferidos": [],
+      "metodo": "Janela móvel aplicada apenas às estrelas."
+    },
+    {
+      "id": "femur_do_corredor_movel",
+      "nome": "Fémur do Corredor Móvel",
+      "titulo": "Guia das Catacumbas",
+      "biografia": "O único capaz de encontrar o mesmo corredor duas vezes — ou assim afirma. Move-se ao ritmo da própria janela que representa.",
+      "personalidade": "Errante, confiante, gosta de desafiar a fama das Catacumbas sem entrada fixa.",
+      "artefactos_preferidos": [],
+      "metodo": "Janela móvel, deslocamento renovado a cada invocação."
+    }
+  ]
+}

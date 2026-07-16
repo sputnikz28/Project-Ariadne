@@ -1,0 +1,23 @@
+{
+  "raca": "Oracles",
+  "personagens": [
+    {
+      "id": "cassiel_farwatcher",
+      "nome": "Cassiel Farwatcher",
+      "titulo": "O Olho que Nunca Pisca",
+      "biografia": "Assiste a cada sessão do Grande Conselho sem nunca propor uma única chave. Diz que a sua função não é competir, mas testemunhar.",
+      "personalidade": "Distante, imparcial ao ponto do desconforto alheio.",
+      "artefactos_preferidos": ["eye_of_prophecy"],
+      "especialidade_analitica_futura": "ranking e estimativa de confiança das propostas do Conselho"
+    },
+    {
+      "id": "delphine_mirrorsworn",
+      "nome": "Delphine Mirrorsworn",
+      "titulo": "Guardiã do Espelho do Destino",
+      "biografia": "Passa horas diante do Espelho do Destino, observando as propostas do Conselho reflectidas nele antes mesmo de serem anunciadas em voz alta.",
+      "personalidade": "Críptica, quase ilegível; fala por metáforas.",
+      "artefactos_preferidos": ["mirror_of_destiny"],
+      "especialidade_analitica_futura": "meta-análise das propostas de todas as outras facções"
+    }
+  ]
+}

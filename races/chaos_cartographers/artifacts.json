@@ -1,0 +1,40 @@
+{
+  "raca": "Cartógrafos do Caos",
+  "artefactos": [
+    {
+      "id": "livro_das_constelacoes",
+      "nome": "Book of Constellations",
+      "nome_pt": "Livro das Constelações",
+      "portador": "eldran",
+      "descricao": "Regista a rede de coocorrência entre números, arquivado em `library/books/cartographers/eldran_das_constelacoes.json`."
+    },
+    {
+      "id": "livro_dos_intervalos",
+      "nome": "Book of Intervals",
+      "nome_pt": "Livro dos Intervalos",
+      "portador": "vesara",
+      "descricao": "Regista atrasos, médias, máximos e ciclos completos, arquivado em `library/books/cartographers/vesara_dos_intervalos.json`."
+    },
+    {
+      "id": "livro_das_correntes",
+      "nome": "Book of Currents",
+      "nome_pt": "Livro das Correntes",
+      "portador": "lirien",
+      "descricao": "Regista tendências por janela temporal, arquivado em `library/books/cartographers/lirien_das_correntes.json`."
+    },
+    {
+      "id": "livro_do_acaso_esperado",
+      "nome": "Book of Expected Randomness",
+      "nome_pt": "Livro do Acaso Esperado",
+      "portador": "thalvos",
+      "descricao": "Regista comparações de Monte Carlo entre o real e o esperado aleatório, arquivado em `library/books/cartographers/thalvos_do_acaso_esperado.json`."
+    },
+    {
+      "id": "livro_dos_ecos_sequenciais",
+      "nome": "Book of Sequential Echoes",
+      "nome_pt": "Livro dos Ecos Sequenciais",
+      "portador": "oryn",
+      "descricao": "Regista transições de Markov entre sorteios consecutivos, arquivado em `library/books/cartographers/oryn_dos_ecos_sequenciais.json`."
+    }
+  ]
+}

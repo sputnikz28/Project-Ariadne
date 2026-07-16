@@ -1,0 +1,35 @@
+{
+  "raca": "Vampiros de Elarion",
+  "personagens": [
+    {
+      "id": "conde_vaelor",
+      "nome": "Conde Vaelor",
+      "titulo": "Senhor da Linhagem Sanguínea",
+      "linhagem": "sanguinea",
+      "biografia": "O mais antigo residente da Cripta Eterna, ao ponto de ninguém se lembrar de a Cripta sem ele. Passa as suas noites a percorrer o Índice de Triplas à procura de combinações que já se repetiram vezes de mais para serem ignoradas. Nunca propõe uma chave sem antes recitar, em voz baixa, o número exacto de aparições históricas da tripla escolhida.",
+      "personalidade": "Formal, cerimonioso, fala de estatística como quem fala de linhagem nobre. Trata triplas raras com desdém educado.",
+      "artefactos_preferidos": ["indice_triplas", "anel_de_vaelor"],
+      "metodo": "Escolhe entre as triplas historicamente mais comuns, completando a chave com números adicionais até perfazer cinco."
+    },
+    {
+      "id": "lady_nyx",
+      "nome": "Lady Nyx",
+      "titulo": "Senhora da Linhagem Sombria",
+      "linhagem": "sombria",
+      "biografia": "Onde Vaelor confia na frequência bruta, Nyx confia na vizinhança — números consecutivos que insistem em aparecer juntos. Diz-se que consegue 'ouvir' quando dois números vizinhos estão prestes a repetir-se num sorteio, embora nunca tenha explicado como. A rivalidade cordial entre a sua ala e a de Vaelor é tão antiga quanto a própria Cripta.",
+      "personalidade": "Enigmática, econômica nas palavras, prefere deixar os números falarem por si.",
+      "artefactos_preferidos": ["indice_triplas", "veu_sombrio"],
+      "metodo": "Escolhe entre as triplas consecutivas mais comuns; se não houver dados suficientes, recorre às triplas mais frequentes em geral."
+    },
+    {
+      "id": "arquivista_morwenna",
+      "nome": "Morwenna das Contagens Silenciosas",
+      "titulo": "Arquivista-Chefe da Cripta",
+      "linhagem": "sanguinea",
+      "biografia": "Nunca propôs uma única chave ao Conselho — o seu papel é manter o Índice de Triplas actualizado e legível, uma tarefa que considera mais importante do que qualquer votação. Vaelor confia-lhe as chaves da Cripta; Nyx confia-lhe os seus segredos.",
+      "personalidade": "Meticulosa, discreta, a única vampira que fala igualmente bem com as duas Linhagens.",
+      "artefactos_preferidos": ["indice_triplas"],
+      "metodo": "Não gera chaves — mantém o índice de que ambas as Linhagens dependem."
+    }
+  ]
+}

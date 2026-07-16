@@ -1,0 +1,17 @@
+{
+  "raca": "Seers",
+  "artefactos": [
+    {
+      "id": "veil_of_tomorrow",
+      "nome": "Veil of Tomorrow",
+      "nome_pt": "Véu do Amanhã",
+      "descricao": "Um véu fino como bruma que, quando erguido diante dos olhos, mostra não o futuro, mas a direcção para onde o passado está a inclinar-se."
+    },
+    {
+      "id": "hourglass_of_echoes",
+      "nome": "Hourglass of Echoes",
+      "nome_pt": "Ampulheta dos Ecos",
+      "descricao": "Uma ampulheta onde a areia, ao cair, desenha por instantes os números que já se repetiram vezes de mais para serem esquecidos."
+    }
+  ]
+}

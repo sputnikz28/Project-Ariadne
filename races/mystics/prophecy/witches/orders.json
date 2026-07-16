@@ -1,0 +1,18 @@
+{
+  "raca": "Witches",
+  "linhagem": "prophecy_mystics",
+  "casa": "place:caldeirao_das_encruzilhadas",
+  "ordens": [
+    {
+      "id": "witches",
+      "nome": "Witches",
+      "titulo": "Mestras das Misturas Mágicas",
+      "membros": ["character:hessa_emberweave", "character:fennira_duskbrew"],
+      "filosofia": "Nenhuma estratégia sozinha vê o quadro completo. Uma bruxa mistura o que sobra de todas as outras ordens num só caldeirão.",
+      "papel_analitico_futuro": ["combinação de estratégias", "votação ponderada", "geração híbrida de chaves", "métodos de ensemble"],
+      "artefactos": ["cauldron_of_echoes", "crystal_vial"],
+      "faccao": "factions/witches",
+      "config_section": "WITCHES"
+    }
+  ]
+}

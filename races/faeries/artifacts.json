@@ -1,0 +1,17 @@
+{
+  "raca": "Fadas Lunélia",
+  "artefactos": [
+    {
+      "id": "petala_do_jardim_eterno",
+      "nome": "Petal of the Eternal Garden",
+      "nome_pt": "Pétala do Jardim Eterno",
+      "descricao": "Cada pétala do Jardim corresponde a um número entre 1 e 50 — nenhuma cai sem que a sua vizinha já tenha sido contada."
+    },
+    {
+      "id": "colar_dos_numeros_quotidianos",
+      "nome": "Everyday Numbers Necklace",
+      "nome_pt": "Colar dos Números Quotidianos",
+      "descricao": "Um colar de contas gravadas com os números que os humanos mais escolhem por hábito — aniversários, números da sorte, superstições comuns."
+    }
+  ]
+}

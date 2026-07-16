@@ -1,0 +1,19 @@
+{
+  "raca": "Treefolks da Floresta Ancestral",
+  "artefactos": [
+    {
+      "id": "pergaminho_de_lua_cheia",
+      "nome": "Full Moon Scroll",
+      "nome_pt": "Pergaminho de Lua Cheia",
+      "portador": "grande_carvalho_ancestral",
+      "descricao": "O registo vivo da investigação do Grande Carvalho Ancestral — cada consulta a Ariadne sobre a fase lunar acrescenta uma nova entrada, nunca concluindo, apenas acumulando confiança lentamente."
+    },
+    {
+      "id": "aneis_de_crescimento",
+      "nome": "Growth Rings",
+      "nome_pt": "Anéis de Crescimento",
+      "portador": "raca",
+      "descricao": "Cada Treefolk conta os seus próprios anéis como conta gerações do Conselho — um por sessão, um por hipótese testada, verdadeira ou não."
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "raca": "Oracles",
+  "artefactos": [
+    {
+      "id": "eye_of_prophecy",
+      "nome": "Eye of Prophecy",
+      "nome_pt": "Olho da Profecia",
+      "descricao": "Um olho de vidro polido que não vê o futuro — vê o Conselho a decidir o presente, sem nunca piscar."
+    },
+    {
+      "id": "mirror_of_destiny",
+      "nome": "Mirror of Destiny",
+      "nome_pt": "Espelho do Destino",
+      "descricao": "Um espelho que não reflecte quem o observa, mas as propostas que o Conselho ainda está a debater."
+    }
+  ]
+}

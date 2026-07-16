@@ -1,0 +1,17 @@
+{
+  "raca": "Axiomantes de Nemerion",
+  "artefactos": [
+    {
+      "id": "labirinto_de_nemerion",
+      "nome": "Labyrinth of Nemerion",
+      "nome_pt": "Labirinto de Nemerion",
+      "descricao": "O próprio espaço combinatório de 139.838.160 câmaras — cada câmara uma chave possível, endereçável por rank/unrank e permutação de Feistel."
+    },
+    {
+      "id": "portal_do_labirinto",
+      "nome": "Labyrinth Portal",
+      "nome_pt": "Portal do Labirinto",
+      "descricao": "Só se abre quando a cobertura histórica ultrapassa metade do Labirinto e o excesso mínimo é atingido — o único artefacto do universo que decide, por si próprio, se uma raça inteira fala ou se cala numa sessão."
+    }
+  ]
+}
