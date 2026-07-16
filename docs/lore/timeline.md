@@ -8,7 +8,7 @@ The official chronology. Every race's `lore.md` should reference an Era id from 
 
 *(Also known in-universe as the "Era dos Primeiros Oráculos" — the origin era named in `docs/lore/legends/ecos_ancestrais.json` for `character:iria_da_nevoa_azul`.)*
 
-Bruxas, Videntes, Chefes Tribais, Elfos, Goblins e Shamans começam a gerar chaves com estratégias diferentes — o Conselho ainda não existe como instituição; são só personagens dispersas a tentar dar sentido ao acaso. Estas seis linhagens tornam-se mais tarde a base racial dos Clérigos (`races/legacy.py: RACAS`).
+Bruxas, Videntes, Chefes Tribais, Elfos, Goblins e Shamans começam a gerar chaves com estratégias diferentes — o Conselho ainda não existe como instituição; são só personagens dispersas a tentar dar sentido ao acaso. Estas seis linhagens tornam-se mais tarde a base racial dos Clérigos (`factions/clerics/algorithm.py: RACAS`).
 
 ## Era II — `era:v2` — A Evolução Genética
 
@@ -73,10 +73,14 @@ Regressa o espírito da Era I — chegam os Mystics (`race:mystics`): Nature Mys
 
 ## Era X.5 — `era:v10_5` — Architecture Complete
 
-Era de consolidação, não de expansão narrativa: `races/` torna-se documentação pura (com a única excepção deliberada de `races/legacy.py`, aguardando a migração dos Clérigos). O Panteão (`order:pantheon`) é reorganizado numa única estrutura coerente em vez de disperso por vários plugins. Esta era culmina no presente documento e nos restantes ficheiros de `docs/lore/`.
+Era de consolidação, não de expansão narrativa: `races/` torna-se documentação pura (com a única excepção deliberada de `races/legacy.py`, aguardando a migração dos Clérigos — resolvida na Era XI). O Panteão (`order:pantheon`) é reorganizado numa única estrutura coerente em vez de disperso por vários plugins. Esta era culmina no presente documento e nos restantes ficheiros de `docs/lore/`, incluindo o lore completo das 20 raças então existentes.
 
 ---
 
+## Era XI — `era:v11` — Migração dos Clérigos
+
+Os Clérigos, a mais antiga metodologia do Conselho (Era I–II), tornam-se finalmente uma facção própria: `factions/clerics/` (algoritmo genético + os 8 arquétipos ancestrais) e `races/clerics/` (lore). `races/legacy.py` é removido — `races/` fica, pela primeira vez, completamente livre de código executável, sem excepções. Uma comparação determinística confirmou que a migração preserva o comportamento exacto do motor genético (população, cemitério, ressuscitados, resumo por geração e o stream aleatório consumido são todos idênticos entre a implementação antiga e a nova).
+
 ## What comes next (not yet canon — see CLAUDE.md Roadmap)
 
-**Era XI — V11 (planned):** migração dos Clérigos para `factions/clerics/` + `races/clerics/`; remoção definitiva de `races/legacy.py`; três novas facções (Juízes do Conselho, Geómetras do Véu, Estatísticos Imperiais); `dashboard/`.
+Três novas facções planeadas (Juízes do Conselho, Geómetras do Véu, Estatísticos Imperiais) e `dashboard/` — visualização e análise.

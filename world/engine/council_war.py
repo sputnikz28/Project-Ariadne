@@ -1,5 +1,5 @@
 import random
-from races.legacy import normalize
+from core.services.combinations import normalize_candidate
 
 def corruption(ch,portador):
     ns=[];es=[];an=[];ae=[]
@@ -7,7 +7,7 @@ def corruption(ch,portador):
         d=random.randint(-3,3);x=max(1,min(50,n+d));ns.append(x);an.append({"original":n,"deslocamento":d,"novo":x})
     for e in ch[1]:
         d=random.randint(-1,1);x=max(1,min(12,e+d));es.append(x);ae.append({"original":e,"deslocamento":d,"novo":x})
-    return {"entidade":f"{portador.name}, Quebra-Conselhos","portador_original":portador.name,"virus":portador.genoma.get("virus_malphas"),"chave_original":ch,"chave_corrompida":normalize(ns,es),"alteracoes_numeros":an,"alteracoes_estrelas":ae,"origem_corrupcao":"portador_interno"}
+    return {"entidade":f"{portador.name}, Quebra-Conselhos","portador_original":portador.name,"virus":portador.genoma.get("virus_malphas"),"chave_original":ch,"chave_corrompida":normalize_candidate(ns,es,random),"alteracoes_numeros":an,"alteracoes_estrelas":ae,"origem_corrupcao":"portador_interno"}
 
 def resolve(cfg,ch,portador,ritual):
     if not cfg.getboolean("GUERRA_CONSELHO","ativo",fallback=False):return None

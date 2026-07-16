@@ -237,12 +237,12 @@ Project-Ariadne/
 │
 ├── core/                        ← framework engine
 │   ├── strategy.py / registry.py / plugin_loader.py  ← FactionRegistry + plugin architecture
-│   ├── evolution/               ← genetic algorithm engine (Clérigos and other factions)
 │   ├── i18n/                    ← translations.py — 6 languages × 25 translation keys
 │   ├── data/                    ← loaders.py — reusable historical/jackpot/moon data access
-│   └── services/                ← scaffold for shared statistics services (empty — see core/services/__init__.py)
+│   └── services/                ← shared, lore-agnostic helpers (combinations.py, fitness.py)
 ├── council/                     ← Grand Council filter + vote
-├── factions/                    ← V7+ executable faction plugins (package format)
+├── factions/                    ← executable faction plugins (package format) — 21 factions, one per race
+│   ├── clerics/                 ← Clérigos (V11) — genetic algorithm engine, 8-archetype dispatcher
 │   ├── kors/                    ← Kors de Elarion (V7.2)
 │   ├── chaos_cartographers/     ← Cartographers of Chaos (V8)
 │   └── axiomantes/              ← Axiomantes de Nemerion (V8.1)
@@ -250,7 +250,8 @@ Project-Ariadne/
 │       ├── profile.py           ← Echo Profile + scoring
 │       ├── ritual.py            ← Ritual of Thirty Echoes
 │       └── council.py           ← Council integration
-├── races/                       ← races, characters and lineages (legacy factions V1–V6)
+├── races/                       ← lore only (README/lore.md/characters.json/artifacts.json/lineages|orders.json) — no executable code, 21 races
+│   ├── clerics/                 ← Clérigos (V11) — the 8 ancestral lineages, 6 houses
 │   └── mystics/                 ← Mystics (V10) — lore, characters, artifacts; nature/ + prophecy/ lineages
 ├── orders/                      ← organisations and guilds
 │   ├── black_squad/             ← Black Squad + grimoire + dark_library
@@ -285,7 +286,9 @@ Project-Ariadne/
 │   ├── reports/                 ← human-readable comparison reports
 │   └── rankings/                ← machine-readable leaderboards
 ├── docs/                        ← documentation
-│   └── lore/legends/            ← legendary characters registry
+│   └── lore/                    ← canon bible (canon_index, timeline, relationships, geography,
+│       │                          factions, artifacts, characters, locations, glossary, architecture)
+│       └── legends/             ← legendary characters registry (runtime, not canon)
 └── tests/                       ← unittest suite for the framework (registry, plugin_loader, council, models, backtesting)
 ```
 

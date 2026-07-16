@@ -1,5 +1,5 @@
 import random
-from races.legacy import normalize
+from core.services.combinations import normalize_candidate
 
 
 def faeries(cfg, ctx):
@@ -29,5 +29,5 @@ def faeries(cfg, ctx):
         if key is None:
             key = sorted(random.sample(range(1, 51), 5))
         re = sorted(((e, .5 * est['freq_est_norm'][e] + .35 * est['atraso_est_norm'][e] + .15 * (e in eq)) for e in range(1, 13)), key=lambda x: x[1], reverse=True)
-        out.append({'nome': f'Lunélia-{i+1}', 'tipo': 'Fada', 'chave': normalize(key, [e for e, _ in re[:2]])})
+        out.append({'nome': f'Lunélia-{i+1}', 'tipo': 'Fada', 'chave': normalize_candidate(key, [e for e, _ in re[:2]], random)})
     return out

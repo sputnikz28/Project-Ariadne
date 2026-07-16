@@ -23,7 +23,7 @@ races/<name>/{README.md, lore.md, characters.json, artifacts.json, lineages.json
 
 ## Per-race file pattern
 
-Every race under `races/` (except the deferred `races/legacy.py`) follows the same five-file pattern:
+Every race under `races/` follows the same five-file pattern (no exceptions — `races/legacy.py` was removed in the V11 Clerics migration):
 
 | File | Purpose | Format |
 |---|---|---|

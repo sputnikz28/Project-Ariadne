@@ -12,7 +12,7 @@ from world.engine.celestial_energy import calculate_ritual
 from world.engine.malphas_virus import choose_carrier
 from world.engine.council_war import resolve
 from core.evolution.statistics import calculate
-from core.evolution.genetic import execute
+from factions.clerics.algorithm import execute
 from orders.pantheon.mages import create_mage_representatives
 from orders.pantheon.druids import create_druid_representatives
 from orders.pantheon.djinns import create_djinn_representatives
@@ -130,7 +130,12 @@ def main():
     ariadne = Ariadne()
 
     # ── Genetic algorithm (Clerics) ─────────────────────────────────────────
+    # Run once: the Ritual Celeste needs the full population (evo), not just
+    # Council proposals, so it can't be recomputed inside the Clerics plugin
+    # without consuming a different slice of the random stream. The result is
+    # threaded through ctx so factions/clerics/council.py can read it back.
     evo = execute(cfg, ctx)
+    ctx['clerics_evo'] = evo
     ritual = calculate_ritual(cfg, world, evo)
 
     # ── Pantheon (complex dual return — explicit) ─────────────────────────────
@@ -190,11 +195,9 @@ def main():
             },
         ))
 
-    # Genetic algorithm finalists (Clerics)
-    for h in evo['populacao_final'][:cfg.getint('SIMULACAO', 'conselho_final')]:
-        if h.keys:
-            u = h.keys[-1]
-            cand.append((f'{h.name} ({h.raca})', (u['numeros'], u['estrelas']), 1.0))
+    # Genetic algorithm finalists (Clerics) — now flow through the generic
+    # "All plugin factions" loop below via factions/clerics/council.py,
+    # exactly like every other Council-voting faction.
 
     # Superiors
     for v in vis:

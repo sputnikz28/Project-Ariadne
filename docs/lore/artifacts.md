@@ -6,6 +6,7 @@ Master index of every named canon artifact, relic and book, now that all 20 race
 
 | Race | Artifacts |
 |---|---|
+| Clérigos | Amuletos Vivos, Escolha Humana Consagrada pelos Clérigos, Caminho das 1000 Almas |
 | Vampiros de Elarion | Índice de Triplas, Anel de Vaelor, Véu Sombrio, Taça de Sangue Estatístico |
 | Gárgulas do Torreão de Pedra | Índice de Duplas, Asa de Granito, Espelho de Granito |
 | Kors de Elarion | Pergaminho dos Atrasados, Brasa Fria, Mapa das Passagens, Papiro Kor Preto |
@@ -27,7 +28,7 @@ Master index of every named canon artifact, relic and book, now that all 20 race
 | Mystics — Oracles | Eye of Prophecy, Mirror of Destiny |
 | Mystics — Bone Readers | Sacred Bones, Ivory Dice |
 
-That's 20 races × 2–4 artifacts each = **47 race-owned canon artifacts**.
+That's 21 races × 2–4 artifacts each = **50 race-owned canon artifacts**.
 
 ## Not race-exclusive
 

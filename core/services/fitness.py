@@ -1,4 +1,4 @@
-from races.legacy import gaps
+from core.services.combinations import gaps
 
 
 def fitness(ch, est):

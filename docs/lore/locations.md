@@ -26,6 +26,8 @@ Detailed entries per place. See `geography.md` for how these fit together region
 
 **`place:ordem_do_tempo`** — Ordem do Tempo. Less a fixed location than a standing order; home of the Cronomantes, thematically linked to Aion.
 
+**`place:templo_dos_clerigos`** — Templo dos Clérigos. The oldest site in the narrative layer (Era I). Where the Ritual Celeste takes place, producing the "Escolha Humana Consagrada pelos Clérigos" from the energy of souls on the Path of the 1000 Souls.
+
 **`place:circulo_do_carvalho_eterno`** — Círculo do Carvalho Eterno. Home of the Druids (Nature Mystics).
 
 **`place:templo_da_lua_prateada`** — Templo da Lua Prateada. Home of the Moon Priests.

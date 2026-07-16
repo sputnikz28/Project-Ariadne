@@ -13,7 +13,7 @@ Two distinct kinds of "fact" exist in this repository. Confusing them is the sin
 | Lives in | `docs/lore/`, `races/`, `orders/*/[a-z_]+\.py` name pools that are **fixed lists**, `factions/*/manifest.json` | `datasets/generated/`, `experiments/`, `docs/lore/legends/livro_personagens_lendarias.json` (the *entries*, not the mechanic), `library/cache/` |
 | Example | "Gorath is a legendary character of the Stone Lineage." | "Gorath was the best-scoring character across the last 12 campaigns." |
 
-**Important exception:** `docs/lore/legends/ecos_ancestrais.json` looks like runtime data (it lives next to the procedural legends book) but its one entry — **Íria da Névoa Azul** — is a deliberately hand-authored seed character, referenced by name in the Black Squad's necromancy mechanic (`orders/black_squad/black_mages.py`). Treat her as **canon**. The ever-growing entries in `livro_personagens_lendarias.json` (e.g. "H-00127 Aruk dos Astros") are procedural hero instances from the Clerics genetic algorithm's name pools (`races/legacy.py: NAMES/TITULOS`) — those are **runtime**, not fixed individuals, even though some reach "IMORTAL" grade.
+**Important exception:** `docs/lore/legends/ecos_ancestrais.json` looks like runtime data (it lives next to the procedural legends book) but its one entry — **Íria da Névoa Azul** — is a deliberately hand-authored seed character, referenced by name in the Black Squad's necromancy mechanic (`orders/black_squad/black_mages.py`). Treat her as **canon**. The ever-growing entries in `livro_personagens_lendarias.json` (e.g. "H-00127 Aruk dos Astros") are procedural hero instances from the Clerics genetic algorithm's name pools (`factions/clerics/algorithm.py: NAMES/TITULOS`) — those are **runtime**, not fixed individuals, even though some reach "IMORTAL" grade.
 
 ## Entity ID convention
 
@@ -25,7 +25,7 @@ Lore JSON files should carry these ids alongside their existing human-readable `
 
 ## Races (`races/`) ↔ Factions (`factions/`)
 
-One race per Council-voting faction, plus the Mystics umbrella (8 sub-races) and Clerics (deferred).
+One race per Council-voting faction, plus the Mystics umbrella (8 sub-races). 21 races in total as of V11.
 
 | Race id | Faction id | Name | Home (place id) | Council weight | Status |
 |---|---|---|---|---|---|
@@ -50,7 +50,7 @@ One race per Council-voting faction, plus the Mystics umbrella (8 sub-races) and
 | `race:seers` | `faction:seers` | Seers | `place:torre_dos_olhos_abertos` | 0.5 | Complete |
 | `race:oracles` | `faction:oracles` | Oracles | `place:salao_dos_espelhos_silenciosos` | 0.5 | Complete (does not vote by design) |
 | `race:bone_readers` | `faction:bone_readers` | Bone Readers | `place:fossa_dos_ossos_sagrados` | 0.5 | Complete |
-| `race:clerics` | *(none yet — deferred)* | Clérigos | *(Templo dos Clérigos, unconfirmed)* | 1.0 (genetic finalists) | **Not a race package yet** — code still in `races/legacy.py`. Migration to `factions/clerics/` + `races/clerics/` is the explicit next milestone after this lore pass (per user instruction: lore first, then Clerics, then V11). |
+| `race:clerics` | `faction:clerics` | Clérigos | `place:templo_dos_clerigos` | 1.0 (genetic finalists) | Lore complete (V11). Home confirmed — `'Templo dos Clérigos'` is the literal `home` used in `main.py`'s external chronicle registration for the Ritual Celeste. |
 
 The 8 Mystics sub-races collectively belong to two lineages: `race:nature_mystics` (druids, moon_priests, star_gazers) and `race:prophecy_mystics` (shamans, witches, seers, oracles, bone_readers) — see `races/mystics/orders.json`.
 
@@ -133,7 +133,7 @@ Grouped by race/order. Full biographies live in each race's `characters.json` �
 | `entity:ariadne` | Ariadne | Guardian of the Eternal Library |
 | `entity:aion` | Aion | `order:pantheon` — the aggregate "Deus"-tier being, thematically tied to `race:chronomancers` (Ordem do Tempo) |
 
-**Not canon characters:** `Mago-N`, `Druida-N` (Pantheon), `Djinn-N` (Pantheon) are archetypal *roles* filled by procedurally-numbered instances each run — there is no fixed "Mago-1" individual, unlike Aion who is always singular and named. Likewise the Clerics' `NAMES`/`TITULOS`/`RACAS`/`CASAS` pools in `races/legacy.py` are runtime name-generation material, not fixed characters, until the V11 Clerics migration decides otherwise.
+**Not canon characters:** `Mago-N`, `Druida-N` (Pantheon), `Djinn-N` (Pantheon) are archetypal *roles* filled by procedurally-numbered instances each run — there is no fixed "Mago-1" individual, unlike Aion who is always singular and named. Likewise the Clerics' `NAMES`/`TITULOS`/`RACAS`/`CASAS` pools in `factions/clerics/algorithm.py` are runtime name-generation material powering a procedurally-regenerated population, not fixed characters — `races/clerics/characters.json` documents the 8 archetypes (the generation methods), not individuals.
 
 ## Artifacts, Relics & Books (canon)
 
@@ -168,6 +168,7 @@ See `geography.md` and `locations.md` for the full gazetteer. Quick reference:
 | `place:floresta_ancestral` | Floresta Ancestral | `race:treefolks` |
 | `place:ordem_do_tempo` | Ordem do Tempo | `race:chronomancers` |
 | `place:circulo_do_carvalho_eterno`, `place:templo_da_lua_prateada`, `place:observatorio_de_vidro_celeste`, `place:tendas_do_vento_ancestral`, `place:caldeirao_das_encruzilhadas`, `place:torre_dos_olhos_abertos`, `place:salao_dos_espelhos_silenciosos`, `place:fossa_dos_ossos_sagrados` | (8 Mystics homes) | `race:mystics` sub-races |
+| `place:templo_dos_clerigos` | Templo dos Clérigos | `race:clerics` — also where the Ritual Celeste takes place |
 | `place:paris` | Paris, França (`Europe/Paris`) | The **real-world** layer — the actual Euromillions draw location/timezone (`world/engine/builder.py`, `config.txt [MUNDO]`). Distinct from the fantasy realm above; see geography.md for how the two layers relate. |
 
 ## Historical Eras
@@ -176,9 +177,9 @@ See `timeline.md` for the full chronology. Era ids: `era:v1` through `era:v10_5`
 
 ## Known canon gaps (feed into the Lore Coverage Report)
 
-All 20 race packages now have complete lore (as of this pass). Remaining gaps:
+All 21 race packages now have complete lore (as of V11). Remaining gaps:
 
 - Black Squad and Elven Order have no named home/place — only their function is documented.
 - Axiomantes has no named individual characters — only a collective voice (`character:axiomantes_voz_colectiva`), a deliberate lore choice but still worth revisiting if the race ever needs more than one distinct voice.
-- Several races (Fadas, Lobisomens, Treefolks' Raiz, Melforks) intentionally use archetypal/regenerated characters instead of fixed individuals, reflecting how their algorithms actually work (procedurally-numbered representatives each session) — this is a deliberate design choice, not an oversight, but is worth flagging so it isn't "fixed" by mistake later.
-- Clerics has no faction plugin or race package yet (by design — deferred to the V11 migration, next milestone).
+- Several races (Fadas, Lobisomens, Treefolks' Raiz, Melforks, Clerics' 8 archetypes) intentionally use archetypal/regenerated characters instead of fixed individuals, reflecting how their algorithms actually work (procedurally-numbered representatives each session) — this is a deliberate design choice, not an oversight, but is worth flagging so it isn't "fixed" by mistake later.
+- `races/legacy.py` is fully removed — `races/` has no executable code left at all, not even the Clerics exception.

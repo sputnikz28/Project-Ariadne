@@ -1,0 +1,74 @@
+{
+  "raca": "Clérigos",
+  "descricao": "Oito linhagens ancestrais (raças internas), remontando à Era I — Os Primeiros Oráculos. Cada Clérigo nasce com uma delas, herdada dos pais ou sorteada na criação. Seis casas (Casa Lunar, Casa dos Ossos, Casa do Caos, Casa das Estrelas, Casa Tribal, Casa do Bosque) formam um segundo eixo de identidade, independente da linhagem.",
+  "casa": "Templo dos Clérigos",
+  "linhagens": [
+    {
+      "id": "bruxa",
+      "nome": "Bruxa",
+      "lider": "character:bruxa_arquetipo",
+      "filosofia": "A melhor estratégia é a mistura certa de várias.",
+      "metodo": "Números quentes, frios e um número aleatório; estrelas quente/fria.",
+      "faccao": "factions/clerics"
+    },
+    {
+      "id": "vidente",
+      "nome": "Vidente",
+      "lider": "character:vidente_arquetipo",
+      "filosofia": "A clareza revela o que o sorteio mais recente ainda esconde.",
+      "metodo": "Números quentes, influenciados pelo sorteio mais recente conforme a clareza do genoma.",
+      "faccao": "factions/clerics"
+    },
+    {
+      "id": "chefe_tribal",
+      "nome": "Chefe Tribal",
+      "lider": "character:chefe_tribal_arquetipo",
+      "filosofia": "Os símbolos rituais deslocam o destino, um passo de cada vez.",
+      "metodo": "Deslocamento por símbolos rituais (sol, lua, lobo, fogo, água, montanha, corvo).",
+      "faccao": "factions/clerics"
+    },
+    {
+      "id": "elfo",
+      "nome": "Elfo",
+      "lider": "character:elfo_arquetipo",
+      "filosofia": "A disciplina rejeita mil vezes antes de aceitar uma.",
+      "metodo": "Rejeição sistemática por soma, paridade, baixos/altos e gaps.",
+      "faccao": "factions/clerics"
+    },
+    {
+      "id": "goblin",
+      "nome": "Goblin",
+      "lider": "character:goblin_arquetipo",
+      "filosofia": "A ganância segue o tamanho do prémio.",
+      "metodo": "Números altos quando o jackpot é generoso, amostragem livre caso contrário.",
+      "faccao": "factions/clerics"
+    },
+    {
+      "id": "shaman",
+      "nome": "Shaman",
+      "lider": "character:shaman_arquetipo",
+      "filosofia": "A lua desloca o que o sorteio anterior já mostrou.",
+      "metodo": "Deslocamento lunar sobre o último sorteio (fallback).",
+      "faccao": "factions/clerics"
+    },
+    {
+      "id": "cronomante",
+      "nome": "Cronomante",
+      "lider": "character:cronomante_arquetipo",
+      "filosofia": "O tempo emprestado ainda é tempo.",
+      "metodo": "Delega para o algoritmo dos Cronomantes da Ordem do Tempo.",
+      "faccao": "factions/clerics",
+      "reutiliza": "race:chronomancers"
+    },
+    {
+      "id": "esqueleto",
+      "nome": "Esqueleto",
+      "lider": "character:esqueleto_arquetipo",
+      "filosofia": "As catacumbas emprestam a sua janela móvel.",
+      "metodo": "Delega para o algoritmo dos Esqueletos das Catacumbas Numéricas.",
+      "faccao": "factions/clerics",
+      "reutiliza": "race:skeletons"
+    }
+  ],
+  "casas": ["Casa Lunar", "Casa dos Ossos", "Casa do Caos", "Casa das Estrelas", "Casa Tribal", "Casa do Bosque"]
+}

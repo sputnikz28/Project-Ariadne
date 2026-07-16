@@ -1,6 +1,7 @@
 
+import random
 from datetime import datetime
-from races.legacy import normalize
+from core.services.combinations import normalize_candidate
 
 
 def _lista_int(texto):
@@ -93,7 +94,7 @@ def calculate_ritual(cfg, world, evolution_data):
 
     nums = _lista_int(cfg.get("RITUAL_CELESTE", "chave_numeros", fallback="1,10,32,36,43"))
     ests = _lista_int(cfg.get("RITUAL_CELESTE", "chave_estrelas", fallback="5,6"))
-    chave_humana = normalize(nums, ests)
+    chave_humana = normalize_candidate(nums, ests, random)
 
     data_hora_inicio = f"{world['data']} {cfg.get('RITUAL_CELESTE', 'inicio', fallback='00:00:00')}"
     data_hora_fim = f"{world['data']} {cfg.get('RITUAL_CELESTE', 'libertacao', fallback='20:00:00')}"

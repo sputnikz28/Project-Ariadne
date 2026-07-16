@@ -1,6 +1,6 @@
 import random
 from itertools import combinations
-from races.legacy import normalize
+from core.services.combinations import normalize_candidate
 
 
 def dwarves(cfg, ctx):
@@ -24,7 +24,7 @@ def dwarves(cfg, ctx):
         for ns in cnums:
             if 85 <= sum(ns) <= 190:
                 for es in combinations(sorted(ep[:4]), 2):
-                    cart.append(normalize(list(ns), list(es)))
+                    cart.append(normalize_candidate(list(ns), list(es), random))
                     if len(cart) >= cfg.getint('ANOES', 'chaves_por_cla'):
                         break
             if len(cart) >= cfg.getint('ANOES', 'chaves_por_cla'):

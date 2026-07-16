@@ -1,5 +1,5 @@
 import random
-from races.legacy import normalize
+from core.services.combinations import normalize_candidate
 
 
 def treefolks(cfg, ctx):
@@ -19,6 +19,6 @@ def treefolks(cfg, ctx):
             'modelo': random.choice(['Random Forest', 'Rede Neural', 'LSTM', 'Bayesiano']),
             'treino': tr, 'teste': te, 'fantasma': fa,
             'peso': max(.02, 1 - fa),
-            'chave': normalize([n for n, _ in rn[:5]], [e for e, _ in re[:2]]),
+            'chave': normalize_candidate([n for n, _ in rn[:5]], [e for e, _ in re[:2]], random),
         })
     return out

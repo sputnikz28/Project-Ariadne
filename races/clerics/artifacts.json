@@ -1,0 +1,23 @@
+{
+  "raca": "Clérigos",
+  "artefactos": [
+    {
+      "id": "amuletos_vivos",
+      "nome": "Living Amulets",
+      "nome_pt": "Amuletos Vivos",
+      "descricao": "Clérigos de elite podem forjar amuletos vivos (`artifacts/living.py`) a cada geração — Osso Lunar, Espelho dos Sonhos Esquecidos, Livro dos Ecos, Presa Imutável de Fenrir, Fragmento Divino, Lágrima da Primeira Luz, e a Coroa Quebrada de Malphas. Não são exclusivos dos Clérigos, mas são a única raça cujo ciclo evolutivo os produz directamente."
+    },
+    {
+      "id": "escolha_humana_consagrada",
+      "nome": "Consecrated Human Choice",
+      "nome_pt": "Escolha Humana Consagrada pelos Clérigos",
+      "descricao": "A chave produzida pelo Ritual Celeste (`world/engine/celestial_energy.py`), a partir da energia doada pelas almas do Caminho das 1000 Almas — uma segunda contribuição dos Clérigos ao Conselho, distinta dos finalistas da população."
+    },
+    {
+      "id": "caminho_das_1000_almas",
+      "nome": "Path of the 1000 Souls",
+      "nome_pt": "Caminho das 1000 Almas",
+      "descricao": "O destino dos Clérigos eliminados — não desaparecem, treinam, e podem regressar ressuscitados em torneios periódicos, com pontuação reduzida a metade."
+    }
+  ]
+}

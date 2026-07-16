@@ -41,6 +41,10 @@ Two more sites sit beneath or adjacent to the Library rather than out in the wil
 - `place:laboratorio_genetico` — the Melforks' genetic laboratory, implied to be a literal offshoot of the Clerics' genetic-algorithm lineage.
 - `place:catacumbas_numericas` — the Skeletons' catacombs, arrived alone in Era VI with no cohort.
 
+## Templo dos Clérigos
+
+`place:templo_dos_clerigos` is the oldest site in the narrative layer, dating to Era I — where the Ritual Celeste takes place and the "Escolha Humana Consagrada pelos Clérigos" is produced from the energy of the Path of the 1000 Souls. The Clerics' own population isn't tied to a single physical location the way other races are — it exists across whichever generation is currently alive — but the Temple is where the Council's ritual dimension of their contribution originates.
+
 ## The Mystic homes
 
 Two lineages, eight homes, none of them adjacent to each other by design — the Mystics are deliberately scattered, gathering only at the Council:

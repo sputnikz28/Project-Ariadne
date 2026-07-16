@@ -18,7 +18,7 @@ A lore-facing summary of all 20 Council-voting races/factions plus Clerics. For 
 | Cronomantes da Ordem do Tempo | The extraction itself has a rhythm, measured in milliseconds. | Derives keys from sub-second event timing + lunar age. | 1.0 (own weight key) |
 | Mystics — Nature (Druids, Moon Priests, Star Gazers) | The pattern already exists outside us; we listen, we don't calculate. | Placeholder — no algorithm yet, abstains every run. | 0.5 each |
 | Mystics — Prophecy (Shamans, Witches, Seers, Oracles, Bone Readers) | The pattern isn't found, it's interpreted through ritual. | Placeholder — no algorithm yet, abstains every run (Oracles by design, permanently). | 0.5 each |
-| Clérigos *(deferred)* | The population itself is the strategy — breed, compete, survive. | Genetic algorithm across 8 archetypes (Bruxa, Vidente, Chefe Tribal, Elfo, Goblin, Shaman, Cronomante, Esqueleto). | 1.0 (finalists) |
+| Clérigos | The population itself is the strategy — breed, compete, survive. | Genetic algorithm across 8 archetypes (Bruxa, Vidente, Chefe Tribal, Elfo, Goblin, Shaman, Cronomante, Esqueleto). | 1.0 (finalists) |
 
 ## The one universal rule
 

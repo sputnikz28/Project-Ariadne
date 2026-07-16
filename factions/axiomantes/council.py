@@ -4,7 +4,8 @@ Integração com main.py: devolve lista de dicts com nome/chave/peso.
 Só vota quando o Portal das Chaves Inéditas está aberto.
 """
 
-from races.legacy import normalize
+import random
+from core.services.combinations import normalize_candidate
 from .ritual import execute_ritual
 from core.i18n.translations import t
 
@@ -37,7 +38,7 @@ def axiomantes(ariadne, seed, cfg=None):
         return []
 
     nums, ests = result['chave_proposta']
-    chave_norm = normalize(nums, ests)
+    chave_norm = normalize_candidate(nums, ests, random)
 
     return [{
         'nome': 'Axiomantes de Nemerion',

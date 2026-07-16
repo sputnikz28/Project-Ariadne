@@ -79,10 +79,10 @@ class TestDiscover(unittest.TestCase):
 
     def test_discover_finds_exactly_the_expected_number_of_voting_factions(self):
         registry = FactionRegistry().discover("factions")
-        # 20 faction directories under factions/ (12 pre-Mystics + 8 new
-        # Mystics orders) minus chaos_cartographers (analytical,
-        # votes: false) = 19 voting factions.
-        self.assertEqual(registry.count(), 19)
+        # 21 faction directories under factions/ (12 pre-Mystics + 8 Mystics
+        # orders + clerics, added in the V11 Clerics migration) minus
+        # chaos_cartographers (analytical, votes: false) = 20 voting factions.
+        self.assertEqual(registry.count(), 20)
 
 
 if __name__ == "__main__":

@@ -1,6 +1,6 @@
 from pathlib import Path
 from datetime import datetime
-from races.legacy import gaps
+from core.services.combinations import gaps
 
 
 def fmt(ch):

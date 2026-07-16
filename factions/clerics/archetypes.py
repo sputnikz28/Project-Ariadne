@@ -1,20 +1,5 @@
-
 import random
-from dataclasses import dataclass, field, asdict
-
-
-def normalize(nums, ests):
-    nums = list(dict.fromkeys(n for n in nums if 1 <= n <= 50))
-    ests = list(dict.fromkeys(e for e in ests if 1 <= e <= 12))
-    while len(nums) < 5:
-        n = random.randint(1, 50)
-        if n not in nums:
-            nums.append(n)
-    while len(ests) < 2:
-        e = random.randint(1, 12)
-        if e not in ests:
-            ests.append(e)
-    return sorted(nums[:5]), sorted(ests[:2])
+from core.services.combinations import normalize_candidate, gaps
 
 
 def aplicar_conhecimento(key, hidden_numbers, hidden_stars):
@@ -24,55 +9,7 @@ def aplicar_conhecimento(key, hidden_numbers, hidden_stars):
         nums[random.randrange(5)] = random.choice(hidden_numbers)
     if hidden_stars and random.random() < 0.45:
         ests[random.randrange(2)] = random.choice(hidden_stars)
-    return normalize(nums, ests)
-
-
-def gaps(nums):
-    s = sorted(nums)
-    return [s[i + 1] - s[i] for i in range(4)]
-
-
-@dataclass
-class Heroi:
-    id: str
-    name: str
-    raca: str
-    casa: str
-    generation: int
-    pais: list = field(default_factory=list)
-    genoma: dict = field(default_factory=dict)
-    pontos: int = 0
-    titulo: str = "Sem título"
-    keys: list = field(default_factory=list)
-    amuletos: list = field(default_factory=list)
-    estado: str = "VIVO"
-    treinos: int = 0
-
-    def to_dict(self):
-        return asdict(self)
-
-
-NAMES = ["Lyra", "Morgana", "Kael", "Gruk", "Aruk", "Elarion", "Selene", "Thara", "Aion", "Velka"]
-TITULOS = ["da Névoa", "dos Ossos", "da Lua Fria", "Pedra-Partida", "dos Astros", "do Bosque"]
-RACAS = ["Bruxa", "Vidente", "Chefe Tribal", "Elfo", "Goblin", "Shaman", "Cronomante", "Esqueleto"]
-CASAS = ["Casa Lunar", "Casa dos Ossos", "Casa do Caos", "Casa das Estrelas", "Casa Tribal", "Casa do Bosque"]
-
-
-def create(i, g=1, pais=None):
-    return Heroi(
-        id=f"H-{i:05d}",
-        name=f"{random.choice(NAMES)} {random.choice(TITULOS)}",
-        raca=random.choice(RACAS),
-        casa=random.choice(CASAS),
-        generation=g,
-        pais=pais or [],
-        genoma={
-            "clareza": random.random(),
-            "confusao": random.random(),
-            "caos": random.random(),
-            "memoria": random.randint(1, 8),
-        },
-    )
+    return normalize_candidate(nums, ests, random)
 
 
 def _segredos(heroi):
@@ -113,7 +50,7 @@ def generate(h, ctx):
         return aplicar_conhecimento(key, hidden_numbers, hidden_stars)
 
     if raca == "Bruxa":
-        key = normalize(
+        key = normalize_candidate(
             random.sample(est["quentes"], 2)
             + random.sample(est["frios"], 2)
             + [random.randint(1, 50)],
@@ -121,6 +58,7 @@ def generate(h, ctx):
                 random.choice(est["estrelas_quentes"]),
                 random.choice(est["estrelas_frias"]),
             ],
+            random,
         )
         return aplicar_conhecimento(key, hidden_numbers, hidden_stars)
 
@@ -133,7 +71,7 @@ def generate(h, ctx):
                     if random.random() > h.genoma["confusao"]
                     else max(1, min(50, n + random.choice([-2, -1, 1, 2])))
                 )
-        key = normalize(nums, random.sample(est["estrelas_quentes"], 2))
+        key = normalize_candidate(nums, random.sample(est["estrelas_quentes"], 2), random)
         return aplicar_conhecimento(key, hidden_numbers, hidden_stars)
 
     if raca == "Chefe Tribal":
@@ -153,7 +91,7 @@ def generate(h, ctx):
         for simbolo in ossos:
             atual = max(1, min(50, atual + simbolos[simbolo]))
             nums.append(atual)
-        key = normalize(nums, random.sample(range(1, 13), 2))
+        key = normalize_candidate(nums, random.sample(range(1, 13), 2), random)
         return aplicar_conhecimento(key, hidden_numbers, hidden_stars)
 
     if raca == "Elfo":
@@ -167,7 +105,7 @@ def generate(h, ctx):
                 and baixos in (2, 3)
                 and max(gaps(nums)) <= 20
             ):
-                key = normalize(nums, random.sample(est["estrelas_quentes"], 2))
+                key = normalize_candidate(nums, random.sample(est["estrelas_quentes"], 2), random)
                 return aplicar_conhecimento(key, hidden_numbers, hidden_stars)
 
     if raca == "Goblin":
@@ -176,7 +114,7 @@ def generate(h, ctx):
             if world["jackpot"] >= 100_000_000
             else []
         ) + random.sample(range(1, 51), 5)
-        key = normalize(nums, random.sample(range(1, 13), 2))
+        key = normalize_candidate(nums, random.sample(range(1, 13), 2), random)
         return aplicar_conhecimento(key, hidden_numbers, hidden_stars)
 
     displacement = {
@@ -198,5 +136,5 @@ def generate(h, ctx):
         max(1, min(12, e + (1 if displacement > 0 else -1)))
         for e in hist[-1]["estrelas"]
     ]
-    key = normalize(nums, ests)
+    key = normalize_candidate(nums, ests, random)
     return aplicar_conhecimento(key, hidden_numbers, hidden_stars)

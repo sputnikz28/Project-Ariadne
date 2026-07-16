@@ -1,6 +1,6 @@
 import random
 import heapq
-from races.legacy import normalize
+from core.services.combinations import normalize_candidate
 from core.services.fitness import fitness
 
 
@@ -28,7 +28,7 @@ def werewolves(cfg, ctx):
         'ativo': True,
         'simulacoes': sims,
         'finalistas': [
-            {'nome': f'Fenrir-{i+1}', 'tipo': 'Lobisomem', 'fitness': f, 'chave': normalize(list(n), list(e))}
+            {'nome': f'Fenrir-{i+1}', 'tipo': 'Lobisomem', 'fitness': f, 'chave': normalize_candidate(list(n), list(e), random)}
             for i, (f, n, e) in enumerate(top)
         ],
     }

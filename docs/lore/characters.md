@@ -1,6 +1,19 @@
 # Characters — Encyclopedia
 
-Full encyclopedia of every canon character, now that all 20 race packages are complete. Full biographies live in each race's `characters.json`; this is the cross-race browse view. See `canon_index.md` for the id lookup table.
+Full encyclopedia of every canon character, now that all 21 race packages are complete (V11 added Clerics). Full biographies live in each race's `characters.json`; this is the cross-race browse view. See `canon_index.md` for the id lookup table.
+
+## Clérigos
+
+Not fixed individuals — a procedurally-regenerated population from 10 names × 6 titles × 6 houses. `characters.json` documents the 8 ancestral archetypes (generation methods) instead:
+
+- **Bruxa** — mixes hot/cold numbers with a personal touch of chance.
+- **Vidente** — trusts hot numbers, influenced by the most recent draw when the hero's genome "clarity" is high.
+- **Chefe Tribal** — displaces a starting number through 5 ritual symbols (sun, moon, wolf, fire, water, mountain, raven).
+- **Elfo** — the most disciplined archetype: rejects any candidate failing sum/parity/gap constraints, up to 1000 tries.
+- **Goblin** — bets on high numbers when the jackpot is large, samples freely otherwise.
+- **Shaman** — displaces the last draw by the current moon phase (the archetype dispatcher's fallback).
+- **Cronomante** — borrows `factions/chronomancers/algorithm.py` directly, no logic of its own.
+- **Esqueleto** — borrows `factions/skeletons/algorithm.py` directly, no logic of its own.
 
 ## Vampiros de Elarion
 
@@ -101,6 +114,6 @@ Kael da Folha Negra, Thalion Passo Silencioso, Arya da Lâmina Verde, Elyndor Se
 
 ## Totals
 
-- **20 races** now have named characters or a named collective voice — full coverage.
-- **~46 race-level named/archetype characters** + 16 Mystics + 6 Black Squad + 5 Elven Order + 3 institutional/cosmological = the full canon cast.
-- Remaining known gap: Axiomantes has only a collective voice, no individuals — see `canon_index.md`, "Known canon gaps," and the Lore Coverage Report.
+- **21 races** now have named characters, archetypes, or a named collective voice — full coverage.
+- **~54 race-level named/archetype characters** (including the 8 Clerics archetypes) + 16 Mystics + 6 Black Squad + 5 Elven Order + 3 institutional/cosmological = the full canon cast.
+- Remaining known gap: Axiomantes has only a collective voice, no individuals — see `canon_index.md`, "Known canon gaps."

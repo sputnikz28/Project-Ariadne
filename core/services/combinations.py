@@ -10,3 +10,8 @@ def normalize_candidate(nums, ests, rng):
         if e not in ests:
             ests.append(e)
     return sorted(nums[:5]), sorted(ests[:2])
+
+
+def gaps(nums):
+    s = sorted(nums)
+    return [s[i + 1] - s[i] for i in range(4)]
