@@ -1,21 +1,21 @@
 {
   "id": "ART-5637DEC365",
   "nome": "Livro dos Ecos",
-  "raridade": "EPICO",
-  "multiplicador": 1.3,
+  "raridade": "LENDARIO",
+  "multiplicador": 1.6,
   "criador": "Aruk da Lua Fria",
   "geracao_criacao": 4,
   "donos": [
     "Aruk da Lua Fria",
     "Gruk Pedra-Partida"
   ],
-  "energia_acumulada": 2.4,
+  "energia_acumulada": 3.2,
   "conselhos": 0,
   "estado": "ROUBADO_PELO_ESQUADRAO_NEGRO",
   "universo_origem": 1783776750689192668,
   "portador_atual": "Sable das Matrizes",
   "vezes_encontrado": 1,
-  "execucoes_sobrevividas": 24,
+  "execucoes_sobrevividas": 32,
   "historia": [
     {
       "evento": "MATERIALIZADO_NA_ARCA",

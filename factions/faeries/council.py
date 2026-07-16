@@ -1,4 +1,4 @@
-from races.extras import faeries as _faeries
+from .algorithm import faeries as _faeries
 
 FACTION_META = {
     'name': 'Fadas Lunélia',

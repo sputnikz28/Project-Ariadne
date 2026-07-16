@@ -1,7 +1,7 @@
 {
   "pergunta": "Padrões em Lua cheia",
   "tipo": "DESCRITIVO_NAO_PREDITIVO",
-  "pergaminhos_encontrados": 7,
+  "scrolls_encontrados": 7,
   "numeros_mais_frequentes": [
     {
       "numero": 8,
@@ -68,5 +68,5 @@
   ],
   "soma_media": 132.71428571428572,
   "aviso": "Observação histórica; não aumenta a probabilidade de prever um sorteio futuro.",
-  "criada_em": "2026-07-11T15:23:18"
+  "criada_em": "2026-07-15T16:32:42"
 }

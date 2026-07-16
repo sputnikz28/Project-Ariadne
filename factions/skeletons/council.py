@@ -1,4 +1,4 @@
-from races.skeletons import create_representatives as _create_representatives
+from .algorithm import create_representatives as _create_representatives
 
 FACTION_META = {
     'name': 'Esqueletos das Catacumbas Numéricas',

@@ -1222,7 +1222,2301 @@
       },
       "registado_em": "2026-07-13T14:57:35+00:00",
       "estado": "ECO_LENDARIO"
+    },
+    {
+      "arquivo_id": "Conselho Original",
+      "nome": "Conselho Original",
+      "classe": "Conselho Final",
+      "origem": "chave_conselho",
+      "geracao": 14,
+      "grau": "IMORTAL",
+      "feito": "5 números + 2 estrelas",
+      "chave": {
+        "numeros": [
+          7,
+          10,
+          17,
+          21,
+          23
+        ],
+        "estrelas": [
+          2,
+          3
+        ]
+      },
+      "chave_real": {
+        "numeros": [
+          7,
+          10,
+          17,
+          21,
+          23
+        ],
+        "estrelas": [
+          2,
+          3
+        ]
+      },
+      "registado_em": "2026-07-14T11:05:54+00:00",
+      "estado": "ECO_LENDARIO"
+    },
+    {
+      "arquivo_id": "H-00504",
+      "nome": "Thara da Lua Fria",
+      "classe": "Esqueleto",
+      "origem": "racas_antigas",
+      "geracao": 10,
+      "grau": "OURO",
+      "feito": "3 números + 2 estrelas",
+      "chave": {
+        "numeros": [
+          5,
+          7,
+          10,
+          23,
+          25
+        ],
+        "estrelas": [
+          2,
+          3
+        ]
+      },
+      "chave_real": {
+        "numeros": [
+          7,
+          10,
+          17,
+          21,
+          23
+        ],
+        "estrelas": [
+          2,
+          3
+        ]
+      },
+      "registado_em": "2026-07-14T11:05:54+00:00",
+      "estado": "ECO_LENDARIO"
+    },
+    {
+      "arquivo_id": "Conselho Original",
+      "nome": "Conselho Original",
+      "classe": "Conselho Final",
+      "origem": "chave_conselho",
+      "geracao": 14,
+      "grau": "OURO",
+      "feito": "3 números + 2 estrelas",
+      "chave": {
+        "numeros": [
+          10,
+          17,
+          22,
+          23,
+          37
+        ],
+        "estrelas": [
+          2,
+          3
+        ]
+      },
+      "chave_real": {
+        "numeros": [
+          7,
+          10,
+          17,
+          21,
+          23
+        ],
+        "estrelas": [
+          2,
+          3
+        ]
+      },
+      "registado_em": "2026-07-14T11:05:54+00:00",
+      "estado": "ECO_LENDARIO"
+    },
+    {
+      "arquivo_id": "Conselho Original",
+      "nome": "Conselho Original",
+      "classe": "Conselho Final",
+      "origem": "chave_conselho",
+      "geracao": 14,
+      "grau": "OURO",
+      "feito": "3 números + 2 estrelas",
+      "chave": {
+        "numeros": [
+          17,
+          19,
+          21,
+          23,
+          42
+        ],
+        "estrelas": [
+          2,
+          3
+        ]
+      },
+      "chave_real": {
+        "numeros": [
+          7,
+          10,
+          17,
+          21,
+          23
+        ],
+        "estrelas": [
+          2,
+          3
+        ]
+      },
+      "registado_em": "2026-07-14T11:05:54+00:00",
+      "estado": "ECO_LENDARIO"
+    },
+    {
+      "arquivo_id": "H-00240",
+      "nome": "Morgana Pedra-Partida",
+      "classe": "Vidente",
+      "origem": "racas_antigas",
+      "geracao": 5,
+      "grau": "OURO",
+      "feito": "3 números + 2 estrelas",
+      "chave": {
+        "numeros": [
+          7,
+          10,
+          14,
+          21,
+          27
+        ],
+        "estrelas": [
+          2,
+          3
+        ]
+      },
+      "chave_real": {
+        "numeros": [
+          7,
+          10,
+          17,
+          21,
+          23
+        ],
+        "estrelas": [
+          2,
+          3
+        ]
+      },
+      "registado_em": "2026-07-14T11:05:54+00:00",
+      "estado": "ECO_LENDARIO"
+    },
+    {
+      "arquivo_id": "H-00115",
+      "nome": "Thara da Névoa",
+      "classe": "Vidente",
+      "origem": "racas_antigas",
+      "geracao": 10,
+      "grau": "OURO",
+      "feito": "3 números + 2 estrelas",
+      "chave": {
+        "numeros": [
+          7,
+          17,
+          21,
+          25,
+          43
+        ],
+        "estrelas": [
+          2,
+          3
+        ]
+      },
+      "chave_real": {
+        "numeros": [
+          7,
+          10,
+          17,
+          21,
+          23
+        ],
+        "estrelas": [
+          2,
+          3
+        ]
+      },
+      "registado_em": "2026-07-14T11:05:54+00:00",
+      "estado": "ECO_LENDARIO"
+    },
+    {
+      "arquivo_id": "Barbas de Ferro #1",
+      "nome": "Barbas de Ferro #1",
+      "classe": "Clã Anão",
+      "origem": "cla_anao",
+      "geracao": 14,
+      "grau": "OURO",
+      "feito": "3 números + 2 estrelas",
+      "chave": {
+        "numeros": [
+          10,
+          17,
+          21,
+          30,
+          46
+        ],
+        "estrelas": [
+          2,
+          3
+        ]
+      },
+      "chave_real": {
+        "numeros": [
+          7,
+          10,
+          17,
+          21,
+          23
+        ],
+        "estrelas": [
+          2,
+          3
+        ]
+      },
+      "registado_em": "2026-07-14T11:05:54+00:00",
+      "estado": "ECO_LENDARIO"
+    },
+    {
+      "arquivo_id": "Cristal Azul #13",
+      "nome": "Cristal Azul #13",
+      "classe": "Clã Anão",
+      "origem": "cla_anao",
+      "geracao": 14,
+      "grau": "OURO",
+      "feito": "3 números + 2 estrelas",
+      "chave": {
+        "numeros": [
+          10,
+          17,
+          21,
+          22,
+          33
+        ],
+        "estrelas": [
+          2,
+          3
+        ]
+      },
+      "chave_real": {
+        "numeros": [
+          7,
+          10,
+          17,
+          21,
+          23
+        ],
+        "estrelas": [
+          2,
+          3
+        ]
+      },
+      "registado_em": "2026-07-14T11:05:54+00:00",
+      "estado": "ECO_LENDARIO"
+    },
+    {
+      "arquivo_id": "Forja Negra #13",
+      "nome": "Forja Negra #13",
+      "classe": "Clã Anão",
+      "origem": "cla_anao",
+      "geracao": 14,
+      "grau": "OURO",
+      "feito": "3 números + 2 estrelas",
+      "chave": {
+        "numeros": [
+          15,
+          17,
+          21,
+          23,
+          40
+        ],
+        "estrelas": [
+          2,
+          3
+        ]
+      },
+      "chave_real": {
+        "numeros": [
+          7,
+          10,
+          17,
+          21,
+          23
+        ],
+        "estrelas": [
+          2,
+          3
+        ]
+      },
+      "registado_em": "2026-07-14T11:05:54+00:00",
+      "estado": "ECO_LENDARIO"
+    },
+    {
+      "arquivo_id": "Barbas de Ferro #1",
+      "nome": "Barbas de Ferro #1",
+      "classe": "Clã Anão",
+      "origem": "cla_anao",
+      "geracao": 14,
+      "grau": "OURO",
+      "feito": "3 números + 2 estrelas",
+      "chave": {
+        "numeros": [
+          7,
+          17,
+          18,
+          21,
+          32
+        ],
+        "estrelas": [
+          2,
+          3
+        ]
+      },
+      "chave_real": {
+        "numeros": [
+          7,
+          10,
+          17,
+          21,
+          23
+        ],
+        "estrelas": [
+          2,
+          3
+        ]
+      },
+      "registado_em": "2026-07-14T11:05:54+00:00",
+      "estado": "ECO_LENDARIO"
+    },
+    {
+      "arquivo_id": "Barbas de Ferro #13",
+      "nome": "Barbas de Ferro #13",
+      "classe": "Clã Anão",
+      "origem": "cla_anao",
+      "geracao": 14,
+      "grau": "OURO",
+      "feito": "3 números + 2 estrelas",
+      "chave": {
+        "numeros": [
+          7,
+          10,
+          21,
+          38,
+          42
+        ],
+        "estrelas": [
+          2,
+          3
+        ]
+      },
+      "chave_real": {
+        "numeros": [
+          7,
+          10,
+          17,
+          21,
+          23
+        ],
+        "estrelas": [
+          2,
+          3
+        ]
+      },
+      "registado_em": "2026-07-14T11:05:54+00:00",
+      "estado": "ECO_LENDARIO"
+    },
+    {
+      "arquivo_id": "Cristal Azul #13",
+      "nome": "Cristal Azul #13",
+      "classe": "Clã Anão",
+      "origem": "cla_anao",
+      "geracao": 14,
+      "grau": "OURO",
+      "feito": "3 números + 2 estrelas",
+      "chave": {
+        "numeros": [
+          7,
+          19,
+          21,
+          23,
+          34
+        ],
+        "estrelas": [
+          2,
+          3
+        ]
+      },
+      "chave_real": {
+        "numeros": [
+          7,
+          10,
+          17,
+          21,
+          23
+        ],
+        "estrelas": [
+          2,
+          3
+        ]
+      },
+      "registado_em": "2026-07-14T11:05:54+00:00",
+      "estado": "ECO_LENDARIO"
+    },
+    {
+      "arquivo_id": "H-00031",
+      "nome": "Morgana Pedra-Partida",
+      "classe": "Esqueleto",
+      "origem": "racas_antigas",
+      "geracao": 9,
+      "grau": "OURO",
+      "feito": "3 números + 2 estrelas",
+      "chave": {
+        "numeros": [
+          7,
+          9,
+          21,
+          23,
+          30
+        ],
+        "estrelas": [
+          2,
+          3
+        ]
+      },
+      "chave_real": {
+        "numeros": [
+          7,
+          10,
+          17,
+          21,
+          23
+        ],
+        "estrelas": [
+          2,
+          3
+        ]
+      },
+      "registado_em": "2026-07-14T11:05:54+00:00",
+      "estado": "ECO_LENDARIO"
+    },
+    {
+      "arquivo_id": "H-00081",
+      "nome": "Thara Pedra-Partida",
+      "classe": "Elfo",
+      "origem": "racas_antigas",
+      "geracao": 3,
+      "grau": "OURO",
+      "feito": "3 números + 2 estrelas",
+      "chave": {
+        "numeros": [
+          7,
+          21,
+          23,
+          36,
+          44
+        ],
+        "estrelas": [
+          2,
+          3
+        ]
+      },
+      "chave_real": {
+        "numeros": [
+          7,
+          10,
+          17,
+          21,
+          23
+        ],
+        "estrelas": [
+          2,
+          3
+        ]
+      },
+      "registado_em": "2026-07-14T11:05:54+00:00",
+      "estado": "ECO_LENDARIO"
+    },
+    {
+      "arquivo_id": "H-00734",
+      "nome": "Morgana dos Astros",
+      "classe": "Vidente",
+      "origem": "racas_antigas",
+      "geracao": 14,
+      "grau": "OURO",
+      "feito": "3 números + 2 estrelas",
+      "chave": {
+        "numeros": [
+          5,
+          10,
+          17,
+          21,
+          48
+        ],
+        "estrelas": [
+          2,
+          3
+        ]
+      },
+      "chave_real": {
+        "numeros": [
+          7,
+          10,
+          17,
+          21,
+          23
+        ],
+        "estrelas": [
+          2,
+          3
+        ]
+      },
+      "registado_em": "2026-07-14T11:05:54+00:00",
+      "estado": "ECO_LENDARIO"
+    },
+    {
+      "arquivo_id": "Forja Negra #13",
+      "nome": "Forja Negra",
+      "classe": "Clã Anão",
+      "origem": "cla_anao",
+      "geracao": 14,
+      "grau": "OURO",
+      "feito": "3 números + 2 estrelas",
+      "chave": {
+        "numeros": [
+          17,
+          19,
+          21,
+          23,
+          34
+        ],
+        "estrelas": [
+          2,
+          3
+        ]
+      },
+      "chave_real": {
+        "numeros": [
+          7,
+          10,
+          17,
+          21,
+          23
+        ],
+        "estrelas": [
+          2,
+          3
+        ]
+      },
+      "registado_em": "2026-07-14T11:05:54+00:00",
+      "estado": "ECO_LENDARIO"
+    },
+    {
+      "arquivo_id": "H-00505",
+      "nome": "Lyra dos Astros",
+      "classe": "Vidente",
+      "origem": "racas_antigas",
+      "geracao": 10,
+      "grau": "OURO",
+      "feito": "3 números + 2 estrelas",
+      "chave": {
+        "numeros": [
+          6,
+          10,
+          17,
+          21,
+          46
+        ],
+        "estrelas": [
+          2,
+          3
+        ]
+      },
+      "chave_real": {
+        "numeros": [
+          7,
+          10,
+          17,
+          21,
+          23
+        ],
+        "estrelas": [
+          2,
+          3
+        ]
+      },
+      "registado_em": "2026-07-14T11:05:54+00:00",
+      "estado": "ECO_LENDARIO"
+    },
+    {
+      "arquivo_id": "Mago-2",
+      "nome": "Mago-2",
+      "classe": "Mago",
+      "origem": "ser_superior",
+      "geracao": 14,
+      "grau": "OURO",
+      "feito": "3 números + 2 estrelas",
+      "chave": {
+        "numeros": [
+          10,
+          16,
+          17,
+          21,
+          47
+        ],
+        "estrelas": [
+          2,
+          3
+        ]
+      },
+      "chave_real": {
+        "numeros": [
+          7,
+          10,
+          17,
+          21,
+          23
+        ],
+        "estrelas": [
+          2,
+          3
+        ]
+      },
+      "registado_em": "2026-07-14T11:05:54+00:00",
+      "estado": "ECO_LENDARIO"
+    },
+    {
+      "arquivo_id": "Forja Negra #1",
+      "nome": "Forja Negra",
+      "classe": "Clã Anão",
+      "origem": "cla_anao",
+      "geracao": 14,
+      "grau": "OURO",
+      "feito": "3 números + 2 estrelas",
+      "chave": {
+        "numeros": [
+          10,
+          21,
+          23,
+          42,
+          46
+        ],
+        "estrelas": [
+          2,
+          3
+        ]
+      },
+      "chave_real": {
+        "numeros": [
+          7,
+          10,
+          17,
+          21,
+          23
+        ],
+        "estrelas": [
+          2,
+          3
+        ]
+      },
+      "registado_em": "2026-07-14T11:05:54+00:00",
+      "estado": "ECO_LENDARIO"
+    },
+    {
+      "arquivo_id": "H-00628",
+      "nome": "Aruk do Bosque",
+      "classe": "Vidente",
+      "origem": "racas_antigas",
+      "geracao": 12,
+      "grau": "OURO",
+      "feito": "3 números + 2 estrelas",
+      "chave": {
+        "numeros": [
+          10,
+          17,
+          23,
+          25,
+          46
+        ],
+        "estrelas": [
+          2,
+          3
+        ]
+      },
+      "chave_real": {
+        "numeros": [
+          7,
+          10,
+          17,
+          21,
+          23
+        ],
+        "estrelas": [
+          2,
+          3
+        ]
+      },
+      "registado_em": "2026-07-14T11:05:54+00:00",
+      "estado": "ECO_LENDARIO"
+    },
+    {
+      "arquivo_id": "H-00738",
+      "nome": "Selene dos Ossos",
+      "classe": "Vidente",
+      "origem": "racas_antigas",
+      "geracao": 14,
+      "grau": "OURO",
+      "feito": "3 números + 2 estrelas",
+      "chave": {
+        "numeros": [
+          8,
+          17,
+          21,
+          23,
+          44
+        ],
+        "estrelas": [
+          2,
+          3
+        ]
+      },
+      "chave_real": {
+        "numeros": [
+          7,
+          10,
+          17,
+          21,
+          23
+        ],
+        "estrelas": [
+          2,
+          3
+        ]
+      },
+      "registado_em": "2026-07-14T11:05:54+00:00",
+      "estado": "ECO_LENDARIO"
+    },
+    {
+      "arquivo_id": "Barbas de Ferro #13",
+      "nome": "Barbas de Ferro",
+      "classe": "Clã Anão",
+      "origem": "cla_anao",
+      "geracao": 14,
+      "grau": "OURO",
+      "feito": "3 números + 2 estrelas",
+      "chave": {
+        "numeros": [
+          17,
+          21,
+          23,
+          42,
+          46
+        ],
+        "estrelas": [
+          2,
+          3
+        ]
+      },
+      "chave_real": {
+        "numeros": [
+          7,
+          10,
+          17,
+          21,
+          23
+        ],
+        "estrelas": [
+          2,
+          3
+        ]
+      },
+      "registado_em": "2026-07-14T11:05:54+00:00",
+      "estado": "ECO_LENDARIO"
+    },
+    {
+      "arquivo_id": "Barbas de Ferro #1",
+      "nome": "Barbas de Ferro",
+      "classe": "Clã Anão",
+      "origem": "cla_anao",
+      "geracao": 14,
+      "grau": "OURO",
+      "feito": "3 números + 2 estrelas",
+      "chave": {
+        "numeros": [
+          10,
+          11,
+          17,
+          23,
+          29
+        ],
+        "estrelas": [
+          2,
+          3
+        ]
+      },
+      "chave_real": {
+        "numeros": [
+          7,
+          10,
+          17,
+          21,
+          23
+        ],
+        "estrelas": [
+          2,
+          3
+        ]
+      },
+      "registado_em": "2026-07-14T11:05:54+00:00",
+      "estado": "ECO_LENDARIO"
+    },
+    {
+      "arquivo_id": "Forja Negra #1",
+      "nome": "Forja Negra",
+      "classe": "Clã Anão",
+      "origem": "cla_anao",
+      "geracao": 14,
+      "grau": "OURO",
+      "feito": "3 números + 2 estrelas",
+      "chave": {
+        "numeros": [
+          5,
+          7,
+          21,
+          23,
+          44
+        ],
+        "estrelas": [
+          2,
+          3
+        ]
+      },
+      "chave_real": {
+        "numeros": [
+          7,
+          10,
+          17,
+          21,
+          23
+        ],
+        "estrelas": [
+          2,
+          3
+        ]
+      },
+      "registado_em": "2026-07-14T11:05:54+00:00",
+      "estado": "ECO_LENDARIO"
+    },
+    {
+      "arquivo_id": "H-00012",
+      "nome": "Morgana Pedra-Partida",
+      "classe": "Cronomante",
+      "origem": "racas_antigas",
+      "geracao": 1,
+      "grau": "OURO",
+      "feito": "3 números + 2 estrelas",
+      "chave": {
+        "numeros": [
+          1,
+          2,
+          5,
+          32,
+          50
+        ],
+        "estrelas": [
+          1,
+          2
+        ]
+      },
+      "chave_real": {
+        "numeros": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "estrelas": [
+          1,
+          2
+        ]
+      },
+      "registado_em": "2026-07-14T14:48:02+00:00",
+      "estado": "ECO_LENDARIO"
+    },
+    {
+      "arquivo_id": "H-00020",
+      "nome": "Aion Pedra-Partida",
+      "classe": "Cronomante",
+      "origem": "racas_antigas",
+      "geracao": 1,
+      "grau": "OURO",
+      "feito": "3 números + 2 estrelas",
+      "chave": {
+        "numeros": [
+          3,
+          4,
+          5,
+          8,
+          35
+        ],
+        "estrelas": [
+          1,
+          2
+        ]
+      },
+      "chave_real": {
+        "numeros": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "estrelas": [
+          1,
+          2
+        ]
+      },
+      "registado_em": "2026-07-14T14:48:02+00:00",
+      "estado": "ECO_LENDARIO"
+    },
+    {
+      "arquivo_id": "H-00082",
+      "nome": "Morgana da Névoa",
+      "classe": "Cronomante",
+      "origem": "racas_antigas",
+      "geracao": 2,
+      "grau": "OURO",
+      "feito": "3 números + 2 estrelas",
+      "chave": {
+        "numeros": [
+          1,
+          2,
+          5,
+          32,
+          50
+        ],
+        "estrelas": [
+          1,
+          2
+        ]
+      },
+      "chave_real": {
+        "numeros": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "estrelas": [
+          1,
+          2
+        ]
+      },
+      "registado_em": "2026-07-14T14:48:02+00:00",
+      "estado": "ECO_LENDARIO"
+    },
+    {
+      "arquivo_id": "H-00250",
+      "nome": "Kael dos Astros",
+      "classe": "Cronomante",
+      "origem": "racas_antigas",
+      "geracao": 5,
+      "grau": "OURO",
+      "feito": "3 números + 2 estrelas",
+      "chave": {
+        "numeros": [
+          1,
+          2,
+          5,
+          32,
+          50
+        ],
+        "estrelas": [
+          1,
+          2
+        ]
+      },
+      "chave_real": {
+        "numeros": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "estrelas": [
+          1,
+          2
+        ]
+      },
+      "registado_em": "2026-07-14T14:48:02+00:00",
+      "estado": "ECO_LENDARIO"
+    },
+    {
+      "arquivo_id": "H-00397",
+      "nome": "Aion dos Ossos",
+      "classe": "Cronomante",
+      "origem": "racas_antigas",
+      "geracao": 8,
+      "grau": "OURO",
+      "feito": "3 números + 2 estrelas",
+      "chave": {
+        "numeros": [
+          1,
+          2,
+          5,
+          32,
+          50
+        ],
+        "estrelas": [
+          1,
+          2
+        ]
+      },
+      "chave_real": {
+        "numeros": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "estrelas": [
+          1,
+          2
+        ]
+      },
+      "registado_em": "2026-07-14T14:48:02+00:00",
+      "estado": "ECO_LENDARIO"
+    },
+    {
+      "arquivo_id": "H-00670",
+      "nome": "Morgana do Bosque",
+      "classe": "Cronomante",
+      "origem": "racas_antigas",
+      "geracao": 13,
+      "grau": "OURO",
+      "feito": "3 números + 2 estrelas",
+      "chave": {
+        "numeros": [
+          1,
+          2,
+          5,
+          32,
+          50
+        ],
+        "estrelas": [
+          1,
+          2
+        ]
+      },
+      "chave_real": {
+        "numeros": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "estrelas": [
+          1,
+          2
+        ]
+      },
+      "registado_em": "2026-07-14T14:48:02+00:00",
+      "estado": "ECO_LENDARIO"
+    },
+    {
+      "arquivo_id": "Lady Nyx da Linhagem Sombria",
+      "nome": "Lady Nyx da Linhagem Sombria",
+      "classe": "Vampiro Sombrio",
+      "origem": "vampiro",
+      "geracao": 14,
+      "grau": "OURO",
+      "feito": "3 números + 2 estrelas",
+      "chave": {
+        "numeros": [
+          1,
+          2,
+          4,
+          6,
+          47
+        ],
+        "estrelas": [
+          1,
+          2
+        ]
+      },
+      "chave_real": {
+        "numeros": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "estrelas": [
+          1,
+          2
+        ]
+      },
+      "registado_em": "2026-07-14T14:48:02+00:00",
+      "estado": "ECO_LENDARIO"
+    },
+    {
+      "arquivo_id": "Conselho Original",
+      "nome": "Conselho Original",
+      "classe": "Conselho Final",
+      "origem": "chave_conselho",
+      "geracao": 14,
+      "grau": "IMORTAL",
+      "feito": "5 números + 2 estrelas",
+      "chave": {
+        "numeros": [
+          7,
+          10,
+          18,
+          21,
+          29
+        ],
+        "estrelas": [
+          2,
+          9
+        ]
+      },
+      "chave_real": {
+        "numeros": [
+          7,
+          10,
+          18,
+          21,
+          29
+        ],
+        "estrelas": [
+          2,
+          9
+        ]
+      },
+      "registado_em": "2026-07-14T15:45:28+00:00",
+      "estado": "ECO_LENDARIO"
+    },
+    {
+      "arquivo_id": "H-00549",
+      "nome": "Velka da Névoa",
+      "classe": "Vidente",
+      "origem": "racas_antigas",
+      "geracao": 11,
+      "grau": "OURO",
+      "feito": "3 números + 2 estrelas",
+      "chave": {
+        "numeros": [
+          10,
+          17,
+          18,
+          21,
+          46
+        ],
+        "estrelas": [
+          2,
+          9
+        ]
+      },
+      "chave_real": {
+        "numeros": [
+          7,
+          10,
+          18,
+          21,
+          29
+        ],
+        "estrelas": [
+          2,
+          9
+        ]
+      },
+      "registado_em": "2026-07-14T15:45:28+00:00",
+      "estado": "ECO_LENDARIO"
+    },
+    {
+      "arquivo_id": "H-00635",
+      "nome": "Elarion da Névoa",
+      "classe": "Vidente",
+      "origem": "racas_antigas",
+      "geracao": 12,
+      "grau": "OURO",
+      "feito": "3 números + 2 estrelas",
+      "chave": {
+        "numeros": [
+          1,
+          10,
+          18,
+          21,
+          25
+        ],
+        "estrelas": [
+          2,
+          9
+        ]
+      },
+      "chave_real": {
+        "numeros": [
+          7,
+          10,
+          18,
+          21,
+          29
+        ],
+        "estrelas": [
+          2,
+          9
+        ]
+      },
+      "registado_em": "2026-07-14T15:45:28+00:00",
+      "estado": "ECO_LENDARIO"
+    },
+    {
+      "arquivo_id": "H-00320",
+      "nome": "Selene dos Ossos",
+      "classe": "Vidente",
+      "origem": "racas_antigas",
+      "geracao": 6,
+      "grau": "OURO",
+      "feito": "3 números + 2 estrelas",
+      "chave": {
+        "numeros": [
+          7,
+          10,
+          18,
+          33,
+          36
+        ],
+        "estrelas": [
+          2,
+          9
+        ]
+      },
+      "chave_real": {
+        "numeros": [
+          7,
+          10,
+          18,
+          21,
+          29
+        ],
+        "estrelas": [
+          2,
+          9
+        ]
+      },
+      "registado_em": "2026-07-14T15:45:28+00:00",
+      "estado": "ECO_LENDARIO"
+    },
+    {
+      "arquivo_id": "H-00641",
+      "nome": "Selene do Bosque",
+      "classe": "Vidente",
+      "origem": "racas_antigas",
+      "geracao": 13,
+      "grau": "OURO",
+      "feito": "3 números + 2 estrelas",
+      "chave": {
+        "numeros": [
+          10,
+          18,
+          29,
+          42,
+          43
+        ],
+        "estrelas": [
+          2,
+          9
+        ]
+      },
+      "chave_real": {
+        "numeros": [
+          7,
+          10,
+          18,
+          21,
+          29
+        ],
+        "estrelas": [
+          2,
+          9
+        ]
+      },
+      "registado_em": "2026-07-14T15:45:28+00:00",
+      "estado": "ECO_LENDARIO"
+    },
+    {
+      "arquivo_id": "H-00101",
+      "nome": "Aion do Bosque",
+      "classe": "Vidente",
+      "origem": "racas_antigas",
+      "geracao": 2,
+      "grau": "OURO",
+      "feito": "3 números + 2 estrelas",
+      "chave": {
+        "numeros": [
+          18,
+          21,
+          29,
+          32,
+          45
+        ],
+        "estrelas": [
+          2,
+          9
+        ]
+      },
+      "chave_real": {
+        "numeros": [
+          7,
+          10,
+          18,
+          21,
+          29
+        ],
+        "estrelas": [
+          2,
+          9
+        ]
+      },
+      "registado_em": "2026-07-14T15:45:28+00:00",
+      "estado": "ECO_LENDARIO"
+    },
+    {
+      "arquivo_id": "H-00680",
+      "nome": "Morgana da Lua Fria",
+      "classe": "Vidente",
+      "origem": "racas_antigas",
+      "geracao": 13,
+      "grau": "OURO",
+      "feito": "3 números + 2 estrelas",
+      "chave": {
+        "numeros": [
+          10,
+          16,
+          21,
+          29,
+          43
+        ],
+        "estrelas": [
+          2,
+          9
+        ]
+      },
+      "chave_real": {
+        "numeros": [
+          7,
+          10,
+          18,
+          21,
+          29
+        ],
+        "estrelas": [
+          2,
+          9
+        ]
+      },
+      "registado_em": "2026-07-14T15:45:28+00:00",
+      "estado": "ECO_LENDARIO"
+    },
+    {
+      "arquivo_id": "H-00686",
+      "nome": "Kael da Névoa",
+      "classe": "Elfo",
+      "origem": "racas_antigas",
+      "geracao": 13,
+      "grau": "OURO",
+      "feito": "3 números + 2 estrelas",
+      "chave": {
+        "numeros": [
+          7,
+          10,
+          18,
+          37,
+          50
+        ],
+        "estrelas": [
+          2,
+          9
+        ]
+      },
+      "chave_real": {
+        "numeros": [
+          7,
+          10,
+          18,
+          21,
+          29
+        ],
+        "estrelas": [
+          2,
+          9
+        ]
+      },
+      "registado_em": "2026-07-14T15:45:28+00:00",
+      "estado": "ECO_LENDARIO"
+    },
+    {
+      "arquivo_id": "Druida-1",
+      "nome": "Druida-1",
+      "classe": "Druida",
+      "origem": "ser_superior",
+      "geracao": 14,
+      "grau": "OURO",
+      "feito": "3 números + 2 estrelas",
+      "chave": {
+        "numeros": [
+          10,
+          21,
+          23,
+          29,
+          45
+        ],
+        "estrelas": [
+          2,
+          9
+        ]
+      },
+      "chave_real": {
+        "numeros": [
+          7,
+          10,
+          18,
+          21,
+          29
+        ],
+        "estrelas": [
+          2,
+          9
+        ]
+      },
+      "registado_em": "2026-07-14T15:45:28+00:00",
+      "estado": "ECO_LENDARIO"
+    },
+    {
+      "arquivo_id": "H-00076",
+      "nome": "Thara dos Astros",
+      "classe": "Vidente",
+      "origem": "racas_antigas",
+      "geracao": 3,
+      "grau": "OURO",
+      "feito": "3 números + 2 estrelas",
+      "chave": {
+        "numeros": [
+          7,
+          10,
+          29,
+          36,
+          41
+        ],
+        "estrelas": [
+          2,
+          9
+        ]
+      },
+      "chave_real": {
+        "numeros": [
+          7,
+          10,
+          18,
+          21,
+          29
+        ],
+        "estrelas": [
+          2,
+          9
+        ]
+      },
+      "registado_em": "2026-07-14T15:45:28+00:00",
+      "estado": "ECO_LENDARIO"
+    },
+    {
+      "arquivo_id": "H-00151",
+      "nome": "Kael dos Astros",
+      "classe": "Vidente",
+      "origem": "racas_antigas",
+      "geracao": 3,
+      "grau": "OURO",
+      "feito": "3 números + 2 estrelas",
+      "chave": {
+        "numeros": [
+          5,
+          7,
+          10,
+          28,
+          29
+        ],
+        "estrelas": [
+          2,
+          9
+        ]
+      },
+      "chave_real": {
+        "numeros": [
+          7,
+          10,
+          18,
+          21,
+          29
+        ],
+        "estrelas": [
+          2,
+          9
+        ]
+      },
+      "registado_em": "2026-07-14T15:45:28+00:00",
+      "estado": "ECO_LENDARIO"
+    },
+    {
+      "arquivo_id": "H-00306",
+      "nome": "Morgana dos Ossos",
+      "classe": "Vidente",
+      "origem": "racas_antigas",
+      "geracao": 6,
+      "grau": "OURO",
+      "feito": "3 números + 2 estrelas",
+      "chave": {
+        "numeros": [
+          10,
+          14,
+          21,
+          29,
+          41
+        ],
+        "estrelas": [
+          2,
+          9
+        ]
+      },
+      "chave_real": {
+        "numeros": [
+          7,
+          10,
+          18,
+          21,
+          29
+        ],
+        "estrelas": [
+          2,
+          9
+        ]
+      },
+      "registado_em": "2026-07-14T15:45:28+00:00",
+      "estado": "ECO_LENDARIO"
+    },
+    {
+      "arquivo_id": "H-00548",
+      "nome": "Aion dos Ossos",
+      "classe": "Vidente",
+      "origem": "racas_antigas",
+      "geracao": 11,
+      "grau": "OURO",
+      "feito": "3 números + 2 estrelas",
+      "chave": {
+        "numeros": [
+          7,
+          10,
+          26,
+          29,
+          33
+        ],
+        "estrelas": [
+          2,
+          9
+        ]
+      },
+      "chave_real": {
+        "numeros": [
+          7,
+          10,
+          18,
+          21,
+          29
+        ],
+        "estrelas": [
+          2,
+          9
+        ]
+      },
+      "registado_em": "2026-07-14T15:45:28+00:00",
+      "estado": "ECO_LENDARIO"
+    },
+    {
+      "arquivo_id": "H-00239",
+      "nome": "Gruk Pedra-Partida",
+      "classe": "Cronomante",
+      "origem": "racas_antigas",
+      "geracao": 5,
+      "grau": "OURO",
+      "feito": "3 números + 2 estrelas",
+      "chave": {
+        "numeros": [
+          7,
+          14,
+          21,
+          29,
+          35
+        ],
+        "estrelas": [
+          2,
+          9
+        ]
+      },
+      "chave_real": {
+        "numeros": [
+          7,
+          10,
+          18,
+          21,
+          29
+        ],
+        "estrelas": [
+          2,
+          9
+        ]
+      },
+      "registado_em": "2026-07-14T15:45:28+00:00",
+      "estado": "ECO_LENDARIO"
+    },
+    {
+      "arquivo_id": "H-00048",
+      "nome": "Kael da Névoa",
+      "classe": "Vidente",
+      "origem": "racas_antigas",
+      "geracao": 1,
+      "grau": "OURO",
+      "feito": "3 números + 2 estrelas",
+      "chave": {
+        "numeros": [
+          7,
+          10,
+          20,
+          21,
+          37
+        ],
+        "estrelas": [
+          2,
+          9
+        ]
+      },
+      "chave_real": {
+        "numeros": [
+          7,
+          10,
+          18,
+          21,
+          29
+        ],
+        "estrelas": [
+          2,
+          9
+        ]
+      },
+      "registado_em": "2026-07-14T15:45:28+00:00",
+      "estado": "ECO_LENDARIO"
+    },
+    {
+      "arquivo_id": "H-00479",
+      "nome": "Aion dos Ossos",
+      "classe": "Vidente",
+      "origem": "racas_antigas",
+      "geracao": 9,
+      "grau": "OURO",
+      "feito": "3 números + 2 estrelas",
+      "chave": {
+        "numeros": [
+          10,
+          15,
+          21,
+          25,
+          29
+        ],
+        "estrelas": [
+          2,
+          9
+        ]
+      },
+      "chave_real": {
+        "numeros": [
+          7,
+          10,
+          18,
+          21,
+          29
+        ],
+        "estrelas": [
+          2,
+          9
+        ]
+      },
+      "registado_em": "2026-07-14T15:45:28+00:00",
+      "estado": "ECO_LENDARIO"
+    },
+    {
+      "arquivo_id": "Conselho Original",
+      "nome": "Conselho Original",
+      "classe": "Conselho Final",
+      "origem": "chave_conselho",
+      "geracao": 14,
+      "grau": "IMORTAL",
+      "feito": "5 números + 2 estrelas",
+      "chave": {
+        "numeros": [
+          10,
+          18,
+          21,
+          29,
+          40
+        ],
+        "estrelas": [
+          3,
+          8
+        ]
+      },
+      "chave_real": {
+        "numeros": [
+          10,
+          18,
+          21,
+          29,
+          40
+        ],
+        "estrelas": [
+          3,
+          8
+        ]
+      },
+      "registado_em": "2026-07-15T15:23:46+00:00",
+      "estado": "ECO_LENDARIO"
+    },
+    {
+      "arquivo_id": "H-00021",
+      "nome": "Kael dos Astros",
+      "classe": "Vidente",
+      "origem": "racas_antigas",
+      "geracao": 1,
+      "grau": "OURO",
+      "feito": "3 números + 2 estrelas",
+      "chave": {
+        "numeros": [
+          10,
+          21,
+          25,
+          35,
+          40
+        ],
+        "estrelas": [
+          3,
+          8
+        ]
+      },
+      "chave_real": {
+        "numeros": [
+          10,
+          18,
+          21,
+          29,
+          40
+        ],
+        "estrelas": [
+          3,
+          8
+        ]
+      },
+      "registado_em": "2026-07-15T15:23:46+00:00",
+      "estado": "ECO_LENDARIO"
+    },
+    {
+      "arquivo_id": "H-00210",
+      "nome": "Morgana da Névoa",
+      "classe": "Elfo",
+      "origem": "racas_antigas",
+      "geracao": 4,
+      "grau": "OURO",
+      "feito": "3 números + 2 estrelas",
+      "chave": {
+        "numeros": [
+          10,
+          18,
+          29,
+          47,
+          48
+        ],
+        "estrelas": [
+          3,
+          8
+        ]
+      },
+      "chave_real": {
+        "numeros": [
+          10,
+          18,
+          21,
+          29,
+          40
+        ],
+        "estrelas": [
+          3,
+          8
+        ]
+      },
+      "registado_em": "2026-07-15T15:23:46+00:00",
+      "estado": "ECO_LENDARIO"
+    },
+    {
+      "arquivo_id": "H-00008",
+      "nome": "Selene dos Ossos",
+      "classe": "Elfo",
+      "origem": "racas_antigas",
+      "geracao": 8,
+      "grau": "OURO",
+      "feito": "3 números + 2 estrelas",
+      "chave": {
+        "numeros": [
+          5,
+          10,
+          21,
+          29,
+          42
+        ],
+        "estrelas": [
+          3,
+          8
+        ]
+      },
+      "chave_real": {
+        "numeros": [
+          10,
+          18,
+          21,
+          29,
+          40
+        ],
+        "estrelas": [
+          3,
+          8
+        ]
+      },
+      "registado_em": "2026-07-15T15:23:46+00:00",
+      "estado": "ECO_LENDARIO"
+    },
+    {
+      "arquivo_id": "H-00473",
+      "nome": "Velka do Bosque",
+      "classe": "Vidente",
+      "origem": "racas_antigas",
+      "geracao": 9,
+      "grau": "OURO",
+      "feito": "3 números + 2 estrelas",
+      "chave": {
+        "numeros": [
+          10,
+          21,
+          30,
+          40,
+          42
+        ],
+        "estrelas": [
+          3,
+          8
+        ]
+      },
+      "chave_real": {
+        "numeros": [
+          10,
+          18,
+          21,
+          29,
+          40
+        ],
+        "estrelas": [
+          3,
+          8
+        ]
+      },
+      "registado_em": "2026-07-15T15:23:46+00:00",
+      "estado": "ECO_LENDARIO"
+    },
+    {
+      "arquivo_id": "H-00459",
+      "nome": "Lyra da Névoa",
+      "classe": "Vidente",
+      "origem": "racas_antigas",
+      "geracao": 9,
+      "grau": "OURO",
+      "feito": "3 números + 2 estrelas",
+      "chave": {
+        "numeros": [
+          10,
+          23,
+          29,
+          39,
+          40
+        ],
+        "estrelas": [
+          3,
+          8
+        ]
+      },
+      "chave_real": {
+        "numeros": [
+          10,
+          18,
+          21,
+          29,
+          40
+        ],
+        "estrelas": [
+          3,
+          8
+        ]
+      },
+      "registado_em": "2026-07-15T15:23:46+00:00",
+      "estado": "ECO_LENDARIO"
+    },
+    {
+      "arquivo_id": "Druida-1",
+      "nome": "Druida-1",
+      "classe": "Druida",
+      "origem": "ser_superior",
+      "geracao": 14,
+      "grau": "OURO",
+      "feito": "3 números + 2 estrelas",
+      "chave": {
+        "numeros": [
+          10,
+          21,
+          29,
+          44,
+          45
+        ],
+        "estrelas": [
+          3,
+          8
+        ]
+      },
+      "chave_real": {
+        "numeros": [
+          10,
+          18,
+          21,
+          29,
+          40
+        ],
+        "estrelas": [
+          3,
+          8
+        ]
+      },
+      "registado_em": "2026-07-15T15:23:46+00:00",
+      "estado": "ECO_LENDARIO"
+    },
+    {
+      "arquivo_id": "H-00085",
+      "nome": "Thara do Bosque",
+      "classe": "Vidente",
+      "origem": "racas_antigas",
+      "geracao": 8,
+      "grau": "OURO",
+      "feito": "3 números + 2 estrelas",
+      "chave": {
+        "numeros": [
+          10,
+          19,
+          21,
+          29,
+          48
+        ],
+        "estrelas": [
+          3,
+          8
+        ]
+      },
+      "chave_real": {
+        "numeros": [
+          10,
+          18,
+          21,
+          29,
+          40
+        ],
+        "estrelas": [
+          3,
+          8
+        ]
+      },
+      "registado_em": "2026-07-15T15:23:46+00:00",
+      "estado": "ECO_LENDARIO"
+    },
+    {
+      "arquivo_id": "H-00059",
+      "nome": "Kael dos Ossos",
+      "classe": "Vidente",
+      "origem": "racas_antigas",
+      "geracao": 11,
+      "grau": "OURO",
+      "feito": "3 números + 2 estrelas",
+      "chave": {
+        "numeros": [
+          18,
+          21,
+          26,
+          29,
+          43
+        ],
+        "estrelas": [
+          3,
+          8
+        ]
+      },
+      "chave_real": {
+        "numeros": [
+          10,
+          18,
+          21,
+          29,
+          40
+        ],
+        "estrelas": [
+          3,
+          8
+        ]
+      },
+      "registado_em": "2026-07-15T15:23:46+00:00",
+      "estado": "ECO_LENDARIO"
+    },
+    {
+      "arquivo_id": "H-00461",
+      "nome": "Lyra da Lua Fria",
+      "classe": "Vidente",
+      "origem": "racas_antigas",
+      "geracao": 9,
+      "grau": "OURO",
+      "feito": "3 números + 2 estrelas",
+      "chave": {
+        "numeros": [
+          5,
+          10,
+          18,
+          40,
+          45
+        ],
+        "estrelas": [
+          3,
+          8
+        ]
+      },
+      "chave_real": {
+        "numeros": [
+          10,
+          18,
+          21,
+          29,
+          40
+        ],
+        "estrelas": [
+          3,
+          8
+        ]
+      },
+      "registado_em": "2026-07-15T15:23:46+00:00",
+      "estado": "ECO_LENDARIO"
+    },
+    {
+      "arquivo_id": "H-00329",
+      "nome": "Gruk da Lua Fria",
+      "classe": "Vidente",
+      "origem": "racas_antigas",
+      "geracao": 6,
+      "grau": "OURO",
+      "feito": "3 números + 2 estrelas",
+      "chave": {
+        "numeros": [
+          10,
+          15,
+          18,
+          21,
+          42
+        ],
+        "estrelas": [
+          3,
+          8
+        ]
+      },
+      "chave_real": {
+        "numeros": [
+          10,
+          18,
+          21,
+          29,
+          40
+        ],
+        "estrelas": [
+          3,
+          8
+        ]
+      },
+      "registado_em": "2026-07-15T15:23:46+00:00",
+      "estado": "ECO_LENDARIO"
+    },
+    {
+      "arquivo_id": "H-00054",
+      "nome": "Morgana da Névoa",
+      "classe": "Cronomante",
+      "origem": "racas_antigas",
+      "geracao": 11,
+      "grau": "OURO",
+      "feito": "3 números + 2 estrelas",
+      "chave": {
+        "numeros": [
+          10,
+          18,
+          21,
+          41,
+          43
+        ],
+        "estrelas": [
+          3,
+          8
+        ]
+      },
+      "chave_real": {
+        "numeros": [
+          10,
+          18,
+          21,
+          29,
+          40
+        ],
+        "estrelas": [
+          3,
+          8
+        ]
+      },
+      "registado_em": "2026-07-15T15:23:46+00:00",
+      "estado": "ECO_LENDARIO"
+    },
+    {
+      "arquivo_id": "H-00495",
+      "nome": "Elarion da Lua Fria",
+      "classe": "Elfo",
+      "origem": "racas_antigas",
+      "geracao": 10,
+      "grau": "OURO",
+      "feito": "3 números + 2 estrelas",
+      "chave": {
+        "numeros": [
+          6,
+          18,
+          21,
+          27,
+          29
+        ],
+        "estrelas": [
+          3,
+          8
+        ]
+      },
+      "chave_real": {
+        "numeros": [
+          10,
+          18,
+          21,
+          29,
+          40
+        ],
+        "estrelas": [
+          3,
+          8
+        ]
+      },
+      "registado_em": "2026-07-15T15:23:46+00:00",
+      "estado": "ECO_LENDARIO"
+    },
+    {
+      "arquivo_id": "H-00015",
+      "nome": "Aion dos Astros",
+      "classe": "Elfo",
+      "origem": "racas_antigas",
+      "geracao": 3,
+      "grau": "OURO",
+      "feito": "3 números + 2 estrelas",
+      "chave": {
+        "numeros": [
+          10,
+          18,
+          24,
+          29,
+          35
+        ],
+        "estrelas": [
+          3,
+          8
+        ]
+      },
+      "chave_real": {
+        "numeros": [
+          10,
+          18,
+          21,
+          29,
+          40
+        ],
+        "estrelas": [
+          3,
+          8
+        ]
+      },
+      "registado_em": "2026-07-15T15:23:46+00:00",
+      "estado": "ECO_LENDARIO"
+    },
+    {
+      "arquivo_id": "H-00075",
+      "nome": "Lyra da Névoa",
+      "classe": "Esqueleto",
+      "origem": "racas_antigas",
+      "geracao": 7,
+      "grau": "OURO",
+      "feito": "3 números + 2 estrelas",
+      "chave": {
+        "numeros": [
+          18,
+          19,
+          27,
+          29,
+          40
+        ],
+        "estrelas": [
+          3,
+          8
+        ]
+      },
+      "chave_real": {
+        "numeros": [
+          10,
+          18,
+          21,
+          29,
+          40
+        ],
+        "estrelas": [
+          3,
+          8
+        ]
+      },
+      "registado_em": "2026-07-15T15:23:46+00:00",
+      "estado": "ECO_LENDARIO"
     }
   ],
-  "ultima_atualizacao": "2026-07-13T14:58:27+00:00"
+  "ultima_atualizacao": "2026-07-15T15:23:46+00:00"
 }

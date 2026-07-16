@@ -43,14 +43,14 @@
       "atraso": 14
     },
     {
-      "numero": 47,
-      "frequencia": 183,
-      "atraso": 22
-    },
-    {
       "numero": 2,
       "frequencia": 184,
       "atraso": 37
+    },
+    {
+      "numero": 47,
+      "frequencia": 184,
+      "atraso": 22
     },
     {
       "numero": 36,
@@ -209,7 +209,7 @@
     },
     {
       "numero": 37,
-      "frequencia": 210,
+      "frequencia": 211,
       "atraso": 25
     },
     {
@@ -219,7 +219,7 @@
     },
     {
       "numero": 10,
-      "frequencia": 212,
+      "frequencia": 213,
       "atraso": 2
     },
     {
@@ -228,14 +228,14 @@
       "atraso": 4
     },
     {
-      "numero": 19,
-      "frequencia": 217,
-      "atraso": 10
-    },
-    {
       "numero": 29,
       "frequencia": 217,
       "atraso": 9
+    },
+    {
+      "numero": 19,
+      "frequencia": 218,
+      "atraso": 10
     },
     {
       "numero": 23,
@@ -244,7 +244,7 @@
     },
     {
       "numero": 42,
-      "frequencia": 222,
+      "frequencia": 223,
       "atraso": 3
     },
     {
@@ -253,5 +253,5 @@
       "atraso": 11
     }
   ],
-  "atualizado_em": "2026-07-13T15:52:46+00:00"
+  "atualizado_em": "2026-07-15T15:33:21+00:00"
 }

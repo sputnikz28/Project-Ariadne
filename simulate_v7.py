@@ -1,9 +1,9 @@
 
 import json
 from pathlib import Path
-from races.vampires.lineages import create_vampires
-from races.gargoyles.lineages import create_gargoyles
-from races.treefolks.investigator import investigar_lua_cheia
+from factions.vampires.algorithm import create_vampires
+from factions.gargoyles.algorithm import create_gargoyles
+from factions.treefolks.investigator import investigate_full_moon
 from library.ariadne.engine import Ariadne
 
 
@@ -15,7 +15,7 @@ def main():
     ariadne = Ariadne()
     vampiros = create_vampires()
     gargulas = create_gargoyles()
-    treefolk = investigar_lua_cheia()
+    treefolk = investigate_full_moon()
 
     linhas = [
         "╔════════════════════════════════════════════════════╗",

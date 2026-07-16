@@ -1,5 +1,5 @@
 {
-  "nivel": 15,
+  "nivel": 16,
   "conhecimento": {
     "desvio_padrao": true,
     "anti_popularidade": true,
@@ -27,7 +27,8 @@
     "ART-5637DEC365",
     "ART-67230294CE",
     "ART-EXEMPLO001",
-    "ART-F445271008"
+    "ART-F445271008",
+    "ART-586CD9EEC3"
   ],
   "lendas_ressuscitadas": [
     "RESS-FB633A1C",
@@ -38,5 +39,5 @@
     "RESS-F8CE9D66",
     "RESS-4D6E9182"
   ],
-  "execucoes": 32
+  "execucoes": 40
 }

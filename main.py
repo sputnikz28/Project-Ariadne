@@ -13,7 +13,10 @@ from world.engine.malphas_virus import choose_carrier
 from world.engine.council_war import resolve
 from core.evolution.statistics import calculate
 from core.evolution.genetic import execute
-from races.extras import superiors
+from orders.pantheon.mages import create_mage_representatives
+from orders.pantheon.druids import create_druid_representatives
+from orders.pantheon.djinns import create_djinn_representatives
+from orders.pantheon.aion import create_aion
 from council.council import filter_candidates, vote, corrupt
 from experiments.reports.writer import generate
 from artifacts.amulets.books import synchronize_sources, build_books, update_next_draw_book
@@ -122,6 +125,7 @@ def main():
     ctx = {
         'mundo': world, 'historico': hist, 'estatisticas': est,
         'extracao': extraction, 'biblioteca': biblioteca, 'seed': seed,
+        'rng': random.Random(seed),
     }
     ariadne = Ariadne()
 
@@ -129,8 +133,13 @@ def main():
     evo = execute(cfg, ctx)
     ritual = calculate_ritual(cfg, world, evo)
 
-    # ── Superiors (complex dual return — explicit) ───────────────────────────
-    vis, deus = superiors(ctx)
+    # ── Pantheon (complex dual return — explicit) ─────────────────────────────
+    vis = (
+        create_mage_representatives(ctx)
+        + create_druid_representatives(ctx)
+        + create_djinn_representatives(ctx)
+    )
+    deus = create_aion(vis, ctx)
 
     # ── Black Squad & Elven Order (stateful — explicit) ──────────────────────
     dark_events = []

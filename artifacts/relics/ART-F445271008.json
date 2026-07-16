@@ -9,13 +9,13 @@
     "Selene da Lua Fria",
     "Aruk da Névoa"
   ],
-  "energia_acumulada": 1.3,
+  "energia_acumulada": 2.1,
   "conselhos": 0,
   "estado": "ROUBADO_PELO_ESQUADRAO_NEGRO",
   "universo_origem": 1783813059618435000,
   "portador_atual": "Veyron Eclipse",
   "vezes_encontrado": 1,
-  "execucoes_sobrevividas": 13,
+  "execucoes_sobrevividas": 21,
   "historia": [
     {
       "evento": "MATERIALIZADO_NA_ARCA",

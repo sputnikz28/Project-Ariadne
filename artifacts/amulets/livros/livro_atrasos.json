@@ -35,12 +35,12 @@
     {
       "numero": 37,
       "atraso": 25,
-      "frequencia": 210
+      "frequencia": 211
     },
     {
       "numero": 47,
       "atraso": 22,
-      "frequencia": 183
+      "frequencia": 184
     },
     {
       "numero": 27,
@@ -80,7 +80,7 @@
     {
       "numero": 19,
       "atraso": 10,
-      "frequencia": 217
+      "frequencia": 218
     },
     {
       "numero": 4,
@@ -175,7 +175,7 @@
     {
       "numero": 42,
       "atraso": 3,
-      "frequencia": 222
+      "frequencia": 223
     },
     {
       "numero": 49,
@@ -190,7 +190,7 @@
     {
       "numero": 10,
       "atraso": 2,
-      "frequencia": 212
+      "frequencia": 213
     },
     {
       "numero": 33,
@@ -257,7 +257,7 @@
     {
       "estrela": 12,
       "atraso": 13,
-      "frequencia": 175
+      "frequencia": 176
     },
     {
       "estrela": 4,
@@ -287,7 +287,7 @@
     {
       "estrela": 9,
       "atraso": 3,
-      "frequencia": 361
+      "frequencia": 362
     },
     {
       "estrela": 7,
@@ -315,5 +315,5 @@
       "frequencia": 279
     }
   ],
-  "atualizado_em": "2026-07-13T15:52:46+00:00"
+  "atualizado_em": "2026-07-15T15:33:21+00:00"
 }

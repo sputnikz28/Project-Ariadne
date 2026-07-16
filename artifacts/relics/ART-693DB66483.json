@@ -1,21 +1,21 @@
 {
   "id": "ART-693DB66483",
   "nome": "Presa Imutável de Fenrir",
-  "raridade": "EPICO",
-  "multiplicador": 1.3,
+  "raridade": "LENDARIO",
+  "multiplicador": 1.6,
   "criador": "Morgana Pedra-Partida",
   "geracao_criacao": 8,
   "donos": [
     "Morgana Pedra-Partida",
     "Kael da Lua Fria"
   ],
-  "energia_acumulada": 2.0,
+  "energia_acumulada": 2.8,
   "conselhos": 0,
   "estado": "RECUPERADO_PELA_ORDEM_ELFICA",
   "universo_origem": 1783716108367178646,
   "portador_atual": null,
   "vezes_encontrado": 1,
-  "execucoes_sobrevividas": 20,
+  "execucoes_sobrevividas": 28,
   "historia": [
     {
       "evento": "MATERIALIZADO_NA_ARCA",

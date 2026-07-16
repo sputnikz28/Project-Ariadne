@@ -6,21 +6,21 @@ Pergaminhos catalogados: 55
 
 🧛 VAMPIROS — MESTRES DAS TRIPLAS
 Conde Vaelor da Linhagem Sanguínea | Linhagem Sanguínea
-Tripla: [1, 4, 44]
-Chave: 1 - 4 - 7 - 32 - 44 | Estrelas: 6 - 10
+Tripla: [5, 14, 18]
+Chave: 5 - 14 - 18 - 20 - 36 | Estrelas: 2 - 6
 
 Lady Nyx da Linhagem Sombria | Linhagem Sombria
-Tripla: [16, 17, 18]
-Chave: 16 - 17 - 18 - 26 - 33 | Estrelas: 1 - 9
+Tripla: [26, 27, 28]
+Chave: 3 - 26 - 27 - 28 - 45 | Estrelas: 3 - 11
 
 🗿 GÁRGULAS — GUARDIÃS DAS DUPLAS
 Gorath da Linhagem de Pedra | Linhagem Pedra
-Dupla: [26, 34]
-Chave: 3 - 18 - 26 - 33 - 34 | Estrelas: 6 - 7
+Dupla: [10, 43]
+Chave: 10 - 15 - 18 - 26 - 43 | Estrelas: 3 - 12
 
 Seraphine da Linhagem do Espelho | Linhagem Espelho
-Dupla: [4, 5]
-Chave: 4 - 5 - 11 - 19 - 22 | Estrelas: 4 - 12
+Dupla: [35, 36]
+Chave: 10 - 16 - 35 - 36 - 37 | Estrelas: 2 - 3
 
 🌳 TREEFOLK INVESTIGADOR
 Pergaminhos de Lua Cheia: 7

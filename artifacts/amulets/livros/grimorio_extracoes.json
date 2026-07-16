@@ -1,7 +1,7 @@
 {
   "nome": "Grimório de Todas as Extrações",
   "tipo": "historico_completo",
-  "total_extracoes": 1962,
+  "total_extracoes": 1963,
   "extracoes": [
     {
       "data": "Fri, 01 Ap",
@@ -24388,6 +24388,22 @@
       "vencedores": 0
     },
     {
+      "data": "Tue, 14 Ju",
+      "numeros": [
+        10,
+        19,
+        37,
+        42,
+        47
+      ],
+      "estrelas": [
+        9,
+        12
+      ],
+      "jackpot": 0,
+      "vencedores": 0
+    },
+    {
       "data": "Tue, 14 Ma",
       "numeros": [
         7,
@@ -31397,5 +31413,5 @@
     }
   ],
   "nota": "Fonte canónica local usada para reconstruir os restantes livros.",
-  "atualizado_em": "2026-07-13T15:52:46+00:00"
+  "atualizado_em": "2026-07-15T15:33:21+00:00"
 }
