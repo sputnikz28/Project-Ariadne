@@ -272,6 +272,43 @@ guardar_mantra_no_relatorio = true
 
 
 ###################################################
+# MYSTICS — placeholders (sem algoritmo implementado)
+###################################################
+
+[DRUIDS]
+ativo = true
+peso_conselho = 0.50
+
+[MOON_PRIESTS]
+ativo = true
+peso_conselho = 0.50
+
+[STAR_GAZERS]
+ativo = true
+peso_conselho = 0.50
+
+[SHAMANS]
+ativo = true
+peso_conselho = 0.50
+
+[WITCHES]
+ativo = true
+peso_conselho = 0.50
+
+[SEERS]
+ativo = true
+peso_conselho = 0.50
+
+[ORACLES]
+ativo = true
+peso_conselho = 0.50
+
+[BONE_READERS]
+ativo = true
+peso_conselho = 0.50
+
+
+###################################################
 # PAINEL DOS DEUSES — V6.1
 ###################################################
 

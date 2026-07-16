@@ -1,0 +1,19 @@
+{
+  "raca": "Oracles",
+  "linhagem": "prophecy_mystics",
+  "casa": "place:salao_dos_espelhos_silenciosos",
+  "nota_arquitetura": "Não gera chaves por design. O placeholder actual regista-se normalmente no FactionRegistry e abstém-se (devolve []); a meta-análise real fica para trabalho futuro.",
+  "ordens": [
+    {
+      "id": "oracles",
+      "nome": "Oracles",
+      "titulo": "Intérpretes do Conselho",
+      "membros": ["character:cassiel_farwatcher", "character:delphine_mirrorsworn"],
+      "filosofia": "Um oráculo nunca propõe uma chave — julga as que já foram propostas.",
+      "papel_analitico_futuro": ["ranking de propostas", "estimativa de confiança", "meta-análise"],
+      "artefactos": ["eye_of_prophecy", "mirror_of_destiny"],
+      "faccao": "factions/oracles",
+      "config_section": "ORACLES"
+    }
+  ]
+}

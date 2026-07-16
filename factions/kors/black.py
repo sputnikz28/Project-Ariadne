@@ -1,7 +1,7 @@
 import random
 from collections import Counter
 from datetime import date
-from races.legacy import normalize
+from core.services.combinations import normalize_candidate
 
 
 def kors_preto(ariadne, semana_iso=None):
@@ -68,7 +68,7 @@ def kors_preto(ariadne, semana_iso=None):
             "A Nyxara convoca do vazio."
         )
 
-    key = normalize(nums, stars)
+    key = normalize_candidate(nums, stars, random)
 
     dados_papiro = {
         "entidade": "Nyxara das Sombras Semanais",

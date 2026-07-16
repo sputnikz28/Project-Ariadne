@@ -1,0 +1,23 @@
+{
+  "raca": "Bone Readers",
+  "personagens": [
+    {
+      "id": "grukka_stonejaw",
+      "nome": "Grukka Stonejaw",
+      "titulo": "Anciã dos Ossos Sagrados",
+      "biografia": "Herdou os Ossos Sagrados da sua tribo há onze gerações. Lança-os sem hesitar, mesmo quando ninguém lhe pede uma leitura.",
+      "personalidade": "Rude, supersticiosa, desconfiada de qualquer método que não envolva as próprias mãos.",
+      "artefactos_preferidos": ["sacred_bones"],
+      "especialidade_analitica_futura": "geradores rituais pseudo-aleatórios e sementes rituais"
+    },
+    {
+      "id": "thane_ivoryfall",
+      "nome": "Thane Ivoryfall",
+      "titulo": "Lançador dos Dados de Marfim",
+      "biografia": "Aprendeu a ler símbolos em dados de marfim numa tribo que já não existe. Aposta a própria reputação em cada lançamento diante do Conselho.",
+      "personalidade": "Confiante como um jogador experiente, teatral, adora uma audiência mesmo quando erra.",
+      "artefactos_preferidos": ["ivory_dice"],
+      "especialidade_analitica_futura": "combinações simbólicas derivadas de lançamentos rituais"
+    }
+  ]
+}

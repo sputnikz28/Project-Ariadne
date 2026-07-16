@@ -1,0 +1,19 @@
+{
+  "raca": "Star Gazers",
+  "linhagem": "nature_mystics",
+  "casa": "place:observatorio_de_vidro_celeste",
+  "nota": "Não pertence explicitamente a nenhuma linhagem na lore original; associado aos Nature Mystics por partilhar o domínio dos 'ciclos celestes'.",
+  "ordens": [
+    {
+      "id": "star_gazers",
+      "nome": "Star Gazers",
+      "titulo": "Mestres da Observação Celeste",
+      "membros": ["character:orion_farsight", "character:vesper_skyholt"],
+      "filosofia": "Enquanto os Sacerdotes da Lua olham para um único astro, os Observadores de Estrelas cartografam o céu inteiro.",
+      "papel_analitico_futuro": ["estrelas do Euromilhões", "combinações estelares", "simbolismo celeste"],
+      "artefactos": ["celestial_astrolabe", "star_compass"],
+      "faccao": "factions/star_gazers",
+      "config_section": "STAR_GAZERS"
+    }
+  ]
+}

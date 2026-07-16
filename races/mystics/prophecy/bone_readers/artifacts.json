@@ -1,0 +1,17 @@
+{
+  "raca": "Bone Readers",
+  "artefactos": [
+    {
+      "id": "sacred_bones",
+      "nome": "Sacred Bones",
+      "nome_pt": "Ossos Sagrados",
+      "descricao": "Um conjunto de pequenos ossos gravados com símbolos, transmitido de geração em geração há onze gerações de leitores."
+    },
+    {
+      "id": "ivory_dice",
+      "nome": "Ivory Dice",
+      "nome_pt": "Dados de Marfim",
+      "descricao": "Dados entalhados em marfim antigo, cada face marcada não com números mas com símbolos que só os Leitores de Ossos sabem interpretar."
+    }
+  ]
+}

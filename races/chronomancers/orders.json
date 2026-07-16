@@ -1,0 +1,18 @@
+{
+  "raca": "Cronomantes da Ordem do Tempo",
+  "descricao": "Uma única ordem, cinco Cronomantes nomeados, sem hierarquia além da ordem de invocação a cada sessão do Conselho.",
+  "casa": "place:ordem_do_tempo",
+  "ordens": [
+    {
+      "id": "ordem_do_tempo",
+      "nome": "Ordem do Tempo",
+      "membros": ["character:aurel", "character:chrona", "character:kairon", "character:selvar", "character:nym"],
+      "filosofia": "O sorteio não é só o quê — é também o quando.",
+      "metodo": "Deriva chaves da energia temporal de cada evento de extração (segundo, milissegundo, idade da lua, índice pessoal).",
+      "artefactos": ["relogio_de_segundos_perdidos", "ampulheta_partida", "relogio_lunar"],
+      "faccao": "factions/chronomancers",
+      "config_section": "EXTRACAO",
+      "ligacao_panteao": "entity:aion"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "raca": "Kors de Elarion",
+  "personagens": [
+    {
+      "id": "aelyra",
+      "nome": "Aelyra dos Silêncios",
+      "titulo": "Kor Branco",
+      "biografia": "Observa os números que dormem há mais tempo — quanto mais longo o silêncio de um número, mais atenção lhe dedica. Nunca fala sobre um número recém-sorteado; considera isso trabalho de outro Kor.",
+      "personalidade": "Serena, paciente, fala pouco e sempre sobre atraso.",
+      "artefactos_preferidos": ["pergaminho_dos_atrasados"],
+      "metodo": "Amostragem ponderada pelos números mais atrasados, via `ariadne.overdue_numbers`."
+    },
+    {
+      "id": "kael_da_chama_fria",
+      "nome": "Kael da Chama Fria",
+      "titulo": "Kor Vermelho",
+      "biografia": "Interessa-se pelo esquecido — os números menos frequentes de toda a história registada. A sua chama, dizem, arde fria precisamente porque nunca recebeu combustível suficiente.",
+      "personalidade": "Irónico, observador afiado dos hábitos alheios (incluindo dos Vampiros vizinhos).",
+      "artefactos_preferidos": ["brasa_fria"],
+      "metodo": "Amostragem ponderada pelos números menos frequentes, via `ariadne.least_frequent_numbers`."
+    },
+    {
+      "id": "sylvara",
+      "nome": "Sylvara das Passagens",
+      "titulo": "Kor Verde",
+      "biografia": "Observa apenas a transição entre um sorteio e o seguinte — quem chegou, quem persistiu, quem saiu. Considera o instante isolado menos importante do que a mudança entre dois instantes.",
+      "personalidade": "Fluida, sempre em movimento, desconfortável a falar de um único sorteio isolado.",
+      "artefactos_preferidos": ["mapa_das_passagens"],
+      "metodo": "Constrói candidatos a partir dos números recém-chegados e persistentes entre dois sorteios consecutivos, via `ariadne.transition_pattern`."
+    },
+    {
+      "id": "nyxara",
+      "nome": "Nyxara das Sombras Semanais",
+      "titulo": "Kor Preto",
+      "biografia": "Regista ecos por semana ISO, arquivando cada observação num Papiro Kor Preto próprio. Quando não há ecos registados para uma semana, não inventa — convoca do vazio, com plena consciência da fragilidade dessa escolha.",
+      "personalidade": "Sombria mas honesta, nunca disfarça baixa confiança como certeza.",
+      "artefactos_preferidos": ["papiro_kor_preto"],
+      "metodo": "Conta ecos semanais históricos e propõe a partir dos números/estrelas mais recorrentes nessa semana ISO, via `ariadne.weekly_echoes`."
+    }
+  ]
+}

@@ -1,0 +1,165 @@
+{
+  "raca": "Mystics",
+  "personagens": [
+    {
+      "id": "thistlewood_greenbark",
+      "nome": "Thistlewood Greenbark",
+      "titulo": "Voz das Raízes Antigas",
+      "linhagem": "druids",
+      "biografia": "O mais velho druida vivo do Círculo do Carvalho Eterno. Já não caminha entre as árvores — diz-se que caminha COM elas, um passo por estação. Passou os últimos quarenta solstícios a contar os anéis de crescimento de um único carvalho, convencido de que o padrão de crescimento espelha algo maior do que a chuva.",
+      "personalidade": "Paciente até à exasperação alheia; fala em parábolas sobre estações quando lhe perguntam algo directo. Nunca se apressa a responder — nem sequer a perigos imediatos.",
+      "artefactos_preferidos": ["oak_staff"],
+      "especialidade_analitica_futura": "solstícios e equinócios como pontos de viragem estatística"
+    },
+    {
+      "id": "wren_hollowmoss",
+      "nome": "Wren Hollowmoss",
+      "titulo": "Guardiã do Ramo Lunar",
+      "linhagem": "druids",
+      "biografia": "A mais jovem druida a receber um Ramo Lunar em três gerações. Cresceu a dormir sob as raízes de árvores marcadas, convencida de que a seiva lunar sussurra padrões que a chuva sozinha não explica. Discute frequentemente com Thistlewood sobre a velocidade a que a floresta deveria partilhar os seus segredos.",
+      "personalidade": "Impulsiva, protectora do Círculo até à teimosia, desconfiada de qualquer ordem que 'apresse' a natureza.",
+      "artefactos_preferidos": ["moon_branch"],
+      "especialidade_analitica_futura": "ciclos de semana ISO e ritmos naturais de curto prazo"
+    },
+    {
+      "id": "selwyn_nightveil",
+      "nome": "Selwyn Nightveil",
+      "titulo": "Alto Sacerdote da Lua Cheia",
+      "linhagem": "moon_priests",
+      "biografia": "Lidera as vigílias de eclipse no Templo da Lua Prateada há vinte e sete anos. Nunca perdeu uma única lua cheia — mesmo doente, faz-se transportar até ao terraço do templo. Acredita que cada eclipse é uma pergunta que o céu recusa responder duas vezes da mesma forma.",
+      "personalidade": "Solene, cerimonioso, incapaz de conversa pequena; fala de sorteios como fala de eclipses — eventos, não jogos.",
+      "artefactos_preferidos": ["silver_crescent"],
+      "especialidade_analitica_futura": "eclipses e luas cheias como marcadores de calendário"
+    },
+    {
+      "id": "lyanna_duskwhisper",
+      "nome": "Lyanna Duskwhisper",
+      "titulo": "Guardiã do Cálice Lunar",
+      "linhagem": "moon_priests",
+      "biografia": "Interpreta omens na água parada do Cálice Lunar desde criança, quando descobriu que conseguia 'ver' a fase da lua reflectida mesmo em salas sem janela. Os outros sacerdotes consultam-na antes de qualquer vigília importante.",
+      "personalidade": "Sonhadora, fala baixo, prefere o silêncio da noite a qualquer debate do Conselho.",
+      "artefactos_preferidos": ["lunar_chalice"],
+      "especialidade_analitica_futura": "calendário de lua nova e ciclos lunares completos"
+    },
+    {
+      "id": "orion_farsight",
+      "nome": "Orion Farsight",
+      "titulo": "Cartógrafo das Constelações",
+      "linhagem": "star_gazers",
+      "biografia": "Passou mais noites no Observatório de Vidro Celeste do que em qualquer cama. Mantém cadernos meticulosos que cruzam constelações reais com as duas estrelas de cada sorteio — um exercício que ele próprio admite ser mais poesia do que ciência, por enquanto.",
+      "personalidade": "Meticuloso ao ponto da obsessão; anota tudo, mesmo o que considera irrelevante 'para o caso de mudar de ideias depois'.",
+      "artefactos_preferidos": ["celestial_astrolabe"],
+      "especialidade_analitica_futura": "simbolismo de combinações estelares"
+    },
+    {
+      "id": "vesper_skyholt",
+      "nome": "Vesper Skyholt",
+      "titulo": "Guardiã da Bússola Estelar",
+      "linhagem": "star_gazers",
+      "biografia": "Nunca dorme duas noites sob o mesmo tecto — navega apenas por estrelas, seguindo a Bússola Estelar onde quer que a agulha aponte. Chegou ao Observatório a meio de uma tempestade e nunca ninguém lhe perguntou de onde vinha antes disso.",
+      "personalidade": "Inquieta, avessa a rotinas, fala pouco sobre o passado e muito sobre 'a próxima estrela'.",
+      "artefactos_preferidos": ["star_compass"],
+      "especialidade_analitica_futura": "as duas estrelas do Euromilhões como eixo analítico próprio"
+    },
+    {
+      "id": "kova_ashwalker",
+      "nome": "Kova Ashwalker",
+      "titulo": "Xamã dos Ventos Perdidos",
+      "linhagem": "shamans",
+      "biografia": "Entra em transe ao som do Tambor dos Espíritos há tanto tempo que já não distingue as próprias memórias das dos antepassados que canaliza. Procura, obsessivamente, o sorteio que 'não devia ter acontecido' — o outlier que ninguém mais quer explicar.",
+      "personalidade": "Feroz, imprevisível, desconfortável em salas fechadas ou debates demasiado ordenados.",
+      "artefactos_preferidos": ["spirit_drum"],
+      "especialidade_analitica_futura": "eventos raros e outliers estatísticos"
+    },
+    {
+      "id": "mireya_bonesong",
+      "nome": "Mireya Bonesong",
+      "titulo": "Portadora da Máscara Ancestral",
+      "linhagem": "shamans",
+      "biografia": "Herdou a Máscara Ancestral da própria mãe, que a herdou de uma linhagem sem nome registado. Quando a veste, fala com uma voz que não é bem a sua — os outros xamãs juram que às vezes ela recita números antes mesmo de perguntarem.",
+      "personalidade": "Calma de forma perturbadora; observa mais do que fala, e quando fala, é sempre mais curto do que se esperava.",
+      "artefactos_preferidos": ["ancestral_mask"],
+      "especialidade_analitica_futura": "acaso simbólico e padrões históricos invulgares"
+    },
+    {
+      "id": "hessa_emberweave",
+      "nome": "Hessa Emberweave",
+      "titulo": "Mestra do Caldeirão dos Ecos",
+      "linhagem": "witches",
+      "biografia": "Recolhe, sem pudor, as chaves rejeitadas de todas as outras ordens e facções — 'nada se perde no meu caldeirão', diz sempre. Acredita que a melhor estratégia não é nenhuma em particular, mas a mistura certa de todas as erradas.",
+      "personalidade": "Astuta, oportunista, encara qualquer recusa do Conselho como um ingrediente, não uma derrota.",
+      "artefactos_preferidos": ["cauldron_of_echoes"],
+      "especialidade_analitica_futura": "geração híbrida de chaves e métodos de ensemble"
+    },
+    {
+      "id": "fennira_duskbrew",
+      "nome": "Fennira Duskbrew",
+      "titulo": "Guardiã do Frasco de Cristal",
+      "linhagem": "witches",
+      "biografia": "Engarrafa fragmentos de profecias falhadas de todas as ordens místicas, convencida de que uma previsão errada guarda, ainda assim, uma pista útil. A sua colecção de frascos é, segundo ela, 'uma biblioteca de quase-acertos'.",
+      "personalidade": "Caprichosa, colecionadora compulsiva, encontra fascínio genuíno naquilo que os outros descartam.",
+      "artefactos_preferidos": ["crystal_vial"],
+      "especialidade_analitica_futura": "votação ponderada entre estratégias concorrentes"
+    },
+    {
+      "id": "cassiel_farwatcher",
+      "nome": "Cassiel Farwatcher",
+      "titulo": "O Olho que Nunca Pisca",
+      "linhagem": "oracles",
+      "biografia": "Assiste a cada sessão do Grande Conselho sem nunca propor uma única chave. Diz que a sua função não é competir, mas testemunhar — e que um dia, quando souber julgar bem, o seu julgamento valerá mais do que qualquer voto.",
+      "personalidade": "Distante, imparcial ao ponto do desconforto alheio; recusa tomar partido mesmo quando pressionado.",
+      "artefactos_preferidos": ["eye_of_prophecy"],
+      "especialidade_analitica_futura": "ranking e estimativa de confiança das propostas do Conselho"
+    },
+    {
+      "id": "delphine_mirrorsworn",
+      "nome": "Delphine Mirrorsworn",
+      "titulo": "Guardiã do Espelho do Destino",
+      "linhagem": "oracles",
+      "biografia": "Passa horas diante do Espelho do Destino, observando as propostas do Conselho reflectidas nele antes mesmo de serem anunciadas em voz alta. Nunca revela o que vê primeiro — só depois, e sempre em enigma.",
+      "personalidade": "Críptica, quase ilegível; fala por metáforas que só fazem sentido depois dos factos acontecerem.",
+      "artefactos_preferidos": ["mirror_of_destiny"],
+      "especialidade_analitica_futura": "meta-análise das propostas de todas as outras facções"
+    },
+    {
+      "id": "isolde_farsight",
+      "nome": "Isolde Farsight",
+      "titulo": "Vidente da Torre Alta",
+      "linhagem": "seers",
+      "biografia": "Vê padrões a formar-se ao longo de décadas de sorteios, não em instantes isolados. Diz que a sua maldição é ver a tendência antes de ela existir de facto — e a sua bênção é nunca confiar cegamente nela.",
+      "personalidade": "Melancólica, sobrecarregada pelo peso do que julga antecipar, mas rigorosa quanto a nunca afirmar mais do que observa.",
+      "artefactos_preferidos": ["veil_of_tomorrow"],
+      "especialidade_analitica_futura": "deteção de tendências ao longo de janelas temporais"
+    },
+    {
+      "id": "baltasar_windmere",
+      "nome": "Baltasar Windmere",
+      "titulo": "Guardião da Ampulheta dos Ecos",
+      "linhagem": "seers",
+      "biografia": "Regista, com precisão quase notarial, cada número que já se repetiu vezes de mais para ser coincidência. A sua Ampulheta dos Ecos nunca pára — vira-a antes mesmo de a areia acabar de cair.",
+      "personalidade": "Metódico até à rigidez, fascinado por ciclos que se repetem, desconfortável com o imprevisto.",
+      "artefactos_preferidos": ["hourglass_of_echoes"],
+      "especialidade_analitica_futura": "padrões recorrentes e evolução histórica"
+    },
+    {
+      "id": "grukka_stonejaw",
+      "nome": "Grukka Stonejaw",
+      "titulo": "Anciã dos Ossos Sagrados",
+      "linhagem": "bone_readers",
+      "biografia": "Herdou os Ossos Sagrados da sua tribo há onze gerações — mais tempo do que qualquer registo escrito no Grande Conselho. Lança-os sem hesitar, mesmo quando ninguém lhe pede uma leitura, 'só para ver o que a mão diz hoje'.",
+      "personalidade": "Rude, supersticiosa, desconfiada de qualquer método que não envolva as próprias mãos.",
+      "artefactos_preferidos": ["sacred_bones"],
+      "especialidade_analitica_futura": "geradores rituais pseudo-aleatórios e sementes rituais"
+    },
+    {
+      "id": "thane_ivoryfall",
+      "nome": "Thane Ivoryfall",
+      "titulo": "Lançador dos Dados de Marfim",
+      "linhagem": "bone_readers",
+      "biografia": "Aprendeu a ler símbolos em dados de marfim numa tribo que já não existe. Aposta a própria reputação em cada lançamento diante do Conselho, convencido de que a confiança faz parte do ritual tanto quanto o próprio dado.",
+      "personalidade": "Confiante como um jogador experiente, teatral, adora uma audiência mesmo quando erra.",
+      "artefactos_preferidos": ["ivory_dice"],
+      "especialidade_analitica_futura": "combinações simbólicas derivadas de lançamentos rituais"
+    }
+  ]
+}

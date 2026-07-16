@@ -1,4 +1,4 @@
-from races.extras import treefolks as _treefolks
+from .algorithm import treefolks as _treefolks
 
 FACTION_META = {
     'name': 'Treefolks da Floresta Ancestral',

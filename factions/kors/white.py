@@ -1,5 +1,5 @@
 import random
-from races.legacy import normalize
+from core.services.combinations import normalize_candidate
 
 
 def kors_branco(ariadne):
@@ -20,7 +20,7 @@ def kors_branco(ariadne):
         restantes = [n for n in pool if n not in escolhidos]
         escolhidos.update(restantes[: 5 - len(escolhidos)])
 
-    key = normalize(sorted(escolhidos), sorted(random.sample(range(1, 13), 2)))
+    key = normalize_candidate(sorted(escolhidos), sorted(random.sample(range(1, 13), 2)), random)
 
     return {
         "nome": "Aelyra dos Silêncios",

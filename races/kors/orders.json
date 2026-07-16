@@ -1,0 +1,47 @@
+{
+  "raca": "Kors de Elarion",
+  "descricao": "Quatro Kors, quatro observadores independentes, cada um lendo uma dimensão diferente da história através de Ariadne.",
+  "casa": "place:elarion",
+  "ordens": [
+    {
+      "id": "kor_branco",
+      "nome": "Kor Branco",
+      "membro": "character:aelyra",
+      "filosofia": "Os números que dormem há mais tempo serão os primeiros a despertar.",
+      "metodo": "Números atrasados (`overdue_numbers`).",
+      "artefactos": ["pergaminho_dos_atrasados"],
+      "faccao": "factions/kors",
+      "config_section": "KORS"
+    },
+    {
+      "id": "kor_vermelho",
+      "nome": "Kor Vermelho",
+      "membro": "character:kael_da_chama_fria",
+      "filosofia": "O que raramente foi convocado guarda em si a tensão do esquecimento.",
+      "metodo": "Números menos frequentes (`least_frequent_numbers`).",
+      "artefactos": ["brasa_fria"],
+      "faccao": "factions/kors",
+      "config_section": "KORS"
+    },
+    {
+      "id": "kor_verde",
+      "nome": "Kor Verde",
+      "membro": "character:sylvara",
+      "filosofia": "A passagem entre dois momentos revela o ritmo do universo.",
+      "metodo": "Padrão de transição entre sorteios consecutivos (`transition_pattern`).",
+      "artefactos": ["mapa_das_passagens"],
+      "faccao": "factions/kors",
+      "config_section": "KORS"
+    },
+    {
+      "id": "kor_preto",
+      "nome": "Kor Preto",
+      "membro": "character:nyxara",
+      "filosofia": "A semana que foi é o eco do que será.",
+      "metodo": "Ecos semanais por semana ISO (`weekly_echoes`).",
+      "artefactos": ["papiro_kor_preto"],
+      "faccao": "factions/kors",
+      "config_section": "KORS"
+    }
+  ]
+}

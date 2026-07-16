@@ -1,0 +1,26 @@
+{
+  "raca": "Cronomantes da Ordem do Tempo",
+  "artefactos": [
+    {
+      "id": "relogio_de_segundos_perdidos",
+      "nome": "Clock of Lost Seconds",
+      "nome_pt": "Relógio de Segundos Perdidos",
+      "portador": "aurel",
+      "descricao": "Um relógio cujos ponteiros só se movem no instante exacto de cada bola sorteada — no resto do tempo, permanece imóvel."
+    },
+    {
+      "id": "ampulheta_partida",
+      "nome": "Broken Hourglass",
+      "nome_pt": "Ampulheta Partida",
+      "portador": "chrona",
+      "descricao": "Uma ampulheta rachada que deixa cair areia de forma irregular — Chrona jura que essa irregularidade é o segredo do seu método."
+    },
+    {
+      "id": "relogio_lunar",
+      "nome": "Lunar Clock",
+      "nome_pt": "Relógio Lunar",
+      "portador": "nym",
+      "descricao": "Um relógio que marca a idade da lua em vez das horas — o artefacto mais próximo, em espírito, dos instrumentos dos Nature Mystics."
+    }
+  ]
+}

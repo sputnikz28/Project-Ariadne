@@ -10,7 +10,7 @@ from configuration import load_config
 from datetime import datetime
 from pathlib import Path
 
-from scribes.arquivistas import (
+from orders.scribes.archivists import (
     inventariar_era,
     create_biographies,
     atualizar_atlas,
@@ -40,12 +40,12 @@ def main():
     max_bios = cfg.getint("ESCRIBAS_V6", "max_biografias_por_rodada", fallback=12)
 
     campanha_id = datetime.now().strftime("%Y%m%d_%H%M%S")
-    pasta = Path("campaigns") / f"campanha_{campanha_id}"
+    pasta = Path("datasets/generated/campaigns") / f"campanha_{campanha_id}"
     pasta.mkdir(parents=True, exist_ok=True)
 
     resumos = []
     for era in range(1, rodadas + 1):
-        antes_relatorios = set(Path("reports/generated").glob("relatorio_*.txt"))
+        antes_relatorios = set(Path("experiments/reports/generated").glob("relatorio_*.txt"))
         proc = subprocess.run(
             [sys.executable, "main.py"],
             capture_output=True,
@@ -56,7 +56,7 @@ def main():
             raise RuntimeError(f"Falha na era {era}:\n{proc.stderr}")
 
         stdout = proc.stdout
-        novos = sorted(set(Path("reports/generated").glob("relatorio_*.txt")) - antes_relatorios)
+        novos = sorted(set(Path("experiments/reports/generated").glob("relatorio_*.txt")) - antes_relatorios)
         relatorio = novos[-1] if novos else None
 
         resumo = {
@@ -81,7 +81,7 @@ def main():
         museu = create_museum(era, inventory)
         chronicle = write_chronicle(era, inventory)
 
-        resumo["inventario"] = f"scribes/inventories/inventario_era_{era:03d}.json"
+        resumo["inventario"] = f"orders/scribes/inventories/inventario_era_{era:03d}.json"
         resumo["cronica"] = str(chronicle)
         resumo["biografias"] = biografias
         resumo["inventario_resumido"] = summary_inventory(inventory)

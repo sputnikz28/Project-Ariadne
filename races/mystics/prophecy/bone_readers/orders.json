@@ -1,0 +1,18 @@
+{
+  "raca": "Bone Readers",
+  "linhagem": "prophecy_mystics",
+  "casa": "place:fossa_dos_ossos_sagrados",
+  "ordens": [
+    {
+      "id": "bone_readers",
+      "nome": "Bone Readers",
+      "titulo": "Adivinhos Tribais Ancestrais",
+      "membros": ["character:grukka_stonejaw", "character:thane_ivoryfall"],
+      "filosofia": "Os ossos caem onde a mão não pode escolher. É essa a sua honestidade.",
+      "papel_analitico_futuro": ["geradores rituais pseudo-aleatórios", "sementes rituais", "combinações simbólicas"],
+      "artefactos": ["sacred_bones", "ivory_dice"],
+      "faccao": "factions/bone_readers",
+      "config_section": "BONE_READERS"
+    }
+  ]
+}

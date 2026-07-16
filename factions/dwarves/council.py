@@ -1,4 +1,4 @@
-from races.extras import dwarves as _dwarves
+from .algorithm import dwarves as _dwarves
 
 FACTION_META = {
     'name': 'Clãs Anões das Montanhas',

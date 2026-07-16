@@ -1,0 +1,50 @@
+{
+  "raca": "Cronomantes da Ordem do Tempo",
+  "personagens": [
+    {
+      "id": "aurel",
+      "nome": "Aurel dos Segundos Perdidos",
+      "titulo": "Primeiro Cronomante",
+      "biografia": "O primeiro dos cinco Cronomantes a ser invocado em cada sessão, sempre ao índice zero da fórmula temporal — o mais próximo do instante exacto da extração.",
+      "personalidade": "Preciso, obcecado com segundos que nunca voltam.",
+      "artefactos_preferidos": ["relogio_de_segundos_perdidos"],
+      "metodo": "Deriva números da soma entre o segundo/milissegundo de cada evento de bola, a idade da lua e o seu índice pessoal (0)."
+    },
+    {
+      "id": "chrona",
+      "nome": "Chrona da Ampulheta Partida",
+      "titulo": "Segunda Cronomante",
+      "biografia": "Carrega uma ampulheta partida que, segundo ela, mede melhor o tempo justamente por estar quebrada — o fluxo irregular de areia espelha a irregularidade do próprio sorteio.",
+      "personalidade": "Excêntrica, confia em imperfeições mais do que em precisão.",
+      "artefactos_preferidos": ["ampulheta_partida"],
+      "metodo": "Mesma fórmula temporal, índice pessoal (1)."
+    },
+    {
+      "id": "kairon",
+      "nome": "Kairon do Último Instante",
+      "titulo": "Terceiro Cronomante",
+      "biografia": "Especializa-se nos últimos eventos da extração — as duas estrelas — extraindo delas um sinal temporal distinto dos números principais.",
+      "personalidade": "Calmo até ao último segundo, depois decisivo.",
+      "artefactos_preferidos": [],
+      "metodo": "Mesma fórmula temporal, índice pessoal (2), com ênfase nas estrelas finais."
+    },
+    {
+      "id": "selvar",
+      "nome": "Selvar, Guardião do Pulso",
+      "titulo": "Quarto Cronomante",
+      "biografia": "Diz sentir o pulso da extração antes mesmo de ela começar — os outros Cronomantes duvidam, mas nunca o desmentiram publicamente.",
+      "personalidade": "Confiante, quase teatral.",
+      "artefactos_preferidos": [],
+      "metodo": "Mesma fórmula temporal, índice pessoal (3)."
+    },
+    {
+      "id": "nym",
+      "nome": "Nym do Relógio Lunar",
+      "titulo": "Quinta Cronomante",
+      "biografia": "A única que insiste em cruzar explicitamente a idade da lua com cada evento — os outros consideram-na a mais próxima dos Mystics em espírito, ainda que a Ordem do Tempo nunca o admita em voz alta.",
+      "personalidade": "Reflexiva, a mais próxima de uma ponte entre a Ordem do Tempo e os Mystics.",
+      "artefactos_preferidos": ["relogio_lunar"],
+      "metodo": "Mesma fórmula temporal, índice pessoal (4), com ênfase na idade da lua."
+    }
+  ]
+}

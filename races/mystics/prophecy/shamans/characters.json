@@ -1,0 +1,23 @@
+{
+  "raca": "Shamans",
+  "personagens": [
+    {
+      "id": "kova_ashwalker",
+      "nome": "Kova Ashwalker",
+      "titulo": "Xamã dos Ventos Perdidos",
+      "biografia": "Entra em transe ao som do Tambor dos Espíritos há tanto tempo que já não distingue as próprias memórias das dos antepassados que canaliza. Procura o sorteio que 'não devia ter acontecido'.",
+      "personalidade": "Feroz, imprevisível, desconfortável em salas fechadas.",
+      "artefactos_preferidos": ["spirit_drum"],
+      "especialidade_analitica_futura": "eventos raros e outliers estatísticos"
+    },
+    {
+      "id": "mireya_bonesong",
+      "nome": "Mireya Bonesong",
+      "titulo": "Portadora da Máscara Ancestral",
+      "biografia": "Herdou a Máscara Ancestral da própria mãe. Quando a veste, fala com uma voz que não é bem a sua.",
+      "personalidade": "Calma de forma perturbadora; observa mais do que fala.",
+      "artefactos_preferidos": ["ancestral_mask"],
+      "especialidade_analitica_futura": "acaso simbólico e padrões históricos invulgares"
+    }
+  ]
+}

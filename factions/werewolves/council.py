@@ -1,4 +1,4 @@
-from races.extras import werewolves as _werewolves
+from .algorithm import werewolves as _werewolves
 
 FACTION_META = {
     'name': 'Lobisomens de Fenrir',

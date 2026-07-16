@@ -1,0 +1,51 @@
+{
+  "livro": "Livro das Extrações por Cumprir",
+  "data": "2026-07-14",
+  "hora_local": "20:01",
+  "local": "Paris",
+  "timezone": "Europe/Paris",
+  "estado": "aguarda_extracao",
+  "jackpot": 0,
+  "ultima_chave_conhecida": {
+    "data": "Tue, 31 Oc",
+    "numeros": [
+      5,
+      7,
+      20,
+      40,
+      50
+    ],
+    "estrelas": [
+      2,
+      10
+    ],
+    "jackpot": 0,
+    "vencedores": 0
+  },
+  "chave_real": null,
+  "confirmada_por": [],
+  "conselho": {
+    "chave_original": [
+      10,
+      21,
+      22,
+      29,
+      42
+    ],
+    "estrelas_originais": [
+      2,
+      6
+    ],
+    "chave_corrompida": [
+      8,
+      20,
+      24,
+      28,
+      44
+    ],
+    "estrelas_corrompidas": [
+      2,
+      5
+    ]
+  }
+}

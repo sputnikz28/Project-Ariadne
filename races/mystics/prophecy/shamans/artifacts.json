@@ -1,0 +1,17 @@
+{
+  "raca": "Shamans",
+  "artefactos": [
+    {
+      "id": "spirit_drum",
+      "nome": "Spirit Drum",
+      "nome_pt": "Tambor dos Espíritos",
+      "descricao": "Um tambor de pele curtida cujo eco, dizem os xamãs, continua depois de a mão parar de bater."
+    },
+    {
+      "id": "ancestral_mask",
+      "nome": "Ancestral Mask",
+      "nome_pt": "Máscara Ancestral",
+      "descricao": "Uma máscara entalhada com o rosto de um antepassado sem nome. Quem a veste fala com a voz de outra pessoa por breves instantes."
+    }
+  ]
+}

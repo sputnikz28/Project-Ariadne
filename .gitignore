@@ -10,10 +10,9 @@ build/
 .eggs/
 
 # Runtime data (generated during simulation)
-data/
-reports/generated/
-axiomantes/experiences/
-campaigns/
+/datasets/generated/
+experiments/reports/generated/
+experiments/axiomancers/runs/
 
 # Ariadne cache (rebuilt automatically)
 library/cache/
@@ -25,25 +24,25 @@ library/black_kors/papyri/*/
 library/books/cartographers/*.json
 
 # Amulets runtime data
-amulets/livros/
-amulets/future_draws/
+artifacts/amulets/livros/
+artifacts/amulets/future_draws/
 
 # Elven Order runtime
-elven_order/mission_archive/
-elven_order/estado_ordem.json
+orders/elven_order/mission_archive/
+orders/elven_order/estado_ordem.json
 
 # Black Squad runtime
-black_squad/dark_library/grimorio_negro.json
-black_squad/grimorio_negro.json
-black_squad/ritual_archive/
-black_squad/dark_library/corrupted_reflections/
+orders/black_squad/dark_library/grimorio_negro.json
+orders/black_squad/grimorio_negro.json
+orders/black_squad/ritual_archive/
+orders/black_squad/dark_library/corrupted_reflections/
 
-# Artefacts (generated at runtime)
-artefacts/reliquias/*.json
+# Artifacts (generated at runtime)
+artifacts/relics/*.json
 
 # Legends generated at runtime
-legends/ecos_ancestrais.json
-legends/livro_personagens_lendarias.json
+docs/lore/legends/ecos_ancestrais.json
+docs/lore/legends/livro_personagens_lendarias.json
 
 # Environments
 .env

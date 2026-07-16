@@ -1,0 +1,14 @@
+{
+  "raca": "Fadas Lunélia",
+  "personagens": [
+    {
+      "id": "lunelia_arquetipo",
+      "nome": "Lunélia",
+      "titulo": "Guardiã do Jardim Eterno",
+      "biografia": "Não é uma personagem fixa, mas o nome que toda representante das Fadas recebe, numerada a cada sessão do Conselho (Lunélia-1, Lunélia-2, ...). Todas partilham a mesma convicção: os números do quotidiano merecem peso estatístico.",
+      "personalidade": "Curiosa, atenta a hábitos humanos, desconfiada de qualquer estratégia demasiado fria.",
+      "artefactos_preferidos": ["petala_do_jardim_eterno"],
+      "metodo": "Amostragem ponderada por proximidade ao centro, atraso, frequência e números quotidianos; exige mistura de quentes e frios e soma entre 100 e 170."
+    }
+  ]
+}

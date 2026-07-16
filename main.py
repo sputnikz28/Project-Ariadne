@@ -6,26 +6,29 @@ from configuration import load_config
 from datetime import datetime
 from pathlib import Path
 
-from world.builder import build
-from world.extraction import simulate_draw
-from world.celestial_energy import calculate_ritual
-from world.malphas_virus import choose_carrier
-from world.council_war import resolve
-from evolution.statistics import calculate
-from evolution.genetic import execute
-from races.extras import superiors
+from world.engine.builder import build
+from world.engine.extraction import simulate_draw
+from world.engine.celestial_energy import calculate_ritual
+from world.engine.malphas_virus import choose_carrier
+from world.engine.council_war import resolve
+from core.evolution.statistics import calculate
+from factions.clerics.algorithm import execute
+from orders.pantheon.mages import create_mage_representatives
+from orders.pantheon.druids import create_druid_representatives
+from orders.pantheon.djinns import create_djinn_representatives
+from orders.pantheon.aion import create_aion
 from council.council import filter_candidates, vote, corrupt
-from reports.writer import generate
-from amulets.books import synchronize_sources, build_books, update_next_draw_book
-from artefacts.ark import prepare_new_run, load_all
-from black_squad.black_mages import create_mages, tentar_ressuscitar_lenda
-from elven_order.ninjas import create_ninjas, execute_missions
-from black_squad.persistence import load_grimoire
-from world.dark_conviction import create_mantra
+from experiments.reports.writer import generate
+from artifacts.amulets.books import synchronize_sources, build_books, update_next_draw_book
+from artifacts.ark import prepare_new_run, load_all
+from orders.black_squad.black_mages import create_mages, tentar_ressuscitar_lenda
+from orders.elven_order.ninjas import create_ninjas, execute_missions
+from orders.black_squad.persistence import load_grimoire
+from world.engine.dark_conviction import create_mantra
 from library.ariadne.engine import Ariadne
 from factions.chaos_cartographers.council import execute_cartographers
 from core.registry import FactionRegistry
-from i18n.translations import t, lang_de_cfg
+from core.i18n.translations import t, lang_de_cfg
 
 
 def readj(p, d):
@@ -122,15 +125,26 @@ def main():
     ctx = {
         'mundo': world, 'historico': hist, 'estatisticas': est,
         'extracao': extraction, 'biblioteca': biblioteca, 'seed': seed,
+        'rng': random.Random(seed),
     }
     ariadne = Ariadne()
 
     # ── Genetic algorithm (Clerics) ─────────────────────────────────────────
+    # Run once: the Ritual Celeste needs the full population (evo), not just
+    # Council proposals, so it can't be recomputed inside the Clerics plugin
+    # without consuming a different slice of the random stream. The result is
+    # threaded through ctx so factions/clerics/council.py can read it back.
     evo = execute(cfg, ctx)
+    ctx['clerics_evo'] = evo
     ritual = calculate_ritual(cfg, world, evo)
 
-    # ── Superiors (complex dual return — explicit) ───────────────────────────
-    vis, deus = superiors(ctx)
+    # ── Pantheon (complex dual return — explicit) ─────────────────────────────
+    vis = (
+        create_mage_representatives(ctx)
+        + create_druid_representatives(ctx)
+        + create_djinn_representatives(ctx)
+    )
+    deus = create_aion(vis, ctx)
 
     # ── Black Squad & Elven Order (stateful — explicit) ──────────────────────
     dark_events = []
@@ -181,11 +195,9 @@ def main():
             },
         ))
 
-    # Genetic algorithm finalists (Clerics)
-    for h in evo['populacao_final'][:cfg.getint('SIMULACAO', 'conselho_final')]:
-        if h.keys:
-            u = h.keys[-1]
-            cand.append((f'{h.name} ({h.raca})', (u['numeros'], u['estrelas']), 1.0))
+    # Genetic algorithm finalists (Clerics) — now flow through the generic
+    # "All plugin factions" loop below via factions/clerics/council.py,
+    # exactly like every other Council-voting faction.
 
     # Superiors
     for v in vis:
@@ -240,12 +252,12 @@ def main():
     externos.append(registo_externo(corr['entidade'], 'Entidade Maléfica', corr['chave_corrompida'], 'corrupcao_final', final_generation, 'Abismo'))
 
     # ── Persist data ──────────────────────────────────────────────────────────
-    arq = readj('data/arquivo_destino.json', [])
+    arq = readj('datasets/generated/simulations/arquivo_destino.json', [])
     arq.extend(evo['registos'])
     arq.extend(externos)
-    writej('data/arquivo_destino.json', arq)
+    writej('datasets/generated/simulations/arquivo_destino.json', arq)
 
-    mem = readj('data/memoria_conselhos.json', [])
+    mem = readj('datasets/generated/simulations/memoria_conselhos.json', [])
     mem.append({
         'data_execucao': datetime.now().isoformat(timespec='seconds'),
         'mundo': world,
@@ -256,13 +268,13 @@ def main():
         'total_chaves_racas_antigas': len(evo['registos']),
         'total_registos_externos': len(externos),
     })
-    writej('data/memoria_conselhos.json', mem)
-    writej('data/populacao_final.json', [h.to_dict() for h in evo['populacao_final']])
-    writej('data/todos_individuos.json', [h.to_dict() for h in sorted(evo['todos'].values(), key=lambda x: x.id)])
+    writej('datasets/generated/simulations/memoria_conselhos.json', mem)
+    writej('datasets/generated/world_state/populacao_final.json', [h.to_dict() for h in evo['populacao_final']])
+    writej('datasets/generated/world_state/todos_individuos.json', [h.to_dict() for h in sorted(evo['todos'].values(), key=lambda x: x.id)])
 
     # ── Generate report ───────────────────────────────────────────────────────
     report_factions = _rebuild_report_factions(all_proposals)
-    rel = Path('reports/generated') / f"relatorio_v4_1_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt"
+    rel = Path('experiments/reports/generated') / f"relatorio_v4_1_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt"
     generate({
         'mundo': world,
         'historico': hist,

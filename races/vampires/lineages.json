@@ -1,0 +1,27 @@
+{
+  "raca": "Vampiros de Elarion",
+  "descricao": "Chegados na Era VII — Biblioteca Eterna, os Vampiros dividem-se em duas Linhagens rivais mas cordiais, ambas mestras das triplas de números.",
+  "casa": "place:cripta_eterna",
+  "linhagens": [
+    {
+      "id": "sanguinea",
+      "nome": "Linhagem Sanguínea",
+      "lider": "character:conde_vaelor",
+      "filosofia": "A recorrência bruta não mente — se uma tripla já se repetiu vezes de mais, isso é conhecimento, não coincidência.",
+      "metodo": "Escolhe entre as triplas historicamente mais frequentes.",
+      "artefactos": ["indice_triplas", "anel_de_vaelor"],
+      "faccao": "factions/vampires",
+      "config_section": "VAMPIROS"
+    },
+    {
+      "id": "sombria",
+      "nome": "Linhagem Sombria",
+      "lider": "character:lady_nyx",
+      "filosofia": "A vizinhança entre números tem um ritmo quase musical — números consecutivos que se repetem juntos revelam mais do que a frequência isolada.",
+      "metodo": "Escolhe entre as triplas consecutivas mais frequentes, com recurso às triplas gerais quando faltam dados.",
+      "artefactos": ["indice_triplas", "veu_sombrio"],
+      "faccao": "factions/vampires",
+      "config_section": "VAMPIROS"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "witches",
+  "name": "Witches",
+  "version": "1.0",
+  "home": "Caldeirão das Encruzilhadas",
+  "config_section": "WITCHES",
+  "weight_key": "peso_conselho",
+  "default_weight": 0.5,
+  "votes": true,
+  "description": "Prophecy Mystics — masters of magical mixtures. Placeholder faction: no prediction algorithm implemented yet; abstains every run. Future role: combine strategies, weighted voting, hybrid key generation, ensemble methods."
+}

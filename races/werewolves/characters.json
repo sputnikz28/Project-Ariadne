@@ -1,0 +1,14 @@
+{
+  "raca": "Lobisomens de Fenrir",
+  "personagens": [
+    {
+      "id": "fenrir_arquetipo",
+      "nome": "Fenrir",
+      "titulo": "Espírito Colectivo da Matilha",
+      "biografia": "Não é um lobo individual, mas o nome que toda a matilha honra — cada finalista de uma simulação de Monte Carlo recebe o nome Fenrir-N. A matilha só se reúne por inteiro em semana de lua cheia; fora dela, dorme.",
+      "personalidade": "Colectiva, feroz apenas quando activa, disciplinada na escolha das melhores simulações.",
+      "artefactos_preferidos": ["presa_imutavel_de_fenrir"],
+      "metodo": "Simulação de Monte Carlo (milhares de tentativas), pontuadas por uma métrica de aptidão partilhada; mantém apenas as melhores finalistas."
+    }
+  ]
+}

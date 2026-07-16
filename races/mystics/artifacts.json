@@ -1,0 +1,117 @@
+{
+  "raca": "Mystics",
+  "artefactos": [
+    {
+      "id": "oak_staff",
+      "nome": "Oak Staff",
+      "nome_pt": "Cajado de Carvalho",
+      "ordem": "druids",
+      "descricao": "Talhado do coração de um carvalho que já viu quinhentos invernos. Ressoa levemente quando o solstício se aproxima."
+    },
+    {
+      "id": "moon_branch",
+      "nome": "Moon Branch",
+      "nome_pt": "Ramo Lunar",
+      "ordem": "druids",
+      "descricao": "Um ramo que nunca perde as folhas, cortado sob lua cheia e mantido vivo por seiva que segue o calendário lunar, não as estações."
+    },
+    {
+      "id": "silver_crescent",
+      "nome": "Silver Crescent",
+      "nome_pt": "Crescente de Prata",
+      "ordem": "moon_priests",
+      "descricao": "Um adorno em forma de lua minguante, forjado com prata batida sob eclipse. Diz-se que aquece na noite de lua nova."
+    },
+    {
+      "id": "lunar_chalice",
+      "nome": "Lunar Chalice",
+      "nome_pt": "Cálice Lunar",
+      "ordem": "moon_priests",
+      "descricao": "Um cálice de água parada onde a superfície nunca deixa de reflectir a fase actual da lua, mesmo em salas sem janelas."
+    },
+    {
+      "id": "celestial_astrolabe",
+      "nome": "Celestial Astrolabe",
+      "nome_pt": "Astrolábio Celeste",
+      "ordem": "star_gazers",
+      "descricao": "Um instrumento de latão e vidro que mapeia constelações — e, segundo os seus guardiões, também as duas estrelas de cada sorteio."
+    },
+    {
+      "id": "star_compass",
+      "nome": "Star Compass",
+      "nome_pt": "Bússola Estelar",
+      "ordem": "star_gazers",
+      "descricao": "Uma bússola cuja agulha não aponta a norte, mas à estrela mais brilhante visível no momento — nunca a mesma duas noites seguidas."
+    },
+    {
+      "id": "spirit_drum",
+      "nome": "Spirit Drum",
+      "nome_pt": "Tambor dos Espíritos",
+      "ordem": "shamans",
+      "descricao": "Um tambor de pele curtida cujo eco, dizem os xamãs, continua depois de a mão parar de bater."
+    },
+    {
+      "id": "ancestral_mask",
+      "nome": "Ancestral Mask",
+      "nome_pt": "Máscara Ancestral",
+      "ordem": "shamans",
+      "descricao": "Uma máscara entalhada com o rosto de um antepassado sem nome. Quem a veste fala com a voz de outra pessoa por breves instantes."
+    },
+    {
+      "id": "cauldron_of_echoes",
+      "nome": "Cauldron of Echoes",
+      "nome_pt": "Caldeirão dos Ecos",
+      "ordem": "witches",
+      "descricao": "Um caldeirão de ferro negro onde se misturam restos de estratégias alheias — chaves rejeitadas por outras ordens ganham aqui uma segunda vida."
+    },
+    {
+      "id": "crystal_vial",
+      "nome": "Crystal Vial",
+      "nome_pt": "Frasco de Cristal",
+      "ordem": "witches",
+      "descricao": "Um frasco minúsculo onde se engarrafam fragmentos de profecias falhadas, para uso posterior em misturas mais afortunadas."
+    },
+    {
+      "id": "eye_of_prophecy",
+      "nome": "Eye of Prophecy",
+      "nome_pt": "Olho da Profecia",
+      "ordem": "oracles",
+      "descricao": "Um olho de vidro polido que não vê o futuro — vê o Conselho a decidir o presente, sem nunca piscar."
+    },
+    {
+      "id": "mirror_of_destiny",
+      "nome": "Mirror of Destiny",
+      "nome_pt": "Espelho do Destino",
+      "ordem": "oracles",
+      "descricao": "Um espelho que não reflecte quem o observa, mas as propostas que o Conselho ainda está a debater."
+    },
+    {
+      "id": "veil_of_tomorrow",
+      "nome": "Veil of Tomorrow",
+      "nome_pt": "Véu do Amanhã",
+      "ordem": "seers",
+      "descricao": "Um véu fino como bruma que, quando erguido diante dos olhos, mostra não o futuro, mas a direcção para onde o passado está a inclinar-se."
+    },
+    {
+      "id": "hourglass_of_echoes",
+      "nome": "Hourglass of Echoes",
+      "nome_pt": "Ampulheta dos Ecos",
+      "ordem": "seers",
+      "descricao": "Uma ampulheta onde a areia, ao cair, desenha por instantes os números que já se repetiram vezes de mais para serem esquecidos."
+    },
+    {
+      "id": "sacred_bones",
+      "nome": "Sacred Bones",
+      "nome_pt": "Ossos Sagrados",
+      "ordem": "bone_readers",
+      "descricao": "Um conjunto de pequenos ossos gravados com símbolos, transmitido de geração em geração há onze gerações de leitores."
+    },
+    {
+      "id": "ivory_dice",
+      "nome": "Ivory Dice",
+      "nome_pt": "Dados de Marfim",
+      "ordem": "bone_readers",
+      "descricao": "Dados entalhados em marfim antigo, cada face marcada não com números mas com símbolos que só os Leitores de Ossos sabem interpretar."
+    }
+  ]
+}

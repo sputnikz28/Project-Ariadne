@@ -31,27 +31,35 @@ Biblioteca de conhecimento.
 
 | Facção | Módulo | Estratégia |
 |--------|--------|-----------|
-| Clérigos | `races/legacy.py` + `evolution/` | Algoritmo genético, 14 gerações |
-| Melforks | `factions/melforks/` ← `races/extras.py` | Algoritmo genético especializado |
-| Anões | `factions/dwarves/` ← `races/extras.py` | Combinatória por clãs (3 × 15 chaves) |
-| Fadas | `factions/faeries/` ← `races/extras.py` | Ponderação por números quotidianos |
-| Lobisomens | `factions/werewolves/` ← `races/extras.py` | Monte Carlo de aptidão (fase lunar) |
-| Treefolks | `factions/treefolks/` ← `races/extras.py` | Mede fantasmas estatísticos |
+| Clérigos | `factions/clerics/algorithm.py` + `archetypes.py` | Algoritmo genético, 14 gerações, 8 arquétipos ancestrais (V11) |
+| Melforks | `factions/melforks/algorithm.py` | Algoritmo genético especializado |
+| Anões | `factions/dwarves/algorithm.py` | Combinatória por clãs (3 × 15 chaves) |
+| Fadas | `factions/faeries/algorithm.py` | Ponderação por números quotidianos |
+| Lobisomens | `factions/werewolves/algorithm.py` | Monte Carlo de aptidão (fase lunar) |
+| Treefolks | `factions/treefolks/algorithm.py` | Mede fantasmas estatísticos |
 | Vampiros | `factions/vampires/` | Triplas frequentes via Ariadne (V8) |
 | Gárgulas | `factions/gargoyles/` | Duplas frequentes via Ariadne (V8) |
 | Cronomantes | `factions/chronomancers/` ← `races/chronomancers.py` | Energia dos eventos de extração |
 | Esqueletos | `factions/skeletons/` ← `races/skeletons.py` | Janela móvel de 25 números |
-| Esquadrão Negro | `black_squad/` | Anti-popularidade; grimório roubado |
-| Ordem Élfica | `elven_order/` | Missões de recuperação (não vota directamente) |
+| Esquadrão Negro | `orders/black_squad/` | Anti-popularidade; grimório roubado |
+| Ordem Élfica | `orders/elven_order/` | Missões de recuperação (não vota directamente) |
 | Kors de Elarion | `factions/kors/` | Observação via Ariadne (V7.2) |
 | Axiomantes de Nemerion | `factions/axiomantes/` | Labirinto combinatório + Feistel (V8.1) |
+| Druids | `factions/druids/` ← `races/mystics/nature/druids/` | Placeholder — sem algoritmo; abstém-se sempre (V10) |
+| Moon Priests | `factions/moon_priests/` ← `races/mystics/nature/moon_priests/` | Placeholder — sem algoritmo; abstém-se sempre (V10) |
+| Star Gazers | `factions/star_gazers/` ← `races/mystics/nature/star_gazers/` | Placeholder — sem algoritmo; abstém-se sempre (V10) |
+| Shamans | `factions/shamans/` ← `races/mystics/prophecy/shamans/` | Placeholder — sem algoritmo; abstém-se sempre (V10) |
+| Witches | `factions/witches/` ← `races/mystics/prophecy/witches/` | Placeholder — sem algoritmo; abstém-se sempre (V10) |
+| Seers | `factions/seers/` ← `races/mystics/prophecy/seers/` | Placeholder — sem algoritmo; abstém-se sempre (V10) |
+| Oracles | `factions/oracles/` ← `races/mystics/prophecy/oracles/` | Placeholder — não gera chaves por design; abstém-se sempre (V10) |
+| Bone Readers | `factions/bone_readers/` ← `races/mystics/prophecy/bone_readers/` | Placeholder — sem algoritmo; abstém-se sempre (V10) |
 
 ## Facções analíticas (não geram chaves)
 
 | Facção | Módulo | O que produz |
 |--------|--------|-------------|
 | Cartógrafos do Caos | `factions/chaos_cartographers/` | 5 livros analíticos em `library/books/cartographers/` (V8) |
-| Monges e Escribas | `amulets/books.py` | Livros reconstruíveis, índices |
+| Monges e Escribas | `artifacts/amulets/books.py` | Livros reconstruíveis, índices |
 
 ## Vilões e mecânicas narrativas
 
@@ -281,7 +289,7 @@ Facção em `factions/axiomantes/`. Percorrem o Labirinto de 139.838.160 câmara
 | `limiar_cobertura` | 0.50 | Cobertura mínima para abrir o Portal |
 | `excesso_minimo` | 0.0 | Excesso mínimo sobre o esperado |
 | `n_candidatos` | 50000 | Chaves inéditas avaliadas (50K ≈ 1.5s; 250K ≈ 4s) |
-| `guardar_experiencia` | true | Grava JSON em `axiomantes/experiences/` |
+| `guardar_experiencia` | true | Grava JSON em `experiments/axiomancers/runs/` |
 
 ### Estrutura de ficheiros
 
@@ -292,7 +300,7 @@ Facção em `factions/axiomantes/`. Percorrem o Labirinto de 139.838.160 câmara
 | `factions/axiomantes/ritual.py` | análise completa + Trinta Ecos + grava experiência |
 | `factions/axiomantes/council.py` | ponto de entrada para `main.py` |
 | `factions/axiomantes/config.json` | metadados e linhagens |
-| `axiomantes/experiences/` | relatórios JSON por execução |
+| `experiments/axiomancers/runs/` | relatórios JSON por execução |
 
 ### Integração
 
@@ -300,6 +308,82 @@ Facção em `factions/axiomantes/`. Percorrem o Labirinto de 139.838.160 câmara
 - Recebe o mesmo `seed` da simulação → ritual reproduzível
 - Só vota quando portal aberto (caso contrário devolve `[]`)
 - Peso configurável em `[AXIOMANTES] peso_conselho` em `config.txt`
+
+---
+
+# V10 — Mystics (arquitetura, lore e skeletons — sem algoritmos)
+
+Nova raça `races/mystics/` que recupera o espírito original da V1: intuição, rituais e tradição ancestral a par da matemática e da estatística. Dividida em duas linhagens:
+
+| Linhagem | Filosofia | Ordens |
+|---|---|---|
+| Nature Mystics | Harmonia com a natureza — ciclos lunares, estações, ciclos celestes | Druids, Moon Priests, Star Gazers |
+| Prophecy Mystics | Interpretação do destino através de símbolos e rituais | Shamans, Witches, Seers, Oracles, Bone Readers |
+
+**Ficheiros de dados** (`races/mystics/`): `lore.md` (história completa), `orders.json` (8 ordens), `characters.json` (16 personagens, 2 por ordem), `artifacts.json` (16 artefactos, 2 por ordem), mais uma pasta `nature/<ordem>/` ou `prophecy/<ordem>/` por ordem com um `README.md` próprio.
+
+**Plugins** (`factions/{druids,moon_priests,star_gazers,shamans,witches,seers,oracles,bone_readers}/`): cada um com `manifest.json`, `council.py` (caminho activo, regista-se via `FactionRegistry`), `strategy.py` (skeleton nativo `core.strategy.Faction`, ainda não referenciado em `manifest.json`) e `README.md`. **Todos os `council()` devolvem sempre `[]`** — abstenção válida, não erro — até existir algoritmo real.
+
+**Oracles** são um caso especial: por design nunca geram chaves — interpretam as propostas do Conselho. Por agora registam-se e abstêm-se como as restantes; a meta-análise fica para trabalho futuro (ver `factions/oracles/council.py`).
+
+**Princípio inegociável:** nenhuma ordem mística deve, por design, superar as facções matemáticas — todas passam pelos mesmos Juízes e pelo mesmo motor de Backtesting. A crença nunca substitui a estatística (ver `races/mystics/lore.md`).
+
+**Zero alterações a `main.py`** — o resumo de facções já era genérico (`# Plugin factions summary — auto-generated, no hardcoded names`), por isso as 8 novas ordens aparecem automaticamente assim que `FactionRegistry.discover("factions")` as encontra.
+
+---
+
+# Architecture
+
+Project Ariadne follows a layered architecture. Each layer depends only on the layers above it in this list — never the reverse.
+
+```
+core/
+    Framework services, plugin registry, evaluation, shared algorithms
+        ↓
+factions/
+    Executable candidate-generation methodologies (one plugin per faction)
+        ↓
+orders/
+    Narrative organizations and special systems (Pantheon, Black Squad, Elven Order)
+        ↓
+races/
+    Lore only — characters, artifacts, lineages/orders. No executable code.
+        ↓
+datasets/
+    Historical Euromillions data (immutable)
+        ↓
+experiments/
+    Generated simulation outputs, reports, backtesting results
+        ↓
+dashboard/ (planned — V11)
+    Visualisation and analysis
+```
+
+| Layer | Responsibility |
+|---|---|
+| `core/` | Generic, reusable framework: plugin registry, proposal model, shared algorithms |
+| `factions/` | Candidate-generation strategies — one plugin per faction |
+| `orders/` | Narrative organisations and special systems, outside Council voting by design |
+| `races/` | Lore, characters and world-building — documentation only |
+| `datasets/` | Historical knowledge (immutable source data) |
+| `experiments/` | Generated outputs (simulations, backtests, reports) |
+| `dashboard/` | Visualisation and analysis (planned, V11) |
+
+## Faction → Algorithm → Race map (selection)
+
+| Faction | Algorithm | Race |
+|---|---|---|
+| Clerics | Genetic Algorithm — `factions/clerics/algorithm.py` (engine) + `archetypes.py` (8-lineage dispatcher) (V11) | Clerics (`races/clerics/`) |
+| Dwarves | Mountain-forge combinatorics (`factions/dwarves/algorithm.py`) | Dwarves (`races/dwarves/`) |
+| Werewolves | Monte Carlo (`factions/werewolves/algorithm.py`) | Werewolves (`races/werewolves/`) |
+| Vampires | Triple frequencies (`factions/vampires/algorithm.py`, `council.py`) | Vampires (`races/vampires/`) |
+| Gargoyles | Frequent pairs (`factions/gargoyles/algorithm.py`, `council.py`) | Gargoyles (`races/gargoyles/`) |
+| Kors | Multi-order statistical analysis (`factions/kors/`) | Kors (`races/kors/`) |
+| Mystics (Druids, Moon Priests, Star Gazers, Bone Readers, Oracles, Seers, Shamans, Witches) | Ritual strategies — placeholders, no algorithm yet | Mystics (`races/mystics/`) |
+| Chronomancers | Temporal energy (`factions/chronomancers/algorithm.py`); also generates the Pantheon's Aion (`representatives.py`) | Chronomancers (`races/chronomancers/`) |
+| Chaos Cartographers | Chaos geometry — analytical, does not vote | Chaos Cartographers (`races/chaos_cartographers/`) |
+
+Every faction under `factions/` maps to exactly one race package under `races/` — 21 factions in total as of V11 (the original 20 plus Clerics).
 
 ---
 
@@ -313,6 +397,9 @@ core/
     strategy.py      ← Proposal dataclass + Faction ABC
     registry.py      ← FactionRegistry (discover + register + all)
     plugin_loader.py ← CompatFaction wrapper + load_faction()
+    evolution/       ← genetic algorithm engine (V10: moved from root evolution/)
+    i18n/            ← translations.py (V10: moved from root i18n/)
+    data/            ← loaders.py — historical/jackpot/moon data access (V10: moved from root sources/)
 ```
 
 ### `Proposal` e `Faction` (`core/strategy.py`)
@@ -379,16 +466,26 @@ for faction in registry.all():
 factions/
     axiomantes/           ✅ V8.1 + manifest.json
     chaos_cartographers/  ✅ V8   manifest.json (votes: false) — analítico
-    chronomancers/        ✅ V9   migrado de races/chronomancers.py
-    dwarves/              ✅ V9   migrado de races/extras.py
-    faeries/              ✅ V9   migrado de races/extras.py
-    gargoyles/            ✅ V8   migrado + manifest.json
+    clerics/              ✅ V11  algorithm.py (genetic engine) + archetypes.py (8 lineages) — the oldest
+                                   methodology, migrated from races/legacy.py + core/evolution/genetic.py
+    chronomancers/        ✅ V11  algorithm.py (temporal key) + representatives.py (Aion, Pantheon)
+    dwarves/              ✅ V11  algorithm.py (self-contained; races/ tree is lore-only)
+    faeries/              ✅ V11  algorithm.py (self-contained; races/ tree is lore-only)
+    gargoyles/            ✅ V11  lineages.py migrated from races/gargoyles/ (self-contained)
     kors/                 ✅ V7.2 + manifest.json
-    melforks/             ✅ V9   migrado de races/extras.py
-    skeletons/            ✅ V9   migrado de races/skeletons.py
-    treefolks/            ✅ V9   migrado de races/extras.py
-    vampires/             ✅ V8   migrado + manifest.json
-    werewolves/           ✅ V9   migrado de races/extras.py
+    melforks/             ✅ V11  algorithm.py (self-contained; races/ tree is lore-only)
+    skeletons/            ✅ V11  algorithm.py migrated from races/skeletons.py (self-contained)
+    treefolks/            ✅ V11  algorithm.py + investigator.py (self-contained)
+    vampires/             ✅ V11  lineages.py migrated from races/vampires/ (self-contained)
+    werewolves/           ✅ V11  algorithm.py (self-contained; races/ tree is lore-only)
+    druids/               ✅ V10  placeholder (races/mystics/nature/druids/) — abstém-se
+    moon_priests/         ✅ V10  placeholder (races/mystics/nature/moon_priests/) — abstém-se
+    star_gazers/          ✅ V10  placeholder (races/mystics/nature/star_gazers/) — abstém-se
+    shamans/              ✅ V10  placeholder (races/mystics/prophecy/shamans/) — abstém-se
+    witches/              ✅ V10  placeholder (races/mystics/prophecy/witches/) — abstém-se
+    seers/                ✅ V10  placeholder (races/mystics/prophecy/seers/) — abstém-se
+    oracles/              ✅ V10  placeholder (races/mystics/prophecy/oracles/) — não gera chaves por design
+    bone_readers/         ✅ V10  placeholder (races/mystics/prophecy/bone_readers/) — abstém-se
     loader.py             ✅ V9   discover_factions() (compat legacy)
 ```
 
@@ -405,29 +502,98 @@ for faction in registry.all():
 Adicionar uma nova facção = criar `factions/<nova>/council.py` + `manifest.json`.
 **Zero alterações a `main.py`.**
 
+**Excepção documentada — Clérigos:** `main.py` ainda importa `factions.clerics.algorithm.execute()` explicitamente, uma única vez, porque o Ritual Celeste (`world/engine/celestial_energy.py`) precisa da população completa (`evo['cemiterio']`/`evo['ressuscitados']`), não apenas das propostas finais ao Conselho. Correr o algoritmo genético uma segunda vez dentro de `council()` consumiria uma fatia diferente do stream aleatório e quebraria a reprodutibilidade. O resultado é guardado em `ctx['clerics_evo']`; `factions/clerics/council.py` apenas lê esse valor — nunca recalcula. Nenhuma lógica de registo de candidatos (peso, formatação) permanece em `main.py`; isso já passa pelo loop genérico de `all_proposals`.
+
 ## Ainda fora do sistema de plugins (por design)
 
-- **Clérigos** — algoritmo genético `evolution/genetic.py`; retorno complexo
 - **Esquadrão Negro** — estado persistente (grimório, eventos)
 - **Ordem Élfica** — não vota directamente
-- **Seres Superiores** — retorno duplo `(vis, deus)` com pesos diferentes
+- **Panteão** (`orders/pantheon/`) — Magos, Druidas, Djinns e Aion; chamados explicitamente por `main.py`, fora do `FactionRegistry` por design (não são facções do Conselho)
 - **Cartógrafos do Caos** — analítico; chamado explicitamente via `execute_cartographers()`
 
-## Candidatos para V10
+## Candidatos (por priorizar — ver Roadmap)
 
-- Entropia — medir o "caos" dos sorteios por ano
+- Entropia — medir o "caos" dos sorteios por ano (candidato a `EntropyService`, ver abaixo)
 - Heatmaps — matriz visual de pares/triplas (CSV/JSON para visualização)
 - Treefolks consultando os livros dos Cartógrafos directamente
 - Ranking em ascensão por janela temporal
-- `reports/writer.py` consumindo `Proposal` directamente (remover `_rebuild_report_factions`)
+- `experiments/reports/writer.py` consumindo `Proposal` directamente (remover `_rebuild_report_factions`)
+
+---
+
+# Testes (`tests/`)
+
+Suite `unittest` da stdlib (sem dependências externas — consistente com `requirements.txt`). Correr com:
+
+```bash
+python -m unittest discover -s tests
+```
+
+| Ficheiro | Cobre |
+|---------|------|
+| `test_models.py` | `core/strategy.py` — `Proposal` (defaults, isolamento de `extra`) e `Faction` (ABC, propriedades `name`/`origin`/`home`) |
+| `test_registry.py` | `core/registry.py` — `register`/`all`/`count`, `discover()` (skip de `_prefixo`, skip de não-diretórios, contagem real de 20 facções votantes, exclusão das analíticas) |
+| `test_plugin_loader.py` | `core/plugin_loader.py` — `_load_manifest`, `load_faction` (ordem de resolução), `CompatFaction.propose()` para as 3 formas de retorno (lista simples, anões com `carteira`, lobisomens com `ativo`/`finalistas`) |
+| `test_council.py` | `council/council.py` — `filter_candidates` (mutação de soma fora do intervalo, rejeição por baixa energia), `vote` (agregação ponderada), `corrupt` (limites válidos, preservação da chave original) |
+| `test_backtesting.py` | `compare_result.py` — `titulo()` (todas as combinações), `avaliar_registo()` (pontuação, preservação de campos) |
+
+**Filosofia:** os testes cobrem a *framework* (registry, plugin_loader, council, modelos partilhados, pontuação do backtesting), não a lógica narrativa de cada facção — um refactor da arquitetura de plugins deve falhar aqui, localmente, em vez de partir silenciosamente uma facção three camadas depois. As 21 facções em `factions/*/` não têm testes dedicados; a sua "correção" é maioritariamente narrativa, não mecânica.
+
+# Serviços partilhados (`core/services/`)
+
+`combinations.py` (`normalize_candidate`, `gaps`) e `fitness.py` (`fitness`) já têm lógica real, migrada durante a limpeza de arquitetura de V10.5 e a migração dos Clérigos em V11. O resto continua scaffold/auditoria — existe hoje lógica estatística duplicada em vários pontos que estes serviços deverão eventualmente substituir:
+
+| Duplicação encontrada | Onde |
+|---|---|
+| Contagem de frequências (`Counter` sobre sorteios) | `core/evolution/statistics.py`, `factions/chaos_cartographers/{trends,randomness,cycles}.py`, `factions/axiomantes/profile.py` |
+| Quentes/frios | `core/evolution/statistics.py` vs `factions/chaos_cartographers/trends.py` vs `Ariadne.least_frequent_numbers()` — 3 fontes de verdade inconsistentes |
+| Atraso/"overdue" | `Ariadne.overdue_numbers()` (só pergaminhos 2026) vs `core/evolution/statistics.py` (histórico completo) vs `factions/chaos_cartographers/cycles.py` (mais detalhado: médio/máx/mín/variância) |
+| Gaps intra-chave | `core/services/combinations.py:gaps` ✅ já centralizado (V11); ainda recomputado independentemente em `factions/chaos_cartographers/trends.py`, `factions/axiomantes/profile.py` |
+| Pares/triplas | `Ariadne.pairs()/triples()` vs recomputação em `factions/chaos_cartographers/constellations.py` e `markov.py`; `factions/vampires/algorithm.py` e `factions/gargoyles/algorithm.py` leem `library/indexes/*.json` diretamente em vez de usar `Ariadne` |
+| Baixos/altos, pares/ímpares | `factions/chaos_cartographers/{trends,randomness}.py`, `factions/axiomantes/profile.py` |
+
+Serviços previstos (nomes indicativos): `StatisticsService`, `DelayService`, `PairService`, `TripleService`, `EntropyService`, `TrendService`. Migração fica para depois — **não implementar já**.
+
+# Benchmarks (`benchmarks/` e `experiments/benchmarks/`)
+
+Estrutura só, sem runner. `benchmarks/random/` (baseline aleatório), `benchmarks/reports/` (relatórios legíveis), `benchmarks/rankings/` (leaderboards em JSON). `experiments/benchmarks/` é para sessões de investigação ad-hoc, distinto do `benchmarks/` de topo (resultados duradouros/canónicos). Nenhum destes gera conteúdo automaticamente hoje.
 
 ---
 
 # Princípios
 
-- As fontes originais são imutáveis (`library/sources/`).
+- As fontes históricas originais são imutáveis (`datasets/historical/euromillions/`).
 - Pergaminhos são vistas (`library/scrolls/`).
 - Livros são reconstruíveis (`library/books/`).
 - Consultas funcionam como cache (`library/cache/`).
 - Todo o conhecimento passa por Ariadne (`library/ariadne/engine.py`).
 - O projeto é um simulador estatístico e narrativo; os padrões históricos não aumentam a probabilidade matemática de prever um sorteio futuro.
+
+---
+
+# Roadmap
+
+## V10.5 — Architecture Complete
+
+- ✅ `races/` tree is lore-only except `races/legacy.py` (Clerics — deferred by design, see audit)
+- ✅ Every faction algorithm lives under `factions/<name>/` (`algorithm.py`, `representatives.py`, or `council.py`-inline)
+- ✅ Pantheon consolidated into `orders/pantheon/` (Magos, Druidas, Djinns, Aion) — not fragmented into standalone faction plugins
+- ✅ `core/services/combinations.py` (`normalize_candidate`) and `core/services/fitness.py` (`fitness`) — first real shared services, `ctx['rng']`-based
+- ✅ Full test suite (54 tests), `compileall`, `FactionRegistry` discovery (19 voting factions), `main.py`, `simulate_v7.py`, `compare_result.py` all green
+- ✅ `races/legacy.py` audited — dependency graph + target architecture produced (no code moved)
+- ✅ `docs/lore/` canon bible (10 files) + lore for all 20 races complete
+- ✅ Commit + tag `v10.5`, `v10.5-lore-complete`
+
+## V11 — Clerics migration (complete) + New Factions (not started)
+
+- ✅ Migração dos Clérigos: `races/legacy.py` + `core/evolution/genetic.py` → `factions/clerics/` (`algorithm.py`, `archetypes.py`, `council.py`, `strategy.py`, `manifest.json`); `races/clerics/` lore package
+- ✅ `races/legacy.py` removed — `races/` is now **fully lore-only** (no exceptions)
+- ✅ `gaps()` moved from `races/legacy.py` into `core/services/combinations.py`, fixing the inverted `core/` → `races/` dependency in `core/services/fitness.py`
+- ✅ All 13 external callers of the old `normalize()` repointed to `core.services.combinations.normalize_candidate(nums, ests, random)` — same global-random behaviour, single source of truth
+- ✅ Clerics auto-discovered by `FactionRegistry` (20 voting factions, up from 19) — verified via direct `load_faction()` probe, not just the registry count
+- ✅ Deterministic before/after comparison: population, cemetery, resurrected heroes, per-generation summary, and the isolated Council-proposal shape are byte-identical between the pre- and post-migration engine, and the ending `random.getstate()` matches exactly — proof of zero additional random draws
+- Known, documented side effect: Clerics finalists now flow through the generic "all plugin factions" loop in `main.py` instead of a hardcoded early-position block, so they're interleaved alphabetically with other factions in the final candidate list (previously they held a fixed early slot) — this changes tie-breaking in `council/council.py::vote()` and mutation order in `filter_candidates()`, so the *final Council-selected key* for a full `main.py` run can differ from before, even though the Clerics algorithm itself is unchanged. Also, Clerics finalists are now registered in the external chronicle (`externos`/`registo_externo`) for the first time, consistent with every other faction — previously they were the only voting faction excluded from that registration.
+- Completar o lore das 20 raças — ✅ done in V10.5
+- Novas facções: Juízes do Conselho, Geómetras do Véu, Estatísticos Imperiais
+- `dashboard/` — visualização e análise
+- Rng retrofit decision: estender `ctx['rng']` a todas as facções (hoje só Panteão + Skeletons + Chronomancers), ou manter `random` global nas restantes — Clerics migration deliberately kept global `random` to guarantee determinism (see above)

@@ -1,0 +1,26 @@
+{
+  "raca": "Clãs Anões das Montanhas",
+  "artefactos": [
+    {
+      "id": "forja_de_barbas_de_ferro",
+      "nome": "Ironbeard Forge",
+      "nome_pt": "Forja de Barbas de Ferro",
+      "linhagem": "barbas_de_ferro",
+      "descricao": "A forja mais antiga da Fortaleza, nunca apagada desde a chegada do clã na Era III."
+    },
+    {
+      "id": "cristal_de_borin",
+      "nome": "Borin's Crystal",
+      "nome_pt": "Cristal de Borin",
+      "linhagem": "cristal_azul",
+      "descricao": "Um cristal azul que Borin consulta antes de equilibrar a sua pool — diz que reflecte quentes e frios em partes iguais quando bem talhado."
+    },
+    {
+      "id": "martelo_da_forja_negra",
+      "nome": "Blackforge Hammer",
+      "nome_pt": "Martelo da Forja Negra",
+      "linhagem": "forja_negra",
+      "descricao": "O martelo de Dain, usado tantas vezes por sessão quantas chaves a Forja Negra apresenta ao Conselho."
+    }
+  ]
+}

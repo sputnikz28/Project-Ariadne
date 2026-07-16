@@ -1,0 +1,18 @@
+{
+  "raca": "Druids",
+  "linhagem": "nature_mystics",
+  "casa": "place:circulo_do_carvalho_eterno",
+  "ordens": [
+    {
+      "id": "druids",
+      "nome": "Druids",
+      "titulo": "Mestres das Florestas e dos Ciclos Lunares",
+      "membros": ["character:thistlewood_greenbark", "character:wren_hollowmoss"],
+      "filosofia": "A floresta lembra-se de tudo o que a lua já lhe ensinou. Um druida não prevê o sorteio — escuta o calendário da terra.",
+      "papel_analitico_futuro": ["fases lunares", "estações", "solstícios", "equinócios", "ciclos de semana ISO"],
+      "artefactos": ["oak_staff", "moon_branch"],
+      "faccao": "factions/druids",
+      "config_section": "DRUIDS"
+    }
+  ]
+}

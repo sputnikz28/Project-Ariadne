@@ -1,0 +1,11 @@
+{
+  "id": "druids",
+  "name": "Druids",
+  "version": "1.0",
+  "home": "Círculo do Carvalho Eterno",
+  "config_section": "DRUIDS",
+  "weight_key": "peso_conselho",
+  "default_weight": 0.5,
+  "votes": true,
+  "description": "Nature Mystics — masters of forests and lunar cycles. Placeholder faction: no prediction algorithm implemented yet; abstains every run. Future role: lunar phases, seasons, solstices, equinoxes, ISO week cycles."
+}

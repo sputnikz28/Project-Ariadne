@@ -1,0 +1,11 @@
+{
+  "id": "clerigo",
+  "name": "Clérigos",
+  "version": "1.0",
+  "home": "Templo dos Clérigos",
+  "config_section": "SIMULACAO",
+  "weight_key": "peso_conselho",
+  "default_weight": 1.0,
+  "votes": true,
+  "description": "The oldest Council methodology — a genetic algorithm breeding a population across 8 historical archetypes (Bruxa, Vidente, Chefe Tribal, Elfo, Goblin, Shaman, Cronomante, Esqueleto) across generations. Finalists from the final population feed the Council directly, each proposal carrying its own weight (default 1.0)."
+}

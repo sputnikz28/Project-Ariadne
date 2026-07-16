@@ -1,0 +1,18 @@
+{
+  "raca": "Shamans",
+  "linhagem": "prophecy_mystics",
+  "casa": "place:tendas_do_vento_ancestral",
+  "ordens": [
+    {
+      "id": "shamans",
+      "nome": "Shamans",
+      "titulo": "Vozes dos Espíritos Ancestrais",
+      "membros": ["character:kova_ashwalker", "character:mireya_bonesong"],
+      "filosofia": "O comum já foi contado. Um xamã escuta o que os antepassados sussurram sobre o que ainda não aconteceu.",
+      "papel_analitico_futuro": ["eventos raros", "outliers", "acaso simbólico", "padrões históricos invulgares"],
+      "artefactos": ["spirit_drum", "ancestral_mask"],
+      "faccao": "factions/shamans",
+      "config_section": "SHAMANS"
+    }
+  ]
+}

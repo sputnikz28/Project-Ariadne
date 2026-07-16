@@ -1,4 +1,4 @@
-from races.extras import melforks as _melforks
+from .algorithm import melforks as _melforks
 
 FACTION_META = {
     'name': 'Melforks Genéticos',

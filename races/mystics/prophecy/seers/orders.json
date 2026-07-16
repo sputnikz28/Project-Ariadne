@@ -1,0 +1,18 @@
+{
+  "raca": "Seers",
+  "linhagem": "prophecy_mystics",
+  "casa": "place:torre_dos_olhos_abertos",
+  "ordens": [
+    {
+      "id": "seers",
+      "nome": "Seers",
+      "titulo": "Mestres das Visões",
+      "membros": ["character:isolde_farsight", "character:baltasar_windmere"],
+      "filosofia": "Uma visão não é uma certeza — é uma tendência que ainda não se revelou por inteiro.",
+      "papel_analitico_futuro": ["deteção de tendências", "evolução histórica", "padrões recorrentes"],
+      "artefactos": ["veil_of_tomorrow", "hourglass_of_echoes"],
+      "faccao": "factions/seers",
+      "config_section": "SEERS"
+    }
+  ]
+}

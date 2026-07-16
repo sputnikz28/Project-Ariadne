@@ -1,0 +1,17 @@
+{
+  "raca": "Star Gazers",
+  "artefactos": [
+    {
+      "id": "celestial_astrolabe",
+      "nome": "Celestial Astrolabe",
+      "nome_pt": "Astrolábio Celeste",
+      "descricao": "Um instrumento de latão e vidro que mapeia constelações — e, segundo os seus guardiões, também as duas estrelas de cada sorteio."
+    },
+    {
+      "id": "star_compass",
+      "nome": "Star Compass",
+      "nome_pt": "Bússola Estelar",
+      "descricao": "Uma bússola cuja agulha não aponta a norte, mas à estrela mais brilhante visível no momento — nunca a mesma duas noites seguidas."
+    }
+  ]
+}

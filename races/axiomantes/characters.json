@@ -1,0 +1,14 @@
+{
+  "raca": "Axiomantes de Nemerion",
+  "personagens": [
+    {
+      "id": "axiomantes_voz_colectiva",
+      "nome": "Axiomantes de Nemerion",
+      "titulo": "Voz Colectiva do Labirinto",
+      "biografia": "Os Axiomantes não se apresentam ao Conselho como indivíduos — falam como uma única voz colectiva, reflectindo a natureza unificada do Labirinto que percorrem. Esta é uma escolha deliberada da Cidadela, não uma ausência de identidade.",
+      "personalidade": "Impessoal por princípio, extremamente precisa, silenciosa na maior parte das sessões.",
+      "artefactos_preferidos": ["labirinto_de_nemerion"],
+      "metodo": "Rank/unrank combinatório + permutação de Feistel sobre as 139.838.160 posições possíveis; só vota quando o portal está aberto."
+    }
+  ]
+}

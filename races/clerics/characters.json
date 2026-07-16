@@ -1,0 +1,77 @@
+{
+  "raca": "Clérigos",
+  "personagens": [
+    {
+      "id": "bruxa_arquetipo",
+      "nome": "Bruxa",
+      "titulo": "Linhagem da Mistura",
+      "biografia": "Não é uma personagem fixa — cada geração recria dezenas de Bruxas, cada uma combinando o nome de um dos dez nomes ancestrais com um dos seis títulos. Mistura números quentes e frios com um toque de acaso pessoal.",
+      "personalidade": "Varia por instância; a linhagem partilha apenas o método.",
+      "artefactos_preferidos": [],
+      "metodo": "Combina números quentes, frios e um número aleatório; estrelas quente/fria."
+    },
+    {
+      "id": "vidente_arquetipo",
+      "nome": "Vidente",
+      "titulo": "Linhagem da Clareza",
+      "biografia": "Confia nos números quentes, mas deixa-se influenciar pelo sorteio mais recente quando a 'clareza' do seu genoma pessoal é suficientemente alta.",
+      "personalidade": "Varia por instância.",
+      "artefactos_preferidos": [],
+      "metodo": "Amostra números quentes; com probabilidade dependente do genoma, incorpora números do sorteio mais recente."
+    },
+    {
+      "id": "chefe_tribal_arquetipo",
+      "nome": "Chefe Tribal",
+      "titulo": "Linhagem dos Símbolos",
+      "biografia": "Lança símbolos rituais — sol, lua, lobo, fogo, água, montanha, corvo — e deixa cada um deslocar um número inicial até formar uma chave completa.",
+      "personalidade": "Varia por instância.",
+      "artefactos_preferidos": [],
+      "metodo": "Desloca um número inicial por cinco símbolos rituais escolhidos ao acaso."
+    },
+    {
+      "id": "elfo_arquetipo",
+      "nome": "Elfo",
+      "titulo": "Linhagem da Disciplina",
+      "biografia": "O mais disciplinado dos oito arquétipos — rejeita sistematicamente qualquer combinação que não respeite paridade, soma e distribuição de gaps, até mil tentativas.",
+      "personalidade": "Varia por instância; a linhagem partilha o rigor.",
+      "artefactos_preferidos": [],
+      "metodo": "Rejeição sistemática (até 1000 tentativas) por soma, paridade, baixos/altos e gap máximo."
+    },
+    {
+      "id": "goblin_arquetipo",
+      "nome": "Goblin",
+      "titulo": "Linhagem da Ganância",
+      "biografia": "Aposta em números altos quando o jackpot é generoso — e em qualquer coisa quando não é.",
+      "personalidade": "Varia por instância; a linhagem partilha o oportunismo.",
+      "artefactos_preferidos": [],
+      "metodo": "Inclui números altos (35-50) quando o jackpot ultrapassa 100 milhões, caso contrário amostra livremente."
+    },
+    {
+      "id": "shaman_arquetipo",
+      "nome": "Shaman",
+      "titulo": "Linhagem Lunar",
+      "biografia": "Segue o deslocamento da fase lunar sobre o último sorteio — um eco directo da filosofia dos Nature Mystics, ainda que os Clérigos a tenham praticado muito antes de os Mystics chegarem.",
+      "personalidade": "Varia por instância.",
+      "artefactos_preferidos": [],
+      "metodo": "Desloca os números do último sorteio conforme a fase lunar actual (fallback quando nenhuma outra raça se aplica)."
+    },
+    {
+      "id": "cronomante_arquetipo",
+      "nome": "Cronomante",
+      "titulo": "Linhagem do Tempo Emprestado",
+      "biografia": "Não tem lógica própria — reutiliza directamente o algoritmo dos Cronomantes da Ordem do Tempo para essa instância, prova de que os Clérigos aprendem com as raças mais novas.",
+      "personalidade": "Varia por instância.",
+      "artefactos_preferidos": [],
+      "metodo": "Delega para factions/chronomancers/algorithm.py::generate_temporal_key."
+    },
+    {
+      "id": "esqueleto_arquetipo",
+      "nome": "Esqueleto",
+      "titulo": "Linhagem das Catacumbas Emprestadas",
+      "biografia": "Tal como o Cronomante clerical, não tem lógica própria — reutiliza directamente o algoritmo dos Esqueletos das Catacumbas Numéricas para essa instância.",
+      "personalidade": "Varia por instância.",
+      "artefactos_preferidos": [],
+      "metodo": "Delega para factions/skeletons/algorithm.py::generate."
+    }
+  ]
+}

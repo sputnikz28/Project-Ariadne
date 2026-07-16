@@ -1,7 +1,7 @@
 
 import argparse
 from pathlib import Path
-from amulets.persistence import ler_json, save_json
+from artifacts.amulets.persistence import ler_json, save_json
 
 
 def main():

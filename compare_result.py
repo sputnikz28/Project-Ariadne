@@ -7,7 +7,7 @@ from pathlib import Path
 if hasattr(sys.stdout, 'reconfigure'):
     sys.stdout.reconfigure(encoding='utf-8', errors='replace')
 
-from legends.registry import registar_lendas
+from docs.lore.legends.registry import registar_lendas
 
 
 def titulo(n, e):
@@ -22,6 +22,19 @@ def titulo(n, e):
     return "Errante das Sombras"
 
 
+def avaliar_registo(registo, alvo_numeros, alvo_estrelas):
+    acertos_n = len(set(registo["numeros"]) & set(alvo_numeros))
+    acertos_e = len(set(registo["estrelas"]) & set(alvo_estrelas))
+    pontos = acertos_n * 10 + acertos_e * 5 + (8 if acertos_n >= 3 else 0) + (5 if acertos_e == 2 else 0)
+    return {
+        **registo,
+        "acertos_numeros": acertos_n,
+        "acertos_estrelas": acertos_e,
+        "pontos_resultado": pontos,
+        "titulo_resultado": titulo(acertos_n, acertos_e),
+    }
+
+
 def main():
     parser = argparse.ArgumentParser(
         description="Compara todo o Arquivo do Destino e regista as novas lendas."
@@ -31,22 +44,13 @@ def main():
     parser.add_argument("--top", type=int, default=50)
     args = parser.parse_args()
 
-    arquivo = json.loads(Path("data/arquivo_destino.json").read_text(encoding="utf-8"))
+    arquivo = json.loads(Path("datasets/generated/simulations/arquivo_destino.json").read_text(encoding="utf-8"))
     alvo_n = set(args.numeros)
     alvo_e = set(args.estrelas)
     results = []
 
     for registo in arquivo:
-        acertos_n = len(set(registo["numeros"]) & alvo_n)
-        acertos_e = len(set(registo["estrelas"]) & alvo_e)
-        pontos = acertos_n * 10 + acertos_e * 5 + (8 if acertos_n >= 3 else 0) + (5 if acertos_e == 2 else 0)
-        results.append({
-            **registo,
-            "acertos_numeros": acertos_n,
-            "acertos_estrelas": acertos_e,
-            "pontos_resultado": pontos,
-            "titulo_resultado": titulo(acertos_n, acertos_e),
-        })
+        results.append(avaliar_registo(registo, alvo_n, alvo_e))
 
     results.sort(
         key=lambda x: (x["acertos_numeros"], x["acertos_estrelas"], x["pontos_resultado"]),
@@ -85,7 +89,7 @@ def main():
             f"{r['acertos_numeros']}N + {r['acertos_estrelas']}E | {r['titulo_resultado']}"
         )
 
-    saida = Path("reports/generated/comparacao_pos_sorteio.txt")
+    saida = Path("experiments/reports/generated/comparacao_pos_sorteio.txt")
     saida.write_text("\n".join(linhas), encoding="utf-8")
     print("\n".join(linhas))
     print("\nGuardado em:", saida)

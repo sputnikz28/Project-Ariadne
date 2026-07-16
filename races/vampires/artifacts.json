@@ -1,0 +1,33 @@
+{
+  "raca": "Vampiros de Elarion",
+  "artefactos": [
+    {
+      "id": "indice_triplas",
+      "nome": "Triple Index",
+      "nome_pt": "Índice de Triplas",
+      "linhagem": "ambas",
+      "descricao": "O artefacto vivo da Cripta — na prática, o ficheiro `library/indexes/triplas.json` que as duas Linhagens consultam directamente. Regista toda tripla de números já sorteada e quantas vezes se repetiu."
+    },
+    {
+      "id": "anel_de_vaelor",
+      "nome": "Vaelor's Ring",
+      "nome_pt": "Anel de Vaelor",
+      "linhagem": "sanguinea",
+      "descricao": "Um anel de prata escurecida gravado com os três números da primeira tripla que Vaelor alguma vez propôs ao Conselho. Diz-se que aquece quando essa tripla volta a aparecer num sorteio."
+    },
+    {
+      "id": "veu_sombrio",
+      "nome": "Shadow Veil",
+      "nome_pt": "Véu Sombrio",
+      "linhagem": "sombria",
+      "descricao": "Um véu fino que Nyx usa sobre os olhos quando consulta o índice — diz que só assim consegue ver a vizinhança entre números sem se distrair com a frequência absoluta."
+    },
+    {
+      "id": "taca_de_sangue_estatistico",
+      "nome": "Cup of Statistical Blood",
+      "nome_pt": "Taça de Sangue Estatístico",
+      "linhagem": "ambas",
+      "descricao": "Uma taça cerimonial partilhada nas raras reuniões conjuntas das duas Linhagens, erguida em brinde a qualquer tripla que ambas as alas tenham escolhido de forma independente na mesma sessão do Conselho — um evento raro, celebrado precisamente por ser raro."
+    }
+  ]
+}

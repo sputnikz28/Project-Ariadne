@@ -82,6 +82,7 @@ Each faction represents a distinct statistical philosophy:
 | **Kors de Elarion** | Four observers consulting exclusively Ariadne (V7.2) |
 | **Cartographers of Chaos** | Five analysts producing analytical books for other factions (V8) |
 | **Axiomantes de Nemerion** | Feistel permutation over 139M combinations — finds inédita keys by statistical profile (V8.1) |
+| **Druids, Moon Priests, Star Gazers, Shamans, Witches, Seers, Oracles, Bone Readers** | Mystics (V10) — placeholders only, always abstain. See [Mystics](#mystics-v10) below |
 
 ### Kors de Elarion (V7.2)
 
@@ -139,6 +140,35 @@ Guardians of the Labyrinth of 139,838,160 chambers. They traverse the full Eurom
 | Algorithm | Feistel (_H=11826, 4 rounds, Wang hash) |
 | Complexity | O(H) — H = number of historical draws; no 139M iteration |
 | Default candidates evaluated | 50,000 per run |
+
+---
+
+### Mystics (V10)
+
+A new race, `races/mystics/`, restoring Project Ariadne's original V1
+spirit: intuition, rituals and ancient tradition alongside statistics.
+Two lineages, eight orders, all currently **architecture and lore
+only — no prediction algorithm implemented yet**:
+
+| Lineage | Orders | Future analytical role |
+|---|---|---|
+| 🌿 Nature Mystics | Druids, Moon Priests, Star Gazers | lunar phases, seasons, solstices/equinoxes, ISO week cycles, celestial symbolism |
+| 🔮 Prophecy Mystics | Shamans, Witches, Seers, Oracles, Bone Readers | rare events, ensemble/hybrid strategies, trend detection, proposal meta-analysis, ritual pseudo-randomness |
+
+Every order has a matching `factions/<order>/` plugin (`manifest.json`
++ `council.py` + `strategy.py` + `README.md`) that registers correctly
+through `FactionRegistry` and **always abstains** — the same valid,
+non-error abstention behaviour as Axiomantes with a closed portal.
+Lore, characters (16, two per order) and artifacts (16, two per order)
+live in `races/mystics/{lore.md, orders.json, characters.json,
+artifacts.json}`, with a short README per order under
+`races/mystics/nature/` and `races/mystics/prophecy/`.
+
+**By design, these factions must never outperform the mathematical
+ones** — they're alternative methodologies, not a shortcut, and every
+proposal (mystical or mathematical) is filtered, voted and backtested
+through exactly the same Council, Judges and Backtesting engine. See
+[`races/mystics/lore.md`](races/mystics/lore.md) for the full history.
 
 ---
 
@@ -205,36 +235,61 @@ Project-Ariadne/
 ├── config.txt                  ← all parameters
 ├── requirements.txt            ← stdlib only (no external ML libs)
 │
-├── library/                    ← Ariadne + all persistent data
-├── factions/                   ← V7+ factions (package format)
-│   ├── kors/                   ← Kors de Elarion (V7.2)
-│   ├── chaos_cartographers/    ← Cartographers of Chaos (V8)
-│   └── axiomantes/             ← Axiomantes de Nemerion (V8.1)
-│       ├── labyrinth.py        ← combinadic rank/unrank + Feistel
-│       ├── profile.py          ← Echo Profile + scoring
-│       ├── ritual.py           ← Ritual of Thirty Echoes
-│       └── council.py          ← Council integration
-│
-├── axiomantes/
-│   └── experiences/            ← per-run ritual reports (JSON)
-│
-├── i18n/
-│   └── translations.py         ← 6 languages × 25 translation keys
-│
-├── races/                      ← legacy factions (V1–V6)
-├── evolution/                  ← genetic algorithm engine
-├── council/                    ← Council filter + vote
-├── world/                      ← world state, simulation context
-├── worlds/                     ← world profiles (config variants)
-├── black_squad/                ← Black Squad + grimoire
-├── elven_order/                ← Elven Order + missions
-├── amulets/                    ← amulets + library sync
-├── artefacts/                  ← artefacts + relics
-├── legends/                    ← legendary characters
-├── scribes/                    ← scribes + chronicles
-├── reports/                    ← report writer
-├── campaigns/                  ← multi-era campaign runs
-└── docs/                       ← (planned)
+├── core/                        ← framework engine
+│   ├── strategy.py / registry.py / plugin_loader.py  ← FactionRegistry + plugin architecture
+│   ├── i18n/                    ← translations.py — 6 languages × 25 translation keys
+│   ├── data/                    ← loaders.py — reusable historical/jackpot/moon data access
+│   └── services/                ← shared, lore-agnostic helpers (combinations.py, fitness.py)
+├── council/                     ← Grand Council filter + vote
+├── factions/                    ← executable faction plugins (package format) — 21 factions, one per race
+│   ├── clerics/                 ← Clérigos (V11) — genetic algorithm engine, 8-archetype dispatcher
+│   ├── kors/                    ← Kors de Elarion (V7.2)
+│   ├── chaos_cartographers/     ← Cartographers of Chaos (V8)
+│   └── axiomantes/              ← Axiomantes de Nemerion (V8.1)
+│       ├── labyrinth.py         ← combinadic rank/unrank + Feistel
+│       ├── profile.py           ← Echo Profile + scoring
+│       ├── ritual.py            ← Ritual of Thirty Echoes
+│       └── council.py           ← Council integration
+├── races/                       ← lore only (README/lore.md/characters.json/artifacts.json/lineages|orders.json) — no executable code, 21 races
+│   ├── clerics/                 ← Clérigos (V11) — the 8 ancestral lineages, 6 houses
+│   └── mystics/                 ← Mystics (V10) — lore, characters, artifacts; nature/ + prophecy/ lineages
+├── orders/                      ← organisations and guilds
+│   ├── black_squad/             ← Black Squad + grimoire + dark_library
+│   ├── elven_order/             ← Elven Order + missions
+│   ├── scribes/                 ← scribes + chronicles + atlas + museum
+│   └── librarians/              ← scroll conversion utilities
+├── library/                     ← Eternal Library and knowledge
+│   ├── ariadne/                 ← Ariadne engine
+│   ├── scrolls/                 ← per-draw views (2004–2026)
+│   ├── books/                   ← reconstructable books
+│   ├── indexes/                 ← pairs/triples/frequencies + normalized draw index
+│   ├── catalogue/, cache/, black_kors/
+├── artifacts/                   ← artefacts, relics and magical objects
+│   ├── ark.py / living.py       ← relics + living artifacts
+│   ├── relics/                  ← persistent relics (ART-*.json)
+│   └── amulets/                 ← amulets, monastery, generated books
+├── world/                       ← world engine + world presets
+│   ├── engine/                  ← builder, extraction, celestial energy, dark conviction, council war, Malphas virus
+│   └── presets/                 ← world profiles (config variants) + central loader
+├── datasets/                    ← historical and generated data
+│   ├── historical/euromillions/<year>/  ← immutable annual datasets
+│   ├── imports/                 ← raw import files (xlsx)
+│   └── generated/                ← simulations/ · campaigns/ · world_state/ · temporary/
+├── experiments/                 ← simulation outputs and research
+│   ├── axiomancers/runs/        ← per-run Axiomantes ritual reports (JSON)
+│   ├── reports/                 ← report writer + generated/ .txt reports
+│   ├── figures/                 ← plots/visualisations (empty — structure only)
+│   ├── notebooks/               ← exploratory analysis notebooks (empty — structure only)
+│   └── benchmarks/              ← ad-hoc benchmark research sessions (empty — structure only)
+├── benchmarks/                  ← durable strategy-vs-baseline comparison results (empty — structure only)
+│   ├── random/                  ← random-baseline runs
+│   ├── reports/                 ← human-readable comparison reports
+│   └── rankings/                ← machine-readable leaderboards
+├── docs/                        ← documentation
+│   └── lore/                    ← canon bible (canon_index, timeline, relationships, geography,
+│       │                          factions, artifacts, characters, locations, glossary, architecture)
+│       └── legends/             ← legendary characters registry (runtime, not canon)
+└── tests/                       ← unittest suite for the framework (registry, plugin_loader, council, models, backtesting)
 ```
 
 ---
@@ -261,6 +316,9 @@ python campaign_v6.py
 
 # Validate config
 python validate_config.py
+
+# Run the test suite
+python -m unittest discover -s tests
 ```
 
 ---
@@ -311,25 +369,93 @@ Set `lang = en` in `config.txt`. Invalid codes fall back silently to `pt`.
 
 ## Dataset
 
-- **1,962 real Euromillions draws** (2004–2026) stored as individual JSON scrolls
+- **1,962 real Euromillions draws** (2004–2026) stored as individual JSON scrolls (`library/scrolls/`)
 - **55 full 2026 scrolls** with astronomy metadata, statistics, and SHA-256 signature
-- **Annual datasets** 2004–2026 in `biblioteca/fontes/`
-- **Frequency indices** for pairs and triples
+- **Immutable annual datasets** 2004–2026 in `datasets/historical/euromillions/<year>/`
+- **Raw imports** (e.g. spreadsheet exports) in `datasets/imports/`
+- **Frequency indices** for pairs, triples and the normalized number index in `library/indexes/`
+- **Generated/runtime data** (simulation ledgers, world-state snapshots, campaign runs, disposable caches) in `datasets/generated/` — never committed as source data, always reproducible by re-running the simulator
 
 All data is stored locally. No API calls, no external services.
 
 ---
 
-## Adding a new faction
+## Plugin lifecycle
 
-A faction is a Python module that:
+A faction is a directory under `factions/<name>/`. `main.py` never
+references any specific faction by name — it only talks to
+`core.registry.FactionRegistry`:
 
-1. Accepts `ariadne` (Ariadne instance), `seed` (int), and optionally `cfg` (ConfigParser)
-2. Queries data exclusively through `ariadne`
-3. Returns a list of dicts: `[{'name': str, 'key': ([nums], [stars]), 'weight': float, ...}]`
-4. Gets registered in `main.py` with a voting weight
+```python
+registry = FactionRegistry().discover("factions")
+for faction in registry.all():
+    proposals = faction.propose(context)   # -> list[Proposal]
+```
 
-Look at `factions/kors/council.py` for the simplest example, or `factions/axiomantes/council.py` for a full implementation with config, logging and Council integration.
+**Adding a new faction never requires changing `main.py`.**
+
+1. Create `factions/<name>/manifest.json` — `id`, `name`, `home`,
+   `config_section`, `weight_key`, `default_weight`, `votes` (`false`
+   marks it analytical/non-voting, like `chaos_cartographers`).
+2. Implement the strategy, either:
+   - `council.py` with `FACTION_META = {...}` + `def council(ariadne, seed, cfg, ctx)`
+     returning a list of dicts, a dwarves-style clan list (`carteira`),
+     or a werewolves-style `{'ativo', 'simulacoes', 'finalistas'}` dict
+     — `core.plugin_loader.CompatFaction` normalizes all three shapes
+     into `Proposal` objects; **or**
+   - `strategy.py` with a class inheriting `core.strategy.Faction`,
+     implementing `propose(self, context) -> list[Proposal]` directly,
+     referenced by `"class"` in `manifest.json`.
+3. Query data exclusively through `ariadne` (the `Ariadne` instance in
+   `context`) — never read `library/` or `datasets/` files directly.
+
+`FactionRegistry.discover("factions")` walks `factions/` alphabetically
+at startup, skips `_`-prefixed directories, and silently skips any
+directory without a working `council.py`/`strategy.py` (analytical
+factions like `chaos_cartographers` are skipped this way, not treated
+as errors). A faction returning `[]` — a **valid abstention** (portal
+closed, inactive this run, etc.) — is not a failure; `main.py` only
+logs a warning when `propose()` raises an actual exception.
+
+Look at `factions/kors/council.py` for the simplest `council.py`
+example, or `factions/axiomantes/council.py` for a full implementation
+with config, logging and Council integration.
+
+---
+
+## Testing
+
+`tests/` uses Python's stdlib `unittest` — no external test framework,
+consistent with the project's stdlib-only philosophy. Run the suite
+with:
+
+```bash
+python -m unittest discover -s tests
+```
+
+**Philosophy:** tests target the *framework*, not the narrative
+content — `FactionRegistry`, `plugin_loader`, `council` (filtering,
+voting, corruption), the shared `Proposal`/`Faction` models, and the
+backtesting/scoring logic. Each test file covers exactly one module's
+responsibility so that a future refactor of the plugin architecture
+fails loudly and locally instead of silently breaking a faction three
+layers away. Faction-specific narrative logic (the 13 `factions/*/`
+strategies) is not under test — it doesn't affect framework stability
+and its "correctness" is largely narrative, not mechanical.
+
+---
+
+## Benchmarks
+
+`benchmarks/` is scaffolding for comparing faction/strategy
+performance against a random baseline (`benchmarks/random/`) with
+comparison reports (`benchmarks/reports/`) and machine-readable
+leaderboards (`benchmarks/rankings/`). No runner exists yet — the
+structure exists so that future benchmark tooling has a stable home
+from day one, instead of being bolted onto `experiments/` after the
+fact. `experiments/benchmarks/` is a related but distinct location for
+ad-hoc benchmark research sessions, as opposed to the durable/canonical
+results that belong in the top-level `benchmarks/`.
 
 ---
 

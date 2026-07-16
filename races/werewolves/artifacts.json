@@ -1,0 +1,17 @@
+{
+  "raca": "Lobisomens de Fenrir",
+  "artefactos": [
+    {
+      "id": "presa_imutavel_de_fenrir",
+      "nome": "Fenrir's Unbreakable Fang",
+      "nome_pt": "Presa Imutável de Fenrir",
+      "descricao": "Um dos amuletos vivos do universo (`artifacts/living.py`), não exclusivo da raça — qualquer herói pode herdá-lo. Diz-se que nunca se parte, mesmo quando a matilha perde uma caçada."
+    },
+    {
+      "id": "uivo_da_lua_cheia",
+      "nome": "Full Moon Howl",
+      "nome_pt": "Uivo da Lua Cheia",
+      "descricao": "O sinal que desperta a matilha inteira — sem ele, os Lobisomens permanecem inactivos, mesmo que o Conselho os convoque."
+    }
+  ]
+}

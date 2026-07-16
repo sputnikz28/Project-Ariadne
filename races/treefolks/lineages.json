@@ -1,0 +1,35 @@
+{
+  "raca": "Treefolks da Floresta Ancestral",
+  "descricao": "Os Treefolks não têm clãs ou linhagens formais — cada Raiz escolhe independentemente um dos quatro 'modelos' de inspiração ritual. Estrutura mantida como lineages.json por consistência com as restantes raças, mas descreve arquétipos de método, não famílias.",
+  "casa": "place:floresta_ancestral",
+  "linhagens": [
+    {
+      "id": "random_forest",
+      "nome": "Modelo Random Forest",
+      "filosofia": "Muitas pequenas observações, combinadas, valem mais do que uma única certeza.",
+      "faccao": "factions/treefolks",
+      "config_section": "TREEFOLKS"
+    },
+    {
+      "id": "rede_neural",
+      "nome": "Modelo Rede Neural",
+      "filosofia": "O padrão emerge de camadas de associação, não de uma regra única.",
+      "faccao": "factions/treefolks",
+      "config_section": "TREEFOLKS"
+    },
+    {
+      "id": "lstm",
+      "nome": "Modelo LSTM",
+      "filosofia": "A memória recente pesa mais do que a memória distante.",
+      "faccao": "factions/treefolks",
+      "config_section": "TREEFOLKS"
+    },
+    {
+      "id": "bayesiano",
+      "nome": "Modelo Bayesiano",
+      "filosofia": "Cada nova extração deve actualizar a crença anterior, nunca substituí-la de golpe.",
+      "faccao": "factions/treefolks",
+      "config_section": "TREEFOLKS"
+    }
+  ]
+}

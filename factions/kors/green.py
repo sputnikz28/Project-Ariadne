@@ -1,5 +1,5 @@
 import random
-from races.legacy import normalize
+from core.services.combinations import normalize_candidate
 
 
 def kors_verde(ariadne):
@@ -53,7 +53,7 @@ def kors_verde(ariadne):
     else:
         stars = sorted(random.sample(range(1, 13), 2))
 
-    key = normalize(nums, stars)
+    key = normalize_candidate(nums, stars, random)
 
     return {
         "nome": "Sylvara das Passagens",

@@ -1,0 +1,14 @@
+{
+  "raca": "Melforks Genéticos",
+  "personagens": [
+    {
+      "id": "clerigo_arquetipo",
+      "nome": "Clérigo",
+      "titulo": "Representante Geneticamente Cultivado",
+      "biografia": "Não é uma personagem fixa — todo representante Melfork nasce no fim de um ciclo evolutivo completo (população, geração, elite, cruzamento) correndo dentro de uma única sessão do Conselho, e recebe o nome Clérigo-N. A escolha do nome não é acidental: os Melforks descendem geneticamente da mesma linhagem dos Clérigos originais da Era II.",
+      "personalidade": "Nenhuma personalidade fixa — cada geração é uma nova população, sem memória da anterior.",
+      "artefactos_preferidos": ["tubo_de_ensaio_ancestral"],
+      "metodo": "Algoritmo genético: população inicial aleatória, pontuação de aptidão, cruzamento entre elite, geração após geração dentro da mesma sessão."
+    }
+  ]
+}

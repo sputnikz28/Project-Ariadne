@@ -1,0 +1,35 @@
+{
+  "raca": "Clãs Anões das Montanhas",
+  "personagens": [
+    {
+      "id": "rei_thorin",
+      "nome": "Rei Thorin",
+      "titulo": "Rei do Clã Barbas de Ferro",
+      "linhagem": "barbas_de_ferro",
+      "biografia": "O mais conservador dos três reis — prefere pools centradas nos números mais quentes, desconfiando de qualquer combinação que se afaste demasiado do que já se provou popular.",
+      "personalidade": "Firme, tradicionalista, avesso a risco desnecessário.",
+      "artefactos_preferidos": ["forja_de_barbas_de_ferro"],
+      "metodo": "Constrói a pool priorizando números quentes e o último sorteio; filtra combinações por soma entre 85 e 190."
+    },
+    {
+      "id": "rei_borin",
+      "nome": "Rei Borin",
+      "titulo": "Rei do Clã Cristal Azul",
+      "linhagem": "cristal_azul",
+      "biografia": "O mais analítico dos três — equilibra cuidadosamente quentes e frios na sua pool, convencido de que o equilíbrio produz carteiras mais resistentes ao acaso.",
+      "personalidade": "Metódico, calmo, gosta de explicar o raciocínio antes de anunciar a carteira.",
+      "artefactos_preferidos": ["cristal_de_borin"],
+      "metodo": "Constrói a pool com equilíbrio entre números quentes e frios; filtra combinações por soma entre 85 e 190."
+    },
+    {
+      "id": "rei_dain",
+      "nome": "Rei Dain",
+      "titulo": "Rei do Clã Forja Negra",
+      "linhagem": "forja_negra",
+      "biografia": "O mais prolífico dos três reis — a sua forja nunca pára, e a sua carteira é sempre a mais numerosa apresentada ao Conselho.",
+      "personalidade": "Enérgico, competitivo apenas em quantidade, nunca em cautela.",
+      "artefactos_preferidos": ["martelo_da_forja_negra"],
+      "metodo": "Mesma construção de pool que os restantes clãs, mas gera o maior número de chaves por sessão."
+    }
+  ]
+}
