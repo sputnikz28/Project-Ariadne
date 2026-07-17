@@ -29,6 +29,7 @@ from library.ariadne.engine import Ariadne
 from factions.chaos_cartographers.council import execute_cartographers
 from core.registry import FactionRegistry
 from core.i18n.translations import t, lang_de_cfg
+from core.services.run_manifest import start_run, complete_run
 
 
 def readj(p, d):
@@ -115,6 +116,7 @@ def main():
     modo_semente = cfg.get('SIMULACAO', 'modo_semente', fallback='fixo').strip().lower()
     seed = cfg.getint('SIMULACAO', 'semente') if modo_semente == 'fixo' else time.time_ns()
     random.seed(seed)
+    run_manifest = start_run(seed, modo_semente)
     prepare_new_run(cfg)
 
     world, hist = build(cfg)
@@ -252,6 +254,14 @@ def main():
     externos.append(registo_externo(corr['entidade'], 'Entidade Maléfica', corr['chave_corrompida'], 'corrupcao_final', final_generation, 'Abismo'))
 
     # ── Persist data ──────────────────────────────────────────────────────────
+    # Tag every record from this run with run_id — so the Hero Evaluation
+    # Engine (evaluate_heroes.py) can later resolve run_manifest.py's
+    # timestamps and prove (or admit it can't prove) temporal provenance.
+    for r in evo['registos']:
+        r['run_id'] = run_manifest['run_id']
+    for e in externos:
+        e['run_id'] = run_manifest['run_id']
+
     arq = readj('datasets/generated/simulations/arquivo_destino.json', [])
     arq.extend(evo['registos'])
     arq.extend(externos)
@@ -309,6 +319,11 @@ def main():
         'conviccao_sombria': conviction,
         'cartografos': cartografos,
     }, rel)
+
+    complete_run(
+        run_manifest, report_path=rel,
+        generated_record_count=len(evo['registos']) + len(externos),
+    )
 
     # ── Summary ───────────────────────────────────────────────────────────────
     lang = lang_de_cfg(cfg)

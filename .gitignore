@@ -10,7 +10,13 @@ build/
 .eggs/
 
 # Runtime data (generated during simulation)
-/datasets/generated/
+/datasets/generated/*
+!/datasets/generated/simulations/
+/datasets/generated/simulations/*
+!/datasets/generated/simulations/runs/
+/datasets/generated/simulations/runs/*
+!/datasets/generated/simulations/runs/RUN-*.json
+/datasets/generated/simulations/runs/*.incomplete.json
 experiments/reports/generated/
 experiments/axiomancers/runs/
 

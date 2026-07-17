@@ -4,12 +4,10 @@ each discovered yearly file, so a bad update to any one of them fails
 locally here instead of silently corrupting the historical record.
 """
 
-import json
 import unittest
 from datetime import datetime
-from pathlib import Path
 
-DATASET_ROOT = Path(__file__).resolve().parent.parent / "datasets" / "historical" / "euromillions"
+from core.services.historical_dataset import DATASET_ROOT, discover_datasets, load_dataset
 
 # Fields every draw entry must have, regardless of which year it's from —
 # the intersection observed across the 2004-2026 files (some later years add
@@ -20,14 +18,6 @@ REQUIRED_DRAW_FIELDS = {
     "historico_no_conjunto", "estatisticas_financeiras", "premios",
     "astronomia", "identificadores", "qualidade_dados",
 }
-
-
-def discover_datasets():
-    return sorted(DATASET_ROOT.glob("*/*.json"))
-
-
-def load_dataset(path):
-    return json.loads(path.read_text(encoding="utf-8"))
 
 
 class TestHistoricalDatasets(unittest.TestCase):
