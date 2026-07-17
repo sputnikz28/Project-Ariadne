@@ -3,13 +3,13 @@
   "jogo": "Euromilhões",
   "pais_fonte": "Portugal",
   "moeda": "EUR",
-  "estado_dataset": "parcial para 2026; inclui os sorteios 001 a 055, até 10 de julho de 2026",
+  "estado_dataset": "parcial para 2026; inclui os sorteios 001 a 056, até 14 de julho de 2026",
   "intervalo": {
     "primeiro_sorteio": "001/2026",
-    "ultimo_sorteio": "055/2026",
+    "ultimo_sorteio": "056/2026",
     "data_inicio": "2026-01-02",
-    "data_fim": "2026-07-10",
-    "quantidade_sorteios": 55
+    "data_fim": "2026-07-14",
+    "quantidade_sorteios": 56
   },
   "regras_representadas": {
     "numeros_por_chave": 5,
@@ -41,7 +41,7 @@
       "7": 4,
       "8": 6,
       "9": 3,
-      "10": 9,
+      "10": 10,
       "11": 2,
       "12": 5,
       "13": 7,
@@ -50,7 +50,7 @@
       "16": 6,
       "17": 10,
       "18": 8,
-      "19": 5,
+      "19": 6,
       "20": 3,
       "21": 1,
       "22": 4,
@@ -68,17 +68,17 @@
       "34": 7,
       "35": 6,
       "36": 3,
-      "37": 9,
+      "37": 10,
       "38": 4,
       "39": 3,
       "40": 4,
       "41": 8,
-      "42": 8,
+      "42": 9,
       "43": 4,
       "44": 7,
       "45": 5,
       "46": 8,
-      "47": 8,
+      "47": 9,
       "48": 4,
       "49": 3,
       "50": 4
@@ -92,14 +92,22 @@
       "6": 12,
       "7": 8,
       "8": 9,
-      "9": 11,
+      "9": 12,
       "10": 11,
       "11": 6,
-      "12": 8
+      "12": 9
     },
     "ranking_numeros": [
       {
+        "numero": 10,
+        "frequencia": 10
+      },
+      {
         "numero": 17,
+        "frequencia": 10
+      },
+      {
+        "numero": 37,
         "frequencia": 10
       },
       {
@@ -107,15 +115,15 @@
         "frequencia": 9
       },
       {
-        "numero": 10,
-        "frequencia": 9
-      },
-      {
         "numero": 14,
         "frequencia": 9
       },
       {
-        "numero": 37,
+        "numero": 42,
+        "frequencia": 9
+      },
+      {
+        "numero": 47,
         "frequencia": 9
       },
       {
@@ -139,15 +147,7 @@
         "frequencia": 8
       },
       {
-        "numero": 42,
-        "frequencia": 8
-      },
-      {
         "numero": 46,
-        "frequencia": 8
-      },
-      {
-        "numero": 47,
         "frequencia": 8
       },
       {
@@ -187,6 +187,10 @@
         "frequencia": 6
       },
       {
+        "numero": 19,
+        "frequencia": 6
+      },
+      {
         "numero": 23,
         "frequencia": 6
       },
@@ -204,10 +208,6 @@
       },
       {
         "numero": 12,
-        "frequencia": 5
-      },
-      {
-        "numero": 19,
         "frequencia": 5
       },
       {
@@ -314,7 +314,7 @@
       },
       {
         "estrela": 9,
-        "frequencia": 11
+        "frequencia": 12
       },
       {
         "estrela": 10,
@@ -325,11 +325,11 @@
         "frequencia": 9
       },
       {
-        "estrela": 7,
-        "frequencia": 8
+        "estrela": 12,
+        "frequencia": 9
       },
       {
-        "estrela": 12,
+        "estrela": 7,
         "frequencia": 8
       },
       {
@@ -349,7 +349,7 @@
         "frequencia": 6
       }
     ],
-    "sorteios_com_ordem_saida": 30,
+    "sorteios_com_ordem_saida": 31,
     "sorteios_sem_ordem_saida": 25,
     "sorteios_com_dados_financeiros": 15
   },
@@ -359,8 +359,9 @@
     "Os dados financeiros e todas as categorias de prémios estão completos apenas onde foram visíveis nas imagens anteriores.",
     "Campos não disponíveis são representados por null, sem inventar valores.",
     "Os dados astronómicos são cálculos aproximados para as 20:00 em Paris.",
-    "O ficheiro cobre 2026 apenas até ao sorteio 055/2026, realizado em 10 de julho de 2026.",
-    "Estatísticas históricas são calculadas apenas dentro deste conjunto de 55 sorteios."
+    "O ficheiro cobre 2026 apenas até ao sorteio 056/2026, realizado em 14 de julho de 2026.",
+    "Estatísticas históricas são calculadas apenas dentro deste conjunto de 56 sorteios.",
+    "O sorteio 056/2026 usa uma aproximação de baixa precisão (Meeus, cálculo stdlib Python) para os dados astronómicos, distinta do Swiss Ephemeris usado nos sorteios 001-055; ver o campo 'metodo' em astronomia desse sorteio."
   ],
   "sorteios": [
     {
@@ -16915,6 +16916,287 @@
           "receita_liquida_apostas_eur",
           "montante_para_premios_eur",
           "categorias_premio"
+        ]
+      }
+    },
+    {
+      "numero_sorteio": "056/2026",
+      "data": "2026-07-14",
+      "dia_semana": "terça-feira",
+      "horario": {
+        "hora_paris": "20:00:00",
+        "fuso_paris": "Europe/Paris",
+        "timestamp_paris": "2026-07-14T20:00:00+02:00",
+        "hora_portugal": "19:00:00",
+        "fuso_portugal": "Europe/Lisbon",
+        "timestamp_portugal": "2026-07-14T19:00:00+01:00",
+        "hora_utc": "18:00:00",
+        "timestamp_utc": "2026-07-14T18:00:00+00:00"
+      },
+      "calendario": {
+        "ano": 2026,
+        "mes": 7,
+        "dia": 14,
+        "dia_do_ano": 195,
+        "semana_iso": 29,
+        "ano_iso": 2026,
+        "trimestre": 3,
+        "semestre": 2,
+        "fim_de_semana": false,
+        "timestamp_unix_utc": 1784048400
+      },
+      "chave": {
+        "numeros": [
+          10,
+          19,
+          37,
+          42,
+          47
+        ],
+        "estrelas": [
+          9,
+          12
+        ],
+        "formato": "10 19 37 42 47 + 9 12"
+      },
+      "ordem_saida": {
+        "numeros": [
+          42,
+          10,
+          19,
+          37,
+          47
+        ],
+        "estrelas": [
+          9,
+          12
+        ],
+        "formato": "42 10 19 37 47 + 9 12"
+      },
+      "ordem_saida_disponivel": true,
+      "fonte_ordem_saida": "texto fornecido pelo utilizador",
+      "estatisticas_chave": {
+        "soma_numeros": 155,
+        "produto_numeros": 13877220,
+        "media_numeros": 31.0,
+        "mediana_numeros": 37,
+        "desvio_padrao_populacional": 14.128,
+        "variancia_populacional": 199.6,
+        "minimo": 10,
+        "maximo": 47,
+        "amplitude": 37,
+        "pares": [
+          10,
+          42
+        ],
+        "impares": [
+          19,
+          37,
+          47
+        ],
+        "quantidade_pares": 2,
+        "quantidade_impares": 3,
+        "baixos_1_25": [
+          10,
+          19
+        ],
+        "altos_26_50": [
+          37,
+          42,
+          47
+        ],
+        "primos": [
+          19,
+          37,
+          47
+        ],
+        "fibonacci": [],
+        "quadrados_perfeitos": [],
+        "triangulares": [
+          10
+        ],
+        "multiplos_de_3": [
+          42
+        ],
+        "multiplos_de_5": [
+          10
+        ],
+        "distribuicao_por_dezenas": {
+          "01-10": 1,
+          "11-20": 1,
+          "21-30": 0,
+          "31-40": 1,
+          "41-50": 2
+        },
+        "distribuicao_por_colunas_mod_5": {
+          "1": 0,
+          "2": 3,
+          "3": 0,
+          "4": 1,
+          "5": 1
+        },
+        "intervalos_ordenados": [
+          9,
+          18,
+          5,
+          5
+        ],
+        "media_intervalos": 9.25,
+        "maior_intervalo": 18,
+        "menor_intervalo": 5,
+        "sequencias_consecutivas": [],
+        "repetidos_sorteio_anterior": [],
+        "estrelas_repetidas_sorteio_anterior": [],
+        "soma_estrelas": 21,
+        "media_estrelas": 10.5,
+        "amplitude_estrelas": 3,
+        "estrelas_pares": [
+          12
+        ],
+        "estrelas_impares": [
+          9
+        ],
+        "vetor_binario_numeros_1_50": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "vetor_binario_estrelas_1_12": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          1
+        ]
+      },
+      "historico_no_conjunto": {
+        "indice_no_conjunto": 55,
+        "atraso_numeros_em_sorteios": {
+          "10": 17,
+          "19": 19,
+          "37": 4,
+          "42": 7,
+          "47": 2
+        },
+        "atraso_estrelas_em_sorteios": {
+          "9": 8,
+          "12": 5
+        },
+        "frequencia_acumulada_numeros_ate_este_sorteio": {
+          "10": 10,
+          "19": 6,
+          "37": 10,
+          "42": 9,
+          "47": 9
+        },
+        "frequencia_acumulada_estrelas_ate_este_sorteio": {
+          "9": 12,
+          "12": 9
+        }
+      },
+      "estatisticas_financeiras": {
+        "receita_liquida_apostas_eur": null,
+        "montante_para_premios_eur": null,
+        "percentagem_receita_para_premios": null,
+        "previsao_1_premio_com_jackpot_eur": null,
+        "registos_portugal": null,
+        "combinacoes_registadas_portugal": null,
+        "apostas_registadas_portugal": null,
+        "combinacoes_por_registo": null,
+        "apostas_por_registo": null,
+        "receita_media_por_aposta_eur": null
+      },
+      "premios": {
+        "categorias": null,
+        "houve_vencedor_1_premio_total": null,
+        "houve_vencedor_1_premio_portugal": null,
+        "total_vencedores_todas_categorias": null,
+        "total_vencedores_portugal_todas_categorias": null
+      },
+      "astronomia": {
+        "instante_utc": "2026-07-14T18:00:00+00:00",
+        "fase_lua": "Lua nova",
+        "idade_lunar_dias_aprox": 0.395,
+        "iluminacao_lunar_percent_aprox": 0.239,
+        "elongacao_lua_sol_graus_aprox": 4.814,
+        "longitude_ecliptica_lua_graus": 117.1309,
+        "latitude_ecliptica_lua_graus": 2.839976,
+        "distancia_terra_lua_km_aprox": 361040,
+        "longitude_ecliptica_sol_graus": 112.31739,
+        "distancia_terra_sol_km_aprox": 152064652,
+        "eclipse_no_instante": false,
+        "metodo": "Aproximação Meeus (baixa precisão, cálculo stdlib Python; ver notas_metodologicas) — geocêntrico para as 20:00 em Paris. Distinto do Swiss Ephemeris usado nos sorteios 001-055."
+      },
+      "identificadores": {
+        "chave_canonica": "10-19-37-42-47+9-12",
+        "sha256_chave": "865e551a658cd25996374b4688a1500c14d4242e4bab244358e503b3070188c7",
+        "id_composto": "euromilhoes-056-2026"
+      },
+      "qualidade_dados": {
+        "fonte_resultado": "texto fornecido pelo utilizador",
+        "transcricao_manual": true,
+        "ordem_saida_confirmada": true,
+        "dados_financeiros_disponiveis": false,
+        "categorias_premio_disponiveis": false,
+        "campos_em_falta": [
+          "receita_liquida_apostas_eur",
+          "montante_para_premios_eur",
+          "categorias_premio",
+          "previsao_1_premio_com_jackpot_eur"
         ]
       }
     }
