@@ -353,6 +353,30 @@ incluir_2_0 = false
 1+2 = TIER_5
 2+0 = TIER_5
 
+###################################################
+# LEGENDS REGISTRY — V12.1
+###################################################
+
+[REGISTO_LENDAS]
+# Non-empty, human-maintained version marker. Stamped onto every Legend
+# promoted while this value is active; never re-derived automatically.
+# Bump it manually whenever limiares/[REGISTO_LENDAS_TIERS] change
+# meaningfully — existing Legends keep whatever criteria_version was
+# active at their own promotion, forever.
+criteria_version = v1
+
+# Positive, unique thresholds — distinct qualifying draws required for a
+# prediction to be promoted. The smallest value here is the actual bar
+# for a first promotion; it must never be 1 (a Legend, by definition,
+# requires multiple sorteios, never a single one).
+limiares = 3,5,10,20
+
+[REGISTO_LENDAS_TIERS]
+3  = LEGEND_TIER_4
+5  = LEGEND_TIER_3
+10 = LEGEND_TIER_2
+20 = LEGEND_TIER_1
+
 [DEBUG]
 mostrar_seed = true
 modo_verbose = false
