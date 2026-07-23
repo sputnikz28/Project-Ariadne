@@ -3,13 +3,13 @@
   "jogo": "Euromilhões",
   "pais_fonte": "Portugal",
   "moeda": "EUR",
-  "estado_dataset": "parcial para 2026; inclui os sorteios 001 a 056, até 14 de julho de 2026",
+  "estado_dataset": "parcial para 2026; inclui os sorteios 001 a 058, até 21 de julho de 2026",
   "intervalo": {
     "primeiro_sorteio": "001/2026",
-    "ultimo_sorteio": "056/2026",
+    "ultimo_sorteio": "058/2026",
     "data_inicio": "2026-01-02",
-    "data_fim": "2026-07-14",
-    "quantidade_sorteios": 56
+    "data_fim": "2026-07-21",
+    "quantidade_sorteios": 58
   },
   "regras_representadas": {
     "numeros_por_chave": 5,
@@ -361,7 +361,8 @@
     "Os dados astronómicos são cálculos aproximados para as 20:00 em Paris.",
     "O ficheiro cobre 2026 apenas até ao sorteio 056/2026, realizado em 14 de julho de 2026.",
     "Estatísticas históricas são calculadas apenas dentro deste conjunto de 56 sorteios.",
-    "O sorteio 056/2026 usa uma aproximação de baixa precisão (Meeus, cálculo stdlib Python) para os dados astronómicos, distinta do Swiss Ephemeris usado nos sorteios 001-055; ver o campo 'metodo' em astronomia desse sorteio."
+    "O sorteio 056/2026 usa uma aproximação de baixa precisão (Meeus, cálculo stdlib Python) para os dados astronómicos, distinta do Swiss Ephemeris usado nos sorteios 001-055; ver o campo 'metodo' em astronomia desse sorteio.",
+    "O ficheiro cobre 2026 até ao sorteio 058/2026 (21 de julho de 2026). Os sorteios 057/2026 e 058/2026 usam a mesma aproximação de baixa precisão (Meeus, cálculo stdlib Python) já usada em 056/2026 para os dados astronómicos, distinta do Swiss Ephemeris usado nos sorteios 001-055."
   ],
   "sorteios": [
     {
@@ -17185,6 +17186,580 @@
         "chave_canonica": "10-19-37-42-47+9-12",
         "sha256_chave": "865e551a658cd25996374b4688a1500c14d4242e4bab244358e503b3070188c7",
         "id_composto": "euromilhoes-056-2026"
+      },
+      "qualidade_dados": {
+        "fonte_resultado": "texto fornecido pelo utilizador",
+        "transcricao_manual": true,
+        "ordem_saida_confirmada": true,
+        "dados_financeiros_disponiveis": false,
+        "categorias_premio_disponiveis": false,
+        "campos_em_falta": [
+          "receita_liquida_apostas_eur",
+          "montante_para_premios_eur",
+          "categorias_premio",
+          "previsao_1_premio_com_jackpot_eur"
+        ]
+      }
+    },
+    {
+      "numero_sorteio": "057/2026",
+      "data": "2026-07-17",
+      "dia_semana": "sexta-feira",
+      "horario": {
+        "hora_paris": "20:00:00",
+        "fuso_paris": "Europe/Paris",
+        "timestamp_paris": "2026-07-17T20:00:00+02:00",
+        "hora_portugal": "19:00:00",
+        "fuso_portugal": "Europe/Lisbon",
+        "timestamp_portugal": "2026-07-17T19:00:00+01:00",
+        "hora_utc": "18:00:00",
+        "timestamp_utc": "2026-07-17T18:00:00+00:00"
+      },
+      "calendario": {
+        "ano": 2026,
+        "mes": 7,
+        "dia": 17,
+        "dia_do_ano": 198,
+        "semana_iso": 29,
+        "ano_iso": 2026,
+        "trimestre": 3,
+        "semestre": 2,
+        "fim_de_semana": false,
+        "timestamp_unix_utc": 1784311200
+      },
+      "chave": {
+        "numeros": [
+          12,
+          21,
+          23,
+          34,
+          40
+        ],
+        "estrelas": [
+          9,
+          10
+        ],
+        "formato": "12 21 23 34 40 + 9 10"
+      },
+      "ordem_saida": {
+        "numeros": [
+          34,
+          21,
+          40,
+          12,
+          23
+        ],
+        "estrelas": [
+          10,
+          9
+        ],
+        "formato": "34 21 40 12 23 + 10 9"
+      },
+      "ordem_saida_disponivel": true,
+      "fonte_ordem_saida": "texto fornecido pelo utilizador",
+      "estatisticas_chave": {
+        "soma_numeros": 130,
+        "produto_numeros": 7882560,
+        "media_numeros": 26.0,
+        "mediana_numeros": 23,
+        "desvio_padrao_populacional": 9.899,
+        "variancia_populacional": 98.0,
+        "minimo": 12,
+        "maximo": 40,
+        "amplitude": 28,
+        "pares": [
+          12,
+          34,
+          40
+        ],
+        "impares": [
+          21,
+          23
+        ],
+        "quantidade_pares": 3,
+        "quantidade_impares": 2,
+        "baixos_1_25": [
+          12,
+          21,
+          23
+        ],
+        "altos_26_50": [
+          34,
+          40
+        ],
+        "primos": [
+          23
+        ],
+        "fibonacci": [
+          21,
+          34
+        ],
+        "quadrados_perfeitos": [],
+        "triangulares": [
+          21
+        ],
+        "multiplos_de_3": [
+          12,
+          21
+        ],
+        "multiplos_de_5": [
+          40
+        ],
+        "distribuicao_por_dezenas": {
+          "01-10": 0,
+          "11-20": 1,
+          "21-30": 2,
+          "31-40": 2,
+          "41-50": 0
+        },
+        "distribuicao_por_colunas_mod_5": {
+          "1": 1,
+          "2": 1,
+          "3": 1,
+          "4": 1,
+          "5": 1
+        },
+        "intervalos_ordenados": [
+          9,
+          2,
+          11,
+          6
+        ],
+        "media_intervalos": 7.0,
+        "maior_intervalo": 11,
+        "menor_intervalo": 2,
+        "sequencias_consecutivas": [],
+        "repetidos_sorteio_anterior": [],
+        "estrelas_repetidas_sorteio_anterior": [
+          9
+        ],
+        "soma_estrelas": 19,
+        "media_estrelas": 9.5,
+        "amplitude_estrelas": 1,
+        "estrelas_pares": [
+          10
+        ],
+        "estrelas_impares": [
+          9
+        ],
+        "vetor_binario_numeros_1_50": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "vetor_binario_estrelas_1_12": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "historico_no_conjunto": {
+        "indice_no_conjunto": 56,
+        "atraso_numeros_em_sorteios": {
+          "12": 4,
+          "21": 50,
+          "23": 10,
+          "34": 6,
+          "40": 24
+        },
+        "atraso_estrelas_em_sorteios": {
+          "9": 1,
+          "10": 2
+        },
+        "frequencia_acumulada_numeros_ate_este_sorteio": {
+          "12": 6,
+          "21": 2,
+          "23": 7,
+          "34": 8,
+          "40": 5
+        },
+        "frequencia_acumulada_estrelas_ate_este_sorteio": {
+          "9": 13,
+          "10": 12
+        }
+      },
+      "estatisticas_financeiras": {
+        "receita_liquida_apostas_eur": null,
+        "montante_para_premios_eur": null,
+        "percentagem_receita_para_premios": null,
+        "previsao_1_premio_com_jackpot_eur": null,
+        "registos_portugal": null,
+        "combinacoes_registadas_portugal": null,
+        "apostas_registadas_portugal": null,
+        "combinacoes_por_registo": null,
+        "apostas_por_registo": null,
+        "receita_media_por_aposta_eur": null
+      },
+      "premios": {
+        "categorias": null,
+        "houve_vencedor_1_premio_total": null,
+        "houve_vencedor_1_premio_portugal": null,
+        "total_vencedores_todas_categorias": null,
+        "total_vencedores_portugal_todas_categorias": null
+      },
+      "astronomia": {
+        "instante_utc": "2026-07-17T18:00:00+00:00",
+        "fase_lua": "Lua crescente côncava",
+        "idade_lunar_dias_aprox": 3.713,
+        "iluminacao_lunar_percent_aprox": 0.148,
+        "elongacao_lua_sol_graus_aprox": 45.269,
+        "longitude_ecliptica_lua_graus": 160.4517,
+        "latitude_ecliptica_lua_graus": -0.861971,
+        "distancia_terra_lua_km_aprox": 373990,
+        "longitude_ecliptica_sol_graus": 115.18264,
+        "distancia_terra_sol_km_aprox": 152041473,
+        "eclipse_no_instante": false,
+        "metodo": "Aproximação Meeus (baixa precisão, cálculo stdlib Python; ver notas_metodologicas) — geocêntrico para as 20:00 em Paris. Distinto do Swiss Ephemeris usado nos sorteios 001-055."
+      },
+      "identificadores": {
+        "chave_canonica": "12-21-23-34-40+9-10",
+        "sha256_chave": "d5dade7601d49ea52f0b08d1182ec906ea97a46555aef0a6601f54eeb6a57e5a",
+        "id_composto": "euromilhoes-057-2026"
+      },
+      "qualidade_dados": {
+        "fonte_resultado": "texto fornecido pelo utilizador",
+        "transcricao_manual": true,
+        "ordem_saida_confirmada": true,
+        "dados_financeiros_disponiveis": false,
+        "categorias_premio_disponiveis": false,
+        "campos_em_falta": [
+          "receita_liquida_apostas_eur",
+          "montante_para_premios_eur",
+          "categorias_premio",
+          "previsao_1_premio_com_jackpot_eur"
+        ]
+      }
+    },
+    {
+      "numero_sorteio": "058/2026",
+      "data": "2026-07-21",
+      "dia_semana": "terça-feira",
+      "horario": {
+        "hora_paris": "20:00:00",
+        "fuso_paris": "Europe/Paris",
+        "timestamp_paris": "2026-07-21T20:00:00+02:00",
+        "hora_portugal": "19:00:00",
+        "fuso_portugal": "Europe/Lisbon",
+        "timestamp_portugal": "2026-07-21T19:00:00+01:00",
+        "hora_utc": "18:00:00",
+        "timestamp_utc": "2026-07-21T18:00:00+00:00"
+      },
+      "calendario": {
+        "ano": 2026,
+        "mes": 7,
+        "dia": 21,
+        "dia_do_ano": 202,
+        "semana_iso": 30,
+        "ano_iso": 2026,
+        "trimestre": 3,
+        "semestre": 2,
+        "fim_de_semana": false,
+        "timestamp_unix_utc": 1784656800
+      },
+      "chave": {
+        "numeros": [
+          2,
+          3,
+          8,
+          28,
+          39
+        ],
+        "estrelas": [
+          2,
+          11
+        ],
+        "formato": "2 3 8 28 39 + 2 11"
+      },
+      "ordem_saida": {
+        "numeros": [
+          39,
+          8,
+          28,
+          2,
+          3
+        ],
+        "estrelas": [
+          11,
+          2
+        ],
+        "formato": "39 8 28 2 3 + 11 2"
+      },
+      "ordem_saida_disponivel": true,
+      "fonte_ordem_saida": "texto fornecido pelo utilizador",
+      "estatisticas_chave": {
+        "soma_numeros": 80,
+        "produto_numeros": 52416,
+        "media_numeros": 16.0,
+        "mediana_numeros": 8,
+        "desvio_padrao_populacional": 14.846,
+        "variancia_populacional": 220.4,
+        "minimo": 2,
+        "maximo": 39,
+        "amplitude": 37,
+        "pares": [
+          2,
+          8,
+          28
+        ],
+        "impares": [
+          3,
+          39
+        ],
+        "quantidade_pares": 3,
+        "quantidade_impares": 2,
+        "baixos_1_25": [
+          2,
+          3,
+          8
+        ],
+        "altos_26_50": [
+          28,
+          39
+        ],
+        "primos": [
+          2,
+          3
+        ],
+        "fibonacci": [
+          2,
+          3,
+          8
+        ],
+        "quadrados_perfeitos": [],
+        "triangulares": [
+          3,
+          28
+        ],
+        "multiplos_de_3": [
+          3,
+          39
+        ],
+        "multiplos_de_5": [],
+        "distribuicao_por_dezenas": {
+          "01-10": 3,
+          "11-20": 0,
+          "21-30": 1,
+          "31-40": 1,
+          "41-50": 0
+        },
+        "distribuicao_por_colunas_mod_5": {
+          "1": 0,
+          "2": 1,
+          "3": 3,
+          "4": 1,
+          "5": 0
+        },
+        "intervalos_ordenados": [
+          1,
+          5,
+          20,
+          11
+        ],
+        "media_intervalos": 9.25,
+        "maior_intervalo": 20,
+        "menor_intervalo": 1,
+        "sequencias_consecutivas": [
+          [
+            2,
+            3
+          ]
+        ],
+        "repetidos_sorteio_anterior": [],
+        "estrelas_repetidas_sorteio_anterior": [],
+        "soma_estrelas": 13,
+        "media_estrelas": 6.5,
+        "amplitude_estrelas": 9,
+        "estrelas_pares": [
+          2
+        ],
+        "estrelas_impares": [
+          11
+        ],
+        "vetor_binario_numeros_1_50": [
+          0,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "vetor_binario_estrelas_1_12": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      "historico_no_conjunto": {
+        "indice_no_conjunto": 57,
+        "atraso_numeros_em_sorteios": {
+          "2": 3,
+          "3": 8,
+          "8": 6,
+          "28": 3,
+          "39": 5
+        },
+        "atraso_estrelas_em_sorteios": {
+          "2": 5,
+          "11": 7
+        },
+        "frequencia_acumulada_numeros_ate_este_sorteio": {
+          "2": 7,
+          "3": 5,
+          "8": 7,
+          "28": 8,
+          "39": 4
+        },
+        "frequencia_acumulada_estrelas_ate_este_sorteio": {
+          "2": 13,
+          "11": 7
+        }
+      },
+      "estatisticas_financeiras": {
+        "receita_liquida_apostas_eur": null,
+        "montante_para_premios_eur": null,
+        "percentagem_receita_para_premios": null,
+        "previsao_1_premio_com_jackpot_eur": null,
+        "registos_portugal": null,
+        "combinacoes_registadas_portugal": null,
+        "apostas_registadas_portugal": null,
+        "combinacoes_por_registo": null,
+        "apostas_por_registo": null,
+        "receita_media_por_aposta_eur": null
+      },
+      "premios": {
+        "categorias": null,
+        "houve_vencedor_1_premio_total": null,
+        "houve_vencedor_1_premio_portugal": null,
+        "total_vencedores_todas_categorias": null,
+        "total_vencedores_portugal_todas_categorias": null
+      },
+      "astronomia": {
+        "instante_utc": "2026-07-21T18:00:00+00:00",
+        "fase_lua": "Quarto crescente",
+        "idade_lunar_dias_aprox": 7.663,
+        "iluminacao_lunar_percent_aprox": 0.53,
+        "elongacao_lua_sol_graus_aprox": 93.42,
+        "longitude_ecliptica_lua_graus": 212.4198,
+        "latitude_ecliptica_lua_graus": -4.613147,
+        "distancia_terra_lua_km_aprox": 397094,
+        "longitude_ecliptica_sol_graus": 118.99997,
+        "distancia_terra_sol_km_aprox": 152000776,
+        "eclipse_no_instante": false,
+        "metodo": "Aproximação Meeus (baixa precisão, cálculo stdlib Python; ver notas_metodologicas) — geocêntrico para as 20:00 em Paris. Distinto do Swiss Ephemeris usado nos sorteios 001-055."
+      },
+      "identificadores": {
+        "chave_canonica": "2-3-8-28-39+2-11",
+        "sha256_chave": "99e783700ad8e326ac2c57dc80a46d0f1035a1d950cfbddf6cf283c0aba35196",
+        "id_composto": "euromilhoes-058-2026"
       },
       "qualidade_dados": {
         "fonte_resultado": "texto fornecido pelo utilizador",
