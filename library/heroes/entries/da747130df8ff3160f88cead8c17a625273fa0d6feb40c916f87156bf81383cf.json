@@ -1,0 +1,78 @@
+{
+  "hero_id": "HERO-2026-057-da747130",
+  "dedup_hash": "da747130df8ff3160f88cead8c17a625273fa0d6feb40c916f87156bf81383cf",
+  "source_prediction_id": "4c768c1c3375a23eeff6ed0b83ffabe066f17c82981d59147e0b07db41b1082b",
+  "entity_id": "H-00588",
+  "entity_name": "Thara do Bosque",
+  "race": "Esqueleto",
+  "generation": 11,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "057/2026",
+  "draw_date": "2026-07-17",
+  "official_key": {
+    "numeros": [
+      12,
+      21,
+      23,
+      34,
+      40
+    ],
+    "estrelas": [
+      9,
+      10
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      23,
+      26,
+      27,
+      31,
+      32
+    ],
+    "estrelas": [
+      9,
+      10
+    ]
+  },
+  "matched_numbers_count": 1,
+  "matched_stars_count": 2,
+  "exact_matched_values": {
+    "numeros": [
+      23
+    ],
+    "estrelas": [
+      9,
+      10
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      12,
+      21,
+      34,
+      40
+    ],
+    "estrelas": []
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      26,
+      27,
+      31,
+      32
+    ],
+    "estrelas": []
+  },
+  "hero_category": "1+2",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_058_dataset_completo.json",
+  "qualification_reason": "Matched 1 main numbers and 2 lucky stars against official draw 057/2026 (category 1+2).",
+  "registered_at": "2026-07-22T09:09:30+00:00"
+}

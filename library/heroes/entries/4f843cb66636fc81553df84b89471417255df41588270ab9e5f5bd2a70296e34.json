@@ -1,0 +1,78 @@
+{
+  "hero_id": "HERO-2026-057-4f843cb6",
+  "dedup_hash": "4f843cb66636fc81553df84b89471417255df41588270ab9e5f5bd2a70296e34",
+  "source_prediction_id": "097700e0c98c9ba8549a4174b939281dfe66eb7f2db4afbad82fe0187194b98d",
+  "entity_id": "H-00560",
+  "entity_name": "Aion Pedra-Partida",
+  "race": "Vidente",
+  "generation": 11,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "057/2026",
+  "draw_date": "2026-07-17",
+  "official_key": {
+    "numeros": [
+      12,
+      21,
+      23,
+      34,
+      40
+    ],
+    "estrelas": [
+      9,
+      10
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      12,
+      21,
+      23,
+      36,
+      40
+    ],
+    "estrelas": [
+      6,
+      9
+    ]
+  },
+  "matched_numbers_count": 4,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      12,
+      21,
+      23,
+      40
+    ],
+    "estrelas": [
+      9
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      34
+    ],
+    "estrelas": [
+      10
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      36
+    ],
+    "estrelas": [
+      6
+    ]
+  },
+  "hero_category": "4+1",
+  "hero_tier": "TIER_3",
+  "simulation_score": 53,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_058_dataset_completo.json",
+  "qualification_reason": "Matched 4 main numbers and 1 lucky stars against official draw 057/2026 (category 4+1).",
+  "registered_at": "2026-07-22T09:09:35+00:00"
+}

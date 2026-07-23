@@ -1,0 +1,79 @@
+{
+  "hero_id": "HERO-2026-056-9e98c1e9",
+  "dedup_hash": "9e98c1e9c5a37614071bbea1129e3fb6bc778a17d968e5c79fb59cafcf6e3341",
+  "source_prediction_id": "dfe9c7978dc2e947b68070602bcbda9ee62f5cf149d433daaf4c94771ffe9a3a",
+  "entity_id": "H-00036",
+  "entity_name": "Gruk do Bosque",
+  "race": "Vidente",
+  "generation": 4,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "056/2026",
+  "draw_date": "2026-07-14",
+  "official_key": {
+    "numeros": [
+      10,
+      19,
+      37,
+      42,
+      47
+    ],
+    "estrelas": [
+      9,
+      12
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      1,
+      10,
+      37,
+      42,
+      49
+    ],
+    "estrelas": [
+      2,
+      3
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 0,
+  "exact_matched_values": {
+    "numeros": [
+      10,
+      37,
+      42
+    ],
+    "estrelas": []
+  },
+  "missed_winning_values": {
+    "numeros": [
+      19,
+      47
+    ],
+    "estrelas": [
+      9,
+      12
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      1,
+      49
+    ],
+    "estrelas": [
+      2,
+      3
+    ]
+  },
+  "hero_category": "3+0",
+  "hero_tier": "TIER_4",
+  "simulation_score": 38,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_056_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 0 lucky stars against official draw 056/2026 (category 3+0).",
+  "registered_at": "2026-07-17T16:02:49+00:00"
+}

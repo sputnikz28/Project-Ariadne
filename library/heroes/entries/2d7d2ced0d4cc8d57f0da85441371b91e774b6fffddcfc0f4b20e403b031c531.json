@@ -1,0 +1,80 @@
+{
+  "hero_id": "HERO-2026-058-2d7d2ced",
+  "dedup_hash": "2d7d2ced0d4cc8d57f0da85441371b91e774b6fffddcfc0f4b20e403b031c531",
+  "source_prediction_id": "ca708b95dab0a5c889814fe5fc9026d7ce86352acfcc48bf4438c5107f0d12f5",
+  "entity_id": "Veyron Eclipse #2",
+  "entity_name": "Veyron Eclipse #2",
+  "race": "Mago do Esquadrão Negro",
+  "generation": 14,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "058/2026",
+  "draw_date": "2026-07-21",
+  "official_key": {
+    "numeros": [
+      2,
+      3,
+      8,
+      28,
+      39
+    ],
+    "estrelas": [
+      2,
+      11
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      2,
+      19,
+      23,
+      39,
+      48
+    ],
+    "estrelas": [
+      2,
+      5
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      2,
+      39
+    ],
+    "estrelas": [
+      2
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      3,
+      8,
+      28
+    ],
+    "estrelas": [
+      11
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      19,
+      23,
+      48
+    ],
+    "estrelas": [
+      5
+    ]
+  },
+  "hero_category": "2+1",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_058_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 1 lucky stars against official draw 058/2026 (category 2+1).",
+  "registered_at": "2026-07-22T09:10:20+00:00"
+}

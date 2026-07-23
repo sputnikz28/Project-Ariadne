@@ -1,0 +1,79 @@
+{
+  "hero_id": "HERO-2026-057-3e4896a4",
+  "dedup_hash": "3e4896a45785d52ee19584e18d848d32bdeb9c1c5e9823240abda3073498eea5",
+  "source_prediction_id": "45451ac81aabfebc11cce4ce154ee2f382017b390f016f6557421506fdf42e80",
+  "entity_id": "Marfim das Seis Estrelas",
+  "entity_name": "Marfim das Seis Estrelas",
+  "race": "Esqueleto das Catacumbas",
+  "generation": 14,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "057/2026",
+  "draw_date": "2026-07-17",
+  "official_key": {
+    "numeros": [
+      12,
+      21,
+      23,
+      34,
+      40
+    ],
+    "estrelas": [
+      9,
+      10
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      12,
+      13,
+      21,
+      23,
+      28
+    ],
+    "estrelas": [
+      6,
+      9
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      12,
+      21,
+      23
+    ],
+    "estrelas": [
+      9
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      34,
+      40
+    ],
+    "estrelas": [
+      10
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      13,
+      28
+    ],
+    "estrelas": [
+      6
+    ]
+  },
+  "hero_category": "3+1",
+  "hero_tier": "TIER_4",
+  "simulation_score": 43,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_058_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 1 lucky stars against official draw 057/2026 (category 3+1).",
+  "registered_at": "2026-07-22T09:09:38+00:00"
+}

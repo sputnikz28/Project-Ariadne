@@ -1,0 +1,80 @@
+{
+  "hero_id": "HERO-2026-056-8f21ee40",
+  "dedup_hash": "8f21ee401345957c4b652d1546a81366a416cf62e25f86d6a4a706a3b48a4a5f",
+  "source_prediction_id": "327f68498657800abe17b3d6a944376496b3b2ea2727d3d76a61fa212dc62595",
+  "entity_id": "H-00059",
+  "entity_name": "Aion Pedra-Partida",
+  "race": "Elfo",
+  "generation": 11,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "056/2026",
+  "draw_date": "2026-07-14",
+  "official_key": {
+    "numeros": [
+      10,
+      19,
+      37,
+      42,
+      47
+    ],
+    "estrelas": [
+      9,
+      12
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      7,
+      19,
+      38,
+      42,
+      46
+    ],
+    "estrelas": [
+      2,
+      9
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      19,
+      42
+    ],
+    "estrelas": [
+      9
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      10,
+      37,
+      47
+    ],
+    "estrelas": [
+      12
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      7,
+      38,
+      46
+    ],
+    "estrelas": [
+      2
+    ]
+  },
+  "hero_category": "2+1",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_056_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 1 lucky stars against official draw 056/2026 (category 2+1).",
+  "registered_at": "2026-07-17T16:02:48+00:00"
+}

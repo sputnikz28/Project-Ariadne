@@ -1,0 +1,78 @@
+{
+  "hero_id": "HERO-2026-056-75054bfd",
+  "dedup_hash": "75054bfde3432a55b78c641d9a0b6b040e33ead7c8506ee3f139e251cc92eb7a",
+  "source_prediction_id": "6eb218dd54e063fd7eda39d08e2454b4ea0a1d42a53a673ee18e172ce8713b0e",
+  "entity_id": "H-00602",
+  "entity_name": "Aruk do Bosque",
+  "race": "Bruxa",
+  "generation": 12,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "056/2026",
+  "draw_date": "2026-07-14",
+  "official_key": {
+    "numeros": [
+      10,
+      19,
+      37,
+      42,
+      47
+    ],
+    "estrelas": [
+      9,
+      12
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      10,
+      19,
+      36,
+      37,
+      47
+    ],
+    "estrelas": [
+      6,
+      11
+    ]
+  },
+  "matched_numbers_count": 4,
+  "matched_stars_count": 0,
+  "exact_matched_values": {
+    "numeros": [
+      10,
+      19,
+      37,
+      47
+    ],
+    "estrelas": []
+  },
+  "missed_winning_values": {
+    "numeros": [
+      42
+    ],
+    "estrelas": [
+      9,
+      12
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      36
+    ],
+    "estrelas": [
+      6,
+      11
+    ]
+  },
+  "hero_category": "4+0",
+  "hero_tier": "TIER_3",
+  "simulation_score": 48,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_056_dataset_completo.json",
+  "qualification_reason": "Matched 4 main numbers and 0 lucky stars against official draw 056/2026 (category 4+0).",
+  "registered_at": "2026-07-17T16:02:34+00:00"
+}

@@ -1,0 +1,78 @@
+{
+  "hero_id": "HERO-2026-056-a30c24cb",
+  "dedup_hash": "a30c24cb145641e06aa53c3edf8ced174c95b08ec9d7e554aca920763c4c2cd0",
+  "source_prediction_id": "3a6f2a8e6828bf2051ed73bd2263f74c743db98572b74ad5230be300a2431eac",
+  "entity_id": "H-00044",
+  "entity_name": "Kael Pedra-Partida",
+  "race": "Esqueleto",
+  "generation": 1,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "056/2026",
+  "draw_date": "2026-07-14",
+  "official_key": {
+    "numeros": [
+      10,
+      19,
+      37,
+      42,
+      47
+    ],
+    "estrelas": [
+      9,
+      12
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      24,
+      25,
+      27,
+      30,
+      37
+    ],
+    "estrelas": [
+      9,
+      12
+    ]
+  },
+  "matched_numbers_count": 1,
+  "matched_stars_count": 2,
+  "exact_matched_values": {
+    "numeros": [
+      37
+    ],
+    "estrelas": [
+      9,
+      12
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      10,
+      19,
+      42,
+      47
+    ],
+    "estrelas": []
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      24,
+      25,
+      27,
+      30
+    ],
+    "estrelas": []
+  },
+  "hero_category": "1+2",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_056_dataset_completo.json",
+  "qualification_reason": "Matched 1 main numbers and 2 lucky stars against official draw 056/2026 (category 1+2).",
+  "registered_at": "2026-07-17T16:02:36+00:00"
+}

@@ -1,0 +1,79 @@
+{
+  "hero_id": "HERO-2026-056-3634e203",
+  "dedup_hash": "3634e203a78d8817c02528c2e91b1c204b5f19449aa2cc2941fa57e2d58b94d8",
+  "source_prediction_id": "5f55f195e79b0abf62b0b2ff3117f8e3e73e2a12f3757c64d9049e9046a63603",
+  "entity_id": "H-00655",
+  "entity_name": "Lyra da Lua Fria",
+  "race": "Bruxa",
+  "generation": 13,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "056/2026",
+  "draw_date": "2026-07-14",
+  "official_key": {
+    "numeros": [
+      10,
+      19,
+      37,
+      42,
+      47
+    ],
+    "estrelas": [
+      9,
+      12
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      2,
+      10,
+      20,
+      37,
+      47
+    ],
+    "estrelas": [
+      6,
+      10
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 0,
+  "exact_matched_values": {
+    "numeros": [
+      10,
+      37,
+      47
+    ],
+    "estrelas": []
+  },
+  "missed_winning_values": {
+    "numeros": [
+      19,
+      42
+    ],
+    "estrelas": [
+      9,
+      12
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      2,
+      20
+    ],
+    "estrelas": [
+      6,
+      10
+    ]
+  },
+  "hero_category": "3+0",
+  "hero_tier": "TIER_4",
+  "simulation_score": 38,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_056_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 0 lucky stars against official draw 056/2026 (category 3+0).",
+  "registered_at": "2026-07-17T16:02:37+00:00"
+}

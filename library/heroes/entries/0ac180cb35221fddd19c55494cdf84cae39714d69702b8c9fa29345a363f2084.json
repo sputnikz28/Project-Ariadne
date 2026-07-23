@@ -1,0 +1,78 @@
+{
+  "hero_id": "HERO-2026-057-0ac180cb",
+  "dedup_hash": "0ac180cb35221fddd19c55494cdf84cae39714d69702b8c9fa29345a363f2084",
+  "source_prediction_id": "81bdcfb23b339970301b8f7cc2f71d0f445a2b2558902aa53bbfb295627b83d0",
+  "entity_id": "H-00710",
+  "entity_name": "Velka dos Astros",
+  "race": "Bruxa",
+  "generation": 14,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "057/2026",
+  "draw_date": "2026-07-17",
+  "official_key": {
+    "numeros": [
+      12,
+      21,
+      23,
+      34,
+      40
+    ],
+    "estrelas": [
+      9,
+      10
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      19,
+      23,
+      41,
+      43,
+      45
+    ],
+    "estrelas": [
+      9,
+      10
+    ]
+  },
+  "matched_numbers_count": 1,
+  "matched_stars_count": 2,
+  "exact_matched_values": {
+    "numeros": [
+      23
+    ],
+    "estrelas": [
+      9,
+      10
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      12,
+      21,
+      34,
+      40
+    ],
+    "estrelas": []
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      19,
+      41,
+      43,
+      45
+    ],
+    "estrelas": []
+  },
+  "hero_category": "1+2",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_058_dataset_completo.json",
+  "qualification_reason": "Matched 1 main numbers and 2 lucky stars against official draw 057/2026 (category 1+2).",
+  "registered_at": "2026-07-22T09:09:39+00:00"
+}

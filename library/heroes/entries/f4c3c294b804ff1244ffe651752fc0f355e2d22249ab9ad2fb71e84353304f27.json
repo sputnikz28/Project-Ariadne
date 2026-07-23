@@ -1,0 +1,80 @@
+{
+  "hero_id": "HERO-2026-056-f4c3c294",
+  "dedup_hash": "f4c3c294b804ff1244ffe651752fc0f355e2d22249ab9ad2fb71e84353304f27",
+  "source_prediction_id": "861ca5beb2d47c499b377aa3924da0ce74969c6ea426ca93412495f520574caf",
+  "entity_id": "H-00011",
+  "entity_name": "Velka da Névoa",
+  "race": "Elfo",
+  "generation": 13,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "056/2026",
+  "draw_date": "2026-07-14",
+  "official_key": {
+    "numeros": [
+      10,
+      19,
+      37,
+      42,
+      47
+    ],
+    "estrelas": [
+      9,
+      12
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      16,
+      19,
+      22,
+      41,
+      47
+    ],
+    "estrelas": [
+      6,
+      9
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      19,
+      47
+    ],
+    "estrelas": [
+      9
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      10,
+      37,
+      42
+    ],
+    "estrelas": [
+      12
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      16,
+      22,
+      41
+    ],
+    "estrelas": [
+      6
+    ]
+  },
+  "hero_category": "2+1",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_056_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 1 lucky stars against official draw 056/2026 (category 2+1).",
+  "registered_at": "2026-07-17T16:02:36+00:00"
+}

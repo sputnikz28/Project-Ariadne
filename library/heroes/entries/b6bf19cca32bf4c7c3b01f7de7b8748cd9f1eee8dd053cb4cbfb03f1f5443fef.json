@@ -1,0 +1,79 @@
+{
+  "hero_id": "HERO-2026-058-b6bf19cc",
+  "dedup_hash": "b6bf19cca32bf4c7c3b01f7de7b8748cd9f1eee8dd053cb4cbfb03f1f5443fef",
+  "source_prediction_id": "db2ed846ed2a08f5a3413cbfc14582bedbf1a83e95bc4dd690b2e8cf84773fbc",
+  "entity_id": "Lunélia-4",
+  "entity_name": "Lunélia-4",
+  "race": "Fada",
+  "generation": 14,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "058/2026",
+  "draw_date": "2026-07-21",
+  "official_key": {
+    "numeros": [
+      2,
+      3,
+      8,
+      28,
+      39
+    ],
+    "estrelas": [
+      2,
+      11
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      3,
+      14,
+      28,
+      37,
+      39
+    ],
+    "estrelas": [
+      2,
+      6
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      3,
+      28,
+      39
+    ],
+    "estrelas": [
+      2
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      2,
+      8
+    ],
+    "estrelas": [
+      11
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      14,
+      37
+    ],
+    "estrelas": [
+      6
+    ]
+  },
+  "hero_category": "3+1",
+  "hero_tier": "TIER_4",
+  "simulation_score": 43,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_058_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 1 lucky stars against official draw 058/2026 (category 3+1).",
+  "registered_at": "2026-07-22T09:10:19+00:00"
+}

@@ -1,0 +1,77 @@
+{
+  "hero_id": "HERO-2026-056-27cb9064",
+  "dedup_hash": "27cb9064efe37f1edb511408dcd245b4371c73efe137311d5ba147ffa8c24fbd",
+  "source_prediction_id": "2513b9aac45ec6da971ea2d48ca32837d84b46cf2189c512560a45989958a76b",
+  "entity_id": "H-00071",
+  "entity_name": "Aruk da Névoa",
+  "race": "Bruxa",
+  "generation": 1,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "056/2026",
+  "draw_date": "2026-07-14",
+  "official_key": {
+    "numeros": [
+      10,
+      19,
+      37,
+      42,
+      47
+    ],
+    "estrelas": [
+      9,
+      12
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      3,
+      10,
+      27,
+      38,
+      47
+    ],
+    "estrelas": [
+      9,
+      12
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 2,
+  "exact_matched_values": {
+    "numeros": [
+      10,
+      47
+    ],
+    "estrelas": [
+      9,
+      12
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      19,
+      37,
+      42
+    ],
+    "estrelas": []
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      3,
+      27,
+      38
+    ],
+    "estrelas": []
+  },
+  "hero_category": "2+2",
+  "hero_tier": "TIER_4",
+  "simulation_score": 35,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_056_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 2 lucky stars against official draw 056/2026 (category 2+2).",
+  "registered_at": "2026-07-17T16:02:29+00:00"
+}

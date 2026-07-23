@@ -1,0 +1,79 @@
+{
+  "hero_id": "HERO-2026-057-e7b5eb30",
+  "dedup_hash": "e7b5eb30a78004f8f6fca1650e185533fae9410d4e900827c17f618665b7b43e",
+  "source_prediction_id": "95ca227bed62460e87488d6373e55e4f1c0b959c2d63cdfccb4c1665eff21c15",
+  "entity_id": "H-00068",
+  "entity_name": "Gruk da Lua Fria",
+  "race": "Esqueleto",
+  "generation": 11,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "057/2026",
+  "draw_date": "2026-07-17",
+  "official_key": {
+    "numeros": [
+      12,
+      21,
+      23,
+      34,
+      40
+    ],
+    "estrelas": [
+      9,
+      10
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      19,
+      21,
+      28,
+      34,
+      40
+    ],
+    "estrelas": [
+      7,
+      8
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 0,
+  "exact_matched_values": {
+    "numeros": [
+      21,
+      34,
+      40
+    ],
+    "estrelas": []
+  },
+  "missed_winning_values": {
+    "numeros": [
+      12,
+      23
+    ],
+    "estrelas": [
+      9,
+      10
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      19,
+      28
+    ],
+    "estrelas": [
+      7,
+      8
+    ]
+  },
+  "hero_category": "3+0",
+  "hero_tier": "TIER_4",
+  "simulation_score": 38,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_058_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 0 lucky stars against official draw 057/2026 (category 3+0).",
+  "registered_at": "2026-07-22T09:09:30+00:00"
+}

@@ -1,0 +1,78 @@
+{
+  "hero_id": "HERO-2026-058-533f0cc2",
+  "dedup_hash": "533f0cc252fc83f855d2f9b2b16aefc271cc969a914947e34355fb9ddef2082b",
+  "source_prediction_id": "e5b75422254f8666b825cbbe427a862e676070d6108aa428ed7e284531926013",
+  "entity_id": "H-00060",
+  "entity_name": "Thara dos Astros",
+  "race": "Bruxa",
+  "generation": 10,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "058/2026",
+  "draw_date": "2026-07-21",
+  "official_key": {
+    "numeros": [
+      2,
+      3,
+      8,
+      28,
+      39
+    ],
+    "estrelas": [
+      2,
+      11
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      9,
+      28,
+      33,
+      37,
+      43
+    ],
+    "estrelas": [
+      2,
+      11
+    ]
+  },
+  "matched_numbers_count": 1,
+  "matched_stars_count": 2,
+  "exact_matched_values": {
+    "numeros": [
+      28
+    ],
+    "estrelas": [
+      2,
+      11
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      2,
+      3,
+      8,
+      39
+    ],
+    "estrelas": []
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      9,
+      33,
+      37,
+      43
+    ],
+    "estrelas": []
+  },
+  "hero_category": "1+2",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_058_dataset_completo.json",
+  "qualification_reason": "Matched 1 main numbers and 2 lucky stars against official draw 058/2026 (category 1+2).",
+  "registered_at": "2026-07-22T09:10:21+00:00"
+}

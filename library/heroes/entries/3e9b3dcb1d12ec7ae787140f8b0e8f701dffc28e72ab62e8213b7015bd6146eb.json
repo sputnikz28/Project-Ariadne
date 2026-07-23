@@ -1,0 +1,79 @@
+{
+  "hero_id": "HERO-2026-057-3e9b3dcb",
+  "dedup_hash": "3e9b3dcb1d12ec7ae787140f8b0e8f701dffc28e72ab62e8213b7015bd6146eb",
+  "source_prediction_id": "03664cb6de6784a6042ad1f672ff3c58e408ad9aa0b04d5b0a977609bde6e3b4",
+  "entity_id": "H-00065",
+  "entity_name": "Morgana da Lua Fria",
+  "race": "Elfo",
+  "generation": 12,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "057/2026",
+  "draw_date": "2026-07-17",
+  "official_key": {
+    "numeros": [
+      12,
+      21,
+      23,
+      34,
+      40
+    ],
+    "estrelas": [
+      9,
+      10
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      21,
+      23,
+      37,
+      40,
+      42
+    ],
+    "estrelas": [
+      5,
+      9
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      21,
+      23,
+      40
+    ],
+    "estrelas": [
+      9
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      12,
+      34
+    ],
+    "estrelas": [
+      10
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      37,
+      42
+    ],
+    "estrelas": [
+      5
+    ]
+  },
+  "hero_category": "3+1",
+  "hero_tier": "TIER_4",
+  "simulation_score": 43,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_058_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 1 lucky stars against official draw 057/2026 (category 3+1).",
+  "registered_at": "2026-07-22T09:09:27+00:00"
+}

@@ -1,0 +1,78 @@
+{
+  "hero_id": "HERO-2026-057-f2634b41",
+  "dedup_hash": "f2634b4171486a0b1f5ad385c58961d355d0e9dcc770444ac09ce78957045283",
+  "source_prediction_id": "3fb955b5320c1564a5afec87ff6f74311c50f19d5ed653310ead506c43e0eddc",
+  "entity_id": "H-00436",
+  "entity_name": "Velka do Bosque",
+  "race": "Esqueleto",
+  "generation": 9,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "057/2026",
+  "draw_date": "2026-07-17",
+  "official_key": {
+    "numeros": [
+      12,
+      21,
+      23,
+      34,
+      40
+    ],
+    "estrelas": [
+      9,
+      10
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      20,
+      21,
+      27,
+      28,
+      39
+    ],
+    "estrelas": [
+      9,
+      10
+    ]
+  },
+  "matched_numbers_count": 1,
+  "matched_stars_count": 2,
+  "exact_matched_values": {
+    "numeros": [
+      21
+    ],
+    "estrelas": [
+      9,
+      10
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      12,
+      23,
+      34,
+      40
+    ],
+    "estrelas": []
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      20,
+      27,
+      28,
+      39
+    ],
+    "estrelas": []
+  },
+  "hero_category": "1+2",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_058_dataset_completo.json",
+  "qualification_reason": "Matched 1 main numbers and 2 lucky stars against official draw 057/2026 (category 1+2).",
+  "registered_at": "2026-07-22T09:09:33+00:00"
+}

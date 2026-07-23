@@ -1,0 +1,80 @@
+{
+  "hero_id": "HERO-2026-056-6a948616",
+  "dedup_hash": "6a94861685aa6e67b78972e8ef9d9124fbc3bc831a027904d0b1974492175bc2",
+  "source_prediction_id": "07b3550cf52d438cfd54f9623b43f171a1e4a79847b20e712665ce0b086daaa9",
+  "entity_id": "Cristal Azul #5",
+  "entity_name": "Cristal Azul #5",
+  "race": "Clã Anão",
+  "generation": 14,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "056/2026",
+  "draw_date": "2026-07-14",
+  "official_key": {
+    "numeros": [
+      10,
+      19,
+      37,
+      42,
+      47
+    ],
+    "estrelas": [
+      9,
+      12
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      10,
+      21,
+      33,
+      42,
+      43
+    ],
+    "estrelas": [
+      3,
+      12
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      10,
+      42
+    ],
+    "estrelas": [
+      12
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      19,
+      37,
+      47
+    ],
+    "estrelas": [
+      9
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      21,
+      33,
+      43
+    ],
+    "estrelas": [
+      3
+    ]
+  },
+  "hero_category": "2+1",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_056_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 1 lucky stars against official draw 056/2026 (category 2+1).",
+  "registered_at": "2026-07-17T16:02:37+00:00"
+}

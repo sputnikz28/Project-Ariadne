@@ -1,0 +1,79 @@
+{
+  "hero_id": "HERO-2026-056-3f3c3078",
+  "dedup_hash": "3f3c307817df82e6cf3e18651d4660e50da81442194205c9d3e26166f2fbc07c",
+  "source_prediction_id": "62a068f9db8d6d378e2f26180d0302fbf5abbd7e7acb6a69eab5977422d64d31",
+  "entity_id": "H-00280",
+  "entity_name": "Velka dos Astros",
+  "race": "Vidente",
+  "generation": 5,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "056/2026",
+  "draw_date": "2026-07-14",
+  "official_key": {
+    "numeros": [
+      10,
+      19,
+      37,
+      42,
+      47
+    ],
+    "estrelas": [
+      9,
+      12
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      10,
+      18,
+      27,
+      37,
+      47
+    ],
+    "estrelas": [
+      8,
+      9
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      10,
+      37,
+      47
+    ],
+    "estrelas": [
+      9
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      19,
+      42
+    ],
+    "estrelas": [
+      12
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      18,
+      27
+    ],
+    "estrelas": [
+      8
+    ]
+  },
+  "hero_category": "3+1",
+  "hero_tier": "TIER_4",
+  "simulation_score": 43,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_056_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 1 lucky stars against official draw 056/2026 (category 3+1).",
+  "registered_at": "2026-07-17T16:02:37+00:00"
+}

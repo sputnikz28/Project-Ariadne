@@ -1,0 +1,79 @@
+{
+  "hero_id": "HERO-2026-057-d45c4070",
+  "dedup_hash": "d45c40701ff3119218ad5624a423c85607f852f190957b956c4fb7c6ca8a9858",
+  "source_prediction_id": "f866ad4e3f606ef4dfed715177eb76c66f7749041dc0f9a44691d24d85850198",
+  "entity_id": "H-00408",
+  "entity_name": "Selene Pedra-Partida",
+  "race": "Vidente",
+  "generation": 8,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "057/2026",
+  "draw_date": "2026-07-17",
+  "official_key": {
+    "numeros": [
+      12,
+      21,
+      23,
+      34,
+      40
+    ],
+    "estrelas": [
+      9,
+      10
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      21,
+      23,
+      25,
+      32,
+      40
+    ],
+    "estrelas": [
+      3,
+      8
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 0,
+  "exact_matched_values": {
+    "numeros": [
+      21,
+      23,
+      40
+    ],
+    "estrelas": []
+  },
+  "missed_winning_values": {
+    "numeros": [
+      12,
+      34
+    ],
+    "estrelas": [
+      9,
+      10
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      25,
+      32
+    ],
+    "estrelas": [
+      3,
+      8
+    ]
+  },
+  "hero_category": "3+0",
+  "hero_tier": "TIER_4",
+  "simulation_score": 38,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_058_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 0 lucky stars against official draw 057/2026 (category 3+0).",
+  "registered_at": "2026-07-22T09:09:28+00:00"
+}

@@ -1,0 +1,79 @@
+{
+  "hero_id": "HERO-2026-056-89e2f17b",
+  "dedup_hash": "89e2f17b25c6be60df23f81d67ef72a021dbf758c61e5b70c1e9a1c7074e50f8",
+  "source_prediction_id": "8e455606f28d99ef0ee9dfc666613144aa0c1579c16aa50c607be3b030ce03fe",
+  "entity_id": "H-00115",
+  "entity_name": "Thara Pedra-Partida",
+  "race": "Vidente",
+  "generation": 9,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "056/2026",
+  "draw_date": "2026-07-14",
+  "official_key": {
+    "numeros": [
+      10,
+      19,
+      37,
+      42,
+      47
+    ],
+    "estrelas": [
+      9,
+      12
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      10,
+      17,
+      21,
+      42,
+      47
+    ],
+    "estrelas": [
+      3,
+      9
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      10,
+      42,
+      47
+    ],
+    "estrelas": [
+      9
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      19,
+      37
+    ],
+    "estrelas": [
+      12
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      17,
+      21
+    ],
+    "estrelas": [
+      3
+    ]
+  },
+  "hero_category": "3+1",
+  "hero_tier": "TIER_4",
+  "simulation_score": 43,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_056_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 1 lucky stars against official draw 056/2026 (category 3+1).",
+  "registered_at": "2026-07-17T16:02:49+00:00"
+}

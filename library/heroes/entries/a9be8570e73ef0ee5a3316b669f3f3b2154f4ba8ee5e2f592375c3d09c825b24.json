@@ -1,0 +1,80 @@
+{
+  "hero_id": "HERO-2026-057-a9be8570",
+  "dedup_hash": "a9be8570e73ef0ee5a3316b669f3f3b2154f4ba8ee5e2f592375c3d09c825b24",
+  "source_prediction_id": "5180bb03d9bee4a14596f97af1b37314c125ce7745b74b64596702a72974b156",
+  "entity_id": "H-00559",
+  "entity_name": "Kael da Lua Fria",
+  "race": "Bruxa",
+  "generation": 11,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "057/2026",
+  "draw_date": "2026-07-17",
+  "official_key": {
+    "numeros": [
+      12,
+      21,
+      23,
+      34,
+      40
+    ],
+    "estrelas": [
+      9,
+      10
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      1,
+      18,
+      23,
+      37,
+      40
+    ],
+    "estrelas": [
+      4,
+      9
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      23,
+      40
+    ],
+    "estrelas": [
+      9
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      12,
+      21,
+      34
+    ],
+    "estrelas": [
+      10
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      1,
+      18,
+      37
+    ],
+    "estrelas": [
+      4
+    ]
+  },
+  "hero_category": "2+1",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_058_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 1 lucky stars against official draw 057/2026 (category 2+1).",
+  "registered_at": "2026-07-22T09:09:41+00:00"
+}

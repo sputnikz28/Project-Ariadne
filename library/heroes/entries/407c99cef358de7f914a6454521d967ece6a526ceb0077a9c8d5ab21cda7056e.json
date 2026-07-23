@@ -1,0 +1,78 @@
+{
+  "hero_id": "HERO-2026-056-407c99ce",
+  "dedup_hash": "407c99cef358de7f914a6454521d967ece6a526ceb0077a9c8d5ab21cda7056e",
+  "source_prediction_id": "23c9b9951aa211eb06cb518597db6e71cb057df6ef876f8bbde9906295338b63",
+  "entity_id": "H-00121",
+  "entity_name": "Lyra dos Astros",
+  "race": "Esqueleto",
+  "generation": 2,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "056/2026",
+  "draw_date": "2026-07-14",
+  "official_key": {
+    "numeros": [
+      10,
+      19,
+      37,
+      42,
+      47
+    ],
+    "estrelas": [
+      9,
+      12
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      24,
+      26,
+      30,
+      37,
+      46
+    ],
+    "estrelas": [
+      9,
+      12
+    ]
+  },
+  "matched_numbers_count": 1,
+  "matched_stars_count": 2,
+  "exact_matched_values": {
+    "numeros": [
+      37
+    ],
+    "estrelas": [
+      9,
+      12
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      10,
+      19,
+      42,
+      47
+    ],
+    "estrelas": []
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      24,
+      26,
+      30,
+      46
+    ],
+    "estrelas": []
+  },
+  "hero_category": "1+2",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_056_dataset_completo.json",
+  "qualification_reason": "Matched 1 main numbers and 2 lucky stars against official draw 056/2026 (category 1+2).",
+  "registered_at": "2026-07-17T16:02:52+00:00"
+}

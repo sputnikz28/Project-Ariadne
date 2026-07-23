@@ -1,0 +1,78 @@
+{
+  "hero_id": "HERO-2026-056-743e8104",
+  "dedup_hash": "743e8104c843d82aa5ed819ea1f87e6253b8a21388e866c3c5f33d350dc5f2ba",
+  "source_prediction_id": "9e2518cd07d3f52aa009fc3ad60bf12aa1e85f8f321da2dffc05e2937cab9d59",
+  "entity_id": "H-00115",
+  "entity_name": "Thara da Névoa",
+  "race": "Vidente",
+  "generation": 4,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "056/2026",
+  "draw_date": "2026-07-14",
+  "official_key": {
+    "numeros": [
+      10,
+      19,
+      37,
+      42,
+      47
+    ],
+    "estrelas": [
+      9,
+      12
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      10,
+      29,
+      37,
+      42,
+      47
+    ],
+    "estrelas": [
+      6,
+      9
+    ]
+  },
+  "matched_numbers_count": 4,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      10,
+      37,
+      42,
+      47
+    ],
+    "estrelas": [
+      9
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      19
+    ],
+    "estrelas": [
+      12
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      29
+    ],
+    "estrelas": [
+      6
+    ]
+  },
+  "hero_category": "4+1",
+  "hero_tier": "TIER_3",
+  "simulation_score": 53,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_056_dataset_completo.json",
+  "qualification_reason": "Matched 4 main numbers and 1 lucky stars against official draw 056/2026 (category 4+1).",
+  "registered_at": "2026-07-17T16:02:37+00:00"
+}

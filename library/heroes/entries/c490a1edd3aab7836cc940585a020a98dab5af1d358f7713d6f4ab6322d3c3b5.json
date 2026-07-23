@@ -1,0 +1,77 @@
+{
+  "hero_id": "HERO-2026-058-c490a1ed",
+  "dedup_hash": "c490a1edd3aab7836cc940585a020a98dab5af1d358f7713d6f4ab6322d3c3b5",
+  "source_prediction_id": "0eb0505c763d24748f82a3675b210df7d969249d98a8a1bafc64141af3cb31e1",
+  "entity_id": "H-00014",
+  "entity_name": "Velka da Névoa",
+  "race": "Goblin",
+  "generation": 11,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "058/2026",
+  "draw_date": "2026-07-21",
+  "official_key": {
+    "numeros": [
+      2,
+      3,
+      8,
+      28,
+      39
+    ],
+    "estrelas": [
+      2,
+      11
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      6,
+      8,
+      19,
+      21,
+      39
+    ],
+    "estrelas": [
+      2,
+      11
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 2,
+  "exact_matched_values": {
+    "numeros": [
+      8,
+      39
+    ],
+    "estrelas": [
+      2,
+      11
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      2,
+      3,
+      28
+    ],
+    "estrelas": []
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      6,
+      19,
+      21
+    ],
+    "estrelas": []
+  },
+  "hero_category": "2+2",
+  "hero_tier": "TIER_4",
+  "simulation_score": 35,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_058_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 2 lucky stars against official draw 058/2026 (category 2+2).",
+  "registered_at": "2026-07-22T09:10:20+00:00"
+}

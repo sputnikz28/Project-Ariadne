@@ -1,0 +1,79 @@
+{
+  "hero_id": "HERO-2026-056-7b64597d",
+  "dedup_hash": "7b64597d517a796cf561d9a2cd2ff9e5ac06a4b1683564b2b64ab868b161da36",
+  "source_prediction_id": "695e86b42961c9adf60fc24c866088c7e2ef30944bde69925b858467c30f0eba",
+  "entity_id": "H-00072",
+  "entity_name": "Selene do Bosque",
+  "race": "Bruxa",
+  "generation": 8,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "056/2026",
+  "draw_date": "2026-07-14",
+  "official_key": {
+    "numeros": [
+      10,
+      19,
+      37,
+      42,
+      47
+    ],
+    "estrelas": [
+      9,
+      12
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      10,
+      19,
+      32,
+      37,
+      46
+    ],
+    "estrelas": [
+      8,
+      10
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 0,
+  "exact_matched_values": {
+    "numeros": [
+      10,
+      19,
+      37
+    ],
+    "estrelas": []
+  },
+  "missed_winning_values": {
+    "numeros": [
+      42,
+      47
+    ],
+    "estrelas": [
+      9,
+      12
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      32,
+      46
+    ],
+    "estrelas": [
+      8,
+      10
+    ]
+  },
+  "hero_category": "3+0",
+  "hero_tier": "TIER_4",
+  "simulation_score": 38,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_056_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 0 lucky stars against official draw 056/2026 (category 3+0).",
+  "registered_at": "2026-07-17T16:02:48+00:00"
+}

@@ -1,0 +1,79 @@
+{
+  "hero_id": "HERO-2026-056-8256d6cc",
+  "dedup_hash": "8256d6ccfe97fb7f651cce13760d858c25ca4cbce04baabcfd57a0b07b1d3d3e",
+  "source_prediction_id": "11b639c2222dccb8c8e1c4d80107790c64dbdf8b9da4fce7b598c01790ff1ddd",
+  "entity_id": "H-00581",
+  "entity_name": "Elarion Pedra-Partida",
+  "race": "Goblin",
+  "generation": 11,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "056/2026",
+  "draw_date": "2026-07-14",
+  "official_key": {
+    "numeros": [
+      10,
+      19,
+      37,
+      42,
+      47
+    ],
+    "estrelas": [
+      9,
+      12
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      10,
+      22,
+      37,
+      42,
+      49
+    ],
+    "estrelas": [
+      3,
+      7
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 0,
+  "exact_matched_values": {
+    "numeros": [
+      10,
+      37,
+      42
+    ],
+    "estrelas": []
+  },
+  "missed_winning_values": {
+    "numeros": [
+      19,
+      47
+    ],
+    "estrelas": [
+      9,
+      12
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      22,
+      49
+    ],
+    "estrelas": [
+      3,
+      7
+    ]
+  },
+  "hero_category": "3+0",
+  "hero_tier": "TIER_4",
+  "simulation_score": 38,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_056_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 0 lucky stars against official draw 056/2026 (category 3+0).",
+  "registered_at": "2026-07-17T16:02:30+00:00"
+}

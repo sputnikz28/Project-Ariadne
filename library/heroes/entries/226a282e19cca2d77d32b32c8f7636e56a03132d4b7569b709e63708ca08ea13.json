@@ -1,0 +1,79 @@
+{
+  "hero_id": "HERO-2026-056-226a282e",
+  "dedup_hash": "226a282e19cca2d77d32b32c8f7636e56a03132d4b7569b709e63708ca08ea13",
+  "source_prediction_id": "cb95c6c6d5ace914958f1fccbdcac970aeea74f4d8d487a5fed0733abb9d6bbc",
+  "entity_id": "H-00117",
+  "entity_name": "Kael dos Ossos",
+  "race": "Bruxa",
+  "generation": 8,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "056/2026",
+  "draw_date": "2026-07-14",
+  "official_key": {
+    "numeros": [
+      10,
+      19,
+      37,
+      42,
+      47
+    ],
+    "estrelas": [
+      9,
+      12
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      2,
+      10,
+      42,
+      45,
+      47
+    ],
+    "estrelas": [
+      9,
+      11
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      10,
+      42,
+      47
+    ],
+    "estrelas": [
+      9
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      19,
+      37
+    ],
+    "estrelas": [
+      12
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      2,
+      45
+    ],
+    "estrelas": [
+      11
+    ]
+  },
+  "hero_category": "3+1",
+  "hero_tier": "TIER_4",
+  "simulation_score": 43,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_056_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 1 lucky stars against official draw 056/2026 (category 3+1).",
+  "registered_at": "2026-07-17T16:02:38+00:00"
+}

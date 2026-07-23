@@ -1,0 +1,79 @@
+{
+  "hero_id": "HERO-2026-058-cb8794c3",
+  "dedup_hash": "cb8794c32d4495504198e6e584c88ece1398e15c5e8c4066c17df93f2afe86d3",
+  "source_prediction_id": "da858f2ef2655cac4b5b5dd4b6f37f907b1b975deafbba938fc3c7bef481ba9f",
+  "entity_id": "Zareth Anti-Humano #6",
+  "entity_name": "Zareth Anti-Humano #6",
+  "race": "Mago do Esquadrão Negro",
+  "generation": 14,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "058/2026",
+  "draw_date": "2026-07-21",
+  "official_key": {
+    "numeros": [
+      2,
+      3,
+      8,
+      28,
+      39
+    ],
+    "estrelas": [
+      2,
+      11
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      2,
+      14,
+      28,
+      39,
+      47
+    ],
+    "estrelas": [
+      2,
+      7
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      2,
+      28,
+      39
+    ],
+    "estrelas": [
+      2
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      3,
+      8
+    ],
+    "estrelas": [
+      11
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      14,
+      47
+    ],
+    "estrelas": [
+      7
+    ]
+  },
+  "hero_category": "3+1",
+  "hero_tier": "TIER_4",
+  "simulation_score": 43,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_058_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 1 lucky stars against official draw 058/2026 (category 3+1).",
+  "registered_at": "2026-07-22T09:10:21+00:00"
+}

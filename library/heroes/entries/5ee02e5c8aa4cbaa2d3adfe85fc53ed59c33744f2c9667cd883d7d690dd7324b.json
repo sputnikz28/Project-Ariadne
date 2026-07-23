@@ -1,0 +1,77 @@
+{
+  "hero_id": "HERO-2026-056-5ee02e5c",
+  "dedup_hash": "5ee02e5c8aa4cbaa2d3adfe85fc53ed59c33744f2c9667cd883d7d690dd7324b",
+  "source_prediction_id": "318904dc76a238e9a05dfbd4adce3df3bdec440d8ea90c0525167fa1e1b55332",
+  "entity_id": "H-00074",
+  "entity_name": "Elarion da Névoa",
+  "race": "Bruxa",
+  "generation": 2,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "056/2026",
+  "draw_date": "2026-07-14",
+  "official_key": {
+    "numeros": [
+      10,
+      19,
+      37,
+      42,
+      47
+    ],
+    "estrelas": [
+      9,
+      12
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      19,
+      23,
+      32,
+      37,
+      46
+    ],
+    "estrelas": [
+      9,
+      12
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 2,
+  "exact_matched_values": {
+    "numeros": [
+      19,
+      37
+    ],
+    "estrelas": [
+      9,
+      12
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      10,
+      42,
+      47
+    ],
+    "estrelas": []
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      23,
+      32,
+      46
+    ],
+    "estrelas": []
+  },
+  "hero_category": "2+2",
+  "hero_tier": "TIER_4",
+  "simulation_score": 35,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_056_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 2 lucky stars against official draw 056/2026 (category 2+2).",
+  "registered_at": "2026-07-17T16:02:49+00:00"
+}

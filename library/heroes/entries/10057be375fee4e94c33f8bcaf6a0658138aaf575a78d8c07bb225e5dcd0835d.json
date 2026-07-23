@@ -1,0 +1,80 @@
+{
+  "hero_id": "HERO-2026-057-10057be3",
+  "dedup_hash": "10057be375fee4e94c33f8bcaf6a0658138aaf575a78d8c07bb225e5dcd0835d",
+  "source_prediction_id": "4cad6728e739dd0d799b84465f155865b72a8ad0828ddffcd3847ef7b73addd8",
+  "entity_id": "H-00170",
+  "entity_name": "Aion da Névoa",
+  "race": "Elfo",
+  "generation": 3,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "057/2026",
+  "draw_date": "2026-07-17",
+  "official_key": {
+    "numeros": [
+      12,
+      21,
+      23,
+      34,
+      40
+    ],
+    "estrelas": [
+      9,
+      10
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      18,
+      21,
+      25,
+      32,
+      40
+    ],
+    "estrelas": [
+      2,
+      9
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      21,
+      40
+    ],
+    "estrelas": [
+      9
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      12,
+      23,
+      34
+    ],
+    "estrelas": [
+      10
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      18,
+      25,
+      32
+    ],
+    "estrelas": [
+      2
+    ]
+  },
+  "hero_category": "2+1",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_058_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 1 lucky stars against official draw 057/2026 (category 2+1).",
+  "registered_at": "2026-07-22T09:09:26+00:00"
+}

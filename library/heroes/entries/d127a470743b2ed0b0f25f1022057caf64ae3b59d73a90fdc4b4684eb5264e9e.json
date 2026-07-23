@@ -1,0 +1,77 @@
+{
+  "hero_id": "HERO-2026-057-d127a470",
+  "dedup_hash": "d127a470743b2ed0b0f25f1022057caf64ae3b59d73a90fdc4b4684eb5264e9e",
+  "source_prediction_id": "e1d489cce44faaa268e763f38b3d1ce2c50f34ba7e57e929eb842ff800faaaab",
+  "entity_id": "H-00662",
+  "entity_name": "Thara da Névoa",
+  "race": "Bruxa",
+  "generation": 13,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "057/2026",
+  "draw_date": "2026-07-17",
+  "official_key": {
+    "numeros": [
+      12,
+      21,
+      23,
+      34,
+      40
+    ],
+    "estrelas": [
+      9,
+      10
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      23,
+      36,
+      40,
+      41,
+      42
+    ],
+    "estrelas": [
+      9,
+      10
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 2,
+  "exact_matched_values": {
+    "numeros": [
+      23,
+      40
+    ],
+    "estrelas": [
+      9,
+      10
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      12,
+      21,
+      34
+    ],
+    "estrelas": []
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      36,
+      41,
+      42
+    ],
+    "estrelas": []
+  },
+  "hero_category": "2+2",
+  "hero_tier": "TIER_4",
+  "simulation_score": 35,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_058_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 2 lucky stars against official draw 057/2026 (category 2+2).",
+  "registered_at": "2026-07-22T09:09:34+00:00"
+}

@@ -1,0 +1,78 @@
+{
+  "hero_id": "HERO-2026-057-bf3f2668",
+  "dedup_hash": "bf3f266877423689f2d1e2788004fdb8146b41cd0f73ec67a3292c0e4428dff6",
+  "source_prediction_id": "3e31a479f1703f7cc217ffb2c681f26b8f1d6fe07f1d050a314e615da63e4543",
+  "entity_id": "Seraphine da Linhagem do Espelho",
+  "entity_name": "Seraphine da Linhagem do Espelho",
+  "race": "Gárgula do Espelho",
+  "generation": 14,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "057/2026",
+  "draw_date": "2026-07-17",
+  "official_key": {
+    "numeros": [
+      12,
+      21,
+      23,
+      34,
+      40
+    ],
+    "estrelas": [
+      9,
+      10
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      5,
+      6,
+      17,
+      18,
+      23
+    ],
+    "estrelas": [
+      9,
+      10
+    ]
+  },
+  "matched_numbers_count": 1,
+  "matched_stars_count": 2,
+  "exact_matched_values": {
+    "numeros": [
+      23
+    ],
+    "estrelas": [
+      9,
+      10
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      12,
+      21,
+      34,
+      40
+    ],
+    "estrelas": []
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      5,
+      6,
+      17,
+      18
+    ],
+    "estrelas": []
+  },
+  "hero_category": "1+2",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_058_dataset_completo.json",
+  "qualification_reason": "Matched 1 main numbers and 2 lucky stars against official draw 057/2026 (category 1+2).",
+  "registered_at": "2026-07-22T09:09:39+00:00"
+}

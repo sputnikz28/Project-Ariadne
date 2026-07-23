@@ -1,0 +1,77 @@
+{
+  "hero_id": "HERO-2026-058-6fa0211d",
+  "dedup_hash": "6fa0211d692b41de022c54cc5e8d8a65e831a8793eb18c9ed29cd2486cd845aa",
+  "source_prediction_id": "1ee8160f919f7a7c449780f1ed739b3c010dfbe837e32b2f87208d83b72abf59",
+  "entity_id": "H-00069",
+  "entity_name": "Aion dos Ossos",
+  "race": "Cronomante",
+  "generation": 1,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "058/2026",
+  "draw_date": "2026-07-21",
+  "official_key": {
+    "numeros": [
+      2,
+      3,
+      8,
+      28,
+      39
+    ],
+    "estrelas": [
+      2,
+      11
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      3,
+      4,
+      5,
+      8,
+      35
+    ],
+    "estrelas": [
+      2,
+      11
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 2,
+  "exact_matched_values": {
+    "numeros": [
+      3,
+      8
+    ],
+    "estrelas": [
+      2,
+      11
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      2,
+      28,
+      39
+    ],
+    "estrelas": []
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      4,
+      5,
+      35
+    ],
+    "estrelas": []
+  },
+  "hero_category": "2+2",
+  "hero_tier": "TIER_4",
+  "simulation_score": 35,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_058_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 2 lucky stars against official draw 058/2026 (category 2+2).",
+  "registered_at": "2026-07-22T09:10:19+00:00"
+}

@@ -1,0 +1,79 @@
+{
+  "hero_id": "HERO-2026-058-23a49e35",
+  "dedup_hash": "23a49e35ce4c2899dd93c061d5a2b8e6752607d51f8afbf7566a828d61e45b32",
+  "source_prediction_id": "be3dc0c50eba28b6622ca6e740dbf1e7b5a4fe1f225d05bc19d3e83063c57f0c",
+  "entity_id": "Malphas, o Quebra-Conselhos",
+  "entity_name": "Malphas, o Quebra-Conselhos",
+  "race": "Entidade Maléfica",
+  "generation": 14,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "058/2026",
+  "draw_date": "2026-07-21",
+  "official_key": {
+    "numeros": [
+      2,
+      3,
+      8,
+      28,
+      39
+    ],
+    "estrelas": [
+      2,
+      11
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      3,
+      8,
+      19,
+      28,
+      42
+    ],
+    "estrelas": [
+      4,
+      8
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 0,
+  "exact_matched_values": {
+    "numeros": [
+      3,
+      8,
+      28
+    ],
+    "estrelas": []
+  },
+  "missed_winning_values": {
+    "numeros": [
+      2,
+      39
+    ],
+    "estrelas": [
+      2,
+      11
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      19,
+      42
+    ],
+    "estrelas": [
+      4,
+      8
+    ]
+  },
+  "hero_category": "3+0",
+  "hero_tier": "TIER_4",
+  "simulation_score": 38,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_058_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 0 lucky stars against official draw 058/2026 (category 3+0).",
+  "registered_at": "2026-07-22T09:10:24+00:00"
+}

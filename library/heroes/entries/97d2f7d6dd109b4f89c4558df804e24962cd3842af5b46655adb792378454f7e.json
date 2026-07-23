@@ -1,0 +1,79 @@
+{
+  "hero_id": "HERO-2026-057-97d2f7d6",
+  "dedup_hash": "97d2f7d6dd109b4f89c4558df804e24962cd3842af5b46655adb792378454f7e",
+  "source_prediction_id": "49b7e24dd38cbaf4982029a2cf2f848fcfaeb2d6a7d3c37ffcdc904ef69de74c",
+  "entity_id": "H-00030",
+  "entity_name": "Kael Pedra-Partida",
+  "race": "Bruxa",
+  "generation": 6,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "057/2026",
+  "draw_date": "2026-07-17",
+  "official_key": {
+    "numeros": [
+      12,
+      21,
+      23,
+      34,
+      40
+    ],
+    "estrelas": [
+      9,
+      10
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      7,
+      23,
+      34,
+      37,
+      40
+    ],
+    "estrelas": [
+      5,
+      10
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      23,
+      34,
+      40
+    ],
+    "estrelas": [
+      10
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      12,
+      21
+    ],
+    "estrelas": [
+      9
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      7,
+      37
+    ],
+    "estrelas": [
+      5
+    ]
+  },
+  "hero_category": "3+1",
+  "hero_tier": "TIER_4",
+  "simulation_score": 43,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_058_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 1 lucky stars against official draw 057/2026 (category 3+1).",
+  "registered_at": "2026-07-22T09:09:26+00:00"
+}

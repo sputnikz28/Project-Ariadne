@@ -1,0 +1,79 @@
+{
+  "hero_id": "HERO-2026-057-418565d0",
+  "dedup_hash": "418565d0d43727f6a5de7bcdbe0d75a13c86d634c12319113a5d1d312f25ced8",
+  "source_prediction_id": "72499530eb05d80a3db245fd984f92b6d554a108732d0c5599d8dcba6b728840",
+  "entity_id": "H-00011",
+  "entity_name": "Kael do Bosque",
+  "race": "Vidente",
+  "generation": 6,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "057/2026",
+  "draw_date": "2026-07-17",
+  "official_key": {
+    "numeros": [
+      12,
+      21,
+      23,
+      34,
+      40
+    ],
+    "estrelas": [
+      9,
+      10
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      12,
+      19,
+      21,
+      23,
+      35
+    ],
+    "estrelas": [
+      2,
+      6
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 0,
+  "exact_matched_values": {
+    "numeros": [
+      12,
+      21,
+      23
+    ],
+    "estrelas": []
+  },
+  "missed_winning_values": {
+    "numeros": [
+      34,
+      40
+    ],
+    "estrelas": [
+      9,
+      10
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      19,
+      35
+    ],
+    "estrelas": [
+      2,
+      6
+    ]
+  },
+  "hero_category": "3+0",
+  "hero_tier": "TIER_4",
+  "simulation_score": 38,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_058_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 0 lucky stars against official draw 057/2026 (category 3+0).",
+  "registered_at": "2026-07-22T09:09:31+00:00"
+}

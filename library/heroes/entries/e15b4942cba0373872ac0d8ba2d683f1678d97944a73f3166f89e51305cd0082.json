@@ -1,0 +1,79 @@
+{
+  "hero_id": "HERO-2026-057-e15b4942",
+  "dedup_hash": "e15b4942cba0373872ac0d8ba2d683f1678d97944a73f3166f89e51305cd0082",
+  "source_prediction_id": "fc13f0bbcc679ebd616a937ef9ea7961975868bd5c320c73ef65247c96ccba40",
+  "entity_id": "H-00268",
+  "entity_name": "Velka da Lua Fria",
+  "race": "Esqueleto",
+  "generation": 5,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "057/2026",
+  "draw_date": "2026-07-17",
+  "official_key": {
+    "numeros": [
+      12,
+      21,
+      23,
+      34,
+      40
+    ],
+    "estrelas": [
+      9,
+      10
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      12,
+      13,
+      21,
+      23,
+      29
+    ],
+    "estrelas": [
+      7,
+      8
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 0,
+  "exact_matched_values": {
+    "numeros": [
+      12,
+      21,
+      23
+    ],
+    "estrelas": []
+  },
+  "missed_winning_values": {
+    "numeros": [
+      34,
+      40
+    ],
+    "estrelas": [
+      9,
+      10
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      13,
+      29
+    ],
+    "estrelas": [
+      7,
+      8
+    ]
+  },
+  "hero_category": "3+0",
+  "hero_tier": "TIER_4",
+  "simulation_score": 38,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_058_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 0 lucky stars against official draw 057/2026 (category 3+0).",
+  "registered_at": "2026-07-22T09:09:40+00:00"
+}

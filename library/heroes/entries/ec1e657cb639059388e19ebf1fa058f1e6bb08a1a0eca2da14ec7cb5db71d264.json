@@ -1,0 +1,78 @@
+{
+  "hero_id": "HERO-2026-056-ec1e657c",
+  "dedup_hash": "ec1e657cb639059388e19ebf1fa058f1e6bb08a1a0eca2da14ec7cb5db71d264",
+  "source_prediction_id": "c81822ee570a1b6152e94ba59a828865bfd316586f65cb298d919777fffaa9a3",
+  "entity_id": "Selvar, Guardião do Pulso",
+  "entity_name": "Selvar, Guardião do Pulso",
+  "race": "Cronomante",
+  "generation": 14,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "056/2026",
+  "draw_date": "2026-07-14",
+  "official_key": {
+    "numeros": [
+      10,
+      19,
+      37,
+      42,
+      47
+    ],
+    "estrelas": [
+      9,
+      12
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      3,
+      14,
+      25,
+      47,
+      49
+    ],
+    "estrelas": [
+      9,
+      12
+    ]
+  },
+  "matched_numbers_count": 1,
+  "matched_stars_count": 2,
+  "exact_matched_values": {
+    "numeros": [
+      47
+    ],
+    "estrelas": [
+      9,
+      12
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      10,
+      19,
+      37,
+      42
+    ],
+    "estrelas": []
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      3,
+      14,
+      25,
+      49
+    ],
+    "estrelas": []
+  },
+  "hero_category": "1+2",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_056_dataset_completo.json",
+  "qualification_reason": "Matched 1 main numbers and 2 lucky stars against official draw 056/2026 (category 1+2).",
+  "registered_at": "2026-07-17T16:02:52+00:00"
+}

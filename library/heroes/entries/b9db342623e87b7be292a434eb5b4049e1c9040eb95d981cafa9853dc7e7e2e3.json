@@ -1,0 +1,80 @@
+{
+  "hero_id": "HERO-2026-057-b9db3426",
+  "dedup_hash": "b9db342623e87b7be292a434eb5b4049e1c9040eb95d981cafa9853dc7e7e2e3",
+  "source_prediction_id": "19f947a9ac0b68643bd589fa68ccbe7860e6132908bc5fb558a57f8c4207381d",
+  "entity_id": "H-00618",
+  "entity_name": "Morgana dos Ossos",
+  "race": "Cronomante",
+  "generation": 12,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "057/2026",
+  "draw_date": "2026-07-17",
+  "official_key": {
+    "numeros": [
+      12,
+      21,
+      23,
+      34,
+      40
+    ],
+    "estrelas": [
+      9,
+      10
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      5,
+      12,
+      17,
+      27,
+      34
+    ],
+    "estrelas": [
+      2,
+      10
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      12,
+      34
+    ],
+    "estrelas": [
+      10
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      21,
+      23,
+      40
+    ],
+    "estrelas": [
+      9
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      5,
+      17,
+      27
+    ],
+    "estrelas": [
+      2
+    ]
+  },
+  "hero_category": "2+1",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_058_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 1 lucky stars against official draw 057/2026 (category 2+1).",
+  "registered_at": "2026-07-22T09:09:35+00:00"
+}

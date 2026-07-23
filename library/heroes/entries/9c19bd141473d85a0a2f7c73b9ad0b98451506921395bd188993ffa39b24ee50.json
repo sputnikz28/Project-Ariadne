@@ -1,0 +1,79 @@
+{
+  "hero_id": "HERO-2026-057-9c19bd14",
+  "dedup_hash": "9c19bd141473d85a0a2f7c73b9ad0b98451506921395bd188993ffa39b24ee50",
+  "source_prediction_id": "075e870d174f167347e9753512d8a2b185414f94a6a2a77eaea4340d97de6fad",
+  "entity_id": "H-00732",
+  "entity_name": "Morgana Pedra-Partida",
+  "race": "Esqueleto",
+  "generation": 14,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "057/2026",
+  "draw_date": "2026-07-17",
+  "official_key": {
+    "numeros": [
+      12,
+      21,
+      23,
+      34,
+      40
+    ],
+    "estrelas": [
+      9,
+      10
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      21,
+      23,
+      27,
+      34,
+      39
+    ],
+    "estrelas": [
+      7,
+      12
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 0,
+  "exact_matched_values": {
+    "numeros": [
+      21,
+      23,
+      34
+    ],
+    "estrelas": []
+  },
+  "missed_winning_values": {
+    "numeros": [
+      12,
+      40
+    ],
+    "estrelas": [
+      9,
+      10
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      27,
+      39
+    ],
+    "estrelas": [
+      7,
+      12
+    ]
+  },
+  "hero_category": "3+0",
+  "hero_tier": "TIER_4",
+  "simulation_score": 38,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_058_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 0 lucky stars against official draw 057/2026 (category 3+0).",
+  "registered_at": "2026-07-22T09:09:33+00:00"
+}
