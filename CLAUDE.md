@@ -597,3 +597,15 @@ Estrutura só, sem runner. `benchmarks/random/` (baseline aleatório), `benchmar
 - Novas facções: Juízes do Conselho, Geómetras do Véu, Estatísticos Imperiais
 - `dashboard/` — visualização e análise
 - Rng retrofit decision: estender `ctx['rng']` a todas as facções (hoje só Panteão + Skeletons + Chronomancers), ou manter `random` global nas restantes — Clerics migration deliberately kept global `random` to guarantee determinism (see above)
+
+# Dependências opcionais
+
+## Dashboard (V12.3 — em desenvolvimento)
+
+O módulo `dashboard/` (exportação para Excel) usa `openpyxl`, que não é uma
+dependência obrigatória do núcleo do projeto (ver `requirements.txt`).
+Instalar apenas se for necessário gerar o workbook de investigação:
+
+```bash
+pip install -r requirements-dashboard.txt
+```
