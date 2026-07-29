@@ -1,5 +1,5 @@
-"""Tests for core/services/dashboard_data.py — Heroes and Legends row
-builders only (scope of this commit). No HeroRegistry/LegendRegistry
+"""Tests for core/services/dashboard_data.py — Heroes, Legends, Base de
+Chaves and Personagens row builders. No HeroRegistry/LegendRegistry
 involved anywhere here — only plain dicts, matching the module's
 contract that it never touches the registries or disk itself.
 """
@@ -10,7 +10,9 @@ import unittest
 from core.services.dashboard_data import (
     HeroRow,
     LegendRow,
+    build_characters_rows,
     build_heroes_rows,
+    build_key_base_rows,
     build_legends_rows,
 )
 
@@ -56,6 +58,39 @@ def make_legend_record(**overrides):
     }
     record.update(overrides)
     return record
+
+
+def make_draw_record(**overrides):
+    record = {
+        "numero_sorteio": "057/2026",
+        "data": "2026-07-17",
+        "dia_semana": "sexta-feira",
+        "calendario": {"ano": 2026},
+        "chave": {"numeros": [12, 21, 23, 34, 40], "estrelas": [9, 10]},
+        "estatisticas_chave": {"soma_numeros": 130, "intervalos_ordenados": [9, 2, 11, 6]},
+        "astronomia": {"fase_lua": "Lua crescente côncava"},
+    }
+    record.update(overrides)
+    return record
+
+
+def make_character_file(**overrides):
+    file_content = {
+        "raca": "Clérigos",
+        "personagens": [
+            {
+                "id": "bruxa_arquetipo",
+                "nome": "Bruxa",
+                "titulo": "Linhagem da Mistura",
+                "biografia": "...",
+                "personalidade": "...",
+                "artefactos_preferidos": [],
+                "metodo": "Combina números quentes, frios e um número aleatório.",
+            },
+        ],
+    }
+    file_content.update(overrides)
+    return file_content
 
 
 class TestBuildHeroesRows(unittest.TestCase):
@@ -125,6 +160,121 @@ class TestBuildLegendsRows(unittest.TestCase):
         r2 = make_legend_record(legend_id="LEGEND-bbb")
         rows = build_legends_rows([r1, r2])
         self.assertEqual([r.legend_id for r in rows], ["LEGEND-aaa", "LEGEND-bbb"])
+
+
+class TestBuildKeyBaseRows(unittest.TestCase):
+    def test_maps_fields_correctly(self):
+        rows = build_key_base_rows([make_draw_record()])
+        self.assertEqual(len(rows), 1)
+        row = rows[0]
+        self.assertEqual(row.numero_sorteio, "057/2026")
+        self.assertEqual(row.data, "2026-07-17")
+        self.assertEqual(row.dia_semana, "sexta-feira")
+        self.assertEqual(row.numeros, (12, 21, 23, 34, 40))
+        self.assertEqual(row.estrelas, (9, 10))
+        self.assertEqual(row.soma, 130)
+        self.assertEqual(row.gaps, (9, 2, 11, 6))
+        self.assertEqual(row.fase_lua, "Lua crescente côncava")
+
+    def test_filter_uses_calendario_ano_not_numero_sorteio(self):
+        # numero_sorteio has an unexpected/malformed shape, but
+        # calendario.ano is correct — the draw must still be included.
+        record = make_draw_record(numero_sorteio="???", calendario={"ano": 2026})
+        rows = build_key_base_rows([record], year=2026)
+        self.assertEqual(len(rows), 1)
+        self.assertEqual(rows[0].numero_sorteio, "???")
+
+    def test_draws_from_other_years_are_excluded(self):
+        draw_2025 = make_draw_record(numero_sorteio="104/2025", calendario={"ano": 2025})
+        draw_2026 = make_draw_record(numero_sorteio="057/2026", calendario={"ano": 2026})
+        rows = build_key_base_rows([draw_2025, draw_2026], year=2026)
+        self.assertEqual(len(rows), 1)
+        self.assertEqual(rows[0].numero_sorteio, "057/2026")
+
+    def test_numero_sorteio_year_suffix_is_irrelevant_to_the_filter(self):
+        # Even if numero_sorteio LOOKS like it belongs to `year` by its
+        # suffix, only calendario.ano decides inclusion.
+        record = make_draw_record(numero_sorteio="001/2026", calendario={"ano": 2025})
+        rows = build_key_base_rows([record], year=2026)
+        self.assertEqual(rows, [])
+
+    def test_gaps_and_key_fields_are_tuples(self):
+        row = build_key_base_rows([make_draw_record()])[0]
+        self.assertIsInstance(row.numeros, tuple)
+        self.assertIsInstance(row.estrelas, tuple)
+        self.assertIsInstance(row.gaps, tuple)
+
+    def test_missing_astronomia_defaults_fase_lua_to_none(self):
+        record = make_draw_record()
+        del record["astronomia"]
+        row = build_key_base_rows([record])[0]
+        self.assertIsNone(row.fase_lua)
+
+    def test_mutating_source_record_after_build_does_not_affect_row(self):
+        record = make_draw_record()
+        row = build_key_base_rows([record])[0]
+        record["chave"]["numeros"].append(999)
+        self.assertEqual(row.numeros, (12, 21, 23, 34, 40))
+
+    def test_row_is_frozen(self):
+        row = build_key_base_rows([make_draw_record()])[0]
+        with self.assertRaises(dataclasses.FrozenInstanceError):
+            row.soma = 0
+
+
+class TestBuildCharactersRows(unittest.TestCase):
+    def test_maps_fields_correctly(self):
+        rows = build_characters_rows([make_character_file()])
+        self.assertEqual(len(rows), 1)
+        row = rows[0]
+        self.assertEqual(row.entity_id, "bruxa_arquetipo")
+        self.assertEqual(row.nome, "Bruxa")
+        self.assertEqual(row.raca, "Clérigos")
+        self.assertEqual(row.titulo, "Linhagem da Mistura")
+        self.assertIsNotNone(row.metodo)
+        self.assertIsNone(row.faccao)
+
+    def test_aggregates_multiple_files_correctly(self):
+        file_1 = make_character_file(raca="Clérigos")
+        file_2 = make_character_file(
+            raca="Vampiros",
+            personagens=[{"id": "conde_vaelor", "nome": "Conde Vaelor", "titulo": "O Antigo"}],
+        )
+        rows = build_characters_rows([file_1, file_2])
+        self.assertEqual(len(rows), 2)
+        self.assertEqual({r.raca for r in rows}, {"Clérigos", "Vampiros"})
+        self.assertEqual({r.entity_id for r in rows}, {"bruxa_arquetipo", "conde_vaelor"})
+
+    def test_missing_metodo_and_titulo_default_to_none(self):
+        file_content = make_character_file(
+            personagens=[{"id": "sem_extras", "nome": "Sem Extras"}],
+        )
+        row = build_characters_rows([file_content])[0]
+        self.assertIsNone(row.titulo)
+        self.assertIsNone(row.metodo)
+
+    def test_multiple_personagens_within_one_race_all_included(self):
+        file_content = make_character_file(personagens=[
+            {"id": "a", "nome": "A"},
+            {"id": "b", "nome": "B"},
+        ])
+        rows = build_characters_rows([file_content])
+        self.assertEqual(len(rows), 2)
+        self.assertEqual({r.entity_id for r in rows}, {"a", "b"})
+
+    def test_empty_list_returns_empty_list(self):
+        self.assertEqual(build_characters_rows([]), [])
+
+    def test_mutating_source_file_after_build_does_not_affect_row(self):
+        file_content = make_character_file()
+        row = build_characters_rows([file_content])[0]
+        file_content["personagens"][0]["nome"] = "Alterado"
+        self.assertEqual(row.nome, "Bruxa")
+
+    def test_row_is_frozen(self):
+        row = build_characters_rows([make_character_file()])[0]
+        with self.assertRaises(dataclasses.FrozenInstanceError):
+            row.nome = "changed"
 
 
 if __name__ == "__main__":

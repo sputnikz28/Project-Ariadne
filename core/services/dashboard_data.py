@@ -214,3 +214,71 @@ def build_legends_rows(legend_records: Sequence[DashboardSourceRecord]) -> list[
             provenance=r["provenance"],
         ))
     return rows
+
+
+# ---------------------------------------------------------------------------
+# Base de Chaves / Personagens — also direct reshape from strict, tested
+# canonical sources: the historical dataset (tests/test_historical_dataset.py
+# already enforces its schema) and races/*/characters.json.
+# ---------------------------------------------------------------------------
+
+def build_key_base_rows(
+    draw_records: Sequence[DashboardSourceRecord], year: int = 2026,
+) -> list[DrawRow]:
+    """draw_records: the `sorteios` list already loaded from a historical
+    dataset JSON file (datasets/historical/euromillions/<year>/*.json) —
+    the caller reads the file, this function never does.
+
+    Strictly filters to draws whose calendario.ano equals `year` — the
+    explicit year field, verified present and consistent with
+    numero_sorteio across all 1,965 draws in the canonical dataset
+    (2004-2026). Anything outside `year` is excluded, not an error —
+    this is a deliberate scope filter (V12.3 covers 2026 only), not a
+    correction of malformed data.
+    """
+    rows = []
+    for d in draw_records:
+        if d["calendario"]["ano"] != year:
+            continue
+        rows.append(DrawRow(
+            numero_sorteio=d["numero_sorteio"],
+            data=d["data"],
+            dia_semana=d["dia_semana"],
+            numeros=tuple(d["chave"]["numeros"]),
+            estrelas=tuple(d["chave"]["estrelas"]),
+            soma=d["estatisticas_chave"]["soma_numeros"],
+            gaps=tuple(d["estatisticas_chave"]["intervalos_ordenados"]),
+            fase_lua=d.get("astronomia", {}).get("fase_lua"),
+        ))
+    return rows
+
+
+def build_characters_rows(
+    character_files: Sequence[DashboardSourceRecord],
+) -> list[CharacterRow]:
+    """character_files: the already-loaded content of each
+    races/*/characters.json file, one element per race, each shaped
+    {"raca": ..., "personagens": [...]} — the caller reads every file,
+    this function never does.
+
+    `id`/`nome` are uniform across every race checked and read directly.
+    `titulo`/`metodo` are read defensively via .get() since not every
+    race's personagens carry `metodo` (some use `linhagem` or
+    `especialidade_analitica_futura` instead — neither is part of this
+    contract yet). `faccao` is always None here: characters.json does
+    not carry a faction reference (that field lives in lineages.json,
+    which this function does not read).
+    """
+    rows = []
+    for file_content in character_files:
+        raca = file_content["raca"]
+        for personagem in file_content["personagens"]:
+            rows.append(CharacterRow(
+                entity_id=personagem["id"],
+                nome=personagem["nome"],
+                raca=raca,
+                titulo=personagem.get("titulo"),
+                metodo=personagem.get("metodo"),
+                faccao=None,
+            ))
+    return rows
