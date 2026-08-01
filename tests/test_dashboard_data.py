@@ -6,12 +6,20 @@ contract that it never touches the registries or disk itself.
 
 import dataclasses
 import unittest
+from types import MappingProxyType
 
 from core.services.dashboard_data import (
     HeroRow,
+    HouseEntry,
     LegendRow,
+    _is_empty,
+    _NormalizationResult,
+    _NormalizedIndividual,
+    _normalize_archive,
+    _normalize_individual_record,
     build_characters_rows,
     build_heroes_rows,
+    build_houses,
     build_key_base_rows,
     build_legends_rows,
 )
@@ -275,6 +283,297 @@ class TestBuildCharactersRows(unittest.TestCase):
         row = build_characters_rows([make_character_file()])[0]
         with self.assertRaises(dataclasses.FrozenInstanceError):
             row.nome = "changed"
+
+
+def make_population_record(**overrides):
+    record = {
+        "id": "H-00017",
+        "nome": "Morgana da Lua Fria",
+        "raca": "Chefe Tribal",
+        "casa": "place:floresta_ancestral",
+        "geracao": 3,
+        "pontos": 42,
+        "titulo": "Guardiã",
+    }
+    record.update(overrides)
+    return record
+
+
+def make_lineage_file(**overrides):
+    file_content = {"raca": "Treefolks", "casa": "place:floresta_ancestral"}
+    file_content.update(overrides)
+    return file_content
+
+
+class TestIsEmpty(unittest.TestCase):
+    def test_none_is_empty(self):
+        self.assertTrue(_is_empty(None))
+
+    def test_empty_string_is_empty(self):
+        self.assertTrue(_is_empty(""))
+
+    def test_whitespace_only_string_is_empty(self):
+        self.assertTrue(_is_empty("   "))
+
+    def test_empty_list_dict_set_are_empty(self):
+        self.assertTrue(_is_empty([]))
+        self.assertTrue(_is_empty({}))
+        self.assertTrue(_is_empty(set()))
+
+    def test_non_empty_string_is_not_empty(self):
+        self.assertFalse(_is_empty("place:floresta_ancestral"))
+
+    def test_non_empty_collection_is_not_empty(self):
+        self.assertFalse(_is_empty([1, 2]))
+
+    def test_zero_and_false_are_not_empty(self):
+        self.assertFalse(_is_empty(0))
+        self.assertFalse(_is_empty(False))
+
+
+class TestNormalizeIndividualRecord(unittest.TestCase):
+    def test_valid_record_is_valid_with_no_missing_fields(self):
+        normalized = _normalize_individual_record(make_population_record(), index=0)
+        self.assertTrue(normalized.is_valid)
+        self.assertEqual(normalized.missing_fields, ())
+        self.assertEqual(normalized.entity_id, "H-00017")
+        self.assertEqual(normalized.nome, "Morgana da Lua Fria")
+        self.assertEqual(normalized.raca, "Chefe Tribal")
+        self.assertEqual(normalized.casa, "place:floresta_ancestral")
+        self.assertEqual(normalized.geracao, 3)
+        self.assertEqual(normalized.source_index, 0)
+
+    def test_missing_field_is_flagged_as_ausente(self):
+        record = make_population_record()
+        del record["casa"]
+        normalized = _normalize_individual_record(record, index=1)
+        self.assertFalse(normalized.is_valid)
+        self.assertIn("casa (ausente)", normalized.missing_fields)
+        self.assertIsNone(normalized.casa)
+
+    def test_multiple_missing_fields_all_reported(self):
+        record = make_population_record()
+        del record["casa"]
+        del record["geracao"]
+        normalized = _normalize_individual_record(record, index=2)
+        self.assertEqual(
+            set(normalized.missing_fields),
+            {"casa (ausente)", "geracao (ausente)"},
+        )
+
+    def test_empty_string_field_is_flagged_as_vazio(self):
+        record = make_population_record(raca="")
+        normalized = _normalize_individual_record(record, index=3)
+        self.assertFalse(normalized.is_valid)
+        self.assertIn("raca (vazio)", normalized.missing_fields)
+
+    def test_whitespace_only_string_field_is_flagged_as_vazio(self):
+        record = make_population_record(nome="   ")
+        normalized = _normalize_individual_record(record, index=4)
+        self.assertFalse(normalized.is_valid)
+        self.assertIn("nome (vazio)", normalized.missing_fields)
+
+    def test_geracao_zero_is_not_treated_as_empty(self):
+        normalized = _normalize_individual_record(make_population_record(geracao=0), index=0)
+        self.assertTrue(normalized.is_valid)
+        self.assertEqual(normalized.geracao, 0)
+
+    def test_non_mapping_record_never_raises(self):
+        for bad_record in (None, "not-a-dict", 123, ["a", "list"]):
+            with self.subTest(bad_record=bad_record):
+                normalized = _normalize_individual_record(bad_record, index=5)
+                self.assertFalse(normalized.is_valid)
+                self.assertIsNone(normalized.casa)
+                self.assertEqual(len(normalized.missing_fields), 1)
+                self.assertIn("registo inválido", normalized.missing_fields[0])
+
+    def test_extra_excludes_common_fields(self):
+        normalized = _normalize_individual_record(make_population_record(), index=0)
+        self.assertNotIn("casa", normalized.extra)
+        self.assertNotIn("id", normalized.extra)
+        self.assertNotIn("nome", normalized.extra)
+        self.assertNotIn("raca", normalized.extra)
+        self.assertNotIn("geracao", normalized.extra)
+        self.assertEqual(normalized.extra["pontos"], 42)
+        self.assertEqual(normalized.extra["titulo"], "Guardiã")
+
+    def test_extra_is_a_mapping_proxy_and_is_immutable(self):
+        normalized = _normalize_individual_record(make_population_record(), index=0)
+        self.assertIsInstance(normalized.extra, MappingProxyType)
+        with self.assertRaises(TypeError):
+            normalized.extra["pontos"] = 999
+
+    def test_mutating_source_record_after_normalize_does_not_affect_extra(self):
+        record = make_population_record()
+        normalized = _normalize_individual_record(record, index=0)
+        record["pontos"] = 999
+        record["novo_campo"] = "abc"
+        self.assertEqual(normalized.extra["pontos"], 42)
+        self.assertNotIn("novo_campo", normalized.extra)
+
+    def test_row_is_frozen(self):
+        normalized = _normalize_individual_record(make_population_record(), index=0)
+        with self.assertRaises(dataclasses.FrozenInstanceError):
+            normalized.casa = "changed"
+
+
+class TestNormalizeArchive(unittest.TestCase):
+    def test_empty_archive_returns_empty_result(self):
+        result = _normalize_archive([])
+        self.assertEqual(result.individuals, ())
+        self.assertEqual(result.warnings, ())
+
+    def test_valid_records_produce_no_warnings(self):
+        result = _normalize_archive([make_population_record(), make_population_record(id="H-2")])
+        self.assertEqual(result.warnings, ())
+        self.assertEqual(len(result.individuals), 2)
+
+    def test_warning_names_exact_missing_field_and_record_identity(self):
+        record = make_population_record(id="H-99")
+        del record["casa"]
+        result = _normalize_archive([record])
+        self.assertEqual(result.warnings, ("registo H-99: casa (ausente)",))
+
+    def test_warning_uses_index_when_id_missing(self):
+        record = make_population_record()
+        del record["id"]
+        del record["casa"]
+        result = _normalize_archive([record])
+        self.assertEqual(
+            result.warnings,
+            ("registo índice 0: id (ausente)", "registo índice 0: casa (ausente)"),
+        )
+
+    def test_warnings_and_individuals_preserve_record_order(self):
+        good = make_population_record(id="H-good")
+        bad = make_population_record(id="H-bad")
+        del bad["casa"]
+        result = _normalize_archive([good, bad])
+        self.assertEqual(
+            [ind.entity_id for ind in result.individuals],
+            ["H-good", "H-bad"],
+        )
+        self.assertEqual(result.warnings, ("registo H-bad: casa (ausente)",))
+
+    def test_result_is_frozen(self):
+        result = _normalize_archive([])
+        with self.assertRaises(dataclasses.FrozenInstanceError):
+            result.warnings = ("x",)
+
+
+class TestBuildHouses(unittest.TestCase):
+    def test_declared_only_via_casa_string_has_source_lineages_json(self):
+        rows = build_houses([make_lineage_file()], [])
+        self.assertEqual(len(rows), 1)
+        row = rows[0]
+        self.assertEqual(row.casa, "place:floresta_ancestral")
+        self.assertEqual(row.declared_by_races, ("Treefolks",))
+        self.assertFalse(row.observed_in_population)
+        self.assertEqual(row.source, "lineages.json")
+
+    def test_declared_via_casas_list(self):
+        file_content = {"raca": "Kors", "casas": ["place:norte", "place:sul"]}
+        rows = build_houses([file_content], [])
+        self.assertEqual({r.casa for r in rows}, {"place:norte", "place:sul"})
+        for row in rows:
+            self.assertEqual(row.declared_by_races, ("Kors",))
+            self.assertEqual(row.source, "lineages.json")
+
+    def test_declared_via_casas_single_string(self):
+        rows = build_houses([{"raca": "Faeries", "casas": "place:jardim_eterno"}], [])
+        self.assertEqual(len(rows), 1)
+        self.assertEqual(rows[0].casa, "place:jardim_eterno")
+        self.assertEqual(rows[0].declared_by_races, ("Faeries",))
+
+    def test_casas_takes_precedence_over_casa_when_both_present(self):
+        file_content = {"raca": "Kors", "casa": "place:antigo", "casas": ["place:novo"]}
+        rows = build_houses([file_content], [])
+        self.assertEqual([r.casa for r in rows], ["place:novo"])
+
+    def test_observed_only_house_has_source_population_only(self):
+        rows = build_houses([], [make_population_record(casa="place:jardim_eterno")])
+        self.assertEqual(len(rows), 1)
+        row = rows[0]
+        self.assertEqual(row.casa, "place:jardim_eterno")
+        self.assertEqual(row.declared_by_races, ())
+        self.assertTrue(row.observed_in_population)
+        self.assertEqual(row.source, "population_only")
+
+    def test_declared_only_house_is_not_marked_observed(self):
+        rows = build_houses([make_lineage_file()], [make_population_record(casa="place:outra_casa")])
+        by_casa = {row.casa: row for row in rows}
+        self.assertFalse(by_casa["place:floresta_ancestral"].observed_in_population)
+        self.assertEqual(by_casa["place:floresta_ancestral"].source, "lineages.json")
+
+    def test_declared_and_observed_house_has_source_both(self):
+        rows = build_houses(
+            [make_lineage_file()],
+            [make_population_record(casa="place:floresta_ancestral")],
+        )
+        self.assertEqual(len(rows), 1)
+        row = rows[0]
+        self.assertEqual(row.source, "both")
+        self.assertTrue(row.observed_in_population)
+        self.assertEqual(row.declared_by_races, ("Treefolks",))
+
+    def test_house_observed_even_when_other_common_fields_missing(self):
+        record = make_population_record(casa="place:floresta_ancestral")
+        del record["raca"]
+        rows = build_houses([], [record])
+        self.assertEqual(len(rows), 1)
+        self.assertTrue(rows[0].observed_in_population)
+
+    def test_multiple_races_declaring_same_house_are_all_listed_sorted(self):
+        rows = build_houses(
+            [make_lineage_file(raca="Treefolks"), make_lineage_file(raca="Faeries")],
+            [],
+        )
+        self.assertEqual(len(rows), 1)
+        self.assertEqual(rows[0].declared_by_races, ("Faeries", "Treefolks"))
+
+    def test_casa_names_are_stripped_of_surrounding_whitespace(self):
+        rows = build_houses([{"raca": "Kors", "casa": "  place:com_espacos  "}], [])
+        self.assertEqual(rows[0].casa, "place:com_espacos")
+
+    def test_casas_whitespace_only_entries_are_ignored(self):
+        file_content = {"raca": "Kors", "casas": ["place:valido", "   ", ""]}
+        rows = build_houses([file_content], [])
+        self.assertEqual(len(rows), 1)
+        self.assertEqual(rows[0].casa, "place:valido")
+
+    def test_casas_non_string_entries_are_ignored(self):
+        file_content = {"raca": "Kors", "casas": ["place:valido", 123, None, {"a": 1}]}
+        rows = build_houses([file_content], [])
+        self.assertEqual(len(rows), 1)
+        self.assertEqual(rows[0].casa, "place:valido")
+
+    def test_casas_wrong_type_results_in_no_declared_houses(self):
+        rows = build_houses([{"raca": "Kors", "casas": 123}], [])
+        self.assertEqual(rows, [])
+
+    def test_lineage_file_missing_raca_is_skipped(self):
+        rows = build_houses([{"casa": "place:sem_raca"}], [])
+        self.assertEqual(rows, [])
+
+    def test_non_mapping_lineage_file_never_raises(self):
+        rows = build_houses([None, "not-a-dict", 123], [])
+        self.assertEqual(rows, [])
+
+    def test_non_mapping_and_missing_field_archive_records_never_raise(self):
+        rows = build_houses([], [None, "not-a-dict", {}, make_population_record(casa="place:x")])
+        self.assertEqual([r.casa for r in rows], ["place:x"])
+
+    def test_empty_inputs_return_empty_list(self):
+        self.assertEqual(build_houses([], []), [])
+
+    def test_rows_are_sorted_by_casa(self):
+        rows = build_houses([{"raca": "Kors", "casas": ["place:zulu", "place:alfa"]}], [])
+        self.assertEqual([r.casa for r in rows], ["place:alfa", "place:zulu"])
+
+    def test_house_entry_is_frozen(self):
+        rows = build_houses([make_lineage_file()], [])
+        with self.assertRaises(dataclasses.FrozenInstanceError):
+            rows[0].casa = "changed"
 
 
 if __name__ == "__main__":

@@ -14,6 +14,7 @@ from __future__ import annotations
 
 from collections.abc import Mapping, Sequence
 from dataclasses import dataclass, field
+from types import MappingProxyType
 from typing import Any
 
 # A single record as loaded from a registry/JSON source, before this
@@ -281,4 +282,159 @@ def build_characters_rows(
                 metodo=personagem.get("metodo"),
                 faccao=None,
             ))
+    return rows
+
+
+# ---------------------------------------------------------------------------
+# Normalização (privada, genérica) — contrato interno reutilizável por
+# qualquer builder que precise de ler registos heterogéneos de arquivo
+# (população, gerações, frequências, etc.). Não foi desenhada a pensar em
+# Houses especificamente: is_valid reflete a completude do contrato comum,
+# não uma necessidade de um builder concreto. Nunca levanta exceção.
+# ---------------------------------------------------------------------------
+
+_COMMON_FIELDS: tuple[str, ...] = ("id", "nome", "raca", "casa", "geracao")
+
+
+def _is_empty(value: Any) -> bool:
+    if value is None:
+        return True
+    if isinstance(value, str):
+        return not value.strip()
+    if isinstance(value, (list, tuple, dict, set, frozenset)):
+        return len(value) == 0
+    return False
+
+
+@dataclass(frozen=True)
+class _NormalizedIndividual:
+    entity_id: str | None
+    nome: str | None
+    raca: str | None
+    casa: str | None
+    geracao: int | None
+    is_valid: bool
+    missing_fields: tuple[str, ...]
+    source_index: int
+    extra: Mapping[str, Any]
+
+
+@dataclass(frozen=True)
+class _NormalizationResult:
+    individuals: tuple[_NormalizedIndividual, ...]
+    warnings: tuple[str, ...]
+
+
+def _normalize_individual_record(record: Any, index: int) -> _NormalizedIndividual:
+    """Never raises. `record` é um elemento já carregado, de forma e
+    origem arbitrárias, de qualquer arquivo de população. `is_valid` só é
+    True se todos os _COMMON_FIELDS estiverem presentes e não-vazios —
+    reflete a completude do registo, não uma regra específica de Houses.
+    """
+    if not isinstance(record, Mapping):
+        return _NormalizedIndividual(
+            entity_id=None, nome=None, raca=None, casa=None, geracao=None,
+            is_valid=False,
+            missing_fields=(f"registo inválido: esperado mapeamento, recebido {type(record).__name__}",),
+            source_index=index,
+            extra=MappingProxyType({}),
+        )
+
+    missing = []
+    for key in _COMMON_FIELDS:
+        if key not in record:
+            missing.append(f"{key} (ausente)")
+        elif _is_empty(record[key]):
+            missing.append(f"{key} (vazio)")
+
+    return _NormalizedIndividual(
+        entity_id=record.get("id"),
+        nome=record.get("nome"),
+        raca=record.get("raca"),
+        casa=record.get("casa"),
+        geracao=record.get("geracao"),
+        is_valid=not missing,
+        missing_fields=tuple(missing),
+        source_index=index,
+        extra=MappingProxyType({k: v for k, v in record.items() if k not in _COMMON_FIELDS}),
+    )
+
+
+def _normalize_archive(records: Sequence[Any]) -> _NormalizationResult:
+    individuals = []
+    warnings = []
+    for index, record in enumerate(records):
+        normalized = _normalize_individual_record(record, index)
+        individuals.append(normalized)
+        for issue in normalized.missing_fields:
+            ident = normalized.entity_id or f"índice {normalized.source_index}"
+            warnings.append(f"registo {ident}: {issue}")
+    return _NormalizationResult(
+        individuals=tuple(individuals),
+        warnings=tuple(warnings),
+    )
+
+
+# ---------------------------------------------------------------------------
+# Casas — cruza casas declaradas (races/*/lineages.json) com casas
+# observadas na população. Só esta função é específica de Houses; usa
+# apenas o campo `casa` de cada indivíduo normalizado (independentemente
+# de `is_valid`), e não devolve os warnings de _normalize_archive — esses
+# pertencem exclusivamente ao contrato interno, verificado pelos testes
+# desta camada.
+# ---------------------------------------------------------------------------
+
+def build_houses(
+    lineage_files: Sequence[DashboardSourceRecord],
+    archive_records: Sequence[Any],
+) -> list[HouseEntry]:
+    """lineage_files: conteúdo já lido de cada races/<raça>/lineages.json
+    (um dict por raça, com 'raca' e, ao nível de topo, ou 'casa' [string
+    única] ou 'casas' [string única, ou lista/tuple/set/frozenset de
+    strings, quando a raça declara mais do que uma]).
+    archive_records: uma sequência já carregada de registos de população —
+    a origem exata é irrelevante para esta função; cada registo passa por
+    _normalize_archive antes de ser usado.
+    """
+    declared: dict[str, set[str]] = {}
+    for file_content in lineage_files:
+        if not isinstance(file_content, Mapping):
+            continue
+        raca = file_content.get("raca")
+        if not raca:
+            continue
+
+        casas_field = file_content.get("casas")
+        if casas_field is None:
+            casas_field = file_content.get("casa")
+
+        if isinstance(casas_field, str):
+            candidates = [casas_field]
+        elif isinstance(casas_field, (list, tuple, set, frozenset)):
+            candidates = list(casas_field)
+        else:
+            candidates = []
+
+        for casa in candidates:
+            if not isinstance(casa, str):
+                continue
+            casa = casa.strip()
+            if not casa:
+                continue
+            declared.setdefault(casa, set()).add(raca)
+
+    normalization = _normalize_archive(archive_records)
+    observed_casas = {ind.casa for ind in normalization.individuals if ind.casa}
+
+    rows = []
+    for casa in sorted(declared.keys() | observed_casas):
+        races = tuple(sorted(declared.get(casa, ())))
+        observed = casa in observed_casas
+        source = "both" if races and observed else "lineages.json" if races else "population_only"
+        rows.append(HouseEntry(
+            casa=casa,
+            declared_by_races=races,
+            observed_in_population=observed,
+            source=source,
+        ))
     return rows
