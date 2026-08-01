@@ -438,3 +438,69 @@ def build_houses(
             source=source,
         ))
     return rows
+
+
+# ---------------------------------------------------------------------------
+# Executive Summary / Dashboard Dataset — pure composition of rows already
+# produced by the other builders in this module. Neither function computes
+# any new statistic: total_heroes/total_legends are counts of the rows
+# handed in, and everything else in ExecutiveSummary that would require
+# Generations/Frequencies data (taxa_sucesso, diversidade_media,
+# convergencia_media, geracoes_analisadas beyond its zero default) is left
+# at its dataclass default until a real producer for that data exists —
+# see CLAUDE.md, Commit 5 scope note. `gerado_em` is accepted verbatim from
+# the caller; this module never reads a clock itself.
+# ---------------------------------------------------------------------------
+
+def build_executive_summary(
+    heroes: Sequence[HeroRow],
+    legends: Sequence[LegendRow],
+    economy: EconomyPlaceholder | None = None,
+    gerado_em: str | None = None,
+) -> ExecutiveSummary:
+    return ExecutiveSummary(
+        total_heroes=len(heroes),
+        total_legends=len(legends),
+        economia=economy if economy is not None else EconomyPlaceholder(),
+        gerado_em=gerado_em,
+    )
+
+
+def build_dashboard_dataset(
+    heroes: Sequence[HeroRow],
+    legends: Sequence[LegendRow],
+    key_base: Sequence[DrawRow],
+    characters: Sequence[CharacterRow],
+    houses: Sequence[HouseEntry],
+    generations: Sequence[GenerationRow] = (),
+    frequencies: Sequence[FrequenciesRow] = (),
+    economy: EconomyPlaceholder | None = None,
+    methodology: Mapping[str, Any] | None = None,
+    gerado_em: str | None = None,
+) -> DashboardDataset:
+    """Assembles rows already built by the other functions in this module
+    (build_heroes_rows, build_legends_rows, build_key_base_rows,
+    build_characters_rows, build_houses, and — once they exist — their
+    Generations/Frequencies counterparts) into one DashboardDataset. Never
+    calls those builders itself, never reads a file, never touches a
+    Registry — every argument here is already-built data handed in by the
+    caller.
+    """
+    resolved_economy = economy if economy is not None else EconomyPlaceholder()
+    return DashboardDataset(
+        executive=build_executive_summary(
+            heroes,
+            legends,
+            economy=resolved_economy,
+            gerado_em=gerado_em,
+        ),
+        heroes=tuple(heroes),
+        legends=tuple(legends),
+        key_base=tuple(key_base),
+        characters=tuple(characters),
+        houses=tuple(houses),
+        generations=tuple(generations),
+        frequencies=tuple(frequencies),
+        economy=resolved_economy,
+        methodology=MappingProxyType(dict(methodology)) if methodology is not None else MappingProxyType({}),
+    )

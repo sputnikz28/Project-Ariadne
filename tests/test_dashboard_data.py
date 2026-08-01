@@ -9,6 +9,9 @@ import unittest
 from types import MappingProxyType
 
 from core.services.dashboard_data import (
+    CharacterRow,
+    DrawRow,
+    EconomyPlaceholder,
     HeroRow,
     HouseEntry,
     LegendRow,
@@ -18,6 +21,8 @@ from core.services.dashboard_data import (
     _normalize_archive,
     _normalize_individual_record,
     build_characters_rows,
+    build_dashboard_dataset,
+    build_executive_summary,
     build_heroes_rows,
     build_houses,
     build_key_base_rows,
@@ -574,6 +579,213 @@ class TestBuildHouses(unittest.TestCase):
         rows = build_houses([make_lineage_file()], [])
         with self.assertRaises(dataclasses.FrozenInstanceError):
             rows[0].casa = "changed"
+
+
+def make_hero_row(**overrides):
+    fields = dict(
+        hero_id="HERO-2026-057-000149f4",
+        dedup_hash="000149f4",
+        entity_id="H-00017",
+        entity_name="Morgana da Lua Fria",
+        race="Chefe Tribal",
+        generation=1,
+        provenance="legacy",
+        draw_id="057/2026",
+        draw_date="2026-07-17",
+        official_numeros=(12, 21, 23, 34, 40),
+        official_estrelas=(9, 10),
+        predicted_numeros=(12, 36, 40, 45, 50),
+        predicted_estrelas=(5, 10),
+        matched_numbers_count=2,
+        matched_stars_count=1,
+        hero_category="2+1",
+        hero_tier="TIER_5",
+    )
+    fields.update(overrides)
+    return HeroRow(**fields)
+
+
+def make_legend_row(**overrides):
+    fields = dict(
+        legend_id="LEGEND-395e24e0",
+        source_prediction_id="395e24e0",
+        entity_id="H-00017",
+        entity_name="Morgana da Lua Fria",
+        race="Chefe Tribal",
+        promotion_draw="058/2026",
+        promotion_draw_date="2026-07-21",
+        promotion_threshold=3,
+        promotion_tier="LEGEND_TIER_4",
+        criteria_version="v1",
+        hero_count=3,
+        qualified_draws=3,
+        provenance="legacy",
+    )
+    fields.update(overrides)
+    return LegendRow(**fields)
+
+
+def make_draw_row(**overrides):
+    fields = dict(
+        numero_sorteio="057/2026",
+        data="2026-07-17",
+        dia_semana="sexta-feira",
+        numeros=(12, 21, 23, 34, 40),
+        estrelas=(9, 10),
+        soma=130,
+        gaps=(9, 2, 11, 6),
+    )
+    fields.update(overrides)
+    return DrawRow(**fields)
+
+
+def make_character_row(**overrides):
+    fields = dict(entity_id="bruxa_arquetipo", nome="Bruxa", raca="Clérigos")
+    fields.update(overrides)
+    return CharacterRow(**fields)
+
+
+def make_house_entry(**overrides):
+    fields = dict(
+        casa="place:floresta_ancestral",
+        declared_by_races=("Treefolks",),
+        observed_in_population=False,
+        source="lineages.json",
+    )
+    fields.update(overrides)
+    return HouseEntry(**fields)
+
+
+class TestBuildExecutiveSummary(unittest.TestCase):
+    def test_counts_heroes_and_legends(self):
+        summary = build_executive_summary([make_hero_row(), make_hero_row()], [make_legend_row()])
+        self.assertEqual(summary.total_heroes, 2)
+        self.assertEqual(summary.total_legends, 1)
+
+    def test_empty_lists_return_zero_counts(self):
+        summary = build_executive_summary([], [])
+        self.assertEqual(summary.total_heroes, 0)
+        self.assertEqual(summary.total_legends, 0)
+
+    def test_default_economy_is_a_fresh_placeholder(self):
+        summary = build_executive_summary([], [])
+        self.assertIsInstance(summary.economia, EconomyPlaceholder)
+        self.assertEqual(summary.economia, EconomyPlaceholder())
+
+    def test_custom_economy_is_used_verbatim(self):
+        custom = EconomyPlaceholder(investimento="1000")
+        summary = build_executive_summary([], [], economy=custom)
+        self.assertIs(summary.economia, custom)
+
+    def test_gerado_em_passthrough(self):
+        summary = build_executive_summary([], [], gerado_em="2026-08-01T00:00:00+00:00")
+        self.assertEqual(summary.gerado_em, "2026-08-01T00:00:00+00:00")
+
+    def test_gerado_em_defaults_to_none(self):
+        summary = build_executive_summary([], [])
+        self.assertIsNone(summary.gerado_em)
+
+    def test_stats_requiring_generations_default_to_none_or_zero(self):
+        # No GenerationRow producer exists yet (deferred, see CLAUDE.md) —
+        # these must stay at their untouched dataclass defaults, never a
+        # fabricated value.
+        summary = build_executive_summary([make_hero_row()], [make_legend_row()])
+        self.assertIsNone(summary.taxa_sucesso)
+        self.assertIsNone(summary.diversidade_media)
+        self.assertIsNone(summary.convergencia_media)
+        self.assertEqual(summary.geracoes_analisadas, 0)
+
+    def test_result_is_frozen(self):
+        summary = build_executive_summary([], [])
+        with self.assertRaises(dataclasses.FrozenInstanceError):
+            summary.total_heroes = 99
+
+
+class TestBuildDashboardDataset(unittest.TestCase):
+    def test_assembles_all_fields_correctly(self):
+        heroes = [make_hero_row()]
+        legends = [make_legend_row()]
+        key_base = [make_draw_row()]
+        characters = [make_character_row()]
+        houses = [make_house_entry()]
+        dataset = build_dashboard_dataset(heroes, legends, key_base, characters, houses)
+
+        self.assertEqual(dataset.heroes, tuple(heroes))
+        self.assertEqual(dataset.legends, tuple(legends))
+        self.assertEqual(dataset.key_base, tuple(key_base))
+        self.assertEqual(dataset.characters, tuple(characters))
+        self.assertEqual(dataset.houses, tuple(houses))
+        self.assertEqual(dataset.executive.total_heroes, 1)
+        self.assertEqual(dataset.executive.total_legends, 1)
+
+    def test_generations_and_frequencies_default_to_empty_tuple(self):
+        dataset = build_dashboard_dataset([], [], [], [], [])
+        self.assertEqual(dataset.generations, ())
+        self.assertEqual(dataset.frequencies, ())
+
+    def test_all_collections_are_tuples_not_lists(self):
+        dataset = build_dashboard_dataset(
+            [make_hero_row()], [make_legend_row()], [make_draw_row()],
+            [make_character_row()], [make_house_entry()],
+            generations=[], frequencies=[],
+        )
+        for field_name in ("heroes", "legends", "key_base", "characters", "houses", "generations", "frequencies"):
+            with self.subTest(field=field_name):
+                self.assertIsInstance(getattr(dataset, field_name), tuple)
+
+    def test_executive_totals_always_match_heroes_and_legends_passed_in(self):
+        heroes = [make_hero_row(), make_hero_row(entity_id="H-2")]
+        legends = [make_legend_row()]
+        dataset = build_dashboard_dataset(heroes, legends, [], [], [])
+        self.assertEqual(dataset.executive.total_heroes, len(heroes))
+        self.assertEqual(dataset.executive.total_legends, len(legends))
+
+    def test_economy_is_identical_object_in_executive_and_dataset(self):
+        custom = EconomyPlaceholder(investimento="500")
+        dataset = build_dashboard_dataset([], [], [], [], [], economy=custom)
+        self.assertIs(dataset.economy, custom)
+        self.assertIs(dataset.executive.economia, custom)
+        self.assertIs(dataset.economy, dataset.executive.economia)
+
+    def test_default_economy_is_identical_object_in_executive_and_dataset(self):
+        # No economy passed in — both must still resolve to the SAME
+        # placeholder instance, not two separately-constructed ones.
+        dataset = build_dashboard_dataset([], [], [], [], [])
+        self.assertIs(dataset.economy, dataset.executive.economia)
+
+    def test_gerado_em_reaches_executive_summary(self):
+        dataset = build_dashboard_dataset([], [], [], [], [], gerado_em="2026-08-01T00:00:00+00:00")
+        self.assertEqual(dataset.executive.gerado_em, "2026-08-01T00:00:00+00:00")
+
+    def test_methodology_defaults_to_empty_mapping_proxy(self):
+        dataset = build_dashboard_dataset([], [], [], [], [])
+        self.assertIsInstance(dataset.methodology, MappingProxyType)
+        self.assertEqual(dict(dataset.methodology), {})
+
+    def test_methodology_is_immutable(self):
+        dataset = build_dashboard_dataset([], [], [], [], [], methodology={"fonte": "manual"})
+        self.assertIsInstance(dataset.methodology, MappingProxyType)
+        with self.assertRaises(TypeError):
+            dataset.methodology["fonte"] = "alterado"
+
+    def test_mutating_source_methodology_after_build_does_not_affect_dataset(self):
+        source = {"fonte": "manual"}
+        dataset = build_dashboard_dataset([], [], [], [], [], methodology=source)
+        source["fonte"] = "alterado"
+        source["novo"] = "campo"
+        self.assertEqual(dataset.methodology["fonte"], "manual")
+        self.assertNotIn("novo", dataset.methodology)
+
+    def test_mutating_source_list_after_build_does_not_affect_dataset_tuple(self):
+        heroes = [make_hero_row()]
+        dataset = build_dashboard_dataset(heroes, [], [], [], [])
+        heroes.append(make_hero_row(entity_id="H-added-after"))
+        self.assertEqual(len(dataset.heroes), 1)
+
+    def test_result_is_frozen(self):
+        dataset = build_dashboard_dataset([], [], [], [], [])
+        with self.assertRaises(dataclasses.FrozenInstanceError):
+            dataset.heroes = ()
 
 
 if __name__ == "__main__":
