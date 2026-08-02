@@ -422,6 +422,107 @@ class TestNormalizeIndividualRecord(unittest.TestCase):
             normalized.casa = "changed"
 
 
+class TestNormalizeIndividualRecordAliases(unittest.TestCase):
+    def test_name_alone_resolves_to_canonical_nome(self):
+        record = make_population_record()
+        del record["nome"]
+        record["name"] = "Aruk Pedra-Partida"
+        normalized = _normalize_individual_record(record, index=0)
+        self.assertTrue(normalized.is_valid)
+        self.assertEqual(normalized.nome, "Aruk Pedra-Partida")
+
+    def test_generation_alone_resolves_to_canonical_geracao(self):
+        record = make_population_record()
+        del record["geracao"]
+        record["generation"] = 4
+        normalized = _normalize_individual_record(record, index=0)
+        self.assertTrue(normalized.is_valid)
+        self.assertEqual(normalized.geracao, 4)
+
+    def test_canonical_wins_when_both_present_even_if_canonical_is_empty(self):
+        record = make_population_record(nome="")
+        record["name"] = "Valor do Alias"
+        normalized = _normalize_individual_record(record, index=0)
+        self.assertFalse(normalized.is_valid)
+        self.assertIn("nome (vazio)", normalized.missing_fields)
+        self.assertEqual(normalized.nome, "")
+
+    def test_alias_is_only_consulted_when_canonical_key_is_entirely_absent(self):
+        # canonical present (even invalid/empty) always wins — no fallback
+        # to the alias when the canonical key exists at all.
+        record = make_population_record(nome="   ")
+        record["name"] = "Nome Valido"
+        normalized = _normalize_individual_record(record, index=0)
+        self.assertIn("nome (vazio)", normalized.missing_fields)
+        self.assertEqual(normalized.nome, "   ")
+
+    def test_missing_field_message_always_uses_canonical_name(self):
+        record = make_population_record()
+        del record["nome"]
+        del record["geracao"]
+        # neither canonical nor alias present at all
+        normalized = _normalize_individual_record(record, index=0)
+        self.assertIn("nome (ausente)", normalized.missing_fields)
+        self.assertIn("geracao (ausente)", normalized.missing_fields)
+        for issue in normalized.missing_fields:
+            self.assertNotIn("name", issue)
+            self.assertNotIn("generation", issue)
+
+    def test_consumed_alias_is_excluded_from_extra(self):
+        record = make_population_record()
+        del record["nome"]
+        record["name"] = "Aruk Pedra-Partida"
+        normalized = _normalize_individual_record(record, index=0)
+        self.assertNotIn("name", normalized.extra)
+        self.assertNotIn("nome", normalized.extra)
+
+    def test_unconsumed_alias_survives_in_extra_when_canonical_wins(self):
+        record = make_population_record(nome="Morgana da Lua Fria")
+        record["name"] = "Valor Nao Usado"
+        normalized = _normalize_individual_record(record, index=0)
+        self.assertEqual(normalized.nome, "Morgana da Lua Fria")
+        self.assertEqual(normalized.extra["name"], "Valor Nao Usado")
+
+    def test_real_archive_shape_is_valid_via_aliases(self):
+        # Mirrors the actual shape found in
+        # datasets/generated/world_state/todos_individuos.json: 'name'/
+        # 'generation', not 'nome'/'geracao', plus assorted extras.
+        record = {
+            "id": "H-00001",
+            "name": "Aruk Pedra-Partida",
+            "raca": "Chefe Tribal",
+            "casa": "Casa Lunar",
+            "generation": 1,
+            "pais": [],
+            "genoma": {"clareza": 0.7, "confusao": 0.1},
+            "pontos": 30,
+            "titulo": "Sem título",
+            "amuletos": [],
+            "estado": "VIVO",
+            "treinos": 0,
+        }
+        normalized = _normalize_individual_record(record, index=0)
+        self.assertTrue(normalized.is_valid)
+        self.assertEqual(normalized.missing_fields, ())
+        self.assertEqual(normalized.nome, "Aruk Pedra-Partida")
+        self.assertEqual(normalized.geracao, 1)
+        self.assertEqual(normalized.casa, "Casa Lunar")
+        for excluded in ("id", "name", "raca", "casa", "generation"):
+            self.assertNotIn(excluded, normalized.extra)
+        for kept in ("pais", "genoma", "pontos", "titulo", "amuletos", "estado", "treinos"):
+            self.assertIn(kept, normalized.extra)
+
+    def test_original_record_is_never_mutated(self):
+        record = make_population_record()
+        del record["nome"]
+        record["name"] = "Aruk Pedra-Partida"
+        original_keys = set(record.keys())
+        original_snapshot = dict(record)
+        _normalize_individual_record(record, index=0)
+        self.assertEqual(set(record.keys()), original_keys)
+        self.assertEqual(record, original_snapshot)
+
+
 class TestNormalizeArchive(unittest.TestCase):
     def test_empty_archive_returns_empty_result(self):
         result = _normalize_archive([])

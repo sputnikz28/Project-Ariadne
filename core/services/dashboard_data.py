@@ -293,7 +293,27 @@ def build_characters_rows(
 # não uma necessidade de um builder concreto. Nunca levanta exceção.
 # ---------------------------------------------------------------------------
 
-_COMMON_FIELDS: tuple[str, ...] = ("id", "nome", "raca", "casa", "geracao")
+_FIELD_ALIASES: dict[str, tuple[str, ...]] = {
+    "id": ("id",),
+    "nome": ("nome", "name"),
+    "raca": ("raca",),
+    "casa": ("casa",),
+    "geracao": ("geracao", "generation"),
+}
+_COMMON_FIELDS: tuple[str, ...] = tuple(_FIELD_ALIASES)
+
+
+def _resolve_alias(record: Mapping, canonical: str) -> tuple[str | None, Any]:
+    """Returns (alias_key_used, raw_value) for the first key present in
+    record among _FIELD_ALIASES[canonical], checked in precedence order —
+    the canonical Portuguese name always wins if it exists at all, even
+    empty; an alias is only consulted when the canonical key is entirely
+    absent. (None, None) if none of the aliases are present.
+    """
+    for alias in _FIELD_ALIASES[canonical]:
+        if alias in record:
+            return alias, record[alias]
+    return None, None
 
 
 def _is_empty(value: Any) -> bool:
@@ -341,22 +361,29 @@ def _normalize_individual_record(record: Any, index: int) -> _NormalizedIndividu
         )
 
     missing = []
-    for key in _COMMON_FIELDS:
-        if key not in record:
-            missing.append(f"{key} (ausente)")
-        elif _is_empty(record[key]):
-            missing.append(f"{key} (vazio)")
+    resolved: dict[str, Any] = {}
+    consumed_keys: set[str] = set()
+    for canonical in _COMMON_FIELDS:
+        alias_used, raw_value = _resolve_alias(record, canonical)
+        if alias_used is None:
+            missing.append(f"{canonical} (ausente)")
+            resolved[canonical] = None
+            continue
+        consumed_keys.add(alias_used)
+        resolved[canonical] = raw_value
+        if _is_empty(raw_value):
+            missing.append(f"{canonical} (vazio)")
 
     return _NormalizedIndividual(
-        entity_id=record.get("id"),
-        nome=record.get("nome"),
-        raca=record.get("raca"),
-        casa=record.get("casa"),
-        geracao=record.get("geracao"),
+        entity_id=resolved["id"],
+        nome=resolved["nome"],
+        raca=resolved["raca"],
+        casa=resolved["casa"],
+        geracao=resolved["geracao"],
         is_valid=not missing,
         missing_fields=tuple(missing),
         source_index=index,
-        extra=MappingProxyType({k: v for k, v in record.items() if k not in _COMMON_FIELDS}),
+        extra=MappingProxyType({k: v for k, v in record.items() if k not in consumed_keys}),
     )
 
 
