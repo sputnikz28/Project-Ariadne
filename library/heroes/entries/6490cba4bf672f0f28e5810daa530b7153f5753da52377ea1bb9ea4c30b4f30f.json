@@ -1,0 +1,79 @@
+{
+  "hero_id": "HERO-2026-060-6490cba4",
+  "dedup_hash": "6490cba4bf672f0f28e5810daa530b7153f5753da52377ea1bb9ea4c30b4f30f",
+  "source_prediction_id": "c28b6bcfe964425392d05625e239a5878d7fd46f85b4d26acbd461f39a4dfcbd",
+  "entity_id": "H-00621",
+  "entity_name": "Aion dos Ossos",
+  "race": "Elfo",
+  "generation": 12,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "060/2026",
+  "draw_date": "2026-07-28",
+  "official_key": {
+    "numeros": [
+      5,
+      7,
+      24,
+      30,
+      49
+    ],
+    "estrelas": [
+      10,
+      11
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      5,
+      24,
+      25,
+      30,
+      37
+    ],
+    "estrelas": [
+      2,
+      3
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 0,
+  "exact_matched_values": {
+    "numeros": [
+      5,
+      24,
+      30
+    ],
+    "estrelas": []
+  },
+  "missed_winning_values": {
+    "numeros": [
+      7,
+      49
+    ],
+    "estrelas": [
+      10,
+      11
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      25,
+      37
+    ],
+    "estrelas": [
+      2,
+      3
+    ]
+  },
+  "hero_category": "3+0",
+  "hero_tier": "TIER_4",
+  "simulation_score": 38,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 0 lucky stars against official draw 060/2026 (category 3+0).",
+  "registered_at": "2026-08-02T15:10:19+00:00"
+}

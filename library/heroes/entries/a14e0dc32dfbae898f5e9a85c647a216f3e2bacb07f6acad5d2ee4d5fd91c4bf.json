@@ -1,0 +1,80 @@
+{
+  "hero_id": "HERO-2026-061-a14e0dc3",
+  "dedup_hash": "a14e0dc32dfbae898f5e9a85c647a216f3e2bacb07f6acad5d2ee4d5fd91c4bf",
+  "source_prediction_id": "fd812b9975906f0eefb3e1357ffb6afa3496537b64b3457c70d0061448dd1111",
+  "entity_id": "H-00662",
+  "entity_name": "Gruk da Lua Fria",
+  "race": "Cronomante",
+  "generation": 13,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "061/2026",
+  "draw_date": "2026-07-31",
+  "official_key": {
+    "numeros": [
+      10,
+      24,
+      25,
+      31,
+      45
+    ],
+    "estrelas": [
+      4,
+      5
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      19,
+      24,
+      38,
+      40,
+      45
+    ],
+    "estrelas": [
+      4,
+      7
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      24,
+      45
+    ],
+    "estrelas": [
+      4
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      10,
+      25,
+      31
+    ],
+    "estrelas": [
+      5
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      19,
+      38,
+      40
+    ],
+    "estrelas": [
+      7
+    ]
+  },
+  "hero_category": "2+1",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 1 lucky stars against official draw 061/2026 (category 2+1).",
+  "registered_at": "2026-08-02T15:10:30+00:00"
+}

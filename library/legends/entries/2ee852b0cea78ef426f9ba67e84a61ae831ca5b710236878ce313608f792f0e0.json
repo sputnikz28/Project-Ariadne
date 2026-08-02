@@ -1,0 +1,41 @@
+{
+  "legend_id": "LEGEND-2ee852b0",
+  "source_prediction_id": "2ee852b0cea78ef426f9ba67e84a61ae831ca5b710236878ce313608f792f0e0",
+  "promotion_draw": "061/2026",
+  "promotion_draw_date": "2026-07-31",
+  "promotion_threshold": 3,
+  "promotion_tier": "LEGEND_TIER_4",
+  "criteria_version": "v1",
+  "promotion_hero_ids": [
+    "HERO-2026-056-a067616a",
+    "HERO-2026-059-cb8e5be0",
+    "HERO-2026-061-7bb61b6d"
+  ],
+  "project_version": "V12",
+  "git_commit": "eb609239bf97595235a4624908746689f33091c5",
+  "qualification_reason": "Promoted to Legend at draw 061/2026 (2026-07-31) by reaching 3 distinct qualifying draws as Hero (criteria_version: v1).",
+  "entity_id": "H-00699",
+  "entity_name": "Thara dos Astros",
+  "race": "Bruxa",
+  "generation": 14,
+  "predicted_numeros": [
+    9,
+    10,
+    19,
+    25,
+    47
+  ],
+  "predicted_estrelas": [
+    2,
+    4
+  ],
+  "hero_count": 3,
+  "qualified_draws": 3,
+  "contributing_hero_ids": [
+    "HERO-2026-056-a067616a",
+    "HERO-2026-059-cb8e5be0",
+    "HERO-2026-061-7bb61b6d"
+  ],
+  "provenance": "legacy",
+  "last_reevaluated_at": null
+}

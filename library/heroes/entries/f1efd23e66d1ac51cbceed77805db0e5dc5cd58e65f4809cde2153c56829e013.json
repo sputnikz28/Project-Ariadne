@@ -1,0 +1,80 @@
+{
+  "hero_id": "HERO-2026-061-f1efd23e",
+  "dedup_hash": "f1efd23e66d1ac51cbceed77805db0e5dc5cd58e65f4809cde2153c56829e013",
+  "source_prediction_id": "79ab9ea64bf1175bf8dec9c5bf679af884a397d51a2c85cb378abe524e0e8189",
+  "entity_id": "Raiz-1",
+  "entity_name": "Raiz-1",
+  "race": "Treefolk",
+  "generation": 14,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "061/2026",
+  "draw_date": "2026-07-31",
+  "official_key": {
+    "numeros": [
+      10,
+      24,
+      25,
+      31,
+      45
+    ],
+    "estrelas": [
+      4,
+      5
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      10,
+      18,
+      19,
+      20,
+      45
+    ],
+    "estrelas": [
+      5,
+      6
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      10,
+      45
+    ],
+    "estrelas": [
+      5
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      24,
+      25,
+      31
+    ],
+    "estrelas": [
+      4
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      18,
+      19,
+      20
+    ],
+    "estrelas": [
+      6
+    ]
+  },
+  "hero_category": "2+1",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 1 lucky stars against official draw 061/2026 (category 2+1).",
+  "registered_at": "2026-08-02T15:10:29+00:00"
+}

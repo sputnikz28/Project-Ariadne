@@ -1,0 +1,78 @@
+{
+  "hero_id": "HERO-2026-061-9d39d606",
+  "dedup_hash": "9d39d6062acf7b336e15ec97dea1755f4d43124321e1456c90b946dca542b787",
+  "source_prediction_id": "c6688840ac0d0ca7995fc728bd5e161ed04c27948279ff6f3025115dbba11fbc",
+  "entity_id": "H-00369",
+  "entity_name": "Aion da Lua Fria",
+  "race": "Vidente",
+  "generation": 7,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "061/2026",
+  "draw_date": "2026-07-31",
+  "official_key": {
+    "numeros": [
+      10,
+      24,
+      25,
+      31,
+      45
+    ],
+    "estrelas": [
+      4,
+      5
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      18,
+      19,
+      31,
+      36,
+      48
+    ],
+    "estrelas": [
+      4,
+      5
+    ]
+  },
+  "matched_numbers_count": 1,
+  "matched_stars_count": 2,
+  "exact_matched_values": {
+    "numeros": [
+      31
+    ],
+    "estrelas": [
+      4,
+      5
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      10,
+      24,
+      25,
+      45
+    ],
+    "estrelas": []
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      18,
+      19,
+      36,
+      48
+    ],
+    "estrelas": []
+  },
+  "hero_category": "1+2",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 1 main numbers and 2 lucky stars against official draw 061/2026 (category 1+2).",
+  "registered_at": "2026-08-02T15:10:29+00:00"
+}

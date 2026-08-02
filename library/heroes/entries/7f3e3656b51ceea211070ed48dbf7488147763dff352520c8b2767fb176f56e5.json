@@ -1,0 +1,78 @@
+{
+  "hero_id": "HERO-2026-060-7f3e3656",
+  "dedup_hash": "7f3e3656b51ceea211070ed48dbf7488147763dff352520c8b2767fb176f56e5",
+  "source_prediction_id": "8a6400f29ad4280d7caa1cef78193f4a24bbf66a4008749b04e662a099e723b5",
+  "entity_id": "H-00361",
+  "entity_name": "Aion da Névoa",
+  "race": "Esqueleto",
+  "generation": 7,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "060/2026",
+  "draw_date": "2026-07-28",
+  "official_key": {
+    "numeros": [
+      5,
+      7,
+      24,
+      30,
+      49
+    ],
+    "estrelas": [
+      10,
+      11
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      6,
+      7,
+      13,
+      16,
+      17
+    ],
+    "estrelas": [
+      10,
+      11
+    ]
+  },
+  "matched_numbers_count": 1,
+  "matched_stars_count": 2,
+  "exact_matched_values": {
+    "numeros": [
+      7
+    ],
+    "estrelas": [
+      10,
+      11
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      5,
+      24,
+      30,
+      49
+    ],
+    "estrelas": []
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      6,
+      13,
+      16,
+      17
+    ],
+    "estrelas": []
+  },
+  "hero_category": "1+2",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 1 main numbers and 2 lucky stars against official draw 060/2026 (category 1+2).",
+  "registered_at": "2026-08-02T15:10:19+00:00"
+}

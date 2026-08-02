@@ -1,0 +1,78 @@
+{
+  "hero_id": "HERO-2026-061-9c28cce6",
+  "dedup_hash": "9c28cce63620f7cfec0d6a9adc20b0583a0269fbde6938292f8696f6b024621b",
+  "source_prediction_id": "31fa3ae345ac867ba076d27b40631b3b6382d969d69bd10f34e3689eff4aa3e3",
+  "entity_id": "H-00555",
+  "entity_name": "Kael dos Astros",
+  "race": "Esqueleto",
+  "generation": 11,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "061/2026",
+  "draw_date": "2026-07-31",
+  "official_key": {
+    "numeros": [
+      10,
+      24,
+      25,
+      31,
+      45
+    ],
+    "estrelas": [
+      4,
+      5
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      21,
+      25,
+      37,
+      38,
+      41
+    ],
+    "estrelas": [
+      4,
+      5
+    ]
+  },
+  "matched_numbers_count": 1,
+  "matched_stars_count": 2,
+  "exact_matched_values": {
+    "numeros": [
+      25
+    ],
+    "estrelas": [
+      4,
+      5
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      10,
+      24,
+      31,
+      45
+    ],
+    "estrelas": []
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      21,
+      37,
+      38,
+      41
+    ],
+    "estrelas": []
+  },
+  "hero_category": "1+2",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 1 main numbers and 2 lucky stars against official draw 061/2026 (category 1+2).",
+  "registered_at": "2026-08-02T15:10:31+00:00"
+}

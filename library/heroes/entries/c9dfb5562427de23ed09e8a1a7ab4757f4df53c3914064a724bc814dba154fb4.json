@@ -1,0 +1,79 @@
+{
+  "hero_id": "HERO-2026-061-c9dfb556",
+  "dedup_hash": "c9dfb5562427de23ed09e8a1a7ab4757f4df53c3914064a724bc814dba154fb4",
+  "source_prediction_id": "6b96f342f9a135c2ff33170a1fe99487e3471562bd3a10e35ded7532e951941b",
+  "entity_id": "H-00686",
+  "entity_name": "Thara da Lua Fria",
+  "race": "Elfo",
+  "generation": 13,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "061/2026",
+  "draw_date": "2026-07-31",
+  "official_key": {
+    "numeros": [
+      10,
+      24,
+      25,
+      31,
+      45
+    ],
+    "estrelas": [
+      4,
+      5
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      6,
+      10,
+      25,
+      37,
+      45
+    ],
+    "estrelas": [
+      3,
+      9
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 0,
+  "exact_matched_values": {
+    "numeros": [
+      10,
+      25,
+      45
+    ],
+    "estrelas": []
+  },
+  "missed_winning_values": {
+    "numeros": [
+      24,
+      31
+    ],
+    "estrelas": [
+      4,
+      5
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      6,
+      37
+    ],
+    "estrelas": [
+      3,
+      9
+    ]
+  },
+  "hero_category": "3+0",
+  "hero_tier": "TIER_4",
+  "simulation_score": 38,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 0 lucky stars against official draw 061/2026 (category 3+0).",
+  "registered_at": "2026-08-02T15:10:31+00:00"
+}

@@ -1,0 +1,78 @@
+{
+  "hero_id": "HERO-2026-061-02daf378",
+  "dedup_hash": "02daf37865f56a18a1580d34f81eb1111097ff07593c95acd4610bafee41baf8",
+  "source_prediction_id": "162d8e1a19ab29519d822ab7e77124a7519abeb752475ab7ebdf89224e9a6e77",
+  "entity_id": "H-00114",
+  "entity_name": "Elarion da Névoa",
+  "race": "Vidente",
+  "generation": 2,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "061/2026",
+  "draw_date": "2026-07-31",
+  "official_key": {
+    "numeros": [
+      10,
+      24,
+      25,
+      31,
+      45
+    ],
+    "estrelas": [
+      4,
+      5
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      2,
+      3,
+      33,
+      40,
+      45
+    ],
+    "estrelas": [
+      4,
+      5
+    ]
+  },
+  "matched_numbers_count": 1,
+  "matched_stars_count": 2,
+  "exact_matched_values": {
+    "numeros": [
+      45
+    ],
+    "estrelas": [
+      4,
+      5
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      10,
+      24,
+      25,
+      31
+    ],
+    "estrelas": []
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      2,
+      3,
+      33,
+      40
+    ],
+    "estrelas": []
+  },
+  "hero_category": "1+2",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 1 main numbers and 2 lucky stars against official draw 061/2026 (category 1+2).",
+  "registered_at": "2026-08-02T15:10:29+00:00"
+}

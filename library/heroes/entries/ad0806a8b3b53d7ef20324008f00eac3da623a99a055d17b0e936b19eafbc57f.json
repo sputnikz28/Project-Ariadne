@@ -1,0 +1,78 @@
+{
+  "hero_id": "HERO-2026-060-ad0806a8",
+  "dedup_hash": "ad0806a8b3b53d7ef20324008f00eac3da623a99a055d17b0e936b19eafbc57f",
+  "source_prediction_id": "4c58d3c8936e70bb2e68da0b16a1aec1e8af436c811959de0ddeeb29c6ab4996",
+  "entity_id": "H-00352",
+  "entity_name": "Kael Pedra-Partida",
+  "race": "Elfo",
+  "generation": 7,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "060/2026",
+  "draw_date": "2026-07-28",
+  "official_key": {
+    "numeros": [
+      5,
+      7,
+      24,
+      30,
+      49
+    ],
+    "estrelas": [
+      10,
+      11
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      7,
+      24,
+      28,
+      30,
+      49
+    ],
+    "estrelas": [
+      2,
+      6
+    ]
+  },
+  "matched_numbers_count": 4,
+  "matched_stars_count": 0,
+  "exact_matched_values": {
+    "numeros": [
+      7,
+      24,
+      30,
+      49
+    ],
+    "estrelas": []
+  },
+  "missed_winning_values": {
+    "numeros": [
+      5
+    ],
+    "estrelas": [
+      10,
+      11
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      28
+    ],
+    "estrelas": [
+      2,
+      6
+    ]
+  },
+  "hero_category": "4+0",
+  "hero_tier": "TIER_3",
+  "simulation_score": 48,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 4 main numbers and 0 lucky stars against official draw 060/2026 (category 4+0).",
+  "registered_at": "2026-08-02T15:10:18+00:00"
+}

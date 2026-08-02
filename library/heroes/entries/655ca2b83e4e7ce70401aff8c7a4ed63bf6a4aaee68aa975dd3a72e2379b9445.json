@@ -1,0 +1,78 @@
+{
+  "hero_id": "HERO-2026-060-655ca2b8",
+  "dedup_hash": "655ca2b83e4e7ce70401aff8c7a4ed63bf6a4aaee68aa975dd3a72e2379b9445",
+  "source_prediction_id": "ea9b5a58baad79bc2beaf890abfefe05d0a997a0de1ff48eac3e3d282d23746d",
+  "entity_id": "H-00170",
+  "entity_name": "Aion Pedra-Partida",
+  "race": "Esqueleto",
+  "generation": 3,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "060/2026",
+  "draw_date": "2026-07-28",
+  "official_key": {
+    "numeros": [
+      5,
+      7,
+      24,
+      30,
+      49
+    ],
+    "estrelas": [
+      10,
+      11
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      15,
+      17,
+      24,
+      29,
+      31
+    ],
+    "estrelas": [
+      10,
+      11
+    ]
+  },
+  "matched_numbers_count": 1,
+  "matched_stars_count": 2,
+  "exact_matched_values": {
+    "numeros": [
+      24
+    ],
+    "estrelas": [
+      10,
+      11
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      5,
+      7,
+      30,
+      49
+    ],
+    "estrelas": []
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      15,
+      17,
+      29,
+      31
+    ],
+    "estrelas": []
+  },
+  "hero_category": "1+2",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 1 main numbers and 2 lucky stars against official draw 060/2026 (category 1+2).",
+  "registered_at": "2026-08-02T15:10:19+00:00"
+}

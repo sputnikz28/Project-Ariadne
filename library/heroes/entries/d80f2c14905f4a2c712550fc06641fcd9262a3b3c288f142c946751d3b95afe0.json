@@ -1,0 +1,78 @@
+{
+  "hero_id": "HERO-2026-061-d80f2c14",
+  "dedup_hash": "d80f2c14905f4a2c712550fc06641fcd9262a3b3c288f142c946751d3b95afe0",
+  "source_prediction_id": "e5880e36d9f9780297e1ca4fc80655276f548dffd615d8651b5c8cd05a8c2a47",
+  "entity_id": "H-00481",
+  "entity_name": "Aion do Bosque",
+  "race": "Vidente",
+  "generation": 9,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "061/2026",
+  "draw_date": "2026-07-31",
+  "official_key": {
+    "numeros": [
+      10,
+      24,
+      25,
+      31,
+      45
+    ],
+    "estrelas": [
+      4,
+      5
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      3,
+      30,
+      34,
+      41,
+      45
+    ],
+    "estrelas": [
+      4,
+      5
+    ]
+  },
+  "matched_numbers_count": 1,
+  "matched_stars_count": 2,
+  "exact_matched_values": {
+    "numeros": [
+      45
+    ],
+    "estrelas": [
+      4,
+      5
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      10,
+      24,
+      25,
+      31
+    ],
+    "estrelas": []
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      3,
+      30,
+      34,
+      41
+    ],
+    "estrelas": []
+  },
+  "hero_category": "1+2",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 1 main numbers and 2 lucky stars against official draw 061/2026 (category 1+2).",
+  "registered_at": "2026-08-02T15:10:29+00:00"
+}

@@ -1,0 +1,80 @@
+{
+  "hero_id": "HERO-2026-061-8f4d901a",
+  "dedup_hash": "8f4d901a46e2b9524f5c3a2e838097ece7cd3889768dc6a2543d9ba1dc66c2b3",
+  "source_prediction_id": "4d2826c54ddd6e3a1db5eeb1356ad2aadd388ec23b5d496977b3446ed9e26abe",
+  "entity_id": "H-00073",
+  "entity_name": "Velka dos Ossos",
+  "race": "Elfo",
+  "generation": 9,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "061/2026",
+  "draw_date": "2026-07-31",
+  "official_key": {
+    "numeros": [
+      10,
+      24,
+      25,
+      31,
+      45
+    ],
+    "estrelas": [
+      4,
+      5
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      9,
+      10,
+      25,
+      39,
+      50
+    ],
+    "estrelas": [
+      5,
+      6
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      10,
+      25
+    ],
+    "estrelas": [
+      5
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      24,
+      31,
+      45
+    ],
+    "estrelas": [
+      4
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      9,
+      39,
+      50
+    ],
+    "estrelas": [
+      6
+    ]
+  },
+  "hero_category": "2+1",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 1 lucky stars against official draw 061/2026 (category 2+1).",
+  "registered_at": "2026-08-02T15:10:29+00:00"
+}

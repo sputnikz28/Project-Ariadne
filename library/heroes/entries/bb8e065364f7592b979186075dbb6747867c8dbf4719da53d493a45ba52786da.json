@@ -1,0 +1,80 @@
+{
+  "hero_id": "HERO-2026-061-bb8e0653",
+  "dedup_hash": "bb8e065364f7592b979186075dbb6747867c8dbf4719da53d493a45ba52786da",
+  "source_prediction_id": "8ab89ab9b761cca1e59f18263b31077c1c6d8c65bd8e651185618907c0ad58cb",
+  "entity_id": "H-00378",
+  "entity_name": "Gruk dos Ossos",
+  "race": "Goblin",
+  "generation": 7,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "061/2026",
+  "draw_date": "2026-07-31",
+  "official_key": {
+    "numeros": [
+      10,
+      24,
+      25,
+      31,
+      45
+    ],
+    "estrelas": [
+      4,
+      5
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      22,
+      31,
+      35,
+      45,
+      47
+    ],
+    "estrelas": [
+      1,
+      5
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      31,
+      45
+    ],
+    "estrelas": [
+      5
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      10,
+      24,
+      25
+    ],
+    "estrelas": [
+      4
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      22,
+      35,
+      47
+    ],
+    "estrelas": [
+      1
+    ]
+  },
+  "hero_category": "2+1",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 1 lucky stars against official draw 061/2026 (category 2+1).",
+  "registered_at": "2026-08-02T15:10:31+00:00"
+}

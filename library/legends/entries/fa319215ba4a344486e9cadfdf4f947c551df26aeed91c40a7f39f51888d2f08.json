@@ -1,0 +1,41 @@
+{
+  "legend_id": "LEGEND-fa319215",
+  "source_prediction_id": "fa319215ba4a344486e9cadfdf4f947c551df26aeed91c40a7f39f51888d2f08",
+  "promotion_draw": "061/2026",
+  "promotion_draw_date": "2026-07-31",
+  "promotion_threshold": 3,
+  "promotion_tier": "LEGEND_TIER_4",
+  "criteria_version": "v1",
+  "promotion_hero_ids": [
+    "HERO-2026-056-2d840c2e",
+    "HERO-2026-059-93b29966",
+    "HERO-2026-061-2bd750d9"
+  ],
+  "project_version": "V12",
+  "git_commit": "eb609239bf97595235a4624908746689f33091c5",
+  "qualification_reason": "Promoted to Legend at draw 061/2026 (2026-07-31) by reaching 3 distinct qualifying draws as Hero (criteria_version: v1).",
+  "entity_id": "H-00094",
+  "entity_name": "Velka dos Astros",
+  "race": "Bruxa",
+  "generation": 10,
+  "predicted_numeros": [
+    10,
+    19,
+    25,
+    36,
+    47
+  ],
+  "predicted_estrelas": [
+    3,
+    4
+  ],
+  "hero_count": 3,
+  "qualified_draws": 3,
+  "contributing_hero_ids": [
+    "HERO-2026-056-2d840c2e",
+    "HERO-2026-059-93b29966",
+    "HERO-2026-061-2bd750d9"
+  ],
+  "provenance": "legacy",
+  "last_reevaluated_at": null
+}

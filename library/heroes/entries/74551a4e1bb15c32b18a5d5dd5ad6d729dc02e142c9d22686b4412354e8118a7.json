@@ -1,0 +1,79 @@
+{
+  "hero_id": "HERO-2026-061-74551a4e",
+  "dedup_hash": "74551a4e1bb15c32b18a5d5dd5ad6d729dc02e142c9d22686b4412354e8118a7",
+  "source_prediction_id": "4f6b0f1a7b7c6dc82b0b6f26f8e6ac35c54cdf04f11f5fb599f51c90f4c60cea",
+  "entity_id": "H-00072",
+  "entity_name": "Morgana da Lua Fria",
+  "race": "Goblin",
+  "generation": 1,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "061/2026",
+  "draw_date": "2026-07-31",
+  "official_key": {
+    "numeros": [
+      10,
+      24,
+      25,
+      31,
+      45
+    ],
+    "estrelas": [
+      4,
+      5
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      10,
+      25,
+      41,
+      45,
+      49
+    ],
+    "estrelas": [
+      7,
+      11
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 0,
+  "exact_matched_values": {
+    "numeros": [
+      10,
+      25,
+      45
+    ],
+    "estrelas": []
+  },
+  "missed_winning_values": {
+    "numeros": [
+      24,
+      31
+    ],
+    "estrelas": [
+      4,
+      5
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      41,
+      49
+    ],
+    "estrelas": [
+      7,
+      11
+    ]
+  },
+  "hero_category": "3+0",
+  "hero_tier": "TIER_4",
+  "simulation_score": 38,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 0 lucky stars against official draw 061/2026 (category 3+0).",
+  "registered_at": "2026-08-02T15:10:30+00:00"
+}

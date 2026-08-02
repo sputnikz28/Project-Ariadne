@@ -1,0 +1,79 @@
+{
+  "hero_id": "HERO-2026-061-abbb46ec",
+  "dedup_hash": "abbb46eccfc347d23f00f43680a365ef9f8c528e9458de8be4f54f2cf987a97b",
+  "source_prediction_id": "849b0763cd705108ad8db0ac5311791ae627d2116a196dd1f195aab27a24276b",
+  "entity_id": "H-00363",
+  "entity_name": "Gruk do Bosque",
+  "race": "Esqueleto",
+  "generation": 7,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "061/2026",
+  "draw_date": "2026-07-31",
+  "official_key": {
+    "numeros": [
+      10,
+      24,
+      25,
+      31,
+      45
+    ],
+    "estrelas": [
+      4,
+      5
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      23,
+      24,
+      25,
+      27,
+      31
+    ],
+    "estrelas": [
+      4,
+      7
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      24,
+      25,
+      31
+    ],
+    "estrelas": [
+      4
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      10,
+      45
+    ],
+    "estrelas": [
+      5
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      23,
+      27
+    ],
+    "estrelas": [
+      7
+    ]
+  },
+  "hero_category": "3+1",
+  "hero_tier": "TIER_4",
+  "simulation_score": 43,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 1 lucky stars against official draw 061/2026 (category 3+1).",
+  "registered_at": "2026-08-02T15:10:31+00:00"
+}

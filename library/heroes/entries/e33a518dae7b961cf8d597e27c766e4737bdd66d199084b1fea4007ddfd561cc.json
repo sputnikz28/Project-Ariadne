@@ -1,0 +1,79 @@
+{
+  "hero_id": "HERO-2026-061-e33a518d",
+  "dedup_hash": "e33a518dae7b961cf8d597e27c766e4737bdd66d199084b1fea4007ddfd561cc",
+  "source_prediction_id": "0c643a5fe4e49151ade7e92e9b8430072be96f4ea81a47048128bd6af5b7812b",
+  "entity_id": "H-00572",
+  "entity_name": "Morgana do Bosque",
+  "race": "Cronomante",
+  "generation": 11,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "061/2026",
+  "draw_date": "2026-07-31",
+  "official_key": {
+    "numeros": [
+      10,
+      24,
+      25,
+      31,
+      45
+    ],
+    "estrelas": [
+      4,
+      5
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      10,
+      21,
+      25,
+      31,
+      34
+    ],
+    "estrelas": [
+      4,
+      9
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      10,
+      25,
+      31
+    ],
+    "estrelas": [
+      4
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      24,
+      45
+    ],
+    "estrelas": [
+      5
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      21,
+      34
+    ],
+    "estrelas": [
+      9
+    ]
+  },
+  "hero_category": "3+1",
+  "hero_tier": "TIER_4",
+  "simulation_score": 43,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 1 lucky stars against official draw 061/2026 (category 3+1).",
+  "registered_at": "2026-08-02T15:10:32+00:00"
+}

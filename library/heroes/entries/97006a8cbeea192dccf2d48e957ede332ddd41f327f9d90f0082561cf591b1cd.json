@@ -1,0 +1,78 @@
+{
+  "hero_id": "HERO-2026-059-97006a8c",
+  "dedup_hash": "97006a8cbeea192dccf2d48e957ede332ddd41f327f9d90f0082561cf591b1cd",
+  "source_prediction_id": "3045159c9ef2d92af065f456366b67995ad0ef90bedf3eb0cb6053aec68c1244",
+  "entity_id": "H-00454",
+  "entity_name": "Selene da Lua Fria",
+  "race": "Esqueleto",
+  "generation": 9,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "059/2026",
+  "draw_date": "2026-07-24",
+  "official_key": {
+    "numeros": [
+      8,
+      10,
+      30,
+      36,
+      47
+    ],
+    "estrelas": [
+      1,
+      4
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      24,
+      30,
+      41,
+      42,
+      45
+    ],
+    "estrelas": [
+      1,
+      4
+    ]
+  },
+  "matched_numbers_count": 1,
+  "matched_stars_count": 2,
+  "exact_matched_values": {
+    "numeros": [
+      30
+    ],
+    "estrelas": [
+      1,
+      4
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      8,
+      10,
+      36,
+      47
+    ],
+    "estrelas": []
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      24,
+      41,
+      42,
+      45
+    ],
+    "estrelas": []
+  },
+  "hero_category": "1+2",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 1 main numbers and 2 lucky stars against official draw 059/2026 (category 1+2).",
+  "registered_at": "2026-08-02T15:07:52+00:00"
+}

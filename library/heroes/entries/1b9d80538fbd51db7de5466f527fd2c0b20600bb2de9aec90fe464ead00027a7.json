@@ -1,0 +1,78 @@
+{
+  "hero_id": "HERO-2026-060-1b9d8053",
+  "dedup_hash": "1b9d80538fbd51db7de5466f527fd2c0b20600bb2de9aec90fe464ead00027a7",
+  "source_prediction_id": "4ae5e13cacb7230a127c83a27ef0e8bf1c3405f67c8ebe1d40be230fd0f768ad",
+  "entity_id": "H-00727",
+  "entity_name": "Aruk do Bosque",
+  "race": "Esqueleto",
+  "generation": 14,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "060/2026",
+  "draw_date": "2026-07-28",
+  "official_key": {
+    "numeros": [
+      5,
+      7,
+      24,
+      30,
+      49
+    ],
+    "estrelas": [
+      10,
+      11
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      3,
+      4,
+      5,
+      16,
+      25
+    ],
+    "estrelas": [
+      10,
+      11
+    ]
+  },
+  "matched_numbers_count": 1,
+  "matched_stars_count": 2,
+  "exact_matched_values": {
+    "numeros": [
+      5
+    ],
+    "estrelas": [
+      10,
+      11
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      7,
+      24,
+      30,
+      49
+    ],
+    "estrelas": []
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      3,
+      4,
+      16,
+      25
+    ],
+    "estrelas": []
+  },
+  "hero_category": "1+2",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 1 main numbers and 2 lucky stars against official draw 060/2026 (category 1+2).",
+  "registered_at": "2026-08-02T15:10:19+00:00"
+}

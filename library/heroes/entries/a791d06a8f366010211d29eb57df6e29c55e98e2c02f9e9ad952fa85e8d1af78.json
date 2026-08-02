@@ -1,0 +1,80 @@
+{
+  "hero_id": "HERO-2026-059-a791d06a",
+  "dedup_hash": "a791d06a8f366010211d29eb57df6e29c55e98e2c02f9e9ad952fa85e8d1af78",
+  "source_prediction_id": "ac7af75bbc3e70b589bb7e7488b98a0ab35e0cf64a9d4a926d164316245d2a00",
+  "entity_id": "H-00480",
+  "entity_name": "Morgana Pedra-Partida",
+  "race": "Elfo",
+  "generation": 9,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "059/2026",
+  "draw_date": "2026-07-24",
+  "official_key": {
+    "numeros": [
+      8,
+      10,
+      30,
+      36,
+      47
+    ],
+    "estrelas": [
+      1,
+      4
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      10,
+      14,
+      29,
+      35,
+      36
+    ],
+    "estrelas": [
+      2,
+      4
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      10,
+      36
+    ],
+    "estrelas": [
+      4
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      8,
+      30,
+      47
+    ],
+    "estrelas": [
+      1
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      14,
+      29,
+      35
+    ],
+    "estrelas": [
+      2
+    ]
+  },
+  "hero_category": "2+1",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 1 lucky stars against official draw 059/2026 (category 2+1).",
+  "registered_at": "2026-08-02T15:07:51+00:00"
+}

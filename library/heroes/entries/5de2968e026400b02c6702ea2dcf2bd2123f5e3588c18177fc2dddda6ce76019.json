@@ -1,0 +1,80 @@
+{
+  "hero_id": "HERO-2026-061-5de2968e",
+  "dedup_hash": "5de2968e026400b02c6702ea2dcf2bd2123f5e3588c18177fc2dddda6ce76019",
+  "source_prediction_id": "63a156bf584dc9ba3b5ce5baca5226094dae1cc43ea2bd97345ab355d6ad5fbd",
+  "entity_id": "H-00465",
+  "entity_name": "Lyra da Lua Fria",
+  "race": "Elfo",
+  "generation": 9,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "061/2026",
+  "draw_date": "2026-07-31",
+  "official_key": {
+    "numeros": [
+      10,
+      24,
+      25,
+      31,
+      45
+    ],
+    "estrelas": [
+      4,
+      5
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      13,
+      14,
+      25,
+      34,
+      45
+    ],
+    "estrelas": [
+      4,
+      6
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      25,
+      45
+    ],
+    "estrelas": [
+      4
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      10,
+      24,
+      31
+    ],
+    "estrelas": [
+      5
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      13,
+      14,
+      34
+    ],
+    "estrelas": [
+      6
+    ]
+  },
+  "hero_category": "2+1",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 1 lucky stars against official draw 061/2026 (category 2+1).",
+  "registered_at": "2026-08-02T15:10:28+00:00"
+}

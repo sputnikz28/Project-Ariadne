@@ -1,0 +1,80 @@
+{
+  "hero_id": "HERO-2026-060-03a808d4",
+  "dedup_hash": "03a808d48546b0c50f69121e3a740e9004d7dee9cb875d1638590f7992023609",
+  "source_prediction_id": "5752d56cfff10e82714657a79d4b5fa1e524c04ceb7cab4cbc5c7b29fecdbebb",
+  "entity_id": "H-00035",
+  "entity_name": "Selene Pedra-Partida",
+  "race": "Goblin",
+  "generation": 12,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "060/2026",
+  "draw_date": "2026-07-28",
+  "official_key": {
+    "numeros": [
+      5,
+      7,
+      24,
+      30,
+      49
+    ],
+    "estrelas": [
+      10,
+      11
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      7,
+      20,
+      36,
+      41,
+      49
+    ],
+    "estrelas": [
+      8,
+      10
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      7,
+      49
+    ],
+    "estrelas": [
+      10
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      5,
+      24,
+      30
+    ],
+    "estrelas": [
+      11
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      20,
+      36,
+      41
+    ],
+    "estrelas": [
+      8
+    ]
+  },
+  "hero_category": "2+1",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 1 lucky stars against official draw 060/2026 (category 2+1).",
+  "registered_at": "2026-08-02T15:10:18+00:00"
+}

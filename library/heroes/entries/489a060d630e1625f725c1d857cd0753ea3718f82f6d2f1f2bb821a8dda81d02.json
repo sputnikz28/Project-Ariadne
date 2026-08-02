@@ -1,0 +1,79 @@
+{
+  "hero_id": "HERO-2026-060-489a060d",
+  "dedup_hash": "489a060d630e1625f725c1d857cd0753ea3718f82f6d2f1f2bb821a8dda81d02",
+  "source_prediction_id": "a0f0a81871b8e357b48c19242e9395b4526bc134730591200089a7bdd0539339",
+  "entity_id": "Barbas de Ferro #8",
+  "entity_name": "Barbas de Ferro #8",
+  "race": "Clã Anão",
+  "generation": 14,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "060/2026",
+  "draw_date": "2026-07-28",
+  "official_key": {
+    "numeros": [
+      5,
+      7,
+      24,
+      30,
+      49
+    ],
+    "estrelas": [
+      10,
+      11
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      5,
+      7,
+      10,
+      20,
+      49
+    ],
+    "estrelas": [
+      2,
+      11
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      5,
+      7,
+      49
+    ],
+    "estrelas": [
+      11
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      24,
+      30
+    ],
+    "estrelas": [
+      10
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      10,
+      20
+    ],
+    "estrelas": [
+      2
+    ]
+  },
+  "hero_category": "3+1",
+  "hero_tier": "TIER_4",
+  "simulation_score": 43,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 1 lucky stars against official draw 060/2026 (category 3+1).",
+  "registered_at": "2026-08-02T15:10:18+00:00"
+}

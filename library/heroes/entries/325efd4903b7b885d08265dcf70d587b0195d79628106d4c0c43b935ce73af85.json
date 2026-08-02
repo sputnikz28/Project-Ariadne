@@ -1,0 +1,80 @@
+{
+  "hero_id": "HERO-2026-061-325efd49",
+  "dedup_hash": "325efd4903b7b885d08265dcf70d587b0195d79628106d4c0c43b935ce73af85",
+  "source_prediction_id": "e4395fa1fc171358896c4ad660ff7d27c05e53fc4434ef60384778afe679cfc0",
+  "entity_id": "H-00109",
+  "entity_name": "Lyra do Bosque",
+  "race": "Bruxa",
+  "generation": 2,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "061/2026",
+  "draw_date": "2026-07-31",
+  "official_key": {
+    "numeros": [
+      10,
+      24,
+      25,
+      31,
+      45
+    ],
+    "estrelas": [
+      4,
+      5
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      12,
+      22,
+      25,
+      28,
+      31
+    ],
+    "estrelas": [
+      1,
+      5
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      25,
+      31
+    ],
+    "estrelas": [
+      5
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      10,
+      24,
+      45
+    ],
+    "estrelas": [
+      4
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      12,
+      22,
+      28
+    ],
+    "estrelas": [
+      1
+    ]
+  },
+  "hero_category": "2+1",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 1 lucky stars against official draw 061/2026 (category 2+1).",
+  "registered_at": "2026-08-02T15:10:29+00:00"
+}

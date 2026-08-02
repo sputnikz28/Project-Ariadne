@@ -1,0 +1,79 @@
+{
+  "hero_id": "HERO-2026-060-7f82e7c5",
+  "dedup_hash": "7f82e7c57796d7889406ef054b82bd46f26147b35487d4c1c4999e249234d07e",
+  "source_prediction_id": "900b4b4584859237ed937a851d623ff5f65c473d1c0989fb79a912bac2fc403a",
+  "entity_id": "H-00440",
+  "entity_name": "Selene dos Astros",
+  "race": "Vidente",
+  "generation": 9,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "060/2026",
+  "draw_date": "2026-07-28",
+  "official_key": {
+    "numeros": [
+      5,
+      7,
+      24,
+      30,
+      49
+    ],
+    "estrelas": [
+      10,
+      11
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      3,
+      5,
+      24,
+      34,
+      49
+    ],
+    "estrelas": [
+      2,
+      5
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 0,
+  "exact_matched_values": {
+    "numeros": [
+      5,
+      24,
+      49
+    ],
+    "estrelas": []
+  },
+  "missed_winning_values": {
+    "numeros": [
+      7,
+      30
+    ],
+    "estrelas": [
+      10,
+      11
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      3,
+      34
+    ],
+    "estrelas": [
+      2,
+      5
+    ]
+  },
+  "hero_category": "3+0",
+  "hero_tier": "TIER_4",
+  "simulation_score": 38,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 0 lucky stars against official draw 060/2026 (category 3+0).",
+  "registered_at": "2026-08-02T15:10:18+00:00"
+}

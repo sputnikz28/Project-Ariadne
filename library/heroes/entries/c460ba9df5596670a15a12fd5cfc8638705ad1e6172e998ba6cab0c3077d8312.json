@@ -1,0 +1,79 @@
+{
+  "hero_id": "HERO-2026-059-c460ba9d",
+  "dedup_hash": "c460ba9df5596670a15a12fd5cfc8638705ad1e6172e998ba6cab0c3077d8312",
+  "source_prediction_id": "913052aa63626afc96f6cbcd9834d9066fa8032700d1fd0fd2cc241971492235",
+  "entity_id": "H-00061",
+  "entity_name": "Thara da Névoa",
+  "race": "Cronomante",
+  "generation": 1,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "059/2026",
+  "draw_date": "2026-07-24",
+  "official_key": {
+    "numeros": [
+      8,
+      10,
+      30,
+      36,
+      47
+    ],
+    "estrelas": [
+      1,
+      4
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      4,
+      8,
+      30,
+      36,
+      49
+    ],
+    "estrelas": [
+      5,
+      8
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 0,
+  "exact_matched_values": {
+    "numeros": [
+      8,
+      30,
+      36
+    ],
+    "estrelas": []
+  },
+  "missed_winning_values": {
+    "numeros": [
+      10,
+      47
+    ],
+    "estrelas": [
+      1,
+      4
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      4,
+      49
+    ],
+    "estrelas": [
+      5,
+      8
+    ]
+  },
+  "hero_category": "3+0",
+  "hero_tier": "TIER_4",
+  "simulation_score": 38,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 0 lucky stars against official draw 059/2026 (category 3+0).",
+  "registered_at": "2026-08-02T15:07:52+00:00"
+}

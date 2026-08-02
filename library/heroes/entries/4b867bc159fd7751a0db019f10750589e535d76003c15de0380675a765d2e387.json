@@ -1,0 +1,79 @@
+{
+  "hero_id": "HERO-2026-060-4b867bc1",
+  "dedup_hash": "4b867bc159fd7751a0db019f10750589e535d76003c15de0380675a765d2e387",
+  "source_prediction_id": "a1f1b245be1437447da4d68b92822bd1f2e9cb983b42b6bd71637c0f41a3480e",
+  "entity_id": "H-00180",
+  "entity_name": "Kael Pedra-Partida",
+  "race": "Cronomante",
+  "generation": 4,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "060/2026",
+  "draw_date": "2026-07-28",
+  "official_key": {
+    "numeros": [
+      5,
+      7,
+      24,
+      30,
+      49
+    ],
+    "estrelas": [
+      10,
+      11
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      7,
+      19,
+      30,
+      49,
+      50
+    ],
+    "estrelas": [
+      8,
+      11
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      7,
+      30,
+      49
+    ],
+    "estrelas": [
+      11
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      5,
+      24
+    ],
+    "estrelas": [
+      10
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      19,
+      50
+    ],
+    "estrelas": [
+      8
+    ]
+  },
+  "hero_category": "3+1",
+  "hero_tier": "TIER_4",
+  "simulation_score": 43,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 1 lucky stars against official draw 060/2026 (category 3+1).",
+  "registered_at": "2026-08-02T15:10:19+00:00"
+}

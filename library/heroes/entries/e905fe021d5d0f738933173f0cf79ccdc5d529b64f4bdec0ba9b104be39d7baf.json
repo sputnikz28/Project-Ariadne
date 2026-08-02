@@ -1,0 +1,79 @@
+{
+  "hero_id": "HERO-2026-059-e905fe02",
+  "dedup_hash": "e905fe021d5d0f738933173f0cf79ccdc5d529b64f4bdec0ba9b104be39d7baf",
+  "source_prediction_id": "3e118d317e6caba82eb32f3a772ce45e2e0f0aaecc79267c12f83a2ada3510fb",
+  "entity_id": "H-00211",
+  "entity_name": "Kael dos Ossos",
+  "race": "Vidente",
+  "generation": 4,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "059/2026",
+  "draw_date": "2026-07-24",
+  "official_key": {
+    "numeros": [
+      8,
+      10,
+      30,
+      36,
+      47
+    ],
+    "estrelas": [
+      1,
+      4
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      3,
+      4,
+      8,
+      10,
+      47
+    ],
+    "estrelas": [
+      5,
+      9
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 0,
+  "exact_matched_values": {
+    "numeros": [
+      8,
+      10,
+      47
+    ],
+    "estrelas": []
+  },
+  "missed_winning_values": {
+    "numeros": [
+      30,
+      36
+    ],
+    "estrelas": [
+      1,
+      4
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      3,
+      4
+    ],
+    "estrelas": [
+      5,
+      9
+    ]
+  },
+  "hero_category": "3+0",
+  "hero_tier": "TIER_4",
+  "simulation_score": 38,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 0 lucky stars against official draw 059/2026 (category 3+0).",
+  "registered_at": "2026-08-02T15:07:51+00:00"
+}

@@ -1,0 +1,79 @@
+{
+  "hero_id": "HERO-2026-059-4411c8ac",
+  "dedup_hash": "4411c8ac0f1bd3b944c79678c620ede772b85b22bb7abf3edd3ecc98d1b4b222",
+  "source_prediction_id": "288c71e96cd3ebe2af86a533ce93a893e15ea5295df31c7f2508afb0761f3f53",
+  "entity_id": "H-00466",
+  "entity_name": "Aion da Névoa",
+  "race": "Goblin",
+  "generation": 9,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "059/2026",
+  "draw_date": "2026-07-24",
+  "official_key": {
+    "numeros": [
+      8,
+      10,
+      30,
+      36,
+      47
+    ],
+    "estrelas": [
+      1,
+      4
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      8,
+      28,
+      36,
+      47,
+      48
+    ],
+    "estrelas": [
+      10,
+      12
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 0,
+  "exact_matched_values": {
+    "numeros": [
+      8,
+      36,
+      47
+    ],
+    "estrelas": []
+  },
+  "missed_winning_values": {
+    "numeros": [
+      10,
+      30
+    ],
+    "estrelas": [
+      1,
+      4
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      28,
+      48
+    ],
+    "estrelas": [
+      10,
+      12
+    ]
+  },
+  "hero_category": "3+0",
+  "hero_tier": "TIER_4",
+  "simulation_score": 38,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 0 lucky stars against official draw 059/2026 (category 3+0).",
+  "registered_at": "2026-08-02T15:07:51+00:00"
+}

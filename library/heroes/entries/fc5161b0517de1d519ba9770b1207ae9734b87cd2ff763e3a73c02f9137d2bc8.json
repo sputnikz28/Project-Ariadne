@@ -1,0 +1,77 @@
+{
+  "hero_id": "HERO-2026-061-fc5161b0",
+  "dedup_hash": "fc5161b0517de1d519ba9770b1207ae9734b87cd2ff763e3a73c02f9137d2bc8",
+  "source_prediction_id": "6f66c03db1a7514366932482592e5f44f88ff77ba46e1a6b7f47570b9957542a",
+  "entity_id": "H-00017",
+  "entity_name": "Aruk dos Ossos",
+  "race": "Esqueleto",
+  "generation": 6,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "061/2026",
+  "draw_date": "2026-07-31",
+  "official_key": {
+    "numeros": [
+      10,
+      24,
+      25,
+      31,
+      45
+    ],
+    "estrelas": [
+      4,
+      5
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      5,
+      10,
+      13,
+      24,
+      26
+    ],
+    "estrelas": [
+      4,
+      5
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 2,
+  "exact_matched_values": {
+    "numeros": [
+      10,
+      24
+    ],
+    "estrelas": [
+      4,
+      5
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      25,
+      31,
+      45
+    ],
+    "estrelas": []
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      5,
+      13,
+      26
+    ],
+    "estrelas": []
+  },
+  "hero_category": "2+2",
+  "hero_tier": "TIER_4",
+  "simulation_score": 35,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 2 lucky stars against official draw 061/2026 (category 2+2).",
+  "registered_at": "2026-08-02T15:10:31+00:00"
+}

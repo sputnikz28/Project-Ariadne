@@ -1,0 +1,79 @@
+{
+  "hero_id": "HERO-2026-061-6b240cb4",
+  "dedup_hash": "6b240cb4b7ccde2d31d5e6a6d6a62c64647ee3c5a2ac11f18bccd5f7b04bc1be",
+  "source_prediction_id": "f8746f81bf0fbb6e9f61154f9c182d356e9be23ef28d05d3023b5de0388fd9a6",
+  "entity_id": "H-00105",
+  "entity_name": "Gruk dos Astros",
+  "race": "Vidente",
+  "generation": 2,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "061/2026",
+  "draw_date": "2026-07-31",
+  "official_key": {
+    "numeros": [
+      10,
+      24,
+      25,
+      31,
+      45
+    ],
+    "estrelas": [
+      4,
+      5
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      9,
+      23,
+      24,
+      25,
+      45
+    ],
+    "estrelas": [
+      2,
+      9
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 0,
+  "exact_matched_values": {
+    "numeros": [
+      24,
+      25,
+      45
+    ],
+    "estrelas": []
+  },
+  "missed_winning_values": {
+    "numeros": [
+      10,
+      31
+    ],
+    "estrelas": [
+      4,
+      5
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      9,
+      23
+    ],
+    "estrelas": [
+      2,
+      9
+    ]
+  },
+  "hero_category": "3+0",
+  "hero_tier": "TIER_4",
+  "simulation_score": 38,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 0 lucky stars against official draw 061/2026 (category 3+0).",
+  "registered_at": "2026-08-02T15:10:31+00:00"
+}

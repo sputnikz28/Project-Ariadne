@@ -1,0 +1,80 @@
+{
+  "hero_id": "HERO-2026-060-eb95e9ef",
+  "dedup_hash": "eb95e9efffd79eb0fd20b351d9dc1128b85e5f8650ceb7faccd3332bde6c3f5f",
+  "source_prediction_id": "39f8b16d6016cc1710f69296617b6aaf4e2ea8b24739de5d118fb43bd3365023",
+  "entity_id": "Tíbia do Intervalo",
+  "entity_name": "Tíbia do Intervalo",
+  "race": "Esqueleto das Catacumbas",
+  "generation": 14,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "060/2026",
+  "draw_date": "2026-07-28",
+  "official_key": {
+    "numeros": [
+      5,
+      7,
+      24,
+      30,
+      49
+    ],
+    "estrelas": [
+      10,
+      11
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      7,
+      10,
+      14,
+      19,
+      30
+    ],
+    "estrelas": [
+      6,
+      10
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      7,
+      30
+    ],
+    "estrelas": [
+      10
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      5,
+      24,
+      49
+    ],
+    "estrelas": [
+      11
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      10,
+      14,
+      19
+    ],
+    "estrelas": [
+      6
+    ]
+  },
+  "hero_category": "2+1",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 1 lucky stars against official draw 060/2026 (category 2+1).",
+  "registered_at": "2026-08-02T15:10:18+00:00"
+}

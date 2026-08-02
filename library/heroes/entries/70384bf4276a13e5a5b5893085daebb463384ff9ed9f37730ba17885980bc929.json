@@ -1,0 +1,80 @@
+{
+  "hero_id": "HERO-2026-061-70384bf4",
+  "dedup_hash": "70384bf4276a13e5a5b5893085daebb463384ff9ed9f37730ba17885980bc929",
+  "source_prediction_id": "0d9cb04d7e2618c8d30fefb890c6f5c200cb50369271547860e82eae5d2b2d51",
+  "entity_id": "H-00042",
+  "entity_name": "Velka da Névoa",
+  "race": "Vidente",
+  "generation": 1,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "061/2026",
+  "draw_date": "2026-07-31",
+  "official_key": {
+    "numeros": [
+      10,
+      24,
+      25,
+      31,
+      45
+    ],
+    "estrelas": [
+      4,
+      5
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      3,
+      23,
+      25,
+      27,
+      31
+    ],
+    "estrelas": [
+      2,
+      5
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      25,
+      31
+    ],
+    "estrelas": [
+      5
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      10,
+      24,
+      45
+    ],
+    "estrelas": [
+      4
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      3,
+      23,
+      27
+    ],
+    "estrelas": [
+      2
+    ]
+  },
+  "hero_category": "2+1",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 1 lucky stars against official draw 061/2026 (category 2+1).",
+  "registered_at": "2026-08-02T15:10:29+00:00"
+}

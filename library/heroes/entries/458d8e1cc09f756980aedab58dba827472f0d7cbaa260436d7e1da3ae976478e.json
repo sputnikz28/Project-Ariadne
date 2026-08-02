@@ -1,0 +1,78 @@
+{
+  "hero_id": "HERO-2026-059-458d8e1c",
+  "dedup_hash": "458d8e1cc09f756980aedab58dba827472f0d7cbaa260436d7e1da3ae976478e",
+  "source_prediction_id": "5cd8781fa40eba377394548294750a4b38beb2f0b1af12e7f73c8eb9ef69c44a",
+  "entity_id": "H-00084",
+  "entity_name": "Lyra dos Ossos",
+  "race": "Bruxa",
+  "generation": 8,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "059/2026",
+  "draw_date": "2026-07-24",
+  "official_key": {
+    "numeros": [
+      8,
+      10,
+      30,
+      36,
+      47
+    ],
+    "estrelas": [
+      1,
+      4
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      22,
+      25,
+      28,
+      36,
+      49
+    ],
+    "estrelas": [
+      1,
+      4
+    ]
+  },
+  "matched_numbers_count": 1,
+  "matched_stars_count": 2,
+  "exact_matched_values": {
+    "numeros": [
+      36
+    ],
+    "estrelas": [
+      1,
+      4
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      8,
+      10,
+      30,
+      47
+    ],
+    "estrelas": []
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      22,
+      25,
+      28,
+      49
+    ],
+    "estrelas": []
+  },
+  "hero_category": "1+2",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 1 main numbers and 2 lucky stars against official draw 059/2026 (category 1+2).",
+  "registered_at": "2026-08-02T15:07:51+00:00"
+}

@@ -1,0 +1,80 @@
+{
+  "hero_id": "HERO-2026-059-9c4b32f2",
+  "dedup_hash": "9c4b32f244afb9195f11e507d21097a161dbe8fbc6a0021c13880909ce3111d0",
+  "source_prediction_id": "08512c54c79feeb8703f0b04752e1e88edc9050db476e0fe9b6bebdd3c9894b6",
+  "entity_id": "H-00539",
+  "entity_name": "Aruk dos Astros",
+  "race": "Bruxa",
+  "generation": 11,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "059/2026",
+  "draw_date": "2026-07-24",
+  "official_key": {
+    "numeros": [
+      8,
+      10,
+      30,
+      36,
+      47
+    ],
+    "estrelas": [
+      1,
+      4
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      10,
+      36,
+      40,
+      45,
+      50
+    ],
+    "estrelas": [
+      3,
+      4
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      10,
+      36
+    ],
+    "estrelas": [
+      4
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      8,
+      30,
+      47
+    ],
+    "estrelas": [
+      1
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      40,
+      45,
+      50
+    ],
+    "estrelas": [
+      3
+    ]
+  },
+  "hero_category": "2+1",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 1 lucky stars against official draw 059/2026 (category 2+1).",
+  "registered_at": "2026-08-02T15:07:53+00:00"
+}

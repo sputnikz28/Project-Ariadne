@@ -1,0 +1,79 @@
+{
+  "hero_id": "HERO-2026-061-8d1c321c",
+  "dedup_hash": "8d1c321c64647d8d5e66627752cab68990eb825da1da35718ea4c1f57ae364b4",
+  "source_prediction_id": "f8a014e17a174d88dfb81c9b657788c4253618b65e2a1dbb7b0d33d35563d760",
+  "entity_id": "H-00653",
+  "entity_name": "Gruk dos Ossos",
+  "race": "Vidente",
+  "generation": 13,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "061/2026",
+  "draw_date": "2026-07-31",
+  "official_key": {
+    "numeros": [
+      10,
+      24,
+      25,
+      31,
+      45
+    ],
+    "estrelas": [
+      4,
+      5
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      7,
+      8,
+      10,
+      25,
+      45
+    ],
+    "estrelas": [
+      4,
+      9
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      10,
+      25,
+      45
+    ],
+    "estrelas": [
+      4
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      24,
+      31
+    ],
+    "estrelas": [
+      5
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      7,
+      8
+    ],
+    "estrelas": [
+      9
+    ]
+  },
+  "hero_category": "3+1",
+  "hero_tier": "TIER_4",
+  "simulation_score": 43,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 1 lucky stars against official draw 061/2026 (category 3+1).",
+  "registered_at": "2026-08-02T15:10:29+00:00"
+}

@@ -1,0 +1,80 @@
+{
+  "hero_id": "HERO-2026-059-3bfd0e97",
+  "dedup_hash": "3bfd0e97ea30e01ed88b95a1e587d360797ba3fd65585b78392c5b0b2489a36d",
+  "source_prediction_id": "cc41b569517df8830c3e0e96a6ff6ddbd969f5ca89d2b11347c00b40a0c5c439",
+  "entity_id": "H-00026",
+  "entity_name": "Gruk dos Ossos",
+  "race": "Bruxa",
+  "generation": 8,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "059/2026",
+  "draw_date": "2026-07-24",
+  "official_key": {
+    "numeros": [
+      8,
+      10,
+      30,
+      36,
+      47
+    ],
+    "estrelas": [
+      1,
+      4
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      9,
+      10,
+      34,
+      36,
+      38
+    ],
+    "estrelas": [
+      4,
+      12
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      10,
+      36
+    ],
+    "estrelas": [
+      4
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      8,
+      30,
+      47
+    ],
+    "estrelas": [
+      1
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      9,
+      34,
+      38
+    ],
+    "estrelas": [
+      12
+    ]
+  },
+  "hero_category": "2+1",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 1 lucky stars against official draw 059/2026 (category 2+1).",
+  "registered_at": "2026-08-02T15:07:51+00:00"
+}

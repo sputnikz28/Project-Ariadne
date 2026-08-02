@@ -1,0 +1,77 @@
+{
+  "hero_id": "HERO-2026-060-deb2bd27",
+  "dedup_hash": "deb2bd27ee3aae6c30a8746d3f2890088af732e76bc546bd2102732a288dc165",
+  "source_prediction_id": "f808ff2981bac3b26c02190985aea570b359c65e964f28ab731cedef564f8bde",
+  "entity_id": "H-00109",
+  "entity_name": "Lyra dos Astros",
+  "race": "Renascido Goblin",
+  "generation": 11,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "060/2026",
+  "draw_date": "2026-07-28",
+  "official_key": {
+    "numeros": [
+      5,
+      7,
+      24,
+      30,
+      49
+    ],
+    "estrelas": [
+      10,
+      11
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      2,
+      7,
+      29,
+      30,
+      45
+    ],
+    "estrelas": [
+      10,
+      11
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 2,
+  "exact_matched_values": {
+    "numeros": [
+      7,
+      30
+    ],
+    "estrelas": [
+      10,
+      11
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      5,
+      24,
+      49
+    ],
+    "estrelas": []
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      2,
+      29,
+      45
+    ],
+    "estrelas": []
+  },
+  "hero_category": "2+2",
+  "hero_tier": "TIER_4",
+  "simulation_score": 35,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 2 lucky stars against official draw 060/2026 (category 2+2).",
+  "registered_at": "2026-08-02T15:10:19+00:00"
+}

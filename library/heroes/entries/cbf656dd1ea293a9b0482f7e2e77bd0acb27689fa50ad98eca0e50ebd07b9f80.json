@@ -1,0 +1,80 @@
+{
+  "hero_id": "HERO-2026-060-cbf656dd",
+  "dedup_hash": "cbf656dd1ea293a9b0482f7e2e77bd0acb27689fa50ad98eca0e50ebd07b9f80",
+  "source_prediction_id": "ac1ed14bc4f009be1d6466442fbd874b3baad17d890b0175ed0431d4daa38235",
+  "entity_id": "H-00072",
+  "entity_name": "Morgana dos Astros",
+  "race": "Bruxa",
+  "generation": 11,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "060/2026",
+  "draw_date": "2026-07-28",
+  "official_key": {
+    "numeros": [
+      5,
+      7,
+      24,
+      30,
+      49
+    ],
+    "estrelas": [
+      10,
+      11
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      24,
+      30,
+      31,
+      32,
+      45
+    ],
+    "estrelas": [
+      2,
+      10
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      24,
+      30
+    ],
+    "estrelas": [
+      10
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      5,
+      7,
+      49
+    ],
+    "estrelas": [
+      11
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      31,
+      32,
+      45
+    ],
+    "estrelas": [
+      2
+    ]
+  },
+  "hero_category": "2+1",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 1 lucky stars against official draw 060/2026 (category 2+1).",
+  "registered_at": "2026-08-02T15:10:18+00:00"
+}

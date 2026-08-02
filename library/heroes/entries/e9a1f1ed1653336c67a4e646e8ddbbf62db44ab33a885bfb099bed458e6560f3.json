@@ -1,0 +1,78 @@
+{
+  "hero_id": "HERO-2026-060-e9a1f1ed",
+  "dedup_hash": "e9a1f1ed1653336c67a4e646e8ddbbf62db44ab33a885bfb099bed458e6560f3",
+  "source_prediction_id": "803f13131b91f8995507dc11545b0eb0901694579763e2e4a56d6caf9759a5f9",
+  "entity_id": "H-00323",
+  "entity_name": "Elarion do Bosque",
+  "race": "Chefe Tribal",
+  "generation": 6,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "060/2026",
+  "draw_date": "2026-07-28",
+  "official_key": {
+    "numeros": [
+      5,
+      7,
+      24,
+      30,
+      49
+    ],
+    "estrelas": [
+      10,
+      11
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      28,
+      30,
+      39,
+      45,
+      50
+    ],
+    "estrelas": [
+      10,
+      11
+    ]
+  },
+  "matched_numbers_count": 1,
+  "matched_stars_count": 2,
+  "exact_matched_values": {
+    "numeros": [
+      30
+    ],
+    "estrelas": [
+      10,
+      11
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      5,
+      7,
+      24,
+      49
+    ],
+    "estrelas": []
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      28,
+      39,
+      45,
+      50
+    ],
+    "estrelas": []
+  },
+  "hero_category": "1+2",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 1 main numbers and 2 lucky stars against official draw 060/2026 (category 1+2).",
+  "registered_at": "2026-08-02T15:10:19+00:00"
+}

@@ -1,0 +1,80 @@
+{
+  "hero_id": "HERO-2026-059-2e688361",
+  "dedup_hash": "2e688361decdd206b1ef329d41831af97d484ab8fe8e87b30644b561e9fac015",
+  "source_prediction_id": "8e5c7a270130fc1c1106ada9c11907eedaadf466c72f9cd891115e00300b34f1",
+  "entity_id": "H-00668",
+  "entity_name": "Morgana Pedra-Partida",
+  "race": "Bruxa",
+  "generation": 13,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "059/2026",
+  "draw_date": "2026-07-24",
+  "official_key": {
+    "numeros": [
+      8,
+      10,
+      30,
+      36,
+      47
+    ],
+    "estrelas": [
+      1,
+      4
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      2,
+      10,
+      29,
+      30,
+      46
+    ],
+    "estrelas": [
+      3,
+      4
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      10,
+      30
+    ],
+    "estrelas": [
+      4
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      8,
+      36,
+      47
+    ],
+    "estrelas": [
+      1
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      2,
+      29,
+      46
+    ],
+    "estrelas": [
+      3
+    ]
+  },
+  "hero_category": "2+1",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 1 lucky stars against official draw 059/2026 (category 2+1).",
+  "registered_at": "2026-08-02T15:07:52+00:00"
+}

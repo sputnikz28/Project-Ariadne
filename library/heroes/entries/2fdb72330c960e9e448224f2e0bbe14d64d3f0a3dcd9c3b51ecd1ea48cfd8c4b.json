@@ -1,0 +1,79 @@
+{
+  "hero_id": "HERO-2026-059-2fdb7233",
+  "dedup_hash": "2fdb72330c960e9e448224f2e0bbe14d64d3f0a3dcd9c3b51ecd1ea48cfd8c4b",
+  "source_prediction_id": "c0b88e175ced00bdf77f60621534be81f19c86f9acd45db6c6ec36b160984e01",
+  "entity_id": "H-00065",
+  "entity_name": "Selene dos Ossos",
+  "race": "Esqueleto",
+  "generation": 4,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "059/2026",
+  "draw_date": "2026-07-24",
+  "official_key": {
+    "numeros": [
+      8,
+      10,
+      30,
+      36,
+      47
+    ],
+    "estrelas": [
+      1,
+      4
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      8,
+      10,
+      11,
+      12,
+      30
+    ],
+    "estrelas": [
+      4,
+      5
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      8,
+      10,
+      30
+    ],
+    "estrelas": [
+      4
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      36,
+      47
+    ],
+    "estrelas": [
+      1
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      11,
+      12
+    ],
+    "estrelas": [
+      5
+    ]
+  },
+  "hero_category": "3+1",
+  "hero_tier": "TIER_4",
+  "simulation_score": 43,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 1 lucky stars against official draw 059/2026 (category 3+1).",
+  "registered_at": "2026-08-02T15:07:51+00:00"
+}

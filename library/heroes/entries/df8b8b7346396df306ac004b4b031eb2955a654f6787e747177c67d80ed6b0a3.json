@@ -1,0 +1,79 @@
+{
+  "hero_id": "HERO-2026-059-df8b8b73",
+  "dedup_hash": "df8b8b7346396df306ac004b4b031eb2955a654f6787e747177c67d80ed6b0a3",
+  "source_prediction_id": "56fe549b66de520ea2e8b199b5bf390f28592a6b8429e7afa30f92023f6cfb5e",
+  "entity_id": "H-00024",
+  "entity_name": "Aion do Bosque",
+  "race": "Bruxa",
+  "generation": 8,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "059/2026",
+  "draw_date": "2026-07-24",
+  "official_key": {
+    "numeros": [
+      8,
+      10,
+      30,
+      36,
+      47
+    ],
+    "estrelas": [
+      1,
+      4
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      8,
+      10,
+      30,
+      39,
+      49
+    ],
+    "estrelas": [
+      6,
+      12
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 0,
+  "exact_matched_values": {
+    "numeros": [
+      8,
+      10,
+      30
+    ],
+    "estrelas": []
+  },
+  "missed_winning_values": {
+    "numeros": [
+      36,
+      47
+    ],
+    "estrelas": [
+      1,
+      4
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      39,
+      49
+    ],
+    "estrelas": [
+      6,
+      12
+    ]
+  },
+  "hero_category": "3+0",
+  "hero_tier": "TIER_4",
+  "simulation_score": 38,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 0 lucky stars against official draw 059/2026 (category 3+0).",
+  "registered_at": "2026-08-02T15:07:51+00:00"
+}

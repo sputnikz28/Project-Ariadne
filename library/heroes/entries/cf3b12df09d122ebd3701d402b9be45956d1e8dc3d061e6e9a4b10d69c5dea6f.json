@@ -1,0 +1,80 @@
+{
+  "hero_id": "HERO-2026-061-cf3b12df",
+  "dedup_hash": "cf3b12df09d122ebd3701d402b9be45956d1e8dc3d061e6e9a4b10d69c5dea6f",
+  "source_prediction_id": "51440ec32c324c66ca523415a85c5c7cf333c43a8fc3317fa2255b3da199cac9",
+  "entity_id": "H-00013",
+  "entity_name": "Thara da Lua Fria",
+  "race": "Bruxa",
+  "generation": 1,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "061/2026",
+  "draw_date": "2026-07-31",
+  "official_key": {
+    "numeros": [
+      10,
+      24,
+      25,
+      31,
+      45
+    ],
+    "estrelas": [
+      4,
+      5
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      10,
+      25,
+      27,
+      36,
+      41
+    ],
+    "estrelas": [
+      2,
+      4
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      10,
+      25
+    ],
+    "estrelas": [
+      4
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      24,
+      31,
+      45
+    ],
+    "estrelas": [
+      5
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      27,
+      36,
+      41
+    ],
+    "estrelas": [
+      2
+    ]
+  },
+  "hero_category": "2+1",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 1 lucky stars against official draw 061/2026 (category 2+1).",
+  "registered_at": "2026-08-02T15:10:31+00:00"
+}

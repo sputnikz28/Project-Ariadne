@@ -1,0 +1,80 @@
+{
+  "hero_id": "HERO-2026-061-af5734fd",
+  "dedup_hash": "af5734fdb33f3b1ea835a46637a544b7d932b237526990131138b94fb157d342",
+  "source_prediction_id": "641b38210665dc3bf7982c4c5e35c06ba2c794823a2aa9349be09f1e1b93a29d",
+  "entity_id": "H-00567",
+  "entity_name": "Selene da Névoa",
+  "race": "Chefe Tribal",
+  "generation": 11,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "061/2026",
+  "draw_date": "2026-07-31",
+  "official_key": {
+    "numeros": [
+      10,
+      24,
+      25,
+      31,
+      45
+    ],
+    "estrelas": [
+      4,
+      5
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      25,
+      43,
+      45,
+      46,
+      50
+    ],
+    "estrelas": [
+      5,
+      12
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      25,
+      45
+    ],
+    "estrelas": [
+      5
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      10,
+      24,
+      31
+    ],
+    "estrelas": [
+      4
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      43,
+      46,
+      50
+    ],
+    "estrelas": [
+      12
+    ]
+  },
+  "hero_category": "2+1",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 1 lucky stars against official draw 061/2026 (category 2+1).",
+  "registered_at": "2026-08-02T15:10:30+00:00"
+}

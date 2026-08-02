@@ -1,0 +1,41 @@
+{
+  "legend_id": "LEGEND-58ba7c7d",
+  "source_prediction_id": "58ba7c7dacb17e1515c4b6901d9a6e0d6422f5a120ab33252a72a128dcfe6fb1",
+  "promotion_draw": "061/2026",
+  "promotion_draw_date": "2026-07-31",
+  "promotion_threshold": 3,
+  "promotion_tier": "LEGEND_TIER_4",
+  "criteria_version": "v1",
+  "promotion_hero_ids": [
+    "HERO-2026-056-64d12609",
+    "HERO-2026-059-21724593",
+    "HERO-2026-061-39b3ed9c"
+  ],
+  "project_version": "V12",
+  "git_commit": "eb609239bf97595235a4624908746689f33091c5",
+  "qualification_reason": "Promoted to Legend at draw 061/2026 (2026-07-31) by reaching 3 distinct qualifying draws as Hero (criteria_version: v1).",
+  "entity_id": "H-00249",
+  "entity_name": "Thara Pedra-Partida",
+  "race": "Bruxa",
+  "generation": 5,
+  "predicted_numeros": [
+    10,
+    43,
+    45,
+    47,
+    50
+  ],
+  "predicted_estrelas": [
+    4,
+    9
+  ],
+  "hero_count": 3,
+  "qualified_draws": 3,
+  "contributing_hero_ids": [
+    "HERO-2026-056-64d12609",
+    "HERO-2026-059-21724593",
+    "HERO-2026-061-39b3ed9c"
+  ],
+  "provenance": "legacy",
+  "last_reevaluated_at": null
+}

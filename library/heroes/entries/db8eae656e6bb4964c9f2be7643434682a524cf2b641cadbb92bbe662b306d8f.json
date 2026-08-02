@@ -1,0 +1,79 @@
+{
+  "hero_id": "HERO-2026-061-db8eae65",
+  "dedup_hash": "db8eae656e6bb4964c9f2be7643434682a524cf2b641cadbb92bbe662b306d8f",
+  "source_prediction_id": "a4e23574f9c2716ccc4a5f65e2719065b0d6769a87786fdb2eef9f3c082418cb",
+  "entity_id": "H-00138",
+  "entity_name": "Aruk Pedra-Partida",
+  "race": "Cronomante",
+  "generation": 3,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "061/2026",
+  "draw_date": "2026-07-31",
+  "official_key": {
+    "numeros": [
+      10,
+      24,
+      25,
+      31,
+      45
+    ],
+    "estrelas": [
+      4,
+      5
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      10,
+      21,
+      25,
+      31,
+      34
+    ],
+    "estrelas": [
+      4,
+      9
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      10,
+      25,
+      31
+    ],
+    "estrelas": [
+      4
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      24,
+      45
+    ],
+    "estrelas": [
+      5
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      21,
+      34
+    ],
+    "estrelas": [
+      9
+    ]
+  },
+  "hero_category": "3+1",
+  "hero_tier": "TIER_4",
+  "simulation_score": 43,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 1 lucky stars against official draw 061/2026 (category 3+1).",
+  "registered_at": "2026-08-02T15:10:31+00:00"
+}

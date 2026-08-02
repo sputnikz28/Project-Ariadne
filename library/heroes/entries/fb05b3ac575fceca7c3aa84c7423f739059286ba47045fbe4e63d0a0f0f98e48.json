@@ -1,0 +1,78 @@
+{
+  "hero_id": "HERO-2026-061-fb05b3ac",
+  "dedup_hash": "fb05b3ac575fceca7c3aa84c7423f739059286ba47045fbe4e63d0a0f0f98e48",
+  "source_prediction_id": "7fc6d24a72adb132308705e68d54eb345f8336066b753c89f8a73d626e9d6afe",
+  "entity_id": "H-00403",
+  "entity_name": "Aruk dos Ossos",
+  "race": "Vidente",
+  "generation": 8,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "061/2026",
+  "draw_date": "2026-07-31",
+  "official_key": {
+    "numeros": [
+      10,
+      24,
+      25,
+      31,
+      45
+    ],
+    "estrelas": [
+      4,
+      5
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      17,
+      18,
+      31,
+      33,
+      46
+    ],
+    "estrelas": [
+      4,
+      5
+    ]
+  },
+  "matched_numbers_count": 1,
+  "matched_stars_count": 2,
+  "exact_matched_values": {
+    "numeros": [
+      31
+    ],
+    "estrelas": [
+      4,
+      5
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      10,
+      24,
+      25,
+      45
+    ],
+    "estrelas": []
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      17,
+      18,
+      33,
+      46
+    ],
+    "estrelas": []
+  },
+  "hero_category": "1+2",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 1 main numbers and 2 lucky stars against official draw 061/2026 (category 1+2).",
+  "registered_at": "2026-08-02T15:10:30+00:00"
+}

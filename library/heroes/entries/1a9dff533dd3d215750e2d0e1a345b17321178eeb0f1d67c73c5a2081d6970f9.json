@@ -1,0 +1,78 @@
+{
+  "hero_id": "HERO-2026-059-1a9dff53",
+  "dedup_hash": "1a9dff533dd3d215750e2d0e1a345b17321178eeb0f1d67c73c5a2081d6970f9",
+  "source_prediction_id": "eff3348432dd27b0ddd9770bd47986bb2dfab0cf61f13b3bb89f03c721b74b62",
+  "entity_id": "H-00029",
+  "entity_name": "Velka dos Astros",
+  "race": "Goblin",
+  "generation": 6,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "059/2026",
+  "draw_date": "2026-07-24",
+  "official_key": {
+    "numeros": [
+      8,
+      10,
+      30,
+      36,
+      47
+    ],
+    "estrelas": [
+      1,
+      4
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      5,
+      10,
+      24,
+      26,
+      40
+    ],
+    "estrelas": [
+      1,
+      4
+    ]
+  },
+  "matched_numbers_count": 1,
+  "matched_stars_count": 2,
+  "exact_matched_values": {
+    "numeros": [
+      10
+    ],
+    "estrelas": [
+      1,
+      4
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      8,
+      30,
+      36,
+      47
+    ],
+    "estrelas": []
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      5,
+      24,
+      26,
+      40
+    ],
+    "estrelas": []
+  },
+  "hero_category": "1+2",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 1 main numbers and 2 lucky stars against official draw 059/2026 (category 1+2).",
+  "registered_at": "2026-08-02T15:07:52+00:00"
+}

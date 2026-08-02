@@ -1,0 +1,80 @@
+{
+  "hero_id": "HERO-2026-061-e52313af",
+  "dedup_hash": "e52313af116d94b29cb470c34583a154c01965c062eca464a5f767a9e470f0bb",
+  "source_prediction_id": "2c2671cb059f3642f2b834c2680304389a853b6b480f4888212d25bc25f9582f",
+  "entity_id": "H-00617",
+  "entity_name": "Morgana do Bosque",
+  "race": "Esqueleto",
+  "generation": 12,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "061/2026",
+  "draw_date": "2026-07-31",
+  "official_key": {
+    "numeros": [
+      10,
+      24,
+      25,
+      31,
+      45
+    ],
+    "estrelas": [
+      4,
+      5
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      21,
+      31,
+      34,
+      43,
+      45
+    ],
+    "estrelas": [
+      4,
+      7
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      31,
+      45
+    ],
+    "estrelas": [
+      4
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      10,
+      24,
+      25
+    ],
+    "estrelas": [
+      5
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      21,
+      34,
+      43
+    ],
+    "estrelas": [
+      7
+    ]
+  },
+  "hero_category": "2+1",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 1 lucky stars against official draw 061/2026 (category 2+1).",
+  "registered_at": "2026-08-02T15:10:31+00:00"
+}

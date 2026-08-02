@@ -1,8 +1,29 @@
 {
   "nome": "Livro das Lendas",
-  "total_legends": 0,
-  "por_tier": {},
-  "por_provenance": {},
-  "ranking": [],
-  "atualizado_em": "2026-07-22T09:10:40+00:00"
+  "total_legends": 16,
+  "por_tier": {
+    "LEGEND_TIER_4": 16
+  },
+  "por_provenance": {
+    "legacy": 16
+  },
+  "ranking": [
+    "LEGEND-4f4beee0",
+    "LEGEND-6caadc88",
+    "LEGEND-7722b35c",
+    "LEGEND-fa319215",
+    "LEGEND-c223ad19",
+    "LEGEND-58ba7c7d",
+    "LEGEND-51fb920c",
+    "LEGEND-7792db45",
+    "LEGEND-e651b485",
+    "LEGEND-8cc825f4",
+    "LEGEND-a2a6ef97",
+    "LEGEND-910fa13f",
+    "LEGEND-690ec980",
+    "LEGEND-7b3dfb53",
+    "LEGEND-2ee852b0",
+    "LEGEND-af077da8"
+  ],
+  "atualizado_em": "2026-08-02T15:12:01+00:00"
 }

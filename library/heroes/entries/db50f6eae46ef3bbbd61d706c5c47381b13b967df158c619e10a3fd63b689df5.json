@@ -1,0 +1,80 @@
+{
+  "hero_id": "HERO-2026-061-db50f6ea",
+  "dedup_hash": "db50f6eae46ef3bbbd61d706c5c47381b13b967df158c619e10a3fd63b689df5",
+  "source_prediction_id": "34df966dafc2e05189a842000fe92b50515ff175699de01cf5dce9570d93a42a",
+  "entity_id": "H-00046",
+  "entity_name": "Aion da Lua Fria",
+  "race": "Chefe Tribal",
+  "generation": 1,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "061/2026",
+  "draw_date": "2026-07-31",
+  "official_key": {
+    "numeros": [
+      10,
+      24,
+      25,
+      31,
+      45
+    ],
+    "estrelas": [
+      4,
+      5
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      15,
+      24,
+      29,
+      31,
+      41
+    ],
+    "estrelas": [
+      4,
+      9
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      24,
+      31
+    ],
+    "estrelas": [
+      4
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      10,
+      25,
+      45
+    ],
+    "estrelas": [
+      5
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      15,
+      29,
+      41
+    ],
+    "estrelas": [
+      9
+    ]
+  },
+  "hero_category": "2+1",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 1 lucky stars against official draw 061/2026 (category 2+1).",
+  "registered_at": "2026-08-02T15:10:29+00:00"
+}

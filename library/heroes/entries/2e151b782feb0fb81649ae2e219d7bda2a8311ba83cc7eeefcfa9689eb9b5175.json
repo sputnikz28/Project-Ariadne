@@ -1,0 +1,79 @@
+{
+  "hero_id": "HERO-2026-060-2e151b78",
+  "dedup_hash": "2e151b782feb0fb81649ae2e219d7bda2a8311ba83cc7eeefcfa9689eb9b5175",
+  "source_prediction_id": "9d717ed73fd3e3dc0e1f2d14bd3e1a13cec404a29a1365758cfcb8f9a22da5c4",
+  "entity_id": "H-00472",
+  "entity_name": "Elarion Pedra-Partida",
+  "race": "Bruxa",
+  "generation": 9,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "060/2026",
+  "draw_date": "2026-07-28",
+  "official_key": {
+    "numeros": [
+      5,
+      7,
+      24,
+      30,
+      49
+    ],
+    "estrelas": [
+      10,
+      11
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      5,
+      7,
+      31,
+      39,
+      49
+    ],
+    "estrelas": [
+      5,
+      10
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      5,
+      7,
+      49
+    ],
+    "estrelas": [
+      10
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      24,
+      30
+    ],
+    "estrelas": [
+      11
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      31,
+      39
+    ],
+    "estrelas": [
+      5
+    ]
+  },
+  "hero_category": "3+1",
+  "hero_tier": "TIER_4",
+  "simulation_score": 43,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 1 lucky stars against official draw 060/2026 (category 3+1).",
+  "registered_at": "2026-08-02T15:10:18+00:00"
+}

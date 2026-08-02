@@ -1,0 +1,80 @@
+{
+  "hero_id": "HERO-2026-061-7f332e65",
+  "dedup_hash": "7f332e65acf904a6702237c36b1360ce128ceec99755300498497bafac08d7f6",
+  "source_prediction_id": "dd4f2fdc55a6b194acff3bd045c45fc92925314f14087a7c3580411650c0d796",
+  "entity_id": "H-00349",
+  "entity_name": "Aruk Pedra-Partida",
+  "race": "Chefe Tribal",
+  "generation": 7,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "061/2026",
+  "draw_date": "2026-07-31",
+  "official_key": {
+    "numeros": [
+      10,
+      24,
+      25,
+      31,
+      45
+    ],
+    "estrelas": [
+      4,
+      5
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      24,
+      29,
+      45,
+      46,
+      50
+    ],
+    "estrelas": [
+      2,
+      5
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      24,
+      45
+    ],
+    "estrelas": [
+      5
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      10,
+      25,
+      31
+    ],
+    "estrelas": [
+      4
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      29,
+      46,
+      50
+    ],
+    "estrelas": [
+      2
+    ]
+  },
+  "hero_category": "2+1",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 1 lucky stars against official draw 061/2026 (category 2+1).",
+  "registered_at": "2026-08-02T15:10:31+00:00"
+}

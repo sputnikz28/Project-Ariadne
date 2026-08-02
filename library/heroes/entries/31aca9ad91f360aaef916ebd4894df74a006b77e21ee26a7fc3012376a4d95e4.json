@@ -1,0 +1,79 @@
+{
+  "hero_id": "HERO-2026-061-31aca9ad",
+  "dedup_hash": "31aca9ad91f360aaef916ebd4894df74a006b77e21ee26a7fc3012376a4d95e4",
+  "source_prediction_id": "3732dd29e5f56637c773fe4197b8da7b229fb5e127d71947e8f972fa9e59785e",
+  "entity_id": "Clérigo-4",
+  "entity_name": "Clérigo-4",
+  "race": "Melfork",
+  "generation": 14,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "061/2026",
+  "draw_date": "2026-07-31",
+  "official_key": {
+    "numeros": [
+      10,
+      24,
+      25,
+      31,
+      45
+    ],
+    "estrelas": [
+      4,
+      5
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      10,
+      25,
+      29,
+      44,
+      45
+    ],
+    "estrelas": [
+      1,
+      5
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      10,
+      25,
+      45
+    ],
+    "estrelas": [
+      5
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      24,
+      31
+    ],
+    "estrelas": [
+      4
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      29,
+      44
+    ],
+    "estrelas": [
+      1
+    ]
+  },
+  "hero_category": "3+1",
+  "hero_tier": "TIER_4",
+  "simulation_score": 43,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 1 lucky stars against official draw 061/2026 (category 3+1).",
+  "registered_at": "2026-08-02T15:10:30+00:00"
+}

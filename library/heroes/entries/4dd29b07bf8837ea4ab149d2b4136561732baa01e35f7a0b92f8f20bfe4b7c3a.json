@@ -1,0 +1,80 @@
+{
+  "hero_id": "HERO-2026-061-4dd29b07",
+  "dedup_hash": "4dd29b07bf8837ea4ab149d2b4136561732baa01e35f7a0b92f8f20bfe4b7c3a",
+  "source_prediction_id": "f42586fc5df3807c91ce8055e3a40897d83e1c847c4c4f9a18aa38461f5c8169",
+  "entity_id": "H-00045",
+  "entity_name": "Elarion dos Astros",
+  "race": "Cronomante",
+  "generation": 1,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "061/2026",
+  "draw_date": "2026-07-31",
+  "official_key": {
+    "numeros": [
+      10,
+      24,
+      25,
+      31,
+      45
+    ],
+    "estrelas": [
+      4,
+      5
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      4,
+      10,
+      25,
+      26,
+      41
+    ],
+    "estrelas": [
+      5,
+      7
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      10,
+      25
+    ],
+    "estrelas": [
+      5
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      24,
+      31,
+      45
+    ],
+    "estrelas": [
+      4
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      4,
+      26,
+      41
+    ],
+    "estrelas": [
+      7
+    ]
+  },
+  "hero_category": "2+1",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 1 lucky stars against official draw 061/2026 (category 2+1).",
+  "registered_at": "2026-08-02T15:10:30+00:00"
+}

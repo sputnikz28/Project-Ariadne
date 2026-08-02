@@ -1,0 +1,79 @@
+{
+  "hero_id": "HERO-2026-061-623d1620",
+  "dedup_hash": "623d162093497b66c68846ada906564c951216cc06221d5aac6e825ef88e474d",
+  "source_prediction_id": "ce4426c8acc2cd8bb7a06ec012da5be09247630d4367a07998935941953a8022",
+  "entity_id": "H-00432",
+  "entity_name": "Kael da Lua Fria",
+  "race": "Esqueleto",
+  "generation": 8,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "061/2026",
+  "draw_date": "2026-07-31",
+  "official_key": {
+    "numeros": [
+      10,
+      24,
+      25,
+      31,
+      45
+    ],
+    "estrelas": [
+      4,
+      5
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      24,
+      25,
+      31,
+      35,
+      38
+    ],
+    "estrelas": [
+      3,
+      4
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      24,
+      25,
+      31
+    ],
+    "estrelas": [
+      4
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      10,
+      45
+    ],
+    "estrelas": [
+      5
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      35,
+      38
+    ],
+    "estrelas": [
+      3
+    ]
+  },
+  "hero_category": "3+1",
+  "hero_tier": "TIER_4",
+  "simulation_score": 43,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 1 lucky stars against official draw 061/2026 (category 3+1).",
+  "registered_at": "2026-08-02T15:10:30+00:00"
+}

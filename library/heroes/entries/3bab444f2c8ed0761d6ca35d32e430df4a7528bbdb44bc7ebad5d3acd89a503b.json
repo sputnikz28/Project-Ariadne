@@ -1,0 +1,80 @@
+{
+  "hero_id": "HERO-2026-060-3bab444f",
+  "dedup_hash": "3bab444f2c8ed0761d6ca35d32e430df4a7528bbdb44bc7ebad5d3acd89a503b",
+  "source_prediction_id": "d08b72a3d1b718481c6cb2cfb1e9be539ad6a1b27ed1ecc5974231ae7bd1c948",
+  "entity_id": "H-00025",
+  "entity_name": "Aion do Bosque",
+  "race": "Goblin",
+  "generation": 6,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "060/2026",
+  "draw_date": "2026-07-28",
+  "official_key": {
+    "numeros": [
+      5,
+      7,
+      24,
+      30,
+      49
+    ],
+    "estrelas": [
+      10,
+      11
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      5,
+      7,
+      19,
+      21,
+      40
+    ],
+    "estrelas": [
+      7,
+      10
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      5,
+      7
+    ],
+    "estrelas": [
+      10
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      24,
+      30,
+      49
+    ],
+    "estrelas": [
+      11
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      19,
+      21,
+      40
+    ],
+    "estrelas": [
+      7
+    ]
+  },
+  "hero_category": "2+1",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 1 lucky stars against official draw 060/2026 (category 2+1).",
+  "registered_at": "2026-08-02T15:10:18+00:00"
+}

@@ -1,0 +1,80 @@
+{
+  "hero_id": "HERO-2026-061-2fa70057",
+  "dedup_hash": "2fa70057d666de71bb7d9fd563c7a137543f4e47da25993d38cc2bf0461d4ba9",
+  "source_prediction_id": "4db9e2efa6c8ad784316fa60a0aef282c64701e47c64a35cc7f5d03917072922",
+  "entity_id": "H-00460",
+  "entity_name": "Elarion Pedra-Partida",
+  "race": "Chefe Tribal",
+  "generation": 9,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "061/2026",
+  "draw_date": "2026-07-31",
+  "official_key": {
+    "numeros": [
+      10,
+      24,
+      25,
+      31,
+      45
+    ],
+    "estrelas": [
+      4,
+      5
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      1,
+      9,
+      31,
+      45,
+      50
+    ],
+    "estrelas": [
+      4,
+      6
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      31,
+      45
+    ],
+    "estrelas": [
+      4
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      10,
+      24,
+      25
+    ],
+    "estrelas": [
+      5
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      1,
+      9,
+      50
+    ],
+    "estrelas": [
+      6
+    ]
+  },
+  "hero_category": "2+1",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 1 lucky stars against official draw 061/2026 (category 2+1).",
+  "registered_at": "2026-08-02T15:10:31+00:00"
+}

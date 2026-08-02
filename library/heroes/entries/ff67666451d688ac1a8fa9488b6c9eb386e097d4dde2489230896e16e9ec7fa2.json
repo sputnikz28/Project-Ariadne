@@ -1,0 +1,78 @@
+{
+  "hero_id": "HERO-2026-059-ff676664",
+  "dedup_hash": "ff67666451d688ac1a8fa9488b6c9eb386e097d4dde2489230896e16e9ec7fa2",
+  "source_prediction_id": "fbe8ff407ff08ad82f866495d39f2b4661defb92417f7a446421cf4295a6e5a4",
+  "entity_id": "H-00508",
+  "entity_name": "Selene Pedra-Partida",
+  "race": "Bruxa",
+  "generation": 10,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "059/2026",
+  "draw_date": "2026-07-24",
+  "official_key": {
+    "numeros": [
+      8,
+      10,
+      30,
+      36,
+      47
+    ],
+    "estrelas": [
+      1,
+      4
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      3,
+      23,
+      37,
+      40,
+      47
+    ],
+    "estrelas": [
+      1,
+      4
+    ]
+  },
+  "matched_numbers_count": 1,
+  "matched_stars_count": 2,
+  "exact_matched_values": {
+    "numeros": [
+      47
+    ],
+    "estrelas": [
+      1,
+      4
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      8,
+      10,
+      30,
+      36
+    ],
+    "estrelas": []
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      3,
+      23,
+      37,
+      40
+    ],
+    "estrelas": []
+  },
+  "hero_category": "1+2",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 1 main numbers and 2 lucky stars against official draw 059/2026 (category 1+2).",
+  "registered_at": "2026-08-02T15:07:51+00:00"
+}

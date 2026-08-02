@@ -1,0 +1,80 @@
+{
+  "hero_id": "HERO-2026-060-41d55b2e",
+  "dedup_hash": "41d55b2e87a176d88a7bedb2ac7d4a8747b67ac614654605d7d028fdb241ee4d",
+  "source_prediction_id": "ddd4fa4f0750f29944277bcd57aa5e212ae54fb2fc5b616947a5a2482662cfc2",
+  "entity_id": "H-00541",
+  "entity_name": "Velka da Névoa",
+  "race": "Cronomante",
+  "generation": 11,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "060/2026",
+  "draw_date": "2026-07-28",
+  "official_key": {
+    "numeros": [
+      5,
+      7,
+      24,
+      30,
+      49
+    ],
+    "estrelas": [
+      10,
+      11
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      10,
+      26,
+      30,
+      42,
+      49
+    ],
+    "estrelas": [
+      5,
+      11
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      30,
+      49
+    ],
+    "estrelas": [
+      11
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      5,
+      7,
+      24
+    ],
+    "estrelas": [
+      10
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      10,
+      26,
+      42
+    ],
+    "estrelas": [
+      5
+    ]
+  },
+  "hero_category": "2+1",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 1 lucky stars against official draw 060/2026 (category 2+1).",
+  "registered_at": "2026-08-02T15:10:18+00:00"
+}

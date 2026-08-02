@@ -1,0 +1,77 @@
+{
+  "hero_id": "HERO-2026-059-62b0a875",
+  "dedup_hash": "62b0a87591209dcadb3ec6adaa25cec617ba08f0d46121c57db9b022729d1c42",
+  "source_prediction_id": "636e48328308ed526dc5f4858ac34041b821f3a7ad6ac0da3375f9e61c39b179",
+  "entity_id": "H-00052",
+  "entity_name": "Gruk Pedra-Partida",
+  "race": "Bruxa",
+  "generation": 9,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "059/2026",
+  "draw_date": "2026-07-24",
+  "official_key": {
+    "numeros": [
+      8,
+      10,
+      30,
+      36,
+      47
+    ],
+    "estrelas": [
+      1,
+      4
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      4,
+      8,
+      24,
+      36,
+      40
+    ],
+    "estrelas": [
+      1,
+      4
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 2,
+  "exact_matched_values": {
+    "numeros": [
+      8,
+      36
+    ],
+    "estrelas": [
+      1,
+      4
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      10,
+      30,
+      47
+    ],
+    "estrelas": []
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      4,
+      24,
+      40
+    ],
+    "estrelas": []
+  },
+  "hero_category": "2+2",
+  "hero_tier": "TIER_4",
+  "simulation_score": 35,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 2 lucky stars against official draw 059/2026 (category 2+2).",
+  "registered_at": "2026-08-02T15:07:51+00:00"
+}

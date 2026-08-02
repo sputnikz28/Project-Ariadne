@@ -1,0 +1,80 @@
+{
+  "hero_id": "HERO-2026-059-b266fe78",
+  "dedup_hash": "b266fe783bef6c4bc98dd889a66ef14b59ab29f48deb5aa80ca2652e5b411f74",
+  "source_prediction_id": "51fb920c603dbcd933c5c58405dee92c118760403dc27c4b4f4aeb5ee42faa83",
+  "entity_id": "H-00263",
+  "entity_name": "Lyra da Lua Fria",
+  "race": "Vidente",
+  "generation": 5,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "059/2026",
+  "draw_date": "2026-07-24",
+  "official_key": {
+    "numeros": [
+      8,
+      10,
+      30,
+      36,
+      47
+    ],
+    "estrelas": [
+      1,
+      4
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      8,
+      10,
+      12,
+      25,
+      42
+    ],
+    "estrelas": [
+      4,
+      9
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      8,
+      10
+    ],
+    "estrelas": [
+      4
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      30,
+      36,
+      47
+    ],
+    "estrelas": [
+      1
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      12,
+      25,
+      42
+    ],
+    "estrelas": [
+      9
+    ]
+  },
+  "hero_category": "2+1",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 1 lucky stars against official draw 059/2026 (category 2+1).",
+  "registered_at": "2026-08-02T15:07:51+00:00"
+}

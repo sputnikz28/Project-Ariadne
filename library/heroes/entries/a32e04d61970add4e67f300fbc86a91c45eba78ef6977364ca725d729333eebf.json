@@ -1,0 +1,78 @@
+{
+  "hero_id": "HERO-2026-060-a32e04d6",
+  "dedup_hash": "a32e04d61970add4e67f300fbc86a91c45eba78ef6977364ca725d729333eebf",
+  "source_prediction_id": "ce3d9b50bc1b5c5839e5c7a427dd773c5a288b079ca4b03917b46775e3204df9",
+  "entity_id": "H-00664",
+  "entity_name": "Lyra da Lua Fria",
+  "race": "Chefe Tribal",
+  "generation": 13,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "060/2026",
+  "draw_date": "2026-07-28",
+  "official_key": {
+    "numeros": [
+      5,
+      7,
+      24,
+      30,
+      49
+    ],
+    "estrelas": [
+      10,
+      11
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      5,
+      20,
+      27,
+      46,
+      50
+    ],
+    "estrelas": [
+      10,
+      11
+    ]
+  },
+  "matched_numbers_count": 1,
+  "matched_stars_count": 2,
+  "exact_matched_values": {
+    "numeros": [
+      5
+    ],
+    "estrelas": [
+      10,
+      11
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      7,
+      24,
+      30,
+      49
+    ],
+    "estrelas": []
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      20,
+      27,
+      46,
+      50
+    ],
+    "estrelas": []
+  },
+  "hero_category": "1+2",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 1 main numbers and 2 lucky stars against official draw 060/2026 (category 1+2).",
+  "registered_at": "2026-08-02T15:10:18+00:00"
+}

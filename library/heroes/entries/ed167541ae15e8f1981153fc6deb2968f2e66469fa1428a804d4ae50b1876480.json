@@ -1,0 +1,79 @@
+{
+  "hero_id": "HERO-2026-059-ed167541",
+  "dedup_hash": "ed167541ae15e8f1981153fc6deb2968f2e66469fa1428a804d4ae50b1876480",
+  "source_prediction_id": "800d09013e85ccfc2b7c5876660bc4fcd3c58317bafdb7762ab6a1408192325d",
+  "entity_id": "H-00679",
+  "entity_name": "Selene da Névoa",
+  "race": "Bruxa",
+  "generation": 13,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "059/2026",
+  "draw_date": "2026-07-24",
+  "official_key": {
+    "numeros": [
+      8,
+      10,
+      30,
+      36,
+      47
+    ],
+    "estrelas": [
+      1,
+      4
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      10,
+      28,
+      36,
+      45,
+      47
+    ],
+    "estrelas": [
+      8,
+      12
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 0,
+  "exact_matched_values": {
+    "numeros": [
+      10,
+      36,
+      47
+    ],
+    "estrelas": []
+  },
+  "missed_winning_values": {
+    "numeros": [
+      8,
+      30
+    ],
+    "estrelas": [
+      1,
+      4
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      28,
+      45
+    ],
+    "estrelas": [
+      8,
+      12
+    ]
+  },
+  "hero_category": "3+0",
+  "hero_tier": "TIER_4",
+  "simulation_score": 38,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 0 lucky stars against official draw 059/2026 (category 3+0).",
+  "registered_at": "2026-08-02T15:07:52+00:00"
+}

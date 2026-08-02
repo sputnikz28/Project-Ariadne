@@ -1,0 +1,41 @@
+{
+  "legend_id": "LEGEND-51fb920c",
+  "source_prediction_id": "51fb920c603dbcd933c5c58405dee92c118760403dc27c4b4f4aeb5ee42faa83",
+  "promotion_draw": "061/2026",
+  "promotion_draw_date": "2026-07-31",
+  "promotion_threshold": 3,
+  "promotion_tier": "LEGEND_TIER_4",
+  "criteria_version": "v1",
+  "promotion_hero_ids": [
+    "HERO-2026-056-2eed8e7a",
+    "HERO-2026-059-b266fe78",
+    "HERO-2026-061-c7838c89"
+  ],
+  "project_version": "V12",
+  "git_commit": "eb609239bf97595235a4624908746689f33091c5",
+  "qualification_reason": "Promoted to Legend at draw 061/2026 (2026-07-31) by reaching 3 distinct qualifying draws as Hero (criteria_version: v1).",
+  "entity_id": "H-00263",
+  "entity_name": "Lyra da Lua Fria",
+  "race": "Vidente",
+  "generation": 5,
+  "predicted_numeros": [
+    8,
+    10,
+    12,
+    25,
+    42
+  ],
+  "predicted_estrelas": [
+    4,
+    9
+  ],
+  "hero_count": 3,
+  "qualified_draws": 3,
+  "contributing_hero_ids": [
+    "HERO-2026-056-2eed8e7a",
+    "HERO-2026-059-b266fe78",
+    "HERO-2026-061-c7838c89"
+  ],
+  "provenance": "legacy",
+  "last_reevaluated_at": null
+}

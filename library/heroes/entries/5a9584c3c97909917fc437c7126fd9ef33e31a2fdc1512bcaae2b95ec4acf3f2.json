@@ -1,0 +1,79 @@
+{
+  "hero_id": "HERO-2026-061-5a9584c3",
+  "dedup_hash": "5a9584c3c97909917fc437c7126fd9ef33e31a2fdc1512bcaae2b95ec4acf3f2",
+  "source_prediction_id": "f2d73b4b518f2f454965bc2aed7df0943f39ba5d6d2450e69b0522dbe5e95dd3",
+  "entity_id": "H-00009",
+  "entity_name": "Elarion Pedra-Partida",
+  "race": "Vidente",
+  "generation": 9,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "061/2026",
+  "draw_date": "2026-07-31",
+  "official_key": {
+    "numeros": [
+      10,
+      24,
+      25,
+      31,
+      45
+    ],
+    "estrelas": [
+      4,
+      5
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      20,
+      21,
+      24,
+      25,
+      45
+    ],
+    "estrelas": [
+      3,
+      8
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 0,
+  "exact_matched_values": {
+    "numeros": [
+      24,
+      25,
+      45
+    ],
+    "estrelas": []
+  },
+  "missed_winning_values": {
+    "numeros": [
+      10,
+      31
+    ],
+    "estrelas": [
+      4,
+      5
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      20,
+      21
+    ],
+    "estrelas": [
+      3,
+      8
+    ]
+  },
+  "hero_category": "3+0",
+  "hero_tier": "TIER_4",
+  "simulation_score": 38,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 0 lucky stars against official draw 061/2026 (category 3+0).",
+  "registered_at": "2026-08-02T15:10:31+00:00"
+}

@@ -1,0 +1,78 @@
+{
+  "hero_id": "HERO-2026-061-2e110c68",
+  "dedup_hash": "2e110c680ad85a3e352ff6217128ea9aea314f1b93912abfbbf4e56a48696f6f",
+  "source_prediction_id": "709c283af5020c9edd9bf5d967d291a2ce0aa8d7fd7ed1c1d82f2c74863e2fb6",
+  "entity_id": "H-00024",
+  "entity_name": "Morgana Pedra-Partida",
+  "race": "Vidente",
+  "generation": 5,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "061/2026",
+  "draw_date": "2026-07-31",
+  "official_key": {
+    "numeros": [
+      10,
+      24,
+      25,
+      31,
+      45
+    ],
+    "estrelas": [
+      4,
+      5
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      3,
+      5,
+      19,
+      31,
+      34
+    ],
+    "estrelas": [
+      4,
+      5
+    ]
+  },
+  "matched_numbers_count": 1,
+  "matched_stars_count": 2,
+  "exact_matched_values": {
+    "numeros": [
+      31
+    ],
+    "estrelas": [
+      4,
+      5
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      10,
+      24,
+      25,
+      45
+    ],
+    "estrelas": []
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      3,
+      5,
+      19,
+      34
+    ],
+    "estrelas": []
+  },
+  "hero_category": "1+2",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 1 main numbers and 2 lucky stars against official draw 061/2026 (category 1+2).",
+  "registered_at": "2026-08-02T15:10:29+00:00"
+}

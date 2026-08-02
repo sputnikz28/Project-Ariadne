@@ -1,0 +1,78 @@
+{
+  "hero_id": "HERO-2026-060-6d98f068",
+  "dedup_hash": "6d98f0684a7423130470e1487fc423e203ecf5fd62aa9f55aa51b952acc9e50d",
+  "source_prediction_id": "05f417b0cd4907e39f0b02a753520eae733fdf23e2c656b97189a7a5785a91d2",
+  "entity_id": "H-00151",
+  "entity_name": "Lyra da Névoa",
+  "race": "Goblin",
+  "generation": 6,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "060/2026",
+  "draw_date": "2026-07-28",
+  "official_key": {
+    "numeros": [
+      5,
+      7,
+      24,
+      30,
+      49
+    ],
+    "estrelas": [
+      10,
+      11
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      24,
+      35,
+      41,
+      44,
+      47
+    ],
+    "estrelas": [
+      10,
+      11
+    ]
+  },
+  "matched_numbers_count": 1,
+  "matched_stars_count": 2,
+  "exact_matched_values": {
+    "numeros": [
+      24
+    ],
+    "estrelas": [
+      10,
+      11
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      5,
+      7,
+      30,
+      49
+    ],
+    "estrelas": []
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      35,
+      41,
+      44,
+      47
+    ],
+    "estrelas": []
+  },
+  "hero_category": "1+2",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 1 main numbers and 2 lucky stars against official draw 060/2026 (category 1+2).",
+  "registered_at": "2026-08-02T15:10:18+00:00"
+}

@@ -1,0 +1,80 @@
+{
+  "hero_id": "HERO-2026-059-3c7c8711",
+  "dedup_hash": "3c7c87116e976db3e2ed5d272557e94315087f2b71ccf3c1974709167652b587",
+  "source_prediction_id": "4ad581c80bc1270dda501d774822ff22ac2b9e839c364970deb813b237f3548f",
+  "entity_id": "H-00530",
+  "entity_name": "Velka Pedra-Partida",
+  "race": "Goblin",
+  "generation": 10,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "059/2026",
+  "draw_date": "2026-07-24",
+  "official_key": {
+    "numeros": [
+      8,
+      10,
+      30,
+      36,
+      47
+    ],
+    "estrelas": [
+      1,
+      4
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      3,
+      10,
+      34,
+      47,
+      48
+    ],
+    "estrelas": [
+      4,
+      8
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      10,
+      47
+    ],
+    "estrelas": [
+      4
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      8,
+      30,
+      36
+    ],
+    "estrelas": [
+      1
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      3,
+      34,
+      48
+    ],
+    "estrelas": [
+      8
+    ]
+  },
+  "hero_category": "2+1",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 1 lucky stars against official draw 059/2026 (category 2+1).",
+  "registered_at": "2026-08-02T15:07:52+00:00"
+}

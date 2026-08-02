@@ -1,0 +1,80 @@
+{
+  "hero_id": "HERO-2026-059-d4db2284",
+  "dedup_hash": "d4db2284b6baef2b4044540ec2b4e97f65aa49cb171a94230105b2985c25756b",
+  "source_prediction_id": "829485f5e270b9ddb47c6f28bb7ff6a900782babb510963c13f6b5ca08ef1c9f",
+  "entity_id": "H-00083",
+  "entity_name": "Aion da Lua Fria",
+  "race": "Bruxa",
+  "generation": 9,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "059/2026",
+  "draw_date": "2026-07-24",
+  "official_key": {
+    "numeros": [
+      8,
+      10,
+      30,
+      36,
+      47
+    ],
+    "estrelas": [
+      1,
+      4
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      8,
+      25,
+      27,
+      30,
+      39
+    ],
+    "estrelas": [
+      4,
+      12
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      8,
+      30
+    ],
+    "estrelas": [
+      4
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      10,
+      36,
+      47
+    ],
+    "estrelas": [
+      1
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      25,
+      27,
+      39
+    ],
+    "estrelas": [
+      12
+    ]
+  },
+  "hero_category": "2+1",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 1 lucky stars against official draw 059/2026 (category 2+1).",
+  "registered_at": "2026-08-02T15:07:51+00:00"
+}

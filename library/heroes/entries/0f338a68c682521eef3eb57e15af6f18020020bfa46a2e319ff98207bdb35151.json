@@ -1,0 +1,79 @@
+{
+  "hero_id": "HERO-2026-061-0f338a68",
+  "dedup_hash": "0f338a68c682521eef3eb57e15af6f18020020bfa46a2e319ff98207bdb35151",
+  "source_prediction_id": "a5d6e690e8b42db1ba291f713329a8b1c3d8cc01f9e5132ae9d4aaa756f055eb",
+  "entity_id": "H-00693",
+  "entity_name": "Selene dos Ossos",
+  "race": "Vidente",
+  "generation": 14,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "061/2026",
+  "draw_date": "2026-07-31",
+  "official_key": {
+    "numeros": [
+      10,
+      24,
+      25,
+      31,
+      45
+    ],
+    "estrelas": [
+      4,
+      5
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      10,
+      19,
+      25,
+      31,
+      39
+    ],
+    "estrelas": [
+      6,
+      9
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 0,
+  "exact_matched_values": {
+    "numeros": [
+      10,
+      25,
+      31
+    ],
+    "estrelas": []
+  },
+  "missed_winning_values": {
+    "numeros": [
+      24,
+      45
+    ],
+    "estrelas": [
+      4,
+      5
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      19,
+      39
+    ],
+    "estrelas": [
+      6,
+      9
+    ]
+  },
+  "hero_category": "3+0",
+  "hero_tier": "TIER_4",
+  "simulation_score": 38,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 0 lucky stars against official draw 061/2026 (category 3+0).",
+  "registered_at": "2026-08-02T15:10:31+00:00"
+}

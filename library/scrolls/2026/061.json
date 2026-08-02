@@ -1,0 +1,102 @@
+{
+  "id": "PERG-2026-061",
+  "titulo": "Pergaminho da Extração 061/2026",
+  "biblioteca": "Grande Grimório das Extrações",
+  "estado": "SELADO",
+  "raridade": "Sagrado",
+  "data": {
+    "extracao": "2026-07-31",
+    "dia_semana": "sexta-feira",
+    "hora_paris": "20:00:00",
+    "hora_portugal": "19:00:00",
+    "timestamp_utc": "2026-07-31T18:00:00+00:00"
+  },
+  "extracao": {
+    "numero_sorteio": "061/2026",
+    "numeros": [
+      10,
+      24,
+      25,
+      31,
+      45
+    ],
+    "estrelas": [
+      4,
+      5
+    ],
+    "ordem_saida": {
+      "numeros": [
+        10,
+        25,
+        31,
+        24,
+        45
+      ],
+      "estrelas": [
+        5,
+        4
+      ],
+      "formato": "10 25 31 24 45 + 5 4"
+    },
+    "ordem_saida_disponivel": true
+  },
+  "estatisticas": {
+    "soma": 135,
+    "media": 27.0,
+    "mediana": 25,
+    "desvio_padrao": 11.331,
+    "amplitude": 35,
+    "pares": 2,
+    "impares": 3,
+    "gaps": [
+      14,
+      1,
+      6,
+      14
+    ],
+    "distribuicao_dezenas": {
+      "01-10": 1,
+      "11-20": 0,
+      "21-30": 2,
+      "31-40": 1,
+      "41-50": 1
+    },
+    "repetidos_anterior": [
+      24
+    ],
+    "estrelas_repetidas_anterior": []
+  },
+  "astronomia": {
+    "fase_lua": "Gibosa minguante",
+    "iluminacao_percent": 0.96,
+    "idade_lunar_dias": 16.769,
+    "eclipse": false
+  },
+  "premios": {
+    "categorias": null,
+    "houve_vencedor_1_premio_total": null,
+    "houve_vencedor_1_premio_portugal": null,
+    "total_vencedores_todas_categorias": null,
+    "total_vencedores_portugal_todas_categorias": null
+  },
+  "qualidade_dados": {
+    "fonte_resultado": "texto fornecido pelo utilizador",
+    "transcricao_manual": true,
+    "ordem_saida_confirmada": true,
+    "dados_financeiros_disponiveis": false,
+    "categorias_premio_disponiveis": false,
+    "campos_em_falta": [
+      "receita_liquida_apostas_eur",
+      "montante_para_premios_eur",
+      "categorias_premio",
+      "previsao_1_premio_com_jackpot_eur"
+    ]
+  },
+  "assinatura": {
+    "escriba": "Orion dos Arquivos",
+    "selo": "Biblioteca Eterna",
+    "sha256": "d622cf1a3f003bfa89b3ce1a5d38ff036a55c993d1631b6223538e4f980325dc",
+    "integridade": "100%"
+  },
+  "anotacoes": []
+}

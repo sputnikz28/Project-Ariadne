@@ -1,0 +1,79 @@
+{
+  "hero_id": "HERO-2026-060-1a7923f8",
+  "dedup_hash": "1a7923f86cf39650dab028625fd51f673f5456a6146931c555f9709fecdfb39d",
+  "source_prediction_id": "ac3f4fa0a4c640c4588b28f93ef509d2fbdd00f321b393e514b6169f0f3cdafd",
+  "entity_id": "H-00115",
+  "entity_name": "Aion do Bosque",
+  "race": "Elfo",
+  "generation": 2,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "060/2026",
+  "draw_date": "2026-07-28",
+  "official_key": {
+    "numeros": [
+      5,
+      7,
+      24,
+      30,
+      49
+    ],
+    "estrelas": [
+      10,
+      11
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      5,
+      24,
+      29,
+      30,
+      41
+    ],
+    "estrelas": [
+      5,
+      6
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 0,
+  "exact_matched_values": {
+    "numeros": [
+      5,
+      24,
+      30
+    ],
+    "estrelas": []
+  },
+  "missed_winning_values": {
+    "numeros": [
+      7,
+      49
+    ],
+    "estrelas": [
+      10,
+      11
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      29,
+      41
+    ],
+    "estrelas": [
+      5,
+      6
+    ]
+  },
+  "hero_category": "3+0",
+  "hero_tier": "TIER_4",
+  "simulation_score": 38,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 0 lucky stars against official draw 060/2026 (category 3+0).",
+  "registered_at": "2026-08-02T15:10:18+00:00"
+}

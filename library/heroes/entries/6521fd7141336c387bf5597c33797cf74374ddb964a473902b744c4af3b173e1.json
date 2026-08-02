@@ -1,0 +1,79 @@
+{
+  "hero_id": "HERO-2026-061-6521fd71",
+  "dedup_hash": "6521fd7141336c387bf5597c33797cf74374ddb964a473902b744c4af3b173e1",
+  "source_prediction_id": "d705d0a1d205cdff4fd36faf0853d1d73725b81d7a9107d2deaee3d97259112f",
+  "entity_id": "H-00138",
+  "entity_name": "Aion dos Ossos",
+  "race": "Esqueleto",
+  "generation": 3,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "061/2026",
+  "draw_date": "2026-07-31",
+  "official_key": {
+    "numeros": [
+      10,
+      24,
+      25,
+      31,
+      45
+    ],
+    "estrelas": [
+      4,
+      5
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      10,
+      25,
+      26,
+      30,
+      31
+    ],
+    "estrelas": [
+      2,
+      5
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      10,
+      25,
+      31
+    ],
+    "estrelas": [
+      5
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      24,
+      45
+    ],
+    "estrelas": [
+      4
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      26,
+      30
+    ],
+    "estrelas": [
+      2
+    ]
+  },
+  "hero_category": "3+1",
+  "hero_tier": "TIER_4",
+  "simulation_score": 43,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 1 lucky stars against official draw 061/2026 (category 3+1).",
+  "registered_at": "2026-08-02T15:10:31+00:00"
+}

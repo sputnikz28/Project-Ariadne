@@ -1,0 +1,79 @@
+{
+  "hero_id": "HERO-2026-060-800e6420",
+  "dedup_hash": "800e642079761df088e5221fa519cacd51ebe21d80bd61372862bc3914c67212",
+  "source_prediction_id": "796c78252822ad55bb8183027bf94f26d9420372d743d5d70a279779b57a0ff7",
+  "entity_id": "H-00630",
+  "entity_name": "Thara da Névoa",
+  "race": "Chefe Tribal",
+  "generation": 12,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "060/2026",
+  "draw_date": "2026-07-28",
+  "official_key": {
+    "numeros": [
+      5,
+      7,
+      24,
+      30,
+      49
+    ],
+    "estrelas": [
+      10,
+      11
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      5,
+      13,
+      24,
+      30,
+      50
+    ],
+    "estrelas": [
+      5,
+      6
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 0,
+  "exact_matched_values": {
+    "numeros": [
+      5,
+      24,
+      30
+    ],
+    "estrelas": []
+  },
+  "missed_winning_values": {
+    "numeros": [
+      7,
+      49
+    ],
+    "estrelas": [
+      10,
+      11
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      13,
+      50
+    ],
+    "estrelas": [
+      5,
+      6
+    ]
+  },
+  "hero_category": "3+0",
+  "hero_tier": "TIER_4",
+  "simulation_score": 38,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 0 lucky stars against official draw 060/2026 (category 3+0).",
+  "registered_at": "2026-08-02T15:10:18+00:00"
+}

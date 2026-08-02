@@ -1,0 +1,77 @@
+{
+  "hero_id": "HERO-2026-060-b7321280",
+  "dedup_hash": "b732128038a256687aa13d2ac57c066ecf0466ef654c935bbcf48af32a1c0722",
+  "source_prediction_id": "7facd0207c9fda5b5d729e048d4b2f29617fb86a7235f9f63c2c170946c09f0d",
+  "entity_id": "H-00136",
+  "entity_name": "Kael da Névoa",
+  "race": "Esqueleto",
+  "generation": 11,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "060/2026",
+  "draw_date": "2026-07-28",
+  "official_key": {
+    "numeros": [
+      5,
+      7,
+      24,
+      30,
+      49
+    ],
+    "estrelas": [
+      10,
+      11
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      7,
+      16,
+      17,
+      23,
+      30
+    ],
+    "estrelas": [
+      10,
+      11
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 2,
+  "exact_matched_values": {
+    "numeros": [
+      7,
+      30
+    ],
+    "estrelas": [
+      10,
+      11
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      5,
+      24,
+      49
+    ],
+    "estrelas": []
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      16,
+      17,
+      23
+    ],
+    "estrelas": []
+  },
+  "hero_category": "2+2",
+  "hero_tier": "TIER_4",
+  "simulation_score": 35,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 2 lucky stars against official draw 060/2026 (category 2+2).",
+  "registered_at": "2026-08-02T15:10:18+00:00"
+}

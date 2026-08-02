@@ -1,0 +1,80 @@
+{
+  "hero_id": "HERO-2026-059-0c2adbc2",
+  "dedup_hash": "0c2adbc24973055c271e4120665c63c9313f5b73cb51d0a3556e085be9c15db7",
+  "source_prediction_id": "1602325a77074ea2590f239bb3b8882d664e7839108268ae6295da4f5d314efd",
+  "entity_id": "H-00191",
+  "entity_name": "Gruk dos Astros",
+  "race": "Goblin",
+  "generation": 4,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "059/2026",
+  "draw_date": "2026-07-24",
+  "official_key": {
+    "numeros": [
+      8,
+      10,
+      30,
+      36,
+      47
+    ],
+    "estrelas": [
+      1,
+      4
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      10,
+      23,
+      36,
+      43,
+      50
+    ],
+    "estrelas": [
+      1,
+      11
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      10,
+      36
+    ],
+    "estrelas": [
+      1
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      8,
+      30,
+      47
+    ],
+    "estrelas": [
+      4
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      23,
+      43,
+      50
+    ],
+    "estrelas": [
+      11
+    ]
+  },
+  "hero_category": "2+1",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 1 lucky stars against official draw 059/2026 (category 2+1).",
+  "registered_at": "2026-08-02T15:07:51+00:00"
+}

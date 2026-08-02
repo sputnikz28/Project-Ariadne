@@ -1,0 +1,79 @@
+{
+  "hero_id": "HERO-2026-060-f5920761",
+  "dedup_hash": "f5920761973701c06fcf010b6f5ffbc20a1d8ab5f182fd09dc2cfad2564a13f9",
+  "source_prediction_id": "c285109de53fc0a75c26ea2b7f79c027e0b0394121cd5c67be027a50a302eb4d",
+  "entity_id": "H-00012",
+  "entity_name": "Selene Pedra-Partida",
+  "race": "Elfo",
+  "generation": 11,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "060/2026",
+  "draw_date": "2026-07-28",
+  "official_key": {
+    "numeros": [
+      5,
+      7,
+      24,
+      30,
+      49
+    ],
+    "estrelas": [
+      10,
+      11
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      7,
+      24,
+      36,
+      45,
+      49
+    ],
+    "estrelas": [
+      3,
+      8
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 0,
+  "exact_matched_values": {
+    "numeros": [
+      7,
+      24,
+      49
+    ],
+    "estrelas": []
+  },
+  "missed_winning_values": {
+    "numeros": [
+      5,
+      30
+    ],
+    "estrelas": [
+      10,
+      11
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      36,
+      45
+    ],
+    "estrelas": [
+      3,
+      8
+    ]
+  },
+  "hero_category": "3+0",
+  "hero_tier": "TIER_4",
+  "simulation_score": 38,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 0 lucky stars against official draw 060/2026 (category 3+0).",
+  "registered_at": "2026-08-02T15:10:19+00:00"
+}

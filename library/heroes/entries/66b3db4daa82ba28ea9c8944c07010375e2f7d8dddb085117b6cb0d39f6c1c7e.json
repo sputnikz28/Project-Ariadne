@@ -1,0 +1,79 @@
+{
+  "hero_id": "HERO-2026-061-66b3db4d",
+  "dedup_hash": "66b3db4daa82ba28ea9c8944c07010375e2f7d8dddb085117b6cb0d39f6c1c7e",
+  "source_prediction_id": "8ad0a4ae914f8874d2a6dcd08638b528eaffaba65f2c1cc1f1df8e37d62b0f77",
+  "entity_id": "Mago-1",
+  "entity_name": "Mago-1",
+  "race": "Mago",
+  "generation": 14,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "061/2026",
+  "draw_date": "2026-07-31",
+  "official_key": {
+    "numeros": [
+      10,
+      24,
+      25,
+      31,
+      45
+    ],
+    "estrelas": [
+      4,
+      5
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      7,
+      10,
+      25,
+      31,
+      33
+    ],
+    "estrelas": [
+      6,
+      9
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 0,
+  "exact_matched_values": {
+    "numeros": [
+      10,
+      25,
+      31
+    ],
+    "estrelas": []
+  },
+  "missed_winning_values": {
+    "numeros": [
+      24,
+      45
+    ],
+    "estrelas": [
+      4,
+      5
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      7,
+      33
+    ],
+    "estrelas": [
+      6,
+      9
+    ]
+  },
+  "hero_category": "3+0",
+  "hero_tier": "TIER_4",
+  "simulation_score": 38,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 0 lucky stars against official draw 061/2026 (category 3+0).",
+  "registered_at": "2026-08-02T15:10:29+00:00"
+}

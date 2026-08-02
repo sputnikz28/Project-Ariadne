@@ -1,0 +1,79 @@
+{
+  "hero_id": "HERO-2026-059-913f6607",
+  "dedup_hash": "913f6607800a460ed5381399d9cf475fdbc1cdba4689fa60a4497d6ad4ebfaac",
+  "source_prediction_id": "d2052a6f576b2740622aec1e4d2dd7c6da96e4e7bc6e61fc41ee63f0689d92c1",
+  "entity_id": "H-00006",
+  "entity_name": "Aruk da Névoa",
+  "race": "Goblin",
+  "generation": 12,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "059/2026",
+  "draw_date": "2026-07-24",
+  "official_key": {
+    "numeros": [
+      8,
+      10,
+      30,
+      36,
+      47
+    ],
+    "estrelas": [
+      1,
+      4
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      10,
+      11,
+      15,
+      36,
+      47
+    ],
+    "estrelas": [
+      3,
+      4
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      10,
+      36,
+      47
+    ],
+    "estrelas": [
+      4
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      8,
+      30
+    ],
+    "estrelas": [
+      1
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      11,
+      15
+    ],
+    "estrelas": [
+      3
+    ]
+  },
+  "hero_category": "3+1",
+  "hero_tier": "TIER_4",
+  "simulation_score": 43,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 1 lucky stars against official draw 059/2026 (category 3+1).",
+  "registered_at": "2026-08-02T15:07:52+00:00"
+}

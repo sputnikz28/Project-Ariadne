@@ -1,0 +1,77 @@
+{
+  "hero_id": "HERO-2026-061-2a8882a8",
+  "dedup_hash": "2a8882a8e12e74c36aabd905950b06a99e1f229d2df6a99d3789f575390d7805",
+  "source_prediction_id": "735b11df45809463e2bcb56b96fb13a9bf4d3642f12556743fa964d0400122fc",
+  "entity_id": "H-00049",
+  "entity_name": "Aruk da Névoa",
+  "race": "Vidente",
+  "generation": 6,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "061/2026",
+  "draw_date": "2026-07-31",
+  "official_key": {
+    "numeros": [
+      10,
+      24,
+      25,
+      31,
+      45
+    ],
+    "estrelas": [
+      4,
+      5
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      23,
+      28,
+      31,
+      33,
+      45
+    ],
+    "estrelas": [
+      4,
+      5
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 2,
+  "exact_matched_values": {
+    "numeros": [
+      31,
+      45
+    ],
+    "estrelas": [
+      4,
+      5
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      10,
+      24,
+      25
+    ],
+    "estrelas": []
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      23,
+      28,
+      33
+    ],
+    "estrelas": []
+  },
+  "hero_category": "2+2",
+  "hero_tier": "TIER_4",
+  "simulation_score": 35,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 2 lucky stars against official draw 061/2026 (category 2+2).",
+  "registered_at": "2026-08-02T15:10:29+00:00"
+}

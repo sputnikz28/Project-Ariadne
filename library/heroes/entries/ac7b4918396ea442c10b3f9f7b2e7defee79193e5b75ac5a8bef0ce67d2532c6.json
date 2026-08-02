@@ -1,0 +1,80 @@
+{
+  "hero_id": "HERO-2026-060-ac7b4918",
+  "dedup_hash": "ac7b4918396ea442c10b3f9f7b2e7defee79193e5b75ac5a8bef0ce67d2532c6",
+  "source_prediction_id": "28eb73cbd5d6683e7586b37c8681f8112e98e64b4dd858ce09b0ec246e89eaff",
+  "entity_id": "H-00103",
+  "entity_name": "Velka da Lua Fria",
+  "race": "Goblin",
+  "generation": 2,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "060/2026",
+  "draw_date": "2026-07-28",
+  "official_key": {
+    "numeros": [
+      5,
+      7,
+      24,
+      30,
+      49
+    ],
+    "estrelas": [
+      10,
+      11
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      20,
+      25,
+      30,
+      49,
+      50
+    ],
+    "estrelas": [
+      4,
+      10
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      30,
+      49
+    ],
+    "estrelas": [
+      10
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      5,
+      7,
+      24
+    ],
+    "estrelas": [
+      11
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      20,
+      25,
+      50
+    ],
+    "estrelas": [
+      4
+    ]
+  },
+  "hero_category": "2+1",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 1 lucky stars against official draw 060/2026 (category 2+1).",
+  "registered_at": "2026-08-02T15:10:19+00:00"
+}

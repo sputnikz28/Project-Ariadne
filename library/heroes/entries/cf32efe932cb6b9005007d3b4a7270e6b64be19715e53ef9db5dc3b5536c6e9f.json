@@ -1,0 +1,80 @@
+{
+  "hero_id": "HERO-2026-059-cf32efe9",
+  "dedup_hash": "cf32efe932cb6b9005007d3b4a7270e6b64be19715e53ef9db5dc3b5536c6e9f",
+  "source_prediction_id": "7ae16f24b1f18546ed344255daf3b55099fcea2a6a28e3985667b5094c37d2d1",
+  "entity_id": "H-00012",
+  "entity_name": "Morgana do Bosque",
+  "race": "Goblin",
+  "generation": 1,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "059/2026",
+  "draw_date": "2026-07-24",
+  "official_key": {
+    "numeros": [
+      8,
+      10,
+      30,
+      36,
+      47
+    ],
+    "estrelas": [
+      1,
+      4
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      5,
+      9,
+      22,
+      36,
+      47
+    ],
+    "estrelas": [
+      1,
+      8
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      36,
+      47
+    ],
+    "estrelas": [
+      1
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      8,
+      10,
+      30
+    ],
+    "estrelas": [
+      4
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      5,
+      9,
+      22
+    ],
+    "estrelas": [
+      8
+    ]
+  },
+  "hero_category": "2+1",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 1 lucky stars against official draw 059/2026 (category 2+1).",
+  "registered_at": "2026-08-02T15:07:52+00:00"
+}

@@ -1,0 +1,80 @@
+{
+  "hero_id": "HERO-2026-061-c280c648",
+  "dedup_hash": "c280c64835ebefe5f4a48d3e056c4dacef63e58f55430ea74f4b6b49ad9a86ef",
+  "source_prediction_id": "4e9203c94d020fc7c7a93bb8bc4a184182faf1dee811f3411c3469e2446acb6b",
+  "entity_id": "H-00253",
+  "entity_name": "Lyra Pedra-Partida",
+  "race": "Bruxa",
+  "generation": 5,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "061/2026",
+  "draw_date": "2026-07-31",
+  "official_key": {
+    "numeros": [
+      10,
+      24,
+      25,
+      31,
+      45
+    ],
+    "estrelas": [
+      4,
+      5
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      3,
+      10,
+      25,
+      30,
+      32
+    ],
+    "estrelas": [
+      3,
+      5
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      10,
+      25
+    ],
+    "estrelas": [
+      5
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      24,
+      31,
+      45
+    ],
+    "estrelas": [
+      4
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      3,
+      30,
+      32
+    ],
+    "estrelas": [
+      3
+    ]
+  },
+  "hero_category": "2+1",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 1 lucky stars against official draw 061/2026 (category 2+1).",
+  "registered_at": "2026-08-02T15:10:29+00:00"
+}

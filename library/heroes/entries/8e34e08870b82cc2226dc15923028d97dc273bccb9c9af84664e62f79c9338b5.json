@@ -1,0 +1,79 @@
+{
+  "hero_id": "HERO-2026-060-8e34e088",
+  "dedup_hash": "8e34e08870b82cc2226dc15923028d97dc273bccb9c9af84664e62f79c9338b5",
+  "source_prediction_id": "b064fea5e17b54385db059e69bfa6d813ded5e8d72632d4334350bdd872f6cd9",
+  "entity_id": "H-00195",
+  "entity_name": "Aruk dos Astros",
+  "race": "Goblin",
+  "generation": 4,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "060/2026",
+  "draw_date": "2026-07-28",
+  "official_key": {
+    "numeros": [
+      5,
+      7,
+      24,
+      30,
+      49
+    ],
+    "estrelas": [
+      10,
+      11
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      14,
+      24,
+      27,
+      30,
+      49
+    ],
+    "estrelas": [
+      3,
+      12
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 0,
+  "exact_matched_values": {
+    "numeros": [
+      24,
+      30,
+      49
+    ],
+    "estrelas": []
+  },
+  "missed_winning_values": {
+    "numeros": [
+      5,
+      7
+    ],
+    "estrelas": [
+      10,
+      11
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      14,
+      27
+    ],
+    "estrelas": [
+      3,
+      12
+    ]
+  },
+  "hero_category": "3+0",
+  "hero_tier": "TIER_4",
+  "simulation_score": 38,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 0 lucky stars against official draw 060/2026 (category 3+0).",
+  "registered_at": "2026-08-02T15:10:19+00:00"
+}

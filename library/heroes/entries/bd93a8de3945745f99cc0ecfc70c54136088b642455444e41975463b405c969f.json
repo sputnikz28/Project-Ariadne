@@ -1,0 +1,79 @@
+{
+  "hero_id": "HERO-2026-061-bd93a8de",
+  "dedup_hash": "bd93a8de3945745f99cc0ecfc70c54136088b642455444e41975463b405c969f",
+  "source_prediction_id": "abdc1597cdd9780eb5c05f1579e22dbb1a4911f0ac1244e6e6cddad9792bbdeb",
+  "entity_id": "H-00267",
+  "entity_name": "Selene dos Ossos",
+  "race": "Bruxa",
+  "generation": 5,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "061/2026",
+  "draw_date": "2026-07-31",
+  "official_key": {
+    "numeros": [
+      10,
+      24,
+      25,
+      31,
+      45
+    ],
+    "estrelas": [
+      4,
+      5
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      22,
+      24,
+      31,
+      45,
+      46
+    ],
+    "estrelas": [
+      4,
+      8
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      24,
+      31,
+      45
+    ],
+    "estrelas": [
+      4
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      10,
+      25
+    ],
+    "estrelas": [
+      5
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      22,
+      46
+    ],
+    "estrelas": [
+      8
+    ]
+  },
+  "hero_category": "3+1",
+  "hero_tier": "TIER_4",
+  "simulation_score": 43,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 1 lucky stars against official draw 061/2026 (category 3+1).",
+  "registered_at": "2026-08-02T15:10:29+00:00"
+}

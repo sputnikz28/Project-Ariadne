@@ -1,0 +1,79 @@
+{
+  "hero_id": "HERO-2026-060-5c40e4d2",
+  "dedup_hash": "5c40e4d20b9f6efc9a77812fb1c08e920e5782a06232becc0df11967e8a164f3",
+  "source_prediction_id": "30a6e5a0b7a401460567c97caf0dc3334199d7625e37f78e311c86a081060da9",
+  "entity_id": "H-00536",
+  "entity_name": "Velka dos Ossos",
+  "race": "Goblin",
+  "generation": 10,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "060/2026",
+  "draw_date": "2026-07-28",
+  "official_key": {
+    "numeros": [
+      5,
+      7,
+      24,
+      30,
+      49
+    ],
+    "estrelas": [
+      10,
+      11
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      7,
+      13,
+      24,
+      30,
+      47
+    ],
+    "estrelas": [
+      1,
+      10
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      7,
+      24,
+      30
+    ],
+    "estrelas": [
+      10
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      5,
+      49
+    ],
+    "estrelas": [
+      11
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      13,
+      47
+    ],
+    "estrelas": [
+      1
+    ]
+  },
+  "hero_category": "3+1",
+  "hero_tier": "TIER_4",
+  "simulation_score": 43,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 1 lucky stars against official draw 060/2026 (category 3+1).",
+  "registered_at": "2026-08-02T15:10:19+00:00"
+}

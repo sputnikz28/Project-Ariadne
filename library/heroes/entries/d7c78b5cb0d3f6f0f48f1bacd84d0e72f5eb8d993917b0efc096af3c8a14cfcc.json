@@ -1,0 +1,80 @@
+{
+  "hero_id": "HERO-2026-061-d7c78b5c",
+  "dedup_hash": "d7c78b5cb0d3f6f0f48f1bacd84d0e72f5eb8d993917b0efc096af3c8a14cfcc",
+  "source_prediction_id": "e837a27239318f8a1f673ffafe9a75cac23f79409adc194b28ce9baced133f93",
+  "entity_id": "H-00038",
+  "entity_name": "Elarion dos Ossos",
+  "race": "Esqueleto",
+  "generation": 8,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "061/2026",
+  "draw_date": "2026-07-31",
+  "official_key": {
+    "numeros": [
+      10,
+      24,
+      25,
+      31,
+      45
+    ],
+    "estrelas": [
+      4,
+      5
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      17,
+      21,
+      24,
+      30,
+      31
+    ],
+    "estrelas": [
+      3,
+      5
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      24,
+      31
+    ],
+    "estrelas": [
+      5
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      10,
+      25,
+      45
+    ],
+    "estrelas": [
+      4
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      17,
+      21,
+      30
+    ],
+    "estrelas": [
+      3
+    ]
+  },
+  "hero_category": "2+1",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 1 lucky stars against official draw 061/2026 (category 2+1).",
+  "registered_at": "2026-08-02T15:10:28+00:00"
+}

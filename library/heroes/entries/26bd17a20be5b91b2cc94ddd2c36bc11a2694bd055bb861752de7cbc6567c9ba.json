@@ -1,0 +1,79 @@
+{
+  "hero_id": "HERO-2026-060-26bd17a2",
+  "dedup_hash": "26bd17a20be5b91b2cc94ddd2c36bc11a2694bd055bb861752de7cbc6567c9ba",
+  "source_prediction_id": "c391f619dc8988fcfa4ec7de91376908063e546fdb95b8ca0053a041ceea8f32",
+  "entity_id": "H-00362",
+  "entity_name": "Lyra da Lua Fria",
+  "race": "Cronomante",
+  "generation": 7,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "060/2026",
+  "draw_date": "2026-07-28",
+  "official_key": {
+    "numeros": [
+      5,
+      7,
+      24,
+      30,
+      49
+    ],
+    "estrelas": [
+      10,
+      11
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      7,
+      19,
+      30,
+      49,
+      50
+    ],
+    "estrelas": [
+      8,
+      11
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      7,
+      30,
+      49
+    ],
+    "estrelas": [
+      11
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      5,
+      24
+    ],
+    "estrelas": [
+      10
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      19,
+      50
+    ],
+    "estrelas": [
+      8
+    ]
+  },
+  "hero_category": "3+1",
+  "hero_tier": "TIER_4",
+  "simulation_score": 43,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 1 lucky stars against official draw 060/2026 (category 3+1).",
+  "registered_at": "2026-08-02T15:10:19+00:00"
+}

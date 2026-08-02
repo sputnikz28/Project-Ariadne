@@ -1,0 +1,41 @@
+{
+  "legend_id": "LEGEND-7722b35c",
+  "source_prediction_id": "7722b35c518a6273c2f12d48faf890b993a0b1d0cdddd5fbdf51312bf35b0b39",
+  "promotion_draw": "061/2026",
+  "promotion_draw_date": "2026-07-31",
+  "promotion_threshold": 3,
+  "promotion_tier": "LEGEND_TIER_4",
+  "criteria_version": "v1",
+  "promotion_hero_ids": [
+    "HERO-2026-056-33729bd0",
+    "HERO-2026-059-c657d722",
+    "HERO-2026-061-ae082ee5"
+  ],
+  "project_version": "V12",
+  "git_commit": "eb609239bf97595235a4624908746689f33091c5",
+  "qualification_reason": "Promoted to Legend at draw 061/2026 (2026-07-31) by reaching 3 distinct qualifying draws as Hero (criteria_version: v1).",
+  "entity_id": "H-00082",
+  "entity_name": "Kael Pedra-Partida",
+  "race": "Vidente",
+  "generation": 7,
+  "predicted_numeros": [
+    10,
+    17,
+    18,
+    45,
+    47
+  ],
+  "predicted_estrelas": [
+    4,
+    9
+  ],
+  "hero_count": 3,
+  "qualified_draws": 3,
+  "contributing_hero_ids": [
+    "HERO-2026-056-33729bd0",
+    "HERO-2026-059-c657d722",
+    "HERO-2026-061-ae082ee5"
+  ],
+  "provenance": "legacy",
+  "last_reevaluated_at": null
+}

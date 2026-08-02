@@ -1,0 +1,79 @@
+{
+  "hero_id": "HERO-2026-061-3fbd1f09",
+  "dedup_hash": "3fbd1f09aeea58184cf0aa89bb77802644d7db1de453e578c8c06b984d76b8a1",
+  "source_prediction_id": "d023ec1908e5b8c2a27978a124a204a45176d0b93053870a97d8f421ad2d2336",
+  "entity_id": "H-00537",
+  "entity_name": "Kael Pedra-Partida",
+  "race": "Vidente",
+  "generation": 10,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "061/2026",
+  "draw_date": "2026-07-31",
+  "official_key": {
+    "numeros": [
+      10,
+      24,
+      25,
+      31,
+      45
+    ],
+    "estrelas": [
+      4,
+      5
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      2,
+      24,
+      25,
+      35,
+      45
+    ],
+    "estrelas": [
+      2,
+      8
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 0,
+  "exact_matched_values": {
+    "numeros": [
+      24,
+      25,
+      45
+    ],
+    "estrelas": []
+  },
+  "missed_winning_values": {
+    "numeros": [
+      10,
+      31
+    ],
+    "estrelas": [
+      4,
+      5
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      2,
+      35
+    ],
+    "estrelas": [
+      2,
+      8
+    ]
+  },
+  "hero_category": "3+0",
+  "hero_tier": "TIER_4",
+  "simulation_score": 38,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 0 lucky stars against official draw 061/2026 (category 3+0).",
+  "registered_at": "2026-08-02T15:10:32+00:00"
+}

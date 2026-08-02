@@ -1,0 +1,80 @@
+{
+  "hero_id": "HERO-2026-060-ca62ab8c",
+  "dedup_hash": "ca62ab8c8c8bd8e10410c747688ecf03547b76a92bb5d2578b04fa8f882e2a02",
+  "source_prediction_id": "583253281092903bb6b0d2d07047364ecce5d2765d34171b1a81199edae4cf8d",
+  "entity_id": "H-00371",
+  "entity_name": "Lyra da Névoa",
+  "race": "Cronomante",
+  "generation": 7,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "060/2026",
+  "draw_date": "2026-07-28",
+  "official_key": {
+    "numeros": [
+      5,
+      7,
+      24,
+      30,
+      49
+    ],
+    "estrelas": [
+      10,
+      11
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      7,
+      29,
+      30,
+      41,
+      48
+    ],
+    "estrelas": [
+      1,
+      10
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      7,
+      30
+    ],
+    "estrelas": [
+      10
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      5,
+      24,
+      49
+    ],
+    "estrelas": [
+      11
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      29,
+      41,
+      48
+    ],
+    "estrelas": [
+      1
+    ]
+  },
+  "hero_category": "2+1",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 1 lucky stars against official draw 060/2026 (category 2+1).",
+  "registered_at": "2026-08-02T15:10:18+00:00"
+}

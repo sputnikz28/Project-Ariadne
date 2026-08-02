@@ -1,0 +1,77 @@
+{
+  "hero_id": "HERO-2026-061-573af3f0",
+  "dedup_hash": "573af3f000bba5a5f8c3c1f1b8c5275447c8bcbe36f736f4011c514e9a94f10e",
+  "source_prediction_id": "dd67f4996babf6aaa31f355c72c69d6dfdf5efc82f3d93b91660e76ce7c2d67a",
+  "entity_id": "H-00168",
+  "entity_name": "Morgana dos Astros",
+  "race": "Chefe Tribal",
+  "generation": 3,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "061/2026",
+  "draw_date": "2026-07-31",
+  "official_key": {
+    "numeros": [
+      10,
+      24,
+      25,
+      31,
+      45
+    ],
+    "estrelas": [
+      4,
+      5
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      31,
+      39,
+      41,
+      45,
+      50
+    ],
+    "estrelas": [
+      4,
+      5
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 2,
+  "exact_matched_values": {
+    "numeros": [
+      31,
+      45
+    ],
+    "estrelas": [
+      4,
+      5
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      10,
+      24,
+      25
+    ],
+    "estrelas": []
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      39,
+      41,
+      50
+    ],
+    "estrelas": []
+  },
+  "hero_category": "2+2",
+  "hero_tier": "TIER_4",
+  "simulation_score": 35,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 2 lucky stars against official draw 061/2026 (category 2+2).",
+  "registered_at": "2026-08-02T15:10:31+00:00"
+}

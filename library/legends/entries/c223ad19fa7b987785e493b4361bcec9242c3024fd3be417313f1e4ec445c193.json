@@ -1,0 +1,41 @@
+{
+  "legend_id": "LEGEND-c223ad19",
+  "source_prediction_id": "c223ad19fa7b987785e493b4361bcec9242c3024fd3be417313f1e4ec445c193",
+  "promotion_draw": "061/2026",
+  "promotion_draw_date": "2026-07-31",
+  "promotion_threshold": 3,
+  "promotion_tier": "LEGEND_TIER_4",
+  "criteria_version": "v1",
+  "promotion_hero_ids": [
+    "HERO-2026-058-32b79016",
+    "HERO-2026-059-f3bac40f",
+    "HERO-2026-061-561bc23f"
+  ],
+  "project_version": "V12",
+  "git_commit": "eb609239bf97595235a4624908746689f33091c5",
+  "qualification_reason": "Promoted to Legend at draw 061/2026 (2026-07-31) by reaching 3 distinct qualifying draws as Hero (criteria_version: v1).",
+  "entity_id": "H-00096",
+  "entity_name": "Selene do Bosque",
+  "race": "Vidente",
+  "generation": 6,
+  "predicted_numeros": [
+    8,
+    10,
+    28,
+    39,
+    48
+  ],
+  "predicted_estrelas": [
+    4,
+    5
+  ],
+  "hero_count": 3,
+  "qualified_draws": 3,
+  "contributing_hero_ids": [
+    "HERO-2026-058-32b79016",
+    "HERO-2026-059-f3bac40f",
+    "HERO-2026-061-561bc23f"
+  ],
+  "provenance": "legacy",
+  "last_reevaluated_at": null
+}

@@ -1,0 +1,79 @@
+{
+  "hero_id": "HERO-2026-061-7d99e040",
+  "dedup_hash": "7d99e040bec9b67de0a039eeecd642a3ea6aac2d78c36bc32c5b4b904001b854",
+  "source_prediction_id": "e18a06dfba76aad2b4b01a770dde08fd10d1e275492f2fef52192fd424f247cd",
+  "entity_id": "H-00020",
+  "entity_name": "Thara da Lua Fria",
+  "race": "Vidente",
+  "generation": 2,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "061/2026",
+  "draw_date": "2026-07-31",
+  "official_key": {
+    "numeros": [
+      10,
+      24,
+      25,
+      31,
+      45
+    ],
+    "estrelas": [
+      4,
+      5
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      13,
+      24,
+      30,
+      31,
+      45
+    ],
+    "estrelas": [
+      2,
+      4
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      24,
+      31,
+      45
+    ],
+    "estrelas": [
+      4
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      10,
+      25
+    ],
+    "estrelas": [
+      5
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      13,
+      30
+    ],
+    "estrelas": [
+      2
+    ]
+  },
+  "hero_category": "3+1",
+  "hero_tier": "TIER_4",
+  "simulation_score": 43,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 1 lucky stars against official draw 061/2026 (category 3+1).",
+  "registered_at": "2026-08-02T15:10:29+00:00"
+}

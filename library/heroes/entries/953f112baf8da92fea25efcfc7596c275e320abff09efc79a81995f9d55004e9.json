@@ -1,0 +1,77 @@
+{
+  "hero_id": "HERO-2026-061-953f112b",
+  "dedup_hash": "953f112baf8da92fea25efcfc7596c275e320abff09efc79a81995f9d55004e9",
+  "source_prediction_id": "5937baec579f194c4d73241f0dd070e3c03def428c5e12543a497cb54fbf7677",
+  "entity_id": "H-00307",
+  "entity_name": "Kael da Névoa",
+  "race": "Chefe Tribal",
+  "generation": 12,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "061/2026",
+  "draw_date": "2026-07-31",
+  "official_key": {
+    "numeros": [
+      10,
+      24,
+      25,
+      31,
+      45
+    ],
+    "estrelas": [
+      4,
+      5
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      10,
+      31,
+      36,
+      49,
+      50
+    ],
+    "estrelas": [
+      4,
+      5
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 2,
+  "exact_matched_values": {
+    "numeros": [
+      10,
+      31
+    ],
+    "estrelas": [
+      4,
+      5
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      24,
+      25,
+      45
+    ],
+    "estrelas": []
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      36,
+      49,
+      50
+    ],
+    "estrelas": []
+  },
+  "hero_category": "2+2",
+  "hero_tier": "TIER_4",
+  "simulation_score": 35,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 2 lucky stars against official draw 061/2026 (category 2+2).",
+  "registered_at": "2026-08-02T15:10:30+00:00"
+}

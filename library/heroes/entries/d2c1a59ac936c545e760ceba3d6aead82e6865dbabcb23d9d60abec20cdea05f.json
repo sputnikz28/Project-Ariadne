@@ -1,0 +1,77 @@
+{
+  "hero_id": "HERO-2026-061-d2c1a59a",
+  "dedup_hash": "d2c1a59ac936c545e760ceba3d6aead82e6865dbabcb23d9d60abec20cdea05f",
+  "source_prediction_id": "1b97e10eb8815eb8c54dd4690f14756df3e46a0cef9e0a3f6289a0ec61c805f1",
+  "entity_id": "H-00392",
+  "entity_name": "Aruk da Névoa",
+  "race": "Esqueleto",
+  "generation": 8,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "061/2026",
+  "draw_date": "2026-07-31",
+  "official_key": {
+    "numeros": [
+      10,
+      24,
+      25,
+      31,
+      45
+    ],
+    "estrelas": [
+      4,
+      5
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      8,
+      10,
+      11,
+      23,
+      24
+    ],
+    "estrelas": [
+      4,
+      5
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 2,
+  "exact_matched_values": {
+    "numeros": [
+      10,
+      24
+    ],
+    "estrelas": [
+      4,
+      5
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      25,
+      31,
+      45
+    ],
+    "estrelas": []
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      8,
+      11,
+      23
+    ],
+    "estrelas": []
+  },
+  "hero_category": "2+2",
+  "hero_tier": "TIER_4",
+  "simulation_score": 35,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 2 lucky stars against official draw 061/2026 (category 2+2).",
+  "registered_at": "2026-08-02T15:10:30+00:00"
+}

@@ -1,0 +1,80 @@
+{
+  "hero_id": "HERO-2026-059-b1b47e22",
+  "dedup_hash": "b1b47e22a0e3648a292cf742ca1125bf687137c1473733cb11dcfe6a82e6d3ae",
+  "source_prediction_id": "7c91b30d069a20fe68f8132ce5e548ac98047054be204e586965137c0704919c",
+  "entity_id": "H-00253",
+  "entity_name": "Elarion da Lua Fria",
+  "race": "Chefe Tribal",
+  "generation": 6,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "059/2026",
+  "draw_date": "2026-07-24",
+  "official_key": {
+    "numeros": [
+      8,
+      10,
+      30,
+      36,
+      47
+    ],
+    "estrelas": [
+      1,
+      4
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      10,
+      23,
+      31,
+      36,
+      50
+    ],
+    "estrelas": [
+      4,
+      12
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      10,
+      36
+    ],
+    "estrelas": [
+      4
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      8,
+      30,
+      47
+    ],
+    "estrelas": [
+      1
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      23,
+      31,
+      50
+    ],
+    "estrelas": [
+      12
+    ]
+  },
+  "hero_category": "2+1",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 1 lucky stars against official draw 059/2026 (category 2+1).",
+  "registered_at": "2026-08-02T15:07:52+00:00"
+}

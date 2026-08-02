@@ -1,0 +1,77 @@
+{
+  "hero_id": "HERO-2026-059-8a115e98",
+  "dedup_hash": "8a115e98da14fd85d3875705b456766dc61ee006f5139c375ee149b5ebeeec59",
+  "source_prediction_id": "d0d8c9515dfc800f33724c82bcca61912ff02c9b76c906d28f3ba0b746f39aaf",
+  "entity_id": "H-00245",
+  "entity_name": "Morgana da Névoa",
+  "race": "Cronomante",
+  "generation": 5,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "059/2026",
+  "draw_date": "2026-07-24",
+  "official_key": {
+    "numeros": [
+      8,
+      10,
+      30,
+      36,
+      47
+    ],
+    "estrelas": [
+      1,
+      4
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      2,
+      8,
+      13,
+      15,
+      47
+    ],
+    "estrelas": [
+      1,
+      4
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 2,
+  "exact_matched_values": {
+    "numeros": [
+      8,
+      47
+    ],
+    "estrelas": [
+      1,
+      4
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      10,
+      30,
+      36
+    ],
+    "estrelas": []
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      2,
+      13,
+      15
+    ],
+    "estrelas": []
+  },
+  "hero_category": "2+2",
+  "hero_tier": "TIER_4",
+  "simulation_score": 35,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 2 lucky stars against official draw 059/2026 (category 2+2).",
+  "registered_at": "2026-08-02T15:07:52+00:00"
+}

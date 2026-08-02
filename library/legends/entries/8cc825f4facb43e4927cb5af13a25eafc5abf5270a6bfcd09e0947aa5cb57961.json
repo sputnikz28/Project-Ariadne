@@ -1,0 +1,41 @@
+{
+  "legend_id": "LEGEND-8cc825f4",
+  "source_prediction_id": "8cc825f4facb43e4927cb5af13a25eafc5abf5270a6bfcd09e0947aa5cb57961",
+  "promotion_draw": "061/2026",
+  "promotion_draw_date": "2026-07-31",
+  "promotion_threshold": 3,
+  "promotion_tier": "LEGEND_TIER_4",
+  "criteria_version": "v1",
+  "promotion_hero_ids": [
+    "HERO-2026-058-13c3befc",
+    "HERO-2026-059-84de45eb",
+    "HERO-2026-061-943fafa8"
+  ],
+  "project_version": "V12",
+  "git_commit": "eb609239bf97595235a4624908746689f33091c5",
+  "qualification_reason": "Promoted to Legend at draw 061/2026 (2026-07-31) by reaching 3 distinct qualifying draws as Hero (criteria_version: v1).",
+  "entity_id": "H-00458",
+  "entity_name": "Aruk da Lua Fria",
+  "race": "Esqueleto",
+  "generation": 9,
+  "predicted_numeros": [
+    2,
+    4,
+    8,
+    10,
+    24
+  ],
+  "predicted_estrelas": [
+    2,
+    4
+  ],
+  "hero_count": 3,
+  "qualified_draws": 3,
+  "contributing_hero_ids": [
+    "HERO-2026-058-13c3befc",
+    "HERO-2026-059-84de45eb",
+    "HERO-2026-061-943fafa8"
+  ],
+  "provenance": "legacy",
+  "last_reevaluated_at": null
+}

@@ -1,0 +1,79 @@
+{
+  "hero_id": "HERO-2026-061-72bb0bfc",
+  "dedup_hash": "72bb0bfc5b5e7829f292b8210b5f96ebdf10a5a1d2b7fc2bda33c1c011444076",
+  "source_prediction_id": "b9fb5da5f152f5bea4707d9233edd7b053ca276024bf940c67c21f1d47f412c4",
+  "entity_id": "H-00681",
+  "entity_name": "Velka do Bosque",
+  "race": "Vidente",
+  "generation": 13,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "061/2026",
+  "draw_date": "2026-07-31",
+  "official_key": {
+    "numeros": [
+      10,
+      24,
+      25,
+      31,
+      45
+    ],
+    "estrelas": [
+      4,
+      5
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      10,
+      17,
+      24,
+      44,
+      45
+    ],
+    "estrelas": [
+      2,
+      8
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 0,
+  "exact_matched_values": {
+    "numeros": [
+      10,
+      24,
+      45
+    ],
+    "estrelas": []
+  },
+  "missed_winning_values": {
+    "numeros": [
+      25,
+      31
+    ],
+    "estrelas": [
+      4,
+      5
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      17,
+      44
+    ],
+    "estrelas": [
+      2,
+      8
+    ]
+  },
+  "hero_category": "3+0",
+  "hero_tier": "TIER_4",
+  "simulation_score": 38,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 0 lucky stars against official draw 061/2026 (category 3+0).",
+  "registered_at": "2026-08-02T15:10:30+00:00"
+}

@@ -1,0 +1,79 @@
+{
+  "hero_id": "HERO-2026-059-73e338e3",
+  "dedup_hash": "73e338e39861f3bd885b6f889b4889794eda48ebb9368008cbaaeaf5ce71e6c4",
+  "source_prediction_id": "c871c50df27456410667706d0f8d146e30ce1209b614eb643e4c876e671cc61c",
+  "entity_id": "H-00610",
+  "entity_name": "Kael dos Ossos",
+  "race": "Esqueleto",
+  "generation": 12,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "059/2026",
+  "draw_date": "2026-07-24",
+  "official_key": {
+    "numeros": [
+      8,
+      10,
+      30,
+      36,
+      47
+    ],
+    "estrelas": [
+      1,
+      4
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      8,
+      9,
+      10,
+      24,
+      30
+    ],
+    "estrelas": [
+      8,
+      9
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 0,
+  "exact_matched_values": {
+    "numeros": [
+      8,
+      10,
+      30
+    ],
+    "estrelas": []
+  },
+  "missed_winning_values": {
+    "numeros": [
+      36,
+      47
+    ],
+    "estrelas": [
+      1,
+      4
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      9,
+      24
+    ],
+    "estrelas": [
+      8,
+      9
+    ]
+  },
+  "hero_category": "3+0",
+  "hero_tier": "TIER_4",
+  "simulation_score": 38,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 0 lucky stars against official draw 059/2026 (category 3+0).",
+  "registered_at": "2026-08-02T15:07:52+00:00"
+}

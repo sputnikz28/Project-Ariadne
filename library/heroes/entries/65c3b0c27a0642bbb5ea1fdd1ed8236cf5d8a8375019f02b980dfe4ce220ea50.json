@@ -1,0 +1,79 @@
+{
+  "hero_id": "HERO-2026-061-65c3b0c2",
+  "dedup_hash": "65c3b0c27a0642bbb5ea1fdd1ed8236cf5d8a8375019f02b980dfe4ce220ea50",
+  "source_prediction_id": "84e994341e33a8f51f860bbb953ecfcabf68fe257c232cbb82893a9335f432c4",
+  "entity_id": "H-00339",
+  "entity_name": "Thara dos Ossos",
+  "race": "Chefe Tribal",
+  "generation": 7,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "061/2026",
+  "draw_date": "2026-07-31",
+  "official_key": {
+    "numeros": [
+      10,
+      24,
+      25,
+      31,
+      45
+    ],
+    "estrelas": [
+      4,
+      5
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      17,
+      24,
+      31,
+      45,
+      50
+    ],
+    "estrelas": [
+      7,
+      10
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 0,
+  "exact_matched_values": {
+    "numeros": [
+      24,
+      31,
+      45
+    ],
+    "estrelas": []
+  },
+  "missed_winning_values": {
+    "numeros": [
+      10,
+      25
+    ],
+    "estrelas": [
+      4,
+      5
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      17,
+      50
+    ],
+    "estrelas": [
+      7,
+      10
+    ]
+  },
+  "hero_category": "3+0",
+  "hero_tier": "TIER_4",
+  "simulation_score": 38,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 0 lucky stars against official draw 061/2026 (category 3+0).",
+  "registered_at": "2026-08-02T15:10:29+00:00"
+}

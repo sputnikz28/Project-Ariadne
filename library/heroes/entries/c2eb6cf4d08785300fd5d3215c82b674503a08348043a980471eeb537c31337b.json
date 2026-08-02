@@ -1,0 +1,77 @@
+{
+  "hero_id": "HERO-2026-059-c2eb6cf4",
+  "dedup_hash": "c2eb6cf4d08785300fd5d3215c82b674503a08348043a980471eeb537c31337b",
+  "source_prediction_id": "52a212f9200a280d451e887cef0811f7903ccc1f614bf8cad3ab32cea0e487ac",
+  "entity_id": "H-00439",
+  "entity_name": "Thara Pedra-Partida",
+  "race": "Goblin",
+  "generation": 9,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "059/2026",
+  "draw_date": "2026-07-24",
+  "official_key": {
+    "numeros": [
+      8,
+      10,
+      30,
+      36,
+      47
+    ],
+    "estrelas": [
+      1,
+      4
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      13,
+      26,
+      36,
+      44,
+      47
+    ],
+    "estrelas": [
+      1,
+      4
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 2,
+  "exact_matched_values": {
+    "numeros": [
+      36,
+      47
+    ],
+    "estrelas": [
+      1,
+      4
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      8,
+      10,
+      30
+    ],
+    "estrelas": []
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      13,
+      26,
+      44
+    ],
+    "estrelas": []
+  },
+  "hero_category": "2+2",
+  "hero_tier": "TIER_4",
+  "simulation_score": 35,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 2 lucky stars against official draw 059/2026 (category 2+2).",
+  "registered_at": "2026-08-02T15:07:52+00:00"
+}

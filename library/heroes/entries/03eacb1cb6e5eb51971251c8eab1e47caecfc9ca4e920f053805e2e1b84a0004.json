@@ -1,0 +1,76 @@
+{
+  "hero_id": "HERO-2026-061-03eacb1c",
+  "dedup_hash": "03eacb1cb6e5eb51971251c8eab1e47caecfc9ca4e920f053805e2e1b84a0004",
+  "source_prediction_id": "4650606c41750d6bb6a97e3b230dc7c01b21c89e85b8b8107b53d43756602069",
+  "entity_id": "H-00440",
+  "entity_name": "Thara do Bosque",
+  "race": "Vidente",
+  "generation": 9,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "061/2026",
+  "draw_date": "2026-07-31",
+  "official_key": {
+    "numeros": [
+      10,
+      24,
+      25,
+      31,
+      45
+    ],
+    "estrelas": [
+      4,
+      5
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      2,
+      25,
+      31,
+      45,
+      47
+    ],
+    "estrelas": [
+      4,
+      5
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 2,
+  "exact_matched_values": {
+    "numeros": [
+      25,
+      31,
+      45
+    ],
+    "estrelas": [
+      4,
+      5
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      10,
+      24
+    ],
+    "estrelas": []
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      2,
+      47
+    ],
+    "estrelas": []
+  },
+  "hero_category": "3+2",
+  "hero_tier": "TIER_3",
+  "simulation_score": 53,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 2 lucky stars against official draw 061/2026 (category 3+2).",
+  "registered_at": "2026-08-02T15:10:29+00:00"
+}

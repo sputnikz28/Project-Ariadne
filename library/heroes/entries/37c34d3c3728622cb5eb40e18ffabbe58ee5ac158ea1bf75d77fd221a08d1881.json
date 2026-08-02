@@ -1,0 +1,79 @@
+{
+  "hero_id": "HERO-2026-060-37c34d3c",
+  "dedup_hash": "37c34d3c3728622cb5eb40e18ffabbe58ee5ac158ea1bf75d77fd221a08d1881",
+  "source_prediction_id": "c16137aae181ccd1502b46e388c5d2cd198566ac2683db4d6158b4cb37a7210c",
+  "entity_id": "H-00053",
+  "entity_name": "Aion dos Ossos",
+  "race": "Vidente",
+  "generation": 1,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "060/2026",
+  "draw_date": "2026-07-28",
+  "official_key": {
+    "numeros": [
+      5,
+      7,
+      24,
+      30,
+      49
+    ],
+    "estrelas": [
+      10,
+      11
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      7,
+      24,
+      30,
+      42,
+      45
+    ],
+    "estrelas": [
+      3,
+      9
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 0,
+  "exact_matched_values": {
+    "numeros": [
+      7,
+      24,
+      30
+    ],
+    "estrelas": []
+  },
+  "missed_winning_values": {
+    "numeros": [
+      5,
+      49
+    ],
+    "estrelas": [
+      10,
+      11
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      42,
+      45
+    ],
+    "estrelas": [
+      3,
+      9
+    ]
+  },
+  "hero_category": "3+0",
+  "hero_tier": "TIER_4",
+  "simulation_score": 38,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 0 lucky stars against official draw 060/2026 (category 3+0).",
+  "registered_at": "2026-08-02T15:10:19+00:00"
+}

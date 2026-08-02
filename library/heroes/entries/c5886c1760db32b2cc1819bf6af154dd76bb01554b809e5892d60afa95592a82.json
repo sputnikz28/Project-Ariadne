@@ -1,0 +1,76 @@
+{
+  "hero_id": "HERO-2026-061-c5886c17",
+  "dedup_hash": "c5886c1760db32b2cc1819bf6af154dd76bb01554b809e5892d60afa95592a82",
+  "source_prediction_id": "db1ce0c004630ccb13f72f2b3c71ec82e215d3c6f0cbba30ef23cde7a5fbb87b",
+  "entity_id": "H-00404",
+  "entity_name": "Morgana dos Ossos",
+  "race": "Esqueleto",
+  "generation": 8,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "061/2026",
+  "draw_date": "2026-07-31",
+  "official_key": {
+    "numeros": [
+      10,
+      24,
+      25,
+      31,
+      45
+    ],
+    "estrelas": [
+      4,
+      5
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      10,
+      20,
+      24,
+      25,
+      26
+    ],
+    "estrelas": [
+      4,
+      5
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 2,
+  "exact_matched_values": {
+    "numeros": [
+      10,
+      24,
+      25
+    ],
+    "estrelas": [
+      4,
+      5
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      31,
+      45
+    ],
+    "estrelas": []
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      20,
+      26
+    ],
+    "estrelas": []
+  },
+  "hero_category": "3+2",
+  "hero_tier": "TIER_3",
+  "simulation_score": 53,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 2 lucky stars against official draw 061/2026 (category 3+2).",
+  "registered_at": "2026-08-02T15:10:30+00:00"
+}

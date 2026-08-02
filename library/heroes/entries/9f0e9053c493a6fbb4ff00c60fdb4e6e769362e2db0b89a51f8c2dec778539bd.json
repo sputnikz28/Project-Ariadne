@@ -1,0 +1,79 @@
+{
+  "hero_id": "HERO-2026-059-9f0e9053",
+  "dedup_hash": "9f0e9053c493a6fbb4ff00c60fdb4e6e769362e2db0b89a51f8c2dec778539bd",
+  "source_prediction_id": "f8f9302ddf65e9cb2eeb5c6a752572425d7a4672e0e41ccddb073faec90f2685",
+  "entity_id": "H-00207",
+  "entity_name": "Selene da Lua Fria",
+  "race": "Bruxa",
+  "generation": 4,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "059/2026",
+  "draw_date": "2026-07-24",
+  "official_key": {
+    "numeros": [
+      8,
+      10,
+      30,
+      36,
+      47
+    ],
+    "estrelas": [
+      1,
+      4
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      10,
+      23,
+      36,
+      45,
+      47
+    ],
+    "estrelas": [
+      2,
+      12
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 0,
+  "exact_matched_values": {
+    "numeros": [
+      10,
+      36,
+      47
+    ],
+    "estrelas": []
+  },
+  "missed_winning_values": {
+    "numeros": [
+      8,
+      30
+    ],
+    "estrelas": [
+      1,
+      4
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      23,
+      45
+    ],
+    "estrelas": [
+      2,
+      12
+    ]
+  },
+  "hero_category": "3+0",
+  "hero_tier": "TIER_4",
+  "simulation_score": 38,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 0 lucky stars against official draw 059/2026 (category 3+0).",
+  "registered_at": "2026-08-02T15:07:52+00:00"
+}

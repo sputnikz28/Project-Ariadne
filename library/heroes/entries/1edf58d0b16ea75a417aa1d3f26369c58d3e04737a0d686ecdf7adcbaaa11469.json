@@ -1,0 +1,80 @@
+{
+  "hero_id": "HERO-2026-060-1edf58d0",
+  "dedup_hash": "1edf58d0b16ea75a417aa1d3f26369c58d3e04737a0d686ecdf7adcbaaa11469",
+  "source_prediction_id": "983809dda790a856a57ce241bf95d466ca1a4c3fb2b8c62f3d3cfdeb031b741e",
+  "entity_id": "H-00294",
+  "entity_name": "Kael dos Astros",
+  "race": "Chefe Tribal",
+  "generation": 6,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "060/2026",
+  "draw_date": "2026-07-28",
+  "official_key": {
+    "numeros": [
+      5,
+      7,
+      24,
+      30,
+      49
+    ],
+    "estrelas": [
+      10,
+      11
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      16,
+      24,
+      30,
+      45,
+      50
+    ],
+    "estrelas": [
+      9,
+      10
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      24,
+      30
+    ],
+    "estrelas": [
+      10
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      5,
+      7,
+      49
+    ],
+    "estrelas": [
+      11
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      16,
+      45,
+      50
+    ],
+    "estrelas": [
+      9
+    ]
+  },
+  "hero_category": "2+1",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 1 lucky stars against official draw 060/2026 (category 2+1).",
+  "registered_at": "2026-08-02T15:10:18+00:00"
+}

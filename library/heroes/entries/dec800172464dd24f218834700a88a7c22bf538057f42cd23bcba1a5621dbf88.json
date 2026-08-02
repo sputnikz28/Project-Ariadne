@@ -1,0 +1,77 @@
+{
+  "hero_id": "HERO-2026-060-dec80017",
+  "dedup_hash": "dec800172464dd24f218834700a88a7c22bf538057f42cd23bcba1a5621dbf88",
+  "source_prediction_id": "92214e9bada7429e5b7af5de82b73e0358eca5af228788bb25eb19d5c68565e0",
+  "entity_id": "H-00241",
+  "entity_name": "Lyra Pedra-Partida",
+  "race": "Chefe Tribal",
+  "generation": 5,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "060/2026",
+  "draw_date": "2026-07-28",
+  "official_key": {
+    "numeros": [
+      5,
+      7,
+      24,
+      30,
+      49
+    ],
+    "estrelas": [
+      10,
+      11
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      16,
+      24,
+      45,
+      49,
+      50
+    ],
+    "estrelas": [
+      10,
+      11
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 2,
+  "exact_matched_values": {
+    "numeros": [
+      24,
+      49
+    ],
+    "estrelas": [
+      10,
+      11
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      5,
+      7,
+      30
+    ],
+    "estrelas": []
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      16,
+      45,
+      50
+    ],
+    "estrelas": []
+  },
+  "hero_category": "2+2",
+  "hero_tier": "TIER_4",
+  "simulation_score": 35,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 2 lucky stars against official draw 060/2026 (category 2+2).",
+  "registered_at": "2026-08-02T15:10:18+00:00"
+}

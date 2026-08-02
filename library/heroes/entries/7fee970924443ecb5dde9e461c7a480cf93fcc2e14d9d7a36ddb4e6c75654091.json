@@ -1,0 +1,79 @@
+{
+  "hero_id": "HERO-2026-060-7fee9709",
+  "dedup_hash": "7fee970924443ecb5dde9e461c7a480cf93fcc2e14d9d7a36ddb4e6c75654091",
+  "source_prediction_id": "7792f2c02d3d8507792e2d9f3158a9a348038b7a66d94bdcf23f397cdfac1efa",
+  "entity_id": "H-00393",
+  "entity_name": "Thara dos Ossos",
+  "race": "Goblin",
+  "generation": 8,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "060/2026",
+  "draw_date": "2026-07-28",
+  "official_key": {
+    "numeros": [
+      5,
+      7,
+      24,
+      30,
+      49
+    ],
+    "estrelas": [
+      10,
+      11
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      5,
+      7,
+      30,
+      35,
+      43
+    ],
+    "estrelas": [
+      6,
+      12
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 0,
+  "exact_matched_values": {
+    "numeros": [
+      5,
+      7,
+      30
+    ],
+    "estrelas": []
+  },
+  "missed_winning_values": {
+    "numeros": [
+      24,
+      49
+    ],
+    "estrelas": [
+      10,
+      11
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      35,
+      43
+    ],
+    "estrelas": [
+      6,
+      12
+    ]
+  },
+  "hero_category": "3+0",
+  "hero_tier": "TIER_4",
+  "simulation_score": 38,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 0 lucky stars against official draw 060/2026 (category 3+0).",
+  "registered_at": "2026-08-02T15:10:19+00:00"
+}

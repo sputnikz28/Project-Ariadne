@@ -1,0 +1,79 @@
+{
+  "hero_id": "HERO-2026-059-95d916aa",
+  "dedup_hash": "95d916aa66983e7e396fec7676fcb1140a68d23633084a47d10e67917684f502",
+  "source_prediction_id": "ca5d337242a01631ecf9b074b4e3167f7ea3d4f39a6df91d2c74376b421ef165",
+  "entity_id": "H-00030",
+  "entity_name": "Aruk da Lua Fria",
+  "race": "Elfo",
+  "generation": 1,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "059/2026",
+  "draw_date": "2026-07-24",
+  "official_key": {
+    "numeros": [
+      8,
+      10,
+      30,
+      36,
+      47
+    ],
+    "estrelas": [
+      1,
+      4
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      3,
+      20,
+      30,
+      36,
+      47
+    ],
+    "estrelas": [
+      2,
+      3
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 0,
+  "exact_matched_values": {
+    "numeros": [
+      30,
+      36,
+      47
+    ],
+    "estrelas": []
+  },
+  "missed_winning_values": {
+    "numeros": [
+      8,
+      10
+    ],
+    "estrelas": [
+      1,
+      4
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      3,
+      20
+    ],
+    "estrelas": [
+      2,
+      3
+    ]
+  },
+  "hero_category": "3+0",
+  "hero_tier": "TIER_4",
+  "simulation_score": 38,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 0 lucky stars against official draw 059/2026 (category 3+0).",
+  "registered_at": "2026-08-02T15:07:52+00:00"
+}

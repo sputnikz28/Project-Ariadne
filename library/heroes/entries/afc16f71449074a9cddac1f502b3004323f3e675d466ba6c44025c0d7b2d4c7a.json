@@ -1,0 +1,79 @@
+{
+  "hero_id": "HERO-2026-061-afc16f71",
+  "dedup_hash": "afc16f71449074a9cddac1f502b3004323f3e675d466ba6c44025c0d7b2d4c7a",
+  "source_prediction_id": "a0be893652deb6adb5dacba738b13ffe1fc324ad7ea6009b008bbaa8a21e5f9d",
+  "entity_id": "H-00096",
+  "entity_name": "Selene do Bosque",
+  "race": "Vidente",
+  "generation": 3,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "061/2026",
+  "draw_date": "2026-07-31",
+  "official_key": {
+    "numeros": [
+      10,
+      24,
+      25,
+      31,
+      45
+    ],
+    "estrelas": [
+      4,
+      5
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      22,
+      25,
+      31,
+      45,
+      46
+    ],
+    "estrelas": [
+      2,
+      9
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 0,
+  "exact_matched_values": {
+    "numeros": [
+      25,
+      31,
+      45
+    ],
+    "estrelas": []
+  },
+  "missed_winning_values": {
+    "numeros": [
+      10,
+      24
+    ],
+    "estrelas": [
+      4,
+      5
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      22,
+      46
+    ],
+    "estrelas": [
+      2,
+      9
+    ]
+  },
+  "hero_category": "3+0",
+  "hero_tier": "TIER_4",
+  "simulation_score": 38,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 0 lucky stars against official draw 061/2026 (category 3+0).",
+  "registered_at": "2026-08-02T15:10:29+00:00"
+}

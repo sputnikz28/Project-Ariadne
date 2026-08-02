@@ -1,0 +1,41 @@
+{
+  "legend_id": "LEGEND-690ec980",
+  "source_prediction_id": "690ec980175496da7d616fb2b1ec803b57b9d3544c198c1ce2ea5be7e6f17053",
+  "promotion_draw": "061/2026",
+  "promotion_draw_date": "2026-07-31",
+  "promotion_threshold": 3,
+  "promotion_tier": "LEGEND_TIER_4",
+  "criteria_version": "v1",
+  "promotion_hero_ids": [
+    "HERO-2026-056-74609527",
+    "HERO-2026-059-5ecc0541",
+    "HERO-2026-061-3945b5b0"
+  ],
+  "project_version": "V12",
+  "git_commit": "eb609239bf97595235a4624908746689f33091c5",
+  "qualification_reason": "Promoted to Legend at draw 061/2026 (2026-07-31) by reaching 3 distinct qualifying draws as Hero (criteria_version: v1).",
+  "entity_id": "H-00674",
+  "entity_name": "Selene dos Astros",
+  "race": "Goblin",
+  "generation": 13,
+  "predicted_numeros": [
+    10,
+    24,
+    31,
+    37,
+    47
+  ],
+  "predicted_estrelas": [
+    1,
+    8
+  ],
+  "hero_count": 3,
+  "qualified_draws": 3,
+  "contributing_hero_ids": [
+    "HERO-2026-056-74609527",
+    "HERO-2026-059-5ecc0541",
+    "HERO-2026-061-3945b5b0"
+  ],
+  "provenance": "legacy",
+  "last_reevaluated_at": null
+}

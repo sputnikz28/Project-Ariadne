@@ -1,0 +1,79 @@
+{
+  "hero_id": "HERO-2026-061-227c0bea",
+  "dedup_hash": "227c0bea4f8e84d71b9c70c6bac81ee7d8c2b3922f18a311953ab8a5b621c25b",
+  "source_prediction_id": "de78198ad3ab90d970633c0f05287bbaf25a6d6536eca0116cb000dbf3b10d54",
+  "entity_id": "H-00464",
+  "entity_name": "Selene da Lua Fria",
+  "race": "Vidente",
+  "generation": 9,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "061/2026",
+  "draw_date": "2026-07-31",
+  "official_key": {
+    "numeros": [
+      10,
+      24,
+      25,
+      31,
+      45
+    ],
+    "estrelas": [
+      4,
+      5
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      10,
+      13,
+      14,
+      24,
+      25
+    ],
+    "estrelas": [
+      3,
+      8
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 0,
+  "exact_matched_values": {
+    "numeros": [
+      10,
+      24,
+      25
+    ],
+    "estrelas": []
+  },
+  "missed_winning_values": {
+    "numeros": [
+      31,
+      45
+    ],
+    "estrelas": [
+      4,
+      5
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      13,
+      14
+    ],
+    "estrelas": [
+      3,
+      8
+    ]
+  },
+  "hero_category": "3+0",
+  "hero_tier": "TIER_4",
+  "simulation_score": 38,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 0 lucky stars against official draw 061/2026 (category 3+0).",
+  "registered_at": "2026-08-02T15:10:30+00:00"
+}

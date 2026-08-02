@@ -1,0 +1,79 @@
+{
+  "hero_id": "HERO-2026-061-4317ebef",
+  "dedup_hash": "4317ebefa05e8428da2cc6c1cbc395e4a81f1905d91e5c5be6dd5c38cf4fff35",
+  "source_prediction_id": "ca3c5a70e3056cec3f6850e0902995b3892ce971584bf23eeeebcdcdce091c21",
+  "entity_id": "H-00045",
+  "entity_name": "Lyra dos Astros",
+  "race": "Bruxa",
+  "generation": 2,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "061/2026",
+  "draw_date": "2026-07-31",
+  "official_key": {
+    "numeros": [
+      10,
+      24,
+      25,
+      31,
+      45
+    ],
+    "estrelas": [
+      4,
+      5
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      7,
+      10,
+      24,
+      33,
+      45
+    ],
+    "estrelas": [
+      9,
+      10
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 0,
+  "exact_matched_values": {
+    "numeros": [
+      10,
+      24,
+      45
+    ],
+    "estrelas": []
+  },
+  "missed_winning_values": {
+    "numeros": [
+      25,
+      31
+    ],
+    "estrelas": [
+      4,
+      5
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      7,
+      33
+    ],
+    "estrelas": [
+      9,
+      10
+    ]
+  },
+  "hero_category": "3+0",
+  "hero_tier": "TIER_4",
+  "simulation_score": 38,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 0 lucky stars against official draw 061/2026 (category 3+0).",
+  "registered_at": "2026-08-02T15:10:30+00:00"
+}

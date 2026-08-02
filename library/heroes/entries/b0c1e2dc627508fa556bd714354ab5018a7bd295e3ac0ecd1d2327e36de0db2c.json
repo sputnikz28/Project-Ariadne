@@ -1,0 +1,80 @@
+{
+  "hero_id": "HERO-2026-061-b0c1e2dc",
+  "dedup_hash": "b0c1e2dc627508fa556bd714354ab5018a7bd295e3ac0ecd1d2327e36de0db2c",
+  "source_prediction_id": "f8f555b1bc54f672d97bdd38a8c2e1e477f2fa82ab00cecb6ed548d41b0f7ce3",
+  "entity_id": "H-00615",
+  "entity_name": "Elarion da Lua Fria",
+  "race": "Cronomante",
+  "generation": 12,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "061/2026",
+  "draw_date": "2026-07-31",
+  "official_key": {
+    "numeros": [
+      10,
+      24,
+      25,
+      31,
+      45
+    ],
+    "estrelas": [
+      4,
+      5
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      2,
+      10,
+      12,
+      24,
+      39
+    ],
+    "estrelas": [
+      1,
+      5
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      10,
+      24
+    ],
+    "estrelas": [
+      5
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      25,
+      31,
+      45
+    ],
+    "estrelas": [
+      4
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      2,
+      12,
+      39
+    ],
+    "estrelas": [
+      1
+    ]
+  },
+  "hero_category": "2+1",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 1 lucky stars against official draw 061/2026 (category 2+1).",
+  "registered_at": "2026-08-02T15:10:29+00:00"
+}

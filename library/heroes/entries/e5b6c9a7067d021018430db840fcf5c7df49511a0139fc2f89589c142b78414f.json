@@ -1,0 +1,79 @@
+{
+  "hero_id": "HERO-2026-061-e5b6c9a7",
+  "dedup_hash": "e5b6c9a7067d021018430db840fcf5c7df49511a0139fc2f89589c142b78414f",
+  "source_prediction_id": "4c184cc123ac48271db4ea77b9d1c0d33ec17c9c35b5d68e95d4cc21b76a2bd5",
+  "entity_id": "H-00308",
+  "entity_name": "Kael Pedra-Partida",
+  "race": "Goblin",
+  "generation": 6,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "061/2026",
+  "draw_date": "2026-07-31",
+  "official_key": {
+    "numeros": [
+      10,
+      24,
+      25,
+      31,
+      45
+    ],
+    "estrelas": [
+      4,
+      5
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      17,
+      24,
+      31,
+      45,
+      47
+    ],
+    "estrelas": [
+      5,
+      12
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      24,
+      31,
+      45
+    ],
+    "estrelas": [
+      5
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      10,
+      25
+    ],
+    "estrelas": [
+      4
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      17,
+      47
+    ],
+    "estrelas": [
+      12
+    ]
+  },
+  "hero_category": "3+1",
+  "hero_tier": "TIER_4",
+  "simulation_score": 43,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_061_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 1 lucky stars against official draw 061/2026 (category 3+1).",
+  "registered_at": "2026-08-02T15:10:31+00:00"
+}
