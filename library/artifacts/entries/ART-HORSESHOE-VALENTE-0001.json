@@ -1,0 +1,39 @@
+{
+  "id": "ART-HORSESHOE-VALENTE-0001",
+  "nome": {
+    "pt": "Ferradura da Fortuna de Valente",
+    "en": "Valente's Fortune Horseshoe"
+  },
+  "tipo": "FERRADURA",
+  "raridade": "LENDARIO",
+  "multiplicador": 1.0,
+  "criador": {
+    "id": "HORSE-VALENTE",
+    "nome": "Valente"
+  },
+  "energia_acumulada": 321.5,
+  "estado": "ABENCOADA",
+  "cor_principal": "DOURADO",
+  "material": "Aço Dourado",
+  "corrupcao_sombria": 0.0,
+  "purificado": true,
+  "efeitos": {
+    "tipo": "SUPERSTICAO_BENIGNA",
+    "altera_algoritmo": false,
+    "altera_resultados": false,
+    "altera_probabilidades": false
+  },
+  "bencaos": {
+    "sorte": 100,
+    "otimismo": 98,
+    "alegria": 97
+  },
+  "inscricao": {
+    "pt": "A fortuna acompanha quem nunca deixa de correr."
+  },
+  "lore": {
+    "descricao": {
+      "pt": "Valente nunca perdeu uma corrida. Uns diziam que era talento. Outros juravam que era esta ferradura."
+    }
+  }
+}

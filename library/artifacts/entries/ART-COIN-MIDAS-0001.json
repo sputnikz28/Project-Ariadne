@@ -1,0 +1,80 @@
+{
+  "id": "ART-COIN-MIDAS-0001",
+  "nome": {
+    "pt": "Moeda da Fortuna de Midas",
+    "en": "Midas' Coin of Fortune",
+    "es": "Moneda de la Fortuna de Midas",
+    "fr": "Pièce de Fortune de Midas"
+  },
+  "tipo": "RELIQUIA_DA_FORTUNA",
+  "raridade": "MITICO",
+  "multiplicador": 1.0,
+  "criador": {
+    "id": "KING-MIDAS-0001",
+    "nome": "Midas, o Rei Dourado"
+  },
+  "geracao_criacao": 1,
+  "donos": [
+    "Midas, o Rei Dourado"
+  ],
+  "energia_acumulada": 888.8,
+  "conselhos": 88,
+  "estado": "SELADA_NO_COFRE_DOURADO",
+  "universo_origem": 1783716108367178646,
+  "portador_atual": null,
+  "vezes_encontrado": 1,
+  "execucoes_sobrevividas": 888,
+  "historia": [
+    {
+      "evento": "CUNHADA_PELO_TOQUE_DOURADO",
+      "momento": "2026-07-30T18:00:00+00:00",
+      "criador": "Midas, o Rei Dourado"
+    },
+    {
+      "evento": "SELADA_NO_COFRE_DOURADO",
+      "momento": "2026-07-30T18:08:00+00:00",
+      "descricao": {
+        "pt": "A moeda foi selada para recordar que a prosperidade deve ser acompanhada de sabedoria.",
+        "en": "The coin was sealed as a reminder that prosperity must be accompanied by wisdom."
+      }
+    }
+  ],
+  "corrupcao_sombria": 0.08,
+  "purificado": true,
+  "cor_principal": "DOURADO",
+  "material": {
+    "pt": "Ouro do Primeiro Reino",
+    "en": "Gold of the First Kingdom"
+  },
+  "efeitos": {
+    "tipo": "SIMBOLO_DA_PROSPERIDADE",
+    "cerimonial": true,
+    "altera_algoritmo": false,
+    "altera_resultados": false,
+    "altera_probabilidades": false
+  },
+  "bencaos": {
+    "prosperidade": 100,
+    "generosidade": 96,
+    "sabedoria": 92,
+    "sorte": 88
+  },
+  "inscricao": {
+    "pt": "A verdadeira riqueza é aquela que pode ser partilhada.",
+    "en": "True wealth is the wealth that can be shared."
+  },
+  "lore": {
+    "descricao": {
+      "pt": "A última moeda tocada por Midas antes de compreender que nem todos os tesouros devem ser transformados em ouro. Conserva o brilho da prosperidade, mas também a memória da sua maior lição.",
+      "en": "The final coin touched by Midas before he understood that not every treasure should be turned into gold. It preserves the glow of prosperity and the memory of his greatest lesson."
+    }
+  },
+  "tags": [
+    "fortuna",
+    "midas",
+    "ouro",
+    "prosperidade",
+    "sabedoria",
+    "mitico"
+  ]
+}

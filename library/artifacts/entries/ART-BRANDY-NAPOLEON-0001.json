@@ -1,0 +1,100 @@
+{
+  "id": "ART-BRANDY-NAPOLEON-0001",
+  "nome": {
+    "pt": "Brandy da Vitória Imperial",
+    "en": "Imperial Victory Brandy",
+    "es": "Brandy de la Victoria Imperial",
+    "fr": "Brandy de la Victoire Impériale",
+    "de": "Kaiserlicher Siegesbrandy",
+    "it": "Brandy della Vittoria Imperiale"
+  },
+  "tipo": "ARTEFACTO_COMEMORATIVO",
+  "raridade": "MITICO",
+  "multiplicador": 1.0,
+  "criador": {
+    "id": "CONSELHO-001",
+    "nome": "Grande Conselho de Ariadne"
+  },
+  "geracao_criacao": 1,
+  "donos": [],
+  "energia_acumulada": 777.0,
+  "conselhos": 777,
+  "estado": {
+    "id": "LACRADO",
+    "pt": "Lacrado",
+    "en": "Sealed"
+  },
+  "universo_origem": 1783716108367178646,
+  "portador_atual": null,
+  "vezes_encontrado": 0,
+  "execucoes_sobrevividas": 0,
+  "condicao_ativacao": {
+    "evento": "EUROMILHOES",
+    "numeros": 5,
+    "estrelas": 2
+  },
+  "historia": [
+    {
+      "evento": {
+        "id": "LACRADO_PARA_A_GLORIA",
+        "pt": "Lacrado para a Glória",
+        "en": "Sealed for Glory"
+      },
+      "momento": "2026-07-30T18:00:00+00:00"
+    }
+  ],
+  "efeitos": {
+    "tipo": "CELEBRACAO",
+    "ativa_apenas_com_5E2": true,
+    "altera_algoritmo": false,
+    "altera_resultados": false,
+    "altera_probabilidades": false
+  },
+  "celebracao": {
+    "fogos_artificio": true,
+    "confettis": true,
+    "musica": "vitoria_imperial",
+    "brinde": true,
+    "mensagens": {
+      "pt": [
+        "🍾 O Brandy da Vitória Imperial foi finalmente aberto!",
+        "🎉 O impossível aconteceu!",
+        "🏆 5 números e 2 estrelas!",
+        "🥂 O Grande Conselho celebra esta conquista histórica!",
+        "✨ Que este momento fique eternamente gravado na Biblioteca de Ariadne!"
+      ],
+      "en": [
+        "🍾 The Imperial Victory Brandy has finally been opened!",
+        "🎉 The impossible has happened!",
+        "🏆 Five numbers and two stars!",
+        "🥂 The Grand Council celebrates this historic achievement!"
+      ]
+    }
+  },
+  "aparencia": {
+    "garrafa": "St-Rémy Napoléon Brandy",
+    "cor_vidro": "Preto Fosco",
+    "rotulo": "Napoléon",
+    "rolha": "Lacrada",
+    "liquido": "Brandy Francês"
+  },
+  "inscricao": {
+    "pt": "Abre apenas quando o Destino sorrir com cinco números e duas estrelas.",
+    "en": "Open only when Destiny smiles with five numbers and two stars."
+  },
+  "lore": {
+    "descricao": {
+      "pt": "Diz a tradição que uma única garrafa permanece fechada na Biblioteca Eterna. Apenas quando alguém alcançar os 5 números e as 2 estrelas poderá ser aberta para brindar com todo o Grande Conselho. Até lá, permanece como símbolo da esperança, da perseverança e da crença no impossível.",
+      "en": "Legend says a single bottle remains sealed inside the Eternal Library. Only when someone matches all five numbers and both stars may it be opened to celebrate with the Grand Council."
+    }
+  },
+  "tags": [
+    "celebracao",
+    "5+2",
+    "euromilhoes",
+    "vitoria",
+    "brandy",
+    "napoleon",
+    "mitico"
+  ]
+}

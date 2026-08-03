@@ -1,0 +1,88 @@
+{
+  "id": "ART-RAINBOW-IRIS-0001",
+  "nome": {
+    "pt": "Fragmento do Arco-Íris de Íris",
+    "en": "Fragment of Iris' Rainbow",
+    "es": "Fragmento del Arcoíris de Iris",
+    "fr": "Fragment de l’Arc-en-Ciel d’Iris"
+  },
+  "tipo": "CRISTAL_PRISMATICO",
+  "raridade": "MITICO",
+  "multiplicador": 1.0,
+  "criador": {
+    "id": "IRIS-CELESTIAL-0001",
+    "nome": "Íris, a Mensageira das Sete Cores"
+  },
+  "geracao_criacao": 7,
+  "donos": [
+    "Íris, a Mensageira das Sete Cores"
+  ],
+  "energia_acumulada": 777.7,
+  "conselhos": 21,
+  "estado": "GUARDADO_NO_PRISMA_DAS_SETES_LUZES",
+  "universo_origem": 1783716108367178646,
+  "portador_atual": null,
+  "vezes_encontrado": 1,
+  "execucoes_sobrevividas": 700,
+  "historia": [
+    {
+      "evento": "CRISTALIZADO_APOS_A_GRANDE_TEMPESTADE",
+      "momento": "2026-07-30T19:07:00+00:00",
+      "local": "Vale das Sete Luzes"
+    },
+    {
+      "evento": "CONFIADO_A_BIBLIOTECA_ETERNA",
+      "momento": "2026-07-30T19:14:00+00:00",
+      "guardiao": "Grande Conselho de Ariadne"
+    }
+  ],
+  "corrupcao_sombria": 0.0,
+  "purificado": true,
+  "cor_principal": "PRISMATICO",
+  "cores": [
+    "VERMELHO",
+    "LARANJA",
+    "AMARELO",
+    "VERDE",
+    "AZUL",
+    "ANIL",
+    "VIOLETA"
+  ],
+  "material": {
+    "pt": "Luz Cristalizada",
+    "en": "Crystallized Light"
+  },
+  "efeitos": {
+    "tipo": "SIMBOLO_DA_RENOVACAO",
+    "cerimonial": true,
+    "projeta_arco_iris": true,
+    "altera_algoritmo": false,
+    "altera_resultados": false,
+    "altera_probabilidades": false
+  },
+  "bencaos": {
+    "renovacao": 100,
+    "harmonia": 100,
+    "alegria": 98,
+    "esperanca": 99,
+    "sorte": 93
+  },
+  "inscricao": {
+    "pt": "Depois de cada tempestade, a luz encontra uma nova forma de regressar.",
+    "en": "After every storm, light finds a new way to return."
+  },
+  "lore": {
+    "descricao": {
+      "pt": "Quando terminou a maior tempestade de Aethoria, Íris tocou o último arco-íris e uma das suas cores cristalizou-se. Embora pareça conter apenas um fragmento, todas as sete cores despertam quando alguém recupera a esperança.",
+      "en": "When Aethoria's greatest storm ended, Iris touched the final rainbow and one of its colours crystallized. Although it appears to contain only a fragment, all seven colours awaken whenever someone regains hope."
+    }
+  },
+  "tags": [
+    "arco-iris",
+    "iris",
+    "luz",
+    "renovacao",
+    "harmonia",
+    "mitico"
+  ]
+}

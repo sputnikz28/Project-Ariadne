@@ -1,0 +1,79 @@
+{
+  "id": "ART-LADYBUG-SYLVARIS-0001",
+  "nome": {
+    "pt": "Joaninha Rubi de Sylvaris",
+    "en": "Ruby Ladybird of Sylvaris",
+    "es": "Mariquita Rubí de Sylvaris",
+    "fr": "Coccinelle Rubis de Sylvaris"
+  },
+  "tipo": "TALISMA_NATURAL",
+  "raridade": "LENDARIO",
+  "multiplicador": 1.0,
+  "criador": {
+    "id": "SPIRIT-SYLVARIS-0001",
+    "nome": "Espírito Primordial de Sylvaris"
+  },
+  "geracao_criacao": 4,
+  "donos": [],
+  "energia_acumulada": 77.7,
+  "conselhos": 7,
+  "estado": "POUSADA_NA_FOLHA_ESCARLATE",
+  "universo_origem": 1783716108367178646,
+  "portador_atual": null,
+  "vezes_encontrado": 7,
+  "execucoes_sobrevividas": 77,
+  "historia": [
+    {
+      "evento": "NASCIDA_NA_PRIMEIRA_PRIMAVERA",
+      "momento": "2026-07-30T18:10:00+00:00",
+      "local": "Bosque Sagrado de Sylvaris"
+    },
+    {
+      "evento": "POUSOU_SOBRE_UM_CORACAO_ESPERANCOSO",
+      "momento": "2026-07-30T18:17:00+00:00",
+      "descricao": {
+        "pt": "A joaninha escolheu alguém que ainda acreditava, mesmo depois de muitas desilusões.",
+        "en": "The ladybird chose someone who still believed, even after many disappointments."
+      }
+    }
+  ],
+  "corrupcao_sombria": 0.0,
+  "purificado": true,
+  "cor_principal": "VERMELHO_RUBI",
+  "material": {
+    "pt": "Quitina de Rubi Vivo",
+    "en": "Living Ruby Chitin"
+  },
+  "efeitos": {
+    "tipo": "SIMBOLO_DA_BOA_FORTUNA",
+    "cerimonial": true,
+    "traz_boa_disposicao": true,
+    "altera_algoritmo": false,
+    "altera_resultados": false,
+    "altera_probabilidades": false
+  },
+  "bencaos": {
+    "sorte": 97,
+    "esperanca": 100,
+    "delicadeza": 99,
+    "renovacao": 95
+  },
+  "inscricao": {
+    "pt": "A esperança pousa suavemente onde encontra um coração aberto.",
+    "en": "Hope lands gently wherever it finds an open heart."
+  },
+  "lore": {
+    "descricao": {
+      "pt": "Diz-se que a Joaninha Rubi nunca pode ser capturada. Ela escolhe onde pousar e permanece apenas durante sete batimentos do coração. Quem a encontrar deve formular um desejo em silêncio.",
+      "en": "It is said that the Ruby Ladybird can never be captured. It chooses where to land and remains for only seven heartbeats. Whoever encounters it must make a wish in silence."
+    }
+  },
+  "tags": [
+    "joaninha",
+    "sylvaris",
+    "natureza",
+    "esperanca",
+    "sorte",
+    "lendario"
+  ]
+}

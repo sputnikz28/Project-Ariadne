@@ -1,0 +1,39 @@
+{
+  "id": "ART-HORSESHOE-TEMPESTADE-0001",
+  "nome": {
+    "pt": "Ferradura do Vento de Tempestade",
+    "en": "Tempestade's Wind Horseshoe"
+  },
+  "tipo": "FERRADURA",
+  "raridade": "MITICO",
+  "multiplicador": 1.0,
+  "criador": {
+    "id": "HORSE-TEMPESTADE",
+    "nome": "Tempestade"
+  },
+  "energia_acumulada": 512.0,
+  "estado": "LENDARIA",
+  "cor_principal": "AZUL",
+  "material": "Titânio Celestial",
+  "corrupcao_sombria": 0.0,
+  "purificado": true,
+  "efeitos": {
+    "tipo": "NARRATIVO",
+    "altera_algoritmo": false,
+    "altera_resultados": false,
+    "altera_probabilidades": false
+  },
+  "bencaos": {
+    "velocidade": 100,
+    "agilidade": 100,
+    "determinacao": 98
+  },
+  "inscricao": {
+    "pt": "Nem o vento conseguiu acompanhar Tempestade."
+  },
+  "lore": {
+    "descricao": {
+      "pt": "A ferradura ficou incandescente depois de milhares de léguas percorridas sem que o cavalo alguma vez abrandasse."
+    }
+  }
+}

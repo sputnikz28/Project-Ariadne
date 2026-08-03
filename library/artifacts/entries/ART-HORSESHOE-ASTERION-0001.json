@@ -1,0 +1,40 @@
+{
+  "id": "ART-HORSESHOE-ASTERION-0001",
+  "nome": {
+    "pt": "Ferradura Celestial de Asterion",
+    "en": "Asterion's Celestial Horseshoe"
+  },
+  "tipo": "FERRADURA",
+  "raridade": "MITICO",
+  "multiplicador": 1.0,
+  "criador": {
+    "id": "UNICORN-ASTERION",
+    "nome": "Asterion"
+  },
+  "energia_acumulada": 999.9,
+  "estado": "CONSAGRADA",
+  "cor_principal": "PRATEADO",
+  "material": "Prata Celestial",
+  "corrupcao_sombria": 0.0,
+  "purificado": true,
+  "efeitos": {
+    "tipo": "NARRATIVO",
+    "altera_algoritmo": false,
+    "altera_resultados": false,
+    "altera_probabilidades": false
+  },
+  "bencaos": {
+    "esperanca": 100,
+    "magia": 100,
+    "pureza": 100,
+    "sorte": 95
+  },
+  "inscricao": {
+    "pt": "Mesmo quando o caminho desaparece, as estrelas continuam a guiar."
+  },
+  "lore": {
+    "descricao": {
+      "pt": "Forjada na primeira noite em que Asterion galopou sobre as constelações. Diz-se que nenhuma ferradura brilhou tanto desde então."
+    }
+  }
+}

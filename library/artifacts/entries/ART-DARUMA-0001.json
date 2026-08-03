@@ -1,0 +1,37 @@
+{
+  "id": "ART-DARUMA-0001",
+  "nome": {
+    "pt": "Daruma da Perseverança",
+    "en": "Daruma of Perseverance",
+    "ja": "達磨の忍耐"
+  },
+  "tipo": "ARTEFACTO_DE_OBJETIVOS",
+  "raridade": "LENDARIO",
+  "estado": "PRIMEIRO_OLHO_PINTADO",
+  "olhos": {
+    "esquerdo": true,
+    "direito": false
+  },
+  "objetivo": {
+    "titulo": "Acertar os 5 números e 2 estrelas",
+    "estado": "EM_PROGRESSO",
+    "progresso": 0.73
+  },
+  "efeitos": {
+    "tipo": "MOTIVACIONAL",
+    "altera_algoritmo": false,
+    "altera_probabilidades": false,
+    "altera_resultados": false
+  },
+  "rituais": {
+    "inicio": {
+      "mensagem": "👁️ O primeiro olho foi pintado. O objetivo foi aceite pelo Conselho."
+    },
+    "conclusao": {
+      "mensagem": "👁️👁️ O Daruma abriu os dois olhos. A missão foi cumprida."
+    }
+  },
+  "lore": {
+    "pt": "O Daruma nunca promete sorte. Apenas recorda que a perseverança é o caminho até ao destino."
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "ART-HORSESHOE-TOBIAS-0001",
+  "nome": {
+    "pt": "Ferradura da Sabedoria de Tobias",
+    "en": "Tobias' Wisdom Horseshoe"
+  },
+  "tipo": "FERRADURA",
+  "raridade": "EPICO",
+  "multiplicador": 1.0,
+  "criador": {
+    "id": "DONKEY-TOBIAS",
+    "nome": "Velho Tobias"
+  },
+  "energia_acumulada": 187.4,
+  "estado": "HONRADA",
+  "cor_principal": "BRONZE",
+  "material": "Bronze Antigo",
+  "corrupcao_sombria": 0.0,
+  "purificado": true,
+  "efeitos": {
+    "tipo": "MOTIVACIONAL",
+    "altera_algoritmo": false,
+    "altera_resultados": false,
+    "altera_probabilidades": false
+  },
+  "bencaos": {
+    "sabedoria": 100,
+    "persistencia": 100,
+    "calma": 98
+  },
+  "inscricao": {
+    "pt": "Quem caminha devagar vê caminhos que os outros ignoram."
+  },
+  "lore": {
+    "descricao": {
+      "pt": "Todos riam da lentidão de Tobias. No fim, era sempre ele quem encontrava o melhor caminho."
+    }
+  }
+}

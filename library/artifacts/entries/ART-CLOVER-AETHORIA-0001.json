@@ -1,0 +1,70 @@
+{
+  "id": "ART-CLOVER-AETHORIA-0001",
+  "nome": {
+    "pt": "Trevo de Quatro Folhas de Aethoria",
+    "en": "Aethoria's Four-Leaf Clover",
+    "es": "Trébol de Cuatro Hojas de Aethoria",
+    "fr": "Trèfle à Quatre Feuilles d'Aethoria",
+    "de": "Vierblättriges Kleeblatt von Aethoria",
+    "ja": "アエソリアの四つ葉のクローバー"
+  },
+  "tipo": "AMULETO",
+  "raridade": "MITICO",
+  "multiplicador": 1.0,
+  "criador": {
+    "id": "NATUREZA-001",
+    "nome": "Os Espíritos dos Jardins Eternos"
+  },
+  "geracao_criacao": 1,
+  "energia_acumulada": 444.4,
+  "conselhos": 44,
+  "estado": "FLORESCENTE",
+  "universo_origem": 1783716108367178646,
+  "portador_atual": null,
+  "vezes_encontrado": 0,
+  "execucoes_sobrevividas": 0,
+  "cor_principal": "VERDE_ESMERALDA",
+  "material": "Trevo Vivo",
+  "corrupcao_sombria": 0.0,
+  "purificado": true,
+  "efeitos": {
+    "tipo": "SIMBOLO_DA_SORTE",
+    "altera_algoritmo": false,
+    "altera_resultados": false,
+    "altera_probabilidades": false
+  },
+  "bencaos": {
+    "sorte": 100,
+    "esperanca": 98,
+    "harmonia": 97,
+    "prosperidade": 95
+  },
+  "inscricao": {
+    "pt": "A verdadeira sorte floresce onde existe esperança.",
+    "en": "True luck blooms where hope exists."
+  },
+  "lore": {
+    "descricao": {
+      "pt": "Nos Jardins Eternos de Aethoria nasce apenas um Trevo de Quatro Folhas em cada século. Diz-se que ele escolhe o seu guardião e nunca o contrário. Não altera o destino, mas lembra que até o mais improvável pode acontecer."
+    }
+  },
+  "historia": [
+    {
+      "evento": {
+        "id": "DESABROCHOU",
+        "pt": "Desabrochou",
+        "en": "Bloomed"
+      },
+      "momento": "2026-07-30T00:00:00+00:00"
+    }
+  ],
+  "tags": [
+    "trevo",
+    "sorte",
+    "natureza",
+    "esperanca",
+    "aethoria",
+    "amuleto",
+    "lendario"
+  ]
+}

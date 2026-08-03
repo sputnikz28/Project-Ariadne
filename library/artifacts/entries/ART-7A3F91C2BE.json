@@ -1,0 +1,122 @@
+{
+  "id": "ART-7A3F91C2BE",
+  "nome": {
+    "pt": "Cuequinhas Azuis Celestiais",
+    "en": "Celestial Blue Panties",
+    "es": "Braguitas Azules Celestiales",
+    "fr": "Culotte Bleue Céleste",
+    "de": "Himmlisches Blaues Höschen",
+    "it": "Mutandine Celesti Azzurre",
+    "ja": "天空の青いおまもりパンツ"
+  },
+  "raridade": "LENDARIO",
+  "tipo": "AMULETO",
+  "multiplicador": 1.0,
+  "criador": {
+    "id": "CHR-LUNA-0001",
+    "nome": "Luna Algodão-Doce"
+  },
+  "geracao_criacao": 3,
+  "donos": [
+    {
+      "id": "CHR-LUNA-0001",
+      "nome": "Luna Algodão-Doce"
+    }
+  ],
+  "energia_acumulada": 7.7,
+  "conselhos": 42,
+  "estado": {
+    "id": "GUARDADO_NA_GAVETA_DA_SORTE",
+    "pt": "Guardado na Gaveta da Sorte",
+    "en": "Stored in the Drawer of Luck",
+    "es": "Guardado en el Cajón de la Suerte",
+    "fr": "Conservé dans le Tiroir de la Chance"
+  },
+  "universo_origem": 1783716108367178646,
+  "portador_atual": {
+    "id": "CHR-LUNA-0001",
+    "nome": "Luna Algodão-Doce"
+  },
+  "vezes_encontrado": 4,
+  "execucoes_sobrevividas": 187,
+  "historia": [
+    {
+      "evento": {
+        "id": "COSTURADO_AO_LUAR",
+        "pt": "Costurado ao Luar",
+        "en": "Sewn Under the Moonlight",
+        "es": "Cosido Bajo la Luz de la Luna",
+        "fr": "Cousu au Clair de Lune"
+      },
+      "momento": "2026-07-24T20:00:00+00:00",
+      "criador": "Luna Algodão-Doce"
+    },
+    {
+      "evento": {
+        "id": "USADO_NO_GRANDE_CONSELHO",
+        "pt": "Usado no Grande Conselho",
+        "en": "Used at the Grand Council",
+        "es": "Usado en el Gran Consejo",
+        "fr": "Utilisé lors du Grand Conseil"
+      },
+      "momento": "2026-07-24T20:02:00+00:00",
+      "descricao": {
+        "pt": "Desde então, tornou-se tradição vestir as Cuequinhas Azuis Celestiais antes das grandes extrações.",
+        "en": "Since then, it has become tradition to wear the Celestial Blue Panties before every Grand Drawing.",
+        "es": "Desde entonces, se convirtió en tradición llevar las Braguitas Azules Celestiales antes de los Grandes Sorteos.",
+        "fr": "Depuis lors, il est devenu traditionnel de porter la Culotte Bleue Céleste avant chaque Grand Tirage."
+      }
+    }
+  ],
+  "corrupcao_sombria": 0.0,
+  "purificado": true,
+  "cor_principal": "CYAN",
+  "material": {
+    "pt": "Seda Encantada",
+    "en": "Enchanted Silk",
+    "es": "Seda Encantada",
+    "fr": "Soie Enchantée"
+  },
+  "conforto": 100,
+  "fofura": 999,
+  "efeitos": {
+    "tipo": "SUPERSTICAO_BENIGNA",
+    "traz_boa_disposicao": true,
+    "aumenta_confianca": true,
+    "altera_algoritmo": false,
+    "altera_resultados": false,
+    "altera_probabilidades": false
+  },
+  "bencaos": {
+    "sorte": 100,
+    "alegria": 98,
+    "tranquilidade": 95,
+    "confianca": 96
+  },
+  "inscricao": {
+    "pt": "A verdadeira sorte nasce quando o coração está tranquilo.",
+    "en": "True luck is born when the heart is at peace.",
+    "es": "La verdadera suerte nace cuando el corazón está en calma.",
+    "fr": "La véritable chance naît lorsque le cœur est en paix.",
+    "de": "Wahres Glück entsteht, wenn das Herz in Frieden ist.",
+    "it": "La vera fortuna nasce quando il cuore è sereno.",
+    "ja": "本当の幸運は、心が穏やかなときに生まれる。"
+  },
+  "lore": {
+    "descricao": {
+      "pt": "Conta a lenda que a jovem feiticeira Luna Algodão-Doce costurou estas pequenas cuequinhas de seda azul-cyan durante uma noite de lua cheia. Desde então, muitos membros do Conselho passaram a usá-las como símbolo de boa sorte antes das grandes extrações. Nunca alteraram o destino... mas arrancaram muitos sorrisos e deram coragem para enfrentar o desconhecido.",
+      "en": "Legend tells that the young witch Luna Cotton-Candy sewed these tiny cyan silk panties under the light of a full moon. Since then, members of the Council have worn them as a symbol of good fortune before every Grand Drawing. They never changed fate... but they always brought smiles and courage.",
+      "es": "La leyenda cuenta que la joven hechicera Luna Algodón de Azúcar cosió estas pequeñas braguitas de seda cian durante una noche de luna llena. Desde entonces, el Consejo las considera un símbolo de buena suerte antes de cada Gran Sorteo.",
+      "fr": "La légende raconte que la jeune sorcière Luna Barbe à Papa cousit cette petite culotte en soie cyan lors d'une nuit de pleine lune. Depuis, elle est devenue un symbole de chance avant chaque Grand Tirage."
+    }
+  },
+  "tags": [
+    "sorte",
+    "humor",
+    "ritual",
+    "conselho",
+    "cyan",
+    "feiticeira",
+    "lendario"
+  ]
+}

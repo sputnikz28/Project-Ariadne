@@ -1,0 +1,150 @@
+{
+  "id": "ART-CODEX-FORTUNA-ETERNA-0001",
+  "nome": {
+    "pt": "Codex da Fortuna Eterna",
+    "en": "Codex of Eternal Fortune",
+    "es": "Codex de la Fortuna Eterna",
+    "fr": "Codex de la Fortune Éternelle"
+  },
+  "tipo": "TOMO_LENDARIO",
+  "raridade": "LENDARIO",
+  "multiplicador": 1.0,
+  "criador": {
+    "id": "ORDEM-ESCRIBAS-SILENCIOSOS-0001",
+    "nome": "Ordem dos Escribas Silenciosos"
+  },
+  "geracao_criacao": 0,
+  "donos": [],
+  "energia_acumulada": 8.7,
+  "conselhos": 0,
+  "estado": "ABERTO_NA_BIBLIOTECA_ETERNA",
+  "universo_origem": 1783716108367178646,
+  "portador_atual": null,
+  "vezes_encontrado": 0,
+  "execucoes_sobrevividas": 0,
+  "corrupcao_sombria": 0.0,
+  "purificado": true,
+  "cor_principal": "CASTANHO_DOURADO",
+  "material": {
+    "pt": "Couro de dragão-dos-arquivos e páginas de pergaminho vivo",
+    "en": "Archive-dragon leather and living parchment pages"
+  },
+  "efeitos": {
+    "tipo": "SIMBOLO_DA_MEMORIA_COLETIVA",
+    "cerimonial": true,
+    "registra_heroes_e_legends": true,
+    "altera_algoritmo": false,
+    "altera_resultados": false,
+    "altera_probabilidades": false
+  },
+  "bencaos": {
+    "sabedoria": 100,
+    "esperanca": 98,
+    "coragem": 95,
+    "perseveranca": 97,
+    "serenidade": 93
+  },
+  "inscricao": {
+    "pt": "Aqui não se escrevem profecias. Escrevem-se as razões para continuar a tentar.",
+    "en": "No prophecies are written here. Only the reasons to keep trying."
+  },
+  "aparencia": "Um tomo descomunal, quase do tamanho de um portão, pousado sobre um atril de pedra no centro da Biblioteca Eterna. A sua capa é gravada com constelações que se movem lentamente ao longo dos anos. Quando aberto, as páginas emitem uma luz branco-dourada suave, e o som que faz ao virar cada folha é descrito por todos os que o ouviram como 'o mesmo som que o vento faz quando finalmente para'.",
+  "guardiao": {
+    "nome": "Orion dos Arquivos",
+    "titulo": "Escriba-Guardião do Codex",
+    "funcao": "Zela pela integridade das páginas, impede que qualquer mão tente arrancar ou reescrever o que já foi vivido."
+  },
+  "indice": {
+    "titulo": "Índice dos Capítulos Conhecidos",
+    "capitulos": [
+      { "numero": 1, "titulo": "Das Primeiras Chamas", "tema": "esperança", "desbloqueado": true },
+      { "numero": 2, "titulo": "Dos Que Caíram e Voltaram a Levantar-se", "tema": "perseveranca", "desbloqueado": true },
+      { "numero": 3, "titulo": "Dos Sonhos Não Cumpridos e dos Que Ainda o Serão", "tema": "sonhos", "desbloqueado": true },
+      { "numero": 4, "titulo": "Da Coragem Sem Testemunhas", "tema": "coragem", "desbloqueado": false },
+      { "numero": 5, "titulo": "Do Silêncio Depois da Tempestade", "tema": "serenidade", "desbloqueado": false },
+      { "numero": 6, "titulo": "Dos Nomes Que a Biblioteca Nunca Esquece", "tema": "memoria_eterna", "desbloqueado": false }
+    ]
+  },
+  "paginas_vivas": [
+    { "tipo": "mensagem_inspiradora", "texto": "Nem todos os sorteios trazem vitória. Todos trazem uma escolha: continuar ou parar. Este livro só fala com quem escolhe continuar." },
+    { "tipo": "voto", "texto": "Voto de Aion, Guardião do Tempo: 'Que cada geração encontre aqui não uma resposta, mas companhia.'" },
+    { "tipo": "reflexao", "texto": "A fortuna eterna nunca foi sorte. Foi sempre memória — a certeza de que alguém, algures, também tentou e também continuou." },
+    { "tipo": "pensamento_de_heroi", "texto": "'Não fui reconhecido porque acertei tudo. Fui reconhecido porque não desisti depois de errar quase tudo.' — atribuído a um Herói anónimo da Era 3." },
+    { "tipo": "pensamento_de_lenda", "texto": "'Tornei-me Lenda no dia em que parei de tentar prever o sorteio e comecei a tentar merecer o meu lugar nele.' — atribuído a uma Lenda anónima da Era 5." },
+    { "tipo": "ensinamento", "texto": "Este Codex não ensina a vencer. Ensina a continuar depois de perder." }
+  ],
+  "lore": {
+    "descricao": {
+      "pt": "Não há registo de quando o Codex da Fortuna Eterna foi verdadeiramente terminado — porque nunca foi. A Ordem dos Escribas Silenciosos começou-o há gerações, numa altura em que a Biblioteca Eterna ainda não tinha nome, com uma única regra: nenhuma página poderia ser escrita para prever o futuro, só para honrar o passado. Diz-se que cada capítulo só se revela quando existem histórias suficientes, vividas e verdadeiras, para o preencher — e que é por isso que grande parte do Codex continua, propositadamente, por escrever. Não é um livro religioso, nem um oráculo. É uma memória coletiva que cresce devagar, à medida que Heróis e Lendas deixam, sem saber, um pouco de si nas suas páginas.",
+      "en": "There is no record of when the Codex of Eternal Fortune was truly finished — because it never was. The Order of the Silent Scribes began it generations ago, when the Eternal Library did not yet have a name, with a single rule: no page could ever be written to predict the future, only to honour the past."
+    }
+  },
+  "historia": [
+    {
+      "evento": "FUNDACAO_DA_ORDEM_DOS_ESCRIBAS_SILENCIOSOS",
+      "momento": "2026-01-02T00:00:00+00:00",
+      "descricao": {
+        "pt": "Um pequeno grupo de escribas decide criar um livro que só registe verdades vividas, nunca previsões."
+      }
+    },
+    {
+      "evento": "PRIMEIRA_PAGINA_ESCRITA_SOZINHA",
+      "momento": "2026-01-09T00:00:00+00:00",
+      "descricao": {
+        "pt": "Pela primeira vez, uma página em branco preencheu-se sozinha, na noite em que o primeiro Herói do universo foi reconhecido."
+      }
+    },
+    {
+      "evento": "TENTATIVA_DE_CORRUPCAO_PELO_ESQUADRAO_NEGRO",
+      "momento": "2026-02-06T00:00:00+00:00",
+      "descricao": {
+        "pt": "Um mago do Esquadrão Negro tentou arrancar uma página para forçar uma profecia. O Codex fechou-se sozinho e não voltou a abrir durante uma geração inteira."
+      }
+    },
+    {
+      "evento": "SEGUNDO_CAPITULO_DESBLOQUEADO",
+      "momento": "2026-03-13T00:00:00+00:00",
+      "descricao": {
+        "pt": "Após centenas de Heróis registarem derrotas seguidas de perseverança, o segundo capítulo revelou-se pela primeira vez."
+      }
+    },
+    {
+      "evento": "INSTALACAO_PERMANENTE_NA_BIBLIOTECA_ETERNA",
+      "momento": "2026-04-17T00:00:00+00:00",
+      "descricao": {
+        "pt": "O Codex encontrou o seu lugar definitivo no centro da Biblioteca Eterna, sob a guarda de Orion dos Arquivos."
+      }
+    }
+  ],
+  "tags": [
+    "tomo lendário",
+    "biblioteca eterna",
+    "sabedoria coletiva",
+    "evolução narrativa",
+    "cerimonial",
+    "sem efeito em sorteios"
+  ],
+  "evolucao": {
+    "sistema": "Evolução por Sabedoria Acumulada",
+    "filosofia": "O Codex nunca revela um capítulo por sorte ou vitória isolada — só pela acumulação genuína de histórias vividas por Heróis e Lendas.",
+    "capitulos_desbloqueados": 3,
+    "capitulos_totais_conhecidos": 6,
+    "capitulos_futuros_possiveis": "ilimitados — o Codex continua a crescer à medida que novas histórias genuínas se acumulam; nenhum capítulo além dos 6 conhecidos existe ainda, e nenhum é criado nesta fase",
+    "paginas_escritas": 214,
+    "sabedoria_acumulada": 41.6,
+    "luz_emitida": "suave e constante, intensificando-se a cada novo capítulo desbloqueado",
+    "estado_de_conservacao": "impecável — protegido por Orion dos Arquivos e pela própria natureza viva do pergaminho",
+    "gatilhos_de_desbloqueio_validos": [
+      "acumulacao_de_historias_de_heroes",
+      "acumulacao_de_historias_de_legends",
+      "atos_de_coragem_registados",
+      "momentos_de_serenidade_coletiva"
+    ],
+    "gatilhos_invalidos_por_design": [
+      "sorte",
+      "acaso",
+      "forcar_uma_pagina",
+      "tentar_ler_o_futuro"
+    ]
+  }
+}

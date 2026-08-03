@@ -1,0 +1,40 @@
+{
+  "id": "ART-HORSESHOE-TRAPALHAO-0001",
+  "nome": {
+    "pt": "Ferradura de Trapalhão",
+    "en": "Trapalhão's Horseshoe"
+  },
+  "tipo": "FERRADURA",
+  "raridade": "RARO",
+  "multiplicador": 1.0,
+  "criador": {
+    "id": "HORSE-TRAPALHAO",
+    "nome": "Trapalhão"
+  },
+  "energia_acumulada": 13.0,
+  "estado": "REPARADA_MUITAS_VEZES",
+  "cor_principal": "FERRO",
+  "material": "Ferro Batido",
+  "corrupcao_sombria": 0.0,
+  "purificado": true,
+  "efeitos": {
+    "tipo": "HUMORISTICO",
+    "altera_algoritmo": false,
+    "altera_resultados": false,
+    "altera_probabilidades": false
+  },
+  "bencaos": {
+    "humor": 100,
+    "persistencia": 100,
+    "coragem": 95,
+    "esperanca": 90
+  },
+  "inscricao": {
+    "pt": "Até o azar se cansa de perseguir quem nunca desiste."
+  },
+  "lore": {
+    "descricao": {
+      "pt": "Trapalhão tropeçava em tudo, perdia todas as corridas e conseguia partir ferraduras em caminhos de terra macia. Mesmo assim, levantava-se sempre para tentar novamente. Hoje é recordado como o cavalo mais persistente de toda a Biblioteca Eterna."
+    }
+  }
+}

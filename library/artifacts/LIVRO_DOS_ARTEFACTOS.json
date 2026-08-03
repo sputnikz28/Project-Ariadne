@@ -1,0 +1,248 @@
+{
+  "nome": "Livro dos Artefactos",
+  "total_artifacts": 15,
+  "artifact_ids": [
+    "ART-7A3F91C2BE",
+    "ART-BRANDY-NAPOLEON-0001",
+    "ART-CLOVER-AETHORIA-0001",
+    "ART-CODEX-FORTUNA-ETERNA-0001",
+    "ART-COIN-MIDAS-0001",
+    "ART-DARUMA-0001",
+    "ART-HORSESHOE-ASTERION-0001",
+    "ART-HORSESHOE-TEMPESTADE-0001",
+    "ART-HORSESHOE-TOBIAS-0001",
+    "ART-HORSESHOE-TRAPALHAO-0001",
+    "ART-HORSESHOE-VALENTE-0001",
+    "ART-LADYBUG-SYLVARIS-0001",
+    "ART-LOTUS-TRANQUILIDADE-0001",
+    "ART-RAINBOW-IRIS-0001",
+    "ART-STAR-LYRA-0001"
+  ],
+  "por_tipo": {
+    "AMULETO": 2,
+    "ARTEFACTO_COMEMORATIVO": 1,
+    "ARTEFACTO_DE_OBJETIVOS": 1,
+    "CRISTAL_PRISMATICO": 1,
+    "FERRADURA": 5,
+    "FRAGMENTO_CELESTIAL": 1,
+    "RELIQUIA_DA_FORTUNA": 1,
+    "TALISMA_NATURAL": 1,
+    "TALISMA_VIVO": 1,
+    "TOMO_LENDARIO": 1
+  },
+  "por_raridade": {
+    "EPICO": 1,
+    "LENDARIO": 5,
+    "MITICO": 8,
+    "RARO": 1
+  },
+  "por_estado": {
+    "ABENCOADA": 1,
+    "ABERTO_NA_BIBLIOTECA_ETERNA": 1,
+    "CONSAGRADA": 1,
+    "EM_FLORESCIMENTO": 1,
+    "FLORESCENTE": 1,
+    "GUARDADO_NA_GAVETA_DA_SORTE": 1,
+    "GUARDADO_NO_PRISMA_DAS_SETES_LUZES": 1,
+    "HONRADA": 1,
+    "LACRADO": 1,
+    "LENDARIA": 1,
+    "POUSADA_NA_FOLHA_ESCARLATE": 1,
+    "PRIMEIRO_OLHO_PINTADO": 1,
+    "REPARADA_MUITAS_VEZES": 1,
+    "SELADA_NO_COFRE_DOURADO": 1,
+    "SUSPENSA_NO_OBSERVATORIO_CELESTIAL": 1
+  },
+  "por_criador": {
+    "CHR-LUNA-0001": 1,
+    "CONSELHO-001": 1,
+    "CONSTELLATION-LYRA": 1,
+    "DESCONHECIDO": 1,
+    "DONKEY-TOBIAS": 1,
+    "HORSE-TEMPESTADE": 1,
+    "HORSE-TRAPALHAO": 1,
+    "HORSE-VALENTE": 1,
+    "IRIS-CELESTIAL-0001": 1,
+    "KING-MIDAS-0001": 1,
+    "NATUREZA-001": 1,
+    "ORDEM-ESCRIBAS-SILENCIOSOS-0001": 1,
+    "SERENA-AGUAS-PARADAS-0001": 1,
+    "SPIRIT-SYLVARIS-0001": 1,
+    "UNICORN-ASTERION": 1
+  },
+  "por_universo": {
+    "1783716108367178646": 9,
+    "DESCONHECIDO": 6
+  },
+  "por_tag": {
+    "5+2": 1,
+    "aethoria": 1,
+    "amuleto": 1,
+    "arco-iris": 1,
+    "biblioteca eterna": 1,
+    "brandy": 1,
+    "celebracao": 1,
+    "cerimonial": 2,
+    "ceu": 1,
+    "conselho": 1,
+    "cyan": 1,
+    "desejo": 1,
+    "esperanca": 3,
+    "estrela": 1,
+    "euromilhoes": 1,
+    "evolução narrativa": 2,
+    "feiticeira": 1,
+    "fortuna": 1,
+    "harmonia": 1,
+    "humor": 1,
+    "iris": 1,
+    "jardim das mil luas": 1,
+    "joaninha": 1,
+    "lendario": 3,
+    "luz": 1,
+    "lyra": 1,
+    "midas": 1,
+    "mitico": 4,
+    "napoleon": 1,
+    "natureza": 2,
+    "ouro": 1,
+    "prosperidade": 1,
+    "renovacao": 1,
+    "ritual": 1,
+    "sabedoria": 1,
+    "sabedoria coletiva": 1,
+    "sem efeito em sorteios": 2,
+    "serenidade": 1,
+    "sorte": 3,
+    "sylvaris": 1,
+    "talismã vivo": 1,
+    "tomo lendário": 1,
+    "trevo": 1,
+    "vitoria": 1
+  },
+  "ranking_energia": [
+    {
+      "id": "ART-HORSESHOE-ASTERION-0001",
+      "energia_acumulada": 999.9
+    },
+    {
+      "id": "ART-STAR-LYRA-0001",
+      "energia_acumulada": 999.0
+    },
+    {
+      "id": "ART-COIN-MIDAS-0001",
+      "energia_acumulada": 888.8
+    },
+    {
+      "id": "ART-RAINBOW-IRIS-0001",
+      "energia_acumulada": 777.7
+    },
+    {
+      "id": "ART-BRANDY-NAPOLEON-0001",
+      "energia_acumulada": 777.0
+    },
+    {
+      "id": "ART-HORSESHOE-TEMPESTADE-0001",
+      "energia_acumulada": 512.0
+    },
+    {
+      "id": "ART-CLOVER-AETHORIA-0001",
+      "energia_acumulada": 444.4
+    },
+    {
+      "id": "ART-HORSESHOE-VALENTE-0001",
+      "energia_acumulada": 321.5
+    },
+    {
+      "id": "ART-HORSESHOE-TOBIAS-0001",
+      "energia_acumulada": 187.4
+    },
+    {
+      "id": "ART-LADYBUG-SYLVARIS-0001",
+      "energia_acumulada": 77.7
+    },
+    {
+      "id": "ART-HORSESHOE-TRAPALHAO-0001",
+      "energia_acumulada": 13.0
+    },
+    {
+      "id": "ART-CODEX-FORTUNA-ETERNA-0001",
+      "energia_acumulada": 8.7
+    },
+    {
+      "id": "ART-7A3F91C2BE",
+      "energia_acumulada": 7.7
+    },
+    {
+      "id": "ART-LOTUS-TRANQUILIDADE-0001",
+      "energia_acumulada": 3.4
+    },
+    {
+      "id": "ART-DARUMA-0001",
+      "energia_acumulada": 0.0
+    }
+  ],
+  "ranking_execucoes_sobrevividas": [
+    {
+      "id": "ART-STAR-LYRA-0001",
+      "execucoes_sobrevividas": 1200
+    },
+    {
+      "id": "ART-COIN-MIDAS-0001",
+      "execucoes_sobrevividas": 888
+    },
+    {
+      "id": "ART-RAINBOW-IRIS-0001",
+      "execucoes_sobrevividas": 700
+    },
+    {
+      "id": "ART-7A3F91C2BE",
+      "execucoes_sobrevividas": 187
+    },
+    {
+      "id": "ART-LADYBUG-SYLVARIS-0001",
+      "execucoes_sobrevividas": 77
+    },
+    {
+      "id": "ART-BRANDY-NAPOLEON-0001",
+      "execucoes_sobrevividas": 0
+    },
+    {
+      "id": "ART-CLOVER-AETHORIA-0001",
+      "execucoes_sobrevividas": 0
+    },
+    {
+      "id": "ART-CODEX-FORTUNA-ETERNA-0001",
+      "execucoes_sobrevividas": 0
+    },
+    {
+      "id": "ART-DARUMA-0001",
+      "execucoes_sobrevividas": 0
+    },
+    {
+      "id": "ART-HORSESHOE-ASTERION-0001",
+      "execucoes_sobrevividas": 0
+    },
+    {
+      "id": "ART-HORSESHOE-TEMPESTADE-0001",
+      "execucoes_sobrevividas": 0
+    },
+    {
+      "id": "ART-HORSESHOE-TOBIAS-0001",
+      "execucoes_sobrevividas": 0
+    },
+    {
+      "id": "ART-HORSESHOE-TRAPALHAO-0001",
+      "execucoes_sobrevividas": 0
+    },
+    {
+      "id": "ART-HORSESHOE-VALENTE-0001",
+      "execucoes_sobrevividas": 0
+    },
+    {
+      "id": "ART-LOTUS-TRANQUILIDADE-0001",
+      "execucoes_sobrevividas": 0
+    }
+  ],
+  "atualizado_em": "2026-08-03T15:46:22+00:00"
+}

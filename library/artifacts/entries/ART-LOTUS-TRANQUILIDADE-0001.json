@@ -1,0 +1,179 @@
+{
+  "id": "ART-LOTUS-TRANQUILIDADE-0001",
+  "nome": {
+    "pt": "Lótus da Tranquilidade",
+    "en": "Lotus of Tranquility",
+    "es": "Loto de la Tranquilidad",
+    "fr": "Lotus de la Tranquillité"
+  },
+  "tipo": "TALISMA_VIVO",
+  "raridade": "MITICO",
+  "multiplicador": 1.0,
+  "criador": {
+    "id": "SERENA-AGUAS-PARADAS-0001",
+    "nome": "Serena das Águas Paradas"
+  },
+  "geracao_criacao": 0,
+  "donos": [],
+  "energia_acumulada": 3.4,
+  "conselhos": 0,
+  "estado": "EM_FLORESCIMENTO",
+  "universo_origem": 1783716108367178646,
+  "portador_atual": null,
+  "vezes_encontrado": 0,
+  "execucoes_sobrevividas": 0,
+  "corrupcao_sombria": 0.0,
+  "purificado": true,
+  "cor_principal": "ROSA_PALIDO",
+  "material": {
+    "pt": "Pétalas de nenúfar cristalizado e água da Lagoa Silenciosa",
+    "en": "Crystallized water-lily petals and water from the Silent Lagoon"
+  },
+  "efeitos": {
+    "tipo": "SIMBOLO_DA_SERENIDADE",
+    "cerimonial": true,
+    "recusa_previsao": true,
+    "altera_algoritmo": false,
+    "altera_resultados": false,
+    "altera_probabilidades": false
+  },
+  "bencaos": {
+    "calma": 100,
+    "serenidade": 100,
+    "equilibrio": 97,
+    "clareza": 95,
+    "esperanca": 93
+  },
+  "inscricao": {
+    "pt": "Não peço para veres o futuro. Peço para respirares o presente.",
+    "en": "I do not ask you to see the future. I ask you to breathe the present."
+  },
+  "aparencia": "Um lótus vivo, do tamanho de uma mão fechada, flutuando sempre alguns centímetros acima da palma de quem o carrega. As suas pétalas mudam de tom consoante o estado emocional de quem o segura — rosa-pálido em calma, cinzento-azulado em dúvida, dourado ténue nos raros momentos de clareza total.",
+  "lore": {
+    "descricao": {
+      "pt": "Diz a tradição do Jardim das Mil Luas que o primeiro Lótus da Tranquilidade não foi criado — nasceu. Serena das Águas Paradas, uma vidente que se recusou a usar os seus dons para prever sorteios ou destinos alheios, passou sete invernos sentada à beira da Lagoa Silenciosa, sem pedir nada, sem procurar nada, apenas observando a água parar de tremer. No sétimo inverno, uma única flor emergiu do fundo da lagoa, já aberta, já viva, e pousou nas suas mãos como se sempre lhe tivesse pertencido. Serena nunca reivindicou tê-lo criado. Dizia apenas: 'Eu só esperei o suficiente para que ele decidisse nascer.'",
+      "en": "Legend from the Garden of a Thousand Moons says the first Lotus of Tranquility was not made — it was born. Serena of the Still Waters, a seer who refused to use her gifts to foresee draws or the fates of others, spent seven winters sitting by the Silent Lagoon, asking for nothing, seeking nothing, only watching the water stop trembling. On the seventh winter, a single flower rose from the lagoon's depths, already open, already alive, and settled into her hands as if it had always belonged there."
+    }
+  },
+  "historia": [
+    {
+      "evento": "EMERGIU_DA_LAGOA_SILENCIOSA",
+      "momento": "2026-01-06T00:00:00+00:00",
+      "descricao": {
+        "pt": "Após sete invernos de espera silenciosa, o Lótus emergiu já aberto das águas da Lagoa Silenciosa, no Jardim das Mil Luas.",
+        "en": "After seven winters of silent waiting, the Lotus emerged already open from the waters of the Silent Lagoon, in the Garden of a Thousand Moons."
+      },
+      "personagem": "Serena das Águas Paradas"
+    },
+    {
+      "evento": "PRIMEIRA_RECUSA",
+      "momento": "2026-01-13T00:00:00+00:00",
+      "descricao": {
+        "pt": "Um jovem cronomante tentou usar o Lótus para 'sentir' o próximo sorteio. As pétalas fecharam-se por três dias inteiros e recusaram voltar a abrir até ele desistir da intenção.",
+        "en": "A young chronomancer tried to use the Lotus to 'sense' the next draw. Its petals closed for three full days and refused to reopen until he abandoned the intention."
+      }
+    },
+    {
+      "evento": "OFERECIDO_A_BIBLIOTECA_ETERNA",
+      "momento": "2026-01-27T00:00:00+00:00",
+      "descricao": {
+        "pt": "Serena das Águas Paradas ofereceu o Lótus à Biblioteca Eterna, para que qualquer portador de coração sincero pudesse aprender com ele — não para o possuir, mas para o acompanhar por um tempo.",
+        "en": "Serena of the Still Waters offered the Lotus to the Eternal Library, so that any sincere-hearted bearer could learn from it — not to possess it, but to walk alongside it for a while."
+      }
+    }
+  ],
+  "tags": [
+    "talismã vivo",
+    "serenidade",
+    "evolução narrativa",
+    "jardim das mil luas",
+    "cerimonial",
+    "sem efeito em sorteios"
+  ],
+  "evolucao": {
+    "sistema": "Evolução por Jornada Interior",
+    "filosofia": "O Lótus nunca evolui por sorte, vitória ou acaso — só por ações narrativas genuínas do seu portador.",
+    "nivel_atual": 1,
+    "experiencia_atual": 0,
+    "experiencia_para_proximo_nivel": 100,
+    "gatilhos_de_evolucao_validos": [
+      "perseveranca",
+      "meditacao",
+      "ajudar_outros",
+      "manter_esperanca",
+      "aceitar_derrotas",
+      "cumprir_objetivos"
+    ],
+    "gatilhos_invalidos_por_design": [
+      "sorte",
+      "acaso",
+      "acertar_um_sorteio",
+      "vencer_um_conselho"
+    ],
+    "niveis": [
+      {
+        "nivel": 1,
+        "nome": "Botão Adormecido",
+        "petalas_desbloqueadas": 0,
+        "estado_visual": "Um botão fechado, quase invisível, cor de água parada.",
+        "inscricao_do_nivel": "Ainda não é hora.",
+        "energia_associada": 0.5,
+        "descricao": "O Lótus recém-encontrado, ainda a aprender a confiar no seu portador."
+      },
+      {
+        "nivel": 2,
+        "nome": "Primeira Pétala",
+        "petalas_desbloqueadas": 1,
+        "estado_visual": "Uma única pétala entreabre-se, tremendo como quem hesita.",
+        "inscricao_do_nivel": "Continuas a voltar. Isso já é alguma coisa.",
+        "energia_associada": 1.2,
+        "descricao": "Desbloqueado após o portador demonstrar perseverança genuína perante uma primeira derrota aceite sem amargura."
+      },
+      {
+        "nivel": 3,
+        "nome": "Respiração Partilhada",
+        "petalas_desbloqueadas": 3,
+        "estado_visual": "Três pétalas abertas, sincronizando-se lentamente com a respiração do portador.",
+        "inscricao_do_nivel": "O teu silêncio já não está sozinho.",
+        "energia_associada": 2.4,
+        "descricao": "Desbloqueado através de meditação sustentada — sessões de quietude sem propósito de adivinhação."
+      },
+      {
+        "nivel": 4,
+        "nome": "Mãos Que Ajudam",
+        "petalas_desbloqueadas": 5,
+        "estado_visual": "Cinco pétalas, emitindo um brilho quente sempre que o portador ajuda outra personagem sem esperar recompensa.",
+        "inscricao_do_nivel": "Deste sem pedir. Eu vi.",
+        "energia_associada": 4.1,
+        "descricao": "Desbloqueado ao ajudar outra personagem do universo Ariadne de forma desinteressada."
+      },
+      {
+        "nivel": 5,
+        "nome": "Esperança Sem Garantias",
+        "petalas_desbloqueadas": 7,
+        "estado_visual": "Sete pétalas plenamente abertas, tom dourado ténue permanente.",
+        "inscricao_do_nivel": "Não sabes o que vem a seguir. E ainda assim continuas.",
+        "energia_associada": 6.8,
+        "descricao": "Desbloqueado ao manter esperança visível após uma sequência de resultados narrativamente adversos."
+      },
+      {
+        "nivel": 6,
+        "nome": "Derrota Aceite",
+        "petalas_desbloqueadas": 8,
+        "estado_visual": "Oito pétalas, com uma nona a formar-se lentamente no centro.",
+        "inscricao_do_nivel": "Perder também é uma forma de continuar.",
+        "energia_associada": 9.5,
+        "descricao": "Desbloqueado quando o portador aceita uma derrota significativa sem procurar culpados nem atalhos."
+      },
+      {
+        "nivel": 7,
+        "nome": "Lótus em Plena Flor",
+        "petalas_desbloqueadas": 9,
+        "estado_visual": "Nove pétalas em floração completa, flutuando livremente, irradiando luz suave e constante em todas as direções.",
+        "inscricao_do_nivel": "Não te dei sorte. Dei-te a ti mesmo, de volta.",
+        "energia_associada": 13.0,
+        "descricao": "O estado mais elevado conhecido do Lótus — alcançado apenas por portadores que cumpriram um objetivo pessoal genuíno sem nunca terem pedido ao Lótus para prever o caminho."
+      }
+    ]
+  }
+}

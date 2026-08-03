@@ -1,0 +1,95 @@
+{
+  "id": "ART-STAR-LYRA-0001",
+  "nome": {
+    "pt": "Estrela Cadente de Lyra",
+    "en": "Falling Star of Lyra",
+    "es": "Estrella Fugaz de Lyra",
+    "fr": "Étoile Filante de Lyra"
+  },
+  "tipo": "FRAGMENTO_CELESTIAL",
+  "raridade": "MITICO",
+  "multiplicador": 1.0,
+  "criador": {
+    "id": "CONSTELLATION-LYRA",
+    "nome": "Constelação de Lyra"
+  },
+  "geracao_criacao": 1,
+  "donos": [
+    "Selene, a Guardiã dos Céus"
+  ],
+  "energia_acumulada": 999.0,
+  "conselhos": 12,
+  "estado": "SUSPENSA_NO_OBSERVATORIO_CELESTIAL",
+  "universo_origem": 1783716108367178646,
+  "portador_atual": "Selene, a Guardiã dos Céus",
+  "vezes_encontrado": 1,
+  "execucoes_sobrevividas": 1200,
+  "historia": [
+    {
+      "evento": "DESPRENDEU_SE_DE_LYRA",
+      "momento": "2026-07-30T22:22:22+00:00"
+    },
+    {
+      "evento": "RECOLHIDA_ANTES_DE_TOCAR_O_SOLO",
+      "momento": "2026-07-30T22:22:27+00:00",
+      "personagem": "Selene, a Guardiã dos Céus"
+    }
+  ],
+  "corrupcao_sombria": 0.0,
+  "purificado": true,
+  "cor_principal": "AZUL_ESTELAR",
+  "material": {
+    "pt": "Cristal de Luz Cósmica",
+    "en": "Crystal of Cosmic Light"
+  },
+  "efeitos": {
+    "tipo": "SIMBOLO_DOS_DESEJOS",
+    "cerimonial": true,
+    "brilho_noturno": true,
+    "altera_algoritmo": false,
+    "altera_resultados": false,
+    "altera_probabilidades": false
+  },
+  "bencaos": {
+    "inspiracao": 100,
+    "esperanca": 100,
+    "sorte": 94,
+    "orientacao": 98
+  },
+  "ritual": {
+    "nome": {
+      "pt": "Desejo sob Lyra",
+      "en": "Wish beneath Lyra"
+    },
+    "mensagens": {
+      "pt": [
+        "⭐ A luz de Lyra atravessa o Observatório.",
+        "O Conselho fecha os olhos.",
+        "Um desejo é confiado ao céu."
+      ],
+      "en": [
+        "⭐ The light of Lyra crosses the Observatory.",
+        "The Council closes its eyes.",
+        "A wish is entrusted to the sky."
+      ]
+    }
+  },
+  "inscricao": {
+    "pt": "Nenhum desejo sincero desaparece verdadeiramente.",
+    "en": "No sincere wish ever truly disappears."
+  },
+  "lore": {
+    "descricao": {
+      "pt": "Um fragmento de estrela recolhido por Selene poucos instantes antes de tocar o mundo mortal. No seu interior continuam a viajar milhares de desejos formulados ao longo dos séculos.",
+      "en": "A fragment of a star collected by Selene moments before it touched the mortal world. Thousands of wishes made across the centuries continue to travel within it."
+    }
+  },
+  "tags": [
+    "estrela",
+    "lyra",
+    "desejo",
+    "ceu",
+    "esperanca",
+    "mitico"
+  ]
+}
