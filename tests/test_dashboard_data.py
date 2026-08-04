@@ -19,11 +19,15 @@ from core.services.dashboard_data import (
     HeroRow,
     HouseEntry,
     LegendRow,
+    PrizeCategoryAggregate,
+    PrizeCategoryRow,
+    PrizeCategorySummary,
     _is_empty,
     _NormalizationResult,
     _NormalizedIndividual,
     _normalize_archive,
     _normalize_individual_record,
+    _PRIZE_CATEGORY_LABELS,
     build_characters_rows,
     build_dashboard_dataset,
     build_economy_rows,
@@ -33,6 +37,8 @@ from core.services.dashboard_data import (
     build_houses,
     build_key_base_rows,
     build_legends_rows,
+    build_prize_category_rows,
+    build_prize_category_summary,
 )
 
 REAL_2026_DATASET_PATH = Path(
@@ -545,6 +551,246 @@ class TestBuildEconomyRealDataset(unittest.TestCase):
         before = json.loads(REAL_2026_DATASET_PATH.read_text(encoding="utf-8"))
         build_economy_rows(self.sorteios, year=2026)
         build_economy_summary(self.rows, year=2026)
+        after = json.loads(REAL_2026_DATASET_PATH.read_text(encoding="utf-8"))
+        self.assertEqual(before, after)
+
+
+# Real premios.categorias copied verbatim from draw 040/2026 — one of the
+# 15 draws with a complete category breakdown
+# (qualidade_dados.categorias_premio_disponiveis=true). Category 1 has a
+# real percentagem_portugal_no_total of None (0 winners that draw), kept
+# on purpose to exercise "ignores None" without fabricating a fixture.
+REAL_CATEGORIAS_040_2026 = [
+    {"categoria": 1, "acertos": "5 números + 2 estrelas", "vencedores_portugal": 0, "vencedores_total": 0, "percentagem_portugal_no_total": None},
+    {"categoria": 2, "acertos": "5 números + 1 estrela", "vencedores_portugal": 0, "vencedores_total": 3, "percentagem_portugal_no_total": 0.0},
+    {"categoria": 3, "acertos": "5 números + 0 estrelas", "vencedores_portugal": 0, "vencedores_total": 9, "percentagem_portugal_no_total": 0.0},
+    {"categoria": 4, "acertos": "4 números + 2 estrelas", "vencedores_portugal": 2, "vencedores_total": 23, "percentagem_portugal_no_total": 8.695652},
+    {"categoria": 5, "acertos": "4 números + 1 estrela", "vencedores_portugal": 45, "vencedores_total": 640, "percentagem_portugal_no_total": 7.03125},
+    {"categoria": 6, "acertos": "3 números + 2 estrelas", "vencedores_portugal": 156, "vencedores_total": 1623, "percentagem_portugal_no_total": 9.61183},
+    {"categoria": 7, "acertos": "4 números + 0 estrelas", "vencedores_portugal": 90, "vencedores_total": 1365, "percentagem_portugal_no_total": 6.593407},
+    {"categoria": 8, "acertos": "2 números + 2 estrelas", "vencedores_portugal": 2312, "vencedores_total": 24973, "percentagem_portugal_no_total": 9.257999},
+    {"categoria": 9, "acertos": "3 números + 1 estrela", "vencedores_portugal": 2479, "vencedores_total": 30031, "percentagem_portugal_no_total": 8.254803},
+    {"categoria": 10, "acertos": "3 números + 0 estrelas", "vencedores_portugal": 3891, "vencedores_total": 58287, "percentagem_portugal_no_total": 6.675588},
+    {"categoria": 11, "acertos": "1 número + 2 estrelas", "vencedores_portugal": 12438, "vencedores_total": 128487, "percentagem_portugal_no_total": 9.680357},
+    {"categoria": 12, "acertos": "2 números + 1 estrela", "vencedores_portugal": 35008, "vencedores_total": 432564, "percentagem_portugal_no_total": 8.093138},
+    {"categoria": 13, "acertos": "2 números + 0 estrelas", "vencedores_portugal": 57942, "vencedores_total": 858994, "percentagem_portugal_no_total": 6.745332},
+]
+
+
+def make_draw_record_with_categorias(categorias=None, categorias_disponiveis=True, **overrides):
+    if categorias is None:
+        categorias = REAL_CATEGORIAS_040_2026
+    record = make_draw_record(
+        numero_sorteio="040/2026",
+        data="2026-05-19",
+        premios={
+            "categorias": categorias,
+            "houve_vencedor_1_premio_total": False,
+            "houve_vencedor_1_premio_portugal": False,
+            "total_vencedores_todas_categorias": sum(c["vencedores_total"] for c in categorias) if categorias else None,
+            "total_vencedores_portugal_todas_categorias": sum(c["vencedores_portugal"] for c in categorias) if categorias else None,
+        },
+        qualidade_dados={
+            "dados_financeiros_disponiveis": True,
+            "categorias_premio_disponiveis": categorias_disponiveis,
+            "campos_em_falta": [],
+        },
+    )
+    record.update(overrides)
+    return record
+
+
+class TestPrizeCategoryLabels(unittest.TestCase):
+    def test_labels_match_all_15_real_draws_with_categorias(self):
+        data = json.loads(REAL_2026_DATASET_PATH.read_text(encoding="utf-8"))
+        expected = tuple(_PRIZE_CATEGORY_LABELS)
+        checked = 0
+        for s in data["sorteios"]:
+            categorias = (s.get("premios") or {}).get("categorias")
+            if not isinstance(categorias, list):
+                continue
+            pairs = tuple((c["categoria"], c["acertos"]) for c in sorted(categorias, key=lambda c: c["categoria"]))
+            self.assertEqual(pairs, expected, f"mismatch in {s['numero_sorteio']}")
+            checked += 1
+        self.assertEqual(checked, 15)
+
+
+class TestBuildPrizeCategoryRows(unittest.TestCase):
+    def test_generates_exactly_13_rows_per_draw(self):
+        rows = build_prize_category_rows([make_draw_record_with_categorias()])
+        self.assertEqual(len(rows), 13)
+        self.assertEqual([r.categoria for r in rows], [c for c, _ in _PRIZE_CATEGORY_LABELS])
+        self.assertEqual([r.acertos for r in rows], [a for _, a in _PRIZE_CATEGORY_LABELS])
+
+    def test_maps_real_values_from_a_complete_draw(self):
+        rows = build_prize_category_rows([make_draw_record_with_categorias()])
+        by_categoria = {r.categoria: r for r in rows}
+
+        cat1 = by_categoria[1]
+        self.assertEqual(cat1.vencedores_portugal, 0)
+        self.assertEqual(cat1.vencedores_total, 0)
+        self.assertIsNone(cat1.percentagem_portugal_no_total)
+        self.assertIs(cat1.categorias_disponiveis, True)
+
+        cat13 = by_categoria[13]
+        self.assertEqual(cat13.vencedores_portugal, 57942)
+        self.assertEqual(cat13.vencedores_total, 858994)
+        self.assertEqual(cat13.percentagem_portugal_no_total, 6.745332)
+        self.assertIs(cat13.categorias_disponiveis, True)
+
+        self.assertTrue(all(r.categorias_disponiveis is True for r in rows))
+        self.assertTrue(all(r.numero_sorteio == "040/2026" for r in rows))
+        self.assertTrue(all(r.data == "2026-05-19" for r in rows))
+
+    def test_draw_without_categorias_has_13_rows_with_only_variable_fields_none(self):
+        rows = build_prize_category_rows([make_draw_record()])
+        self.assertEqual(len(rows), 13)
+        for row, (categoria, acertos) in zip(rows, _PRIZE_CATEGORY_LABELS):
+            with self.subTest(categoria=categoria):
+                self.assertEqual(row.categoria, categoria)
+                self.assertEqual(row.acertos, acertos)
+                self.assertIsNone(row.vencedores_portugal)
+                self.assertIsNone(row.vencedores_total)
+                self.assertIsNone(row.percentagem_portugal_no_total)
+                self.assertIs(row.categorias_disponiveis, False)
+
+    def test_categorias_disponiveis_comes_from_qualidade_dados_not_inferred(self):
+        # categorias IS a real, populated list here, but
+        # qualidade_dados.categorias_premio_disponiveis is explicitly
+        # False — the flag must win, never be inferred from the values
+        # actually being present.
+        record = make_draw_record_with_categorias(categorias_disponiveis=False)
+        rows = build_prize_category_rows([record])
+        self.assertTrue(all(r.categorias_disponiveis is False for r in rows))
+        # The values themselves are still copied through — only the flag
+        # reflects the (contradictory, hypothetical) qualidade_dados.
+        by_categoria = {r.categoria: r for r in rows}
+        self.assertEqual(by_categoria[13].vencedores_total, 858994)
+
+    def test_year_filter_matches_other_builders(self):
+        draw_2025 = make_draw_record(numero_sorteio="104/2025", calendario={"ano": 2025})
+        draw_2026 = make_draw_record_with_categorias()
+        rows = build_prize_category_rows([draw_2025, draw_2026], year=2026)
+        self.assertEqual(len(rows), 13)
+        self.assertTrue(all(r.numero_sorteio == "040/2026" for r in rows))
+
+    def test_row_is_frozen(self):
+        row = build_prize_category_rows([make_draw_record()])[0]
+        with self.assertRaises(dataclasses.FrozenInstanceError):
+            row.vencedores_total = 0
+
+
+class TestBuildPrizeCategorySummary(unittest.TestCase):
+    def test_por_categoria_has_exactly_13_aggregates_ordered_by_categoria(self):
+        rows = build_prize_category_rows([make_draw_record_with_categorias()])
+        summary = build_prize_category_summary(rows, year=2026)
+        self.assertEqual(len(summary.por_categoria), 13)
+        self.assertEqual([a.categoria for a in summary.por_categoria], [c for c, _ in _PRIZE_CATEGORY_LABELS])
+
+    def test_percentagem_media_ignores_none(self):
+        # Two draws, same category 1: one real observation
+        # (percentagem=10.0) and one None (0 winners that draw). The
+        # average must be 10.0, not 5.0 (which would treat None as 0).
+        categorias_a = [dict(c) for c in REAL_CATEGORIAS_040_2026]
+        categorias_a[0] = {"categoria": 1, "acertos": "5 números + 2 estrelas", "vencedores_portugal": 1, "vencedores_total": 5, "percentagem_portugal_no_total": 10.0}
+        draw_a = make_draw_record_with_categorias(categorias=categorias_a, numero_sorteio="040/2026")
+        draw_b = make_draw_record_with_categorias(numero_sorteio="041/2026", data="2026-05-22")  # category 1 stays None here
+        rows = build_prize_category_rows([draw_a, draw_b], year=2026)
+        summary = build_prize_category_summary(rows, year=2026)
+        cat1 = next(a for a in summary.por_categoria if a.categoria == 1)
+        self.assertEqual(cat1.percentagem_portugal_no_total_media, 10.0)
+        self.assertEqual(cat1.sorteios_com_dados, 2)  # vencedores_total present (5 and 0) in both
+
+    def test_no_real_observations_returns_none_aggregates_and_zero_percentage(self):
+        rows = build_prize_category_rows([make_draw_record(), make_draw_record(numero_sorteio="058/2026")])
+        summary = build_prize_category_summary(rows, year=2026)
+        self.assertEqual(summary.sorteios_no_periodo, 2)
+        self.assertEqual(summary.sorteios_com_categorias_disponiveis, 0)
+        self.assertEqual(summary.percentagem_sorteios_com_categorias_disponiveis, 0.0)
+        for aggregate in summary.por_categoria:
+            with self.subTest(categoria=aggregate.categoria):
+                self.assertEqual(aggregate.sorteios_com_dados, 0)
+                self.assertIsNone(aggregate.vencedores_portugal_total)
+                self.assertIsNone(aggregate.vencedores_total_total)
+                self.assertIsNone(aggregate.percentagem_portugal_no_total_media)
+
+    def test_sorteios_com_dados_is_consistent_across_categories_when_draw_has_data(self):
+        rows = build_prize_category_rows([make_draw_record_with_categorias()])
+        summary = build_prize_category_summary(rows, year=2026)
+        self.assertTrue(all(a.sorteios_com_dados == 1 for a in summary.por_categoria))
+
+    def test_sorteios_no_periodo_derived_from_distinct_numero_sorteio(self):
+        rows = build_prize_category_rows([
+            make_draw_record_with_categorias(),
+            make_draw_record(numero_sorteio="041/2026", data="2026-05-22"),
+        ], year=2026)
+        summary = build_prize_category_summary(rows, year=2026)
+        self.assertEqual(summary.sorteios_no_periodo, 2)
+        self.assertEqual(summary.sorteios_com_categorias_disponiveis, 1)
+        self.assertEqual(summary.percentagem_sorteios_com_categorias_disponiveis, 50.0)
+
+    def test_result_is_frozen(self):
+        summary = build_prize_category_summary([], year=2026)
+        with self.assertRaises(dataclasses.FrozenInstanceError):
+            summary.ano = 2025
+
+
+@unittest.skipUnless(REAL_2026_DATASET_PATH.exists(), "real 2026 dataset not present in this checkout")
+class TestBuildPrizeCategoryRealDataset(unittest.TestCase):
+    """Cross-checks build_prize_category_rows/build_prize_category_summary
+    against the actual datasets/historical/euromillions/2026/... file —
+    read-only, never modified by this test.
+    """
+
+    @classmethod
+    def setUpClass(cls):
+        data = json.loads(REAL_2026_DATASET_PATH.read_text(encoding="utf-8"))
+        cls.sorteios = data["sorteios"]
+        cls.rows = build_prize_category_rows(cls.sorteios, year=2026)
+        cls.summary = build_prize_category_summary(cls.rows, year=2026)
+
+    def test_total_rows_is_61_draws_times_13_categories(self):
+        self.assertEqual(len(self.rows), 61 * 13)
+
+    def test_coverage_matches_qualidade_dados(self):
+        self.assertEqual(self.summary.sorteios_no_periodo, 61)
+        self.assertEqual(self.summary.sorteios_com_categorias_disponiveis, 15)
+        self.assertAlmostEqual(
+            self.summary.percentagem_sorteios_com_categorias_disponiveis, 15 / 61 * 100, places=6,
+        )
+
+    def test_por_categoria_has_13_entries_ordered(self):
+        self.assertEqual(len(self.summary.por_categoria), 13)
+        self.assertEqual([a.categoria for a in self.summary.por_categoria], list(range(1, 14)))
+
+    def test_category_1_real_aggregate_mostly_none_percentage(self):
+        # Real Euromillions data: category 1 (5+2, the jackpot tier) had
+        # 0 Portuguese winners across the 15 draws, and only 2 of the 15
+        # draws had any winner at all anywhere — the other 13 have a real
+        # null percentagem_portugal_no_total (0 winners, not missing data).
+        cat1 = next(a for a in self.summary.por_categoria if a.categoria == 1)
+        self.assertEqual(cat1.sorteios_com_dados, 15)
+        self.assertEqual(cat1.vencedores_portugal_total, 0)
+        self.assertEqual(cat1.vencedores_total_total, 2)
+        self.assertAlmostEqual(cat1.percentagem_portugal_no_total_media, 0.0, places=6)
+
+    def test_category_13_real_aggregate_full_coverage(self):
+        cat13 = next(a for a in self.summary.por_categoria if a.categoria == 13)
+        self.assertEqual(cat13.sorteios_com_dados, 15)
+        self.assertEqual(cat13.vencedores_portugal_total, 1206618)
+        self.assertEqual(cat13.vencedores_total_total, 16375705)
+        self.assertAlmostEqual(cat13.percentagem_portugal_no_total_media, 7.4880704, places=6)
+
+    def test_partial_draw_055_has_no_category_data(self):
+        row_055 = [r for r in self.rows if r.numero_sorteio == "055/2026"]
+        self.assertEqual(len(row_055), 13)
+        self.assertTrue(all(r.categorias_disponiveis is False for r in row_055))
+        self.assertTrue(all(r.vencedores_total is None for r in row_055))
+
+    def test_never_mutates_the_source_dataset(self):
+        before = json.loads(REAL_2026_DATASET_PATH.read_text(encoding="utf-8"))
+        build_prize_category_rows(self.sorteios, year=2026)
+        build_prize_category_summary(self.rows, year=2026)
         after = json.loads(REAL_2026_DATASET_PATH.read_text(encoding="utf-8"))
         self.assertEqual(before, after)
 
@@ -1219,6 +1465,29 @@ class TestBuildDashboardDataset(unittest.TestCase):
         self.assertEqual(dataset.economy_draws, tuple(rows))
         self.assertIs(dataset.economy_summary, summary)
         # Still fully independent from the untouched placeholder fields.
+        self.assertIsInstance(dataset.economy, EconomyPlaceholder)
+
+    def test_prize_category_rows_and_summary_default_to_empty_and_none(self):
+        dataset = build_dashboard_dataset([], [], [], [], [])
+        self.assertEqual(dataset.prize_category_rows, ())
+        self.assertIsNone(dataset.prize_category_summary)
+        # Untouched by this commit's fields.
+        self.assertEqual(dataset.economy_draws, ())
+        self.assertIsNone(dataset.economy_summary)
+        self.assertIsInstance(dataset.economy, EconomyPlaceholder)
+
+    def test_prize_category_rows_and_summary_are_wired_through_when_provided(self):
+        rows = build_prize_category_rows([make_draw_record_with_categorias()], year=2026)
+        summary = build_prize_category_summary(rows, year=2026)
+        dataset = build_dashboard_dataset(
+            [], [], [], [], [], prize_category_rows=rows, prize_category_summary=summary,
+        )
+        self.assertEqual(dataset.prize_category_rows, tuple(rows))
+        self.assertIs(dataset.prize_category_summary, summary)
+        # Still fully independent from Economy and from the untouched
+        # placeholder fields.
+        self.assertEqual(dataset.economy_draws, ())
+        self.assertIsNone(dataset.economy_summary)
         self.assertIsInstance(dataset.economy, EconomyPlaceholder)
 
 

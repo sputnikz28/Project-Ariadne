@@ -190,6 +190,72 @@ class EconomySummary:
     nota: str
 
 
+# A tabela oficial fixa dos 13 escalões de prémio do Euromilhões — regra
+# do jogo, não um facto por sorteio. Verificada byte-idêntica (categoria +
+# acertos, mesma ordem) nos 15 sorteios reais de 2026 que têm
+# premios.categorias populado (testes de regressão dedicados confirmam
+# isto contra o dataset real). Nunca lida do dataset em runtime.
+_PRIZE_CATEGORY_LABELS: tuple[tuple[int, str], ...] = (
+    (1, "5 números + 2 estrelas"),
+    (2, "5 números + 1 estrela"),
+    (3, "5 números + 0 estrelas"),
+    (4, "4 números + 2 estrelas"),
+    (5, "4 números + 1 estrela"),
+    (6, "3 números + 2 estrelas"),
+    (7, "4 números + 0 estrelas"),
+    (8, "2 números + 2 estrelas"),
+    (9, "3 números + 1 estrela"),
+    (10, "3 números + 0 estrelas"),
+    (11, "1 número + 2 estrelas"),
+    (12, "2 números + 1 estrela"),
+    (13, "2 números + 0 estrelas"),
+)
+
+
+@dataclass(frozen=True)
+class PrizeCategoryRow:
+    """Uma por (sorteio, categoria) — sempre len(_PRIZE_CATEGORY_LABELS)
+    (13) linhas por sorteio do ano. `categoria`/`acertos` vêm sempre da
+    tabela fixa (nunca None — são regra do jogo, não dado observado);
+    `vencedores_portugal`/`vencedores_total`/`percentagem_portugal_no_total`
+    são os únicos campos variáveis e ficam None quando o sorteio não tem
+    premios.categorias real.
+    """
+    numero_sorteio: str
+    data: str
+    categoria: int
+    acertos: str
+    vencedores_portugal: int | None
+    vencedores_total: int | None
+    percentagem_portugal_no_total: float | None
+    categorias_disponiveis: bool
+
+
+@dataclass(frozen=True)
+class PrizeCategoryAggregate:
+    categoria: int
+    acertos: str
+    sorteios_com_dados: int
+    vencedores_portugal_total: int | None
+    vencedores_total_total: int | None
+    percentagem_portugal_no_total_media: float | None
+
+
+@dataclass(frozen=True)
+class PrizeCategorySummary:
+    """Agregação pura sobre PrizeCategoryRow, por categoria — 13
+    PrizeCategoryAggregate, ordenados por categoria (1 a 13), cada um
+    somando/calculando a média apenas sobre os sorteios em que aquele
+    campo é real (não-None). Estrutura nova e aditiva.
+    """
+    ano: int
+    sorteios_no_periodo: int
+    sorteios_com_categorias_disponiveis: int
+    percentagem_sorteios_com_categorias_disponiveis: float
+    por_categoria: tuple[PrizeCategoryAggregate, ...]
+    nota: str
+
+
 @dataclass(frozen=True)
 class ExecutiveSummary:
     total_heroes: int
@@ -216,6 +282,8 @@ class DashboardDataset:
     methodology: Mapping[str, Any]
     economy_draws: tuple[EconomyDrawRow, ...] = ()
     economy_summary: EconomySummary | None = None
+    prize_category_rows: tuple[PrizeCategoryRow, ...] = ()
+    prize_category_summary: PrizeCategorySummary | None = None
 
 
 # ---------------------------------------------------------------------------
@@ -453,6 +521,112 @@ def build_economy_summary(
             f"sorteios de {year} (estatisticas_financeiras/premios completos, "
             "confirmado por qualidade_dados). Os restantes sorteios ficam com "
             "None nos campos económicos — nunca estimados."
+        ),
+    )
+
+
+# ---------------------------------------------------------------------------
+# Categorias de Prémios — mesma fonte, mesmo filtro de ano e mesma
+# filosofia de build_economy_rows/build_economy_summary (draw_records: a
+# lista `sorteios` já carregada, nunca lida por este módulo).
+# categoria/acertos vêm sempre de _PRIZE_CATEGORY_LABELS (regra fixa do
+# jogo, verificada nos testes contra os 15 sorteios reais com dado);
+# vencedores_portugal/vencedores_total/percentagem_portugal_no_total são
+# os únicos campos variáveis e ficam None quando o sorteio não tem
+# premios.categorias real. categorias_disponiveis vem sempre de
+# qualidade_dados.categorias_premio_disponiveis, nunca inferido a partir
+# dos valores.
+# ---------------------------------------------------------------------------
+
+def build_prize_category_rows(
+    draw_records: Sequence[DashboardSourceRecord], year: int = 2026,
+) -> list[PrizeCategoryRow]:
+    """draw_records: a mesma lista `sorteios` recebida por
+    build_key_base_rows/build_economy_rows — já carregada, nunca lida por
+    esta função.
+
+    Mesmo filtro de calendario.ano == year. Exatamente
+    len(_PRIZE_CATEGORY_LABELS) (13) PrizeCategoryRow por sorteio no ano
+    — incluindo os sorteios sem premios.categorias real, com os campos
+    variáveis a None. A lacuna fica visível linha a linha, nunca um
+    sorteio inteiro a desaparecer da lista.
+    """
+    rows = []
+    for d in draw_records:
+        if d["calendario"]["ano"] != year:
+            continue
+        numero_sorteio = d["numero_sorteio"]
+        data_sorteio = d["data"]
+        premios = d.get("premios") or {}
+        qualidade = d.get("qualidade_dados") or {}
+        disponiveis = bool(qualidade.get("categorias_premio_disponiveis"))
+
+        categorias_raw = premios.get("categorias")
+        by_categoria: dict[int, Mapping[str, Any]] = {}
+        if isinstance(categorias_raw, Sequence) and not isinstance(categorias_raw, (str, bytes)):
+            for entry in categorias_raw:
+                if isinstance(entry, Mapping) and isinstance(entry.get("categoria"), int):
+                    by_categoria[entry["categoria"]] = entry
+
+        for categoria, acertos in _PRIZE_CATEGORY_LABELS:
+            entry = by_categoria.get(categoria)
+            rows.append(PrizeCategoryRow(
+                numero_sorteio=numero_sorteio,
+                data=data_sorteio,
+                categoria=categoria,
+                acertos=acertos,
+                vencedores_portugal=entry.get("vencedores_portugal") if entry else None,
+                vencedores_total=entry.get("vencedores_total") if entry else None,
+                percentagem_portugal_no_total=entry.get("percentagem_portugal_no_total") if entry else None,
+                categorias_disponiveis=disponiveis,
+            ))
+    return rows
+
+
+def build_prize_category_summary(
+    rows: Sequence[PrizeCategoryRow], year: int = 2026,
+) -> PrizeCategorySummary:
+    """Pura — sem I/O. `rows`: o resultado já construído de
+    build_prize_category_rows. sorteios_no_periodo é derivado da
+    contagem de numero_sorteio distintos em `rows` (não de um parâmetro
+    externo), consistente com build_prize_category_rows emitir sempre 13
+    linhas por sorteio do período. Cada agregado por categoria
+    soma/calcula a média apenas sobre os sorteios em que esse campo é
+    real (não-None) para aquela categoria.
+    """
+    rows = list(rows)
+    numeros_sorteio = {r.numero_sorteio for r in rows}
+    total_sorteios = len(numeros_sorteio)
+    disponiveis_por_sorteio = {r.numero_sorteio: r.categorias_disponiveis for r in rows}
+    n_com_categorias = sum(1 for v in disponiveis_por_sorteio.values() if v)
+
+    aggregates = []
+    for categoria, acertos in _PRIZE_CATEGORY_LABELS:
+        cat_rows = [r for r in rows if r.categoria == categoria]
+        sorteios_com_dados = sum(1 for r in cat_rows if r.vencedores_total is not None)
+        aggregates.append(PrizeCategoryAggregate(
+            categoria=categoria,
+            acertos=acertos,
+            sorteios_com_dados=sorteios_com_dados,
+            vencedores_portugal_total=_sum_or_none(r.vencedores_portugal for r in cat_rows),
+            vencedores_total_total=_sum_or_none(r.vencedores_total for r in cat_rows),
+            percentagem_portugal_no_total_media=_mean_or_none(r.percentagem_portugal_no_total for r in cat_rows),
+        ))
+
+    return PrizeCategorySummary(
+        ano=year,
+        sorteios_no_periodo=total_sorteios,
+        sorteios_com_categorias_disponiveis=n_com_categorias,
+        percentagem_sorteios_com_categorias_disponiveis=(
+            (n_com_categorias / total_sorteios * 100) if total_sorteios else 0.0
+        ),
+        por_categoria=tuple(aggregates),
+        nota=(
+            f"Categorias de prémios reais disponíveis para {n_com_categorias} de "
+            f"{total_sorteios} sorteios de {year} (confirmado por "
+            "qualidade_dados.categorias_premio_disponiveis). Categoria/acertos usam "
+            "a tabela oficial fixa de escalões; vencedores/percentagem ficam None "
+            "nos sorteios sem dado — nunca estimados."
         ),
     )
 
@@ -709,20 +883,23 @@ def build_dashboard_dataset(
     gerado_em: str | None = None,
     economy_draws: Sequence[EconomyDrawRow] = (),
     economy_summary: EconomySummary | None = None,
+    prize_category_rows: Sequence[PrizeCategoryRow] = (),
+    prize_category_summary: PrizeCategorySummary | None = None,
 ) -> DashboardDataset:
     """Assembles rows already built by the other functions in this module
     (build_heroes_rows, build_legends_rows, build_key_base_rows,
     build_characters_rows, build_houses, build_economy_rows /
-    build_economy_summary, and — once they exist — their
+    build_economy_summary, build_prize_category_rows /
+    build_prize_category_summary, and — once they exist — their
     Generations/Frequencies counterparts) into one DashboardDataset. Never
     calls those builders itself, never reads a file, never touches a
     Registry — every argument here is already-built data handed in by the
     caller.
 
-    economy_draws/economy_summary are new and purely additive: they
-    default to ()/None and never touch economy/economia
-    (EconomyPlaceholder), which keeps every existing caller and test
-    byte-identical.
+    economy_draws/economy_summary/prize_category_rows/
+    prize_category_summary are all new and purely additive: they default
+    to ()/None and never touch economy/economia (EconomyPlaceholder) or
+    each other, which keeps every existing caller and test byte-identical.
     """
     resolved_economy = economy if economy is not None else EconomyPlaceholder()
     return DashboardDataset(
@@ -743,4 +920,6 @@ def build_dashboard_dataset(
         methodology=MappingProxyType(dict(methodology)) if methodology is not None else MappingProxyType({}),
         economy_draws=tuple(economy_draws),
         economy_summary=economy_summary,
+        prize_category_rows=tuple(prize_category_rows),
+        prize_category_summary=prize_category_summary,
     )
