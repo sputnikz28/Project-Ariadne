@@ -5,13 +5,17 @@ contract that it never touches the registries or disk itself.
 """
 
 import dataclasses
+import json
 import unittest
+from pathlib import Path
 from types import MappingProxyType
 
 from core.services.dashboard_data import (
     CharacterRow,
     DrawRow,
+    EconomyDrawRow,
     EconomyPlaceholder,
+    EconomySummary,
     HeroRow,
     HouseEntry,
     LegendRow,
@@ -22,11 +26,17 @@ from core.services.dashboard_data import (
     _normalize_individual_record,
     build_characters_rows,
     build_dashboard_dataset,
+    build_economy_rows,
+    build_economy_summary,
     build_executive_summary,
     build_heroes_rows,
     build_houses,
     build_key_base_rows,
     build_legends_rows,
+)
+
+REAL_2026_DATASET_PATH = Path(
+    "datasets/historical/euromillions/2026/euromilhoes_2026_001_061_dataset_completo.json"
 )
 
 
@@ -233,6 +243,310 @@ class TestBuildKeyBaseRows(unittest.TestCase):
         row = build_key_base_rows([make_draw_record()])[0]
         with self.assertRaises(dataclasses.FrozenInstanceError):
             row.soma = 0
+
+
+# Real values copied verbatim from datasets/historical/euromillions/2026/
+# euromilhoes_2026_001_061_dataset_completo.json, draw 040/2026 — the
+# first of the 15 draws with a complete estatisticas_financeiras/premios
+# block (qualidade_dados.dados_financeiros_disponiveis=true).
+def make_complete_economy_record(**overrides):
+    record = make_draw_record(
+        numero_sorteio="040/2026",
+        data="2026-05-19",
+        estatisticas_financeiras={
+            "receita_liquida_apostas_eur": 44929255.8,
+            "montante_para_premios_eur": 22464627.9,
+            "percentagem_receita_para_premios": 50.0,
+            "previsao_1_premio_com_jackpot_eur": 105000000,
+            "registos_portugal": 872428,
+            "combinacoes_registadas_portugal": 1416011,
+            "apostas_registadas_portugal": 1514096,
+            "combinacoes_por_registo": 1.623069,
+            "apostas_por_registo": 1.735497,
+            "receita_media_por_aposta_eur": 29.673981,
+        },
+        premios={
+            "categorias": [],
+            "houve_vencedor_1_premio_total": False,
+            "houve_vencedor_1_premio_portugal": False,
+            "total_vencedores_todas_categorias": 1536999,
+            "total_vencedores_portugal_todas_categorias": 114363,
+        },
+        qualidade_dados={
+            "dados_financeiros_disponiveis": True,
+            "categorias_premio_disponiveis": True,
+            "campos_em_falta": [],
+        },
+    )
+    record.update(overrides)
+    return record
+
+
+# Real values copied verbatim from draw 055/2026 — the genuine partial
+# case: only previsao_1_premio_com_jackpot_eur is populated, every other
+# financial field is null, and qualidade_dados.dados_financeiros_disponiveis
+# is explicitly false (not inferred — the dataset states it directly).
+def make_partial_economy_record(**overrides):
+    record = make_draw_record(
+        numero_sorteio="055/2026",
+        data="2026-06-12",
+        estatisticas_financeiras={
+            "receita_liquida_apostas_eur": None,
+            "montante_para_premios_eur": None,
+            "percentagem_receita_para_premios": None,
+            "previsao_1_premio_com_jackpot_eur": 29000000,
+            "registos_portugal": None,
+            "combinacoes_registadas_portugal": None,
+            "apostas_registadas_portugal": None,
+            "combinacoes_por_registo": None,
+            "apostas_por_registo": None,
+            "receita_media_por_aposta_eur": None,
+        },
+        premios={
+            "categorias": None,
+            "houve_vencedor_1_premio_total": None,
+            "houve_vencedor_1_premio_portugal": None,
+            "total_vencedores_todas_categorias": None,
+            "total_vencedores_portugal_todas_categorias": None,
+        },
+        qualidade_dados={
+            "dados_financeiros_disponiveis": False,
+            "categorias_premio_disponiveis": False,
+            "campos_em_falta": ["receita_liquida_apostas_eur", "montante_para_premios_eur", "categorias_premio"],
+        },
+    )
+    record.update(overrides)
+    return record
+
+
+class TestBuildEconomyRows(unittest.TestCase):
+    def test_maps_all_fields_from_a_complete_draw(self):
+        row = build_economy_rows([make_complete_economy_record()])[0]
+        self.assertEqual(row.numero_sorteio, "040/2026")
+        self.assertEqual(row.data, "2026-05-19")
+        self.assertEqual(row.receita_liquida_apostas_eur, 44929255.8)
+        self.assertEqual(row.montante_para_premios_eur, 22464627.9)
+        self.assertEqual(row.percentagem_receita_para_premios, 50.0)
+        self.assertEqual(row.previsao_proximo_jackpot_eur, 105000000)
+        self.assertEqual(row.registos_portugal, 872428)
+        self.assertEqual(row.combinacoes_registadas_portugal, 1416011)
+        self.assertEqual(row.apostas_registadas_portugal, 1514096)
+        self.assertEqual(row.combinacoes_por_registo, 1.623069)
+        self.assertEqual(row.apostas_por_registo, 1.735497)
+        self.assertEqual(row.receita_media_por_aposta_eur, 29.673981)
+        self.assertIs(row.houve_vencedor_1_premio_total, False)
+        self.assertIs(row.houve_vencedor_1_premio_portugal, False)
+        self.assertEqual(row.total_vencedores_todas_categorias, 1536999)
+        self.assertEqual(row.total_vencedores_portugal_todas_categorias, 114363)
+        self.assertIs(row.dados_financeiros_disponiveis, True)
+        self.assertIs(row.categorias_premio_disponiveis, True)
+
+    def test_year_filter_matches_build_key_base_rows(self):
+        draw_2025 = make_draw_record(numero_sorteio="104/2025", calendario={"ano": 2025})
+        draw_2026 = make_complete_economy_record()
+        rows = build_economy_rows([draw_2025, draw_2026], year=2026)
+        self.assertEqual(len(rows), 1)
+        self.assertEqual(rows[0].numero_sorteio, "040/2026")
+
+    def test_draw_without_any_economic_block_produces_row_with_all_none(self):
+        row = build_economy_rows([make_draw_record()])[0]
+        self.assertEqual(row.numero_sorteio, "057/2026")
+        for field_name in (
+            "receita_liquida_apostas_eur", "montante_para_premios_eur",
+            "percentagem_receita_para_premios", "previsao_proximo_jackpot_eur",
+            "registos_portugal", "combinacoes_registadas_portugal",
+            "apostas_registadas_portugal", "combinacoes_por_registo",
+            "apostas_por_registo", "receita_media_por_aposta_eur",
+            "houve_vencedor_1_premio_total", "houve_vencedor_1_premio_portugal",
+            "total_vencedores_todas_categorias", "total_vencedores_portugal_todas_categorias",
+        ):
+            with self.subTest(field=field_name):
+                self.assertIsNone(getattr(row, field_name))
+        self.assertIs(row.dados_financeiros_disponiveis, False)
+        self.assertIs(row.categorias_premio_disponiveis, False)
+
+    def test_partial_055_style_draw_is_preserved_not_dropped(self):
+        rows = build_economy_rows([make_partial_economy_record()])
+        self.assertEqual(len(rows), 1)
+        row = rows[0]
+        self.assertEqual(row.numero_sorteio, "055/2026")
+        self.assertEqual(row.previsao_proximo_jackpot_eur, 29000000)
+        self.assertIsNone(row.receita_liquida_apostas_eur)
+        self.assertIsNone(row.montante_para_premios_eur)
+        self.assertIsNone(row.houve_vencedor_1_premio_total)
+        self.assertIs(row.dados_financeiros_disponiveis, False)
+        self.assertIs(row.categorias_premio_disponiveis, False)
+
+    def test_row_is_frozen(self):
+        row = build_economy_rows([make_draw_record()])[0]
+        with self.assertRaises(dataclasses.FrozenInstanceError):
+            row.receita_liquida_apostas_eur = 0.0
+
+
+class TestBuildEconomySummary(unittest.TestCase):
+    def test_no_real_observations_returns_all_none_and_zero_percentages(self):
+        rows = build_economy_rows([make_draw_record(), make_draw_record(numero_sorteio="058/2026")])
+        summary = build_economy_summary(rows, year=2026)
+        self.assertEqual(summary.sorteios_no_periodo, 2)
+        self.assertEqual(summary.sorteios_com_dados_financeiros, 0)
+        for field_name in (
+            "receita_liquida_apostas_total_eur", "montante_para_premios_total_eur",
+            "percentagem_receita_para_premios_media", "previsao_jackpot_minimo_eur",
+            "previsao_jackpot_maximo_eur", "receita_media_por_aposta_eur_media",
+            "total_vencedores_todas_categorias_soma", "total_vencedores_portugal_todas_categorias_soma",
+            "receita_media_por_sorteio_com_dados_eur", "montante_medio_para_premios_eur",
+            "jackpot_medio_previsto_eur",
+        ):
+            with self.subTest(field=field_name):
+                self.assertIsNone(getattr(summary, field_name))
+        # Coverage percentages are real 0/N computations, not fabricated —
+        # both denominators exist (2 draws), just zero draws qualify.
+        self.assertEqual(summary.percentagem_sorteios_com_dados_financeiros, 0.0)
+        self.assertEqual(summary.percentagem_sorteios_com_vencedor_1_premio_total, 0.0)
+
+    def test_percentagem_vencedores_uses_only_non_none_flags(self):
+        # 3 draws: one real winner, one real non-winner, one with no data
+        # at all (houve_vencedor_1_premio_total is None). The percentage
+        # must be computed over the 2 draws with a real flag (1/2 = 50%),
+        # never over all 3 (which would wrongly read as 1/3).
+        winner = make_complete_economy_record(numero_sorteio="040/2026")
+        non_winner = make_complete_economy_record(
+            numero_sorteio="041/2026",
+            premios={
+                "categorias": [],
+                "houve_vencedor_1_premio_total": True,
+                "houve_vencedor_1_premio_portugal": False,
+                "total_vencedores_todas_categorias": 1,
+                "total_vencedores_portugal_todas_categorias": 0,
+            },
+        )
+        no_data = make_draw_record(numero_sorteio="042/2026")
+        rows = build_economy_rows([winner, non_winner, no_data], year=2026)
+        summary = build_economy_summary(rows, year=2026)
+        self.assertEqual(summary.sorteios_com_vencedor_1_premio_total, 1)
+        self.assertEqual(summary.percentagem_sorteios_com_vencedor_1_premio_total, 50.0)
+
+    def test_cobertura_financeira_usa_qualidade_dados_nao_valores_inferidos(self):
+        # The partial 055/2026-style draw HAS a non-null economic field
+        # (previsao_proximo_jackpot_eur) but its own qualidade_dados says
+        # dados_financeiros_disponiveis=False — it must NOT count toward
+        # coverage, since coverage reflects the dataset's own honesty
+        # flag, not "does at least one field happen to be non-null".
+        rows = build_economy_rows([make_partial_economy_record(), make_draw_record()], year=2026)
+        summary = build_economy_summary(rows, year=2026)
+        self.assertEqual(summary.sorteios_no_periodo, 2)
+        self.assertEqual(summary.sorteios_com_dados_financeiros, 0)
+        self.assertEqual(summary.percentagem_sorteios_com_dados_financeiros, 0.0)
+        # But the jackpot forecast itself is still real data and must be
+        # picked up by the jackpot-specific aggregates.
+        self.assertEqual(summary.sorteios_com_previsao_jackpot, 1)
+        self.assertEqual(summary.jackpot_medio_previsto_eur, 29000000)
+
+    def test_real_values_from_two_complete_draws(self):
+        # Two real, hand-verified draws (040/2026 and 041/2026) — sums,
+        # means, min and max must match direct arithmetic on the source
+        # values, not an estimate.
+        draw_040 = make_complete_economy_record()
+        draw_041 = make_complete_economy_record(
+            numero_sorteio="041/2026",
+            data="2026-05-22",
+            estatisticas_financeiras={
+                "receita_liquida_apostas_eur": 60524917.2,
+                "montante_para_premios_eur": 30262458.6,
+                "percentagem_receita_para_premios": 50.0,
+                "previsao_1_premio_com_jackpot_eur": 115000000,
+                "registos_portugal": 1275641,
+                "combinacoes_registadas_portugal": 2142202,
+                "apostas_registadas_portugal": 2285779,
+                "combinacoes_por_registo": 1.679314,
+                "apostas_por_registo": 1.791867,
+                "receita_media_por_aposta_eur": 26.478902,
+            },
+            premios={
+                "categorias": [],
+                "houve_vencedor_1_premio_total": False,
+                "houve_vencedor_1_premio_portugal": False,
+                "total_vencedores_todas_categorias": 2138223,
+                "total_vencedores_portugal_todas_categorias": 176873,
+            },
+        )
+        rows = build_economy_rows([draw_040, draw_041], year=2026)
+        summary = build_economy_summary(rows, year=2026)
+        self.assertAlmostEqual(summary.receita_liquida_apostas_total_eur, 44929255.8 + 60524917.2, places=2)
+        self.assertAlmostEqual(summary.montante_para_premios_total_eur, 22464627.9 + 30262458.6, places=2)
+        self.assertEqual(summary.previsao_jackpot_minimo_eur, 105000000)
+        self.assertEqual(summary.previsao_jackpot_maximo_eur, 115000000)
+        self.assertEqual(summary.total_vencedores_todas_categorias_soma, 1536999 + 2138223)
+        self.assertEqual(summary.total_vencedores_portugal_todas_categorias_soma, 114363 + 176873)
+        self.assertEqual(summary.sorteios_com_dados_financeiros, 2)
+        self.assertEqual(summary.percentagem_sorteios_com_dados_financeiros, 100.0)
+
+    def test_moeda_and_ano_are_passed_through_verbatim(self):
+        summary = build_economy_summary([], year=2026, moeda="EUR")
+        self.assertEqual(summary.ano, 2026)
+        self.assertEqual(summary.moeda, "EUR")
+
+    def test_result_is_frozen(self):
+        summary = build_economy_summary([], year=2026)
+        with self.assertRaises(dataclasses.FrozenInstanceError):
+            summary.moeda = "USD"
+
+
+@unittest.skipUnless(REAL_2026_DATASET_PATH.exists(), "real 2026 dataset not present in this checkout")
+class TestBuildEconomyRealDataset(unittest.TestCase):
+    """Cross-checks build_economy_rows/build_economy_summary against the
+    actual datasets/historical/euromillions/2026/... file — read-only,
+    never modified by this test. Expected numbers were computed directly
+    from that file (see investigation notes for Commit 7) and are
+    re-verified here so a future edit to the dataset that silently
+    changes these real figures fails this test instead of going unnoticed.
+    """
+
+    @classmethod
+    def setUpClass(cls):
+        data = json.loads(REAL_2026_DATASET_PATH.read_text(encoding="utf-8"))
+        cls.sorteios = data["sorteios"]
+        cls.rows = build_economy_rows(cls.sorteios, year=2026)
+        cls.summary = build_economy_summary(cls.rows, year=2026, moeda=data["moeda"])
+
+    def test_one_row_per_draw_in_2026(self):
+        self.assertEqual(len(self.rows), 61)
+
+    def test_coverage_matches_qualidade_dados(self):
+        self.assertEqual(self.summary.sorteios_com_dados_financeiros, 15)
+        self.assertAlmostEqual(self.summary.percentagem_sorteios_com_dados_financeiros, 24.59016393442623, places=6)
+
+    def test_jackpot_forecast_coverage_and_range(self):
+        self.assertEqual(self.summary.sorteios_com_previsao_jackpot, 15)
+        self.assertEqual(self.summary.previsao_jackpot_minimo_eur, 17000000)
+        self.assertEqual(self.summary.previsao_jackpot_maximo_eur, 174000000)
+
+    def test_totals_match_direct_sum_over_the_real_dataset(self):
+        self.assertAlmostEqual(self.summary.receita_liquida_apostas_total_eur, 788128343.2, places=1)
+        self.assertAlmostEqual(self.summary.montante_para_premios_total_eur, 394064171.6, places=1)
+        self.assertEqual(self.summary.total_vencedores_todas_categorias_soma, 27951947)
+        self.assertEqual(self.summary.total_vencedores_portugal_todas_categorias_soma, 2088723)
+
+    def test_winner_percentage_denominator_excludes_draws_without_the_flag(self):
+        # Exactly 15 draws carry a real houve_vencedor_1_premio_total
+        # flag (True or False); 2 of those are True.
+        self.assertEqual(self.summary.sorteios_com_vencedor_1_premio_total, 2)
+        self.assertAlmostEqual(
+            self.summary.percentagem_sorteios_com_vencedor_1_premio_total, 2 / 15 * 100, places=6,
+        )
+
+    def test_partial_draw_055_is_present_with_only_the_jackpot_forecast(self):
+        row_055 = next(r for r in self.rows if r.numero_sorteio == "055/2026")
+        self.assertEqual(row_055.previsao_proximo_jackpot_eur, 29000000)
+        self.assertIsNone(row_055.receita_liquida_apostas_eur)
+        self.assertIs(row_055.dados_financeiros_disponiveis, False)
+
+    def test_never_mutates_the_source_dataset(self):
+        before = json.loads(REAL_2026_DATASET_PATH.read_text(encoding="utf-8"))
+        build_economy_rows(self.sorteios, year=2026)
+        build_economy_summary(self.rows, year=2026)
+        after = json.loads(REAL_2026_DATASET_PATH.read_text(encoding="utf-8"))
+        self.assertEqual(before, after)
 
 
 class TestBuildCharactersRows(unittest.TestCase):
@@ -887,6 +1201,25 @@ class TestBuildDashboardDataset(unittest.TestCase):
         dataset = build_dashboard_dataset([], [], [], [], [])
         with self.assertRaises(dataclasses.FrozenInstanceError):
             dataset.heroes = ()
+
+    def test_economy_draws_and_summary_default_to_empty_and_none(self):
+        # Purely additive: a caller that never mentions the new economy
+        # fields gets exactly the old, placeholder-only behaviour.
+        dataset = build_dashboard_dataset([], [], [], [], [])
+        self.assertEqual(dataset.economy_draws, ())
+        self.assertIsNone(dataset.economy_summary)
+        self.assertIsInstance(dataset.economy, EconomyPlaceholder)
+
+    def test_economy_draws_and_summary_are_wired_through_when_provided(self):
+        rows = build_economy_rows([make_complete_economy_record()], year=2026)
+        summary = build_economy_summary(rows, year=2026)
+        dataset = build_dashboard_dataset(
+            [], [], [], [], [], economy_draws=rows, economy_summary=summary,
+        )
+        self.assertEqual(dataset.economy_draws, tuple(rows))
+        self.assertIs(dataset.economy_summary, summary)
+        # Still fully independent from the untouched placeholder fields.
+        self.assertIsInstance(dataset.economy, EconomyPlaceholder)
 
 
 if __name__ == "__main__":

@@ -131,6 +131,66 @@ class EconomyPlaceholder:
 
 
 @dataclass(frozen=True)
+class EconomyDrawRow:
+    """Um por cada sorteio do ano em causa (mesma granularidade de
+    DrawRow), lido de estatisticas_financeiras/premios/qualidade_dados no
+    dataset histórico oficial. Sorteios sem dado real ficam com None em
+    todos os campos económicos — a lacuna fica visível, nunca omitida ou
+    estimada.
+    """
+    numero_sorteio: str
+    data: str
+    receita_liquida_apostas_eur: float | None
+    montante_para_premios_eur: float | None
+    percentagem_receita_para_premios: float | None
+    previsao_proximo_jackpot_eur: int | None
+    registos_portugal: int | None
+    combinacoes_registadas_portugal: int | None
+    apostas_registadas_portugal: int | None
+    combinacoes_por_registo: float | None
+    apostas_por_registo: float | None
+    receita_media_por_aposta_eur: float | None
+    houve_vencedor_1_premio_total: bool | None
+    houve_vencedor_1_premio_portugal: bool | None
+    total_vencedores_todas_categorias: int | None
+    total_vencedores_portugal_todas_categorias: int | None
+    dados_financeiros_disponiveis: bool
+    categorias_premio_disponiveis: bool
+
+
+@dataclass(frozen=True)
+class EconomySummary:
+    """Agregação pura sobre EconomyDrawRow — cada soma/média/mínimo/máximo
+    é calculado apenas sobre os sorteios em que esse campo específico é
+    real (não-None); um campo sem nenhuma observação real resolve para
+    None, nunca para 0 ou uma estimativa. Estrutura nova e aditiva:
+    coexiste com EconomyPlaceholder/ExecutiveSummary.economia sem os
+    alterar.
+    """
+    moeda: str
+    ano: int
+    sorteios_no_periodo: int
+    sorteios_com_dados_financeiros: int
+    sorteios_com_previsao_jackpot: int
+    sorteios_com_vencedor_1_premio_total: int
+    sorteios_com_vencedor_1_premio_portugal: int
+    receita_liquida_apostas_total_eur: float | None
+    montante_para_premios_total_eur: float | None
+    percentagem_receita_para_premios_media: float | None
+    previsao_jackpot_minimo_eur: int | None
+    previsao_jackpot_maximo_eur: int | None
+    receita_media_por_aposta_eur_media: float | None
+    total_vencedores_todas_categorias_soma: int | None
+    total_vencedores_portugal_todas_categorias_soma: int | None
+    percentagem_sorteios_com_dados_financeiros: float
+    receita_media_por_sorteio_com_dados_eur: float | None
+    montante_medio_para_premios_eur: float | None
+    jackpot_medio_previsto_eur: float | None
+    percentagem_sorteios_com_vencedor_1_premio_total: float
+    nota: str
+
+
+@dataclass(frozen=True)
 class ExecutiveSummary:
     total_heroes: int
     total_legends: int
@@ -154,6 +214,8 @@ class DashboardDataset:
     frequencies: tuple[FrequenciesRow, ...]
     economy: EconomyPlaceholder
     methodology: Mapping[str, Any]
+    economy_draws: tuple[EconomyDrawRow, ...] = ()
+    economy_summary: EconomySummary | None = None
 
 
 # ---------------------------------------------------------------------------
@@ -252,6 +314,147 @@ def build_key_base_rows(
             fase_lua=d.get("astronomia", {}).get("fase_lua"),
         ))
     return rows
+
+
+# ---------------------------------------------------------------------------
+# Economia — mesma fonte e mesmo filtro de ano de build_key_base_rows
+# (draw_records: a lista `sorteios` já carregada, nunca lida por este
+# módulo). estatisticas_financeiras/premios só têm valores reais para um
+# subconjunto dos sorteios de 2026 no dataset atual; qualidade_dados já
+# assinala, sorteio a sorteio, se esses dois blocos estão completos —
+# essa flag é a fonte de verdade usada aqui, não uma inferência a partir
+# dos valores. build_economy_summary nunca substitui um campo ausente por
+# uma estimativa: soma/média/mínimo/máximo ignoram os None e resolvem
+# para None quando não há nenhuma observação real. Percentagens usam
+# como denominador apenas os sorteios em que o campo relevante não é
+# None — nunca o total de sorteios, para não confundir "sem dado" com
+# "False"/"zero".
+# ---------------------------------------------------------------------------
+
+def _sum_or_none(values: Sequence[Any]) -> float | int | None:
+    present = [v for v in values if v is not None]
+    return sum(present) if present else None
+
+
+def _mean_or_none(values: Sequence[Any]) -> float | None:
+    present = [v for v in values if v is not None]
+    return sum(present) / len(present) if present else None
+
+
+def _min_or_none(values: Sequence[Any]) -> float | int | None:
+    present = [v for v in values if v is not None]
+    return min(present) if present else None
+
+
+def _max_or_none(values: Sequence[Any]) -> float | int | None:
+    present = [v for v in values if v is not None]
+    return max(present) if present else None
+
+
+def build_economy_rows(
+    draw_records: Sequence[DashboardSourceRecord], year: int = 2026,
+) -> list[EconomyDrawRow]:
+    """draw_records: a mesma lista `sorteios` recebida por
+    build_key_base_rows — já carregada, nunca lida por esta função.
+
+    Mesmo filtro de calendario.ano == year de build_key_base_rows. Uma
+    EconomyDrawRow por sorteio no ano (incluindo os sem dado financeiro
+    real, com None em todos os campos económicos) — a lacuna fica
+    visível em vez de o sorteio desaparecer da lista.
+    """
+    rows = []
+    for d in draw_records:
+        if d["calendario"]["ano"] != year:
+            continue
+        financeiras = d.get("estatisticas_financeiras") or {}
+        premios = d.get("premios") or {}
+        qualidade = d.get("qualidade_dados") or {}
+        rows.append(EconomyDrawRow(
+            numero_sorteio=d["numero_sorteio"],
+            data=d["data"],
+            receita_liquida_apostas_eur=financeiras.get("receita_liquida_apostas_eur"),
+            montante_para_premios_eur=financeiras.get("montante_para_premios_eur"),
+            percentagem_receita_para_premios=financeiras.get("percentagem_receita_para_premios"),
+            previsao_proximo_jackpot_eur=financeiras.get("previsao_1_premio_com_jackpot_eur"),
+            registos_portugal=financeiras.get("registos_portugal"),
+            combinacoes_registadas_portugal=financeiras.get("combinacoes_registadas_portugal"),
+            apostas_registadas_portugal=financeiras.get("apostas_registadas_portugal"),
+            combinacoes_por_registo=financeiras.get("combinacoes_por_registo"),
+            apostas_por_registo=financeiras.get("apostas_por_registo"),
+            receita_media_por_aposta_eur=financeiras.get("receita_media_por_aposta_eur"),
+            houve_vencedor_1_premio_total=premios.get("houve_vencedor_1_premio_total"),
+            houve_vencedor_1_premio_portugal=premios.get("houve_vencedor_1_premio_portugal"),
+            total_vencedores_todas_categorias=premios.get("total_vencedores_todas_categorias"),
+            total_vencedores_portugal_todas_categorias=premios.get("total_vencedores_portugal_todas_categorias"),
+            dados_financeiros_disponiveis=bool(qualidade.get("dados_financeiros_disponiveis")),
+            categorias_premio_disponiveis=bool(qualidade.get("categorias_premio_disponiveis")),
+        ))
+    return rows
+
+
+def build_economy_summary(
+    rows: Sequence[EconomyDrawRow], year: int = 2026, moeda: str = "EUR",
+) -> EconomySummary:
+    """Pura — sem I/O. `rows`: o resultado já construído de
+    build_economy_rows. `year`/`moeda` são aceites verbatim do chamador
+    (este módulo nunca lê o dataset nem assume uma moeda por omissão
+    silenciosa) apenas para rotular o resultado; não influenciam nenhum
+    cálculo.
+    """
+    rows = list(rows)
+    total = len(rows)
+    n_com_dados = sum(1 for r in rows if r.dados_financeiros_disponiveis)
+
+    receitas = [r.receita_liquida_apostas_eur for r in rows]
+    montantes = [r.montante_para_premios_eur for r in rows]
+    percentagens = [r.percentagem_receita_para_premios for r in rows]
+    jackpots = [r.previsao_proximo_jackpot_eur for r in rows]
+    receitas_media_aposta = [r.receita_media_por_aposta_eur for r in rows]
+    total_vencedores = [r.total_vencedores_todas_categorias for r in rows]
+    total_vencedores_pt = [r.total_vencedores_portugal_todas_categorias for r in rows]
+
+    n_com_jackpot = sum(1 for j in jackpots if j is not None)
+    n_com_vencedor_total = sum(1 for r in rows if r.houve_vencedor_1_premio_total is True)
+    n_com_vencedor_pt = sum(1 for r in rows if r.houve_vencedor_1_premio_portugal is True)
+
+    # Denominador da percentagem de vencedores: só os sorteios em que
+    # houve_vencedor_1_premio_total NÃO é None — None significa "sem
+    # dado", nunca "não houve vencedor". A maioria dos sorteios do ano
+    # não tem este campo preenchido; incluí-los no denominador
+    # interpretaria a ausência de dado como um "False" fabricado.
+    n_com_flag_vencedor_total = sum(1 for r in rows if r.houve_vencedor_1_premio_total is not None)
+
+    return EconomySummary(
+        moeda=moeda,
+        ano=year,
+        sorteios_no_periodo=total,
+        sorteios_com_dados_financeiros=n_com_dados,
+        sorteios_com_previsao_jackpot=n_com_jackpot,
+        sorteios_com_vencedor_1_premio_total=n_com_vencedor_total,
+        sorteios_com_vencedor_1_premio_portugal=n_com_vencedor_pt,
+        receita_liquida_apostas_total_eur=_sum_or_none(receitas),
+        montante_para_premios_total_eur=_sum_or_none(montantes),
+        percentagem_receita_para_premios_media=_mean_or_none(percentagens),
+        previsao_jackpot_minimo_eur=_min_or_none(jackpots),
+        previsao_jackpot_maximo_eur=_max_or_none(jackpots),
+        receita_media_por_aposta_eur_media=_mean_or_none(receitas_media_aposta),
+        total_vencedores_todas_categorias_soma=_sum_or_none(total_vencedores),
+        total_vencedores_portugal_todas_categorias_soma=_sum_or_none(total_vencedores_pt),
+        percentagem_sorteios_com_dados_financeiros=(n_com_dados / total * 100) if total else 0.0,
+        receita_media_por_sorteio_com_dados_eur=_mean_or_none(receitas),
+        montante_medio_para_premios_eur=_mean_or_none(montantes),
+        jackpot_medio_previsto_eur=_mean_or_none(jackpots),
+        percentagem_sorteios_com_vencedor_1_premio_total=(
+            (n_com_vencedor_total / n_com_flag_vencedor_total * 100)
+            if n_com_flag_vencedor_total else 0.0
+        ),
+        nota=(
+            f"Dados financeiros reais disponíveis para {n_com_dados} de {total} "
+            f"sorteios de {year} (estatisticas_financeiras/premios completos, "
+            "confirmado por qualidade_dados). Os restantes sorteios ficam com "
+            "None nos campos económicos — nunca estimados."
+        ),
+    )
 
 
 def build_characters_rows(
@@ -504,14 +707,22 @@ def build_dashboard_dataset(
     economy: EconomyPlaceholder | None = None,
     methodology: Mapping[str, Any] | None = None,
     gerado_em: str | None = None,
+    economy_draws: Sequence[EconomyDrawRow] = (),
+    economy_summary: EconomySummary | None = None,
 ) -> DashboardDataset:
     """Assembles rows already built by the other functions in this module
     (build_heroes_rows, build_legends_rows, build_key_base_rows,
-    build_characters_rows, build_houses, and — once they exist — their
+    build_characters_rows, build_houses, build_economy_rows /
+    build_economy_summary, and — once they exist — their
     Generations/Frequencies counterparts) into one DashboardDataset. Never
     calls those builders itself, never reads a file, never touches a
     Registry — every argument here is already-built data handed in by the
     caller.
+
+    economy_draws/economy_summary are new and purely additive: they
+    default to ()/None and never touch economy/economia
+    (EconomyPlaceholder), which keeps every existing caller and test
+    byte-identical.
     """
     resolved_economy = economy if economy is not None else EconomyPlaceholder()
     return DashboardDataset(
@@ -530,4 +741,6 @@ def build_dashboard_dataset(
         frequencies=tuple(frequencies),
         economy=resolved_economy,
         methodology=MappingProxyType(dict(methodology)) if methodology is not None else MappingProxyType({}),
+        economy_draws=tuple(economy_draws),
+        economy_summary=economy_summary,
     )
