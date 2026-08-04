@@ -1,6 +1,6 @@
 # CLAUDE.md
 
-# Oráculos do Euromilhões — Especificação do Projeto (V1 → V8.1)
+# Oráculos do Euromilhões — Especificação do Projeto (V1 → V13)
 
 > Documento de contexto para desenvolvimento contínuo.
 > **Open source:** https://github.com/tsilva28/Project-Ariadne (MIT License)
@@ -340,6 +340,10 @@ Project Ariadne follows a layered architecture. Each layer depends only on the l
 core/
     Framework services, plugin registry, evaluation, shared algorithms
         ↓
+library/
+    Persistent knowledge and registries — Ariadne (data broker), Scrolls,
+    Heroes/Legends registries, Biblioteca dos Artefactos
+        ↓
 factions/
     Executable candidate-generation methodologies (one plugin per faction)
         ↓
@@ -355,19 +359,23 @@ datasets/
 experiments/
     Generated simulation outputs, reports, backtesting results
         ↓
-dashboard/ (planned — V11)
-    Visualisation and analysis
+dashboard/ (planned — visualisation/export layer)
+    Visualisation and analysis. NOTE: the data-assembly layer that will
+    feed this, core/services/dashboard_data.py (V12.3), is already
+    implemented and tested — only the visualisation/export package
+    itself remains unbuilt (see V12.3 section below).
 ```
 
 | Layer | Responsibility |
 |---|---|
-| `core/` | Generic, reusable framework: plugin registry, proposal model, shared algorithms |
+| `core/` | Generic, reusable framework: plugin registry, proposal model, shared algorithms, shared services (`core/services/`) |
+| `library/` | Persistent knowledge and registries: Ariadne, Scrolls, Heroes, Legends, Biblioteca dos Artefactos |
 | `factions/` | Candidate-generation strategies — one plugin per faction |
 | `orders/` | Narrative organisations and special systems, outside Council voting by design |
 | `races/` | Lore, characters and world-building — documentation only |
 | `datasets/` | Historical knowledge (immutable source data) |
 | `experiments/` | Generated outputs (simulations, backtests, reports) |
-| `dashboard/` | Visualisation and analysis (planned, V11) |
+| `dashboard/` | Visualisation and analysis — **still planned**; its data layer (`core/services/dashboard_data.py`) already exists |
 
 ## Faction → Algorithm → Race map (selection)
 
@@ -529,19 +537,56 @@ Suite `unittest` da stdlib (sem dependências externas — consistente com `requ
 python -m unittest discover -s tests
 ```
 
+500 testes em 22 módulos (`tests/test_*.py`), verificado em V13.
+
 | Ficheiro | Cobre |
 |---------|------|
 | `test_models.py` | `core/strategy.py` — `Proposal` (defaults, isolamento de `extra`) e `Faction` (ABC, propriedades `name`/`origin`/`home`) |
-| `test_registry.py` | `core/registry.py` — `register`/`all`/`count`, `discover()` (skip de `_prefixo`, skip de não-diretórios, contagem real de 20 facções votantes, exclusão das analíticas) |
+| `test_registry.py` | `core/registry.py` — `register`/`all`/`count`, `discover()` (skip de `_prefixo`, skip de não-diretórios, contagem real de 21 facções votantes, exclusão das analíticas) |
 | `test_plugin_loader.py` | `core/plugin_loader.py` — `_load_manifest`, `load_faction` (ordem de resolução), `CompatFaction.propose()` para as 3 formas de retorno (lista simples, anões com `carteira`, lobisomens com `ativo`/`finalistas`) |
 | `test_council.py` | `council/council.py` — `filter_candidates` (mutação de soma fora do intervalo, rejeição por baixa energia), `vote` (agregação ponderada), `corrupt` (limites válidos, preservação da chave original) |
 | `test_backtesting.py` | `compare_result.py` — `titulo()` (todas as combinações), `avaliar_registo()` (pontuação, preservação de campos) |
+| `test_hero_registry.py` | `library/heroes/registry.py` — persistência, deduplicação, ranking, segurança de escrita atómica, independência de ordem |
+| `test_legend_registry.py` | `library/legends/registry.py` — persistência append-only, disciplina de campos congelados vs. acumulativos, verificação de integridade, reconstrução idempotente do índice |
+| `test_hero_evaluation.py` | `core/services/hero_evaluation.py` — Hero Evaluation Engine, classificação determinística contra um sorteio oficial |
+| `test_temporal_eligibility.py` | `core/services/hero_evaluation.py` — modelo de proveniência temporal (`verified`/`legacy`/`ineligible`/`unresolved`) |
+| `test_legend_evaluation.py` | `core/services/legend_evaluation.py` — agregação determinística de promoções a Legend |
+| `test_evaluate_legends_integration.py` | `evaluate_legends.py` — testes de integração do CLI real contra `config.txt`/`LegendRegistry`/`HeroRegistry` reais, redirecionados para diretórios temporários |
+| `test_run_manifest.py` | `core/services/run_manifest.py` — manifesto de proveniência por execução de `main.py` |
+| `test_historical_dataset.py` | `core/services/historical_dataset.py` — carregamento e validação partilhada do dataset histórico |
+| `test_historical_astronomy.py` | `core/services/historical_astronomy.py` — posição Sol/Lua de baixa precisão (algoritmo de Meeus) |
+| `test_historical_statistics.py` | `core/services/historical_statistics.py` — `estatisticas_chave`/`historico_no_conjunto` por sorteio |
+| `test_historical_scroll.py` | `core/services/historical_scroll.py` — geração do pergaminho de um sorteio histórico |
+| `test_historical_draw_generator.py` | `core/services/historical_draw_generator.py` — pipeline transacional de registo de sorteios oficiais |
+| `test_register_official_draw.py` | `register_official_draw.py` — CLI de registo de sorteios oficiais (staged → validado → instalado, rollback, códigos de saída) |
+| `test_dashboard_data.py` | `core/services/dashboard_data.py` — Heroes, Legends, Base de Chaves, Characters, Houses, Economy, Categorias de Prémios, `DashboardDataset` (inclui testes contra o dataset real de 2026) |
+| `test_artifact_schema.py` | `core/services/artifact_schema.py` — `normalize_artifact()`/`ArtifactRecord`, validado contra os 15 artefactos reais |
+| `test_artifact_registry.py` | `core/services/artifact_registry.py` — `load_all_artifacts()`, `ArtifactRegistry`, `build_index()`/`write_index()` |
+| `test_artifact_inspiration.py` | `core/services/artifact_inspiration.py` — `generate_inspiration()`, determinismo, segurança narrativa (nunca sugere números/estrelas/previsões) |
 
-**Filosofia:** os testes cobrem a *framework* (registry, plugin_loader, council, modelos partilhados, pontuação do backtesting), não a lógica narrativa de cada facção — um refactor da arquitetura de plugins deve falhar aqui, localmente, em vez de partir silenciosamente uma facção three camadas depois. As 21 facções em `factions/*/` não têm testes dedicados; a sua "correção" é maioritariamente narrativa, não mecânica.
+**Filosofia:** os testes cobrem a *framework* e os serviços partilhados reais (registry, plugin_loader, council, modelos partilhados, pontuação do backtesting, pipeline histórico, Heroes/Legends, Dashboard Dataset, Biblioteca dos Artefactos), não a lógica narrativa de cada facção — um refactor da arquitetura de plugins deve falhar aqui, localmente, em vez de partir silenciosamente uma facção três camadas depois. As 21 facções em `factions/*/` não têm testes dedicados; a sua "correção" é maioritariamente narrativa, não mecânica.
 
 # Serviços partilhados (`core/services/`)
 
-`combinations.py` (`normalize_candidate`, `gaps`) e `fitness.py` (`fitness`) já têm lógica real, migrada durante a limpeza de arquitetura de V10.5 e a migração dos Clérigos em V11. O resto continua scaffold/auditoria — existe hoje lógica estatística duplicada em vários pontos que estes serviços deverão eventualmente substituir:
+14 ficheiros, a maioria com lógica real e testada (não scaffold) — cresceu bastante desde V10.5/V11:
+
+| Ficheiro | Estado | O que faz |
+|---|---|---|
+| `combinations.py` | ✅ real | `normalize_candidate`, `gaps` — migrado de `races/legacy.py` em V11 |
+| `fitness.py` | ✅ real | `fitness` — pontuação do algoritmo genético |
+| `atomic_io.py` | ✅ real | `atomic_write_json`/`read_json` — escrita atómica (temp + `os.replace`); usado por `library/heroes/registry.py`, `library/legends/registry.py`, `historical_draw_generator.py`, `artifact_registry.py` |
+| `historical_dataset.py` | ✅ real | carregamento/validação partilhada de `datasets/historical/euromillions/**/*.json` |
+| `historical_astronomy.py` | ✅ real | posição Sol/Lua de baixa precisão (Meeus) para o bloco `astronomia` de um sorteio |
+| `historical_statistics.py` | ✅ real | `estatisticas_chave`/`historico_no_conjunto` de um sorteio histórico |
+| `historical_scroll.py` | ✅ real | geração do pergaminho (scroll) de um sorteio histórico |
+| `historical_draw_generator.py` | ✅ real | pipeline transacional de registo de novos sorteios oficiais — ver secção própria abaixo |
+| `hero_evaluation.py` | ✅ real | Hero Evaluation Engine — classificação determinística contra um sorteio oficial |
+| `legend_evaluation.py` | ✅ real | Legend Evaluation Engine — agregação determinística de promoções |
+| `run_manifest.py` | ✅ real | manifesto de proveniência por execução de `main.py` |
+| `dashboard_data.py` | ✅ real | Dashboard Dataset — ver secção V12.3 abaixo |
+| `artifact_schema.py`, `artifact_registry.py`, `artifact_inspiration.py` | ✅ real | Biblioteca dos Artefactos — ver secção própria abaixo |
+
+Nenhum destes substitui ainda a lógica estatística por-facção (frequências, quentes/frios, atraso, pares/triplas) — continua duplicada em vários pontos:
 
 | Duplicação encontrada | Onde |
 |---|---|
@@ -590,7 +635,7 @@ Estrutura só, sem runner. `benchmarks/random/` (baseline aleatório), `benchmar
 - ✅ `races/legacy.py` removed — `races/` is now **fully lore-only** (no exceptions)
 - ✅ `gaps()` moved from `races/legacy.py` into `core/services/combinations.py`, fixing the inverted `core/` → `races/` dependency in `core/services/fitness.py`
 - ✅ All 13 external callers of the old `normalize()` repointed to `core.services.combinations.normalize_candidate(nums, ests, random)` — same global-random behaviour, single source of truth
-- ✅ Clerics auto-discovered by `FactionRegistry` (20 voting factions, up from 19) — verified via direct `load_faction()` probe, not just the registry count
+- ✅ Clerics auto-discovered by `FactionRegistry` (21 voting factions, up from 20) — verified via direct `load_faction()` probe, not just the registry count
 - ✅ Deterministic before/after comparison: population, cemetery, resurrected heroes, per-generation summary, and the isolated Council-proposal shape are byte-identical between the pre- and post-migration engine, and the ending `random.getstate()` matches exactly — proof of zero additional random draws
 - Known, documented side effect: Clerics finalists now flow through the generic "all plugin factions" loop in `main.py` instead of a hardcoded early-position block, so they're interleaved alphabetically with other factions in the final candidate list (previously they held a fixed early slot) — this changes tie-breaking in `council/council.py::vote()` and mutation order in `filter_candidates()`, so the *final Council-selected key* for a full `main.py` run can differ from before, even though the Clerics algorithm itself is unchanged. Also, Clerics finalists are now registered in the external chronicle (`externos`/`registo_externo`) for the first time, consistent with every other faction — previously they were the only voting faction excluded from that registration.
 - Completar o lore das 20 raças — ✅ done in V10.5
@@ -598,14 +643,186 @@ Estrutura só, sem runner. `benchmarks/random/` (baseline aleatório), `benchmar
 - `dashboard/` — visualização e análise
 - Rng retrofit decision: estender `ctx['rng']` a todas as facções (hoje só Panteão + Skeletons + Chronomancers), ou manter `random` global nas restantes — Clerics migration deliberately kept global `random` to guarantee determinism (see above)
 
+## V12.3 — Dashboard Dataset (complete)
+
+- ✅ `core/services/dashboard_data.py` — camada pura de montagem de dados (Commits 1-8, ver secção própria abaixo): Heroes, Legends, Base de Chaves, Characters, Houses, Executive Summary, Economy, Categorias de Prémios
+- ✅ `library/heroes/` + `library/legends/` — registries persistentes, mais `hero_evaluation.py`/`legend_evaluation.py` e os CLIs `evaluate_heroes.py`/`evaluate_legends.py`
+- ✅ Pipeline de registo de sorteios oficiais — `historical_draw_generator.py` + `register_official_draw.py` (ver secção própria abaixo)
+- Ainda por fazer: `GenerationRow`/`FrequenciesRow` não têm função construtora; não existe pacote `dashboard/` de visualização/exportação (só a camada de dados) — ver Próximo Passo na secção V12.3 abaixo
+
+## V13 — Biblioteca dos Artefactos (complete)
+
+- ✅ `core/services/artifact_schema.py` + `artifact_registry.py` + `artifact_inspiration.py` — ver secção própria abaixo
+- ✅ 15 artefactos narrativos fundadores em `library/artifacts/entries/`, todos com `altera_algoritmo`/`altera_resultados`/`altera_probabilidades` explicitamente `false`
+- ✅ `library/artifacts/LIVRO_DOS_ARTEFACTOS.json` — índice sempre derivado de `entries/`, nunca fonte de verdade
+
 # Dependências opcionais
 
-## Dashboard (V12.3 — em desenvolvimento)
+## Dashboard (pacote `dashboard/` de exportação — ainda planeado)
 
-O módulo `dashboard/` (exportação para Excel) usa `openpyxl`, que não é uma
-dependência obrigatória do núcleo do projeto (ver `requirements.txt`).
-Instalar apenas se for necessário gerar o workbook de investigação:
+O futuro módulo `dashboard/` (exportação para Excel do `DashboardDataset`
+já produzido por `core/services/dashboard_data.py`, ver V12.3 abaixo) vai
+usar `openpyxl`, que não é uma dependência obrigatória do núcleo do
+projeto (ver `requirements.txt`). Instalar apenas quando esse módulo
+existir e for necessário gerar o workbook de investigação:
 
 ```bash
 pip install -r requirements-dashboard.txt
 ```
+
+# Dashboard V12.3 – Estado Atual
+
+## Progresso
+
+Commit 1
+- requirements-dashboard.txt
+- documentação inicial do Dashboard
+
+Commit 2
+- criação de core/services/dashboard_data.py
+- dataclasses base
+- build_heroes_rows()
+- build_legends_rows()
+- testes
+- 202/202 OK
+
+Commit 3
+- build_key_base_rows()
+- build_characters_rows()
+- filtro por calendario.ano
+- testes ampliados
+- 217/217 OK
+
+Commit 4
+- build_houses()
+- _normalize_individual_record() / _normalize_archive() — normalização genérica de registos de população, nunca levanta exceção
+- cruzamento de casas declaradas (races/*/lineages.json) vs. casas observadas na população
+- testes ampliados
+
+Commit 5
+- build_executive_summary()
+- build_dashboard_dataset()
+- economia resolvida uma única vez e partilhada, byte-a-byte, entre ExecutiveSummary.economia e DashboardDataset.economy
+- testes ampliados
+
+Commit 6
+- suporte a aliases name/generation, com regras de precedência explícitas (canónico ganha mesmo se vazio; alias só é consultado se a chave canónica estiver totalmente ausente)
+- validate_historical_dataset() extraído para core/services/historical_dataset.py, sem alterar os testes existentes além da linha de import
+- testes ampliados
+
+Commit 7 — Economy
+- EconomyDrawRow, EconomySummary — estruturas novas e aditivas, nunca alteram EconomyPlaceholder/economia/economy
+- build_economy_rows(), build_economy_summary()
+- dados financeiros reais de 2026: 15 de 61 sorteios têm estatisticas_financeiras/premios completos, confirmado por qualidade_dados.dados_financeiros_disponiveis — nunca inferido a partir de um valor ser ou não None
+- soma/média/mínimo/máximo ignoram None; um campo sem observação real resolve para None, nunca 0 ou uma estimativa
+- percentagem_sorteios_com_vencedor_1_premio_total usa como denominador só os sorteios em que a flag não é None (nunca o total de sorteios — None não é False)
+- 478/478 OK
+
+Commit 8 — Categorias de Prémios
+- PrizeCategoryRow, PrizeCategoryAggregate, PrizeCategorySummary — estruturas novas e aditivas
+- build_prize_category_rows(), build_prize_category_summary()
+- _PRIZE_CATEGORY_LABELS — tabela oficial fixa dos 13 escalões de prémio do Euromilhões (regra do jogo, não facto por sorteio), validada nos testes contra os 15 sorteios reais com dado
+- exatamente 13 linhas por sorteio, sempre; só os campos variáveis (vencedores_portugal/vencedores_total/percentagem_portugal_no_total) ficam None quando o sorteio não tem premios.categorias real
+- categorias_disponiveis vem sempre de qualidade_dados.categorias_premio_disponiveis, nunca inferido
+- 500/500 OK
+
+## Decisões Arquiteturais
+
+- dashboard_data.py é exclusivamente uma camada de transformação.
+- Nunca lê ficheiros.
+- Nunca acede diretamente aos Registry.
+- Recebe apenas dados já carregados pelo chamador.
+- Dataclasses são frozen.
+- Coleções expostas como tuples.
+- Base de Chaves limitada aos sorteios oficiais de 2026.
+- O filtro utiliza calendario.ano como fonte de verdade.
+- build_characters_rows utiliza apenas o contrato comum validado dos characters.json.
+- Campos opcionais são lidos com .get().
+- Economy (Commit 7) e Categorias de Prémios (Commit 8) usam dados reais do dataset de 2026, nunca sintéticos — qualidade_dados é sempre a fonte de verdade sobre "há dado real", nunca inferida a partir de um valor estar ou não a None.
+- economy_draws/economy_summary/prize_category_rows/prize_category_summary são campos aditivos em DashboardDataset (default ()/None) — nunca alteram economy/economia (EconomyPlaceholder), que se mantém inalterado, apenas complementado.
+- Exploration vs Exploitation permanece adiado.
+- A normalização continua privada dentro de dashboard_data.py até existir necessidade real de extração.
+
+## Fluxo de Trabalho
+
+- Um commit por objetivo.
+- Não aumentar o âmbito de um commit.
+- Mostrar sempre o diff completo.
+- Executar testes específicos.
+- Executar a suite completa.
+- Nunca executar git commit sem aprovação explícita.
+- Nunca executar git push sem pedido explícito.
+
+## Próximo Passo
+
+Commits 1–8 concluídos — Dashboard Dataset cobre Heroes, Legends, Base de Chaves, Characters, Houses, Executive Summary, Economy e Categorias de Prémios, tudo testado (500/500 OK). Sem objetivo de Commit 9 definido ainda; candidatos em aberto (ver também Roadmap):
+
+- Construtores para GenerationRow/FrequenciesRow — os contratos já existem, sem função ainda.
+- Categorias de prémio detalhadas por linha (breakdown dos 13 escalões por sorteio — hoje só agregado por categoria) — candidato natural de âmbito único.
+- Pacote `dashboard/` de visualização/exportação — consome `DashboardDataset`; hoje não tem nenhum consumidor fora da suite de testes.
+
+---
+
+# Biblioteca dos Artefactos (V13)
+
+Coleção puramente narrativa e cerimonial em `library/artifacts/`, distinta do sistema mais antigo `artifacts/` (`ark.py`/`living.py`/`relics/`/`amulets/`, V4, mecanicamente ligado ao estado da simulação). Nunca influencia uma chave, um voto ou uma probabilidade.
+
+## Fonte de verdade
+
+- `library/artifacts/entries/*.json` — 15 artefactos fundadores, única fonte primária. Nunca reescritos por código desta camada.
+- `library/artifacts/LIVRO_DOS_ARTEFACTOS.json` — sempre derivado de `entries/` via `build_index()`/`write_index()`; nunca editado à mão, nunca fonte de verdade.
+
+## `core/services/artifact_schema.py`
+
+- `normalize_artifact(raw) -> ArtifactRecord` — núcleo fixo pequeno (id, nome, tipo, raridade, estado, criador, universo_origem, energia_acumulada, vezes_encontrado, execucoes_sobrevividas, efeitos, lore, historia, tags) + `extras` (todo o campo não-núcleo, verbatim) + `raw` (dict original intacto).
+- Nunca inventa um default semântico para um campo ausente — ausente é sempre `None`; só defaults neutros de contagem são aceitáveis (`energia_acumulada=0.0`, `vezes_encontrado=0`, `execucoes_sobrevividas=0`, `tags=()`, `historia=()`).
+- `validate_artifact_record(record) -> list[str]` — nunca levanta exceção; verifica `altera_algoritmo`/`altera_resultados`/`altera_probabilidades` (em `efeitos` ou em `extras["principios_narrativos"]`).
+
+## `core/services/artifact_registry.py`
+
+- `load_all_artifacts(entries_dir) -> list[ArtifactRecord]` — deteta id duplicado (verificado antes do mismatch de nome de ficheiro, para que ambos os erros sejam realmente alcançáveis) e desalinhamento nome-de-ficheiro/id; ordem determinística por id.
+- `ArtifactRegistry` — `by_id`/`by_type`/`by_tag` (case-insensitive)/`by_creator` (id ou nome); rejeita ids duplicados na construção (nunca sobrescreve silenciosamente); sem `random()` em lado nenhum.
+- `build_index(records) -> dict` — todos os agregados (`por_tipo`, `por_raridade`, `por_estado`, `por_criador`, `por_universo`, `por_tag`) ordenados deterministicamente; rankings com tie-break explícito por id; `atualizado_em` é o único campo não-determinístico, por design.
+- `write_index(index, path) -> None` — usa `atomic_write_json` (já cria diretórios pai).
+
+## `core/services/artifact_inspiration.py`
+
+- `generate_inspiration(record, seed) -> dict` — gerador narrativo determinístico ("semente de inspiração") para um NOVO conceito de personagem, livremente inspirado num artefacto.
+- `random.Random(seed)` sempre; nunca o `random` global. Mesmo `(record, seed)` → mesmo resultado; seeds diferentes podem variar.
+- Extrai apenas de campos já existentes no `ArtifactRecord` (nome, tipo, raridade, estado, criador, efeitos, lore, historia, tags, extras) — nunca inventa poderes mecânicos.
+- Filtro de segurança ativo (não só documentado): bloqueia qualquer frase com dígitos ou com algoritmo/probabilidade/resultado/previsão/prever/profecia/número(s) antes de chegar ao resultado; `artifact_id` fica fora do filtro (é um identificador, não conteúdo narrativo).
+- Nunca cria/altera um Hero ou uma Legend; sem I/O de ficheiros; nunca escreve em `library/heroes/`, `library/legends/`, `datasets/`, `library/scrolls/`.
+
+## Testes
+
+`tests/test_artifact_schema.py` (32), `tests/test_artifact_registry.py` (31), `tests/test_artifact_inspiration.py` (23) — os 3 juntos cobrem os 15 artefactos reais, casos de erro (JSON inválido, id duplicado, mismatch de nome), determinismo, e ausência de qualquer termo proibido em centenas de combinações (artefacto × seed).
+
+---
+
+# Pipeline de Registo de Sorteios Oficiais (V12.3/V13)
+
+`register_official_draw.py` — CLI transacional único para registar um ou mais sorteios oficiais no dataset histórico canónico, generalizando o fluxo validado manualmente para os sorteios 059-061/2026.
+
+## Módulos
+
+- `core/services/historical_astronomy.py` — posição Sol/Lua de baixa precisão (Meeus), preenche o bloco `astronomia`.
+- `core/services/historical_statistics.py` — `estatisticas_chave` e `historico_no_conjunto` (atraso, frequência acumulada) de um sorteio.
+- `core/services/historical_scroll.py` — gera o pergaminho (scroll) correspondente.
+- `core/services/historical_draw_generator.py` — orquestra tudo o que precede + atualização dos metadados de topo do dataset (`intervalo.primeiro_sorteio`/`ultimo_sorteio`, etc.).
+- `core/services/historical_dataset.py` — `validate_historical_dataset()`, partilhado com a suite de testes.
+
+## Fluxo transacional
+
+1. Staging — os novos sorteios são construídos e validados fora do repositório (`tempfile.mkdtemp()`).
+2. Testes correm antes de qualquer avaliação de Heroes/Legends.
+3. Instalação — criar-novo-depois-apagar-antigo (nunca sobrescrever-depois-renomear); rollback limitado a dataset + pergaminhos (Opção A) se algo falhar a meio.
+4. Escrita sempre via `atomic_write_json` (`core/services/atomic_io.py`).
+5. Idempotência verificada — re-registar o mesmo sorteio não duplica nem corrompe o dataset.
+
+## Códigos de saída
+
+`0` — sucesso · `1`–`4` — falhas em diferentes fases do pipeline (validação, staging, testes, instalação).
+
+## Testes
+
+`tests/test_historical_astronomy.py` (8), `tests/test_historical_dataset.py` (23), `tests/test_historical_scroll.py` (5), `tests/test_historical_statistics.py` (12), `tests/test_historical_draw_generator.py` (30), `tests/test_register_official_draw.py` (16).

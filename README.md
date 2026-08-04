@@ -10,7 +10,7 @@
 
 The Eternal Library is an experimental Python framework built around one central idea: **what happens when many independent agents, each following a different statistical strategy, compete on the same historical dataset under identical, reproducible conditions?**
 
-The agents are factions from a fictional universe. The dataset is 1,962 real Euromillions draws (2004–2026). The strategies range from genetic algorithms and Markov chains to combinatorial permutations and frequency analysis.
+The agents are factions from a fictional universe. The dataset is 1,968 real Euromillions draws (2004–2026). The strategies range from genetic algorithms and Markov chains to combinatorial permutations and frequency analysis.
 
 The result is something between a simulation engine, a statistical workbench, and a strategy game — with lore.
 
@@ -36,13 +36,31 @@ This project is none of those. It is a **laboratory for statistical strategies**
 
 ---
 
+## Current Status (V13)
+
+A quick map of what actually exists in this repository today, kept separate from ideas — see [Roadmap / Future Vision](#roadmap--future-vision) for what is *not* built yet.
+
+**✅ Core simulation engine** — plugin architecture (`core/registry.py`, `core/plugin_loader.py`, `core/strategy.py`), 21 auto-discovered voting factions, Ariadne as sole data broker, Council (filtering, weighted voting, Malphas corruption), 21 lore-only races, i18n (6 languages).
+
+**✅ Historical dataset pipeline** — 1,968 real Euromillions draws (2004–2026), immutable annual datasets, plus `core/services/historical_dataset.py`, `historical_astronomy.py`, `historical_statistics.py`, `historical_scroll.py` and `historical_draw_generator.py` (used by `register_official_draw.py`, a full transactional CLI — staged → validated → installed, with rollback — for registering new official draws).
+
+**✅ Heroes & Legends** — `library/heroes/` and `library/legends/` registries (`entries/*.json` as source of truth, derived `LIVRO_DOS_HEROIS.json`/`LIVRO_DAS_LENDAS.json` indices), plus `core/services/hero_evaluation.py`/`legend_evaluation.py` and their CLIs (`evaluate_heroes.py`, `evaluate_legends.py`).
+
+**✅ Dashboard Dataset** — `core/services/dashboard_data.py`, a pure data-assembly layer: Heroes, Legends, Base de Chaves (draws), Characters, Houses, Executive Summary, Economy and Prize Categories are all implemented and tested against real data (see [Dashboard Dataset](#dashboard-dataset) below). No visualisation layer exists yet — this is data assembly only.
+
+**✅ Biblioteca dos Artefactos (Artifact Library)** — `core/services/artifact_schema.py`, `artifact_registry.py` and `artifact_inspiration.py`; 15 founding narrative artifacts, every one verified to have zero effect on algorithms, results or probabilities (see [The Artifact Library](#the-artifact-library-biblioteca-dos-artefactos) below).
+
+**✅ Testing** — 500 tests across 22 modules (`python -m unittest discover -s tests`).
+
+---
+
 ## Architecture
 
 ```
 Ariadne (data broker)
     │
     ├── Eternal Library (persistent knowledge)
-    │       ├── Scrolls        — one JSON per real draw (1,962 total)
+    │       ├── Scrolls        — one JSON per real draw (1,968 total)
     │       ├── Books          — derived analytics (frequencies, pairs, triples)
     │       ├── Sources        — immutable annual datasets (2004–2026)
     │       ├── Indices        — pairs and triples index
@@ -214,8 +232,8 @@ library/
 ├── ariadne/            ← Ariadne engine (engine.py)
 ├── sources/            ← immutable annual datasets 2004–2026
 ├── scrolls/
-│   ├── 2004/ … 2025/   ← compact format (1,907 scrolls)
-│   └── 2026/           ← full format with astronomy (55 scrolls)
+│   ├── 2004/ … 2025/   ← compact format (1,929 scrolls)
+│   └── 2026/           ← full format with astronomy (61 scrolls)
 ├── books/
 │   └── cartographers/  ← 5 analytical books (Cartographers)
 ├── indices/            ← pairs, triples, frequencies, moon phases
@@ -226,20 +244,67 @@ library/
 
 ---
 
+## Dashboard Dataset
+
+`core/services/dashboard_data.py` is a pure data-transformation layer for research/analysis. It never reads a file, never touches a Registry, and never computes randomness — every function takes already-loaded plain data (the result of a Registry's `load_all()`, or an already-parsed historical dataset JSON) and reshapes it into small, frozen dataclasses (tuples, not lists, so a produced row can never be mutated through a reference into the source data).
+
+| Row / builder | Produces | Source |
+|---|---|---|
+| `build_heroes_rows()` | `HeroRow` | `HeroRegistry().load_all()` |
+| `build_legends_rows()` | `LegendRow` | `LegendRegistry().load_all()` |
+| `build_key_base_rows()` | `DrawRow` | `sorteios` from the 2026 historical dataset |
+| `build_characters_rows()` | `CharacterRow` | `races/*/characters.json` |
+| `build_houses()` | `HouseEntry` | `races/*/lineages.json` cross-referenced with the population archive |
+| `build_executive_summary()` | `ExecutiveSummary` | Heroes/Legends counts + Economy |
+| `build_economy_rows()` / `build_economy_summary()` | `EconomyDrawRow` / `EconomySummary` | `estatisticas_financeiras`/`premios` in the 2026 dataset |
+| `build_prize_category_rows()` / `build_prize_category_summary()` | `PrizeCategoryRow` / `PrizeCategorySummary` | `premios.categorias` in the 2026 dataset |
+| `build_dashboard_dataset()` | `DashboardDataset` | Composes all of the above — never calls the builders itself |
+
+**Economy and Prize Categories are real, not synthetic.** The official 2026 dataset only has complete financial/prize-category data for 15 of its 61 draws — confirmed via the dataset's own `qualidade_dados` flags, never inferred from whether a value happens to be non-null. Every sum, mean, minimum and maximum in `EconomySummary`/`PrizeCategorySummary` is computed only over the draws that actually have that field; a field with zero real observations resolves to `None`, never an invented `0` or an estimate. `PrizeCategoryRow` always emits exactly 13 rows per draw — the fixed, official Euromillions prize-tier table, a game rule rather than a per-draw fact — with only the observed winner counts ever `None`.
+
+`GenerationRow`/`FrequenciesRow` contracts exist in the module but have no builder function yet; `DashboardDataset.generations`/`.frequencies` currently default to empty tuples. There is no `dashboard/` visualisation package yet — see [Roadmap](#roadmap--future-vision). `requirements-dashboard.txt` (`openpyxl`) is staged for that future export step, not in active use today.
+
+---
+
+## The Artifact Library (Biblioteca dos Artefactos)
+
+A **purely narrative, cerimonial** collection, distinct from the older `artifacts/` package (`ark.py`/`living.py`/`relics/`/`amulets/`, V4-era, mechanically tied to simulation state). `library/artifacts/` never influences a key, a vote, or a probability — every one of its 15 founding entries carries `altera_algoritmo`, `altera_resultados` and `altera_probabilidades`, all explicitly `false`, verified structurally at every layer below, not just asserted in prose.
+
+- **`library/artifacts/entries/*.json`** — the only primary source, 15 founding artifacts (Coin of Midas, Ladybug of Sylvaris, Star of Lyra, Rainbow Fragment of Iris, Clover of Aethoria, five Horseshoes, Daruma of Perseverance, Imperial Victory Brandy, Celestial Blue Panties, Lotus of Tranquility, Codex of Eternal Fortune). Never rewritten by any code in this layer.
+- **`core/services/artifact_schema.py`** — `normalize_artifact()` reshapes any of the 15 genuinely heterogeneous, independently-authored source shapes into one small `ArtifactRecord`: a fixed core (id, nome, tipo, raridade, estado, criador, energia, lore, historia, tags…) plus two escape hatches that guarantee nothing is ever lost — `extras` (every non-core field, verbatim) and `raw` (the untouched original dict). Never invents a default for an absent field; missing means `None`, never a guess.
+- **`core/services/artifact_registry.py`** — `load_all_artifacts()` (duplicate-id and filename/id-mismatch detection), `ArtifactRegistry` (`by_id`/`by_type`/`by_tag`/`by_creator` queries, no randomness anywhere), and `build_index()`/`write_index()`, which derive `library/artifacts/LIVRO_DOS_ARTEFACTOS.json` — always regenerated from `entries/`, never hand-edited, never a source of truth itself.
+- **`core/services/artifact_inspiration.py`** — `generate_inspiration(record, seed)`, a deterministic (`random.Random(seed)`, never the global `random`) narrative "inspiration seed" generator for brand-new character concepts loosely inspired by an artifact. Explicitly forbidden — and defensively filtered, not just documented — from suggesting number/star picks, predicting a draw, or referencing algorithm/result/probability changes; never creates or edits a Hero or a Legend; performs no file I/O at all.
+
+---
+
 ## File structure
 
 ```
 Project-Ariadne/
 │
 ├── main.py                     ← simulation entry point
+├── register_official_draw.py   ← CLI: register new official draws (staged → validated → installed, with rollback)
+├── evaluate_heroes.py           ← CLI: Hero Evaluation Engine
+├── evaluate_legends.py          ← CLI: Legend Evaluation Engine
 ├── config.txt                  ← all parameters
 ├── requirements.txt            ← stdlib only (no external ML libs)
+├── requirements-dashboard.txt  ← optional: openpyxl, staged for a future Dashboard export step
 │
 ├── core/                        ← framework engine
 │   ├── strategy.py / registry.py / plugin_loader.py  ← FactionRegistry + plugin architecture
 │   ├── i18n/                    ← translations.py — 6 languages × 25 translation keys
 │   ├── data/                    ← loaders.py — reusable historical/jackpot/moon data access
-│   └── services/                ← shared, lore-agnostic helpers (combinations.py, fitness.py)
+│   └── services/                ← shared, pure transformation/validation services
+│       ├── combinations.py, fitness.py         ← shared candidate-key helpers
+│       ├── atomic_io.py                        ← atomic JSON writes (temp-then-replace)
+│       ├── historical_dataset.py, historical_astronomy.py,
+│       │   historical_statistics.py, historical_scroll.py,
+│       │   historical_draw_generator.py        ← official-draw registration pipeline
+│       ├── hero_evaluation.py, legend_evaluation.py  ← deterministic Hero/Legend classification
+│       ├── run_manifest.py                     ← per-run provenance manifest
+│       ├── dashboard_data.py                   ← Dashboard Dataset (see above)
+│       └── artifact_schema.py, artifact_registry.py,
+│           artifact_inspiration.py             ← Biblioteca dos Artefactos (see above)
 ├── council/                     ← Grand Council filter + vote
 ├── factions/                    ← executable faction plugins (package format) — 21 factions, one per race
 │   ├── clerics/                 ← Clérigos (V11) — genetic algorithm engine, 8-archetype dispatcher
@@ -263,8 +328,11 @@ Project-Ariadne/
 │   ├── scrolls/                 ← per-draw views (2004–2026)
 │   ├── books/                   ← reconstructable books
 │   ├── indexes/                 ← pairs/triples/frequencies + normalized draw index
+│   ├── heroes/                  ← HeroRegistry — entries/ + derived LIVRO_DOS_HEROIS.json
+│   ├── legends/                 ← LegendRegistry — entries/ + derived LIVRO_DAS_LENDAS.json
+│   ├── artifacts/               ← Biblioteca dos Artefactos — entries/ + derived LIVRO_DOS_ARTEFACTOS.json
 │   ├── catalogue/, cache/, black_kors/
-├── artifacts/                   ← artefacts, relics and magical objects
+├── artifacts/                   ← OLDER, distinct system: mechanical relics/amulets tied to simulation state (V4)
 │   ├── ark.py / living.py       ← relics + living artifacts
 │   ├── relics/                  ← persistent relics (ART-*.json)
 │   └── amulets/                 ← amulets, monastery, generated books
@@ -305,8 +373,8 @@ cd eternal-library
 # Run the simulation
 python main.py
 
-# Consult Ariadne directly
-python query_ariadne.py pairs --limite 10
+# Consult Ariadne directly (CLI subcommands are Portuguese; see below)
+python query_ariadne.py duplas --limite 10
 python query_ariadne.py numero 17
 python query_ariadne.py lua "Lua cheia"
 python query_ariadne.py pergaminho 55
@@ -369,8 +437,8 @@ Set `lang = en` in `config.txt`. Invalid codes fall back silently to `pt`.
 
 ## Dataset
 
-- **1,962 real Euromillions draws** (2004–2026) stored as individual JSON scrolls (`library/scrolls/`)
-- **55 full 2026 scrolls** with astronomy metadata, statistics, and SHA-256 signature
+- **1,968 real Euromillions draws** (2004–2026) stored as individual JSON scrolls (`library/scrolls/`)
+- **61 full 2026 scrolls** with astronomy metadata, statistics, and SHA-256 signature
 - **Immutable annual datasets** 2004–2026 in `datasets/historical/euromillions/<year>/`
 - **Raw imports** (e.g. spreadsheet exports) in `datasets/imports/`
 - **Frequency indices** for pairs, triples and the normalized number index in `library/indexes/`
@@ -439,9 +507,15 @@ voting, corruption), the shared `Proposal`/`Faction` models, and the
 backtesting/scoring logic. Each test file covers exactly one module's
 responsibility so that a future refactor of the plugin architecture
 fails loudly and locally instead of silently breaking a faction three
-layers away. Faction-specific narrative logic (the 13 `factions/*/`
+layers away. Faction-specific narrative logic (the 21 `factions/*/`
 strategies) is not under test — it doesn't affect framework stability
 and its "correctness" is largely narrative, not mechanical.
+
+**Current suite:** 500 tests across 22 modules, also covering the
+historical dataset pipeline, Hero/Legend evaluation, the Dashboard
+Dataset layer and the Artifact Library — each with dedicated tests
+against real, on-disk data (`datasets/historical/euromillions/`,
+`library/artifacts/entries/`), not just synthetic fixtures.
 
 ---
 
@@ -456,6 +530,36 @@ from day one, instead of being bolted onto `experiments/` after the
 fact. `experiments/benchmarks/` is a related but distinct location for
 ad-hoc benchmark research sessions, as opposed to the durable/canonical
 results that belong in the top-level `benchmarks/`.
+
+---
+
+## Roadmap / Future Vision
+
+Everything below is a documented idea, not implemented code — nothing
+here affects the simulation, a key, a vote, or a probability today. See
+[Current Status (V13)](#current-status-v13) above for what actually
+exists.
+
+- **`dashboard/` visualisation package** — the Dashboard Dataset (data
+  layer, done) still has no consumer: no Excel export, no CLI report,
+  no chart. `requirements-dashboard.txt` (`openpyxl`) is staged for
+  this.
+- **`GenerationRow`/`FrequenciesRow` builders** — the row contracts
+  already exist in `dashboard_data.py`; no builder function reads real
+  generation/frequency data into them yet.
+- **New factions** — Juízes do Conselho, Geómetras do Véu, Estatísticos
+  Imperiais (named in project planning, not yet implemented).
+- **Shared statistical services** — `StatisticsService`, `DelayService`,
+  `PairService`, `TripleService`, `EntropyService`, `TrendService`, to
+  eventually replace frequency/overdue/gap logic currently duplicated
+  across `core/evolution/statistics.py`, `factions/chaos_cartographers/*.py`
+  and `factions/axiomantes/profile.py`.
+- **`ctx['rng']` retrofit** — deciding whether every faction should use
+  the shared, seedable `ctx['rng']` (today only the Pantheon, Skeletons
+  and Chronomancers do; Clerics deliberately kept the global `random`
+  module for reproducibility reasons).
+- **Benchmarks runner** — `benchmarks/` is scaffolding only; no runner
+  exists yet.
 
 ---
 
@@ -485,6 +589,12 @@ Se preferires ler em português → [LEIA-ME.md](LEIA-ME.md)
 | V7.2 | Kors de Elarion — four named observers consulting Ariadne exclusively |
 | V8 | Cartographers of Chaos — analytical books shared across factions |
 | V8.1 | Axiomantes de Nemerion — Feistel permutation over 139M combinations; Echo Profile scoring; i18n |
+| V9 | Plugin architecture — `FactionRegistry`, `CompatFaction`, per-faction `manifest.json`; adding a faction never touches `main.py` |
+| V10 | Mystics — 8 new orders (lore + plugin scaffolding: Druids, Moon Priests, Star Gazers, Shamans, Witches, Seers, Oracles, Bone Readers), always abstain by design |
+| V10.5 | Architecture complete — `races/` fully lore-only, first real shared services (`combinations.py`, `fitness.py`) |
+| V11 | Clerics migrated into the plugin architecture (`races/legacy.py` retired) — 21 voting factions total |
+| V12.3 | Dashboard Dataset — Heroes, Legends, Base de Chaves, Characters, Houses, Executive Summary, Economy, Prize Categories |
+| V13 | Biblioteca dos Artefactos — narrative artifact schema, registry and deterministic inspiration generator; official-draw registration CLI |
 
 ---
 

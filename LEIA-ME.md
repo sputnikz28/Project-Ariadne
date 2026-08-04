@@ -1,15 +1,28 @@
-# Oráculos do Euromilhões V8.1 — Axiomantes de Nemerion
+# Oráculos do Euromilhões — V13
 
 Simulador narrativo e estatístico do Euromilhões. O projeto explora padrões históricos através de personagens, facções e uma Biblioteca viva — sem nunca pretender prever resultados.
 
-> Padrões históricos não aumentam a probabilidade de prever um sorteio futuro. Uma chave simples tem sempre a mesma probabilidade matemática de 5+2.
+> Padrões históricos não aumentam a probabilidade de prever um sorteio futuro. Uma chave simples tem sempre a mesma probabilidade matemática de 1 em 139.838.160.
+
+---
+
+## Estado Atual da Plataforma (V13)
+
+Um mapa rápido do que existe realmente neste repositório hoje, separado de ideias — ver [Roadmap / Visão Futura](#roadmap--visão-futura) para o que ainda **não** está implementado.
+
+- ✅ **Motor de simulação** — arquitetura de plugins (`core/registry.py`, `core/plugin_loader.py`, `core/strategy.py`), 21 facções votantes auto-descobertas, Ariadne como único ponto de acesso a dados, Conselho (filtro, votação ponderada, corrupção de Malphas), 21 raças (apenas lore), i18n (6 línguas).
+- ✅ **Pipeline de dados históricos** — 1.968 sorteios reais do Euromilhões (2004–2026), datasets anuais imutáveis, mais `core/services/historical_dataset.py`, `historical_astronomy.py`, `historical_statistics.py`, `historical_scroll.py` e `historical_draw_generator.py` (usados por `register_official_draw.py`, um CLI transacional completo — staged → validado → instalado, com rollback — para registar novos sorteios oficiais).
+- ✅ **Heroes & Legends** — registries `library/heroes/` e `library/legends/` (`entries/*.json` como fonte de verdade, índices derivados `LIVRO_DOS_HEROIS.json`/`LIVRO_DAS_LENDAS.json`), mais `core/services/hero_evaluation.py`/`legend_evaluation.py` e os respetivos CLIs (`evaluate_heroes.py`, `evaluate_legends.py`).
+- ✅ **Dashboard Dataset** — `core/services/dashboard_data.py`, uma camada pura de montagem de dados: Heroes, Legends, Base de Chaves, Characters, Houses, Executive Summary, Economy e Categorias de Prémios estão todos implementados e testados contra dados reais (ver [Dashboard](#dashboard) abaixo). Ainda não existe camada de visualização — é apenas montagem de dados.
+- ✅ **Biblioteca dos Artefactos** — `core/services/artifact_schema.py`, `artifact_registry.py` e `artifact_inspiration.py`; 15 artefactos narrativos fundadores, todos verificados sem qualquer efeito em algoritmos, resultados ou probabilidades (ver [Biblioteca dos Artefactos](#biblioteca-dos-artefactos) abaixo).
+- ✅ **Testes** — 500 testes em 22 módulos (`python -m unittest discover -s tests`).
 
 ---
 
 ## Núcleo
 
 - **Ariadne** — guardiã da Biblioteca; único ponto de acesso a dados para todas as facções;
-- **Pergaminhos** — um ficheiro JSON por extração real (2004-2026, 1962 sorteios);
+- **Pergaminhos** — um ficheiro JSON por extração real (2004-2026, 1968 sorteios);
 - **Livros** — conhecimento derivado: frequências, duplas, triplas, lua, cartógrafos;
 - **Fontes** — datasets anuais imutáveis (2004-2026);
 - **Consultas** — cache de respostas Ariadne reutilizáveis;
@@ -21,27 +34,45 @@ Simulador narrativo e estatístico do Euromilhões. O projeto explora padrões h
 ## Estrutura principal
 
 ```text
-biblioteca/
-├── ariadne/              ← motor.py — classe Ariadne (12 métodos)
-├── fontes/               ← datasets anuais 2004-2026 (imutáveis)
+library/
+├── ariadne/              ← engine.py — classe Ariadne
+├── sources/              ← datasets anuais 2004-2026 (imutáveis)
 ├── scrolls/
-│   ├── 2004/ … 2025/     ← formato compacto (data como string)
-│   └── 2026/             ← formato completo (55 pergaminhos com astronomia)
+│   ├── 2004/ … 2025/     ← formato compacto (1.929 pergaminhos)
+│   └── 2026/             ← formato completo com astronomia (61 pergaminhos)
 ├── books/
-│   └── cartografos/      ← 5 livros analíticos gerados pelos Cartógrafos
-├── indices/              ← duplas.json, triplas.json
-├── cache/            ← cache de consultas Ariadne
+│   └── cartographers/    ← 5 livros analíticos gerados pelos Cartógrafos
+├── indexes/              ← duplas, triplas, frequências
+├── heroes/                ← HeroRegistry — entries/ + LIVRO_DOS_HEROIS.json derivado
+├── legends/                ← LegendRegistry — entries/ + LIVRO_DAS_LENDAS.json derivado
+├── artifacts/              ← Biblioteca dos Artefactos — entries/ + LIVRO_DOS_ARTEFACTOS.json derivado
+├── cache/                ← cache de consultas Ariadne
 └── black_kors/
-    └── papiros/          ← papiros semanais da Nyxara (semana_01/ … semana_53/)
+    └── papyri/           ← papiros semanais da Nyxara
 
-faccoes/
+core/services/            ← serviços partilhados, puros (sem I/O na maioria)
+├── combinations.py, fitness.py            ← utilitários de chave partilhados
+├── atomic_io.py                           ← escrita atómica de JSON
+├── historical_dataset.py, historical_astronomy.py,
+│   historical_statistics.py, historical_scroll.py,
+│   historical_draw_generator.py           ← pipeline de registo de sorteios oficiais
+├── hero_evaluation.py, legend_evaluation.py  ← classificação determinística de Heroes/Legends
+├── run_manifest.py                        ← manifesto de proveniência por execução
+├── dashboard_data.py                      ← Dashboard Dataset (ver abaixo)
+└── artifact_schema.py, artifact_registry.py,
+    artifact_inspiration.py                ← Biblioteca dos Artefactos (ver abaixo)
+
+factions/
 ├── kors/                 ← Kors de Elarion (V7.2)
-├── cartografos_caos/     ← Cartógrafos do Caos (V8)
-└── axiomantes/           ← Axiomantes de Nemerion (V8.1)
+├── chaos_cartographers/  ← Cartógrafos do Caos (V8)
+├── axiomantes/           ← Axiomantes de Nemerion (V8.1)
+└── clerics/, ... (21 facções no total, ver README.md para a lista completa)
 
 experiments/
 └── axiomancers/
     └── runs/             ← relatórios JSON por execução do ritual
+
+artifacts/                ← sistema MAIS ANTIGO e distinto: relíquias/amuletos mecânicos ligados ao estado da simulação (V4) — não confundir com library/artifacts/
 ```
 
 ---
@@ -75,10 +106,10 @@ Quatro observadores que consultam exclusivamente Ariadne — nunca lêem dataset
 | Branco | Aelyra dos Silêncios | 15 números mais atrasados |
 | Vermelho | Kael da Chama Fria | Números menos frequentes no histórico completo |
 | Verde | Sylvara das Passagens | Padrão penúltima→última chave (chegados, persistentes, vizinhos) |
-| Preto | Nyxara das Sombras Semanais | Ecos da semana ISO · grava papiro em `biblioteca/black_kors/` |
+| Preto | Nyxara das Sombras Semanais | Ecos da semana ISO · grava papiro em `library/black_kors/` |
 
 ### Cartógrafos do Caos (V8)
-Cinco analistas que **não geram chaves** — produzem livros analíticos para consulta por outras facções. Correm antes de todos os outros e escrevem em `biblioteca/books/cartographers/`.
+Cinco analistas que **não geram chaves** — produzem livros analíticos para consulta por outras facções. Correm antes de todos os outros e escrevem em `library/books/cartographers/`.
 
 | Cartógrafo | Livro gerado | O que analisa |
 |-----------|-------------|--------------|
@@ -177,44 +208,47 @@ Experiência completa em `experiments/axiomancers/runs/experiencia_YYYYMMDD_HHMM
 ## Ariadne — métodos disponíveis
 
 ```python
-from library.ariadne.motor import Ariadne
+from library.ariadne.engine import Ariadne
 a = Ariadne()
 
 # Pergaminhos 2026
-a.estado_pergaminho(55)
-a.procurar_lua("Lua cheia")
+a.scroll_state(55)
+a.search_moon("Lua cheia")
 
 # Índices
-a.duplas(limite=10)
-a.triplas(limite=10)
+a.pairs(limite=10)
+a.triples(limite=10)
 
 # Fontes normalizadas
 a.numero(17)
 
 # V7.2 — Kors
-a.numeros_atrasados(15)
-a.numeros_menos_frequentes(20)
-a.padrao_transicao()
-a.ecos_semanais(semana_iso=28)
-a.criar_papiro(semana_iso=28, dados={...})
+a.overdue_numbers(15)
+a.least_frequent_numbers(20)
+a.transition_pattern()
+a.weekly_echoes(semana_iso=28)
+a.create_papyrus(semana_iso=28, dados={...})
 
 # V8 — Cartógrafos
-a.historico_completo(desde="2020-01-01", ultimos=500)
+a.full_history(desde="2020-01-01", ultimos=500)
 
 # V8.1 — Axiomantes
-a.ultima_chave_conhecida()
+a.last_known_key()
 ```
 
 ---
 
 ## Consultar Ariadne (CLI)
 
+Os subcomandos do CLI mantêm-se em português mesmo com o nome do
+ficheiro em inglês:
+
 ```bash
-python consultar_ariadne.py lua "Lua cheia"
-python consultar_ariadne.py numero 17
-python consultar_ariadne.py duplas --limite 10
-python consultar_ariadne.py triplas --limite 10
-python consultar_ariadne.py pergaminho 55
+python query_ariadne.py lua "Lua cheia"
+python query_ariadne.py numero 17
+python query_ariadne.py duplas --limite 10
+python query_ariadne.py triplas --limite 10
+python query_ariadne.py pergaminho 55
 ```
 
 ---
@@ -226,18 +260,117 @@ python consultar_ariadne.py pergaminho 55
 python main.py
 
 # Campanha (múltiplas eras)
-python campanha_v6.py
+python campaign_v6.py
 
 # Simulação alternativa V7
-python simular_v7.py
+python simulate_v7.py
+
+# Suite de testes
+python -m unittest discover -s tests
 ```
+
+---
+
+## Dashboard
+
+`core/services/dashboard_data.py` é uma camada pura de transformação de
+dados para investigação/análise — nunca lê um ficheiro, nunca acede a um
+Registry, nunca calcula aleatoriedade. Cada função recebe dados já
+carregados (o resultado de `load_all()` de um Registry, ou um JSON de
+dataset histórico já lido) e devolve-os como pequenas dataclasses
+imutáveis (tuples, nunca lists).
+
+| Linha / função | Produz | Fonte |
+|---|---|---|
+| `build_heroes_rows()` | `HeroRow` | `HeroRegistry().load_all()` |
+| `build_legends_rows()` | `LegendRow` | `LegendRegistry().load_all()` |
+| `build_key_base_rows()` | `DrawRow` | `sorteios` do dataset histórico de 2026 |
+| `build_characters_rows()` | `CharacterRow` | `races/*/characters.json` |
+| `build_houses()` | `HouseEntry` | `races/*/lineages.json` cruzado com o arquivo de população |
+| `build_executive_summary()` | `ExecutiveSummary` | contagens de Heroes/Legends + Economy |
+| `build_economy_rows()` / `build_economy_summary()` | `EconomyDrawRow` / `EconomySummary` | `estatisticas_financeiras`/`premios` do dataset de 2026 |
+| `build_prize_category_rows()` / `build_prize_category_summary()` | `PrizeCategoryRow` / `PrizeCategorySummary` | `premios.categorias` do dataset de 2026 |
+| `build_dashboard_dataset()` | `DashboardDataset` | compõe tudo o que está acima — nunca chama os construtores diretamente |
+
+**Economy e Categorias de Prémios usam dados reais, nunca sintéticos.**
+O dataset oficial de 2026 só tem dados financeiros/de categorias de
+prémio completos em 15 dos seus 61 sorteios — confirmado pelas próprias
+flags `qualidade_dados` do dataset, nunca inferido a partir de um valor
+estar ou não a `null`. Toda a soma/média/mínimo/máximo em
+`EconomySummary`/`PrizeCategorySummary` é calculada apenas sobre os
+sorteios que realmente têm esse campo; um campo sem nenhuma observação
+real resolve para `None`, nunca para um `0` inventado ou uma estimativa.
+`PrizeCategoryRow` gera sempre exatamente 13 linhas por sorteio — a
+tabela oficial fixa de escalões de prémio do Euromilhões, uma regra do
+jogo e não um facto por sorteio — só os vencedores observados podem ser
+`None`.
+
+`GenerationRow`/`FrequenciesRow` já existem como contrato de dados no
+módulo, mas ainda não têm função construtora — `DashboardDataset`
+mantém-nos como tuples vazios por omissão. Ainda não existe um pacote
+`dashboard/` de visualização — ver [Roadmap](#roadmap--visão-futura).
+
+---
+
+## Biblioteca dos Artefactos
+
+Uma coleção **puramente narrativa e cerimonial**, distinta do sistema
+mais antigo `artifacts/` (`ark.py`/`living.py`/`relics/`/`amulets/`,
+era V4, mecanicamente ligado ao estado da simulação). `library/artifacts/`
+nunca influencia uma chave, um voto ou uma probabilidade — cada uma das
+15 entradas fundadoras tem `altera_algoritmo`, `altera_resultados` e
+`altera_probabilidades` explicitamente `false`, verificado
+estruturalmente em todas as camadas abaixo, não apenas afirmado em texto.
+
+- **`library/artifacts/entries/*.json`** — a única fonte primária, 15 artefactos fundadores (Moeda de Midas, Joaninha de Sylvaris, Estrela de Lyra, Fragmento do Arco-Íris de Íris, Trevo de Aethoria, cinco Ferraduras, Daruma da Perseverança, Brandy da Vitória Imperial, Cuequinhas Azuis Celestiais, Lótus da Tranquilidade, Codex da Fortuna Eterna). Nunca reescrita por nenhum código desta camada.
+- **`core/services/artifact_schema.py`** — `normalize_artifact()` converte qualquer uma das 15 formas de origem (genuinamente heterogéneas, escritas independentemente) num só `ArtifactRecord` pequeno: um núcleo fixo (id, nome, tipo, raridade, estado, criador, energia, lore, historia, tags…) mais duas válvulas de escape que garantem que nada se perde — `extras` (todo o campo não-núcleo, verbatim) e `raw` (o dict original intacto). Nunca inventa um valor por omissão para um campo ausente; ausente significa `None`, nunca uma suposição.
+- **`core/services/artifact_registry.py`** — `load_all_artifacts()` (deteta id duplicado e desalinhamento nome-de-ficheiro/id), `ArtifactRegistry` (consultas `by_id`/`by_type`/`by_tag`/`by_creator`, sem aleatoriedade nenhuma), e `build_index()`/`write_index()`, que derivam `library/artifacts/LIVRO_DOS_ARTEFACTOS.json` — sempre regenerado a partir de `entries/`, nunca editado à mão, nunca fonte de verdade por si só.
+- **`core/services/artifact_inspiration.py`** — `generate_inspiration(record, seed)`, um gerador determinístico (`random.Random(seed)`, nunca o `random` global) de "sementes de inspiração" narrativas para novos conceitos de personagem livremente inspirados num artefacto. Explicitamente proibido — e filtrado defensivamente, não apenas documentado — de sugerir números/estrelas, prever um sorteio, ou referir alterações a algoritmos/resultados/probabilidades; nunca cria ou altera um Hero ou uma Legend; não faz I/O de ficheiros.
+
+---
+
+## Roadmap / Visão Futura
+
+Tudo o que se segue é uma ideia documentada, não código implementado —
+nada aqui afeta a simulação, uma chave, um voto ou uma probabilidade
+hoje. Ver [Estado Atual da Plataforma (V13)](#estado-atual-da-plataforma-v13) acima para o que existe de facto.
+
+- **Pacote de visualização `dashboard/`** — o Dashboard Dataset (camada de dados, concluída) ainda não tem consumidor: sem exportação Excel, sem relatório CLI, sem gráfico. `requirements-dashboard.txt` (`openpyxl`) está preparado para isso.
+- **Construtores de `GenerationRow`/`FrequenciesRow`** — os contratos já existem em `dashboard_data.py`; ainda não há função que leia dados reais de gerações/frequências para eles.
+- **Novas facções** — Juízes do Conselho, Geómetras do Véu, Estatísticos Imperiais (já nomeadas no planeamento, ainda não implementadas).
+- **Serviços estatísticos partilhados** — `StatisticsService`, `DelayService`, `PairService`, `TripleService`, `EntropyService`, `TrendService`, para eventualmente substituir lógica de frequências/atraso/gaps hoje duplicada em `core/evolution/statistics.py`, `factions/chaos_cartographers/*.py` e `factions/axiomantes/profile.py`.
+- **Retrofit de `ctx['rng']`** — decidir se todas as facções devem usar o `ctx['rng']` partilhado e com seed (hoje só o Panteão, Esqueletos e Cronomantes o fazem; os Clérigos mantiveram deliberadamente o `random` global por razões de reprodutibilidade).
+- **Runner de Benchmarks** — `benchmarks/` é apenas estrutura; ainda não existe nenhum executor.
+
+---
+
+## Changelog
+
+| Versão | Destaque |
+|---|---|
+| V1 | Primeiro conselho de agentes |
+| V2 | Estratégias distintas por agente |
+| V3 | Campanhas, gerações, personagens lendárias |
+| V4 | Conselho + corrupção de Malphas; amuletos; relíquias; biblioteca negra |
+| V5 | Guerra das sombras — Esquadrão Negro vs Ordem Élfica; grimório aprende entre execuções |
+| V6 | Campanhas multi-era; Escribas, crónicas, Atlas; mundos configuráveis |
+| V7 | Biblioteca Eterna; Ariadne como único ponto de acesso a dados; Vampiros; Gárgulas |
+| V7.2 | Kors de Elarion — quatro observadores nomeados, só consultam Ariadne |
+| V8 | Cartógrafos do Caos — livros analíticos partilhados entre facções |
+| V8.1 | Axiomantes de Nemerion — permutação Feistel sobre 139M combinações; pontuação por Perfil dos Ecos; i18n |
+| V9 | Arquitetura de plugins — `FactionRegistry`, `CompatFaction`, `manifest.json` por facção; adicionar uma facção nunca toca em `main.py` |
+| V10 | Mystics — 8 novas ordens (lore + scaffolding de plugin), abstêm-se sempre por design |
+| V10.5 | Arquitetura completa — `races/` totalmente lore-only, primeiros serviços partilhados reais (`combinations.py`, `fitness.py`) |
+| V11 | Clérigos migrados para a arquitetura de plugins (`races/legacy.py` retirado) — 21 facções votantes no total |
+| V12.3 | Dashboard Dataset — Heroes, Legends, Base de Chaves, Characters, Houses, Executive Summary, Economy, Categorias de Prémios |
+| V13 | Biblioteca dos Artefactos — schema, registry e gerador determinístico de inspiração narrativa; CLI de registo de sorteios oficiais |
 
 ---
 
 ## Dados incluídos
 
-- **1962 sorteios reais** (2004-2026) em pergaminhos individuais;
-- **55 pergaminhos 2026** com astronomia, estatísticas e assinatura SHA256;
-- **Datasets anuais** 2004-2026 em `biblioteca/fontes/`;
+- **1968 sorteios reais** (2004-2026) em pergaminhos individuais;
+- **61 pergaminhos 2026** com astronomia, estatísticas e assinatura SHA256;
+- **Datasets anuais** 2004-2026 em `library/sources/`;
 - **Excel "Saídas de Bolas"** com frequências históricas normalizadas;
 - **Índices** de duplas e triplas mais frequentes.
