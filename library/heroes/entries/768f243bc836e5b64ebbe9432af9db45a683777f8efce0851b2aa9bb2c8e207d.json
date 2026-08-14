@@ -1,0 +1,77 @@
+{
+  "hero_id": "HERO-2026-062-768f243b",
+  "dedup_hash": "768f243bc836e5b64ebbe9432af9db45a683777f8efce0851b2aa9bb2c8e207d",
+  "source_prediction_id": "08db8a49fa5fba40b2b76552186ef1c45d007d8c92f47da36a9a5876d974ca10",
+  "entity_id": "H-00667",
+  "entity_name": "Aion do Bosque",
+  "race": "Chefe Tribal",
+  "generation": 13,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "062/2026",
+  "draw_date": "2026-08-04",
+  "official_key": {
+    "numeros": [
+      25,
+      30,
+      34,
+      46,
+      50
+    ],
+    "estrelas": [
+      1,
+      12
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      12,
+      41,
+      45,
+      46,
+      50
+    ],
+    "estrelas": [
+      1,
+      12
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 2,
+  "exact_matched_values": {
+    "numeros": [
+      46,
+      50
+    ],
+    "estrelas": [
+      1,
+      12
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      25,
+      30,
+      34
+    ],
+    "estrelas": []
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      12,
+      41,
+      45
+    ],
+    "estrelas": []
+  },
+  "hero_category": "2+2",
+  "hero_tier": "TIER_4",
+  "simulation_score": 35,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_062_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 2 lucky stars against official draw 062/2026 (category 2+2).",
+  "registered_at": "2026-08-05T15:12:01+00:00"
+}

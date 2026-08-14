@@ -1,0 +1,79 @@
+{
+  "hero_id": "HERO-2026-062-62eccbb0",
+  "dedup_hash": "62eccbb0934e0ccb447d76e10799c531e8927e26c33d0e953e8644de8935f684",
+  "source_prediction_id": "f62a2ee724d03904a7eaf30da8a56f69a6901e60e8c55462c2a2e872859cac89",
+  "entity_id": "H-00333",
+  "entity_name": "Aruk Pedra-Partida",
+  "race": "Esqueleto",
+  "generation": 7,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "062/2026",
+  "draw_date": "2026-08-04",
+  "official_key": {
+    "numeros": [
+      25,
+      30,
+      34,
+      46,
+      50
+    ],
+    "estrelas": [
+      1,
+      12
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      17,
+      25,
+      30,
+      32,
+      34
+    ],
+    "estrelas": [
+      7,
+      8
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 0,
+  "exact_matched_values": {
+    "numeros": [
+      25,
+      30,
+      34
+    ],
+    "estrelas": []
+  },
+  "missed_winning_values": {
+    "numeros": [
+      46,
+      50
+    ],
+    "estrelas": [
+      1,
+      12
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      17,
+      32
+    ],
+    "estrelas": [
+      7,
+      8
+    ]
+  },
+  "hero_category": "3+0",
+  "hero_tier": "TIER_4",
+  "simulation_score": 38,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_062_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 0 lucky stars against official draw 062/2026 (category 3+0).",
+  "registered_at": "2026-08-05T15:12:01+00:00"
+}

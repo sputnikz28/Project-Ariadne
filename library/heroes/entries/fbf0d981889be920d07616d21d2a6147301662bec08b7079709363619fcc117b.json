@@ -1,0 +1,77 @@
+{
+  "hero_id": "HERO-2026-062-fbf0d981",
+  "dedup_hash": "fbf0d981889be920d07616d21d2a6147301662bec08b7079709363619fcc117b",
+  "source_prediction_id": "b70d3b50e86c48143168545166e5af07fcf4cb5c47b76a335c711139e7530869",
+  "entity_id": "H-00257",
+  "entity_name": "Aion dos Astros",
+  "race": "Cronomante",
+  "generation": 5,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "062/2026",
+  "draw_date": "2026-08-04",
+  "official_key": {
+    "numeros": [
+      25,
+      30,
+      34,
+      46,
+      50
+    ],
+    "estrelas": [
+      1,
+      12
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      6,
+      24,
+      34,
+      46,
+      49
+    ],
+    "estrelas": [
+      1,
+      12
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 2,
+  "exact_matched_values": {
+    "numeros": [
+      34,
+      46
+    ],
+    "estrelas": [
+      1,
+      12
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      25,
+      30,
+      50
+    ],
+    "estrelas": []
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      6,
+      24,
+      49
+    ],
+    "estrelas": []
+  },
+  "hero_category": "2+2",
+  "hero_tier": "TIER_4",
+  "simulation_score": 35,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_062_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 2 lucky stars against official draw 062/2026 (category 2+2).",
+  "registered_at": "2026-08-05T15:11:59+00:00"
+}

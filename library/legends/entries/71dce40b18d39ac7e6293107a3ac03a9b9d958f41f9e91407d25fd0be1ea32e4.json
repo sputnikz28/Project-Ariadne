@@ -1,0 +1,41 @@
+{
+  "legend_id": "LEGEND-71dce40b",
+  "source_prediction_id": "71dce40b18d39ac7e6293107a3ac03a9b9d958f41f9e91407d25fd0be1ea32e4",
+  "promotion_draw": "062/2026",
+  "promotion_draw_date": "2026-08-04",
+  "promotion_threshold": 3,
+  "promotion_tier": "LEGEND_TIER_4",
+  "criteria_version": "v1",
+  "promotion_hero_ids": [
+    "HERO-2026-057-f095f450",
+    "HERO-2026-060-5b760297",
+    "HERO-2026-062-0fe2b050"
+  ],
+  "project_version": "V12",
+  "git_commit": "c24f75909d3ac154c64c224692ecdda4e1cab4f6",
+  "qualification_reason": "Promoted to Legend at draw 062/2026 (2026-08-04) by reaching 3 distinct qualifying draws as Hero (criteria_version: v1).",
+  "entity_id": "H-00124",
+  "entity_name": "Gruk dos Ossos",
+  "race": "Esqueleto",
+  "generation": 8,
+  "predicted_numeros": [
+    18,
+    24,
+    25,
+    30,
+    34
+  ],
+  "predicted_estrelas": [
+    9,
+    10
+  ],
+  "hero_count": 3,
+  "qualified_draws": 3,
+  "contributing_hero_ids": [
+    "HERO-2026-057-f095f450",
+    "HERO-2026-060-5b760297",
+    "HERO-2026-062-0fe2b050"
+  ],
+  "provenance": "legacy",
+  "last_reevaluated_at": null
+}

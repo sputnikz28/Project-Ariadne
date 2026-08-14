@@ -1,0 +1,80 @@
+{
+  "hero_id": "HERO-2026-062-06209c5e",
+  "dedup_hash": "06209c5e4e4c85eb85b57b5afcfdabaac8f2f165eb73a372134456e91651b19a",
+  "source_prediction_id": "b60e5d653554cf5e84a8712cf0baf34325c2e24e146edda741a3c224bfca25df",
+  "entity_id": "H-00049",
+  "entity_name": "Aion da Névoa",
+  "race": "Chefe Tribal",
+  "generation": 3,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "062/2026",
+  "draw_date": "2026-08-04",
+  "official_key": {
+    "numeros": [
+      25,
+      30,
+      34,
+      46,
+      50
+    ],
+    "estrelas": [
+      1,
+      12
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      1,
+      23,
+      30,
+      37,
+      50
+    ],
+    "estrelas": [
+      6,
+      12
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      30,
+      50
+    ],
+    "estrelas": [
+      12
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      25,
+      34,
+      46
+    ],
+    "estrelas": [
+      1
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      1,
+      23,
+      37
+    ],
+    "estrelas": [
+      6
+    ]
+  },
+  "hero_category": "2+1",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_062_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 1 lucky stars against official draw 062/2026 (category 2+1).",
+  "registered_at": "2026-08-05T15:12:02+00:00"
+}

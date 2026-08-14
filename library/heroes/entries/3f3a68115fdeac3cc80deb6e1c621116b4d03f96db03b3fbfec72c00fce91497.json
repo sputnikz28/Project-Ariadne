@@ -1,0 +1,79 @@
+{
+  "hero_id": "HERO-2026-062-3f3a6811",
+  "dedup_hash": "3f3a68115fdeac3cc80deb6e1c621116b4d03f96db03b3fbfec72c00fce91497",
+  "source_prediction_id": "cf928d7b04b147e2dfc323ae1ca004983e7b99b0899a6c9e0e748e9e505b77b9",
+  "entity_id": "H-00503",
+  "entity_name": "Selene da Névoa",
+  "race": "Vidente",
+  "generation": 10,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "062/2026",
+  "draw_date": "2026-08-04",
+  "official_key": {
+    "numeros": [
+      25,
+      30,
+      34,
+      46,
+      50
+    ],
+    "estrelas": [
+      1,
+      12
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      10,
+      25,
+      30,
+      34,
+      35
+    ],
+    "estrelas": [
+      2,
+      6
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 0,
+  "exact_matched_values": {
+    "numeros": [
+      25,
+      30,
+      34
+    ],
+    "estrelas": []
+  },
+  "missed_winning_values": {
+    "numeros": [
+      46,
+      50
+    ],
+    "estrelas": [
+      1,
+      12
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      10,
+      35
+    ],
+    "estrelas": [
+      2,
+      6
+    ]
+  },
+  "hero_category": "3+0",
+  "hero_tier": "TIER_4",
+  "simulation_score": 38,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_062_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 0 lucky stars against official draw 062/2026 (category 3+0).",
+  "registered_at": "2026-08-05T15:12:00+00:00"
+}

@@ -1,0 +1,41 @@
+{
+  "legend_id": "LEGEND-133b554b",
+  "source_prediction_id": "133b554bce268dab57cd8b583ca3d89e52c996c0b3c65795187d675c5434f186",
+  "promotion_draw": "062/2026",
+  "promotion_draw_date": "2026-08-04",
+  "promotion_threshold": 3,
+  "promotion_tier": "LEGEND_TIER_4",
+  "criteria_version": "v1",
+  "promotion_hero_ids": [
+    "HERO-2026-059-a27c1fac",
+    "HERO-2026-061-4ed1a231",
+    "HERO-2026-062-653dc6b0"
+  ],
+  "project_version": "V12",
+  "git_commit": "c24f75909d3ac154c64c224692ecdda4e1cab4f6",
+  "qualification_reason": "Promoted to Legend at draw 062/2026 (2026-08-04) by reaching 3 distinct qualifying draws as Hero (criteria_version: v1).",
+  "entity_id": "H-00680",
+  "entity_name": "Elarion da Lua Fria",
+  "race": "Bruxa",
+  "generation": 13,
+  "predicted_numeros": [
+    10,
+    24,
+    34,
+    45,
+    46
+  ],
+  "predicted_estrelas": [
+    1,
+    4
+  ],
+  "hero_count": 3,
+  "qualified_draws": 3,
+  "contributing_hero_ids": [
+    "HERO-2026-059-a27c1fac",
+    "HERO-2026-061-4ed1a231",
+    "HERO-2026-062-653dc6b0"
+  ],
+  "provenance": "legacy",
+  "last_reevaluated_at": null
+}

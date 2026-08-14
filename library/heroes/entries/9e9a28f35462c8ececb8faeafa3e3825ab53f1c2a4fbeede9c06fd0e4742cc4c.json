@@ -1,0 +1,80 @@
+{
+  "hero_id": "HERO-2026-062-9e9a28f3",
+  "dedup_hash": "9e9a28f35462c8ececb8faeafa3e3825ab53f1c2a4fbeede9c06fd0e4742cc4c",
+  "source_prediction_id": "88a5c9913d3b963eae27ae1b4ff261f74b710e73bd2e2eba25f0dac711a6709e",
+  "entity_id": "H-00338",
+  "entity_name": "Lyra dos Ossos",
+  "race": "Chefe Tribal",
+  "generation": 7,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "062/2026",
+  "draw_date": "2026-08-04",
+  "official_key": {
+    "numeros": [
+      25,
+      30,
+      34,
+      46,
+      50
+    ],
+    "estrelas": [
+      1,
+      12
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      9,
+      20,
+      34,
+      41,
+      50
+    ],
+    "estrelas": [
+      1,
+      3
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      34,
+      50
+    ],
+    "estrelas": [
+      1
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      25,
+      30,
+      46
+    ],
+    "estrelas": [
+      12
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      9,
+      20,
+      41
+    ],
+    "estrelas": [
+      3
+    ]
+  },
+  "hero_category": "2+1",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_062_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 1 lucky stars against official draw 062/2026 (category 2+1).",
+  "registered_at": "2026-08-05T15:12:00+00:00"
+}

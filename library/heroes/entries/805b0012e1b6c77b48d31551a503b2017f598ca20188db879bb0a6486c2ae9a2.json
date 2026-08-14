@@ -1,0 +1,80 @@
+{
+  "hero_id": "HERO-2026-062-805b0012",
+  "dedup_hash": "805b0012e1b6c77b48d31551a503b2017f598ca20188db879bb0a6486c2ae9a2",
+  "source_prediction_id": "52c07e5458c7be47305e883e7c56cefb0e47e18eeefa089f167fb187dec3e58d",
+  "entity_id": "H-00689",
+  "entity_name": "Velka dos Ossos",
+  "race": "Bruxa",
+  "generation": 13,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "062/2026",
+  "draw_date": "2026-08-04",
+  "official_key": {
+    "numeros": [
+      25,
+      30,
+      34,
+      46,
+      50
+    ],
+    "estrelas": [
+      1,
+      12
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      16,
+      22,
+      25,
+      37,
+      50
+    ],
+    "estrelas": [
+      1,
+      5
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      25,
+      50
+    ],
+    "estrelas": [
+      1
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      30,
+      34,
+      46
+    ],
+    "estrelas": [
+      12
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      16,
+      22,
+      37
+    ],
+    "estrelas": [
+      5
+    ]
+  },
+  "hero_category": "2+1",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_062_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 1 lucky stars against official draw 062/2026 (category 2+1).",
+  "registered_at": "2026-08-05T15:12:00+00:00"
+}

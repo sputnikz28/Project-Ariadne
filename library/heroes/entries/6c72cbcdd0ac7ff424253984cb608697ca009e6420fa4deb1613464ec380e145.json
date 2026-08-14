@@ -1,0 +1,80 @@
+{
+  "hero_id": "HERO-2026-062-6c72cbcd",
+  "dedup_hash": "6c72cbcdd0ac7ff424253984cb608697ca009e6420fa4deb1613464ec380e145",
+  "source_prediction_id": "7cf2d9750ea83570ccfdbc66bef026f6571f18d690410c72bc69b386a991c49c",
+  "entity_id": "H-00111",
+  "entity_name": "Lyra do Bosque",
+  "race": "Goblin",
+  "generation": 2,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "062/2026",
+  "draw_date": "2026-08-04",
+  "official_key": {
+    "numeros": [
+      25,
+      30,
+      34,
+      46,
+      50
+    ],
+    "estrelas": [
+      1,
+      12
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      11,
+      18,
+      30,
+      34,
+      42
+    ],
+    "estrelas": [
+      1,
+      10
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      30,
+      34
+    ],
+    "estrelas": [
+      1
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      25,
+      46,
+      50
+    ],
+    "estrelas": [
+      12
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      11,
+      18,
+      42
+    ],
+    "estrelas": [
+      10
+    ]
+  },
+  "hero_category": "2+1",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_062_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 1 lucky stars against official draw 062/2026 (category 2+1).",
+  "registered_at": "2026-08-05T15:12:00+00:00"
+}

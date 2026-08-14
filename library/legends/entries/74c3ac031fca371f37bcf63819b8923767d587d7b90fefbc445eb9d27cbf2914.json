@@ -1,0 +1,41 @@
+{
+  "legend_id": "LEGEND-74c3ac03",
+  "source_prediction_id": "74c3ac031fca371f37bcf63819b8923767d587d7b90fefbc445eb9d27cbf2914",
+  "promotion_draw": "062/2026",
+  "promotion_draw_date": "2026-08-04",
+  "promotion_threshold": 3,
+  "promotion_tier": "LEGEND_TIER_4",
+  "criteria_version": "v1",
+  "promotion_hero_ids": [
+    "HERO-2026-059-b8cfdabd",
+    "HERO-2026-061-11baa2d3",
+    "HERO-2026-062-0c388693"
+  ],
+  "project_version": "V12",
+  "git_commit": "c24f75909d3ac154c64c224692ecdda4e1cab4f6",
+  "qualification_reason": "Promoted to Legend at draw 062/2026 (2026-08-04) by reaching 3 distinct qualifying draws as Hero (criteria_version: v1).",
+  "entity_id": "H-00139",
+  "entity_name": "Aruk dos Ossos",
+  "race": "Bruxa",
+  "generation": 3,
+  "predicted_numeros": [
+    10,
+    31,
+    34,
+    38,
+    50
+  ],
+  "predicted_estrelas": [
+    1,
+    4
+  ],
+  "hero_count": 3,
+  "qualified_draws": 3,
+  "contributing_hero_ids": [
+    "HERO-2026-059-b8cfdabd",
+    "HERO-2026-061-11baa2d3",
+    "HERO-2026-062-0c388693"
+  ],
+  "provenance": "legacy",
+  "last_reevaluated_at": null
+}

@@ -1,0 +1,41 @@
+{
+  "legend_id": "LEGEND-c420788f",
+  "source_prediction_id": "c420788fbdaa731142ae4a4941720ae337ece96ad6cef78ca0278403fa238a84",
+  "promotion_draw": "062/2026",
+  "promotion_draw_date": "2026-08-04",
+  "promotion_threshold": 3,
+  "promotion_tier": "LEGEND_TIER_4",
+  "criteria_version": "v1",
+  "promotion_hero_ids": [
+    "HERO-2026-057-929bcf07",
+    "HERO-2026-060-fe8589c1",
+    "HERO-2026-062-b60e851d"
+  ],
+  "project_version": "V12",
+  "git_commit": "c24f75909d3ac154c64c224692ecdda4e1cab4f6",
+  "qualification_reason": "Promoted to Legend at draw 062/2026 (2026-08-04) by reaching 3 distinct qualifying draws as Hero (criteria_version: v1).",
+  "entity_id": "H-00699",
+  "entity_name": "Morgana dos Astros",
+  "race": "Goblin",
+  "generation": 14,
+  "predicted_numeros": [
+    23,
+    30,
+    33,
+    34,
+    49
+  ],
+  "predicted_estrelas": [
+    1,
+    10
+  ],
+  "hero_count": 3,
+  "qualified_draws": 3,
+  "contributing_hero_ids": [
+    "HERO-2026-057-929bcf07",
+    "HERO-2026-060-fe8589c1",
+    "HERO-2026-062-b60e851d"
+  ],
+  "provenance": "legacy",
+  "last_reevaluated_at": null
+}

@@ -1,0 +1,79 @@
+{
+  "hero_id": "HERO-2026-062-2f6ae024",
+  "dedup_hash": "2f6ae024fd153b855dea245a37854233947cd2c395ba3f34d37f9a1ff2c5e028",
+  "source_prediction_id": "fe82c52d51d7cc5f88d04908cde2b748b0cfab460819c5e851b3c4a1e0212133",
+  "entity_id": "H-00003",
+  "entity_name": "Velka da Lua Fria",
+  "race": "Vidente",
+  "generation": 12,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "062/2026",
+  "draw_date": "2026-08-04",
+  "official_key": {
+    "numeros": [
+      25,
+      30,
+      34,
+      46,
+      50
+    ],
+    "estrelas": [
+      1,
+      12
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      2,
+      30,
+      34,
+      35,
+      46
+    ],
+    "estrelas": [
+      2,
+      5
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 0,
+  "exact_matched_values": {
+    "numeros": [
+      30,
+      34,
+      46
+    ],
+    "estrelas": []
+  },
+  "missed_winning_values": {
+    "numeros": [
+      25,
+      50
+    ],
+    "estrelas": [
+      1,
+      12
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      2,
+      35
+    ],
+    "estrelas": [
+      2,
+      5
+    ]
+  },
+  "hero_category": "3+0",
+  "hero_tier": "TIER_4",
+  "simulation_score": 38,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_062_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 0 lucky stars against official draw 062/2026 (category 3+0).",
+  "registered_at": "2026-08-05T15:12:00+00:00"
+}

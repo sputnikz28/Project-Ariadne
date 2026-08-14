@@ -1,0 +1,41 @@
+{
+  "legend_id": "LEGEND-f8fc1695",
+  "source_prediction_id": "f8fc1695437833a8304313824f03051aeed96f5b015fc81af57e8eb866f45dab",
+  "promotion_draw": "062/2026",
+  "promotion_draw_date": "2026-08-04",
+  "promotion_threshold": 3,
+  "promotion_tier": "LEGEND_TIER_4",
+  "criteria_version": "v1",
+  "promotion_hero_ids": [
+    "HERO-2026-058-993a2930",
+    "HERO-2026-060-60602b1e",
+    "HERO-2026-062-41c3014e"
+  ],
+  "project_version": "V12",
+  "git_commit": "c24f75909d3ac154c64c224692ecdda4e1cab4f6",
+  "qualification_reason": "Promoted to Legend at draw 062/2026 (2026-08-04) by reaching 3 distinct qualifying draws as Hero (criteria_version: v1).",
+  "entity_id": "H-00166",
+  "entity_name": "Lyra dos Ossos",
+  "race": "Goblin",
+  "generation": 3,
+  "predicted_numeros": [
+    30,
+    34,
+    39,
+    46,
+    49
+  ],
+  "predicted_estrelas": [
+    2,
+    11
+  ],
+  "hero_count": 3,
+  "qualified_draws": 3,
+  "contributing_hero_ids": [
+    "HERO-2026-058-993a2930",
+    "HERO-2026-060-60602b1e",
+    "HERO-2026-062-41c3014e"
+  ],
+  "provenance": "legacy",
+  "last_reevaluated_at": null
+}

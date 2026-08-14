@@ -1,0 +1,41 @@
+{
+  "legend_id": "LEGEND-dfe8bba4",
+  "source_prediction_id": "dfe8bba41463b69291a0207a3fa8d3f8b21892e4fb0c4d131c7d12b91fa7fb22",
+  "promotion_draw": "062/2026",
+  "promotion_draw_date": "2026-08-04",
+  "promotion_threshold": 3,
+  "promotion_tier": "LEGEND_TIER_4",
+  "criteria_version": "v1",
+  "promotion_hero_ids": [
+    "HERO-2026-059-f7338686",
+    "HERO-2026-061-d4dba04c",
+    "HERO-2026-062-606bd598"
+  ],
+  "project_version": "V12",
+  "git_commit": "c24f75909d3ac154c64c224692ecdda4e1cab4f6",
+  "qualification_reason": "Promoted to Legend at draw 062/2026 (2026-08-04) by reaching 3 distinct qualifying draws as Hero (criteria_version: v1).",
+  "entity_id": "H-00333",
+  "entity_name": "Morgana da Névoa",
+  "race": "Chefe Tribal",
+  "generation": 7,
+  "predicted_numeros": [
+    24,
+    36,
+    45,
+    46,
+    50
+  ],
+  "predicted_estrelas": [
+    1,
+    4
+  ],
+  "hero_count": 3,
+  "qualified_draws": 3,
+  "contributing_hero_ids": [
+    "HERO-2026-059-f7338686",
+    "HERO-2026-061-d4dba04c",
+    "HERO-2026-062-606bd598"
+  ],
+  "provenance": "legacy",
+  "last_reevaluated_at": null
+}

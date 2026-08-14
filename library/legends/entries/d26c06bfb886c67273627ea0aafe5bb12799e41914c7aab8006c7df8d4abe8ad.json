@@ -1,0 +1,41 @@
+{
+  "legend_id": "LEGEND-d26c06bf",
+  "source_prediction_id": "d26c06bfb886c67273627ea0aafe5bb12799e41914c7aab8006c7df8d4abe8ad",
+  "promotion_draw": "062/2026",
+  "promotion_draw_date": "2026-08-04",
+  "promotion_threshold": 3,
+  "promotion_tier": "LEGEND_TIER_4",
+  "criteria_version": "v1",
+  "promotion_hero_ids": [
+    "HERO-2026-056-4a5c1698",
+    "HERO-2026-057-0e9aa906",
+    "HERO-2026-062-7b26f8b3"
+  ],
+  "project_version": "V12",
+  "git_commit": "c24f75909d3ac154c64c224692ecdda4e1cab4f6",
+  "qualification_reason": "Promoted to Legend at draw 062/2026 (2026-08-04) by reaching 3 distinct qualifying draws as Hero (criteria_version: v1).",
+  "entity_id": "H-00362",
+  "entity_name": "Morgana dos Astros",
+  "race": "Bruxa",
+  "generation": 7,
+  "predicted_numeros": [
+    19,
+    21,
+    40,
+    46,
+    50
+  ],
+  "predicted_estrelas": [
+    9,
+    12
+  ],
+  "hero_count": 3,
+  "qualified_draws": 3,
+  "contributing_hero_ids": [
+    "HERO-2026-056-4a5c1698",
+    "HERO-2026-057-0e9aa906",
+    "HERO-2026-062-7b26f8b3"
+  ],
+  "provenance": "legacy",
+  "last_reevaluated_at": null
+}

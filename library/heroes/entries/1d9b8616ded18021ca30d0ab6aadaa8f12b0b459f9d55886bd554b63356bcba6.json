@@ -1,0 +1,77 @@
+{
+  "hero_id": "HERO-2026-062-1d9b8616",
+  "dedup_hash": "1d9b8616ded18021ca30d0ab6aadaa8f12b0b459f9d55886bd554b63356bcba6",
+  "source_prediction_id": "f73230c8ddebee9295d7dfa69f72956cb7813ce8857c2119aa6c7a4ac84024d5",
+  "entity_id": "H-00149",
+  "entity_name": "Kael do Bosque",
+  "race": "Chefe Tribal",
+  "generation": 3,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "062/2026",
+  "draw_date": "2026-08-04",
+  "official_key": {
+    "numeros": [
+      25,
+      30,
+      34,
+      46,
+      50
+    ],
+    "estrelas": [
+      1,
+      12
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      20,
+      25,
+      37,
+      49,
+      50
+    ],
+    "estrelas": [
+      1,
+      12
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 2,
+  "exact_matched_values": {
+    "numeros": [
+      25,
+      50
+    ],
+    "estrelas": [
+      1,
+      12
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      30,
+      34,
+      46
+    ],
+    "estrelas": []
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      20,
+      37,
+      49
+    ],
+    "estrelas": []
+  },
+  "hero_category": "2+2",
+  "hero_tier": "TIER_4",
+  "simulation_score": 35,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_062_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 2 lucky stars against official draw 062/2026 (category 2+2).",
+  "registered_at": "2026-08-05T15:12:01+00:00"
+}

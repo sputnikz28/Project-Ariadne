@@ -1,0 +1,41 @@
+{
+  "legend_id": "LEGEND-7eea7fc3",
+  "source_prediction_id": "7eea7fc361168ff83c67d0cdae93f2080beadf2096531d72a71102da862791ee",
+  "promotion_draw": "062/2026",
+  "promotion_draw_date": "2026-08-04",
+  "promotion_threshold": 3,
+  "promotion_tier": "LEGEND_TIER_4",
+  "criteria_version": "v1",
+  "promotion_hero_ids": [
+    "HERO-2026-059-59190182",
+    "HERO-2026-061-5c4d98ee",
+    "HERO-2026-062-ce9bbf5e"
+  ],
+  "project_version": "V12",
+  "git_commit": "c24f75909d3ac154c64c224692ecdda4e1cab4f6",
+  "qualification_reason": "Promoted to Legend at draw 062/2026 (2026-08-04) by reaching 3 distinct qualifying draws as Hero (criteria_version: v1).",
+  "entity_id": "H-00102",
+  "entity_name": "Aruk da Névoa",
+  "race": "Goblin",
+  "generation": 14,
+  "predicted_numeros": [
+    10,
+    16,
+    18,
+    25,
+    50
+  ],
+  "predicted_estrelas": [
+    1,
+    4
+  ],
+  "hero_count": 3,
+  "qualified_draws": 3,
+  "contributing_hero_ids": [
+    "HERO-2026-059-59190182",
+    "HERO-2026-061-5c4d98ee",
+    "HERO-2026-062-ce9bbf5e"
+  ],
+  "provenance": "legacy",
+  "last_reevaluated_at": null
+}

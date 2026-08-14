@@ -1,0 +1,41 @@
+{
+  "legend_id": "LEGEND-ac5b5cec",
+  "source_prediction_id": "ac5b5cec1731d49781ccc07ba435b01ee73ea67f3928c7fbc2cf4314a88a3d03",
+  "promotion_draw": "062/2026",
+  "promotion_draw_date": "2026-08-04",
+  "promotion_threshold": 3,
+  "promotion_tier": "LEGEND_TIER_4",
+  "criteria_version": "v1",
+  "promotion_hero_ids": [
+    "HERO-2026-057-45ac3b4d",
+    "HERO-2026-059-d026bf2f",
+    "HERO-2026-062-11014c26"
+  ],
+  "project_version": "V12",
+  "git_commit": "c24f75909d3ac154c64c224692ecdda4e1cab4f6",
+  "qualification_reason": "Promoted to Legend at draw 062/2026 (2026-08-04) by reaching 3 distinct qualifying draws as Hero (criteria_version: v1).",
+  "entity_id": "H-00021",
+  "entity_name": "Gruk dos Ossos",
+  "race": "Chefe Tribal",
+  "generation": 9,
+  "predicted_numeros": [
+    12,
+    34,
+    36,
+    47,
+    50
+  ],
+  "predicted_estrelas": [
+    1,
+    10
+  ],
+  "hero_count": 3,
+  "qualified_draws": 3,
+  "contributing_hero_ids": [
+    "HERO-2026-057-45ac3b4d",
+    "HERO-2026-059-d026bf2f",
+    "HERO-2026-062-11014c26"
+  ],
+  "provenance": "legacy",
+  "last_reevaluated_at": null
+}

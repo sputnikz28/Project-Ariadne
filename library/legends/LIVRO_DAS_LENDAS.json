@@ -1,29 +1,47 @@
 {
   "nome": "Livro das Lendas",
-  "total_legends": 16,
+  "total_legends": 34,
   "por_tier": {
-    "LEGEND_TIER_4": 16
+    "LEGEND_TIER_4": 34
   },
   "por_provenance": {
-    "legacy": 16
+    "legacy": 34
   },
   "ranking": [
+    "LEGEND-910fa13f",
+    "LEGEND-29afc8ae",
     "LEGEND-4f4beee0",
+    "LEGEND-bb258035",
+    "LEGEND-d6ee4600",
+    "LEGEND-1dd1a852",
+    "LEGEND-ac5b5cec",
+    "LEGEND-37aabb58",
     "LEGEND-6caadc88",
     "LEGEND-7722b35c",
     "LEGEND-fa319215",
     "LEGEND-c223ad19",
+    "LEGEND-7eea7fc3",
+    "LEGEND-71dce40b",
+    "LEGEND-74c3ac03",
+    "LEGEND-f8fc1695",
+    "LEGEND-dac4df4d",
     "LEGEND-58ba7c7d",
     "LEGEND-51fb920c",
     "LEGEND-7792db45",
+    "LEGEND-4a6ea07f",
+    "LEGEND-dfe8bba4",
+    "LEGEND-d26c06bf",
     "LEGEND-e651b485",
+    "LEGEND-cf4701d3",
     "LEGEND-8cc825f4",
     "LEGEND-a2a6ef97",
-    "LEGEND-910fa13f",
+    "LEGEND-b5f4f125",
     "LEGEND-690ec980",
+    "LEGEND-133b554b",
     "LEGEND-7b3dfb53",
     "LEGEND-2ee852b0",
+    "LEGEND-c420788f",
     "LEGEND-af077da8"
   ],
-  "atualizado_em": "2026-08-02T15:12:01+00:00"
+  "atualizado_em": "2026-08-05T15:12:47+00:00"
 }

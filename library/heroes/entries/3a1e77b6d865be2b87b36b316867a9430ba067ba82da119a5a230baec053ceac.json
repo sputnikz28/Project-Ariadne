@@ -1,0 +1,78 @@
+{
+  "hero_id": "HERO-2026-062-3a1e77b6",
+  "dedup_hash": "3a1e77b6d865be2b87b36b316867a9430ba067ba82da119a5a230baec053ceac",
+  "source_prediction_id": "25a57290623ed7052f7a6c1c92ecd470097c291ad90843dcaff974336f0df070",
+  "entity_id": "H-00490",
+  "entity_name": "Velka Pedra-Partida",
+  "race": "Chefe Tribal",
+  "generation": 10,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "062/2026",
+  "draw_date": "2026-08-04",
+  "official_key": {
+    "numeros": [
+      25,
+      30,
+      34,
+      46,
+      50
+    ],
+    "estrelas": [
+      1,
+      12
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      6,
+      18,
+      31,
+      32,
+      50
+    ],
+    "estrelas": [
+      1,
+      12
+    ]
+  },
+  "matched_numbers_count": 1,
+  "matched_stars_count": 2,
+  "exact_matched_values": {
+    "numeros": [
+      50
+    ],
+    "estrelas": [
+      1,
+      12
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      25,
+      30,
+      34,
+      46
+    ],
+    "estrelas": []
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      6,
+      18,
+      31,
+      32
+    ],
+    "estrelas": []
+  },
+  "hero_category": "1+2",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_062_dataset_completo.json",
+  "qualification_reason": "Matched 1 main numbers and 2 lucky stars against official draw 062/2026 (category 1+2).",
+  "registered_at": "2026-08-05T15:12:01+00:00"
+}

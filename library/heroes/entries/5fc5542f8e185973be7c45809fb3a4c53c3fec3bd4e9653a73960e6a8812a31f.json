@@ -1,0 +1,78 @@
+{
+  "hero_id": "HERO-2026-062-5fc5542f",
+  "dedup_hash": "5fc5542f8e185973be7c45809fb3a4c53c3fec3bd4e9653a73960e6a8812a31f",
+  "source_prediction_id": "7da185e8d2e8ab08057e3c1ad8f4a068f4fa5efda3154f1b3ae9460638f44180",
+  "entity_id": "H-00031",
+  "entity_name": "Gruk Pedra-Partida",
+  "race": "Elfo",
+  "generation": 1,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "062/2026",
+  "draw_date": "2026-08-04",
+  "official_key": {
+    "numeros": [
+      25,
+      30,
+      34,
+      46,
+      50
+    ],
+    "estrelas": [
+      1,
+      12
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      17,
+      25,
+      30,
+      34,
+      50
+    ],
+    "estrelas": [
+      2,
+      8
+    ]
+  },
+  "matched_numbers_count": 4,
+  "matched_stars_count": 0,
+  "exact_matched_values": {
+    "numeros": [
+      25,
+      30,
+      34,
+      50
+    ],
+    "estrelas": []
+  },
+  "missed_winning_values": {
+    "numeros": [
+      46
+    ],
+    "estrelas": [
+      1,
+      12
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      17
+    ],
+    "estrelas": [
+      2,
+      8
+    ]
+  },
+  "hero_category": "4+0",
+  "hero_tier": "TIER_3",
+  "simulation_score": 48,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_062_dataset_completo.json",
+  "qualification_reason": "Matched 4 main numbers and 0 lucky stars against official draw 062/2026 (category 4+0).",
+  "registered_at": "2026-08-05T15:12:00+00:00"
+}

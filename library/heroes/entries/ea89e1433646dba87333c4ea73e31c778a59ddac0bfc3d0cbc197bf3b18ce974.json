@@ -1,0 +1,78 @@
+{
+  "hero_id": "HERO-2026-062-ea89e143",
+  "dedup_hash": "ea89e1433646dba87333c4ea73e31c778a59ddac0bfc3d0cbc197bf3b18ce974",
+  "source_prediction_id": "a467e3f38a6b8b79df9d83c4f2934b8ba606eba6da81c5e8369d1e86e0430056",
+  "entity_id": "Djinn-1",
+  "entity_name": "Djinn-1",
+  "race": "Djinn",
+  "generation": 14,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "062/2026",
+  "draw_date": "2026-08-04",
+  "official_key": {
+    "numeros": [
+      25,
+      30,
+      34,
+      46,
+      50
+    ],
+    "estrelas": [
+      1,
+      12
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      4,
+      6,
+      25,
+      39,
+      45
+    ],
+    "estrelas": [
+      1,
+      12
+    ]
+  },
+  "matched_numbers_count": 1,
+  "matched_stars_count": 2,
+  "exact_matched_values": {
+    "numeros": [
+      25
+    ],
+    "estrelas": [
+      1,
+      12
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      30,
+      34,
+      46,
+      50
+    ],
+    "estrelas": []
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      4,
+      6,
+      39,
+      45
+    ],
+    "estrelas": []
+  },
+  "hero_category": "1+2",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_062_dataset_completo.json",
+  "qualification_reason": "Matched 1 main numbers and 2 lucky stars against official draw 062/2026 (category 1+2).",
+  "registered_at": "2026-08-05T15:12:01+00:00"
+}

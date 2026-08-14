@@ -1,0 +1,41 @@
+{
+  "legend_id": "LEGEND-cf4701d3",
+  "source_prediction_id": "cf4701d3fe863147f58537156e122c4e4cce806b75b6af99b520eab0b4ff86ac",
+  "promotion_draw": "062/2026",
+  "promotion_draw_date": "2026-08-04",
+  "promotion_threshold": 3,
+  "promotion_tier": "LEGEND_TIER_4",
+  "criteria_version": "v1",
+  "promotion_hero_ids": [
+    "HERO-2026-056-b569ec11",
+    "HERO-2026-059-4db91ab2",
+    "HERO-2026-062-01484478"
+  ],
+  "project_version": "V12",
+  "git_commit": "c24f75909d3ac154c64c224692ecdda4e1cab4f6",
+  "qualification_reason": "Promoted to Legend at draw 062/2026 (2026-08-04) by reaching 3 distinct qualifying draws as Hero (criteria_version: v1).",
+  "entity_id": "H-00429",
+  "entity_name": "Aion da Lua Fria",
+  "race": "Chefe Tribal",
+  "generation": 8,
+  "predicted_numeros": [
+    8,
+    30,
+    44,
+    47,
+    50
+  ],
+  "predicted_estrelas": [
+    9,
+    12
+  ],
+  "hero_count": 3,
+  "qualified_draws": 3,
+  "contributing_hero_ids": [
+    "HERO-2026-056-b569ec11",
+    "HERO-2026-059-4db91ab2",
+    "HERO-2026-062-01484478"
+  ],
+  "provenance": "legacy",
+  "last_reevaluated_at": null
+}

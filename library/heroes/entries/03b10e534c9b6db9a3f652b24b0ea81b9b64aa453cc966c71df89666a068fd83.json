@@ -1,0 +1,79 @@
+{
+  "hero_id": "HERO-2026-062-03b10e53",
+  "dedup_hash": "03b10e534c9b6db9a3f652b24b0ea81b9b64aa453cc966c71df89666a068fd83",
+  "source_prediction_id": "a75e5220f33858f3f76a50d8e543d78f6496e5910d067d12f0a7a5938ab50020",
+  "entity_id": "H-00612",
+  "entity_name": "Thara dos Ossos",
+  "race": "Bruxa",
+  "generation": 12,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "062/2026",
+  "draw_date": "2026-08-04",
+  "official_key": {
+    "numeros": [
+      25,
+      30,
+      34,
+      46,
+      50
+    ],
+    "estrelas": [
+      1,
+      12
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      22,
+      25,
+      37,
+      46,
+      50
+    ],
+    "estrelas": [
+      9,
+      12
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      25,
+      46,
+      50
+    ],
+    "estrelas": [
+      12
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      30,
+      34
+    ],
+    "estrelas": [
+      1
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      22,
+      37
+    ],
+    "estrelas": [
+      9
+    ]
+  },
+  "hero_category": "3+1",
+  "hero_tier": "TIER_4",
+  "simulation_score": 43,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_062_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 1 lucky stars against official draw 062/2026 (category 3+1).",
+  "registered_at": "2026-08-05T15:12:00+00:00"
+}

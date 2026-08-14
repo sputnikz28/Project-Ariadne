@@ -1,0 +1,79 @@
+{
+  "hero_id": "HERO-2026-062-c5f9edc4",
+  "dedup_hash": "c5f9edc460f71a137baac9341d61be9cfa1b4344bdf82374cf8dcdd3af1028a2",
+  "source_prediction_id": "c2850c0b6333b041823fa9ef9b9617af6cf88e1caa6abbd516b9b5dd2b9dda2a",
+  "entity_id": "H-00028",
+  "entity_name": "Thara Pedra-Partida",
+  "race": "Bruxa",
+  "generation": 1,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "062/2026",
+  "draw_date": "2026-08-04",
+  "official_key": {
+    "numeros": [
+      25,
+      30,
+      34,
+      46,
+      50
+    ],
+    "estrelas": [
+      1,
+      12
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      25,
+      27,
+      32,
+      46,
+      50
+    ],
+    "estrelas": [
+      6,
+      12
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      25,
+      46,
+      50
+    ],
+    "estrelas": [
+      12
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      30,
+      34
+    ],
+    "estrelas": [
+      1
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      27,
+      32
+    ],
+    "estrelas": [
+      6
+    ]
+  },
+  "hero_category": "3+1",
+  "hero_tier": "TIER_4",
+  "simulation_score": 43,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_062_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 1 lucky stars against official draw 062/2026 (category 3+1).",
+  "registered_at": "2026-08-05T15:11:59+00:00"
+}

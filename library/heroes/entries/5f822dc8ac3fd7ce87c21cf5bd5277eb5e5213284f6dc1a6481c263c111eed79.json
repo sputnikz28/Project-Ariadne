@@ -1,0 +1,76 @@
+{
+  "hero_id": "HERO-2026-062-5f822dc8",
+  "dedup_hash": "5f822dc8ac3fd7ce87c21cf5bd5277eb5e5213284f6dc1a6481c263c111eed79",
+  "source_prediction_id": "ae0dabb1dfba9a2ac832aca981c7a8fd18a8c7f79c33a5ff2953b38112370470",
+  "entity_id": "H-00376",
+  "entity_name": "Gruk dos Astros",
+  "race": "Chefe Tribal",
+  "generation": 7,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "062/2026",
+  "draw_date": "2026-08-04",
+  "official_key": {
+    "numeros": [
+      25,
+      30,
+      34,
+      46,
+      50
+    ],
+    "estrelas": [
+      1,
+      12
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      6,
+      25,
+      34,
+      45,
+      50
+    ],
+    "estrelas": [
+      1,
+      12
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 2,
+  "exact_matched_values": {
+    "numeros": [
+      25,
+      34,
+      50
+    ],
+    "estrelas": [
+      1,
+      12
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      30,
+      46
+    ],
+    "estrelas": []
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      6,
+      45
+    ],
+    "estrelas": []
+  },
+  "hero_category": "3+2",
+  "hero_tier": "TIER_3",
+  "simulation_score": 53,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_062_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 2 lucky stars against official draw 062/2026 (category 3+2).",
+  "registered_at": "2026-08-05T15:11:59+00:00"
+}

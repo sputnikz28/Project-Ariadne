@@ -1,0 +1,41 @@
+{
+  "legend_id": "LEGEND-4a6ea07f",
+  "source_prediction_id": "4a6ea07ff3f1a21fd3c3428bccf9d6fa0ac4ef556f5058a18ed7aac9767342b2",
+  "promotion_draw": "062/2026",
+  "promotion_draw_date": "2026-08-04",
+  "promotion_threshold": 3,
+  "promotion_tier": "LEGEND_TIER_4",
+  "criteria_version": "v1",
+  "promotion_hero_ids": [
+    "HERO-2026-059-6f39a930",
+    "HERO-2026-061-bb1e3539",
+    "HERO-2026-062-759628d6"
+  ],
+  "project_version": "V12",
+  "git_commit": "c24f75909d3ac154c64c224692ecdda4e1cab4f6",
+  "qualification_reason": "Promoted to Legend at draw 062/2026 (2026-08-04) by reaching 3 distinct qualifying draws as Hero (criteria_version: v1).",
+  "entity_id": "H-00308",
+  "entity_name": "Aion dos Astros",
+  "race": "Bruxa",
+  "generation": 6,
+  "predicted_numeros": [
+    25,
+    27,
+    30,
+    38,
+    45
+  ],
+  "predicted_estrelas": [
+    1,
+    4
+  ],
+  "hero_count": 3,
+  "qualified_draws": 3,
+  "contributing_hero_ids": [
+    "HERO-2026-059-6f39a930",
+    "HERO-2026-061-bb1e3539",
+    "HERO-2026-062-759628d6"
+  ],
+  "provenance": "legacy",
+  "last_reevaluated_at": null
+}
