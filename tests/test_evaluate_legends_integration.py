@@ -21,7 +21,11 @@ import evaluate_legends
 from library.heroes.registry import HeroRegistry
 from library.legends.registry import LegendRegistry
 
-REPORT_PATH = Path("experiments/reports/generated") / "legends_evaluation.txt"
+# The real, production report path — captured once at import time, before
+# any test patches evaluate_legends.REPORT_PATH, so it always reflects the
+# genuine default. Used only by TestProductionReportUntouched below to prove
+# no test in this module ever creates, overwrites, or deletes it.
+PRODUCTION_REPORT_PATH = evaluate_legends.REPORT_PATH
 
 
 def bound_hero_registry(base):
@@ -65,13 +69,14 @@ class EvaluateLegendsIntegrationTestBase(unittest.TestCase):
     def setUp(self):
         self.hero_base = tempfile.mkdtemp()
         self.legend_base = tempfile.mkdtemp()
+        self.report_dir = tempfile.mkdtemp()
+        self.report_path = Path(self.report_dir) / "legends_evaluation.txt"
         self.hero_registry = HeroRegistry(base=self.hero_base)
 
     def tearDown(self):
         shutil.rmtree(self.hero_base, ignore_errors=True)
         shutil.rmtree(self.legend_base, ignore_errors=True)
-        if REPORT_PATH.exists():
-            REPORT_PATH.unlink()
+        shutil.rmtree(self.report_dir, ignore_errors=True)
 
     def add_hero(self, **kwargs):
         hero = make_hero(**kwargs)
@@ -86,6 +91,7 @@ class EvaluateLegendsIntegrationTestBase(unittest.TestCase):
         with patch.object(sys, "argv", argv), \
              patch.object(evaluate_legends, "HeroRegistry", hero_registry_cls), \
              patch.object(evaluate_legends, "LegendRegistry", legend_registry_cls), \
+             patch.object(evaluate_legends, "REPORT_PATH", self.report_path), \
              redirect_stdout(out):
             evaluate_legends.main()
         return out.getvalue()
@@ -276,6 +282,7 @@ class TestErrorPaths(EvaluateLegendsIntegrationTestBase):
         with patch.object(sys, "argv", argv), \
              patch.object(evaluate_legends, "HeroRegistry", bound_hero_registry(self.hero_base)), \
              patch.object(evaluate_legends, "LegendRegistry", bound_legend_registry(never_used_base)), \
+             patch.object(evaluate_legends, "REPORT_PATH", self.report_path), \
              redirect_stdout(io.StringIO()) as out:
             evaluate_legends.main()  # must not raise
 
@@ -311,6 +318,36 @@ class TestErrorPaths(EvaluateLegendsIntegrationTestBase):
         # the unrelated, legitimately qualifying prediction must NOT have
         # been promoted either — the whole run aborted before any write.
         self.assertIsNone(self.legends().get("spid-fine"))
+
+
+class TestProductionReportUntouched(EvaluateLegendsIntegrationTestBase):
+    """Regression guard for the isolation bug fixed here: every real
+    (non-dry-run) evaluate_legends.main() call in this module used to
+    write to, and tearDown() then deleted, the actual production report
+    at PRODUCTION_REPORT_PATH. REPORT_PATH is now redirected per-test via
+    patch.object(evaluate_legends, "REPORT_PATH", self.report_path), so
+    the production path must be left exactly as found — untouched by
+    creation, overwrite, or deletion.
+    """
+
+    def test_real_run_never_creates_overwrites_or_deletes_the_production_report(self):
+        existed_before = PRODUCTION_REPORT_PATH.exists()
+        snapshot_before = PRODUCTION_REPORT_PATH.read_bytes() if existed_before else None
+        mtime_before = PRODUCTION_REPORT_PATH.stat().st_mtime_ns if existed_before else None
+
+        for i in range(3):
+            self.add_hero(source_prediction_id="spid-prod-guard", draw_num=57 + i)
+        report = self.run_cli(dry_run=False)
+
+        self.assertIn("Promoted (new):        1", report)  # sanity: a real run did happen
+        self.assertEqual(PRODUCTION_REPORT_PATH.exists(), existed_before)
+        if existed_before:
+            self.assertEqual(PRODUCTION_REPORT_PATH.read_bytes(), snapshot_before)
+            self.assertEqual(PRODUCTION_REPORT_PATH.stat().st_mtime_ns, mtime_before)
+
+        # And the test's own report, redirected via REPORT_PATH, was written instead.
+        self.assertTrue(self.report_path.exists())
+        self.assertIn("Promoted (new):        1", self.report_path.read_text(encoding="utf-8"))
 
 
 if __name__ == "__main__":

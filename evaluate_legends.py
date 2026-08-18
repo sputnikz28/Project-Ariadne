@@ -54,6 +54,11 @@ from library.legends.registry import LegendRegistry, LegendIntegrityError, Legen
 
 VERSION_FILE = Path("VERSION")
 
+# Module-level so tests can redirect it (patch.object(evaluate_legends,
+# "REPORT_PATH", tmp_path)), exactly like HeroRegistry/LegendRegistry
+# below — never hardcoded inline inside main().
+REPORT_PATH = Path("experiments/reports/generated") / "legends_evaluation.txt"
+
 
 def _read_project_version():
     try:
@@ -239,7 +244,7 @@ def main():
     print(report_text)
 
     if not args.dry_run:
-        out_path = Path("experiments/reports/generated") / "legends_evaluation.txt"
+        out_path = REPORT_PATH
         try:
             out_path.parent.mkdir(parents=True, exist_ok=True)
             out_path.write_text(report_text, encoding="utf-8")
