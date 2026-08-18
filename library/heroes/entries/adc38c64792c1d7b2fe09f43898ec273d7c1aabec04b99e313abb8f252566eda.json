@@ -1,0 +1,78 @@
+{
+  "hero_id": "HERO-2026-064-adc38c64",
+  "dedup_hash": "adc38c64792c1d7b2fe09f43898ec273d7c1aabec04b99e313abb8f252566eda",
+  "source_prediction_id": "30dc49d8e1febd09f94c68be7d8a503175a3e8161681e50396cc3e68d173e716",
+  "entity_id": "H-00542",
+  "entity_name": "Morgana dos Ossos",
+  "race": "Bruxa",
+  "generation": 11,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "064/2026",
+  "draw_date": "2026-08-11",
+  "official_key": {
+    "numeros": [
+      3,
+      11,
+      17,
+      46,
+      48
+    ],
+    "estrelas": [
+      1,
+      2
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      4,
+      21,
+      36,
+      40,
+      46
+    ],
+    "estrelas": [
+      1,
+      2
+    ]
+  },
+  "matched_numbers_count": 1,
+  "matched_stars_count": 2,
+  "exact_matched_values": {
+    "numeros": [
+      46
+    ],
+    "estrelas": [
+      1,
+      2
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      3,
+      11,
+      17,
+      48
+    ],
+    "estrelas": []
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      4,
+      21,
+      36,
+      40
+    ],
+    "estrelas": []
+  },
+  "hero_category": "1+2",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_064_dataset_completo.json",
+  "qualification_reason": "Matched 1 main numbers and 2 lucky stars against official draw 064/2026 (category 1+2).",
+  "registered_at": "2026-08-17T14:01:03+00:00"
+}

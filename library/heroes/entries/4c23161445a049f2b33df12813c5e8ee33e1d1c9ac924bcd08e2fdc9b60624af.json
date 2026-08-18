@@ -1,0 +1,80 @@
+{
+  "hero_id": "HERO-2026-063-4c231614",
+  "dedup_hash": "4c23161445a049f2b33df12813c5e8ee33e1d1c9ac924bcd08e2fdc9b60624af",
+  "source_prediction_id": "36dd00364d40da56cce1eaea9cfc3a12f1320221a5224744f324f2965abf0e89",
+  "entity_id": "H-00417",
+  "entity_name": "Lyra Pedra-Partida",
+  "race": "Esqueleto",
+  "generation": 8,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "063/2026",
+  "draw_date": "2026-08-07",
+  "official_key": {
+    "numeros": [
+      26,
+      29,
+      35,
+      38,
+      47
+    ],
+    "estrelas": [
+      1,
+      12
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      35,
+      39,
+      43,
+      47,
+      50
+    ],
+    "estrelas": [
+      1,
+      5
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      35,
+      47
+    ],
+    "estrelas": [
+      1
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      26,
+      29,
+      38
+    ],
+    "estrelas": [
+      12
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      39,
+      43,
+      50
+    ],
+    "estrelas": [
+      5
+    ]
+  },
+  "hero_category": "2+1",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_064_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 1 lucky stars against official draw 063/2026 (category 2+1).",
+  "registered_at": "2026-08-14T17:11:19+00:00"
+}

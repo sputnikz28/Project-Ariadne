@@ -1,0 +1,79 @@
+{
+  "hero_id": "HERO-2026-063-d40b3d59",
+  "dedup_hash": "d40b3d598b6b683aec112af6d7fca8c3a3865bff1b9df75f95c58e3dc3ad06b2",
+  "source_prediction_id": "97da0692cb690c951120a3379e7eb7bf23a00b10428dbd6e754a488babe78e5f",
+  "entity_id": "H-00105",
+  "entity_name": "Morgana da Lua Fria",
+  "race": "Vidente",
+  "generation": 3,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "063/2026",
+  "draw_date": "2026-08-07",
+  "official_key": {
+    "numeros": [
+      26,
+      29,
+      35,
+      38,
+      47
+    ],
+    "estrelas": [
+      1,
+      12
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      11,
+      21,
+      26,
+      29,
+      38
+    ],
+    "estrelas": [
+      3,
+      6
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 0,
+  "exact_matched_values": {
+    "numeros": [
+      26,
+      29,
+      38
+    ],
+    "estrelas": []
+  },
+  "missed_winning_values": {
+    "numeros": [
+      35,
+      47
+    ],
+    "estrelas": [
+      1,
+      12
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      11,
+      21
+    ],
+    "estrelas": [
+      3,
+      6
+    ]
+  },
+  "hero_category": "3+0",
+  "hero_tier": "TIER_4",
+  "simulation_score": 38,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_064_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 0 lucky stars against official draw 063/2026 (category 3+0).",
+  "registered_at": "2026-08-14T17:11:19+00:00"
+}

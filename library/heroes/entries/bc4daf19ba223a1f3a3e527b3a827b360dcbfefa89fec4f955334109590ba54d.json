@@ -1,0 +1,77 @@
+{
+  "hero_id": "HERO-2026-064-bc4daf19",
+  "dedup_hash": "bc4daf19ba223a1f3a3e527b3a827b360dcbfefa89fec4f955334109590ba54d",
+  "source_prediction_id": "961cc669dce5255f76c2500eabb5b2ae8c6cbcd1672c6d19f1be90b15a866db5",
+  "entity_id": "H-00065",
+  "entity_name": "Velka do Bosque",
+  "race": "Bruxa",
+  "generation": 5,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "064/2026",
+  "draw_date": "2026-08-11",
+  "official_key": {
+    "numeros": [
+      3,
+      11,
+      17,
+      46,
+      48
+    ],
+    "estrelas": [
+      1,
+      2
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      22,
+      23,
+      25,
+      46,
+      48
+    ],
+    "estrelas": [
+      1,
+      2
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 2,
+  "exact_matched_values": {
+    "numeros": [
+      46,
+      48
+    ],
+    "estrelas": [
+      1,
+      2
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      3,
+      11,
+      17
+    ],
+    "estrelas": []
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      22,
+      23,
+      25
+    ],
+    "estrelas": []
+  },
+  "hero_category": "2+2",
+  "hero_tier": "TIER_4",
+  "simulation_score": 35,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_064_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 2 lucky stars against official draw 064/2026 (category 2+2).",
+  "registered_at": "2026-08-17T14:01:06+00:00"
+}

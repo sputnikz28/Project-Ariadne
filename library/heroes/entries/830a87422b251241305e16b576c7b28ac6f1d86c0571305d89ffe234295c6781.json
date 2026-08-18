@@ -1,0 +1,80 @@
+{
+  "hero_id": "HERO-2026-064-830a8742",
+  "dedup_hash": "830a87422b251241305e16b576c7b28ac6f1d86c0571305d89ffe234295c6781",
+  "source_prediction_id": "b42b61f65da1f88b8b117d147b58faf029eda964a9f6ce80c963e0420f8eeab1",
+  "entity_id": "H-00698",
+  "entity_name": "Aion da Lua Fria",
+  "race": "Esqueleto",
+  "generation": 14,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "064/2026",
+  "draw_date": "2026-08-11",
+  "official_key": {
+    "numeros": [
+      3,
+      11,
+      17,
+      46,
+      48
+    ],
+    "estrelas": [
+      1,
+      2
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      26,
+      42,
+      46,
+      48,
+      50
+    ],
+    "estrelas": [
+      2,
+      6
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      46,
+      48
+    ],
+    "estrelas": [
+      2
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      3,
+      11,
+      17
+    ],
+    "estrelas": [
+      1
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      26,
+      42,
+      50
+    ],
+    "estrelas": [
+      6
+    ]
+  },
+  "hero_category": "2+1",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_064_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 1 lucky stars against official draw 064/2026 (category 2+1).",
+  "registered_at": "2026-08-17T14:01:05+00:00"
+}

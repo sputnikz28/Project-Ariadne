@@ -1,0 +1,78 @@
+{
+  "hero_id": "HERO-2026-063-bc9597eb",
+  "dedup_hash": "bc9597ebf57fbe9a0868ae33e18f5052e74ac1858ca93155a482783fefd76f53",
+  "source_prediction_id": "e35cf5524d634558400d3afc2b84145a3b71dd4c0c23a89f3278eb8cb02c9e01",
+  "entity_id": "H-00108",
+  "entity_name": "Selene da Lua Fria",
+  "race": "Goblin",
+  "generation": 2,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "063/2026",
+  "draw_date": "2026-08-07",
+  "official_key": {
+    "numeros": [
+      26,
+      29,
+      35,
+      38,
+      47
+    ],
+    "estrelas": [
+      1,
+      12
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      12,
+      20,
+      35,
+      39,
+      46
+    ],
+    "estrelas": [
+      1,
+      12
+    ]
+  },
+  "matched_numbers_count": 1,
+  "matched_stars_count": 2,
+  "exact_matched_values": {
+    "numeros": [
+      35
+    ],
+    "estrelas": [
+      1,
+      12
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      26,
+      29,
+      38,
+      47
+    ],
+    "estrelas": []
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      12,
+      20,
+      39,
+      46
+    ],
+    "estrelas": []
+  },
+  "hero_category": "1+2",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_064_dataset_completo.json",
+  "qualification_reason": "Matched 1 main numbers and 2 lucky stars against official draw 063/2026 (category 1+2).",
+  "registered_at": "2026-08-14T17:11:19+00:00"
+}

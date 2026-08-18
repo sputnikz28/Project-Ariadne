@@ -1,0 +1,79 @@
+{
+  "hero_id": "HERO-2026-063-1c6dc8cb",
+  "dedup_hash": "1c6dc8cb9d9166b4d4b93e5a350de7dc19981c630629d25e6d28b9b15f4b48ad",
+  "source_prediction_id": "d736757ddd8f6d113635a0e60ceb4f298fa38679ce671eff6ad3c3e3c2c7a165",
+  "entity_id": "H-00003",
+  "entity_name": "Morgana da Névoa",
+  "race": "Esqueleto",
+  "generation": 1,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "063/2026",
+  "draw_date": "2026-08-07",
+  "official_key": {
+    "numeros": [
+      26,
+      29,
+      35,
+      38,
+      47
+    ],
+    "estrelas": [
+      1,
+      12
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      29,
+      34,
+      35,
+      38,
+      39
+    ],
+    "estrelas": [
+      2,
+      6
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 0,
+  "exact_matched_values": {
+    "numeros": [
+      29,
+      35,
+      38
+    ],
+    "estrelas": []
+  },
+  "missed_winning_values": {
+    "numeros": [
+      26,
+      47
+    ],
+    "estrelas": [
+      1,
+      12
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      34,
+      39
+    ],
+    "estrelas": [
+      2,
+      6
+    ]
+  },
+  "hero_category": "3+0",
+  "hero_tier": "TIER_4",
+  "simulation_score": 38,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_064_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 0 lucky stars against official draw 063/2026 (category 3+0).",
+  "registered_at": "2026-08-14T17:11:18+00:00"
+}

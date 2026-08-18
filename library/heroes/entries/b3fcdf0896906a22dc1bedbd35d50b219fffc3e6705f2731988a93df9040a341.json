@@ -1,0 +1,80 @@
+{
+  "hero_id": "HERO-2026-063-b3fcdf08",
+  "dedup_hash": "b3fcdf0896906a22dc1bedbd35d50b219fffc3e6705f2731988a93df9040a341",
+  "source_prediction_id": "b90805eda9870879f9b0d95e75305f335ebc8272002f5279b1e551a4f35a3dfa",
+  "entity_id": "H-00232",
+  "entity_name": "Velka da Lua Fria",
+  "race": "Bruxa",
+  "generation": 5,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "063/2026",
+  "draw_date": "2026-08-07",
+  "official_key": {
+    "numeros": [
+      26,
+      29,
+      35,
+      38,
+      47
+    ],
+    "estrelas": [
+      1,
+      12
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      9,
+      13,
+      29,
+      37,
+      47
+    ],
+    "estrelas": [
+      1,
+      6
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      29,
+      47
+    ],
+    "estrelas": [
+      1
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      26,
+      35,
+      38
+    ],
+    "estrelas": [
+      12
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      9,
+      13,
+      37
+    ],
+    "estrelas": [
+      6
+    ]
+  },
+  "hero_category": "2+1",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_064_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 1 lucky stars against official draw 063/2026 (category 2+1).",
+  "registered_at": "2026-08-14T17:11:19+00:00"
+}

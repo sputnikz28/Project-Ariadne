@@ -1,0 +1,79 @@
+{
+  "hero_id": "HERO-2026-063-4b5c2c4e",
+  "dedup_hash": "4b5c2c4e8aef41b27bfbdb5bc04c59292781820cff25dcf8b00d9d36a7cf8499",
+  "source_prediction_id": "41bde4cdba51631e3f13d19506f6b7b9d13ae4690532398769e17230c31b7ca1",
+  "entity_id": "H-00146",
+  "entity_name": "Kael do Bosque",
+  "race": "Esqueleto",
+  "generation": 3,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "063/2026",
+  "draw_date": "2026-08-07",
+  "official_key": {
+    "numeros": [
+      26,
+      29,
+      35,
+      38,
+      47
+    ],
+    "estrelas": [
+      1,
+      12
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      26,
+      27,
+      29,
+      33,
+      47
+    ],
+    "estrelas": [
+      6,
+      7
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 0,
+  "exact_matched_values": {
+    "numeros": [
+      26,
+      29,
+      47
+    ],
+    "estrelas": []
+  },
+  "missed_winning_values": {
+    "numeros": [
+      35,
+      38
+    ],
+    "estrelas": [
+      1,
+      12
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      27,
+      33
+    ],
+    "estrelas": [
+      6,
+      7
+    ]
+  },
+  "hero_category": "3+0",
+  "hero_tier": "TIER_4",
+  "simulation_score": 38,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_064_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 0 lucky stars against official draw 063/2026 (category 3+0).",
+  "registered_at": "2026-08-14T17:11:19+00:00"
+}

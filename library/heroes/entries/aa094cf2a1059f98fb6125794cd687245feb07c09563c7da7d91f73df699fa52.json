@@ -1,0 +1,78 @@
+{
+  "hero_id": "HERO-2026-063-aa094cf2",
+  "dedup_hash": "aa094cf2a1059f98fb6125794cd687245feb07c09563c7da7d91f73df699fa52",
+  "source_prediction_id": "e1ed593086b25d526d2f43663ea5a3b97398c5bca49ece11651823e6e6e682fd",
+  "entity_id": "H-00060",
+  "entity_name": "Gruk da Névoa",
+  "race": "Chefe Tribal",
+  "generation": 1,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "063/2026",
+  "draw_date": "2026-08-07",
+  "official_key": {
+    "numeros": [
+      26,
+      29,
+      35,
+      38,
+      47
+    ],
+    "estrelas": [
+      1,
+      12
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      1,
+      24,
+      29,
+      31,
+      34
+    ],
+    "estrelas": [
+      1,
+      12
+    ]
+  },
+  "matched_numbers_count": 1,
+  "matched_stars_count": 2,
+  "exact_matched_values": {
+    "numeros": [
+      29
+    ],
+    "estrelas": [
+      1,
+      12
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      26,
+      35,
+      38,
+      47
+    ],
+    "estrelas": []
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      1,
+      24,
+      31,
+      34
+    ],
+    "estrelas": []
+  },
+  "hero_category": "1+2",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_064_dataset_completo.json",
+  "qualification_reason": "Matched 1 main numbers and 2 lucky stars against official draw 063/2026 (category 1+2).",
+  "registered_at": "2026-08-14T17:11:18+00:00"
+}

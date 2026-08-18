@@ -1,0 +1,80 @@
+{
+  "hero_id": "HERO-2026-064-fb29753f",
+  "dedup_hash": "fb29753fb067a2bcf3adbe6cd2158289f68e19c7c394892b777f56e5989c546a",
+  "source_prediction_id": "790f772fd7eb8bd19d42ee4efd4c6501fbb9598ce1cc7810012b6a0e03441e4e",
+  "entity_id": "H-00052",
+  "entity_name": "Kael da Névoa",
+  "race": "Elfo",
+  "generation": 1,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "064/2026",
+  "draw_date": "2026-08-11",
+  "official_key": {
+    "numeros": [
+      3,
+      11,
+      17,
+      46,
+      48
+    ],
+    "estrelas": [
+      1,
+      2
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      11,
+      13,
+      28,
+      35,
+      46
+    ],
+    "estrelas": [
+      2,
+      8
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      11,
+      46
+    ],
+    "estrelas": [
+      2
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      3,
+      17,
+      48
+    ],
+    "estrelas": [
+      1
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      13,
+      28,
+      35
+    ],
+    "estrelas": [
+      8
+    ]
+  },
+  "hero_category": "2+1",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_064_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 1 lucky stars against official draw 064/2026 (category 2+1).",
+  "registered_at": "2026-08-17T14:01:06+00:00"
+}

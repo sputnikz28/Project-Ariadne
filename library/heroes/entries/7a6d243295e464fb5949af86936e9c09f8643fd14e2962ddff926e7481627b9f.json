@@ -1,0 +1,79 @@
+{
+  "hero_id": "HERO-2026-064-7a6d2432",
+  "dedup_hash": "7a6d243295e464fb5949af86936e9c09f8643fd14e2962ddff926e7481627b9f",
+  "source_prediction_id": "ab1a6e33602597774380490d66a064ce9722b863bd285f44f6fbac4f7ad957ea",
+  "entity_id": "H-00008",
+  "entity_name": "Velka do Bosque",
+  "race": "Goblin",
+  "generation": 7,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "064/2026",
+  "draw_date": "2026-08-11",
+  "official_key": {
+    "numeros": [
+      3,
+      11,
+      17,
+      46,
+      48
+    ],
+    "estrelas": [
+      1,
+      2
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      11,
+      16,
+      17,
+      20,
+      48
+    ],
+    "estrelas": [
+      8,
+      10
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 0,
+  "exact_matched_values": {
+    "numeros": [
+      11,
+      17,
+      48
+    ],
+    "estrelas": []
+  },
+  "missed_winning_values": {
+    "numeros": [
+      3,
+      46
+    ],
+    "estrelas": [
+      1,
+      2
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      16,
+      20
+    ],
+    "estrelas": [
+      8,
+      10
+    ]
+  },
+  "hero_category": "3+0",
+  "hero_tier": "TIER_4",
+  "simulation_score": 38,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_064_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 0 lucky stars against official draw 064/2026 (category 3+0).",
+  "registered_at": "2026-08-17T14:01:05+00:00"
+}

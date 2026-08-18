@@ -1,0 +1,41 @@
+{
+  "legend_id": "LEGEND-f665a81e",
+  "source_prediction_id": "f665a81ef24eb6a67f8a6732895aa13e9d7eff3ee28b6f0d82590a2736b19f95",
+  "promotion_draw": "064/2026",
+  "promotion_draw_date": "2026-08-11",
+  "promotion_threshold": 3,
+  "promotion_tier": "LEGEND_TIER_4",
+  "criteria_version": "v1",
+  "promotion_hero_ids": [
+    "HERO-2026-059-f7ee76ba",
+    "HERO-2026-062-46369c78",
+    "HERO-2026-064-67779eb8"
+  ],
+  "project_version": "V12",
+  "git_commit": "d1fdb9071ba27699ca013f8861746b6d930344da",
+  "qualification_reason": "Promoted to Legend at draw 064/2026 (2026-08-11) by reaching 3 distinct qualifying draws as Hero (criteria_version: v1).",
+  "entity_id": "H-00108",
+  "entity_name": "Velka da Lua Fria",
+  "race": "Chefe Tribal",
+  "generation": 2,
+  "predicted_numeros": [
+    3,
+    11,
+    25,
+    47,
+    50
+  ],
+  "predicted_estrelas": [
+    1,
+    4
+  ],
+  "hero_count": 3,
+  "qualified_draws": 3,
+  "contributing_hero_ids": [
+    "HERO-2026-059-f7ee76ba",
+    "HERO-2026-062-46369c78",
+    "HERO-2026-064-67779eb8"
+  ],
+  "provenance": "legacy",
+  "last_reevaluated_at": null
+}

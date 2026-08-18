@@ -1,0 +1,79 @@
+{
+  "hero_id": "HERO-2026-063-01d6f131",
+  "dedup_hash": "01d6f1312d9e974cfce2bc0dc030c00788e0568e0b7a3d282d0808a2daac894d",
+  "source_prediction_id": "53ce2d7ada522c39abf7859054bdb6e845614575590606712eeb6fe5e6afd73b",
+  "entity_id": "H-00312",
+  "entity_name": "Selene da Névoa",
+  "race": "Goblin",
+  "generation": 6,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "063/2026",
+  "draw_date": "2026-08-07",
+  "official_key": {
+    "numeros": [
+      26,
+      29,
+      35,
+      38,
+      47
+    ],
+    "estrelas": [
+      1,
+      12
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      21,
+      35,
+      38,
+      40,
+      47
+    ],
+    "estrelas": [
+      1,
+      9
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      35,
+      38,
+      47
+    ],
+    "estrelas": [
+      1
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      26,
+      29
+    ],
+    "estrelas": [
+      12
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      21,
+      40
+    ],
+    "estrelas": [
+      9
+    ]
+  },
+  "hero_category": "3+1",
+  "hero_tier": "TIER_4",
+  "simulation_score": 43,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_064_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 1 lucky stars against official draw 063/2026 (category 3+1).",
+  "registered_at": "2026-08-14T17:11:18+00:00"
+}

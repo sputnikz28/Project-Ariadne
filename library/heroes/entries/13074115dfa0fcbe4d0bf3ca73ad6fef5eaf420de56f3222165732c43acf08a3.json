@@ -1,0 +1,79 @@
+{
+  "hero_id": "HERO-2026-064-13074115",
+  "dedup_hash": "13074115dfa0fcbe4d0bf3ca73ad6fef5eaf420de56f3222165732c43acf08a3",
+  "source_prediction_id": "6e8dcc56fd9a2b41577e603f708d8d8f50eeffe9aee728fe04c6569efee6259a",
+  "entity_id": "H-00035",
+  "entity_name": "Kael da Lua Fria",
+  "race": "Elfo",
+  "generation": 6,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "064/2026",
+  "draw_date": "2026-08-11",
+  "official_key": {
+    "numeros": [
+      3,
+      11,
+      17,
+      46,
+      48
+    ],
+    "estrelas": [
+      1,
+      2
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      6,
+      11,
+      17,
+      28,
+      46
+    ],
+    "estrelas": [
+      5,
+      6
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 0,
+  "exact_matched_values": {
+    "numeros": [
+      11,
+      17,
+      46
+    ],
+    "estrelas": []
+  },
+  "missed_winning_values": {
+    "numeros": [
+      3,
+      48
+    ],
+    "estrelas": [
+      1,
+      2
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      6,
+      28
+    ],
+    "estrelas": [
+      5,
+      6
+    ]
+  },
+  "hero_category": "3+0",
+  "hero_tier": "TIER_4",
+  "simulation_score": 38,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_064_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 0 lucky stars against official draw 064/2026 (category 3+0).",
+  "registered_at": "2026-08-17T14:01:04+00:00"
+}

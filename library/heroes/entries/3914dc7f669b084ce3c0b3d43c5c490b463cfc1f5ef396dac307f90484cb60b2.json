@@ -1,0 +1,78 @@
+{
+  "hero_id": "HERO-2026-063-3914dc7f",
+  "dedup_hash": "3914dc7f669b084ce3c0b3d43c5c490b463cfc1f5ef396dac307f90484cb60b2",
+  "source_prediction_id": "1679572010af18e604748de00436e64491f00464b2958cc303ef3951a5f46958",
+  "entity_id": "H-00021",
+  "entity_name": "Gruk dos Ossos",
+  "race": "Chefe Tribal",
+  "generation": 13,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "063/2026",
+  "draw_date": "2026-08-07",
+  "official_key": {
+    "numeros": [
+      26,
+      29,
+      35,
+      38,
+      47
+    ],
+    "estrelas": [
+      1,
+      12
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      25,
+      37,
+      42,
+      47,
+      50
+    ],
+    "estrelas": [
+      1,
+      12
+    ]
+  },
+  "matched_numbers_count": 1,
+  "matched_stars_count": 2,
+  "exact_matched_values": {
+    "numeros": [
+      47
+    ],
+    "estrelas": [
+      1,
+      12
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      26,
+      29,
+      35,
+      38
+    ],
+    "estrelas": []
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      25,
+      37,
+      42,
+      50
+    ],
+    "estrelas": []
+  },
+  "hero_category": "1+2",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_064_dataset_completo.json",
+  "qualification_reason": "Matched 1 main numbers and 2 lucky stars against official draw 063/2026 (category 1+2).",
+  "registered_at": "2026-08-14T17:11:19+00:00"
+}

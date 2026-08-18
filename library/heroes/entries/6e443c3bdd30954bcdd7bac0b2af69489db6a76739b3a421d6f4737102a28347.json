@@ -1,0 +1,80 @@
+{
+  "hero_id": "HERO-2026-063-6e443c3b",
+  "dedup_hash": "6e443c3bdd30954bcdd7bac0b2af69489db6a76739b3a421d6f4737102a28347",
+  "source_prediction_id": "1b9870ef9a0cff79353a7a3ff329f06fb785330871cb0d801ae1386a5fc51bf8",
+  "entity_id": "H-00022",
+  "entity_name": "Lyra da Névoa",
+  "race": "Shaman",
+  "generation": 9,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "063/2026",
+  "draw_date": "2026-08-07",
+  "official_key": {
+    "numeros": [
+      26,
+      29,
+      35,
+      38,
+      47
+    ],
+    "estrelas": [
+      1,
+      12
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      4,
+      17,
+      29,
+      37,
+      47
+    ],
+    "estrelas": [
+      1,
+      9
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      29,
+      47
+    ],
+    "estrelas": [
+      1
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      26,
+      35,
+      38
+    ],
+    "estrelas": [
+      12
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      4,
+      17,
+      37
+    ],
+    "estrelas": [
+      9
+    ]
+  },
+  "hero_category": "2+1",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_064_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 1 lucky stars against official draw 063/2026 (category 2+1).",
+  "registered_at": "2026-08-14T17:11:19+00:00"
+}

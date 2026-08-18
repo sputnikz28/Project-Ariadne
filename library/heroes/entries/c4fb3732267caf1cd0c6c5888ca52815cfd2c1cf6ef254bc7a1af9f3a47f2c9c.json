@@ -1,0 +1,80 @@
+{
+  "hero_id": "HERO-2026-064-c4fb3732",
+  "dedup_hash": "c4fb3732267caf1cd0c6c5888ca52815cfd2c1cf6ef254bc7a1af9f3a47f2c9c",
+  "source_prediction_id": "4bc655c02f3b63205bc8fda51e1c0b10e3dbe2f7ecc0d085e764b1f2f4c7f64d",
+  "entity_id": "H-00198",
+  "entity_name": "Velka da Lua Fria",
+  "race": "Chefe Tribal",
+  "generation": 4,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "064/2026",
+  "draw_date": "2026-08-11",
+  "official_key": {
+    "numeros": [
+      3,
+      11,
+      17,
+      46,
+      48
+    ],
+    "estrelas": [
+      1,
+      2
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      3,
+      28,
+      37,
+      46,
+      50
+    ],
+    "estrelas": [
+      2,
+      3
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      3,
+      46
+    ],
+    "estrelas": [
+      2
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      11,
+      17,
+      48
+    ],
+    "estrelas": [
+      1
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      28,
+      37,
+      50
+    ],
+    "estrelas": [
+      3
+    ]
+  },
+  "hero_category": "2+1",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_064_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 1 lucky stars against official draw 064/2026 (category 2+1).",
+  "registered_at": "2026-08-17T14:01:05+00:00"
+}

@@ -1,0 +1,80 @@
+{
+  "hero_id": "HERO-2026-064-ab5fb9ef",
+  "dedup_hash": "ab5fb9ef39289853348313c728a95c2bf667c53202acae849a65b4d90d8b4c01",
+  "source_prediction_id": "67a938af4429b369684a186dbd4b96fe2ae5204e18cfa48730b5f7d3a77e437c",
+  "entity_id": "H-00281",
+  "entity_name": "Kael do Bosque",
+  "race": "Bruxa",
+  "generation": 6,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "064/2026",
+  "draw_date": "2026-08-11",
+  "official_key": {
+    "numeros": [
+      3,
+      11,
+      17,
+      46,
+      48
+    ],
+    "estrelas": [
+      1,
+      2
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      11,
+      22,
+      27,
+      31,
+      46
+    ],
+    "estrelas": [
+      1,
+      9
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      11,
+      46
+    ],
+    "estrelas": [
+      1
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      3,
+      17,
+      48
+    ],
+    "estrelas": [
+      2
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      22,
+      27,
+      31
+    ],
+    "estrelas": [
+      9
+    ]
+  },
+  "hero_category": "2+1",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_064_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 1 lucky stars against official draw 064/2026 (category 2+1).",
+  "registered_at": "2026-08-17T14:01:04+00:00"
+}

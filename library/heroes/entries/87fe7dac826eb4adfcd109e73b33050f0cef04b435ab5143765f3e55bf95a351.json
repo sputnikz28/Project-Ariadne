@@ -1,0 +1,77 @@
+{
+  "hero_id": "HERO-2026-063-87fe7dac",
+  "dedup_hash": "87fe7dac826eb4adfcd109e73b33050f0cef04b435ab5143765f3e55bf95a351",
+  "source_prediction_id": "25fe842fc6ebfe5837fb47b5f7f821987047c9e01fe2e2322f39c7d5b5a555f4",
+  "entity_id": "H-00162",
+  "entity_name": "Thara da Lua Fria",
+  "race": "Goblin",
+  "generation": 3,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "063/2026",
+  "draw_date": "2026-08-07",
+  "official_key": {
+    "numeros": [
+      26,
+      29,
+      35,
+      38,
+      47
+    ],
+    "estrelas": [
+      1,
+      12
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      17,
+      29,
+      32,
+      47,
+      50
+    ],
+    "estrelas": [
+      1,
+      12
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 2,
+  "exact_matched_values": {
+    "numeros": [
+      29,
+      47
+    ],
+    "estrelas": [
+      1,
+      12
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      26,
+      35,
+      38
+    ],
+    "estrelas": []
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      17,
+      32,
+      50
+    ],
+    "estrelas": []
+  },
+  "hero_category": "2+2",
+  "hero_tier": "TIER_4",
+  "simulation_score": 35,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_064_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 2 lucky stars against official draw 063/2026 (category 2+2).",
+  "registered_at": "2026-08-14T17:11:19+00:00"
+}

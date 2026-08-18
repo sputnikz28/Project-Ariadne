@@ -1,0 +1,80 @@
+{
+  "hero_id": "HERO-2026-063-2d67d28b",
+  "dedup_hash": "2d67d28b2883523805a5f4be894ab62e7801ffca6c461fe1585b20c50b1e4145",
+  "source_prediction_id": "f20fb5522ee57b4de8335bc1183d87da79e0857f1d5d5ac08ce6d883d3cf9eb5",
+  "entity_id": "Morthak da Sombra #7",
+  "entity_name": "Morthak da Sombra #7",
+  "race": "Mago do Esquadrão Negro",
+  "generation": 14,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "063/2026",
+  "draw_date": "2026-08-07",
+  "official_key": {
+    "numeros": [
+      26,
+      29,
+      35,
+      38,
+      47
+    ],
+    "estrelas": [
+      1,
+      12
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      1,
+      12,
+      29,
+      38,
+      44
+    ],
+    "estrelas": [
+      1,
+      4
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      29,
+      38
+    ],
+    "estrelas": [
+      1
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      26,
+      35,
+      47
+    ],
+    "estrelas": [
+      12
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      1,
+      12,
+      44
+    ],
+    "estrelas": [
+      4
+    ]
+  },
+  "hero_category": "2+1",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_064_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 1 lucky stars against official draw 063/2026 (category 2+1).",
+  "registered_at": "2026-08-14T17:11:19+00:00"
+}

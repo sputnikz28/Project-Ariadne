@@ -1,0 +1,78 @@
+{
+  "hero_id": "HERO-2026-063-b242625e",
+  "dedup_hash": "b242625e45af8fd9781023364000f615ad7ed0b8097126d7b448c6ff5103faaa",
+  "source_prediction_id": "290c83ad132d00d74f2bc4800c26506d0c3a0d76fc23bcf6e1c490ace4971684",
+  "entity_id": "H-00597",
+  "entity_name": "Velka dos Astros",
+  "race": "Chefe Tribal",
+  "generation": 12,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "063/2026",
+  "draw_date": "2026-08-07",
+  "official_key": {
+    "numeros": [
+      26,
+      29,
+      35,
+      38,
+      47
+    ],
+    "estrelas": [
+      1,
+      12
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      13,
+      35,
+      42,
+      45,
+      50
+    ],
+    "estrelas": [
+      1,
+      12
+    ]
+  },
+  "matched_numbers_count": 1,
+  "matched_stars_count": 2,
+  "exact_matched_values": {
+    "numeros": [
+      35
+    ],
+    "estrelas": [
+      1,
+      12
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      26,
+      29,
+      38,
+      47
+    ],
+    "estrelas": []
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      13,
+      42,
+      45,
+      50
+    ],
+    "estrelas": []
+  },
+  "hero_category": "1+2",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_064_dataset_completo.json",
+  "qualification_reason": "Matched 1 main numbers and 2 lucky stars against official draw 063/2026 (category 1+2).",
+  "registered_at": "2026-08-14T17:11:19+00:00"
+}

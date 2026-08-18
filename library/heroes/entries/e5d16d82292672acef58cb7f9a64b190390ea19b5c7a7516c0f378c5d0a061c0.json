@@ -1,0 +1,79 @@
+{
+  "hero_id": "HERO-2026-063-e5d16d82",
+  "dedup_hash": "e5d16d82292672acef58cb7f9a64b190390ea19b5c7a7516c0f378c5d0a061c0",
+  "source_prediction_id": "fd7ce2e2b162b0f47b5255e219b491bee5e75b90d94cc55c3cf5449bcc4c383d",
+  "entity_id": "H-00742",
+  "entity_name": "Aion Pedra-Partida",
+  "race": "Goblin",
+  "generation": 14,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "063/2026",
+  "draw_date": "2026-08-07",
+  "official_key": {
+    "numeros": [
+      26,
+      29,
+      35,
+      38,
+      47
+    ],
+    "estrelas": [
+      1,
+      12
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      31,
+      35,
+      37,
+      38,
+      47
+    ],
+    "estrelas": [
+      9,
+      11
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 0,
+  "exact_matched_values": {
+    "numeros": [
+      35,
+      38,
+      47
+    ],
+    "estrelas": []
+  },
+  "missed_winning_values": {
+    "numeros": [
+      26,
+      29
+    ],
+    "estrelas": [
+      1,
+      12
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      31,
+      37
+    ],
+    "estrelas": [
+      9,
+      11
+    ]
+  },
+  "hero_category": "3+0",
+  "hero_tier": "TIER_4",
+  "simulation_score": 38,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_064_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 0 lucky stars against official draw 063/2026 (category 3+0).",
+  "registered_at": "2026-08-14T17:11:18+00:00"
+}

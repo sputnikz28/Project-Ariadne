@@ -1,0 +1,79 @@
+{
+  "hero_id": "HERO-2026-064-9eccfb6a",
+  "dedup_hash": "9eccfb6a2fbe9ab45de80d4d8a91c1a56a6f3d0de81969f2df0dcf6fbd41d917",
+  "source_prediction_id": "470c103128a3ed8d72a79cb27e2bff77b036fe6a897d2dc52a696039a5be7a90",
+  "entity_id": "H-00241",
+  "entity_name": "Morgana dos Ossos",
+  "race": "Elfo",
+  "generation": 5,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "064/2026",
+  "draw_date": "2026-08-11",
+  "official_key": {
+    "numeros": [
+      3,
+      11,
+      17,
+      46,
+      48
+    ],
+    "estrelas": [
+      1,
+      2
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      3,
+      11,
+      29,
+      36,
+      48
+    ],
+    "estrelas": [
+      4,
+      6
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 0,
+  "exact_matched_values": {
+    "numeros": [
+      3,
+      11,
+      48
+    ],
+    "estrelas": []
+  },
+  "missed_winning_values": {
+    "numeros": [
+      17,
+      46
+    ],
+    "estrelas": [
+      1,
+      2
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      29,
+      36
+    ],
+    "estrelas": [
+      4,
+      6
+    ]
+  },
+  "hero_category": "3+0",
+  "hero_tier": "TIER_4",
+  "simulation_score": 38,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_064_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 0 lucky stars against official draw 064/2026 (category 3+0).",
+  "registered_at": "2026-08-17T14:01:04+00:00"
+}

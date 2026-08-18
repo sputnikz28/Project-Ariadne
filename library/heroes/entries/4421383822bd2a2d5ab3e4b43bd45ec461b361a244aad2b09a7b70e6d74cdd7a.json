@@ -1,0 +1,80 @@
+{
+  "hero_id": "HERO-2026-064-44213838",
+  "dedup_hash": "4421383822bd2a2d5ab3e4b43bd45ec461b361a244aad2b09a7b70e6d74cdd7a",
+  "source_prediction_id": "1ba493914e934d7dad0badc71ecf5bf68ac6003a883b066dee8113cdbed75476",
+  "entity_id": "H-00224",
+  "entity_name": "Kael dos Ossos",
+  "race": "Elfo",
+  "generation": 4,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "064/2026",
+  "draw_date": "2026-08-11",
+  "official_key": {
+    "numeros": [
+      3,
+      11,
+      17,
+      46,
+      48
+    ],
+    "estrelas": [
+      1,
+      2
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      17,
+      18,
+      21,
+      41,
+      46
+    ],
+    "estrelas": [
+      2,
+      9
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      17,
+      46
+    ],
+    "estrelas": [
+      2
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      3,
+      11,
+      48
+    ],
+    "estrelas": [
+      1
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      18,
+      21,
+      41
+    ],
+    "estrelas": [
+      9
+    ]
+  },
+  "hero_category": "2+1",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_064_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 1 lucky stars against official draw 064/2026 (category 2+1).",
+  "registered_at": "2026-08-17T14:01:04+00:00"
+}

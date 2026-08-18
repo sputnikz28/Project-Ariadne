@@ -1,0 +1,77 @@
+{
+  "hero_id": "HERO-2026-063-bb50aa83",
+  "dedup_hash": "bb50aa83c46a5a8b9691437517fad001aa4c9df53c6fc5f7796608f709ce0fcf",
+  "source_prediction_id": "b8e7bc4f035e45d660536c7bd574d21ba21c3a467afb8014563a29be559fc417",
+  "entity_id": "H-00245",
+  "entity_name": "Thara dos Astros",
+  "race": "Goblin",
+  "generation": 5,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "063/2026",
+  "draw_date": "2026-08-07",
+  "official_key": {
+    "numeros": [
+      26,
+      29,
+      35,
+      38,
+      47
+    ],
+    "estrelas": [
+      1,
+      12
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      2,
+      6,
+      35,
+      38,
+      44
+    ],
+    "estrelas": [
+      1,
+      12
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 2,
+  "exact_matched_values": {
+    "numeros": [
+      35,
+      38
+    ],
+    "estrelas": [
+      1,
+      12
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      26,
+      29,
+      47
+    ],
+    "estrelas": []
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      2,
+      6,
+      44
+    ],
+    "estrelas": []
+  },
+  "hero_category": "2+2",
+  "hero_tier": "TIER_4",
+  "simulation_score": 35,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_064_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 2 lucky stars against official draw 063/2026 (category 2+2).",
+  "registered_at": "2026-08-14T17:11:18+00:00"
+}

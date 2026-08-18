@@ -1,0 +1,78 @@
+{
+  "hero_id": "HERO-2026-064-384ec7cd",
+  "dedup_hash": "384ec7cdc7efeb26faecccd9f4c3d63d0a5e0cc057acb5dda2d3857897e918d6",
+  "source_prediction_id": "a03a3b299e912a7d4b9fbc5063b12c61ce3a0203932c6f68034d3c3ba2c6f38e",
+  "entity_id": "H-00704",
+  "entity_name": "Kael da Névoa",
+  "race": "Bruxa",
+  "generation": 14,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "064/2026",
+  "draw_date": "2026-08-11",
+  "official_key": {
+    "numeros": [
+      3,
+      11,
+      17,
+      46,
+      48
+    ],
+    "estrelas": [
+      1,
+      2
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      9,
+      16,
+      25,
+      30,
+      46
+    ],
+    "estrelas": [
+      1,
+      2
+    ]
+  },
+  "matched_numbers_count": 1,
+  "matched_stars_count": 2,
+  "exact_matched_values": {
+    "numeros": [
+      46
+    ],
+    "estrelas": [
+      1,
+      2
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      3,
+      11,
+      17,
+      48
+    ],
+    "estrelas": []
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      9,
+      16,
+      25,
+      30
+    ],
+    "estrelas": []
+  },
+  "hero_category": "1+2",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_064_dataset_completo.json",
+  "qualification_reason": "Matched 1 main numbers and 2 lucky stars against official draw 064/2026 (category 1+2).",
+  "registered_at": "2026-08-17T14:01:05+00:00"
+}

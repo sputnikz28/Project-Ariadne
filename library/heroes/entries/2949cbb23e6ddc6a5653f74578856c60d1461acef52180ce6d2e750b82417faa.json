@@ -1,0 +1,80 @@
+{
+  "hero_id": "HERO-2026-063-2949cbb2",
+  "dedup_hash": "2949cbb23e6ddc6a5653f74578856c60d1461acef52180ce6d2e750b82417faa",
+  "source_prediction_id": "aa0d6488bf305ad8ff4619aa214004eb06ddc5ec5b5377f500d661b020a8ebfe",
+  "entity_id": "H-00127",
+  "entity_name": "Lyra Pedra-Partida",
+  "race": "Goblin",
+  "generation": 3,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "063/2026",
+  "draw_date": "2026-08-07",
+  "official_key": {
+    "numeros": [
+      26,
+      29,
+      35,
+      38,
+      47
+    ],
+    "estrelas": [
+      1,
+      12
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      22,
+      24,
+      26,
+      29,
+      41
+    ],
+    "estrelas": [
+      1,
+      3
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      26,
+      29
+    ],
+    "estrelas": [
+      1
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      35,
+      38,
+      47
+    ],
+    "estrelas": [
+      12
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      22,
+      24,
+      41
+    ],
+    "estrelas": [
+      3
+    ]
+  },
+  "hero_category": "2+1",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_064_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 1 lucky stars against official draw 063/2026 (category 2+1).",
+  "registered_at": "2026-08-14T17:11:19+00:00"
+}

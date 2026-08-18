@@ -1,0 +1,79 @@
+{
+  "hero_id": "HERO-2026-064-ebba5bd1",
+  "dedup_hash": "ebba5bd1b9e7f7031547d2b209fa853d7dd2081e2420a736de6855b3c1b2a1ad",
+  "source_prediction_id": "c775206ed4176cfc568ae4ceffc7a15d77462cbd96ff0e70afac3118495e5fdb",
+  "entity_id": "H-00031",
+  "entity_name": "Thara do Bosque",
+  "race": "Bruxa",
+  "generation": 13,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "064/2026",
+  "draw_date": "2026-08-11",
+  "official_key": {
+    "numeros": [
+      3,
+      11,
+      17,
+      46,
+      48
+    ],
+    "estrelas": [
+      1,
+      2
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      3,
+      17,
+      33,
+      42,
+      46
+    ],
+    "estrelas": [
+      3,
+      10
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 0,
+  "exact_matched_values": {
+    "numeros": [
+      3,
+      17,
+      46
+    ],
+    "estrelas": []
+  },
+  "missed_winning_values": {
+    "numeros": [
+      11,
+      48
+    ],
+    "estrelas": [
+      1,
+      2
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      33,
+      42
+    ],
+    "estrelas": [
+      3,
+      10
+    ]
+  },
+  "hero_category": "3+0",
+  "hero_tier": "TIER_4",
+  "simulation_score": 38,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_064_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 0 lucky stars against official draw 064/2026 (category 3+0).",
+  "registered_at": "2026-08-17T14:01:05+00:00"
+}

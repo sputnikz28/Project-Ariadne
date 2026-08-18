@@ -1,0 +1,80 @@
+{
+  "hero_id": "HERO-2026-064-0e0ea9b1",
+  "dedup_hash": "0e0ea9b11a79a8e9b18cef195fdc1e24942ee82892745c1ab29efec41be7e085",
+  "source_prediction_id": "1666f21eed3464ef30681a6a312704512683ffa7d082cb383a5f304b7e5a1751",
+  "entity_id": "H-00633",
+  "entity_name": "Aion Pedra-Partida",
+  "race": "Bruxa",
+  "generation": 12,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "064/2026",
+  "draw_date": "2026-08-11",
+  "official_key": {
+    "numeros": [
+      3,
+      11,
+      17,
+      46,
+      48
+    ],
+    "estrelas": [
+      1,
+      2
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      10,
+      17,
+      19,
+      22,
+      46
+    ],
+    "estrelas": [
+      1,
+      6
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      17,
+      46
+    ],
+    "estrelas": [
+      1
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      3,
+      11,
+      48
+    ],
+    "estrelas": [
+      2
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      10,
+      19,
+      22
+    ],
+    "estrelas": [
+      6
+    ]
+  },
+  "hero_category": "2+1",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_064_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 1 lucky stars against official draw 064/2026 (category 2+1).",
+  "registered_at": "2026-08-17T14:01:05+00:00"
+}

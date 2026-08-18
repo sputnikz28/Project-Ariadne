@@ -1,0 +1,79 @@
+{
+  "hero_id": "HERO-2026-064-29e161b6",
+  "dedup_hash": "29e161b6b9a14300dd16170acd35998e6dc5b942ff15b60a4c4fde6ccc87d824",
+  "source_prediction_id": "e9aeca6e8809f1fdf0d01bf0c60dae1a098014af87cf283fdeff2134aca2a61c",
+  "entity_id": "Sable das Matrizes #4",
+  "entity_name": "Sable das Matrizes #4",
+  "race": "Mago do Esquadrão Negro",
+  "generation": 14,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "064/2026",
+  "draw_date": "2026-08-11",
+  "official_key": {
+    "numeros": [
+      3,
+      11,
+      17,
+      46,
+      48
+    ],
+    "estrelas": [
+      1,
+      2
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      8,
+      17,
+      33,
+      46,
+      48
+    ],
+    "estrelas": [
+      3,
+      11
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 0,
+  "exact_matched_values": {
+    "numeros": [
+      17,
+      46,
+      48
+    ],
+    "estrelas": []
+  },
+  "missed_winning_values": {
+    "numeros": [
+      3,
+      11
+    ],
+    "estrelas": [
+      1,
+      2
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      8,
+      33
+    ],
+    "estrelas": [
+      3,
+      11
+    ]
+  },
+  "hero_category": "3+0",
+  "hero_tier": "TIER_4",
+  "simulation_score": 38,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_064_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 0 lucky stars against official draw 064/2026 (category 3+0).",
+  "registered_at": "2026-08-17T14:01:04+00:00"
+}

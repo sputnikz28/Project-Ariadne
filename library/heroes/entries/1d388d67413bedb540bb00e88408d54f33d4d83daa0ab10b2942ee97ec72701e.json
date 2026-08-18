@@ -1,0 +1,78 @@
+{
+  "hero_id": "HERO-2026-064-1d388d67",
+  "dedup_hash": "1d388d67413bedb540bb00e88408d54f33d4d83daa0ab10b2942ee97ec72701e",
+  "source_prediction_id": "9693fb5e3819e1df736d08b8bbc8d57e70c5ff140e957e0a693bcdc4f50b01a4",
+  "entity_id": "H-00367",
+  "entity_name": "Lyra do Bosque",
+  "race": "Elfo",
+  "generation": 7,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "064/2026",
+  "draw_date": "2026-08-11",
+  "official_key": {
+    "numeros": [
+      3,
+      11,
+      17,
+      46,
+      48
+    ],
+    "estrelas": [
+      1,
+      2
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      3,
+      11,
+      17,
+      26,
+      46
+    ],
+    "estrelas": [
+      5,
+      9
+    ]
+  },
+  "matched_numbers_count": 4,
+  "matched_stars_count": 0,
+  "exact_matched_values": {
+    "numeros": [
+      3,
+      11,
+      17,
+      46
+    ],
+    "estrelas": []
+  },
+  "missed_winning_values": {
+    "numeros": [
+      48
+    ],
+    "estrelas": [
+      1,
+      2
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      26
+    ],
+    "estrelas": [
+      5,
+      9
+    ]
+  },
+  "hero_category": "4+0",
+  "hero_tier": "TIER_3",
+  "simulation_score": 48,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_064_dataset_completo.json",
+  "qualification_reason": "Matched 4 main numbers and 0 lucky stars against official draw 064/2026 (category 4+0).",
+  "registered_at": "2026-08-17T14:01:04+00:00"
+}

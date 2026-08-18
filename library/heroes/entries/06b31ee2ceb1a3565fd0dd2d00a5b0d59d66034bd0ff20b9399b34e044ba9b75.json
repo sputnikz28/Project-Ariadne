@@ -1,0 +1,79 @@
+{
+  "hero_id": "HERO-2026-063-06b31ee2",
+  "dedup_hash": "06b31ee2ceb1a3565fd0dd2d00a5b0d59d66034bd0ff20b9399b34e044ba9b75",
+  "source_prediction_id": "762e066018fd6d789ee4f8a7734dfe7b31bbda0148cf8f02e5e887f4a05807a9",
+  "entity_id": "H-00161",
+  "entity_name": "Velka dos Astros",
+  "race": "Elfo",
+  "generation": 3,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "063/2026",
+  "draw_date": "2026-08-07",
+  "official_key": {
+    "numeros": [
+      26,
+      29,
+      35,
+      38,
+      47
+    ],
+    "estrelas": [
+      1,
+      12
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      12,
+      23,
+      26,
+      29,
+      38
+    ],
+    "estrelas": [
+      2,
+      4
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 0,
+  "exact_matched_values": {
+    "numeros": [
+      26,
+      29,
+      38
+    ],
+    "estrelas": []
+  },
+  "missed_winning_values": {
+    "numeros": [
+      35,
+      47
+    ],
+    "estrelas": [
+      1,
+      12
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      12,
+      23
+    ],
+    "estrelas": [
+      2,
+      4
+    ]
+  },
+  "hero_category": "3+0",
+  "hero_tier": "TIER_4",
+  "simulation_score": 38,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_064_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 0 lucky stars against official draw 063/2026 (category 3+0).",
+  "registered_at": "2026-08-14T17:11:18+00:00"
+}

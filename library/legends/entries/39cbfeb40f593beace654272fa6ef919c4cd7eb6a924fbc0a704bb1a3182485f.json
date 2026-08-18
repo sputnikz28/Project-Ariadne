@@ -1,0 +1,41 @@
+{
+  "legend_id": "LEGEND-39cbfeb4",
+  "source_prediction_id": "39cbfeb40f593beace654272fa6ef919c4cd7eb6a924fbc0a704bb1a3182485f",
+  "promotion_draw": "063/2026",
+  "promotion_draw_date": "2026-08-07",
+  "promotion_threshold": 3,
+  "promotion_tier": "LEGEND_TIER_4",
+  "criteria_version": "v1",
+  "promotion_hero_ids": [
+    "HERO-2026-056-b13204d3",
+    "HERO-2026-059-2e2ad841",
+    "HERO-2026-063-9d6106de"
+  ],
+  "project_version": "V12",
+  "git_commit": "d1fdb9071ba27699ca013f8861746b6d930344da",
+  "qualification_reason": "Promoted to Legend at draw 063/2026 (2026-08-07) by reaching 3 distinct qualifying draws as Hero (criteria_version: v1).",
+  "entity_id": "H-00246",
+  "entity_name": "Velka da Névoa",
+  "race": "Goblin",
+  "generation": 5,
+  "predicted_numeros": [
+    30,
+    36,
+    38,
+    42,
+    47
+  ],
+  "predicted_estrelas": [
+    9,
+    12
+  ],
+  "hero_count": 3,
+  "qualified_draws": 3,
+  "contributing_hero_ids": [
+    "HERO-2026-056-b13204d3",
+    "HERO-2026-059-2e2ad841",
+    "HERO-2026-063-9d6106de"
+  ],
+  "provenance": "legacy",
+  "last_reevaluated_at": null
+}

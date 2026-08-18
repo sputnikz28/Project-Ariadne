@@ -1,0 +1,79 @@
+{
+  "hero_id": "HERO-2026-063-0279e643",
+  "dedup_hash": "0279e64317e0317e87448dd560cb93dd4de77cd96f6c2d1f6ecaffa4dc0e0e6d",
+  "source_prediction_id": "39763a9e4857930ab533d1a215564e8f0feb8c156c6270e15d1f98bf5160d6b9",
+  "entity_id": "H-00198",
+  "entity_name": "Aruk da Lua Fria",
+  "race": "Goblin",
+  "generation": 4,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "063/2026",
+  "draw_date": "2026-08-07",
+  "official_key": {
+    "numeros": [
+      26,
+      29,
+      35,
+      38,
+      47
+    ],
+    "estrelas": [
+      1,
+      12
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      26,
+      35,
+      38,
+      42,
+      43
+    ],
+    "estrelas": [
+      4,
+      12
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      26,
+      35,
+      38
+    ],
+    "estrelas": [
+      12
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      29,
+      47
+    ],
+    "estrelas": [
+      1
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      42,
+      43
+    ],
+    "estrelas": [
+      4
+    ]
+  },
+  "hero_category": "3+1",
+  "hero_tier": "TIER_4",
+  "simulation_score": 43,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_064_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 1 lucky stars against official draw 063/2026 (category 3+1).",
+  "registered_at": "2026-08-14T17:11:18+00:00"
+}

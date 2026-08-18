@@ -1,0 +1,79 @@
+{
+  "hero_id": "HERO-2026-064-d9bd6d4a",
+  "dedup_hash": "d9bd6d4a87035df2151dda31a623c005747ba155d5ebb4664ced7dbe6db858f3",
+  "source_prediction_id": "b32ef0b3c14c397e9008df02842acfe3f10f7412e7141d09dc8686d44ee64836",
+  "entity_id": "H-00032",
+  "entity_name": "Elarion dos Ossos",
+  "race": "Elfo",
+  "generation": 9,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "064/2026",
+  "draw_date": "2026-08-11",
+  "official_key": {
+    "numeros": [
+      3,
+      11,
+      17,
+      46,
+      48
+    ],
+    "estrelas": [
+      1,
+      2
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      3,
+      11,
+      26,
+      36,
+      48
+    ],
+    "estrelas": [
+      3,
+      9
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 0,
+  "exact_matched_values": {
+    "numeros": [
+      3,
+      11,
+      48
+    ],
+    "estrelas": []
+  },
+  "missed_winning_values": {
+    "numeros": [
+      17,
+      46
+    ],
+    "estrelas": [
+      1,
+      2
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      26,
+      36
+    ],
+    "estrelas": [
+      3,
+      9
+    ]
+  },
+  "hero_category": "3+0",
+  "hero_tier": "TIER_4",
+  "simulation_score": 38,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_064_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 0 lucky stars against official draw 064/2026 (category 3+0).",
+  "registered_at": "2026-08-17T14:01:06+00:00"
+}

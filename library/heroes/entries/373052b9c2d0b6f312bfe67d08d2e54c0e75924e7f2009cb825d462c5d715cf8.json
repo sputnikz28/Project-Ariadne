@@ -1,0 +1,79 @@
+{
+  "hero_id": "HERO-2026-063-373052b9",
+  "dedup_hash": "373052b9c2d0b6f312bfe67d08d2e54c0e75924e7f2009cb825d462c5d715cf8",
+  "source_prediction_id": "f1c1e4be55d62012e44d4d9960a62f1d0fb77289eec0a661be4c741f969e17c8",
+  "entity_id": "H-00131",
+  "entity_name": "Elarion da Lua Fria",
+  "race": "Elfo",
+  "generation": 3,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "063/2026",
+  "draw_date": "2026-08-07",
+  "official_key": {
+    "numeros": [
+      26,
+      29,
+      35,
+      38,
+      47
+    ],
+    "estrelas": [
+      1,
+      12
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      16,
+      19,
+      26,
+      35,
+      38
+    ],
+    "estrelas": [
+      8,
+      9
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 0,
+  "exact_matched_values": {
+    "numeros": [
+      26,
+      35,
+      38
+    ],
+    "estrelas": []
+  },
+  "missed_winning_values": {
+    "numeros": [
+      29,
+      47
+    ],
+    "estrelas": [
+      1,
+      12
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      16,
+      19
+    ],
+    "estrelas": [
+      8,
+      9
+    ]
+  },
+  "hero_category": "3+0",
+  "hero_tier": "TIER_4",
+  "simulation_score": 38,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_064_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 0 lucky stars against official draw 063/2026 (category 3+0).",
+  "registered_at": "2026-08-14T17:11:19+00:00"
+}

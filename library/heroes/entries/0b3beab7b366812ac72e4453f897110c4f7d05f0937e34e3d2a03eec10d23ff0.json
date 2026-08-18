@@ -1,0 +1,79 @@
+{
+  "hero_id": "HERO-2026-064-0b3beab7",
+  "dedup_hash": "0b3beab7b366812ac72e4453f897110c4f7d05f0937e34e3d2a03eec10d23ff0",
+  "source_prediction_id": "812562f67b45c00fbd95df5fb4780e6963ad3c0ae9a8a74c11bb7b347e494c07",
+  "entity_id": "H-00604",
+  "entity_name": "Lyra do Bosque",
+  "race": "Vidente",
+  "generation": 12,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "064/2026",
+  "draw_date": "2026-08-11",
+  "official_key": {
+    "numeros": [
+      3,
+      11,
+      17,
+      46,
+      48
+    ],
+    "estrelas": [
+      1,
+      2
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      17,
+      34,
+      37,
+      46,
+      48
+    ],
+    "estrelas": [
+      2,
+      5
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      17,
+      46,
+      48
+    ],
+    "estrelas": [
+      2
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      3,
+      11
+    ],
+    "estrelas": [
+      1
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      34,
+      37
+    ],
+    "estrelas": [
+      5
+    ]
+  },
+  "hero_category": "3+1",
+  "hero_tier": "TIER_4",
+  "simulation_score": 43,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_064_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 1 lucky stars against official draw 064/2026 (category 3+1).",
+  "registered_at": "2026-08-17T14:01:03+00:00"
+}

@@ -1,0 +1,41 @@
+{
+  "legend_id": "LEGEND-2dbcbee0",
+  "source_prediction_id": "2dbcbee0f4475a75ee7a7be413b1d31f1d3e70e724606ebfa7ba445a6d6bd2c5",
+  "promotion_draw": "063/2026",
+  "promotion_draw_date": "2026-08-07",
+  "promotion_threshold": 3,
+  "promotion_tier": "LEGEND_TIER_4",
+  "criteria_version": "v1",
+  "promotion_hero_ids": [
+    "HERO-2026-056-0f23027d",
+    "HERO-2026-060-f266289c",
+    "HERO-2026-063-7e219209"
+  ],
+  "project_version": "V12",
+  "git_commit": "d1fdb9071ba27699ca013f8861746b6d930344da",
+  "qualification_reason": "Promoted to Legend at draw 063/2026 (2026-08-07) by reaching 3 distinct qualifying draws as Hero (criteria_version: v1).",
+  "entity_id": "Cristal Azul #12",
+  "entity_name": "Cristal Azul #12",
+  "race": "Clã Anão",
+  "generation": 14,
+  "predicted_numeros": [
+    5,
+    7,
+    10,
+    29,
+    47
+  ],
+  "predicted_estrelas": [
+    11,
+    12
+  ],
+  "hero_count": 3,
+  "qualified_draws": 3,
+  "contributing_hero_ids": [
+    "HERO-2026-056-0f23027d",
+    "HERO-2026-060-f266289c",
+    "HERO-2026-063-7e219209"
+  ],
+  "provenance": "legacy",
+  "last_reevaluated_at": null
+}

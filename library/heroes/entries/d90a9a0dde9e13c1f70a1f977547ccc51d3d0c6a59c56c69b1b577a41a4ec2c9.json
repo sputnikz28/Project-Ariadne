@@ -1,0 +1,78 @@
+{
+  "hero_id": "HERO-2026-064-d90a9a0d",
+  "dedup_hash": "d90a9a0dde9e13c1f70a1f977547ccc51d3d0c6a59c56c69b1b577a41a4ec2c9",
+  "source_prediction_id": "e8b2d688b8343c8c8c0bae4c5ea1c8b234407633baaed139a541dd6fb836bcf9",
+  "entity_id": "H-00287",
+  "entity_name": "Morgana do Bosque",
+  "race": "Chefe Tribal",
+  "generation": 6,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "064/2026",
+  "draw_date": "2026-08-11",
+  "official_key": {
+    "numeros": [
+      3,
+      11,
+      17,
+      46,
+      48
+    ],
+    "estrelas": [
+      1,
+      2
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      5,
+      24,
+      34,
+      48,
+      50
+    ],
+    "estrelas": [
+      1,
+      2
+    ]
+  },
+  "matched_numbers_count": 1,
+  "matched_stars_count": 2,
+  "exact_matched_values": {
+    "numeros": [
+      48
+    ],
+    "estrelas": [
+      1,
+      2
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      3,
+      11,
+      17,
+      46
+    ],
+    "estrelas": []
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      5,
+      24,
+      34,
+      50
+    ],
+    "estrelas": []
+  },
+  "hero_category": "1+2",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_064_dataset_completo.json",
+  "qualification_reason": "Matched 1 main numbers and 2 lucky stars against official draw 064/2026 (category 1+2).",
+  "registered_at": "2026-08-17T14:01:04+00:00"
+}

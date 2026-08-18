@@ -1,0 +1,41 @@
+{
+  "legend_id": "LEGEND-1ff75b29",
+  "source_prediction_id": "1ff75b29cf892c8e2f356e962fe071c6d90dda56cc5d6626e4ae086012e38581",
+  "promotion_draw": "063/2026",
+  "promotion_draw_date": "2026-08-07",
+  "promotion_threshold": 3,
+  "promotion_tier": "LEGEND_TIER_4",
+  "criteria_version": "v1",
+  "promotion_hero_ids": [
+    "HERO-2026-056-be2e3720",
+    "HERO-2026-059-cc070ee9",
+    "HERO-2026-063-93ad9b78"
+  ],
+  "project_version": "V12",
+  "git_commit": "d1fdb9071ba27699ca013f8861746b6d930344da",
+  "qualification_reason": "Promoted to Legend at draw 063/2026 (2026-08-07) by reaching 3 distinct qualifying draws as Hero (criteria_version: v1).",
+  "entity_id": "H-00726",
+  "entity_name": "Aion dos Ossos",
+  "race": "Bruxa",
+  "generation": 14,
+  "predicted_numeros": [
+    10,
+    20,
+    29,
+    36,
+    47
+  ],
+  "predicted_estrelas": [
+    9,
+    12
+  ],
+  "hero_count": 3,
+  "qualified_draws": 3,
+  "contributing_hero_ids": [
+    "HERO-2026-056-be2e3720",
+    "HERO-2026-059-cc070ee9",
+    "HERO-2026-063-93ad9b78"
+  ],
+  "provenance": "legacy",
+  "last_reevaluated_at": null
+}

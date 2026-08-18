@@ -1,0 +1,41 @@
+{
+  "legend_id": "LEGEND-064f4b14",
+  "source_prediction_id": "064f4b1443ae67f48550a762892f824d59d6c16cc9cd7905a37685f4b4b55f94",
+  "promotion_draw": "063/2026",
+  "promotion_draw_date": "2026-08-07",
+  "promotion_threshold": 3,
+  "promotion_tier": "LEGEND_TIER_4",
+  "criteria_version": "v1",
+  "promotion_hero_ids": [
+    "HERO-2026-059-bd62a49d",
+    "HERO-2026-062-95e1468c",
+    "HERO-2026-063-c1b3a340"
+  ],
+  "project_version": "V12",
+  "git_commit": "d1fdb9071ba27699ca013f8861746b6d930344da",
+  "qualification_reason": "Promoted to Legend at draw 063/2026 (2026-08-07) by reaching 3 distinct qualifying draws as Hero (criteria_version: v1).",
+  "entity_id": "H-00123",
+  "entity_name": "Aion da Névoa",
+  "race": "Goblin",
+  "generation": 2,
+  "predicted_numeros": [
+    2,
+    3,
+    30,
+    47,
+    50
+  ],
+  "predicted_estrelas": [
+    1,
+    12
+  ],
+  "hero_count": 3,
+  "qualified_draws": 3,
+  "contributing_hero_ids": [
+    "HERO-2026-059-bd62a49d",
+    "HERO-2026-062-95e1468c",
+    "HERO-2026-063-c1b3a340"
+  ],
+  "provenance": "legacy",
+  "last_reevaluated_at": null
+}

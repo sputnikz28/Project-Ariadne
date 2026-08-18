@@ -1,0 +1,79 @@
+{
+  "hero_id": "HERO-2026-064-bea533f6",
+  "dedup_hash": "bea533f663c418e9402caddca599d760c8f8964090ae1faeaa8c86e0e623b10a",
+  "source_prediction_id": "21448d577dfb2cf3f5abcb0a4404b8351bf3693a60907f7727436589befcc123",
+  "entity_id": "H-00112",
+  "entity_name": "Aruk Pedra-Partida",
+  "race": "Goblin",
+  "generation": 8,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "064/2026",
+  "draw_date": "2026-08-11",
+  "official_key": {
+    "numeros": [
+      3,
+      11,
+      17,
+      46,
+      48
+    ],
+    "estrelas": [
+      1,
+      2
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      11,
+      17,
+      28,
+      39,
+      48
+    ],
+    "estrelas": [
+      1,
+      10
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      11,
+      17,
+      48
+    ],
+    "estrelas": [
+      1
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      3,
+      46
+    ],
+    "estrelas": [
+      2
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      28,
+      39
+    ],
+    "estrelas": [
+      10
+    ]
+  },
+  "hero_category": "3+1",
+  "hero_tier": "TIER_4",
+  "simulation_score": 43,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_064_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 1 lucky stars against official draw 064/2026 (category 3+1).",
+  "registered_at": "2026-08-17T14:01:06+00:00"
+}

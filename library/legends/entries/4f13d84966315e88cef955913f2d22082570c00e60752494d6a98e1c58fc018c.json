@@ -1,0 +1,41 @@
+{
+  "legend_id": "LEGEND-4f13d849",
+  "source_prediction_id": "4f13d84966315e88cef955913f2d22082570c00e60752494d6a98e1c58fc018c",
+  "promotion_draw": "064/2026",
+  "promotion_draw_date": "2026-08-11",
+  "promotion_threshold": 3,
+  "promotion_tier": "LEGEND_TIER_4",
+  "criteria_version": "v1",
+  "promotion_hero_ids": [
+    "HERO-2026-058-6536f507",
+    "HERO-2026-059-73e44890",
+    "HERO-2026-064-a4896ded"
+  ],
+  "project_version": "V12",
+  "git_commit": "d1fdb9071ba27699ca013f8861746b6d930344da",
+  "qualification_reason": "Promoted to Legend at draw 064/2026 (2026-08-11) by reaching 3 distinct qualifying draws as Hero (criteria_version: v1).",
+  "entity_id": "H-00621",
+  "entity_name": "Velka dos Astros",
+  "race": "Esqueleto",
+  "generation": 12,
+  "predicted_numeros": [
+    8,
+    10,
+    11,
+    19,
+    28
+  ],
+  "predicted_estrelas": [
+    1,
+    2
+  ],
+  "hero_count": 3,
+  "qualified_draws": 3,
+  "contributing_hero_ids": [
+    "HERO-2026-058-6536f507",
+    "HERO-2026-059-73e44890",
+    "HERO-2026-064-a4896ded"
+  ],
+  "provenance": "legacy",
+  "last_reevaluated_at": null
+}

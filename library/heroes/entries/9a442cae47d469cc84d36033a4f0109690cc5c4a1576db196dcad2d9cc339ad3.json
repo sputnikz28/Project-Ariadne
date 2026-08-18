@@ -1,0 +1,79 @@
+{
+  "hero_id": "HERO-2026-063-9a442cae",
+  "dedup_hash": "9a442cae47d469cc84d36033a4f0109690cc5c4a1576db196dcad2d9cc339ad3",
+  "source_prediction_id": "9b78ca9ee5fecef96bab8b5935648d243104bd24f4ac3ef2c4e527ccc83fe8db",
+  "entity_id": "H-00473",
+  "entity_name": "Selene dos Astros",
+  "race": "Esqueleto",
+  "generation": 9,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "063/2026",
+  "draw_date": "2026-08-07",
+  "official_key": {
+    "numeros": [
+      26,
+      29,
+      35,
+      38,
+      47
+    ],
+    "estrelas": [
+      1,
+      12
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      26,
+      28,
+      29,
+      30,
+      35
+    ],
+    "estrelas": [
+      6,
+      7
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 0,
+  "exact_matched_values": {
+    "numeros": [
+      26,
+      29,
+      35
+    ],
+    "estrelas": []
+  },
+  "missed_winning_values": {
+    "numeros": [
+      38,
+      47
+    ],
+    "estrelas": [
+      1,
+      12
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      28,
+      30
+    ],
+    "estrelas": [
+      6,
+      7
+    ]
+  },
+  "hero_category": "3+0",
+  "hero_tier": "TIER_4",
+  "simulation_score": 38,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_064_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 0 lucky stars against official draw 063/2026 (category 3+0).",
+  "registered_at": "2026-08-14T17:11:19+00:00"
+}

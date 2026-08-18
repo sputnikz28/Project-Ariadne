@@ -1,0 +1,77 @@
+{
+  "hero_id": "HERO-2026-064-e61d3d0b",
+  "dedup_hash": "e61d3d0bd04a4934a0da55ec66ec20b77eeb1848ef60e7b2448ed5ccd93d9290",
+  "source_prediction_id": "e36d4a1cdef76796af06666d4cb81f0e26632bfaf31bd0181c8565bbe51e5bc6",
+  "entity_id": "H-00497",
+  "entity_name": "Aruk dos Astros",
+  "race": "Chefe Tribal",
+  "generation": 10,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "064/2026",
+  "draw_date": "2026-08-11",
+  "official_key": {
+    "numeros": [
+      3,
+      11,
+      17,
+      46,
+      48
+    ],
+    "estrelas": [
+      1,
+      2
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      3,
+      25,
+      32,
+      46,
+      50
+    ],
+    "estrelas": [
+      1,
+      2
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 2,
+  "exact_matched_values": {
+    "numeros": [
+      3,
+      46
+    ],
+    "estrelas": [
+      1,
+      2
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      11,
+      17,
+      48
+    ],
+    "estrelas": []
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      25,
+      32,
+      50
+    ],
+    "estrelas": []
+  },
+  "hero_category": "2+2",
+  "hero_tier": "TIER_4",
+  "simulation_score": 35,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_064_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 2 lucky stars against official draw 064/2026 (category 2+2).",
+  "registered_at": "2026-08-17T14:01:05+00:00"
+}

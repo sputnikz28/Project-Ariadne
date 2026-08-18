@@ -1,0 +1,41 @@
+{
+  "legend_id": "LEGEND-5f9fba3f",
+  "source_prediction_id": "5f9fba3fd53f864bdee2785ebe223d90452eb468a006bdbf221066abf6eaf798",
+  "promotion_draw": "064/2026",
+  "promotion_draw_date": "2026-08-11",
+  "promotion_threshold": 3,
+  "promotion_tier": "LEGEND_TIER_4",
+  "criteria_version": "v1",
+  "promotion_hero_ids": [
+    "HERO-2026-062-7d3a1149",
+    "HERO-2026-063-a42ee15f",
+    "HERO-2026-064-d7f92888"
+  ],
+  "project_version": "V12",
+  "git_commit": "d1fdb9071ba27699ca013f8861746b6d930344da",
+  "qualification_reason": "Promoted to Legend at draw 064/2026 (2026-08-11) by reaching 3 distinct qualifying draws as Hero (criteria_version: v1).",
+  "entity_id": "H-00381",
+  "entity_name": "Thara do Bosque",
+  "race": "Chefe Tribal",
+  "generation": 7,
+  "predicted_numeros": [
+    17,
+    29,
+    35,
+    46,
+    50
+  ],
+  "predicted_estrelas": [
+    1,
+    9
+  ],
+  "hero_count": 3,
+  "qualified_draws": 3,
+  "contributing_hero_ids": [
+    "HERO-2026-062-7d3a1149",
+    "HERO-2026-063-a42ee15f",
+    "HERO-2026-064-d7f92888"
+  ],
+  "provenance": "legacy",
+  "last_reevaluated_at": null
+}

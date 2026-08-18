@@ -1,0 +1,78 @@
+{
+  "hero_id": "HERO-2026-063-0996222a",
+  "dedup_hash": "0996222a678202e66d859862097184ad3417895258e7cc13a13c2bdd122073ae",
+  "source_prediction_id": "9ad4f47f798ef70a73a3fd49769bd0b5dd52da06ad8ac337dd7f8b3a15208049",
+  "entity_id": "H-00738",
+  "entity_name": "Thara da Lua Fria",
+  "race": "Esqueleto",
+  "generation": 14,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "063/2026",
+  "draw_date": "2026-08-07",
+  "official_key": {
+    "numeros": [
+      26,
+      29,
+      35,
+      38,
+      47
+    ],
+    "estrelas": [
+      1,
+      12
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      26,
+      29,
+      33,
+      35,
+      47
+    ],
+    "estrelas": [
+      1,
+      4
+    ]
+  },
+  "matched_numbers_count": 4,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      26,
+      29,
+      35,
+      47
+    ],
+    "estrelas": [
+      1
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      38
+    ],
+    "estrelas": [
+      12
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      33
+    ],
+    "estrelas": [
+      4
+    ]
+  },
+  "hero_category": "4+1",
+  "hero_tier": "TIER_3",
+  "simulation_score": 53,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_064_dataset_completo.json",
+  "qualification_reason": "Matched 4 main numbers and 1 lucky stars against official draw 063/2026 (category 4+1).",
+  "registered_at": "2026-08-14T17:11:19+00:00"
+}

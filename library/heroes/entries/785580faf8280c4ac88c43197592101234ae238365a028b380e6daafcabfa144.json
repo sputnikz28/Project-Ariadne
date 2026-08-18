@@ -1,0 +1,77 @@
+{
+  "hero_id": "HERO-2026-064-785580fa",
+  "dedup_hash": "785580faf8280c4ac88c43197592101234ae238365a028b380e6daafcabfa144",
+  "source_prediction_id": "72d6fde1feabc961d85999277d6b2afabd3a962200ee1ebe9bbea52aff8a7952",
+  "entity_id": "H-00181",
+  "entity_name": "Velka Pedra-Partida",
+  "race": "Bruxa",
+  "generation": 4,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "064/2026",
+  "draw_date": "2026-08-11",
+  "official_key": {
+    "numeros": [
+      3,
+      11,
+      17,
+      46,
+      48
+    ],
+    "estrelas": [
+      1,
+      2
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      3,
+      9,
+      17,
+      33,
+      37
+    ],
+    "estrelas": [
+      1,
+      2
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 2,
+  "exact_matched_values": {
+    "numeros": [
+      3,
+      17
+    ],
+    "estrelas": [
+      1,
+      2
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      11,
+      46,
+      48
+    ],
+    "estrelas": []
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      9,
+      33,
+      37
+    ],
+    "estrelas": []
+  },
+  "hero_category": "2+2",
+  "hero_tier": "TIER_4",
+  "simulation_score": 35,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_064_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 2 lucky stars against official draw 064/2026 (category 2+2).",
+  "registered_at": "2026-08-17T14:01:05+00:00"
+}

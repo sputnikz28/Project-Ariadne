@@ -1,0 +1,79 @@
+{
+  "hero_id": "HERO-2026-063-cae36fde",
+  "dedup_hash": "cae36fde4ac38404e61936f5b263cf557b47f7e69965355e2d889f87ad7408ba",
+  "source_prediction_id": "05710df98cf822e861addb55c16e95af235688c879c933323964b3daff769ef6",
+  "entity_id": "H-00521",
+  "entity_name": "Kael da Névoa",
+  "race": "Goblin",
+  "generation": 10,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "063/2026",
+  "draw_date": "2026-08-07",
+  "official_key": {
+    "numeros": [
+      26,
+      29,
+      35,
+      38,
+      47
+    ],
+    "estrelas": [
+      1,
+      12
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      1,
+      29,
+      35,
+      47,
+      50
+    ],
+    "estrelas": [
+      1,
+      6
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      29,
+      35,
+      47
+    ],
+    "estrelas": [
+      1
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      26,
+      38
+    ],
+    "estrelas": [
+      12
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      1,
+      50
+    ],
+    "estrelas": [
+      6
+    ]
+  },
+  "hero_category": "3+1",
+  "hero_tier": "TIER_4",
+  "simulation_score": 43,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_064_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 1 lucky stars against official draw 063/2026 (category 3+1).",
+  "registered_at": "2026-08-14T17:11:18+00:00"
+}

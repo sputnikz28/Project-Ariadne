@@ -1,0 +1,41 @@
+{
+  "legend_id": "LEGEND-0c186020",
+  "source_prediction_id": "0c18602086ef1e942fde6531cd2d71f8fb9cb58968f33e5a73f42d18f2b6e0c3",
+  "promotion_draw": "064/2026",
+  "promotion_draw_date": "2026-08-11",
+  "promotion_threshold": 3,
+  "promotion_tier": "LEGEND_TIER_4",
+  "criteria_version": "v1",
+  "promotion_hero_ids": [
+    "HERO-2026-058-4ce696eb",
+    "HERO-2026-059-1ca44c10",
+    "HERO-2026-064-cbb28f14"
+  ],
+  "project_version": "V12",
+  "git_commit": "d1fdb9071ba27699ca013f8861746b6d930344da",
+  "qualification_reason": "Promoted to Legend at draw 064/2026 (2026-08-11) by reaching 3 distinct qualifying draws as Hero (criteria_version: v1).",
+  "entity_id": "H-00316",
+  "entity_name": "Elarion da Névoa",
+  "race": "Chefe Tribal",
+  "generation": 6,
+  "predicted_numeros": [
+    1,
+    3,
+    8,
+    17,
+    39
+  ],
+  "predicted_estrelas": [
+    1,
+    4
+  ],
+  "hero_count": 3,
+  "qualified_draws": 3,
+  "contributing_hero_ids": [
+    "HERO-2026-058-4ce696eb",
+    "HERO-2026-059-1ca44c10",
+    "HERO-2026-064-cbb28f14"
+  ],
+  "provenance": "legacy",
+  "last_reevaluated_at": null
+}

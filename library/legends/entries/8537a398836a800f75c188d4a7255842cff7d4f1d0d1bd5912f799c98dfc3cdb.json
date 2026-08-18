@@ -1,0 +1,41 @@
+{
+  "legend_id": "LEGEND-8537a398",
+  "source_prediction_id": "8537a398836a800f75c188d4a7255842cff7d4f1d0d1bd5912f799c98dfc3cdb",
+  "promotion_draw": "063/2026",
+  "promotion_draw_date": "2026-08-07",
+  "promotion_threshold": 3,
+  "promotion_tier": "LEGEND_TIER_4",
+  "criteria_version": "v1",
+  "promotion_hero_ids": [
+    "HERO-2026-056-23a4ed76",
+    "HERO-2026-059-1154a427",
+    "HERO-2026-063-a1ea40e0"
+  ],
+  "project_version": "V12",
+  "git_commit": "d1fdb9071ba27699ca013f8861746b6d930344da",
+  "qualification_reason": "Promoted to Legend at draw 063/2026 (2026-08-07) by reaching 3 distinct qualifying draws as Hero (criteria_version: v1).",
+  "entity_id": "Djinn-1",
+  "entity_name": "Djinn-1",
+  "race": "Djinn",
+  "generation": 14,
+  "predicted_numeros": [
+    8,
+    10,
+    19,
+    35,
+    47
+  ],
+  "predicted_estrelas": [
+    1,
+    11
+  ],
+  "hero_count": 3,
+  "qualified_draws": 3,
+  "contributing_hero_ids": [
+    "HERO-2026-056-23a4ed76",
+    "HERO-2026-059-1154a427",
+    "HERO-2026-063-a1ea40e0"
+  ],
+  "provenance": "legacy",
+  "last_reevaluated_at": null
+}

@@ -1,0 +1,42 @@
+{
+  "legend_id": "LEGEND-5e3d2c98",
+  "source_prediction_id": "5e3d2c9894374566676d63e0089eab329218993f9e4bc02d6ccafb5739244ad5",
+  "promotion_draw": "063/2026",
+  "promotion_draw_date": "2026-08-07",
+  "promotion_threshold": 3,
+  "promotion_tier": "LEGEND_TIER_4",
+  "criteria_version": "v1",
+  "promotion_hero_ids": [
+    "HERO-2026-056-ab728c48",
+    "HERO-2026-062-beb57582",
+    "HERO-2026-063-0008a6dd"
+  ],
+  "project_version": "V12",
+  "git_commit": "d1fdb9071ba27699ca013f8861746b6d930344da",
+  "qualification_reason": "Promoted to Legend at draw 063/2026 (2026-08-07) by reaching 3 distinct qualifying draws as Hero (criteria_version: v1).",
+  "entity_id": "H-00719",
+  "entity_name": "Morgana dos Ossos",
+  "race": "Goblin",
+  "generation": 14,
+  "predicted_numeros": [
+    17,
+    19,
+    43,
+    46,
+    47
+  ],
+  "predicted_estrelas": [
+    1,
+    12
+  ],
+  "hero_count": 4,
+  "qualified_draws": 4,
+  "contributing_hero_ids": [
+    "HERO-2026-056-ab728c48",
+    "HERO-2026-062-beb57582",
+    "HERO-2026-063-0008a6dd",
+    "HERO-2026-064-4415a6e7"
+  ],
+  "provenance": "legacy",
+  "last_reevaluated_at": null
+}

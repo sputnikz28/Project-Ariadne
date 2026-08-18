@@ -1,0 +1,41 @@
+{
+  "legend_id": "LEGEND-00fe28d0",
+  "source_prediction_id": "00fe28d092a02722b5431f873032854e60454de72d984776ad5da72380ab0933",
+  "promotion_draw": "064/2026",
+  "promotion_draw_date": "2026-08-11",
+  "promotion_threshold": 3,
+  "promotion_tier": "LEGEND_TIER_4",
+  "criteria_version": "v1",
+  "promotion_hero_ids": [
+    "HERO-2026-062-d5017ce6",
+    "HERO-2026-063-2598989f",
+    "HERO-2026-064-7bbbc883"
+  ],
+  "project_version": "V12",
+  "git_commit": "d1fdb9071ba27699ca013f8861746b6d930344da",
+  "qualification_reason": "Promoted to Legend at draw 064/2026 (2026-08-11) by reaching 3 distinct qualifying draws as Hero (criteria_version: v1).",
+  "entity_id": "H-00308",
+  "entity_name": "Lyra dos Astros",
+  "race": "Goblin",
+  "generation": 6,
+  "predicted_numeros": [
+    4,
+    11,
+    20,
+    29,
+    46
+  ],
+  "predicted_estrelas": [
+    1,
+    12
+  ],
+  "hero_count": 3,
+  "qualified_draws": 3,
+  "contributing_hero_ids": [
+    "HERO-2026-062-d5017ce6",
+    "HERO-2026-063-2598989f",
+    "HERO-2026-064-7bbbc883"
+  ],
+  "provenance": "legacy",
+  "last_reevaluated_at": null
+}

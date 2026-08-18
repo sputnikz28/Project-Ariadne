@@ -1,0 +1,41 @@
+{
+  "legend_id": "LEGEND-3368aca0",
+  "source_prediction_id": "3368aca0b902e1ac3539d4275a700502e6b247d7cadd9cf64c8e819d8066070a",
+  "promotion_draw": "064/2026",
+  "promotion_draw_date": "2026-08-11",
+  "promotion_threshold": 3,
+  "promotion_tier": "LEGEND_TIER_4",
+  "criteria_version": "v1",
+  "promotion_hero_ids": [
+    "HERO-2026-058-5e43ca60",
+    "HERO-2026-059-dfa56781",
+    "HERO-2026-064-69828c2a"
+  ],
+  "project_version": "V12",
+  "git_commit": "d1fdb9071ba27699ca013f8861746b6d930344da",
+  "qualification_reason": "Promoted to Legend at draw 064/2026 (2026-08-11) by reaching 3 distinct qualifying draws as Hero (criteria_version: v1).",
+  "entity_id": "H-00128",
+  "entity_name": "Velka dos Ossos",
+  "race": "Bruxa",
+  "generation": 3,
+  "predicted_numeros": [
+    3,
+    8,
+    16,
+    28,
+    30
+  ],
+  "predicted_estrelas": [
+    1,
+    2
+  ],
+  "hero_count": 3,
+  "qualified_draws": 3,
+  "contributing_hero_ids": [
+    "HERO-2026-058-5e43ca60",
+    "HERO-2026-059-dfa56781",
+    "HERO-2026-064-69828c2a"
+  ],
+  "provenance": "legacy",
+  "last_reevaluated_at": null
+}

@@ -1,0 +1,41 @@
+{
+  "legend_id": "LEGEND-111b26c0",
+  "source_prediction_id": "111b26c0edd980603a0faa19918cd9d01e7a413466eb9d8bbf3a3254b4b74968",
+  "promotion_draw": "063/2026",
+  "promotion_draw_date": "2026-08-07",
+  "promotion_threshold": 3,
+  "promotion_tier": "LEGEND_TIER_4",
+  "criteria_version": "v1",
+  "promotion_hero_ids": [
+    "HERO-2026-056-f817f6c3",
+    "HERO-2026-059-5ea8ed47",
+    "HERO-2026-063-d7160af0"
+  ],
+  "project_version": "V12",
+  "git_commit": "d1fdb9071ba27699ca013f8861746b6d930344da",
+  "qualification_reason": "Promoted to Legend at draw 063/2026 (2026-08-07) by reaching 3 distinct qualifying draws as Hero (criteria_version: v1).",
+  "entity_id": "H-00528",
+  "entity_name": "Selene da Névoa",
+  "race": "Bruxa",
+  "generation": 10,
+  "predicted_numeros": [
+    10,
+    25,
+    29,
+    36,
+    47
+  ],
+  "predicted_estrelas": [
+    6,
+    12
+  ],
+  "hero_count": 3,
+  "qualified_draws": 3,
+  "contributing_hero_ids": [
+    "HERO-2026-056-f817f6c3",
+    "HERO-2026-059-5ea8ed47",
+    "HERO-2026-063-d7160af0"
+  ],
+  "provenance": "legacy",
+  "last_reevaluated_at": null
+}
