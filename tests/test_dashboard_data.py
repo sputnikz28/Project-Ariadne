@@ -16,6 +16,7 @@ from core.services.dashboard_data import (
     EconomyDrawRow,
     EconomyPlaceholder,
     EconomySummary,
+    GenerationRow,
     HeroRow,
     HouseEntry,
     LegendRow,
@@ -33,6 +34,7 @@ from core.services.dashboard_data import (
     build_economy_rows,
     build_economy_summary,
     build_executive_summary,
+    build_generations_rows,
     build_heroes_rows,
     build_houses,
     build_key_base_rows,
@@ -44,6 +46,8 @@ from core.services.dashboard_data import (
 REAL_2026_DATASET_PATH = Path(
     "datasets/historical/euromillions/2026/euromilhoes_2026_001_064_dataset_completo.json"
 )
+
+REAL_ARCHIVE_PATH = Path("datasets/generated/simulations/arquivo_destino.json")
 
 
 def make_hero_record(**overrides):
@@ -1315,6 +1319,134 @@ def make_house_entry(**overrides):
     )
     fields.update(overrides)
     return HouseEntry(**fields)
+
+
+def make_generation_record(**overrides):
+    record = {
+        "geracao": 1, "id": "H-00001", "nome": "Kael da Lua Fria",
+        "classe": "Elfo", "casa": "Casa das Estrelas",
+        "numeros": [11, 13, 27, 38, 44], "estrelas": [6, 9],
+        "origem": "racas_antigas", "virus": None,
+    }
+    record.update(overrides)
+    return record
+
+
+class TestBuildGenerationsRows(unittest.TestCase):
+    def test_single_generation_produces_one_row(self):
+        records = [make_generation_record(geracao=1, id="H-1"), make_generation_record(geracao=1, id="H-2")]
+        rows = build_generations_rows(records)
+        self.assertEqual(len(rows), 1)
+        self.assertEqual(rows[0].geracao, 1)
+
+    def test_multiple_generations_produce_multiple_rows(self):
+        records = [
+            make_generation_record(geracao=1, id="H-1"),
+            make_generation_record(geracao=2, id="H-2"),
+            make_generation_record(geracao=3, id="H-3"),
+        ]
+        rows = build_generations_rows(records)
+        self.assertEqual([r.geracao for r in rows], [1, 2, 3])
+
+    def test_rows_are_ordered_by_geracao_ascending(self):
+        records = [
+            make_generation_record(geracao=3, id="H-3"),
+            make_generation_record(geracao=1, id="H-1"),
+            make_generation_record(geracao=2, id="H-2"),
+        ]
+        rows = build_generations_rows(records)
+        self.assertEqual([r.geracao for r in rows], [1, 2, 3])
+
+    def test_individuos_total_counts_records_in_generation(self):
+        records = [make_generation_record(geracao=1, id=f"H-{i}") for i in range(5)]
+        rows = build_generations_rows(records)
+        self.assertEqual(rows[0].individuos_total, 5)
+
+    def test_chaves_unicas_counts_distinct_numeros_estrelas_pairs(self):
+        records = [
+            make_generation_record(geracao=1, id="H-1", numeros=[1, 2, 3, 4, 5], estrelas=[1, 2]),
+            make_generation_record(geracao=1, id="H-2", numeros=[1, 2, 3, 4, 5], estrelas=[1, 2]),  # duplicate key
+            make_generation_record(geracao=1, id="H-3", numeros=[6, 7, 8, 9, 10], estrelas=[3, 4]),
+        ]
+        rows = build_generations_rows(records)
+        self.assertEqual(rows[0].individuos_total, 3)
+        self.assertEqual(rows[0].chaves_unicas, 2)
+
+    def test_cobertura_numeros_counts_distinct_numbers_across_generation(self):
+        records = [
+            make_generation_record(geracao=1, id="H-1", numeros=[1, 2, 3, 4, 5], estrelas=[1, 2]),
+            make_generation_record(geracao=1, id="H-2", numeros=[1, 2, 3, 4, 6], estrelas=[1, 2]),
+        ]
+        rows = build_generations_rows(records)
+        self.assertEqual(rows[0].cobertura_numeros, 6)  # {1,2,3,4,5,6}
+
+    def test_cobertura_estrelas_counts_distinct_stars_across_generation(self):
+        records = [
+            make_generation_record(geracao=1, id="H-1", numeros=[1, 2, 3, 4, 5], estrelas=[1, 2]),
+            make_generation_record(geracao=1, id="H-2", numeros=[6, 7, 8, 9, 10], estrelas=[2, 3]),
+        ]
+        rows = build_generations_rows(records)
+        self.assertEqual(rows[0].cobertura_estrelas, 3)  # {1,2,3}
+
+    def test_taxa_diversidade_is_chaves_unicas_over_individuos_total(self):
+        records = [
+            make_generation_record(geracao=1, id="H-1", numeros=[1, 2, 3, 4, 5], estrelas=[1, 2]),
+            make_generation_record(geracao=1, id="H-2", numeros=[1, 2, 3, 4, 5], estrelas=[1, 2]),
+            make_generation_record(geracao=1, id="H-3", numeros=[6, 7, 8, 9, 10], estrelas=[3, 4]),
+            make_generation_record(geracao=1, id="H-4", numeros=[6, 7, 8, 9, 10], estrelas=[3, 4]),
+        ]
+        rows = build_generations_rows(records)
+        self.assertEqual(rows[0].individuos_total, 4)
+        self.assertEqual(rows[0].chaves_unicas, 2)
+        self.assertAlmostEqual(rows[0].taxa_diversidade, 0.5)
+
+    def test_fitness_fields_are_always_none(self):
+        rows = build_generations_rows([make_generation_record()])
+        self.assertIsNone(rows[0].fitness_medio)
+        self.assertIsNone(rows[0].fitness_maximo)
+        self.assertIsNone(rows[0].fitness_minimo)
+
+    def test_jaccard_is_always_none(self):
+        records = [make_generation_record(geracao=1, id="H-1"), make_generation_record(geracao=2, id="H-2")]
+        rows = build_generations_rows(records)
+        for row in rows:
+            self.assertIsNone(row.jaccard_medio_vs_geracao_anterior)
+
+    def test_empty_input_returns_empty_list(self):
+        self.assertEqual(build_generations_rows([]), [])
+
+    def test_build_generations_rows_does_not_mutate_input_records(self):
+        records = [make_generation_record(geracao=1, id="H-1"), make_generation_record(geracao=2, id="H-2")]
+        before = json.loads(json.dumps(records))  # deep snapshot
+        build_generations_rows(records)
+        self.assertEqual(records, before)
+
+
+@unittest.skipUnless(REAL_ARCHIVE_PATH.exists(), "real prediction archive not present in this checkout")
+class TestRealArchiveLegacyLimitation(unittest.TestCase):
+    """Documents a structural limitation of the real archive, not a
+    heuristic to work around it: datasets/generated/simulations/
+    arquivo_destino.json contains legacy records with no run_id (from
+    before run_id-tagging existed), so the raw file can never be treated
+    automatically as one coherent execution — build_generations_rows()
+    must always be called with a caller-provided, already-scoped subset,
+    never with this file's contents directly. This assertion only checks
+    that at least one such legacy record still exists — it deliberately
+    does not assert an exact count (e.g. "0 records have run_id"), which
+    would go stale the moment a future main.py run starts persisting
+    run_id correctly again.
+    """
+
+    def test_legacy_records_without_run_id_exist_so_the_full_archive_is_not_one_execution(self):
+        records = json.loads(REAL_ARCHIVE_PATH.read_text(encoding="utf-8"))
+        legacy_without_run_id = [r for r in records if not r.get("run_id")]
+        self.assertGreater(
+            len(legacy_without_run_id), 0,
+            "expected at least one legacy record without run_id — if this ever fails, "
+            "it means every record in the archive now carries a run_id, and a future "
+            "commit could revisit whether per-execution grouping is finally possible; "
+            "it does not mean the whole file may be treated as one execution.",
+        )
 
 
 class TestBuildExecutiveSummary(unittest.TestCase):

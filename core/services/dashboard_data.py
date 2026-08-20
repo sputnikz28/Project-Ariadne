@@ -845,6 +845,80 @@ def build_houses(
 
 
 # ---------------------------------------------------------------------------
+# Gerações — a única fonte real persistente é datasets/generated/simulations/
+# arquivo_destino.json (registos individuais crus, sem agregação). Essa
+# fonte mistura, sem qualquer separação, dezenas de execuções distintas de
+# main.py sob o mesmo valor de 'geracao' (nenhum registo real tem run_id
+# hoje, apesar de main.py já o gravar desde V12.3 — nenhuma execução desde
+# então voltou a correr). Por isso `records` tem de já pertencer a uma
+# única execução coerente quando chega aqui — esta função nunca lê
+# ficheiros, nunca decide qual execução usar, e nunca implementa nenhuma
+# heurística para reconstruir execuções a partir de registos legacy sem
+# run_id.
+# ---------------------------------------------------------------------------
+
+def build_generations_rows(
+    records: Sequence[DashboardSourceRecord],
+) -> list[GenerationRow]:
+    """records: já pertencentes a uma única execução coerente, filtrados
+    pelo chamador (mesma disciplina de build_key_base_rows/year) — esta
+    função nunca lê ficheiros, nunca decide qual execução usar, e nunca
+    agrupa os registos legacy sem run_id de arquivo_destino.json como se
+    fossem uma execução única.
+
+    Uma GenerationRow por valor de 'geracao' efetivamente presente em
+    `records` — nunca inventa uma row para uma geração sem registos.
+    Ordenado ascendentemente por geracao.
+
+    chaves_unicas / cobertura_numeros / cobertura_estrelas assumem o
+    invariante real confirmado (42527/42527 registos, 100%, todas as
+    origens): 'numeros'/'estrelas' vêm sempre pré-ordenados
+    ascendentemente na fonte — por isso duas chaves são "a mesma" sse os
+    seus tuplos (numeros, estrelas) crus forem iguais; esta função nunca
+    os reordena. Se uma fonte futura violar este invariante, chaves
+    semanticamente iguais gravadas em ordem diferente seriam subcontadas
+    como distintas — limitação aceite, não corrigida silenciosamente
+    aqui.
+
+    taxa_diversidade = chaves_unicas / individuos_total (individuos_total
+    nunca é 0 aqui — uma geracao sem registos nunca produz row).
+
+    fitness_medio/fitness_maximo/fitness_minimo: sempre None —
+    arquivo_destino.json nunca persistiu o score por indivíduo.
+
+    jaccard_medio_vs_geracao_anterior: sempre None neste commit — o
+    campo existe no contrato, mas a sua definição estatística canónica
+    fica deliberadamente por decidir nos futuros serviços estatísticos
+    partilhados (ver CLAUDE.md, 'Serviços previstos').
+    """
+    by_geracao: dict[int, list[DashboardSourceRecord]] = {}
+    for r in records:
+        by_geracao.setdefault(r["geracao"], []).append(r)
+
+    rows = []
+    for geracao in sorted(by_geracao):
+        group = by_geracao[geracao]
+        individuos_total = len(group)
+        keys = [(tuple(r["numeros"]), tuple(r["estrelas"])) for r in group]
+        chaves_unicas = len(set(keys))
+        cobertura_numeros = len({n for r in group for n in r["numeros"]})
+        cobertura_estrelas = len({e for r in group for e in r["estrelas"]})
+        rows.append(GenerationRow(
+            geracao=geracao,
+            individuos_total=individuos_total,
+            chaves_unicas=chaves_unicas,
+            taxa_diversidade=chaves_unicas / individuos_total,
+            cobertura_numeros=cobertura_numeros,
+            cobertura_estrelas=cobertura_estrelas,
+            jaccard_medio_vs_geracao_anterior=None,
+            fitness_medio=None,
+            fitness_maximo=None,
+            fitness_minimo=None,
+        ))
+    return rows
+
+
+# ---------------------------------------------------------------------------
 # Executive Summary / Dashboard Dataset — pure composition of rows already
 # produced by the other builders in this module. Neither function computes
 # any new statistic: total_heroes/total_legends are counts of the rows
