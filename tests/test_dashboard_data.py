@@ -1511,11 +1511,69 @@ class TestBuildFrequenciesRows(unittest.TestCase):
         self.assertAlmostEqual(by_key[("estrela", 1)].frequencia_relativa, 2 / 3)
         self.assertAlmostEqual(by_key[("numero", 10)].frequencia_relativa, 1 / 3)
 
-    def test_atraso_atual_is_always_none(self):
+    def test_atraso_atual_zero_for_value_in_most_recent_draw(self):
+        records = [
+            make_draw_record(chave={"numeros": [1, 2, 3, 4, 5], "estrelas": [1, 2]}),
+            make_draw_record(chave={"numeros": [6, 7, 8, 9, 10], "estrelas": [3, 4]}),
+        ]
+        rows = build_frequencies_rows(records)
+        by_key = {(r.tipo, r.valor): r for r in rows}
+        self.assertEqual(by_key[("numero", 6)].atraso_atual, 0)
+        self.assertEqual(by_key[("estrela", 3)].atraso_atual, 0)
+
+    def test_atraso_atual_n_draws_ago(self):
+        records = [
+            make_draw_record(chave={"numeros": [1, 2, 3, 4, 5], "estrelas": [1, 2]}),
+            make_draw_record(chave={"numeros": [6, 7, 8, 9, 10], "estrelas": [3, 4]}),
+            make_draw_record(chave={"numeros": [11, 12, 13, 14, 15], "estrelas": [5, 6]}),
+        ]
+        rows = build_frequencies_rows(records)
+        by_key = {(r.tipo, r.valor): r for r in rows}
+        self.assertEqual(by_key[("numero", 1)].atraso_atual, 2)
+        self.assertEqual(by_key[("numero", 6)].atraso_atual, 1)
+        self.assertEqual(by_key[("estrela", 1)].atraso_atual, 2)
+        self.assertEqual(by_key[("estrela", 5)].atraso_atual, 0)
+
+    def test_atraso_atual_none_for_value_never_observed(self):
         records = [make_draw_record(chave={"numeros": [1, 2, 3, 4, 5], "estrelas": [1, 2]})]
         rows = build_frequencies_rows(records)
+        by_key = {(r.tipo, r.valor): r for r in rows}
+        self.assertIsNone(by_key[("numero", 50)].atraso_atual)
+        self.assertIsNone(by_key[("estrela", 12)].atraso_atual)
+
+    def test_atraso_atual_none_for_all_rows_on_empty_input(self):
+        rows = build_frequencies_rows([])
+        self.assertEqual(len(rows), 62)
         for row in rows:
             self.assertIsNone(row.atraso_atual)
+
+    def test_atraso_atual_based_exclusively_on_given_order_not_dates(self):
+        # Deliberately out of chronological order (draw dated later comes
+        # first) — atraso_atual must follow the given SEQUENCE order,
+        # never re-derive "most recent" from the data field.
+        records = [
+            make_draw_record(data="2026-12-31", chave={"numeros": [1, 2, 3, 4, 5], "estrelas": [1, 2]}),
+            make_draw_record(data="2026-01-01", chave={"numeros": [6, 7, 8, 9, 10], "estrelas": [3, 4]}),
+        ]
+        rows = build_frequencies_rows(records)
+        by_key = {(r.tipo, r.valor): r for r in rows}
+        # last element given is the 2026-01-01 draw, so IT is treated as
+        # "most recent" despite its earlier date.
+        self.assertEqual(by_key[("numero", 6)].atraso_atual, 0)
+        self.assertEqual(by_key[("numero", 1)].atraso_atual, 1)
+
+    def test_atraso_atual_numero_and_estrela_computed_independently(self):
+        # valor 5 exists in both universes; a draw where 5 appears as a
+        # numero but never as an estrela must not let one delay leak
+        # into the other.
+        records = [
+            make_draw_record(chave={"numeros": [5, 6, 7, 8, 9], "estrelas": [1, 2]}),
+            make_draw_record(chave={"numeros": [10, 11, 12, 13, 14], "estrelas": [3, 4]}),
+        ]
+        rows = build_frequencies_rows(records)
+        by_key = {(r.tipo, r.valor): r for r in rows}
+        self.assertEqual(by_key[("numero", 5)].atraso_atual, 1)
+        self.assertIsNone(by_key[("estrela", 5)].atraso_atual)
 
     def test_build_frequencies_rows_does_not_mutate_input_records(self):
         records = [
@@ -1563,6 +1621,17 @@ class TestBuildFrequenciesRowsRealDataset(unittest.TestCase):
         row = by_key[("estrela", most_common_estrela)]
         self.assertEqual(row.frequencia_absoluta, most_common_count)
         self.assertAlmostEqual(row.frequencia_relativa, most_common_count / len(self.sorteios))
+
+    def test_atraso_atual_zero_for_most_recent_draws_own_numeros_and_estrelas(self):
+        # self.sorteios is already chronologically ordered (verified:
+        # last element is 064/2026, the dataset's own ultimo_sorteio) —
+        # every value drawn in the very last sorteio must have delay 0.
+        last_draw = self.sorteios[-1]
+        by_key = {(r.tipo, r.valor): r for r in self.rows}
+        for n in last_draw["chave"]["numeros"]:
+            self.assertEqual(by_key[("numero", n)].atraso_atual, 0)
+        for e in last_draw["chave"]["estrelas"]:
+            self.assertEqual(by_key[("estrela", e)].atraso_atual, 0)
 
 
 class TestBuildExecutiveSummary(unittest.TestCase):

@@ -18,6 +18,8 @@ from dataclasses import dataclass, field
 from types import MappingProxyType
 from typing import Any
 
+from core.services.statistical_profiles import current_delay
+
 # A single record as loaded from a registry/JSON source, before this
 # module reshapes it into a typed row. Read-only by contract — nothing
 # here ever mutates a DashboardSourceRecord.
@@ -967,16 +969,32 @@ def build_frequencies_rows(
     de denominador zero já usada em build_economy_summary/
     build_prize_category_summary).
 
-    atraso_atual: sempre None neste commit — depende de um ponto de
-    referência ordenado no tempo ("agora", fim de uma janela), conceito
-    deliberadamente adiado para os futuros serviços estatísticos
-    partilhados (ver CLAUDE.md, 'Serviços previstos').
+    atraso_atual (Commit 14): current_delay() do
+    core.services.statistical_profiles sobre TODO o draw_records dado —
+    nunca janelado (core.services.rolling_windows não é usado aqui; quem
+    quiser atraso dentro de uma janela constrói essa janela antes de
+    chamar este builder). Mesma semântica já aprovada no Commit 12: 0 se
+    o valor está no sorteio mais recente (o último elemento de
+    draw_records), N se a última aparição foi há N sorteios, None se o
+    valor nunca aparece em draw_records (incl. draw_records vazio).
+
+    ATENÇÃO — mudança de contrato face aos Commits 9-11: draw_records
+    tem agora de estar cronologicamente ordenado (mais antigo -> mais
+    recente) para atraso_atual ser correto. frequencia_absoluta/
+    frequencia_relativa continuam corretos independentemente da ordem
+    (são só contagens), mas o registo passa a coexistir com um campo que
+    exige ordem. Esta função nunca ordena, inspeciona ou valida datas —
+    confia inteiramente na ordem dada, exatamente como current_delay()
+    e rolling_windows.py.
     """
     numero_counts: Counter = Counter()
     estrela_counts: Counter = Counter()
     for d in draw_records:
         numero_counts.update(d["chave"]["numeros"])
         estrela_counts.update(d["chave"]["estrelas"])
+
+    numero_occurrences = tuple(tuple(d["chave"]["numeros"]) for d in draw_records)
+    estrela_occurrences = tuple(tuple(d["chave"]["estrelas"]) for d in draw_records)
 
     total = len(draw_records)
     rows = []
@@ -986,7 +1004,7 @@ def build_frequencies_rows(
             valor=n, tipo="numero",
             frequencia_absoluta=freq,
             frequencia_relativa=(freq / total) if total else 0.0,
-            atraso_atual=None,
+            atraso_atual=current_delay(numero_occurrences, n),
         ))
     for e in _ALL_ESTRELAS:
         freq = estrela_counts.get(e, 0)
@@ -994,7 +1012,7 @@ def build_frequencies_rows(
             valor=e, tipo="estrela",
             frequencia_absoluta=freq,
             frequencia_relativa=(freq / total) if total else 0.0,
-            atraso_atual=None,
+            atraso_atual=current_delay(estrela_occurrences, e),
         ))
     return rows
 
