@@ -359,11 +359,14 @@ datasets/
 experiments/
     Generated simulation outputs, reports, backtesting results
         ↓
-dashboard/ (planned — visualisation/export layer)
-    Visualisation and analysis. NOTE: the data-assembly layer that will
-    feed this, core/services/dashboard_data.py (V12.3), is already
-    implemented and tested — only the visualisation/export package
-    itself remains unbuilt (see V12.3 section below).
+dashboard/ (Excel export implemented; no CLI/wiring yet)
+    Visualisation and analysis. dashboard/excel_export.py (Commit 9)
+    consumes an already-built DashboardDataset and writes an .xlsx
+    workbook — pure in memory, touches disk only in export_to_excel().
+    core/services/dashboard_data.py (V12.3) is the data-assembly layer
+    that feeds it (see V12.3 section below). No script yet assembles a
+    real DashboardDataset from live Heroes/Legends/datasets/races and
+    calls the exporter — that wiring remains unbuilt.
 ```
 
 | Layer | Responsibility |
@@ -375,7 +378,7 @@ dashboard/ (planned — visualisation/export layer)
 | `races/` | Lore, characters and world-building — documentation only |
 | `datasets/` | Historical knowledge (immutable source data) |
 | `experiments/` | Generated outputs (simulations, backtests, reports) |
-| `dashboard/` | Visualisation and analysis — **still planned**; its data layer (`core/services/dashboard_data.py`) already exists |
+| `dashboard/` | Excel export implemented (`dashboard/excel_export.py`, Commit 9); no CLI/wiring yet — its data layer (`core/services/dashboard_data.py`) already exists |
 
 ## Faction → Algorithm → Race map (selection)
 
@@ -537,7 +540,7 @@ Suite `unittest` da stdlib (sem dependências externas — consistente com `requ
 python -m unittest discover -s tests
 ```
 
-500 testes em 22 módulos (`tests/test_*.py`), verificado em V13.
+547 testes em 23 módulos (`tests/test_*.py`), verificado no Commit 11 do Dashboard (V12.3).
 
 | Ficheiro | Cobre |
 |---------|------|
@@ -559,12 +562,13 @@ python -m unittest discover -s tests
 | `test_historical_scroll.py` | `core/services/historical_scroll.py` — geração do pergaminho de um sorteio histórico |
 | `test_historical_draw_generator.py` | `core/services/historical_draw_generator.py` — pipeline transacional de registo de sorteios oficiais |
 | `test_register_official_draw.py` | `register_official_draw.py` — CLI de registo de sorteios oficiais (staged → validado → instalado, rollback, códigos de saída) |
-| `test_dashboard_data.py` | `core/services/dashboard_data.py` — Heroes, Legends, Base de Chaves, Characters, Houses, Economy, Categorias de Prémios, `DashboardDataset` (inclui testes contra o dataset real de 2026) |
+| `test_dashboard_data.py` | `core/services/dashboard_data.py` — Heroes, Legends, Base de Chaves, Characters, Houses, Economy, Categorias de Prémios, Gerações, Frequências, `DashboardDataset` (inclui testes contra o dataset real de 2026 e contra `arquivo_destino.json`) |
 | `test_artifact_schema.py` | `core/services/artifact_schema.py` — `normalize_artifact()`/`ArtifactRecord`, validado contra os 15 artefactos reais |
 | `test_artifact_registry.py` | `core/services/artifact_registry.py` — `load_all_artifacts()`, `ArtifactRegistry`, `build_index()`/`write_index()` |
 | `test_artifact_inspiration.py` | `core/services/artifact_inspiration.py` — `generate_inspiration()`, determinismo, segurança narrativa (nunca sugere números/estrelas/previsões) |
+| `test_dashboard_excel_export.py` | `dashboard/excel_export.py` — construção do workbook a partir de um `DashboardDataset` já feito, sem recalcular dados; determinismo semântico, `None` nunca vira `0`, dataset vazio, Economy/Prize Categories ausentes, exportação sempre em `tempfile` |
 
-**Filosofia:** os testes cobrem a *framework* e os serviços partilhados reais (registry, plugin_loader, council, modelos partilhados, pontuação do backtesting, pipeline histórico, Heroes/Legends, Dashboard Dataset, Biblioteca dos Artefactos), não a lógica narrativa de cada facção — um refactor da arquitetura de plugins deve falhar aqui, localmente, em vez de partir silenciosamente uma facção três camadas depois. As 21 facções em `factions/*/` não têm testes dedicados; a sua "correção" é maioritariamente narrativa, não mecânica.
+**Filosofia:** os testes cobrem a *framework* e os serviços partilhados reais (registry, plugin_loader, council, modelos partilhados, pontuação do backtesting, pipeline histórico, Heroes/Legends, Dashboard Dataset, Dashboard Excel Export, Biblioteca dos Artefactos), não a lógica narrativa de cada facção — um refactor da arquitetura de plugins deve falhar aqui, localmente, em vez de partir silenciosamente uma facção três camadas depois. As 21 facções em `factions/*/` não têm testes dedicados; a sua "correção" é maioritariamente narrativa, não mecânica.
 
 # Serviços partilhados (`core/services/`)
 
@@ -598,6 +602,15 @@ Nenhum destes substitui ainda a lógica estatística por-facção (frequências,
 | Baixos/altos, pares/ímpares | `factions/chaos_cartographers/{trends,randomness}.py`, `factions/axiomantes/profile.py` |
 
 Serviços previstos (nomes indicativos): `StatisticsService`, `DelayService`, `PairService`, `TripleService`, `EntropyService`, `TrendService`. Migração fica para depois — **não implementar já**.
+
+## Known Issues / Dívida Técnica
+
+- **`library/ariadne/engine.py` — leitura ambígua de `saidas_de_bolas_normalizado.json`** (achado do Commit 11, não corrigido): este índice mistura números (1-50) e estrelas (1-12) na mesma lista, reaproveitando a chave `"numero"` sem nenhum campo `"tipo"` a distinguir — só a posição (índice <50 vs ≥50) permite separar. Isto provoca comportamento ambíguo/incorreto em dois métodos:
+  - `Ariadne.numero(n)` — o `for...return` para no primeiro match; para `n` ≤ 12 devolve sempre a entrada de **número**, nunca a de estrela (inatingível).
+  - `Ariadne.least_frequent_numbers()` — ordena a lista inteira por `aparicoes_totais`, incluindo as estrelas misturadas como se fossem números.
+- **`library/indexes/frequencias_numeros.json`/`frequencias_estrelas.json`** — órfãos (nenhum código do projeto os lê) e obsoletos (a soma das frequências implica só 55 sorteios indexados — não bate nem com "2026 sozinho" (64) nem com o histórico completo; `git log` confirma que não são tocados desde a reorganização V10).
+- `core/services/dashboard_data.py:build_frequencies_rows()` (Commit 11) não depende de nenhum destes três ficheiros — conta diretamente sobre `draw_records` já carregados pelo chamador, evitando tanto a ambiguidade como a obsolescência.
+- **`VERSION` desalinhado**: o ficheiro `VERSION` na raiz contém `"V12"`, mas este documento (e o `README.md`) já descrevem funcionalidade pós-V13 como completa. Registado como achado; não corrigido — fora do âmbito destes commits.
 
 # Benchmarks (`benchmarks/` e `experiments/benchmarks/`)
 
@@ -645,10 +658,11 @@ Estrutura só, sem runner. `benchmarks/random/` (baseline aleatório), `benchmar
 
 ## V12.3 — Dashboard Dataset (complete)
 
-- ✅ `core/services/dashboard_data.py` — camada pura de montagem de dados (Commits 1-8, ver secção própria abaixo): Heroes, Legends, Base de Chaves, Characters, Houses, Executive Summary, Economy, Categorias de Prémios
+- ✅ `core/services/dashboard_data.py` — camada pura de montagem de dados (Commits 1-11, ver secção própria abaixo): Heroes, Legends, Base de Chaves, Characters, Houses, Executive Summary, Economy, Categorias de Prémios, Gerações, Frequências
 - ✅ `library/heroes/` + `library/legends/` — registries persistentes, mais `hero_evaluation.py`/`legend_evaluation.py` e os CLIs `evaluate_heroes.py`/`evaluate_legends.py`
 - ✅ Pipeline de registo de sorteios oficiais — `historical_draw_generator.py` + `register_official_draw.py` (ver secção própria abaixo)
-- Ainda por fazer: `GenerationRow`/`FrequenciesRow` não têm função construtora; não existe pacote `dashboard/` de visualização/exportação (só a camada de dados) — ver Próximo Passo na secção V12.3 abaixo
+- ✅ `dashboard/excel_export.py` — exportação Excel do `DashboardDataset` (Commit 9, ver secção própria abaixo)
+- Ainda por fazer: nenhum script monta um `DashboardDataset` real a partir de Heroes/Legends/datasets/races ao vivo e chama o exportador; `jaccard_medio_vs_geracao_anterior` (`GenerationRow`) e `atraso_atual` (`FrequenciesRow`) ficam deliberadamente `None` até existirem os futuros serviços estatísticos partilhados — ver Próximo Passo na secção V12.3 abaixo
 
 ## V13 — Biblioteca dos Artefactos (complete)
 
@@ -658,13 +672,13 @@ Estrutura só, sem runner. `benchmarks/random/` (baseline aleatório), `benchmar
 
 # Dependências opcionais
 
-## Dashboard (pacote `dashboard/` de exportação — ainda planeado)
+## Dashboard (`dashboard/excel_export.py`)
 
-O futuro módulo `dashboard/` (exportação para Excel do `DashboardDataset`
-já produzido por `core/services/dashboard_data.py`, ver V12.3 abaixo) vai
-usar `openpyxl`, que não é uma dependência obrigatória do núcleo do
-projeto (ver `requirements.txt`). Instalar apenas quando esse módulo
-existir e for necessário gerar o workbook de investigação:
+`dashboard/excel_export.py` (Commit 9) exporta um `DashboardDataset` já
+construído (produzido por `core/services/dashboard_data.py`, ver V12.3
+abaixo) para `.xlsx`, usando `openpyxl`, que não é uma dependência
+obrigatória do núcleo do projeto (ver `requirements.txt`). Instalar
+apenas quando for necessário gerar o workbook de investigação:
 
 ```bash
 pip install -r requirements-dashboard.txt
@@ -726,6 +740,32 @@ Commit 8 — Categorias de Prémios
 - categorias_disponiveis vem sempre de qualidade_dados.categorias_premio_disponiveis, nunca inferido
 - 500/500 OK
 
+Commit 9 — Excel Export
+- dashboard/__init__.py, dashboard/excel_export.py
+- build_workbook() (puro, em memória, nunca toca em disco) + export_to_excel() (único ponto de escrita)
+- 8 folhas: Executive Summary, Heroes, Legends, Characters, Houses, Key Base, Economy, Prize Categories — cada uma lida apenas dos campos correspondentes do DashboardDataset já construído, nunca recalculada
+- Economy/Prize Categories usam exclusivamente economy_draws/economy_summary e prize_category_rows/prize_category_summary
+- None nunca vira 0/False; tuplos formatados como string só para exibição, nunca reordenados
+- project_version/generated_at injetados verbatim pelo chamador — nunca lidos de VERSION nem de datetime.now() dentro do exportador
+- Validação funcional adicional contra o DashboardDataset real do projeto (Heroes/Legends/sorteios/Characters/Houses/Economy/Prize Categories reais), workbook reaberto com openpyxl e comparado campo a campo — sem freeze panes/autofilter/number_format custom (âmbito mínimo deliberado)
+- 523/523 OK
+
+Commit 10 — Generation Rows
+- build_generations_rows() — agrupa por geracao um conjunto de registos já pertencentes a uma única execução coerente, fornecido pelo chamador; nunca decidido aqui
+- chaves_unicas/cobertura_numeros/cobertura_estrelas/taxa_diversidade — contagens/rácio sobre numeros/estrelas, que a fonte real (arquivo_destino.json) garante estarem sempre pré-ordenados ascendentemente (verificado: 42527/42527 registos)
+- fitness_medio/fitness_maximo/fitness_minimo: sempre None — a fonte real nunca persistiu o score (pontos) por indivíduo, estruturalmente irrecuperável
+- jaccard_medio_vs_geracao_anterior: sempre None — o campo existe no contrato, mas a definição estatística canónica fica deliberadamente por decidir nos futuros serviços estatísticos partilhados
+- Achado documentado (não corrigido): arquivo_destino.json não tem run_id em nenhum registo real ainda, e mistura dezenas de execuções distintas de main.py sob os mesmos valores de geracao — build_generations_rows() nunca lê esse ficheiro diretamente nem agrupa por geracao sozinho
+- 536/536 OK
+
+Commit 11 — Frequencies Rows
+- build_frequencies_rows() — conta ocorrências de números (1-50) e estrelas (1-12) sobre draw_records já carregados (o mesmo `sorteios` que os outros builders de sorteios recebem); sem filtro de ano interno — histórico completo vs. um subconjunto é decisão exclusiva do chamador
+- Emite sempre 62 rows (regra fixa do jogo, mesmo espírito de _PRIZE_CATEGORY_LABELS); valores nunca vistos ficam com frequencia_absoluta=0/frequencia_relativa=0.0, nunca omitidos
+- frequencia_relativa no intervalo [0,1]
+- atraso_atual: sempre None — depende de um "agora" ordenado no tempo (rolling window), deliberadamente adiado
+- Achado documentado (não corrigido): frequencias_numeros.json/frequencias_estrelas.json órfãos e obsoletos; saidas_de_bolas_normalizado.json atualizado mas mistura números e estrelas sem campo "tipo" — build_frequencies_rows() ignora os três, conta direto sobre sorteios
+- 547/547 OK
+
 ## Decisões Arquiteturais
 
 - dashboard_data.py é exclusivamente uma camada de transformação.
@@ -742,6 +782,9 @@ Commit 8 — Categorias de Prémios
 - economy_draws/economy_summary/prize_category_rows/prize_category_summary são campos aditivos em DashboardDataset (default ()/None) — nunca alteram economy/economia (EconomyPlaceholder), que se mantém inalterado, apenas complementado.
 - Exploration vs Exploitation permanece adiado.
 - A normalização continua privada dentro de dashboard_data.py até existir necessidade real de extração.
+- dashboard/excel_export.py só lê o DashboardDataset já construído — nunca Heroes/Legends/datasets/registries diretamente; só toca em disco em export_to_excel(), nunca em build_workbook().
+- build_generations_rows()/build_frequencies_rows() seguem a mesma disciplina de build_key_base_rows: o âmbito (que execução, que sorteios) é sempre decidido pelo chamador, nunca inferido nem reconstruído a partir de registos legacy sem run_id.
+- Campos sem fonte real honesta ficam sempre None, nunca recalculados com o estado atual do projeto: fitness_medio/maximo/minimo (GenerationRow) e atraso_atual (FrequenciesRow).
 
 ## Fluxo de Trabalho
 
@@ -755,11 +798,12 @@ Commit 8 — Categorias de Prémios
 
 ## Próximo Passo
 
-Commits 1–8 concluídos — Dashboard Dataset cobre Heroes, Legends, Base de Chaves, Characters, Houses, Executive Summary, Economy e Categorias de Prémios, tudo testado (500/500 OK). Sem objetivo de Commit 9 definido ainda; candidatos em aberto (ver também Roadmap):
+Commits 1–11 concluídos — Dashboard Dataset cobre Heroes, Legends, Base de Chaves, Characters, Houses, Executive Summary, Economy, Categorias de Prémios, Gerações e Frequências; exportação Excel (`dashboard/excel_export.py`) implementada e validada contra o DashboardDataset real do projeto (547/547 OK). Sem objetivo de Commit 12 definido ainda; candidatos em aberto (ver também Roadmap):
 
-- Construtores para GenerationRow/FrequenciesRow — os contratos já existem, sem função ainda.
+- CLI/script de wiring que monta um `DashboardDataset` real a partir de Heroes/Legends/datasets/races/economy/prize categories ao vivo e chama `export_to_excel()` — hoje só a suite de testes e uma validação manual ad-hoc constroem um dataset real; não há nenhum ponto de entrada do projeto que o faça.
+- Definição estatística canónica de `jaccard_medio_vs_geracao_anterior` (`GenerationRow`) e de `atraso_atual` (`FrequenciesRow`) — deliberadamente adiada para os futuros serviços estatísticos partilhados (`StatisticsService`/`DelayService`, ver 'Serviços previstos').
 - Categorias de prémio detalhadas por linha (breakdown dos 13 escalões por sorteio — hoje só agregado por categoria) — candidato natural de âmbito único.
-- Pacote `dashboard/` de visualização/exportação — consome `DashboardDataset`; hoje não tem nenhum consumidor fora da suite de testes.
+- Folha "Generations"/"Frequencies" no Excel Export — `dataset.generations`/`dataset.frequencies` já podem ter dados reais desde os Commits 10/11, mas `excel_export.py` ainda só cobre as 8 folhas do Commit 9.
 
 ---
 

@@ -7,6 +7,7 @@ contract that it never touches the registries or disk itself.
 import dataclasses
 import json
 import unittest
+from collections import Counter
 from pathlib import Path
 from types import MappingProxyType
 
@@ -16,6 +17,7 @@ from core.services.dashboard_data import (
     EconomyDrawRow,
     EconomyPlaceholder,
     EconomySummary,
+    FrequenciesRow,
     GenerationRow,
     HeroRow,
     HouseEntry,
@@ -34,6 +36,7 @@ from core.services.dashboard_data import (
     build_economy_rows,
     build_economy_summary,
     build_executive_summary,
+    build_frequencies_rows,
     build_generations_rows,
     build_heroes_rows,
     build_houses,
@@ -1447,6 +1450,119 @@ class TestRealArchiveLegacyLimitation(unittest.TestCase):
             "commit could revisit whether per-execution grouping is finally possible; "
             "it does not mean the whole file may be treated as one execution.",
         )
+
+
+class TestBuildFrequenciesRows(unittest.TestCase):
+    def test_emits_exactly_62_rows_for_empty_input(self):
+        rows = build_frequencies_rows([])
+        self.assertEqual(len(rows), 62)
+        self.assertEqual(sum(1 for r in rows if r.tipo == "numero"), 50)
+        self.assertEqual(sum(1 for r in rows if r.tipo == "estrela"), 12)
+
+    def test_empty_input_all_rows_zero(self):
+        rows = build_frequencies_rows([])
+        for row in rows:
+            self.assertEqual(row.frequencia_absoluta, 0)
+            self.assertEqual(row.frequencia_relativa, 0.0)
+
+    def test_all_50_numeros_and_12_estrelas_are_present(self):
+        rows = build_frequencies_rows([])
+        numeros = sorted(r.valor for r in rows if r.tipo == "numero")
+        estrelas = sorted(r.valor for r in rows if r.tipo == "estrela")
+        self.assertEqual(numeros, list(range(1, 51)))
+        self.assertEqual(estrelas, list(range(1, 13)))
+
+    def test_frequencia_absoluta_counts_occurrences_across_draw_records(self):
+        records = [
+            make_draw_record(chave={"numeros": [1, 2, 3, 4, 5], "estrelas": [1, 2]}),
+            make_draw_record(chave={"numeros": [1, 2, 3, 4, 6], "estrelas": [1, 3]}),
+        ]
+        rows = build_frequencies_rows(records)
+        by_key = {(r.tipo, r.valor): r for r in rows}
+        self.assertEqual(by_key[("numero", 1)].frequencia_absoluta, 2)
+        self.assertEqual(by_key[("numero", 5)].frequencia_absoluta, 1)
+        self.assertEqual(by_key[("numero", 6)].frequencia_absoluta, 1)
+        self.assertEqual(by_key[("numero", 7)].frequencia_absoluta, 0)
+
+    def test_value_present_as_both_numero_and_estrela_are_counted_independently(self):
+        # valor=5 exists in both universes (numeros 1-50 and estrelas 1-12);
+        # a draw where 5 appears as a numero but never as an estrela must
+        # not let one count leak into the other.
+        records = [
+            make_draw_record(chave={"numeros": [5, 6, 7, 8, 9], "estrelas": [1, 2]}),
+            make_draw_record(chave={"numeros": [5, 10, 11, 12, 13], "estrelas": [3, 4]}),
+        ]
+        rows = build_frequencies_rows(records)
+        by_key = {(r.tipo, r.valor): r for r in rows}
+        self.assertEqual(by_key[("numero", 5)].frequencia_absoluta, 2)
+        self.assertEqual(by_key[("estrela", 5)].frequencia_absoluta, 0)
+        self.assertEqual(by_key[("numero", 5)].frequencia_relativa, 1.0)
+        self.assertEqual(by_key[("estrela", 5)].frequencia_relativa, 0.0)
+
+    def test_frequencia_relativa_is_absoluta_over_total_draws(self):
+        records = [
+            make_draw_record(chave={"numeros": [1, 2, 3, 4, 5], "estrelas": [1, 2]}),
+            make_draw_record(chave={"numeros": [1, 6, 7, 8, 9], "estrelas": [1, 3]}),
+            make_draw_record(chave={"numeros": [10, 11, 12, 13, 14], "estrelas": [4, 5]}),
+        ]
+        rows = build_frequencies_rows(records)
+        by_key = {(r.tipo, r.valor): r for r in rows}
+        self.assertAlmostEqual(by_key[("numero", 1)].frequencia_relativa, 2 / 3)
+        self.assertAlmostEqual(by_key[("estrela", 1)].frequencia_relativa, 2 / 3)
+        self.assertAlmostEqual(by_key[("numero", 10)].frequencia_relativa, 1 / 3)
+
+    def test_atraso_atual_is_always_none(self):
+        records = [make_draw_record(chave={"numeros": [1, 2, 3, 4, 5], "estrelas": [1, 2]})]
+        rows = build_frequencies_rows(records)
+        for row in rows:
+            self.assertIsNone(row.atraso_atual)
+
+    def test_build_frequencies_rows_does_not_mutate_input_records(self):
+        records = [
+            make_draw_record(chave={"numeros": [1, 2, 3, 4, 5], "estrelas": [1, 2]}),
+            make_draw_record(chave={"numeros": [6, 7, 8, 9, 10], "estrelas": [3, 4]}),
+        ]
+        before = json.loads(json.dumps(records))  # deep snapshot
+        build_frequencies_rows(records)
+        self.assertEqual(records, before)
+
+
+@unittest.skipUnless(REAL_2026_DATASET_PATH.exists(), "real 2026 dataset not present in this checkout")
+class TestBuildFrequenciesRowsRealDataset(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        data = json.loads(REAL_2026_DATASET_PATH.read_text(encoding="utf-8"))
+        cls.sorteios = data["sorteios"]
+        cls.rows = build_frequencies_rows(cls.sorteios)
+
+    def test_row_count_is_62(self):
+        self.assertEqual(len(self.rows), 62)
+
+    def test_numero_frequency_matches_independent_count_from_sorteios(self):
+        # Independently recomputed here (not hardcoded), so this fails if
+        # build_frequencies_rows ever drifts from a straight count over
+        # the real dataset — for whichever numero happens to be the most
+        # frequent, not a value chosen in advance.
+        expected = Counter()
+        for s in self.sorteios:
+            expected.update(s["chave"]["numeros"])
+        most_common_numero, most_common_count = expected.most_common(1)[0]
+
+        by_key = {(r.tipo, r.valor): r for r in self.rows}
+        row = by_key[("numero", most_common_numero)]
+        self.assertEqual(row.frequencia_absoluta, most_common_count)
+        self.assertAlmostEqual(row.frequencia_relativa, most_common_count / len(self.sorteios))
+
+    def test_estrela_frequency_matches_independent_count_from_sorteios(self):
+        expected = Counter()
+        for s in self.sorteios:
+            expected.update(s["chave"]["estrelas"])
+        most_common_estrela, most_common_count = expected.most_common(1)[0]
+
+        by_key = {(r.tipo, r.valor): r for r in self.rows}
+        row = by_key[("estrela", most_common_estrela)]
+        self.assertEqual(row.frequencia_absoluta, most_common_count)
+        self.assertAlmostEqual(row.frequencia_relativa, most_common_count / len(self.sorteios))
 
 
 class TestBuildExecutiveSummary(unittest.TestCase):

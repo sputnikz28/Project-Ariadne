@@ -12,6 +12,7 @@ reference into the source data.
 
 from __future__ import annotations
 
+from collections import Counter
 from collections.abc import Mapping, Sequence
 from dataclasses import dataclass, field
 from types import MappingProxyType
@@ -914,6 +915,86 @@ def build_generations_rows(
             fitness_medio=None,
             fitness_maximo=None,
             fitness_minimo=None,
+        ))
+    return rows
+
+
+# ---------------------------------------------------------------------------
+# Frequências — reaproveita exatamente o mesmo draw_records (a lista
+# `sorteios` já carregada) que build_key_base_rows/build_economy_rows/
+# build_prize_category_rows recebem — nunca lê library/indexes/. Os dois
+# índices laterais existentes foram avaliados e rejeitados:
+# frequencias_numeros.json/frequencias_estrelas.json estão órfãos (nenhum
+# código os lê) e obsoletos (implicam 55 sorteios indexados, não bate com
+# 2026 sozinho nem com o histórico completo); saidas_de_bolas_normalizado.json
+# está atualizado mas mistura números (1-50) e estrelas (1-12) na mesma
+# lista, reaproveitando a chave "numero" sem nenhum campo "tipo" a
+# distingui-los — só a posição na lista (índice <50 vs >=50) permite
+# separar, e é exatamente essa ambiguidade que faz
+# Ariadne.numero()/least_frequent_numbers() (library/ariadne/engine.py)
+# terem um bug latente (numero() nunca alcança a metade das estrelas;
+# least_frequent_numbers() ordena números e estrelas juntos como se fossem
+# a mesma coisa) — registado aqui como achado, não corrigido.
+#
+# Ao contrário de build_key_base_rows/build_economy_rows, esta função não
+# filtra por ano internamente: histórico completo vs. um subconjunto
+# (ex.: só um ano, ou uma janela) é inteiramente decisão de quem chama —
+# o mesmo `draw_records` que serve "frequência histórica total" quando o
+# chamador passa todos os sorteios, serve "frequência dentro de um
+# conjunto recebido" quando passa um subconjunto, sem nenhuma flag interna
+# a distinguir os dois casos.
+# ---------------------------------------------------------------------------
+
+_ALL_NUMEROS: tuple[int, ...] = tuple(range(1, 51))
+_ALL_ESTRELAS: tuple[int, ...] = tuple(range(1, 13))
+
+
+def build_frequencies_rows(
+    draw_records: Sequence[DashboardSourceRecord],
+) -> list[FrequenciesRow]:
+    """draw_records: já carregados pelo chamador — a mesma lista
+    `sorteios` que os outros builders de sorteios recebem, ou qualquer
+    subconjunto que o chamador escolha. Nunca lê ficheiros.
+
+    Emite sempre exatamente 50 + 12 = 62 rows — uma por cada valor
+    possível de número (1-50) e estrela (1-12), regra fixa do jogo (mesmo
+    espírito de _PRIZE_CATEGORY_LABELS) — nunca só os valores observados.
+    Um valor nunca visto em draw_records fica com frequencia_absoluta=0 e
+    frequencia_relativa=0.0 — a ausência fica visível, nunca omitida.
+
+    frequencia_relativa = frequencia_absoluta / len(draw_records), no
+    intervalo [0, 1]; 0.0 se draw_records estiver vazio (mesma convenção
+    de denominador zero já usada em build_economy_summary/
+    build_prize_category_summary).
+
+    atraso_atual: sempre None neste commit — depende de um ponto de
+    referência ordenado no tempo ("agora", fim de uma janela), conceito
+    deliberadamente adiado para os futuros serviços estatísticos
+    partilhados (ver CLAUDE.md, 'Serviços previstos').
+    """
+    numero_counts: Counter = Counter()
+    estrela_counts: Counter = Counter()
+    for d in draw_records:
+        numero_counts.update(d["chave"]["numeros"])
+        estrela_counts.update(d["chave"]["estrelas"])
+
+    total = len(draw_records)
+    rows = []
+    for n in _ALL_NUMEROS:
+        freq = numero_counts.get(n, 0)
+        rows.append(FrequenciesRow(
+            valor=n, tipo="numero",
+            frequencia_absoluta=freq,
+            frequencia_relativa=(freq / total) if total else 0.0,
+            atraso_atual=None,
+        ))
+    for e in _ALL_ESTRELAS:
+        freq = estrela_counts.get(e, 0)
+        rows.append(FrequenciesRow(
+            valor=e, tipo="estrela",
+            frequencia_absoluta=freq,
+            frequencia_relativa=(freq / total) if total else 0.0,
+            atraso_atual=None,
         ))
     return rows
 

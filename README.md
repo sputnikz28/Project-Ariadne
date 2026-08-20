@@ -46,11 +46,13 @@ A quick map of what actually exists in this repository today, kept separate from
 
 **✅ Heroes & Legends** — `library/heroes/` and `library/legends/` registries (`entries/*.json` as source of truth, derived `LIVRO_DOS_HEROIS.json`/`LIVRO_DAS_LENDAS.json` indices), plus `core/services/hero_evaluation.py`/`legend_evaluation.py` and their CLIs (`evaluate_heroes.py`, `evaluate_legends.py`).
 
-**✅ Dashboard Dataset** — `core/services/dashboard_data.py`, a pure data-assembly layer: Heroes, Legends, Base de Chaves (draws), Characters, Houses, Executive Summary, Economy and Prize Categories are all implemented and tested against real data (see [Dashboard Dataset](#dashboard-dataset) below). No visualisation layer exists yet — this is data assembly only.
+**✅ Dashboard Dataset** — `core/services/dashboard_data.py`, a pure data-assembly layer: Heroes, Legends, Base de Chaves (draws), Characters, Houses, Executive Summary, Economy, Prize Categories, Generations and Frequencies are all implemented and tested against real data (see [Dashboard Dataset](#dashboard-dataset) below).
+
+**✅ Dashboard Excel Export** — `dashboard/excel_export.py` turns an already-built `DashboardDataset` into a `.xlsx` workbook (Executive Summary, Heroes, Legends, Characters, Houses, Key Base, Economy, Prize Categories). Tested, including against the project's real data. No CLI or script wires this to live data yet — see [Dashboard Dataset](#dashboard-dataset) below.
 
 **✅ Biblioteca dos Artefactos (Artifact Library)** — `core/services/artifact_schema.py`, `artifact_registry.py` and `artifact_inspiration.py`; 15 founding narrative artifacts, every one verified to have zero effect on algorithms, results or probabilities (see [The Artifact Library](#the-artifact-library-biblioteca-dos-artefactos) below).
 
-**✅ Testing** — 500 tests across 22 modules (`python -m unittest discover -s tests`).
+**✅ Testing** — 547 tests across 23 modules (`python -m unittest discover -s tests`).
 
 ---
 
@@ -258,11 +260,25 @@ library/
 | `build_executive_summary()` | `ExecutiveSummary` | Heroes/Legends counts + Economy |
 | `build_economy_rows()` / `build_economy_summary()` | `EconomyDrawRow` / `EconomySummary` | `estatisticas_financeiras`/`premios` in the 2026 dataset |
 | `build_prize_category_rows()` / `build_prize_category_summary()` | `PrizeCategoryRow` / `PrizeCategorySummary` | `premios.categorias` in the 2026 dataset |
+| `build_generations_rows()` | `GenerationRow` | a single execution's per-individual generation records (caller-scoped) |
+| `build_frequencies_rows()` | `FrequenciesRow` | any already-loaded set of draws — the same shape `build_key_base_rows()` reads |
 | `build_dashboard_dataset()` | `DashboardDataset` | Composes all of the above — never calls the builders itself |
 
 **Economy and Prize Categories are real, not synthetic.** The official 2026 dataset only has complete financial/prize-category data for 15 of its 61 draws — confirmed via the dataset's own `qualidade_dados` flags, never inferred from whether a value happens to be non-null. Every sum, mean, minimum and maximum in `EconomySummary`/`PrizeCategorySummary` is computed only over the draws that actually have that field; a field with zero real observations resolves to `None`, never an invented `0` or an estimate. `PrizeCategoryRow` always emits exactly 13 rows per draw — the fixed, official Euromillions prize-tier table, a game rule rather than a per-draw fact — with only the observed winner counts ever `None`.
 
-`GenerationRow`/`FrequenciesRow` contracts exist in the module but have no builder function yet; `DashboardDataset.generations`/`.frequencies` currently default to empty tuples. There is no `dashboard/` visualisation package yet — see [Roadmap](#roadmap--future-vision). `requirements-dashboard.txt` (`openpyxl`) is staged for that future export step, not in active use today.
+`GenerationRow.fitness_medio`/`fitness_maximo`/`fitness_minimo` are always `None` — the real prediction archive never persisted a per-individual score, so there is nothing honest to compute. `GenerationRow.jaccard_medio_vs_geracao_anterior` and `FrequenciesRow.atraso_atual` are also always `None` for now — deliberately deferred until the project has shared statistical services to define them once, consistently. Both builders take data the caller already scoped (which execution, which draws) — neither decides that on its own.
+
+### Excel Export
+
+`dashboard/excel_export.py` consumes an already-built `DashboardDataset` — never Heroes/Legends/datasets/registries directly — and produces a `.xlsx` workbook with 8 sheets (Executive Summary, Heroes, Legends, Characters, Houses, Key Base, Economy, Prize Categories):
+
+```python
+from dashboard.excel_export import export_to_excel
+
+export_to_excel(dataset, "dashboard.xlsx", project_version="V13", generated_at="2026-08-19")
+```
+
+`Generations`/`Frequencies` have real builders (above) but no sheet of their own yet. There is currently no script in the project that assembles a real `DashboardDataset` from live Heroes/Legends/datasets/races and calls `export_to_excel()` — that wiring doesn't exist yet; only tests and one-off validation construct a real dataset today.
 
 ---
 
@@ -288,7 +304,7 @@ Project-Ariadne/
 ├── evaluate_legends.py          ← CLI: Legend Evaluation Engine
 ├── config.txt                  ← all parameters
 ├── requirements.txt            ← stdlib only (no external ML libs)
-├── requirements-dashboard.txt  ← optional: openpyxl, staged for a future Dashboard export step
+├── requirements-dashboard.txt  ← optional: openpyxl, used by dashboard/excel_export.py
 │
 ├── core/                        ← framework engine
 │   ├── strategy.py / registry.py / plugin_loader.py  ← FactionRegistry + plugin architecture
@@ -349,6 +365,9 @@ Project-Ariadne/
 │   ├── figures/                 ← plots/visualisations (empty — structure only)
 │   ├── notebooks/               ← exploratory analysis notebooks (empty — structure only)
 │   └── benchmarks/              ← ad-hoc benchmark research sessions (empty — structure only)
+├── dashboard/                   ← Excel export over an already-built DashboardDataset
+│   ├── __init__.py
+│   └── excel_export.py          ← build_workbook() (pure) + export_to_excel() (only I/O)
 ├── benchmarks/                  ← durable strategy-vs-baseline comparison results (empty — structure only)
 │   ├── random/                  ← random-baseline runs
 │   ├── reports/                 ← human-readable comparison reports
@@ -511,11 +530,12 @@ layers away. Faction-specific narrative logic (the 21 `factions/*/`
 strategies) is not under test — it doesn't affect framework stability
 and its "correctness" is largely narrative, not mechanical.
 
-**Current suite:** 500 tests across 22 modules, also covering the
+**Current suite:** 547 tests across 23 modules, also covering the
 historical dataset pipeline, Hero/Legend evaluation, the Dashboard
-Dataset layer and the Artifact Library — each with dedicated tests
-against real, on-disk data (`datasets/historical/euromillions/`,
-`library/artifacts/entries/`), not just synthetic fixtures.
+Dataset layer, the Dashboard Excel Export and the Artifact Library —
+each with dedicated tests against real, on-disk data
+(`datasets/historical/euromillions/`, `library/artifacts/entries/`),
+not just synthetic fixtures.
 
 ---
 
@@ -540,13 +560,12 @@ here affects the simulation, a key, a vote, or a probability today. See
 [Current Status (V13)](#current-status-v13) above for what actually
 exists.
 
-- **`dashboard/` visualisation package** — the Dashboard Dataset (data
-  layer, done) still has no consumer: no Excel export, no CLI report,
-  no chart. `requirements-dashboard.txt` (`openpyxl`) is staged for
-  this.
-- **`GenerationRow`/`FrequenciesRow` builders** — the row contracts
-  already exist in `dashboard_data.py`; no builder function reads real
-  generation/frequency data into them yet.
+- **Dashboard wiring** — no script yet assembles a real `DashboardDataset`
+  from live Heroes/Legends/datasets/races and calls `export_to_excel()`;
+  today only tests and manual validation do it.
+- **`Generations`/`Frequencies` sheets** — `dashboard/excel_export.py`
+  still only covers the original 8 sheets; `GenerationRow`/`FrequenciesRow`
+  have real builders now but no sheet of their own yet.
 - **New factions** — Juízes do Conselho, Geómetras do Véu, Estatísticos
   Imperiais (named in project planning, not yet implemented).
 - **Shared statistical services** — `StatisticsService`, `DelayService`,
@@ -593,7 +612,7 @@ Se preferires ler em português → [LEIA-ME.md](LEIA-ME.md)
 | V10 | Mystics — 8 new orders (lore + plugin scaffolding: Druids, Moon Priests, Star Gazers, Shamans, Witches, Seers, Oracles, Bone Readers), always abstain by design |
 | V10.5 | Architecture complete — `races/` fully lore-only, first real shared services (`combinations.py`, `fitness.py`) |
 | V11 | Clerics migrated into the plugin architecture (`races/legacy.py` retired) — 21 voting factions total |
-| V12.3 | Dashboard Dataset — Heroes, Legends, Base de Chaves, Characters, Houses, Executive Summary, Economy, Prize Categories |
+| V12.3 | Dashboard Dataset — Heroes, Legends, Base de Chaves, Characters, Houses, Executive Summary, Economy, Prize Categories, Generations, Frequencies; Excel Export (`dashboard/excel_export.py`) |
 | V13 | Biblioteca dos Artefactos — narrative artifact schema, registry and deterministic inspiration generator; official-draw registration CLI |
 
 ---
