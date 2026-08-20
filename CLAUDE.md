@@ -540,7 +540,7 @@ Suite `unittest` da stdlib (sem dependências externas — consistente com `requ
 python -m unittest discover -s tests
 ```
 
-547 testes em 23 módulos (`tests/test_*.py`), verificado no Commit 11 do Dashboard (V12.3).
+614 testes em 25 módulos (`tests/test_*.py`), verificado no Commit 14 do Dashboard (V12.3).
 
 | Ficheiro | Cobre |
 |---------|------|
@@ -567,12 +567,14 @@ python -m unittest discover -s tests
 | `test_artifact_registry.py` | `core/services/artifact_registry.py` — `load_all_artifacts()`, `ArtifactRegistry`, `build_index()`/`write_index()` |
 | `test_artifact_inspiration.py` | `core/services/artifact_inspiration.py` — `generate_inspiration()`, determinismo, segurança narrativa (nunca sugere números/estrelas/previsões) |
 | `test_dashboard_excel_export.py` | `dashboard/excel_export.py` — construção do workbook a partir de um `DashboardDataset` já feito, sem recalcular dados; determinismo semântico, `None` nunca vira `0`, dataset vazio, Economy/Prize Categories ausentes, exportação sempre em `tempfile` |
+| `test_statistical_profiles.py` | `core/services/statistical_profiles.py` — `absolute_frequency`, `relative_frequency`, `current_delay`, `parity`, `low_high`, `decade_bucket`, `key_gaps`, `repeated_values`; proteção explícita números/estrelas nunca misturados; testes contra o dataset real de 2026 |
+| `test_rolling_windows.py` | `core/services/rolling_windows.py` — `last_n_draws`/`last_n_draws_on_weekday`, seleção por data (nunca por texto `dia_semana`), ordem dada preservada, composição direta com `statistical_profiles.py`, teste contra o dataset real (últimas 5 terças) |
 
 **Filosofia:** os testes cobrem a *framework* e os serviços partilhados reais (registry, plugin_loader, council, modelos partilhados, pontuação do backtesting, pipeline histórico, Heroes/Legends, Dashboard Dataset, Dashboard Excel Export, Biblioteca dos Artefactos), não a lógica narrativa de cada facção — um refactor da arquitetura de plugins deve falhar aqui, localmente, em vez de partir silenciosamente uma facção três camadas depois. As 21 facções em `factions/*/` não têm testes dedicados; a sua "correção" é maioritariamente narrativa, não mecânica.
 
 # Serviços partilhados (`core/services/`)
 
-14 ficheiros, a maioria com lógica real e testada (não scaffold) — cresceu bastante desde V10.5/V11:
+16 ficheiros, a maioria com lógica real e testada (não scaffold) — cresceu bastante desde V10.5/V11:
 
 | Ficheiro | Estado | O que faz |
 |---|---|---|
@@ -588,6 +590,8 @@ python -m unittest discover -s tests
 | `legend_evaluation.py` | ✅ real | Legend Evaluation Engine — agregação determinística de promoções |
 | `run_manifest.py` | ✅ real | manifesto de proveniência por execução de `main.py` |
 | `dashboard_data.py` | ✅ real | Dashboard Dataset — ver secção V12.3 abaixo |
+| `statistical_profiles.py` | ✅ real | Primitivas estatísticas partilhadas (Commit 12) — `absolute_frequency`, `relative_frequency`, `current_delay`, `parity`, `low_high`, `decade_bucket`, `key_gaps`, `repeated_values`; puras, sem I/O, números/estrelas nunca misturados |
+| `rolling_windows.py` | ✅ real | Seleção de janelas temporais (Commit 13) — `last_n_draws`/`last_n_draws_on_weekday`; só seleciona/extrai, nunca calcula métricas (delega sempre a `statistical_profiles.py`); ainda sem consumidor de produção — só a sua própria suite de testes o usa |
 | `artifact_schema.py`, `artifact_registry.py`, `artifact_inspiration.py` | ✅ real | Biblioteca dos Artefactos — ver secção própria abaixo |
 
 Nenhum destes substitui ainda a lógica estatística por-facção (frequências, quentes/frios, atraso, pares/triplas) — continua duplicada em vários pontos:
@@ -601,7 +605,7 @@ Nenhum destes substitui ainda a lógica estatística por-facção (frequências,
 | Pares/triplas | `Ariadne.pairs()/triples()` vs recomputação em `factions/chaos_cartographers/constellations.py` e `markov.py`; `factions/vampires/algorithm.py` e `factions/gargoyles/algorithm.py` leem `library/indexes/*.json` diretamente em vez de usar `Ariadne` |
 | Baixos/altos, pares/ímpares | `factions/chaos_cartographers/{trends,randomness}.py`, `factions/axiomantes/profile.py` |
 
-Serviços previstos (nomes indicativos): `StatisticsService`, `DelayService`, `PairService`, `TripleService`, `EntropyService`, `TrendService`. Migração fica para depois — **não implementar já**.
+Serviços previstos (nomes indicativos): as capacidades inicialmente previstas sob os nomes indicativos `StatisticsService`/`DelayService` começaram a ser implementadas nos Commits 12-13 através de `statistical_profiles.py`/`rolling_windows.py` — esses nomes indicativos nunca chegaram a ser criados como serviços/classes concretos, e `statistical_profiles.py`/`rolling_windows.py` **não substituem** a lógica duplicada por-facção listada acima, coexistem deliberadamente com ela. `PairService`, `TripleService`, `EntropyService`, `TrendService` continuam **sem nenhuma implementação** — sem fonte de dados fresca (`library/indexes/duplas.json`/`triplas.json` obsoletos) ou sem definição canónica (entropia, tendências). Migração da lógica por-facção fica para depois — **não implementar já**.
 
 ## Known Issues / Dívida Técnica
 
@@ -658,11 +662,13 @@ Estrutura só, sem runner. `benchmarks/random/` (baseline aleatório), `benchmar
 
 ## V12.3 — Dashboard Dataset (complete)
 
-- ✅ `core/services/dashboard_data.py` — camada pura de montagem de dados (Commits 1-11, ver secção própria abaixo): Heroes, Legends, Base de Chaves, Characters, Houses, Executive Summary, Economy, Categorias de Prémios, Gerações, Frequências
+- ✅ `core/services/dashboard_data.py` — camada pura de montagem de dados (Commits 1-14, ver secção própria abaixo): Heroes, Legends, Base de Chaves, Characters, Houses, Executive Summary, Economy, Categorias de Prémios, Gerações, Frequências
 - ✅ `library/heroes/` + `library/legends/` — registries persistentes, mais `hero_evaluation.py`/`legend_evaluation.py` e os CLIs `evaluate_heroes.py`/`evaluate_legends.py`
 - ✅ Pipeline de registo de sorteios oficiais — `historical_draw_generator.py` + `register_official_draw.py` (ver secção própria abaixo)
 - ✅ `dashboard/excel_export.py` — exportação Excel do `DashboardDataset` (Commit 9, ver secção própria abaixo)
-- Ainda por fazer: nenhum script monta um `DashboardDataset` real a partir de Heroes/Legends/datasets/races ao vivo e chama o exportador; `jaccard_medio_vs_geracao_anterior` (`GenerationRow`) e `atraso_atual` (`FrequenciesRow`) ficam deliberadamente `None` até existirem os futuros serviços estatísticos partilhados — ver Próximo Passo na secção V12.3 abaixo
+- ✅ `core/services/statistical_profiles.py` + `rolling_windows.py` — primitivas estatísticas partilhadas e seleção de janelas temporais (Commits 12-13); infraestrutura pura, **não geram chaves nem são estratégia preditiva** — só reshape/contagem/seleção sobre dados já carregados
+- ✅ `FrequenciesRow.atraso_atual` preenchido via `current_delay()` (Commit 14) — `0` no sorteio mais recente, `N` sorteios atrás, `None` se nunca observado ou input vazio; exige `draw_records` cronologicamente ordenado (mais antigo → mais recente), sem validação de datas interna
+- Ainda por fazer: nenhum script monta um `DashboardDataset` real a partir de Heroes/Legends/datasets/races ao vivo e chama o exportador; `jaccard_medio_vs_geracao_anterior` (`GenerationRow`) continua `None` — sem definição canónica ainda; `fitness_medio/maximo/minimo` (`GenerationRow`) continuam `None` — estruturalmente irrecuperáveis; `rolling_windows.py` ainda sem consumidor de produção — ver Próximo Passo na secção V12.3 abaixo
 
 ## V13 — Biblioteca dos Artefactos (complete)
 
@@ -766,6 +772,29 @@ Commit 11 — Frequencies Rows
 - Achado documentado (não corrigido): frequencias_numeros.json/frequencias_estrelas.json órfãos e obsoletos; saidas_de_bolas_normalizado.json atualizado mas mistura números e estrelas sem campo "tipo" — build_frequencies_rows() ignora os três, conta direto sobre sorteios
 - 547/547 OK
 
+Commit 12 — Shared Statistical Primitives
+- core/services/statistical_profiles.py — absolute_frequency, relative_frequency, current_delay, parity, low_high, decade_bucket, key_gaps, repeated_values
+- Todas puras, sem I/O, sem random; operam sobre Sequence[int] já extraído pelo chamador — nenhuma função conhece os universos 1-50/1-12, nunca mistura números e estrelas
+- current_delay(): 0 se o valor está no elemento mais recente, N sorteios atrás, None se nunca aparece (incl. sequência vazia) — semântica canónica decidida explicitamente (não len(occurrences) como limite inferior)
+- key_gaps() generaliza combinations.gaps() (hardcoded a 5 valores) para qualquer tamanho, incl. estrelas (2)
+- Não substitui nenhuma lógica existente em facções/Ariadne/core/evolution — coexistem deliberadamente
+- 588/588 OK
+
+Commit 13 — Rolling Window Selection
+- core/services/rolling_windows.py — RollingWindow (dataclass), last_n_draws(), last_n_draws_on_weekday()
+- Só seleciona/extrai sorteios — nunca calcula métricas; quem consome uma RollingWindow chama statistical_profiles.py diretamente sobre numero_occurrences/estrela_occurrences
+- Terça/sexta determinadas exclusivamente por date.fromisoformat(draw["data"]).weekday() (TUESDAY=1, FRIDAY=4) — nunca pelo campo de texto dia_semana; verificado ao vivo contra o dataset real (0 mismatches, mas a robustez vem de nunca depender do texto)
+- Confia inteiramente na ordem dada pelo chamador — nunca reordena, nunca valida datas
+- n <= 0 ou input vazio -> janela vazia; menos sorteios que requested_size é permitido e fica visível via actual_size; weekday fora de 0-6 -> ValueError
+- 608/608 OK
+
+Commit 14 — Frequencies Delay
+- build_frequencies_rows() (dashboard_data.py) passa a preencher atraso_atual via current_delay() do Commit 12 — primeira vez que dashboard_data.py importa de statistical_profiles.py
+- frequencia_absoluta/frequencia_relativa mantidas exatamente como estavam (Counter manual, sem refactor) — o diff funcional é atribuível só a atraso_atual
+- Mudança de contrato documentada: draw_records tem agora de estar cronologicamente ordenado para atraso_atual ser correto; frequencia_absoluta/relativa continuam order-agnostic
+- jaccard_medio_vs_geracao_anterior (GenerationRow) continua None — Commits 12/13 não definiram Jaccard, decisão inalterada
+- 614/614 OK
+
 ## Decisões Arquiteturais
 
 - dashboard_data.py é exclusivamente uma camada de transformação.
@@ -784,7 +813,8 @@ Commit 11 — Frequencies Rows
 - A normalização continua privada dentro de dashboard_data.py até existir necessidade real de extração.
 - dashboard/excel_export.py só lê o DashboardDataset já construído — nunca Heroes/Legends/datasets/registries diretamente; só toca em disco em export_to_excel(), nunca em build_workbook().
 - build_generations_rows()/build_frequencies_rows() seguem a mesma disciplina de build_key_base_rows: o âmbito (que execução, que sorteios) é sempre decidido pelo chamador, nunca inferido nem reconstruído a partir de registos legacy sem run_id.
-- Campos sem fonte real honesta ficam sempre None, nunca recalculados com o estado atual do projeto: fitness_medio/maximo/minimo (GenerationRow) e atraso_atual (FrequenciesRow).
+- Campos sem fonte real honesta ficam sempre None, nunca recalculados com o estado atual do projeto: fitness_medio/maximo/minimo e jaccard_medio_vs_geracao_anterior (GenerationRow). atraso_atual (FrequenciesRow) deixou de estar nesta lista desde o Commit 14 — tem fonte honesta (current_delay() sobre draw_records já ordenado pelo chamador).
+- statistical_profiles.py/rolling_windows.py: primitivas puras, sem I/O, sem random, sem leitura de library/indexes/ — nunca conhecem os universos 1-50/1-12 nem misturam números/estrelas; ordem temporal é sempre responsabilidade do chamador, nunca validada internamente.
 
 ## Fluxo de Trabalho
 
@@ -798,10 +828,11 @@ Commit 11 — Frequencies Rows
 
 ## Próximo Passo
 
-Commits 1–11 concluídos — Dashboard Dataset cobre Heroes, Legends, Base de Chaves, Characters, Houses, Executive Summary, Economy, Categorias de Prémios, Gerações e Frequências; exportação Excel (`dashboard/excel_export.py`) implementada e validada contra o DashboardDataset real do projeto (547/547 OK). Sem objetivo de Commit 12 definido ainda; candidatos em aberto (ver também Roadmap):
+Commits 1–14 concluídos — Dashboard Dataset completo (incl. atraso_atual real), Excel Export, e a primeira camada de serviços estatísticos partilhados (statistical_profiles.py, rolling_windows.py), 614/614 OK. Sem objetivo de Commit 15 definido ainda; candidatos em aberto (ver também Roadmap):
 
+- Definição estatística canónica de `jaccard_medio_vs_geracao_anterior` (`GenerationRow`) — ainda por decidir; `atraso_atual` já resolvido no Commit 14.
+- `rolling_windows.py` ainda sem nenhum consumidor de produção — nada em `DashboardDataset` tem hoje um campo "janelado" para preencher.
 - CLI/script de wiring que monta um `DashboardDataset` real a partir de Heroes/Legends/datasets/races/economy/prize categories ao vivo e chama `export_to_excel()` — hoje só a suite de testes e uma validação manual ad-hoc constroem um dataset real; não há nenhum ponto de entrada do projeto que o faça.
-- Definição estatística canónica de `jaccard_medio_vs_geracao_anterior` (`GenerationRow`) e de `atraso_atual` (`FrequenciesRow`) — deliberadamente adiada para os futuros serviços estatísticos partilhados (`StatisticsService`/`DelayService`, ver 'Serviços previstos').
 - Categorias de prémio detalhadas por linha (breakdown dos 13 escalões por sorteio — hoje só agregado por categoria) — candidato natural de âmbito único.
 - Folha "Generations"/"Frequencies" no Excel Export — `dataset.generations`/`dataset.frequencies` já podem ter dados reais desde os Commits 10/11, mas `excel_export.py` ainda só cobre as 8 folhas do Commit 9.
 

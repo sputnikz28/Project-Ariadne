@@ -50,9 +50,11 @@ A quick map of what actually exists in this repository today, kept separate from
 
 **✅ Dashboard Excel Export** — `dashboard/excel_export.py` turns an already-built `DashboardDataset` into a `.xlsx` workbook (Executive Summary, Heroes, Legends, Characters, Houses, Key Base, Economy, Prize Categories). Tested, including against the project's real data. No CLI or script wires this to live data yet — see [Dashboard Dataset](#dashboard-dataset) below.
 
+**✅ Shared Statistical Primitives & Rolling Windows** — `core/services/statistical_profiles.py` (frequency, delay, parity, low/high, decade buckets, key gaps, repeated values) and `core/services/rolling_windows.py` (last-N-draws / last-N-Tuesdays-or-Fridays selection). Pure infrastructure — **not a prediction strategy, does not generate keys**, just reshaping/counting/selecting over data the caller already loaded.
+
 **✅ Biblioteca dos Artefactos (Artifact Library)** — `core/services/artifact_schema.py`, `artifact_registry.py` and `artifact_inspiration.py`; 15 founding narrative artifacts, every one verified to have zero effect on algorithms, results or probabilities (see [The Artifact Library](#the-artifact-library-biblioteca-dos-artefactos) below).
 
-**✅ Testing** — 547 tests across 23 modules (`python -m unittest discover -s tests`).
+**✅ Testing** — 614 tests across 25 modules (`python -m unittest discover -s tests`).
 
 ---
 
@@ -266,7 +268,7 @@ library/
 
 **Economy and Prize Categories are real, not synthetic.** The official 2026 dataset only has complete financial/prize-category data for 15 of its 61 draws — confirmed via the dataset's own `qualidade_dados` flags, never inferred from whether a value happens to be non-null. Every sum, mean, minimum and maximum in `EconomySummary`/`PrizeCategorySummary` is computed only over the draws that actually have that field; a field with zero real observations resolves to `None`, never an invented `0` or an estimate. `PrizeCategoryRow` always emits exactly 13 rows per draw — the fixed, official Euromillions prize-tier table, a game rule rather than a per-draw fact — with only the observed winner counts ever `None`.
 
-`GenerationRow.fitness_medio`/`fitness_maximo`/`fitness_minimo` are always `None` — the real prediction archive never persisted a per-individual score, so there is nothing honest to compute. `GenerationRow.jaccard_medio_vs_geracao_anterior` and `FrequenciesRow.atraso_atual` are also always `None` for now — deliberately deferred until the project has shared statistical services to define them once, consistently. Both builders take data the caller already scoped (which execution, which draws) — neither decides that on its own.
+`GenerationRow.fitness_medio`/`fitness_maximo`/`fitness_minimo` are always `None` — the real prediction archive never persisted a per-individual score, so there is nothing honest to compute. `GenerationRow.jaccard_medio_vs_geracao_anterior` is also still always `None` — deliberately deferred until the project defines a canonical similarity metric. `FrequenciesRow.atraso_atual` **is now computed** (0 in the most recent draw, N draws ago, `None` if never observed) via `current_delay()` from `core/services/statistical_profiles.py` — this requires `draw_records` to be chronologically ordered (oldest → newest); frequency fields remain order-independent. Both builders take data the caller already scoped (which execution, which draws) — neither decides that on its own.
 
 ### Excel Export
 
@@ -319,6 +321,8 @@ Project-Ariadne/
 │       ├── hero_evaluation.py, legend_evaluation.py  ← deterministic Hero/Legend classification
 │       ├── run_manifest.py                     ← per-run provenance manifest
 │       ├── dashboard_data.py                   ← Dashboard Dataset (see above)
+│       ├── statistical_profiles.py             ← shared statistical primitives (frequency, delay, parity...)
+│       ├── rolling_windows.py                  ← last-N-draws / last-N-weekday window selection
 │       └── artifact_schema.py, artifact_registry.py,
 │           artifact_inspiration.py             ← Biblioteca dos Artefactos (see above)
 ├── council/                     ← Grand Council filter + vote
@@ -530,7 +534,7 @@ layers away. Faction-specific narrative logic (the 21 `factions/*/`
 strategies) is not under test — it doesn't affect framework stability
 and its "correctness" is largely narrative, not mechanical.
 
-**Current suite:** 547 tests across 23 modules, also covering the
+**Current suite:** 614 tests across 25 modules, also covering the
 historical dataset pipeline, Hero/Legend evaluation, the Dashboard
 Dataset layer, the Dashboard Excel Export and the Artifact Library —
 each with dedicated tests against real, on-disk data
@@ -568,11 +572,17 @@ exists.
   have real builders now but no sheet of their own yet.
 - **New factions** — Juízes do Conselho, Geómetras do Véu, Estatísticos
   Imperiais (named in project planning, not yet implemented).
-- **Shared statistical services** — `StatisticsService`, `DelayService`,
-  `PairService`, `TripleService`, `EntropyService`, `TrendService`, to
-  eventually replace frequency/overdue/gap logic currently duplicated
-  across `core/evolution/statistics.py`, `factions/chaos_cartographers/*.py`
-  and `factions/axiomantes/profile.py`.
+- **`PairService`/`TripleService`/`EntropyService`/`TrendService`** —
+  the capabilities originally sketched under the indicative names
+  `StatisticsService`/`DelayService` began being implemented in
+  Commits 12-13 as `core/services/statistical_profiles.py`/
+  `rolling_windows.py`; those indicative names were never created as
+  concrete services/classes themselves. The other four indicative names
+  remain fully unimplemented (no fresh pair/triple data source, no
+  entropy or trend definition yet), and none of the six replace the
+  duplicated per-faction frequency/overdue/gap logic in
+  `core/evolution/statistics.py`, `factions/chaos_cartographers/*.py`
+  and `factions/axiomantes/profile.py` — that migration is still not started.
 - **`ctx['rng']` retrofit** — deciding whether every faction should use
   the shared, seedable `ctx['rng']` (today only the Pantheon, Skeletons
   and Chronomancers do; Clerics deliberately kept the global `random`
@@ -612,7 +622,7 @@ Se preferires ler em português → [LEIA-ME.md](LEIA-ME.md)
 | V10 | Mystics — 8 new orders (lore + plugin scaffolding: Druids, Moon Priests, Star Gazers, Shamans, Witches, Seers, Oracles, Bone Readers), always abstain by design |
 | V10.5 | Architecture complete — `races/` fully lore-only, first real shared services (`combinations.py`, `fitness.py`) |
 | V11 | Clerics migrated into the plugin architecture (`races/legacy.py` retired) — 21 voting factions total |
-| V12.3 | Dashboard Dataset — Heroes, Legends, Base de Chaves, Characters, Houses, Executive Summary, Economy, Prize Categories, Generations, Frequencies; Excel Export (`dashboard/excel_export.py`) |
+| V12.3 | Dashboard Dataset — Heroes, Legends, Base de Chaves, Characters, Houses, Executive Summary, Economy, Prize Categories, Generations, Frequencies (incl. real `atraso_atual`); Excel Export (`dashboard/excel_export.py`); Shared Statistical Primitives + Rolling Window Selection (`statistical_profiles.py`, `rolling_windows.py`) |
 | V13 | Biblioteca dos Artefactos — narrative artifact schema, registry and deterministic inspiration generator; official-draw registration CLI |
 
 ---
