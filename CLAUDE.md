@@ -31,7 +31,7 @@ Biblioteca de conhecimento.
 
 | Facção | Módulo | Estratégia |
 |--------|--------|-----------|
-| Clérigos | `factions/clerics/algorithm.py` + `archetypes.py` | Algoritmo genético, 14 gerações, 8 arquétipos ancestrais (V11) |
+| Clérigos | `factions/clerics/algorithm.py` + `archetypes.py` | Algoritmo genético, 14 gerações, 9 arquétipos ancestrais (V11; Minotauro — persistência de chave — adicionado no Commit 19) |
 | Melforks | `factions/melforks/algorithm.py` | Algoritmo genético especializado |
 | Anões | `factions/dwarves/algorithm.py` | Combinatória por clãs (3 × 15 chaves) |
 | Fadas | `factions/faeries/algorithm.py` | Ponderação por números quotidianos |
@@ -384,7 +384,7 @@ dashboard/ (Excel export implemented; no CLI/wiring yet)
 
 | Faction | Algorithm | Race |
 |---|---|---|
-| Clerics | Genetic Algorithm — `factions/clerics/algorithm.py` (engine) + `archetypes.py` (8-lineage dispatcher) (V11) | Clerics (`races/clerics/`) |
+| Clerics | Genetic Algorithm — `factions/clerics/algorithm.py` (engine) + `archetypes.py` (9-lineage dispatcher; Minotauro's key-persistence lineage added Commit 19) (V11) | Clerics (`races/clerics/`) |
 | Dwarves | Mountain-forge combinatorics (`factions/dwarves/algorithm.py`) | Dwarves (`races/dwarves/`) |
 | Werewolves | Monte Carlo (`factions/werewolves/algorithm.py`) | Werewolves (`races/werewolves/`) |
 | Vampires | Triple frequencies (`factions/vampires/algorithm.py`, `council.py`) | Vampires (`races/vampires/`) |
@@ -477,7 +477,8 @@ for faction in registry.all():
 factions/
     axiomantes/           ✅ V8.1 + manifest.json
     chaos_cartographers/  ✅ V8   manifest.json (votes: false) — analítico
-    clerics/              ✅ V11  algorithm.py (genetic engine) + archetypes.py (8 lineages) — the oldest
+    clerics/              ✅ V11  algorithm.py (genetic engine) + archetypes.py (9 lineages, incl.
+                                   Minotauro's key-persistence lineage, Commit 19) — the oldest
                                    methodology, migrated from races/legacy.py + core/evolution/genetic.py
     chronomancers/        ✅ V11  algorithm.py (temporal key) + representatives.py (Aion, Pantheon)
     dwarves/              ✅ V11  algorithm.py (self-contained; races/ tree is lore-only)
@@ -540,7 +541,7 @@ Suite `unittest` da stdlib (sem dependências externas — consistente com `requ
 python -m unittest discover -s tests
 ```
 
-614 testes em 25 módulos (`tests/test_*.py`), verificado no Commit 14 do Dashboard (V12.3).
+729 testes em 30 módulos (`tests/test_*.py`), verificado no Commit 19 (Minotauros).
 
 | Ficheiro | Cobre |
 |---------|------|
@@ -569,6 +570,11 @@ python -m unittest discover -s tests
 | `test_dashboard_excel_export.py` | `dashboard/excel_export.py` — construção do workbook a partir de um `DashboardDataset` já feito, sem recalcular dados; determinismo semântico, `None` nunca vira `0`, dataset vazio, Economy/Prize Categories ausentes, exportação sempre em `tempfile` |
 | `test_statistical_profiles.py` | `core/services/statistical_profiles.py` — `absolute_frequency`, `relative_frequency`, `current_delay`, `parity`, `low_high`, `decade_bucket`, `key_gaps`, `repeated_values`; proteção explícita números/estrelas nunca misturados; testes contra o dataset real de 2026 |
 | `test_rolling_windows.py` | `core/services/rolling_windows.py` — `last_n_draws`/`last_n_draws_on_weekday`, seleção por data (nunca por texto `dia_semana`), ordem dada preservada, composição direta com `statistical_profiles.py`, teste contra o dataset real (últimas 5 terças) |
+| `test_statistical_window_profile.py` | `core/services/statistical_window_profile.py` — composição pura de `statistical_profiles.py`/`rolling_windows.py` sobre uma `RollingWindow`; padding de universo completo, alinhamento `*_by_draw`, ausência de Jaccard/hot-cold |
+| `test_candidate_provenance.py` | `core/services/candidate_provenance.py` — `normalize_candidate_record()`/`CandidateKey` contra os 18 `origem` reais de `arquivo_destino.json` (fixtures sintéticas + registos reais do arquivo), `ValueError` em origem desconhecida, exclusão de campos canónicos de `metadata` |
+| `test_candidate_evaluation.py` | `core/services/candidate_evaluation.py` — `evaluate_candidate`/`evaluate_candidates`, todas as 18 categorias `n+e`, números/estrelas nunca misturados, sem influência de `[HEROIS]`, alvos sempre sintéticos (nunca um sorteio real hardcoded) |
+| `test_candidate_performance.py` | `core/services/candidate_performance.py` — `summarize_candidate_performance()`, diversidade por `frozenset` (chave completa vs. conjunto de números), as 18 categorias sempre presentes, ausência de `best_category`/agrupamentos nativos |
+| `test_minotauros.py` | `factions/clerics/archetypes.py` (persistência via `h.keys[-1]`, nascimento fundador, ausência de `aplicar_conhecimento()`) e `factions/clerics/algorithm.py` (herança `chave_herdada` no ciclo de reprodução, precedência p1/p2, sem aliasing mutável) — ver secção própria abaixo |
 
 **Filosofia:** os testes cobrem a *framework* e os serviços partilhados reais (registry, plugin_loader, council, modelos partilhados, pontuação do backtesting, pipeline histórico, Heroes/Legends, Dashboard Dataset, Dashboard Excel Export, Biblioteca dos Artefactos), não a lógica narrativa de cada facção — um refactor da arquitetura de plugins deve falhar aqui, localmente, em vez de partir silenciosamente uma facção três camadas depois. As 21 facções em `factions/*/` não têm testes dedicados; a sua "correção" é maioritariamente narrativa, não mecânica.
 
@@ -592,6 +598,10 @@ python -m unittest discover -s tests
 | `dashboard_data.py` | ✅ real | Dashboard Dataset — ver secção V12.3 abaixo |
 | `statistical_profiles.py` | ✅ real | Primitivas estatísticas partilhadas (Commit 12) — `absolute_frequency`, `relative_frequency`, `current_delay`, `parity`, `low_high`, `decade_bucket`, `key_gaps`, `repeated_values`; puras, sem I/O, números/estrelas nunca misturados |
 | `rolling_windows.py` | ✅ real | Seleção de janelas temporais (Commit 13) — `last_n_draws`/`last_n_draws_on_weekday`; só seleciona/extrai, nunca calcula métricas (delega sempre a `statistical_profiles.py`); ainda sem consumidor de produção — só a sua própria suite de testes o usa |
+| `statistical_window_profile.py` | ✅ real | `StatisticalWindowProfile`/`build_statistical_window_profile()` (Commit 15) — compõe `statistical_profiles.py` + `rolling_windows.py` sobre uma única `RollingWindow`; zero fórmulas novas, sem Jaccard/hot-cold (deliberadamente fora de âmbito) |
+| `candidate_provenance.py` | ✅ real | `CandidateKey`/`normalize_candidate_record()` (Commit 16) — normaliza registos já persistidos em `arquivo_destino.json` para uma taxonomia fechada de `SourceType` (18 `origem` reais); nunca gera, avalia ou pontua um candidato |
+| `candidate_evaluation.py` | ✅ real | `CandidateEvaluation`/`evaluate_candidate()`/`evaluate_candidates()` (Commit 17) — mede um `CandidateKey` contra um alvo explicitamente fornecido pelo chamador; puramente retrospetivo, sem noção de "concurso"/data, ver Fronteira Temporal abaixo |
+| `candidate_performance.py` | ✅ real | `CandidatePerformanceSummary`/`summarize_candidate_performance()` (Commit 18) — agregação pura de pares `(CandidateKey, CandidateEvaluation)` já produzidos; sem agrupamento nativo por origem/raça/geração (decisão deliberada, ver secção própria) |
 | `artifact_schema.py`, `artifact_registry.py`, `artifact_inspiration.py` | ✅ real | Biblioteca dos Artefactos — ver secção própria abaixo |
 
 Nenhum destes substitui ainda a lógica estatística por-facção (frequências, quentes/frios, atraso, pares/triplas) — continua duplicada em vários pontos:
@@ -605,7 +615,7 @@ Nenhum destes substitui ainda a lógica estatística por-facção (frequências,
 | Pares/triplas | `Ariadne.pairs()/triples()` vs recomputação em `factions/chaos_cartographers/constellations.py` e `markov.py`; `factions/vampires/algorithm.py` e `factions/gargoyles/algorithm.py` leem `library/indexes/*.json` diretamente em vez de usar `Ariadne` |
 | Baixos/altos, pares/ímpares | `factions/chaos_cartographers/{trends,randomness}.py`, `factions/axiomantes/profile.py` |
 
-Serviços previstos (nomes indicativos): as capacidades inicialmente previstas sob os nomes indicativos `StatisticsService`/`DelayService` começaram a ser implementadas nos Commits 12-13 através de `statistical_profiles.py`/`rolling_windows.py` — esses nomes indicativos nunca chegaram a ser criados como serviços/classes concretos, e `statistical_profiles.py`/`rolling_windows.py` **não substituem** a lógica duplicada por-facção listada acima, coexistem deliberadamente com ela. `PairService`, `TripleService`, `EntropyService`, `TrendService` continuam **sem nenhuma implementação** — sem fonte de dados fresca (`library/indexes/duplas.json`/`triplas.json` obsoletos) ou sem definição canónica (entropia, tendências). Migração da lógica por-facção fica para depois — **não implementar já**.
+Serviços previstos (nomes indicativos): as capacidades inicialmente previstas sob os nomes indicativos `StatisticsService`/`DelayService` começaram a ser implementadas nos Commits 12-13 através de `statistical_profiles.py`/`rolling_windows.py` — esses nomes indicativos nunca chegaram a ser criados como serviços/classes concretos, e `statistical_profiles.py`/`rolling_windows.py` **não substituem** a lógica duplicada por-facção listada acima, coexistem deliberadamente com ela. O Commit 15 (`statistical_window_profile.py`) compôs estas duas primitivas numa única `StatisticalWindowProfile` por janela — continua sem substituir a duplicação por-facção nem introduzir fórmulas novas (Jaccard/hot-cold ficam deliberadamente fora). `PairService`, `TripleService`, `EntropyService`, `TrendService` continuam **sem nenhuma implementação** — sem fonte de dados fresca (`library/indexes/duplas.json`/`triplas.json` obsoletos) ou sem definição canónica (entropia, tendências). Migração da lógica por-facção fica para depois — **não implementar já**.
 
 ## Known Issues / Dívida Técnica
 
@@ -675,6 +685,16 @@ Estrutura só, sem runner. `benchmarks/random/` (baseline aleatório), `benchmar
 - ✅ `core/services/artifact_schema.py` + `artifact_registry.py` + `artifact_inspiration.py` — ver secção própria abaixo
 - ✅ 15 artefactos narrativos fundadores em `library/artifacts/entries/`, todos com `altera_algoritmo`/`altera_resultados`/`altera_probabilidades` explicitamente `false`
 - ✅ `library/artifacts/LIVRO_DOS_ARTEFACTOS.json` — índice sempre derivado de `entries/`, nunca fonte de verdade
+
+## Commits 15–19 — Camada de Proveniência/Avaliação/Desempenho de Candidatos & Minotauros (complete)
+
+- ✅ `core/services/statistical_window_profile.py` — `StatisticalWindowProfile` (Commit 15), composição pura de `statistical_profiles.py`/`rolling_windows.py`
+- ✅ `core/services/candidate_provenance.py` — `CandidateKey`/`normalize_candidate_record()` (Commit 16), taxonomia fechada dos 18 `origem` reais
+- ✅ `core/services/candidate_evaluation.py` — `evaluate_candidate`/`evaluate_candidates` (Commit 17), estritamente retrospetivo — ver Fronteira Temporal abaixo
+- ✅ `core/services/candidate_performance.py` — `summarize_candidate_performance()` (Commit 18), agregação pura sem agrupamento nativo
+- ✅ Minotauro — nova raça de Clérigos com persistência de chave (Commit 19, `77b69b9`) — ver secção própria abaixo
+- Nenhum destes substitui a lógica per-facção duplicada listada na tabela "Duplicação encontrada"; `candidate_evaluation.py`/`candidate_performance.py` não têm ainda nenhum consumidor de produção — só as suas próprias suites de teste os usam
+- Ver secção "Camada de Proveniência, Avaliação e Desempenho de Candidatos (Commits 15–19)" no final deste documento para o detalhe completo, incluindo a Fronteira Temporal e a especificação do Minotauro
 
 # Dependências opcionais
 
@@ -901,3 +921,74 @@ Coleção puramente narrativa e cerimonial em `library/artifacts/`, distinta do 
 ## Testes
 
 `tests/test_historical_astronomy.py` (8), `tests/test_historical_dataset.py` (23), `tests/test_historical_scroll.py` (5), `tests/test_historical_statistics.py` (12), `tests/test_historical_draw_generator.py` (30), `tests/test_register_official_draw.py` (16).
+
+---
+
+# Camada de Proveniência, Avaliação e Desempenho de Candidatos (Commits 15–19)
+
+Cinco commits sequenciais, distintos do Dashboard Dataset (V12.3) e da Biblioteca dos Artefactos (V13) — não pertencem a nenhuma das duas iniciativas, por isso ficam documentados nesta secção própria. Nenhum introduz uma nova versão formal do projeto (ver "VERSION desalinhado" em Known Issues — deliberadamente não agravado aqui com mais um número de versão inventado).
+
+## Commit 15 — Statistical Window Profiles
+
+`core/services/statistical_window_profile.py` — `StatisticalWindowProfile` (dataclass frozen, 14 campos, `Mapping` sempre `MappingProxyType`) + `build_statistical_window_profile(window)`. Compõe exclusivamente `statistical_profiles.py` (Commit 12) e `rolling_windows.py` (Commit 13) sobre uma única `RollingWindow` já selecionada pelo chamador — zero fórmulas novas, zero I/O, zero random. Jaccard e classificação hot/cold ficam deliberadamente fora de âmbito (sem definição canónica ainda). `numero_delays`/`estrela_delays` são sempre relativos à janela em causa ("0" = apareceu no sorteio mais recente *da janela*), nunca ao histórico completo do projeto — uma noção diferente e não relacionada com `atraso_atual` (`dashboard_data.py`, Commit 14).
+
+## Commit 16 — Candidate Provenance Inventory
+
+`core/services/candidate_provenance.py` — `CandidateKey` (frozen) + `normalize_candidate_record(record)`. Normaliza um registo já persistido em `arquivo_destino.json` para uma taxonomia fechada de `SourceType` (`Literal["evolutionary_individual", "external_generator", "aggregator", "transformer", "configured_candidate"]`), cobrindo os 18 valores reais de `origem` confirmados contra o arquivo real durante a auditoria do Commit 16:
+
+| `source_type` | `origem` |
+|---|---|
+| `evolutionary_individual` | `racas_antigas` (Clérigos — único com `generation`/`entity_id`/`race` reais) |
+| `external_generator` | `cla_anao`, `fada`, `melfork`, `treefolk`, `cronomante`, `esqueleto`, `vampiro`, `gargula`, `kors_elarion`, `axiomantes_nemerion`, `esquadrao_negro`, `ser_superior` |
+| `aggregator` | `chave_conselho`, `deus` |
+| `transformer` | `corrupcao_final`, `necromancia_estatistica` |
+| `configured_candidate` | `ritual_celeste` |
+
+Um `origem` fora desta tabela levanta `ValueError` — nunca é adivinhado. `metadata` nunca contém um campo canónico (`origem`/`numeros`/`estrelas`/`geracao`/`id`/`nome`/`classe`), mesmo quando esse campo não é promovido a atributo próprio — nomeadamente `classe` nunca aparece em `metadata` para nenhum `source_type`, mesmo fora de `racas_antigas`. Não existe `candidate_id`/`derived_from` — nenhuma fonte no arquivo real fornece honestamente um id estável ou uma ligação persistida a um progenitor (`registo_externo()` não tem parâmetro `id` próprio).
+
+**Achado relevante para o Commit 19**: `necromancia_estatistica` já é o mecanismo de ressurreição de Lendas do próprio `main.py` (`eco_ressuscitado`, casa "Ritual Negro", campos `corrupcao`/`ressuscitado_por`) — classificado `transformer`. Qualquer conceito futuro de "Necromante" tem de ser auditado contra isto primeiro (ver Roadmap desta secção).
+
+## Commit 17 — Candidate Evaluation (e a fronteira temporal obrigatória)
+
+`core/services/candidate_evaluation.py` — `CandidateEvaluation` (frozen) + `evaluate_candidate(candidate, target_numeros, target_estrelas)` + `evaluate_candidates(...)`. Mede um `CandidateKey` já produzido contra um alvo explicitamente fornecido pelo chamador — `category` é `f"{matched_number_count}+{matched_star_count}"`, todas as 18 combinações de "0+0" a "5+2" são resultados válidos e não gated por `[HEROIS].categorias` (essa config pertence exclusivamente ao Hero Evaluation Engine, `core/services/hero_evaluation.py` — não é lida aqui). Duplica deliberadamente, em 3 linhas, a mesma interseção que `hero_evaluation.py:matched_values()`/`category_for()` já calculam — reutilizar essas funções obrigaria a arrastar concerns exclusivos de Heroes (config `[HEROIS]`, hashing de deduplicação, proveniência temporal) para um avaliador que tem de continuar agnóstico de domínio.
+
+### Fronteira temporal (regra vinculativa)
+
+```
+histórico até X-1 → treino/evolução/geração → candidatos congelados → revelar resultado X → CandidateEvaluation → CandidatePerformanceSummary
+```
+
+`candidate_evaluation.py` e `candidate_performance.py` **não têm nenhuma noção de "concurso"/sorteio/data** — nunca leem um dataset, nunca sabem que dia é hoje, nunca podem "olhar para a frente": o alvo é sempre e apenas o que o chamador já resolveu e passou explicitamente. Isto é o que torna estruturalmente impossível o look-ahead aqui — ao contrário de `hero_evaluation.py:classify_temporal_provenance()`, que continua a ser o único sítio do projeto que decide se uma previsão podia honestamente ter existido antes do sorteio-alvo (`verified`/`legacy`/`ineligible`/`unresolved`). Estes dois módulos **nunca influenciam geração, fitness, o Conselho ou a seleção de uma chave** — são estritamente retrospetivos/experimentais, chamados sempre depois de os candidatos já estarem congelados.
+
+## Commit 18 — Candidate Performance Analysis
+
+`core/services/candidate_performance.py` — `CandidatePerformanceSummary` (frozen) + `summarize_candidate_performance(candidates, evaluations, relevant_categories)`. Agregação pura sobre pares `(CandidateKey, CandidateEvaluation)` já produzidos e emparelhados por posição — levanta `ValueError` em comprimentos diferentes. Diversidade calculada internamente via `frozenset(numeros)`/`frozenset(estrelas)` (deduplicação, nunca reordena os `CandidateKey` expostos). `category_counts` cobre sempre as 18 categorias fixas (`_ALL_CATEGORIES`), mesmo as não observadas (ficam a 0) — nunca lido de `[HEROIS]`. `relevant_categories` não tem default nem é lido de configuração — o chamador decide sempre, explicitamente, o que conta como "relevante". Deliberadamente **sem** `best_category` (não existe uma ordenação canónica de categorias no projeto — `config.txt [HEROIS_TIERS]` prova isso: `3+0`/`3+1`/`2+2` partilham `TIER_4`, `4+0`/`3+2` partilham `TIER_3`) e **sem** agrupamento nativo por `source_name`/`source_type`/`race`/`generation` — o chamador filtra os pares zipados e chama a função uma vez por grupo, evitando que este módulo tenha de decidir o que significa `generation=None`/`race=None`, ou confundir o Cronomante-raça-evolutiva com o `cronomante`-`origem`-externa (a mesma ambiguidade que motivou este desenho já aparece de forma real em `RACAS`, ver Commit 19 abaixo).
+
+## Commit 19 — Minotauros V1 (`77b69b9`)
+
+Nova raça dos Clérigos (`RACAS` em `factions/clerics/algorithm.py`, agora com 9 entradas) representando **persistência de chave**, em contraste deliberado com todas as outras linhagens (exploratórias/convergentes). Regras V1:
+
+- **Não é uma nova facção/plugin** — é uma raça dentro da população evolutiva já existente dos Clérigos. Não regista `manifest.json`, não é descoberta por `FactionRegistry`, **não acrescenta um voto/facção ao Conselho**. O Conselho continua a ver os finalistas de Clérigos exatamente como já via.
+- **Sobreviventes mantêm exatamente a última chave** — `archetypes.py:generate()`, ramo `if raca == "Minotauro"`: se `h.keys` já tem entradas, devolve `h.keys[-1]` (números e estrelas), sempre como cópias novas (`list(...)`) — gerações consecutivas nunca partilham o mesmo objeto lista, apesar de terem os mesmos valores.
+- **Descendentes Minotauro podem herdar a chave de um progenitor Minotauro** — a herança acontece no ciclo de reprodução (`execute()` em `algorithm.py`), não em `generate()`: quando o filho nasce Minotauro, o código lê `p1.keys[-1]`/`p2.keys[-1]` do progenitor Minotauro elegível e guarda a chave em `f.genoma["chave_herdada"]`.
+- **Se ambos os progenitores forem Minotauro elegíveis, p1 tem precedência determinística** — `if p1_raca == "Minotauro" and p1.keys: ... elif p2_raca == "Minotauro" and p2.keys: ...`, sem nenhum `random.choice()` adicional para decidir entre os dois.
+- **Filhos não-Minotauro nunca herdam a chave** — o bloco de herança só corre quando `f.raca == "Minotauro"`, mesmo que um dos progenitores seja Minotauro.
+- **Fundadores sem chave herdada geram chave própria** — `random.sample(range(1,51),5)` + `random.sample(range(1,13),2)` + `normalize_candidate()`, o mesmo padrão já usado por outras raças (ex. Goblin).
+- **Números e estrelas são sempre preservados juntos** — a chave (numeros + estrelas) persiste/herda como uma unidade, nunca parcialmente.
+- **A herança evita aliasing mutável** — `f.genoma["chave_herdada"] = (tuple(origem_chave["numeros"]), tuple(origem_chave["estrelas"]))` em `algorithm.py` (cópia imutável no momento da reprodução); `generate()` devolve sempre `list(...)` a partir daí (nunca a mesma lista/tupla armazenada).
+- **Minotauros nunca passam por `aplicar_conhecimento()`** — nem no ramo de persistência, nem no ramo de herança fundadora; só o ramo "fundador sem herança" usa `normalize_candidate()` (não `aplicar_conhecimento()`) — conhecimento oculto de artefactos nunca altera a chave de um Minotauro, em nenhum dos três caminhos.
+- **Provenance inalterado** — continua `origem="racas_antigas"` → `source_type="evolutionary_individual"` em `normalize_candidate_record()`; `classe="Minotauro"` mapeia para `race="Minotauro"` como qualquer outra raça de Clérigos. Zero alterações a `candidate_provenance.py`.
+- **Fitness/eliminação/config inalterados** — `avaliar()` não foi tocado; Minotauros competem, morrem e ressuscitam pelas mesmas regras (`CAMINHO_1000_ALMAS`) que qualquer outra raça; não existe secção `[MINOTAUROS]` em `config.txt` — zero configuração nova.
+- **Diversidade nominal, sem efeito algorítmico**: `NAMES` (10→26) e `TITULOS` (6→22) foram ampliados no mesmo commit para dar mais variedade a *todas* as raças (não só Minotauro) — mesmo mecanismo de `create()`, sem novas chamadas `random.*`, sem regras por raça. Isto muda os nomes/títulos concretos produzidos com uma seed fixa em relação a versões anteriores (esperado — o requisito de determinismo é só "mesma versão + mesma seed → mesmo resultado", nunca reprodutibilidade entre versões).
+
+`tests/test_minotauros.py` (20 testes): persistência entre gerações (números+estrelas, tipos `list`, sem partilha de objeto), nascimento fundador (com e sem `chave_herdada`, determinismo com seed fixa), ausência comprovada de `aplicar_conhecimento()` nos três caminhos, proveniência (`race="Minotauro"`), ausência de qualquer import de `candidate_evaluation`/`candidate_performance` em `algorithm.py`/`archetypes.py`, e os 6 cenários de reprodução/herança (p1 herda, só-p2 herda, precedência p1 com ambos elegíveis, filho não-Minotauro não herda, Minotauro sem progenitor Minotauro não herda, cópia sem aliasing mutável).
+
+## Ideias futuras / não implementadas (ver também Roadmap principal)
+
+Nada nesta lista existe hoje como código, especificação fechada ou funcionalidade — são apenas nomes/conceitos registados para decisão futura:
+
+- **Backtest Experiment Lab** — um pipeline orquestrado pelo chamador que ligaria `historical_dataset`/`rolling_windows`/`candidate_provenance`/`candidate_evaluation`/`candidate_performance` ao longo de muitos sorteios; hoje cada peça só é exercida isoladamente pela sua própria suite de testes.
+- **Zombies** — possível nova raça/facção explorando Monte Carlo territorial/local; apenas um nome, sem desenho.
+- **Auditoria da memória/Cripta** — rever o que persiste (e o que devia deixar de persistir) nos arquivos de Heroes/Legends/candidatos; ideia, não uma tarefa especificada.
+- **Futuras linhagens de Necromantes** — antes de desenhar, é obrigatório auditar `necromancia_estatistica` (Commit 16, ver acima) para evitar duplicação conceptual com o mecanismo de ressurreição de Lendas já existente em `main.py`.
+- **Laboratório / superespécie** — conceito experimental de raça híbrida; apenas um nome, sem desenho.

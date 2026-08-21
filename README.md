@@ -54,7 +54,11 @@ A quick map of what actually exists in this repository today, kept separate from
 
 **✅ Biblioteca dos Artefactos (Artifact Library)** — `core/services/artifact_schema.py`, `artifact_registry.py` and `artifact_inspiration.py`; 15 founding narrative artifacts, every one verified to have zero effect on algorithms, results or probabilities (see [The Artifact Library](#the-artifact-library-biblioteca-dos-artefactos) below).
 
-**✅ Testing** — 614 tests across 25 modules (`python -m unittest discover -s tests`).
+**✅ Candidate Provenance, Evaluation & Performance** — `core/services/candidate_provenance.py` (normalizes any already-persisted candidate record into one canonical `CandidateKey`, across the 18 real `origem` values found in the archive), `candidate_evaluation.py` and `candidate_performance.py` (strictly retrospective measurement/aggregation against a caller-supplied target — never generation, fitness, Council or selection; see [Candidate Analysis Layer](#candidate-analysis-layer-commits-15-19) below).
+
+**✅ Minotauros** — a new Clerics lineage (Commit 19) with **key persistence** instead of exploration: survivors keep exactly the same key every generation, and a bred descendant can inherit its Minotauro parent's key. Not a new voting faction — see [Candidate Analysis Layer](#candidate-analysis-layer-commits-15-19) below.
+
+**✅ Testing** — 729 tests across 30 modules (`python -m unittest discover -s tests`).
 
 ---
 
@@ -89,7 +93,7 @@ Each faction represents a distinct statistical philosophy:
 
 | Faction | Strategy |
 |---------|---------|
-| **Clerics** | Genetic algorithm — 72 individuals evolve over 14 generations |
+| **Clerics** | Genetic algorithm — 72 individuals evolve over 14 generations across 9 archetypal lineages, including Minotauro's key-persistence lineage (Commit 19) |
 | **Melforks** | Specialised genetic algorithm for balanced key generation |
 | **Vampires** | Linhagem Sanguínea: frequent triples + balance; Linhagem Sombria: consecutive triples |
 | **Gargoyles** | Linhagem de Pedra: consistent pairs; Linhagem do Espelho: symmetry and consecutive numbers |
@@ -295,6 +299,33 @@ A **purely narrative, cerimonial** collection, distinct from the older `artifact
 
 ---
 
+## Candidate Analysis Layer (Commits 15-19)
+
+A small family of pure services, separate from both the Dashboard
+Dataset and the Artifact Library, for reasoning about candidate keys
+that already exist — never for generating one.
+
+| Service | Does |
+|---|---|
+| `core/services/statistical_window_profile.py` | Composes `statistical_profiles.py` + `rolling_windows.py` over one already-selected window — zero new formulas |
+| `core/services/candidate_provenance.py` | `normalize_candidate_record()` — normalizes an already-persisted record (any of the 18 real `origem` values in the archive) into one canonical `CandidateKey` |
+| `core/services/candidate_evaluation.py` | `evaluate_candidate()`/`evaluate_candidates()` — measures a `CandidateKey` against a caller-supplied target |
+| `core/services/candidate_performance.py` | `summarize_candidate_performance()` — pure aggregation over already-produced `(CandidateKey, CandidateEvaluation)` pairs |
+
+**Mandatory temporal boundary:**
+
+```
+historical data up to X-1 → train/evolve/generate → freeze candidates → reveal draw X → evaluate → summarize performance
+```
+
+`candidate_evaluation.py` and `candidate_performance.py` have no concept of a draw, a date, or a dataset — they only ever see whatever target the caller already resolved and passed in explicitly. This is what makes look-ahead structurally impossible: they are **strictly retrospective/experimental** and never influence generation, fitness, the Council, or key selection.
+
+**Minotauros (Commit 19)** — a new Clerics lineage, not a new voting faction. Survivors keep exactly the same key every generation (`h.keys[-1]`); a bred descendant can inherit a Minotauro parent's key at reproduction time (deterministic p1-over-p2 precedence, no extra randomness, no mutable aliasing between generations); a non-Minotauro child never inherits; a founder without an inherited key generates its own, the same way other lineages do; Minotauros never go through `aplicar_conhecimento()`; fitness, elimination and provenance (`race="Minotauro"`, `source_type="evolutionary_individual"`) are all unchanged. See `CLAUDE.md`'s "Camada de Proveniência, Avaliação e Desempenho de Candidatos (Commits 15–19)" for the full specification.
+
+**Not implemented — ideas only**, none of the following exists as code or a closed spec today: a Backtest Experiment Lab tying the four services above into one multi-draw pipeline, a Zombies race/faction exploring territorial/local Monte Carlo search, an audit of what the Hero/Legend/candidate archives still carry ("memory"/Crypt audit), future Necromancer lineages (which must first be audited against the existing `necromancia_estatistica` Legend-resurrection mechanism in `main.py` to avoid duplicating it), and a lab/hybrid-"superspecies" concept.
+
+---
+
 ## File structure
 
 ```
@@ -336,7 +367,7 @@ Project-Ariadne/
 │       ├── ritual.py            ← Ritual of Thirty Echoes
 │       └── council.py           ← Council integration
 ├── races/                       ← lore only (README/lore.md/characters.json/artifacts.json/lineages|orders.json) — no executable code, 21 races
-│   ├── clerics/                 ← Clérigos (V11) — the 8 ancestral lineages, 6 houses
+│   ├── clerics/                 ← Clérigos (V11) — the 9 ancestral lineages (incl. Minotauro, Commit 19), 6 houses
 │   └── mystics/                 ← Mystics (V10) — lore, characters, artifacts; nature/ + prophecy/ lineages
 ├── orders/                      ← organisations and guilds
 │   ├── black_squad/             ← Black Squad + grimoire + dark_library
@@ -534,12 +565,14 @@ layers away. Faction-specific narrative logic (the 21 `factions/*/`
 strategies) is not under test — it doesn't affect framework stability
 and its "correctness" is largely narrative, not mechanical.
 
-**Current suite:** 614 tests across 25 modules, also covering the
+**Current suite:** 729 tests across 30 modules, also covering the
 historical dataset pipeline, Hero/Legend evaluation, the Dashboard
-Dataset layer, the Dashboard Excel Export and the Artifact Library —
-each with dedicated tests against real, on-disk data
-(`datasets/historical/euromillions/`, `library/artifacts/entries/`),
-not just synthetic fixtures.
+Dataset layer, the Dashboard Excel Export, the Artifact Library and
+the Candidate Analysis Layer (provenance, evaluation, performance,
+Minotauros) — each with dedicated tests against real, on-disk data
+(`datasets/historical/euromillions/`, `library/artifacts/entries/`,
+`datasets/generated/simulations/arquivo_destino.json`), not just
+synthetic fixtures.
 
 ---
 
@@ -624,6 +657,7 @@ Se preferires ler em português → [LEIA-ME.md](LEIA-ME.md)
 | V11 | Clerics migrated into the plugin architecture (`races/legacy.py` retired) — 21 voting factions total |
 | V12.3 | Dashboard Dataset — Heroes, Legends, Base de Chaves, Characters, Houses, Executive Summary, Economy, Prize Categories, Generations, Frequencies (incl. real `atraso_atual`); Excel Export (`dashboard/excel_export.py`); Shared Statistical Primitives + Rolling Window Selection (`statistical_profiles.py`, `rolling_windows.py`) |
 | V13 | Biblioteca dos Artefactos — narrative artifact schema, registry and deterministic inspiration generator; official-draw registration CLI |
+| Commits 15-19 | Candidate Analysis Layer — Statistical Window Profiles, Candidate Provenance/Evaluation/Performance (strictly retrospective, temporal boundary enforced); Minotauros — Clerics' key-persistence lineage |
 
 ---
 
