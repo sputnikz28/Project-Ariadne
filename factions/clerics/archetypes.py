@@ -33,6 +33,17 @@ def generate(h, ctx):
 
     raca = h.raca.replace("Renascido ", "")
 
+    if raca == "Minotauro":
+        if h.keys:
+            ultima = h.keys[-1]
+            return list(ultima["numeros"]), list(ultima["estrelas"])
+        herdada = h.genoma.get("chave_herdada")
+        if herdada is not None:
+            return list(herdada[0]), list(herdada[1])
+        nums = sorted(random.sample(range(1, 51), 5))
+        ests = sorted(random.sample(range(1, 13), 2))
+        return normalize_candidate(nums, ests, random)
+
     if raca == "Esqueleto":
         from factions.skeletons.algorithm import generate as gerar_esqueleto
         key, _ritual = gerar_esqueleto(h, ctx, 25, 6)

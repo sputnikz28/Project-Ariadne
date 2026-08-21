@@ -28,9 +28,19 @@ class Heroi:
         return asdict(self)
 
 
-NAMES = ["Lyra", "Morgana", "Kael", "Gruk", "Aruk", "Elarion", "Selene", "Thara", "Aion", "Velka"]
-TITULOS = ["da Névoa", "dos Ossos", "da Lua Fria", "Pedra-Partida", "dos Astros", "do Bosque"]
-RACAS = ["Bruxa", "Vidente", "Chefe Tribal", "Elfo", "Goblin", "Shaman", "Cronomante", "Esqueleto"]
+NAMES = [
+    "Lyra", "Morgana", "Kael", "Gruk", "Aruk", "Elarion", "Selene", "Thara", "Aion", "Velka",
+    "Nyx", "Raiz", "Malrik", "Torvak", "Draven", "Fenrik", "Azrael", "Varyn", "Korvak", "Orin",
+    "Nemerion", "Lunélia", "Seraph", "Dargan", "Morvath", "Asterion",
+]
+TITULOS = [
+    "da Névoa", "dos Ossos", "da Lua Fria", "Pedra-Partida", "dos Astros", "do Bosque",
+    "do Labirinto", "dos Ecos", "da Cripta", "da Noite", "do Abismo", "das Cinzas",
+    "da Pedra Negra", "do Véu", "das Runas", "do Eclipse", "da Tempestade",
+    "do Sangue Antigo", "do Tempo Perdido", "das Sombras", "da Chama Eterna",
+    "da Caverna do Morcego",
+]
+RACAS = ["Bruxa", "Vidente", "Chefe Tribal", "Elfo", "Goblin", "Shaman", "Cronomante", "Esqueleto", "Minotauro"]
 CASAS = ["Casa Lunar", "Casa dos Ossos", "Casa do Caos", "Casa das Estrelas", "Casa Tribal", "Casa do Bosque"]
 
 
@@ -150,6 +160,17 @@ def execute(cfg, ctx):
             contador += 1
             f.raca = random.choice([p1.raca.replace("Renascido ", ""), p2.raca.replace("Renascido ", "")])
             f.casa = random.choice([p1.casa, p2.casa])
+            if f.raca == "Minotauro":
+                p1_raca = p1.raca.replace("Renascido ", "")
+                p2_raca = p2.raca.replace("Renascido ", "")
+                if p1_raca == "Minotauro" and p1.keys:
+                    origem_chave = p1.keys[-1]
+                elif p2_raca == "Minotauro" and p2.keys:
+                    origem_chave = p2.keys[-1]
+                else:
+                    origem_chave = None
+                if origem_chave is not None:
+                    f.genoma["chave_herdada"] = (tuple(origem_chave["numeros"]), tuple(origem_chave["estrelas"]))
             todos[f.id] = f
             nova.append(f)
         pop = nova
