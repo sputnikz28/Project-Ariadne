@@ -157,10 +157,12 @@ O campo `lang` é gravado em cada experiência JSON dos Axiomantes (`ritual.py �
 | `last_known_key()` | V8.1 | Último sorteio registado (data, numeros, estrelas) |
 
 **Nota sobre formatos de pergaminho:**
-- 2026: `"data": {"extracao": "YYYY-MM-DD", ...}` (dict com astronomia completa)
-- 2004-2025: `"data": "YYYY-MM-DD"` (string directa)
+- 2026: `"data": {"extracao": "YYYY-MM-DD", "timestamp_utc": "..."}` (dict com astronomia completa)
+- 2004-2025: `"data": "YYYY-MM-DD"` (string directa) + `"horario": {"timestamp_utc": "..."}`
 
 Ariadne trata ambos os formatos de forma transparente.
+
+**Modo temporal (Commit 23):** `Ariadne(scrolls=<coleção já carregada e cortada por cutoff>)` — quando `scrolls` é fornecido, `scroll_state`/`search_moon`/`overdue_numbers`/`transition_pattern`/`full_history`/`weekly_echoes`/`last_known_key` operam exclusivamente sobre essa coleção congelada, sem qualquer leitura adicional de `library/scrolls/`. Sem `scrolls` (omisso), o comportamento é exatamente o de sempre (modo LIVE/NORMAL). `pairs`/`triples`/`numero`/`least_frequent_numbers` (baseados em `library/indexes/*.json`, sem qualquer timestamp) levantam `RuntimeError` numa instância temporal — nunca respondem silenciosamente a partir de um índice global sem corte temporal. Ver `core/services/historical_ariadne_source.py` e a secção "Fronteira Temporal" abaixo.
 
 ---
 
@@ -541,7 +543,7 @@ Suite `unittest` da stdlib (sem dependências externas — consistente com `requ
 python -m unittest discover -s tests
 ```
 
-729 testes em 30 módulos (`tests/test_*.py`), verificado no Commit 19 (Minotauros).
+846 testes em 34 módulos (`tests/test_*.py`), verificado no Commit 24 (Temporal Persistent Memory).
 
 | Ficheiro | Cobre |
 |---------|------|
@@ -575,12 +577,16 @@ python -m unittest discover -s tests
 | `test_candidate_evaluation.py` | `core/services/candidate_evaluation.py` — `evaluate_candidate`/`evaluate_candidates`, todas as 18 categorias `n+e`, números/estrelas nunca misturados, sem influência de `[HEROIS]`, alvos sempre sintéticos (nunca um sorteio real hardcoded) |
 | `test_candidate_performance.py` | `core/services/candidate_performance.py` — `summarize_candidate_performance()`, diversidade por `frozenset` (chave completa vs. conjunto de números), as 18 categorias sempre presentes, ausência de `best_category`/agrupamentos nativos |
 | `test_minotauros.py` | `factions/clerics/archetypes.py` (persistência via `h.keys[-1]`, nascimento fundador, ausência de `aplicar_conhecimento()`) e `factions/clerics/algorithm.py` (herança `chave_herdada` no ciclo de reprodução, precedência p1/p2, sem aliasing mutável) — ver secção própria abaixo |
+| `test_backtest_lab.py` | `core/services/backtest_lab.py` (Commit 20) — `BacktestTarget`/`FrozenCandidate`, `freeze_backtest_candidates`/`evaluate_backtest_candidates`/`summarize_backtest`; assinatura de `freeze_backtest_candidates()` provada por `inspect.signature` a nunca receber a chave vencedora |
+| `test_historical_simulation_source.py` | `core/services/historical_simulation_source.py` (Commit 22) — `available_at`/`load_versioned_history`/`visible_draws`/`adapt_to_legacy_draw`/`build_historical_context_for_backtest`; invariante A/B (alterar X e posteriores nunca muda a vista pré-X); integração real com `core.evolution.statistics.calculate()` |
+| `test_historical_ariadne_source.py` | `core/services/historical_ariadne_source.py` + modo temporal de `library/ariadne/engine.py:Ariadne` (Commit 23) — `pergaminho_available_at`/`load_scrolls`/`visible_scrolls`/`build_scrolls_for_backtest`; prova por `mock.patch` de que os 7 métodos baseados em pergaminhos nunca tocam o disco em modo temporal; `pairs`/`triples`/`numero`/`least_frequent_numbers` levantam `RuntimeError` numa instância temporal |
+| `test_temporal_memory_boundary.py` | `core/services/temporal_memory_boundary.py` (Commit 24) — `classify_memory_availability`/`temporal_memory_view`; Necromancia (`tentar_ressuscitar_lenda`) temporalmente segura via `registado_em`; prova estrutural de que Grimório/Artefactos/Ordem Élfica nunca importam este módulo |
 
 **Filosofia:** os testes cobrem a *framework* e os serviços partilhados reais (registry, plugin_loader, council, modelos partilhados, pontuação do backtesting, pipeline histórico, Heroes/Legends, Dashboard Dataset, Dashboard Excel Export, Biblioteca dos Artefactos), não a lógica narrativa de cada facção — um refactor da arquitetura de plugins deve falhar aqui, localmente, em vez de partir silenciosamente uma facção três camadas depois. As 21 facções em `factions/*/` não têm testes dedicados; a sua "correção" é maioritariamente narrativa, não mecânica.
 
 # Serviços partilhados (`core/services/`)
 
-16 ficheiros, a maioria com lógica real e testada (não scaffold) — cresceu bastante desde V10.5/V11:
+20 ficheiros, a maioria com lógica real e testada (não scaffold) — cresceu bastante desde V10.5/V11:
 
 | Ficheiro | Estado | O que faz |
 |---|---|---|
@@ -602,6 +608,10 @@ python -m unittest discover -s tests
 | `candidate_provenance.py` | ✅ real | `CandidateKey`/`normalize_candidate_record()` (Commit 16) — normaliza registos já persistidos em `arquivo_destino.json` para uma taxonomia fechada de `SourceType` (18 `origem` reais); nunca gera, avalia ou pontua um candidato |
 | `candidate_evaluation.py` | ✅ real | `CandidateEvaluation`/`evaluate_candidate()`/`evaluate_candidates()` (Commit 17) — mede um `CandidateKey` contra um alvo explicitamente fornecido pelo chamador; puramente retrospetivo, sem noção de "concurso"/data, ver Fronteira Temporal abaixo |
 | `candidate_performance.py` | ✅ real | `CandidatePerformanceSummary`/`summarize_candidate_performance()` (Commit 18) — agregação pura de pares `(CandidateKey, CandidateEvaluation)` já produzidos; sem agrupamento nativo por origem/raça/geração (decisão deliberada, ver secção própria) |
+| `backtest_lab.py` | ✅ real | `BacktestTarget`/`FrozenCandidate`, `freeze_backtest_candidates`/`evaluate_backtest_candidates`/`summarize_backtest` (Commit 20) — certifica a Fronteira B (candidato existia antes da revelação do alvo); reutiliza `hero_evaluation.classify_temporal_provenance` sem alterações; ver secção própria abaixo |
+| `historical_simulation_source.py` | ✅ real | `available_at`/`load_versioned_history`/`visible_draws`/`adapt_to_legacy_draw`/`build_historical_context_for_backtest` (Commit 22) — ponte entre `datasets/historical/euromillions/` e a forma legada que `world/engine/builder.py`/`core/evolution/statistics.py` esperam; ainda não ligado a `main.py`; ver secção própria abaixo |
+| `historical_ariadne_source.py` | ✅ real | `pergaminho_available_at`/`load_scrolls`/`visible_scrolls`/`build_scrolls_for_backtest` (Commit 23) — equivalente do anterior para `library/scrolls/`, alimenta `Ariadne(scrolls=...)`; ver secção própria abaixo |
+| `temporal_memory_boundary.py` | ✅ real | `classify_memory_availability`/`temporal_memory_view` (Commit 24) — mesma taxonomia `verified`/`legacy`/`ineligible`/`unresolved`, resolvida a partir de um campo de timestamp já no próprio registo; ver secção própria abaixo |
 | `artifact_schema.py`, `artifact_registry.py`, `artifact_inspiration.py` | ✅ real | Biblioteca dos Artefactos — ver secção própria abaixo |
 
 Nenhum destes substitui ainda a lógica estatística por-facção (frequências, quentes/frios, atraso, pares/triplas) — continua duplicada em vários pontos:
@@ -625,6 +635,10 @@ Serviços previstos (nomes indicativos): as capacidades inicialmente previstas s
 - **`library/indexes/frequencias_numeros.json`/`frequencias_estrelas.json`** — órfãos (nenhum código do projeto os lê) e obsoletos (a soma das frequências implica só 55 sorteios indexados — não bate nem com "2026 sozinho" (64) nem com o histórico completo; `git log` confirma que não são tocados desde a reorganização V10).
 - `core/services/dashboard_data.py:build_frequencies_rows()` (Commit 11) não depende de nenhum destes três ficheiros — conta diretamente sobre `draw_records` já carregados pelo chamador, evitando tanto a ambiguidade como a obsolescência.
 - **`VERSION` desalinhado**: o ficheiro `VERSION` na raiz contém `"V12"`, mas este documento (e o `README.md`) já descrevem funcionalidade pós-V13 como completa. Registado como achado; não corrigido — fora do âmbito destes commits.
+- **Bifurcação de fonte de dados histórica** (achado do Commit 21, não corrigido): `main.py`/`world/engine/builder.py` nunca leem `datasets/historical/euromillions/` — usam `core/data/loaders.py:get_history()` (API ao vivo por omissão, ou `datasets/generated/temporary/historico_cache.json`), uma fonte completamente independente da usada por `historical_dataset.py`/Dashboard/Hero Evaluation/Backtest Lab. `core/services/historical_simulation_source.py` (Commit 22) já liga a fonte versionada a um cutoff, mas não está ligado a `main.py`/`builder.py`.
+- **Footgun em `world/engine/builder.py`** (achado do Commit 21, não corrigido): `if not visivel: visivel = hist` desativa silenciosamente o corte temporal quando a data configurada não produz nenhum sorteio visível, revertendo para o histórico completo sem aviso — um risco real de look-ahead, priorizado mas não corrigido.
+- **Ariadne — métodos baseados em `library/indexes/*.json`** (`pairs`/`triples`/`numero`/`least_frequent_numbers`): sem qualquer timestamp nos ficheiros de origem; permanecem não certificáveis mesmo numa instância `Ariadne(scrolls=...)` (Commit 23) — levantam `RuntimeError` em vez de responder sem corte temporal.
+- **Grimório do Esquadrão Negro / `estado_ordem.json` da Ordem Élfica** (achado do Commit 21/24, não corrigido): estado agregado, cumulativo, sem qualquer timestamp a qualquer nível — impossível de certificar temporalmente sem reescrever o esquema de persistência.
 
 # Benchmarks (`benchmarks/` e `experiments/benchmarks/`)
 
@@ -695,6 +709,15 @@ Estrutura só, sem runner. `benchmarks/random/` (baseline aleatório), `benchmar
 - ✅ Minotauro — nova raça de Clérigos com persistência de chave (Commit 19, `77b69b9`) — ver secção própria abaixo
 - Nenhum destes substitui a lógica per-facção duplicada listada na tabela "Duplicação encontrada"; `candidate_evaluation.py`/`candidate_performance.py` não têm ainda nenhum consumidor de produção — só as suas próprias suites de teste os usam
 - Ver secção "Camada de Proveniência, Avaliação e Desempenho de Candidatos (Commits 15–19)" no final deste documento para o detalhe completo, incluindo a Fronteira Temporal e a especificação do Minotauro
+
+## Commits 20–24 — Backtest Lab & Fronteira Temporal (complete)
+
+- ✅ `core/services/backtest_lab.py` — `freeze_backtest_candidates`/`evaluate_backtest_candidates`/`summarize_backtest` (Commit 20), certifica a Fronteira B
+- ✅ Commit 21 — auditoria completa (sem alterações de código) que identificou a Fronteira A como o problema estrutural maior: `main.py` nunca lê `datasets/historical/euromillions/`, Ariadne lê `library/scrolls/`/`library/indexes/` sem cutoff, e memória persistente (Grimório/Lendas/Artefactos/Ordem Élfica) sem proveniência temporal
+- ✅ `core/services/historical_simulation_source.py` — cutoff timezone-aware sobre o dataset versionado (Commit 22), ainda não ligado a `main.py`/`world/engine/builder.py`
+- ✅ `library/ariadne/engine.py` ganhou um modo temporal explícito (`Ariadne(scrolls=...)`, Commit 23) para os métodos baseados em pergaminhos; métodos baseados em índices continuam não certificáveis, por design
+- ✅ `core/services/temporal_memory_boundary.py` (Commit 24) — mesma taxonomia `verified`/`legacy`/`ineligible`/`unresolved`; Necromancia legada (`docs/lore/legends/livro_personagens_lendarias.json`) passa a poder ser temporalmente cortada via `registado_em`; `recognized_at`/`promoted_at` passam a ser persistidos em novos Heroes/Legends (forward-only, sem retrodatar registos antigos)
+- Continua por fazer: nenhuma destas peças está ligada a `main.py`/a um orquestrador de backtest real; Grimório, `estado_ordem.json` e o replay temporal de Artefactos continuam sem certificação possível — ver secção "Fronteira Temporal" no final deste documento
 
 # Dependências opcionais
 
@@ -985,10 +1008,59 @@ Nova raça dos Clérigos (`RACAS` em `factions/clerics/algorithm.py`, agora com 
 
 ## Ideias futuras / não implementadas (ver também Roadmap principal)
 
-Nada nesta lista existe hoje como código, especificação fechada ou funcionalidade — são apenas nomes/conceitos registados para decisão futura:
+**Atualizado no Commit 24** — o Backtest Experiment Lab já não está nesta lista: existe desde o Commit 20 (`core/services/backtest_lab.py`), reutilizado por `historical_simulation_source.py`/`historical_ariadne_source.py`/`temporal_memory_boundary.py` nos Commits 22-24. Nada do resto desta lista existe hoje como código, especificação fechada ou funcionalidade — são apenas nomes/conceitos registados para decisão futura:
 
-- **Backtest Experiment Lab** — um pipeline orquestrado pelo chamador que ligaria `historical_dataset`/`rolling_windows`/`candidate_provenance`/`candidate_evaluation`/`candidate_performance` ao longo de muitos sorteios; hoje cada peça só é exercida isoladamente pela sua própria suite de testes.
 - **Zombies** — possível nova raça/facção explorando Monte Carlo territorial/local; apenas um nome, sem desenho.
-- **Auditoria da memória/Cripta** — rever o que persiste (e o que devia deixar de persistir) nos arquivos de Heroes/Legends/candidatos; ideia, não uma tarefa especificada.
-- **Futuras linhagens de Necromantes** — antes de desenhar, é obrigatório auditar `necromancia_estatistica` (Commit 16, ver acima) para evitar duplicação conceptual com o mecanismo de ressurreição de Lendas já existente em `main.py`.
+- **Auditoria da memória/Cripta** — feita parcialmente no Commit 21/24 (Heroes, Legends, Grimório, Artefactos, Ordem Élfica) — ver a secção "Fronteira Temporal" abaixo para o inventário completo; o que ficou identificado como "irremediavelmente legado" (Grimório, `estado_ordem.json`) continua por resolver.
+- **Futuras linhagens de Necromantes** — a Necromancia legada já está parcialmente resolvida (Commit 24, via `registado_em`); antes de desenhar uma linhagem nova, continua obrigatório auditar `necromancia_estatistica` (Commit 16) para evitar duplicação conceptual com o mecanismo de ressurreição de Lendas já existente em `main.py`.
 - **Laboratório / superespécie** — conceito experimental de raça híbrida; apenas um nome, sem desenho.
+- **Ligar o Backtest Lab/Fronteira Temporal a `main.py`** — nenhuma das peças dos Commits 20-24 é chamada automaticamente hoje; um orquestrador de backtest real fica para um commit próprio.
+- **Replay temporal de Artefactos/Relíquias** — os eventos (`historia[].momento`) já têm timestamp real; reconstruir o estado "como estava em X" por replay é possível mas fica para um commit posterior (ver secção "Fronteira Temporal" abaixo).
+- **Certificação temporal do Grimório/`estado_ordem.json`** — auditado no Commit 24 e considerado estruturalmente impossível sem reescrever esses ficheiros para registarem eventos datados em vez de flags acumulados; fora de âmbito indefinidamente, salvo decisão explícita de redesenhar a persistência.
+
+---
+
+# Fronteira Temporal — Backtest Lab & Segurança Temporal (Commits 20–24)
+
+Cinco commits sequenciais, distintos da Camada de Proveniência (Commits 15-19) — respondem a uma pergunta diferente: dado um alvo histórico X já revelado, como construir e medir uma experiência sem deixar informação posterior a X influenciar o resultado. Nenhum introduz uma nova versão formal do projeto (mesma razão do bloco anterior).
+
+## Duas fronteiras distintas (vocabulário vinculativo, usado em todos os commits abaixo)
+
+- **Fronteira A** — "treino/evolução/fitness/Conselho só viram histórico estritamente anterior a X". Nenhum destes commits certifica isto — é um problema a montante (`world/engine/builder.py`), auditado no Commit 21, não corrigido.
+- **Fronteira B** — "o candidato/memória provadamente existia antes da revelação oficial de X". É isto que todos os commits abaixo certificam, estruturalmente, reutilizando sempre a mesma disciplina: `< cutoff_datetime` (nunca `<=`), cutoff sempre timezone-aware (`ValueError` se naive), nunca inferir disponibilidade a partir de outra coisa (geração, nome, ordem do ficheiro, `mtime`, data do sorteio a que a memória se refere).
+
+## Commit 20 — Backtest Experiment Lab
+
+`core/services/backtest_lab.py` — `BacktestTarget` (frozen, `draw_datetime` validado timezone-aware em `__post_init__`), `FrozenCandidate` (`provenance` só pode ser `verified`/`legacy`/`unresolved` — `ineligible` nunca produz um `FrozenCandidate`, só um `ValueError`), `freeze_backtest_candidates()`/`evaluate_backtest_candidates()`/`summarize_backtest()`. Reutiliza `hero_evaluation.classify_temporal_provenance()` sem alterações. `freeze_backtest_candidates()` nunca recebe `target`/`numeros`/`estrelas` como parâmetro — só `official_draw_datetime` — garantia estrutural, não de convenção, de que a chave vencedora não pode vazar para a fase de congelamento (provado por `inspect.signature` no teste). `legacy` aceite por omissão (o arquivo real é 100% legacy — 0/42.527 registos têm `run_id`); `unresolved` excluído por omissão; múltiplos `run_id` não-`None` levantam `ValueError` salvo `allow_mixed_runs=True`; candidatos `legacy` nunca contam para essa verificação (sem `run_id` para comparar).
+
+## Commit 21 — Auditoria da Fronteira A (sem alterações de código)
+
+Auditoria pura de `library/ariadne/engine.py` e de tudo o que consome, mais toda a memória persistente (Grimório, Artefactos, Ordem Élfica, Lendas). Achados principais: `main.py` nunca lê `datasets/historical/euromillions/`; `Ariadne()` lê `library/scrolls/`/`library/indexes/` sem qualquer cutoff; o footgun `if not visivel: visivel = hist`; e um bug de look-ahead real e concreto na Necromancia (`tentar_ressuscitar_lenda()` podia ressuscitar uma Lenda registada depois do alvo do backtest). Nenhum destes foi corrigido nesse commit — motivaram os Commits 22-24.
+
+## Commit 22 — Historical Simulation Source
+
+`core/services/historical_simulation_source.py` — `available_at(draw)` (lê `draw['horario']['timestamp_utc']`), `load_versioned_history()` (todos os anos de `datasets/historical/euromillions/`, ordenado por `available_at`), `visible_draws(draws, cutoff_datetime)`, `adapt_to_legacy_draw(draw)` (achata `chave.numeros`/`chave.estrelas` para a forma plana que `world/engine/builder.py`/`core/evolution/statistics.py` esperam; `jackpot`/`vencedores` só têm equivalente parcial no dataset moderno — mapeados com a mesma convenção `None`→`0` que `get_history()` já usava), `build_historical_context_for_backtest(cutoff_datetime)` (compõe as três). **Não ligado a `main.py`/`builder.py`** — modo LIVE/NORMAL inteiramente preservado, este é um caminho novo e paralelo.
+
+## Commit 23 — Temporal Ariadne
+
+`core/services/historical_ariadne_source.py` — `pergaminho_available_at(scroll)` (dois locais possíveis consoante o ano: `scroll['data']['timestamp_utc']` em 2026, `scroll['horario']['timestamp_utc']` em 2004-2025; exclui explicitamente os `indice.json` por pasta de ano — não são pergaminhos), `load_scrolls()`, `visible_scrolls()`, `build_scrolls_for_backtest()`. `library/ariadne/engine.py:Ariadne` ganhou `__init__(self, scrolls=None)`: sem `scrolls`, comportamento LIVE inalterado; com `scrolls`, os 7 métodos baseados em pergaminhos (`scroll_state`/`search_moon`/`overdue_numbers`/`transition_pattern`/`full_history`/`weekly_echoes`/`last_known_key`) passam a usar exclusivamente essa coleção congelada — e, pela primeira vez, todos veem a mesma coisa (antes do Commit 23, `search_moon`/`overdue_numbers`/`transition_pattern` só viam 2026 via `self.scrolls`, enquanto `full_history`/`weekly_echoes` percorriam todos os anos frescos a cada chamada; essa inconsistência mantém-se em modo LIVE por design, só desaparece em modo temporal). `pairs`/`triples`/`numero`/`least_frequent_numbers` levantam `RuntimeError` numa instância temporal.
+
+## Commit 24 — Temporal Persistent Memory
+
+`core/services/temporal_memory_boundary.py` — mesma taxonomia `verified`/`legacy`/`ineligible`/`unresolved` de `classify_temporal_provenance`, mas resolvida a partir de um campo de timestamp já no próprio registo (`registado_em`/`promoted_at`/`recognized_at`), não de `run_id`→manifesto. `classify_memory_availability(raw_timestamp, cutoff_datetime)` + `temporal_memory_view(records, cutoff_datetime, get_raw_timestamp=..., allow_legacy=False, allow_unresolved=False)` — vista por omissão só `verified`; `ineligible` nunca tem override, sob nenhuma flag.
+
+Distinção vinculativa auditada: `candidate existed_at` (quando a chave prevista foi gerada) ≠ `recognition/promoted_at` (quando o sistema reconheceu que era boa) ≠ `memory_record available_at` (quando esse reconhecimento foi escrito em disco) — nenhum sistema do projeto tinha o terceiro campo antes deste commit.
+
+**Necromancia** (`orders/black_squad/black_mages.py:tentar_ressuscitar_lenda(config, events, cutoff_datetime=None)`): `cutoff_datetime=None` preserva o comportamento LIVE exato; fornecido, filtra os candidatos (`docs/lore/legends/livro_personagens_lendarias.json` + `ecos_ancestrais.json`) por `registado_em` antes de `random.choice()` — nenhuma Lenda registada depois do cutoff pode ser ressuscitada. `ecos_ancestrais.json` (lore estático, sem `registado_em`) classifica sempre `legacy` e fica excluído por omissão, sem caso especial. Cutoff naive levanta `ValueError` **antes** de qualquer gate de RNG. Consumo de RNG idêntico independentemente do tamanho da pool (contagem de chamadas, nunca o valor escolhido).
+
+**`recognized_at`/`promoted_at`** — forward-only, sem migração: `evaluate_heroes.py` passa a escrever `recognized_at` (um `datetime.now()` por execução do CLI) em cada novo Hero; `core/services/legend_evaluation.py:evaluate_group()` ganhou o parâmetro obrigatório `promoted_at` (nunca calculado internamente — mantém a pureza já documentada do módulo), escrito só em registos `"promote"` novos. Registos antigos (todos os Heroes e Legends já persistidos) não têm estes campos e continuam `legacy` para sempre — nenhuma retrodatação.
+
+**Explicitamente fora de certificação, por decisão, não por esquecimento**: Grimório (`orders/black_squad/dark_library/grimorio_negro.json`), `estado_ordem.json` (Ordem Élfica), e o estado atual (campos de topo) de Artefactos/Relíquias — todos sem qualquer timestamp ao nível do facto agregado realmente consultado durante a geração, apesar de os eventos individuais que os alimentam (cópias de livros, roubos, missões, `historia[]` dos artefactos) terem `momento`/`criado_em` reais. `artifacts/living.py`, `artifacts/ark.py`, `orders/black_squad/persistence.py` e `orders/elven_order/ninjas.py` nunca importam `temporal_memory_boundary` — provado estruturalmente por teste, não só documentado.
+
+## Testes (Commits 20-24)
+
+`tests/test_backtest_lab.py` (26), `tests/test_historical_simulation_source.py` (29), `tests/test_historical_ariadne_source.py` (39), `tests/test_temporal_memory_boundary.py` (22) + 1 teste adicional em `tests/test_legend_evaluation.py` (`promoted_at`) — 117 testes novos no total.
+
+## O que fica para commits futuros
+
+Ligar qualquer peça destes 5 commits a `main.py`/a um orquestrador de backtest real; corrigir o footgun de `world/engine/builder.py`; repontar `core/data/loaders.py:get_history()` para o dataset versionado; certificar temporalmente `pairs`/`triples`/`numero`/`least_frequent_numbers` (exigiria regenerar os índices a partir de um subconjunto de pergaminhos já cortado); replay temporal de Artefactos/Relíquias a partir do seu `historia[]`; qualquer tentativa de tornar o Grimório/`estado_ordem.json` temporalmente certificáveis (exigiria redesenhar o esquema de persistência, não só acrescentar um campo).

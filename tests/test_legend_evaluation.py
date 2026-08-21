@@ -1,11 +1,13 @@
 """Tests for core/services/legend_evaluation.py — configuration loading
-and validation for [REGISTO_LENDAS] / [REGISTO_LENDAS_TIERS].
+and validation for [REGISTO_LENDAS] / [REGISTO_LENDAS_TIERS], plus (Commit
+24) a minimal test confirming the caller-supplied promoted_at timestamp
+flows verbatim into a new promotion record.
 """
 
 import unittest
 from configparser import ConfigParser
 
-from core.services.legend_evaluation import LegendConfigError, load_legend_config
+from core.services.legend_evaluation import LegendConfigError, evaluate_group, load_legend_config
 
 
 def make_cfg(criteria_version="v1", limiares="3,5,10,20", tiers=None,
@@ -210,6 +212,36 @@ class TestLegacyLendasSectionDoesNotInterfere(unittest.TestCase):
         cfg["REGISTO_LENDAS_TIERS"] = {"3": "LEGEND_TIER_4", "5": "LEGEND_TIER_3", "10": "LEGEND_TIER_2", "20": "LEGEND_TIER_1"}
         result = load_legend_config(cfg)
         self.assertEqual(result["criteria_version"], "v1")
+
+
+class TestEvaluateGroupPromotedAt(unittest.TestCase):
+    def test_promoted_at_is_written_verbatim_into_a_new_promotion_record(self):
+        legend_config = {
+            "criteria_version": "v1",
+            "thresholds": [1],
+            "tier_map": {1: "LEGEND_TIER_1"},
+            "tier_order": {"LEGEND_TIER_1": 0},
+        }
+        heroes_in_group = [{
+            "hero_id": "HERO-2099-001-aaaa1111",
+            "draw_id": "001/2099",
+            "draw_date": "2099-01-01",
+            "entity_id": "H-1",
+            "entity_name": "Test",
+            "race": "Elfo",
+            "generation": 1,
+            "predicted_key": {"numeros": [1, 2, 3, 4, 5], "estrelas": [1, 2]},
+            "provenance": "verified",
+        }]
+
+        decision = evaluate_group(
+            "sp-1", heroes_in_group, legend_config,
+            existing_legend=None, project_version="V99", git_commit="deadbeef",
+            promoted_at="2099-06-15T12:00:00+00:00",
+        )
+
+        self.assertEqual(decision["action"], "promote")
+        self.assertEqual(decision["record"]["promoted_at"], "2099-06-15T12:00:00+00:00")
 
 
 if __name__ == "__main__":

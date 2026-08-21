@@ -78,7 +78,7 @@ def _read_git_commit():
         return None
 
 
-def preflight(heroes, legend_config, project_version, git_commit, existing_legends):
+def preflight(heroes, legend_config, project_version, git_commit, existing_legends, promoted_at):
     """Pure — no disk I/O. existing_legends is the result of a single,
     already-completed LegendRegistry.load_all() call; every "does this
     already exist" lookup below uses that in-memory map, never a fresh
@@ -111,7 +111,7 @@ def preflight(heroes, legend_config, project_version, git_commit, existing_legen
         existing = existing_by_source.get(source_prediction_id)
         decision = evaluate_group(
             source_prediction_id, heroes_in_group, legend_config,
-            existing, project_version, git_commit,
+            existing, project_version, git_commit, promoted_at,
         )
 
         if decision["action"] == "not_yet_qualified":
@@ -176,7 +176,7 @@ def main():
         sys.exit(1)
 
     heroes = HeroRegistry().load_all()
-    result = preflight(heroes, legend_config, project_version, git_commit, existing_legends)
+    result = preflight(heroes, legend_config, project_version, git_commit, existing_legends, now)
     plan = result["plan"]
     projected_by_source = result["projected_by_source"]
 

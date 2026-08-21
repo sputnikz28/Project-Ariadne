@@ -13,7 +13,7 @@ simulation, never at prediction time.
 
 import argparse
 import sys
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 
 if hasattr(sys.stdout, "reconfigure"):
@@ -36,7 +36,7 @@ def resolve_official_draw(sorteio_id):
     return draw, dataset_path, draw_datetime
 
 
-def build_hero_record(result, draw, dataset_path, run_manifest):
+def build_hero_record(result, draw, dataset_path, run_manifest, recognized_at):
     seed = run_manifest.get("seed") if run_manifest else None
     project_version = run_manifest.get("project_version") if run_manifest else None
     git_commit = run_manifest.get("git_commit") if run_manifest else None
@@ -74,6 +74,7 @@ def build_hero_record(result, draw, dataset_path, run_manifest):
             f"{len(result['matched_stars'])} lucky stars against official draw "
             f"{draw['numero_sorteio']} (category {result['category']})."
         ),
+        "recognized_at": recognized_at,
     }
 
 
@@ -104,6 +105,7 @@ def main():
 
     archive = read_json(ARQUIVO_DESTINO, default=[])
     run_manifests = load_all_runs()
+    recognized_at = datetime.now(timezone.utc).isoformat(timespec="seconds")
 
     counts = {"verified": 0, "legacy": 0, "ineligible": 0, "unresolved": 0}
     qualifying = []
@@ -128,7 +130,7 @@ def main():
     already_registered = []
     for result in qualifying:
         run_manifest = run_manifests.get(result["run_id"]) if result["run_id"] else None
-        hero_record = build_hero_record(result, draw, dataset_path, run_manifest)
+        hero_record = build_hero_record(result, draw, dataset_path, run_manifest, recognized_at)
         stored, created = registry.register(hero_record)
         (new_heroes if created else already_registered).append(stored)
 

@@ -237,8 +237,17 @@ def would_change(existing_legend, updates):
 # ---------------------------------------------------------------------------
 
 def evaluate_group(source_prediction_id, heroes_in_group, legend_config,
-                    existing_legend, project_version, git_commit):
+                    existing_legend, project_version, git_commit, promoted_at):
     """Decide what should happen to one source_prediction_id group.
+
+    promoted_at: caller-supplied wall-clock timestamp (this module never
+    calls datetime.now() itself — same discipline as project_version/
+    git_commit above). Only ever written into a brand-new "promote"
+    record; refresh_candidate updates never touch it. Records the
+    moment the Legend memory itself was created — deliberately distinct
+    from promotion_draw_date (the qualifying draw's date), see
+    core/services/temporal_memory_boundary.py's module docstring for
+    why that distinction matters for backtesting.
 
     Returns one of:
       {"action": "not_yet_qualified"}
@@ -262,6 +271,7 @@ def evaluate_group(source_prediction_id, heroes_in_group, legend_config,
             "promotion_threshold": promotion["promotion_threshold"],
             "promotion_tier": promotion["promotion_tier"],
             "criteria_version": legend_config["criteria_version"],
+            "promoted_at": promoted_at,
             "promotion_hero_ids": promotion["promotion_hero_ids"],
             "project_version": project_version,
             "git_commit": git_commit,

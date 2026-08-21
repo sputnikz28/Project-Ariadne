@@ -58,7 +58,9 @@ A quick map of what actually exists in this repository today, kept separate from
 
 **✅ Minotauros** — a new Clerics lineage (Commit 19) with **key persistence** instead of exploration: survivors keep exactly the same key every generation, and a bred descendant can inherit its Minotauro parent's key. Not a new voting faction — see [Candidate Analysis Layer](#candidate-analysis-layer-commits-15-19) below.
 
-**✅ Testing** — 729 tests across 30 modules (`python -m unittest discover -s tests`).
+**✅ Backtest Lab & Temporal Safety** — `core/services/backtest_lab.py` (Commit 20) certifies that a candidate provably existed before a target draw's official reveal; `historical_simulation_source.py` (Commit 22) and `historical_ariadne_source.py` (Commit 23, plus a new `Ariadne(scrolls=...)` temporal mode) extend the same timezone-aware cutoff to the versioned historical dataset and to Ariadne's pergaminho-based methods; `temporal_memory_boundary.py` (Commit 24) extends it again to persistent memory (Heroes/Legends recognition, legacy Legend resurrection). None of this is wired into `main.py` yet — see [Temporal Safety and Backtest Lab](#temporal-safety-and-backtest-lab-commits-20-24) below.
+
+**✅ Testing** — 846 tests across 34 modules (`python -m unittest discover -s tests`).
 
 ---
 
@@ -231,6 +233,8 @@ a.search_moon("Lua cheia")
 a.create_papyrus(semana_iso=28, dados={...})
 ```
 
+**Temporal mode (Commit 23):** `Ariadne(scrolls=<already-loaded, cutoff-filtered collection>)` — when `scrolls` is given, the seven pergaminho-based methods above operate exclusively over that frozen collection, with zero further reads of `library/scrolls/`. Omit `scrolls` and behaviour is exactly LIVE/NORMAL, unchanged. `pairs()`/`triples()`/`numero()`/`least_frequent_numbers()` (backed by `library/indexes/*.json`, which carry no timestamp at all) raise `RuntimeError` on a temporal instance rather than silently answering from an uncut global index. See [Temporal Safety and Backtest Lab](#temporal-safety-and-backtest-lab-commits-20-24) below.
+
 ---
 
 ## The Eternal Library (persistent knowledge)
@@ -322,7 +326,32 @@ historical data up to X-1 → train/evolve/generate → freeze candidates → re
 
 **Minotauros (Commit 19)** — a new Clerics lineage, not a new voting faction. Survivors keep exactly the same key every generation (`h.keys[-1]`); a bred descendant can inherit a Minotauro parent's key at reproduction time (deterministic p1-over-p2 precedence, no extra randomness, no mutable aliasing between generations); a non-Minotauro child never inherits; a founder without an inherited key generates its own, the same way other lineages do; Minotauros never go through `aplicar_conhecimento()`; fitness, elimination and provenance (`race="Minotauro"`, `source_type="evolutionary_individual"`) are all unchanged. See `CLAUDE.md`'s "Camada de Proveniência, Avaliação e Desempenho de Candidatos (Commits 15–19)" for the full specification.
 
-**Not implemented — ideas only**, none of the following exists as code or a closed spec today: a Backtest Experiment Lab tying the four services above into one multi-draw pipeline, a Zombies race/faction exploring territorial/local Monte Carlo search, an audit of what the Hero/Legend/candidate archives still carry ("memory"/Crypt audit), future Necromancer lineages (which must first be audited against the existing `necromancia_estatistica` Legend-resurrection mechanism in `main.py` to avoid duplicating it), and a lab/hybrid-"superspecies" concept.
+**The Backtest Experiment Lab now exists** (Commit 20, see [Temporal Safety and Backtest Lab](#temporal-safety-and-backtest-lab-commits-20-24) below) — it is no longer on the "not implemented" list. Still ideas only, none exists as code or a closed spec today: a Zombies race/faction exploring territorial/local Monte Carlo search, future Necromancer lineages (which must first be audited against the existing `necromancia_estatistica` Legend-resurrection mechanism in `main.py` to avoid duplicating it, and against the temporal-safety work already done for legacy Legend resurrection in Commit 24), and a lab/hybrid-"superspecies" concept.
+
+---
+
+## Temporal Safety and Backtest Lab (Commits 20-24)
+
+Five sequential commits answering a different question from the Candidate Analysis Layer above: given an already-revealed historical target X, how do you build and measure an experiment without letting information from after X leak in. Two distinct guarantees run through all of them:
+
+- **Fronteira A** ("training/evolution/fitness/Council only ever saw history strictly before X") — **not** certified by any of this; it's an upstream problem in `world/engine/builder.py`, audited in Commit 21, not yet fixed.
+- **Fronteira B** ("the candidate/memory provably existed before X was revealed") — what every service below actually certifies, always via `< cutoff_datetime` (never `<=`), always requiring a timezone-aware cutoff (`ValueError` on naive), never inferring availability from anything but an honest timestamp already on the record.
+
+| Commit | Service | Certifies |
+|---|---|---|
+| 20 | `core/services/backtest_lab.py` | `freeze_backtest_candidates()`/`evaluate_backtest_candidates()`/`summarize_backtest()` — a candidate existed before the target's official reveal. `freeze_backtest_candidates()` never even receives the target's numbers/stars as a parameter — the winning key structurally cannot leak into the freezing step. |
+| 21 | — (audit only) | Found the real gaps the next three commits close: `main.py` never reads the versioned dataset; Ariadne reads `library/scrolls/`/`library/indexes/` with no cutoff; a real look-ahead bug in Legend resurrection. |
+| 22 | `core/services/historical_simulation_source.py` | `available_at()`/`visible_draws()`/`build_historical_context_for_backtest()` — the same guarantee over `datasets/historical/euromillions/`, adapted to the flat shape the simulator expects. Not wired into `main.py`/`world/engine/builder.py` yet. |
+| 23 | `core/services/historical_ariadne_source.py` + `Ariadne(scrolls=...)` | The same guarantee for `library/scrolls/` — a new temporal mode on the `Ariadne` class itself (see the "Ariadne — the data broker" section above). |
+| 24 | `core/services/temporal_memory_boundary.py` | The same taxonomy (`verified`/`legacy`/`ineligible`/`unresolved`) for persistent memory — Heroes/Legends recognition timestamps, legacy Legend resurrection. |
+
+**A key distinction audited in Commit 24**: `candidate existed_at` (when a predicted key was generated) ≠ `recognition/promoted_at` (when the system recognised it was good) ≠ `memory_record available_at` (when that recognition was actually written to disk) — no system in this project tracked the third one before this commit. `evaluate_heroes.py` now writes `recognized_at`; `legend_evaluation.py:evaluate_group()` now requires a caller-supplied `promoted_at`. Both are forward-only — existing Hero/Legend records have neither field and stay `legacy` forever, no retroactive dating.
+
+**Necromancy** (`orders/black_squad/black_mages.py:tentar_ressuscitar_lenda(config, events, cutoff_datetime=None)`) is the first real consumer: omit `cutoff_datetime` and behaviour is exactly LIVE/unchanged; supply it and no Legend recorded (`registado_em`) after the cutoff can ever be resurrected.
+
+**Explicitly not certified, by decision** — the Black Squad's grimoire, the Elven Order's `estado_ordem.json`, and artifacts' current top-level state (`artifacts/relics/*.json`) are cumulative aggregates with no timestamp at the fact level actually consulted during generation, even though the individual events feeding them do have real timestamps. `artifacts/living.py`, `artifacts/ark.py`, `orders/black_squad/persistence.py` and `orders/elven_order/ninjas.py` never import `temporal_memory_boundary` — a standing, tested proof, not just documentation.
+
+**Nothing here is wired into `main.py` or any backtest orchestrator yet** — each commit is a standalone, tested service; connecting them is future work.
 
 ---
 
@@ -354,8 +383,12 @@ Project-Ariadne/
 │       ├── dashboard_data.py                   ← Dashboard Dataset (see above)
 │       ├── statistical_profiles.py             ← shared statistical primitives (frequency, delay, parity...)
 │       ├── rolling_windows.py                  ← last-N-draws / last-N-weekday window selection
-│       └── artifact_schema.py, artifact_registry.py,
-│           artifact_inspiration.py             ← Biblioteca dos Artefactos (see above)
+│       ├── artifact_schema.py, artifact_registry.py,
+│       │   artifact_inspiration.py             ← Biblioteca dos Artefactos (see above)
+│       ├── backtest_lab.py                     ← Backtest Experiment Lab (Commit 20)
+│       ├── historical_simulation_source.py     ← temporal cutoff over the versioned dataset (Commit 22)
+│       ├── historical_ariadne_source.py        ← temporal cutoff over library/scrolls/ (Commit 23)
+│       └── temporal_memory_boundary.py         ← temporal cutoff over persistent memory (Commit 24)
 ├── council/                     ← Grand Council filter + vote
 ├── factions/                    ← executable faction plugins (package format) — 21 factions, one per race
 │   ├── clerics/                 ← Clérigos (V11) — genetic algorithm engine, 8-archetype dispatcher
@@ -565,14 +598,15 @@ layers away. Faction-specific narrative logic (the 21 `factions/*/`
 strategies) is not under test — it doesn't affect framework stability
 and its "correctness" is largely narrative, not mechanical.
 
-**Current suite:** 729 tests across 30 modules, also covering the
+**Current suite:** 846 tests across 34 modules, also covering the
 historical dataset pipeline, Hero/Legend evaluation, the Dashboard
-Dataset layer, the Dashboard Excel Export, the Artifact Library and
-the Candidate Analysis Layer (provenance, evaluation, performance,
-Minotauros) — each with dedicated tests against real, on-disk data
+Dataset layer, the Dashboard Excel Export, the Artifact Library, the
+Candidate Analysis Layer (provenance, evaluation, performance,
+Minotauros) and the Temporal Safety / Backtest Lab (Commits 20-24) —
+each with dedicated tests against real, on-disk data
 (`datasets/historical/euromillions/`, `library/artifacts/entries/`,
-`datasets/generated/simulations/arquivo_destino.json`), not just
-synthetic fixtures.
+`library/scrolls/`, `datasets/generated/simulations/arquivo_destino.json`),
+not just synthetic fixtures.
 
 ---
 
@@ -658,6 +692,7 @@ Se preferires ler em português → [LEIA-ME.md](LEIA-ME.md)
 | V12.3 | Dashboard Dataset — Heroes, Legends, Base de Chaves, Characters, Houses, Executive Summary, Economy, Prize Categories, Generations, Frequencies (incl. real `atraso_atual`); Excel Export (`dashboard/excel_export.py`); Shared Statistical Primitives + Rolling Window Selection (`statistical_profiles.py`, `rolling_windows.py`) |
 | V13 | Biblioteca dos Artefactos — narrative artifact schema, registry and deterministic inspiration generator; official-draw registration CLI |
 | Commits 15-19 | Candidate Analysis Layer — Statistical Window Profiles, Candidate Provenance/Evaluation/Performance (strictly retrospective, temporal boundary enforced); Minotauros — Clerics' key-persistence lineage |
+| Commits 20-24 | Temporal Safety / Backtest Lab — candidate existence (Commit 20), historical dataset + Ariadne temporal modes (Commits 22-23), persistent memory / Necromancy (Commit 24); Commit 21 audited the gaps these close. Not yet wired into `main.py`. |
 
 ---
 

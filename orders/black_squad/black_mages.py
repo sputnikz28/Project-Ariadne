@@ -11,6 +11,7 @@ from orders.black_squad.persistence import (
 from orders.black_squad.strategies import generate_promising_key, diversificar
 from artifacts.amulets.persistence import BOOKS, ler_json
 from artifacts.ark import load_all, save as save_relic
+from core.services.temporal_memory_boundary import temporal_memory_view
 
 
 NAMES = [
@@ -145,7 +146,10 @@ def create_mages(config, contexto, events):
     return escolhidos, grimoire
 
 
-def tentar_ressuscitar_lenda(config, events):
+def tentar_ressuscitar_lenda(config, events, cutoff_datetime=None):
+    if cutoff_datetime is not None and (cutoff_datetime.tzinfo is None or cutoff_datetime.utcoffset() is None):
+        raise ValueError(f"cutoff_datetime must be timezone-aware, got a naive datetime: {cutoff_datetime!r}")
+
     if not config.getboolean("LENDAS", "permitir_necromancia", fallback=True):
         return None
     grimoire = load_grimoire()
@@ -157,6 +161,13 @@ def tentar_ressuscitar_lenda(config, events):
     livro = ler_json("docs/lore/legends/livro_personagens_lendarias.json", {"personagens": []})
     echoes = ler_json("docs/lore/legends/ecos_ancestrais.json", {"ecos": []})
     candidates = livro.get("personagens", []) + echoes.get("ecos", [])
+
+    if cutoff_datetime is not None:
+        candidates = temporal_memory_view(
+            candidates, cutoff_datetime,
+            get_raw_timestamp=lambda c: c.get("registado_em"),
+        )
+
     if not candidates:
         return None
 
