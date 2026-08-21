@@ -22,15 +22,81 @@ def save_query(name, consulta):
 
 
 class Ariadne:
-    def __init__(self):
-        self.catalogo = ler_json(BASE / "catalogue/catalogo.json", {})
-        self.scrolls = sorted((BASE / "scrolls/2026").glob("*.json"))
+    """LIVE/NORMAL (default, `scrolls=None`): unchanged from before
+    Commit 23 — reads library/scrolls/ and library/indexes/ live off
+    disk, exactly as always.
 
-    def scroll_state(self, numero):
-        path = BASE / "scrolls/2026" / f"{int(numero):03d}.json"
-        if not path.exists():
-            return {"encontrado": False, "estado": "AUSENTE"}
-        p = ler_json(path)
+    TEMPORAL (`scrolls=<already-loaded pergaminho dicts>`, typically
+    core.services.historical_ariadne_source.build_scrolls_for_backtest()):
+    scroll_state/search_moon/overdue_numbers/transition_pattern/
+    full_history/weekly_echoes/last_known_key operate exclusively over
+    that frozen collection — zero additional reads of library/scrolls/.
+    This also unifies a LIVE-mode-only inconsistency where some of
+    these methods only ever considered 2026 (`self.scrolls`) while
+    others re-walked every year fresh each call — in TEMPORAL mode all
+    seven now see exactly the same collection (whatever years the
+    caller included when building it).
+
+    pairs()/triples()/numero()/least_frequent_numbers() read
+    library/indexes/*.json — static snapshots with no timestamp of any
+    kind. They are NOT certified for TEMPORAL mode and raise
+    RuntimeError there rather than silently answering from a global,
+    uncut index (see _require_live_mode()).
+    """
+
+    def __init__(self, scrolls=None):
+        self.catalogo = ler_json(BASE / "catalogue/catalogo.json", {})
+        self._temporal = scrolls is not None
+        if self._temporal:
+            self._frozen_scrolls = tuple(scrolls)
+            self.scrolls = self._frozen_scrolls
+        else:
+            self._frozen_scrolls = None
+            self.scrolls = sorted((BASE / "scrolls/2026").glob("*.json"))
+
+    def _require_live_mode(self, method_name):
+        if self._temporal:
+            raise RuntimeError(
+                f"Ariadne.{method_name}() reads a static library/indexes/*.json "
+                "snapshot with no temporal provenance — not certified for a "
+                "temporal instance (constructed with scrolls=...). Never "
+                "available in temporal mode; regenerating temporally-scoped "
+                "indexes is out of scope for this commit."
+            )
+
+    def _scope_a_scrolls(self):
+        """scroll_state/search_moon/overdue_numbers/transition_pattern.
+        LIVE: 2026-only, lazily loaded from self.scrolls (paths) —
+        unchanged. TEMPORAL: the full frozen collection.
+        """
+        if self._temporal:
+            return self._frozen_scrolls
+        return tuple(ler_json(p) for p in self.scrolls)
+
+    def _scope_b_scrolls(self):
+        """full_history/weekly_echoes. LIVE: fresh walk of
+        library/scrolls/ across all years — unchanged. TEMPORAL: the
+        same frozen collection as _scope_a_scrolls (this is what
+        eliminates the pre-Commit-23 2026-only-vs-all-years
+        inconsistency).
+        """
+        if self._temporal:
+            return self._frozen_scrolls
+        scrolls_root = BASE / "scrolls"
+        if not scrolls_root.exists():
+            return ()
+        out = []
+        for pasta_ano in sorted(scrolls_root.iterdir()):
+            if not pasta_ano.is_dir():
+                continue
+            for path in sorted(pasta_ano.glob("*.json")):
+                p = ler_json(path)
+                if isinstance(p, dict):
+                    out.append(p)
+        return tuple(out)
+
+    @staticmethod
+    def _scroll_state_response(p):
         return {
             "encontrado": True,
             "id": p.get("id"),
@@ -38,10 +104,21 @@ class Ariadne:
             "integridade": p.get("assinatura", {}).get("integridade"),
         }
 
+    def scroll_state(self, numero):
+        if self._temporal:
+            scroll_id = f"PERG-2026-{int(numero):03d}"
+            for p in self._frozen_scrolls:
+                if p.get("id") == scroll_id:
+                    return self._scroll_state_response(p)
+            return {"encontrado": False, "estado": "AUSENTE"}
+        path = BASE / "scrolls/2026" / f"{int(numero):03d}.json"
+        if not path.exists():
+            return {"encontrado": False, "estado": "AUSENTE"}
+        return self._scroll_state_response(ler_json(path))
+
     def search_moon(self, fase):
         encontrados = []
-        for path in self.scrolls:
-            p = ler_json(path)
+        for p in self._scope_a_scrolls():
             if (p.get("astronomia", {}).get("fase_lua") or "").lower() == fase.lower():
                 encontrados.append(p)
 
@@ -67,14 +144,17 @@ class Ariadne:
         return resposta
 
     def pairs(self, limite=10):
+        self._require_live_mode("pairs")
         dados = ler_json(BASE / "indexes/duplas.json", {})
         return dados.get("duplas_mais_comuns", [])[:limite]
 
     def triples(self, limite=10):
+        self._require_live_mode("triples")
         dados = ler_json(BASE / "indexes/triplas.json", {})
         return dados.get("triplas_mais_comuns", [])[:limite]
 
     def numero(self, numero):
+        self._require_live_mode("numero")
         livro = ler_json(BASE / "indexes/saidas_de_bolas_normalizado.json", {"numeros": []})
         for item in livro["numeros"]:
             if item["numero"] == int(numero):
@@ -83,13 +163,13 @@ class Ariadne:
 
     def overdue_numbers(self, limite=15):
         """Numbers with greatest gap (draws) since last appearance in 2026 pergaminhos."""
+        scrolls = self._scope_a_scrolls()
         ultimo_visto = {}
-        for idx, path in enumerate(self.scrolls):
-            p = ler_json(path)
+        for idx, p in enumerate(scrolls):
             for n in p.get("extracao", {}).get("numeros", []):
                 ultimo_visto[n] = idx
 
-        total = len(self.scrolls)
+        total = len(scrolls)
         atrasados = []
         for n in range(1, 51):
             if n in ultimo_visto:
@@ -111,6 +191,7 @@ class Ariadne:
 
     def least_frequent_numbers(self, limite=20):
         """Historically least frequent numbers from saidas_de_bolas_normalizado.json."""
+        self._require_live_mode("least_frequent_numbers")
         livro = ler_json(BASE / "indexes/saidas_de_bolas_normalizado.json", {"numeros": []})
         todos = sorted(livro["numeros"], key=lambda x: x.get("aparicoes_totais", 0))
         result = [
@@ -128,11 +209,12 @@ class Ariadne:
 
     def transition_pattern(self):
         """Pattern between penultimate and last key in 2026 pergaminhos."""
-        if len(self.scrolls) < 2:
+        scrolls = self._scope_a_scrolls()
+        if len(scrolls) < 2:
             return {"encontrado": False, "aviso": "Menos de 2 pergaminhos disponíveis."}
 
-        pen = ler_json(self.scrolls[-2])
-        ult = ler_json(self.scrolls[-1])
+        pen = scrolls[-2]
+        ult = scrolls[-1]
         nums_pen = set(pen.get("extracao", {}).get("numeros", []))
         nums_ult = set(ult.get("extracao", {}).get("numeros", []))
         ests_pen = set(pen.get("extracao", {}).get("estrelas", []))
@@ -171,42 +253,35 @@ class Ariadne:
 
     def weekly_echoes(self, semana_iso):
         """All draws from the same ISO week across all available pergaminho folders."""
-        echoes = []
-        scrolls_root = BASE / "scrolls"
-        if not scrolls_root.exists():
+        if not self._temporal and not (BASE / "scrolls").exists():
             return {"tipo": "DESCRITIVO_NAO_PREDITIVO", "semana_iso": int(semana_iso), "total_ecos": 0, "ecos": []}
 
-        for pasta_ano in sorted(scrolls_root.iterdir()):
-            if not pasta_ano.is_dir():
+        echoes = []
+        for p in self._scope_b_scrolls():
+            raw_data = p.get("data")
+            if isinstance(raw_data, dict):
+                data_str = raw_data.get("extracao")
+            elif isinstance(raw_data, str):
+                data_str = raw_data
+            else:
                 continue
-            for path in sorted(pasta_ano.glob("*.json")):
-                p = ler_json(path)
-                if not isinstance(p, dict):
-                    continue
-                raw_data = p.get("data")
-                if isinstance(raw_data, dict):
-                    data_str = raw_data.get("extracao")
-                elif isinstance(raw_data, str):
-                    data_str = raw_data
-                else:
-                    continue
-                if not data_str:
-                    continue
-                try:
-                    d = date.fromisoformat(data_str)
-                    iso = d.isocalendar()
-                    if iso[1] == int(semana_iso):
-                        echoes.append({
-                            "id": p.get("id"),
-                            "data": data_str,
-                            "ano_iso": iso[0],
-                            "semana_iso": iso[1],
-                            "numeros": p.get("extracao", {}).get("numeros", []),
-                            "estrelas": p.get("extracao", {}).get("estrelas", []),
-                            "soma": p.get("estatisticas", {}).get("soma"),
-                        })
-                except (ValueError, AttributeError):
-                    continue
+            if not data_str:
+                continue
+            try:
+                d = date.fromisoformat(data_str)
+                iso = d.isocalendar()
+                if iso[1] == int(semana_iso):
+                    echoes.append({
+                        "id": p.get("id"),
+                        "data": data_str,
+                        "ano_iso": iso[0],
+                        "semana_iso": iso[1],
+                        "numeros": p.get("extracao", {}).get("numeros", []),
+                        "estrelas": p.get("extracao", {}).get("estrelas", []),
+                        "soma": p.get("estatisticas", {}).get("soma"),
+                    })
+            except (ValueError, AttributeError):
+                continue
 
         resposta = {
             "tipo": "DESCRITIVO_NAO_PREDITIVO",
@@ -222,44 +297,35 @@ class Ariadne:
     def full_history(self, desde=None, ate=None, ultimos=None):
         """All draws from all pergaminho folders, sorted by date."""
         history = []
-        scrolls_root = BASE / "scrolls"
-        if not scrolls_root.exists():
-            return []
 
-        for pasta_ano in sorted(scrolls_root.iterdir()):
-            if not pasta_ano.is_dir():
+        for p in self._scope_b_scrolls():
+            raw_data = p.get("data")
+            if isinstance(raw_data, dict):
+                data_str = raw_data.get("extracao")
+            elif isinstance(raw_data, str):
+                data_str = raw_data
+            else:
                 continue
-            for path in sorted(pasta_ano.glob("*.json")):
-                p = ler_json(path)
-                if not isinstance(p, dict):
-                    continue
-                raw_data = p.get("data")
-                if isinstance(raw_data, dict):
-                    data_str = raw_data.get("extracao")
-                elif isinstance(raw_data, str):
-                    data_str = raw_data
-                else:
-                    continue
-                if not data_str:
-                    continue
-                numbers = p.get("extracao", {}).get("numeros", [])
-                stars = p.get("extracao", {}).get("estrelas", [])
-                if not numbers or len(numbers) != 5:
-                    continue
-                try:
-                    d = date.fromisoformat(data_str)
-                except (ValueError, AttributeError):
-                    continue
-                history.append({
-                    "id": p.get("id"),
-                    "data": data_str,
-                    "_data_obj": d,
-                    "ano": d.year,
-                    "semana_iso": d.isocalendar()[1],
-                    "numeros": numbers,
-                    "estrelas": stars,
-                    "soma": p.get("estatisticas", {}).get("soma"),
-                })
+            if not data_str:
+                continue
+            numbers = p.get("extracao", {}).get("numeros", [])
+            stars = p.get("extracao", {}).get("estrelas", [])
+            if not numbers or len(numbers) != 5:
+                continue
+            try:
+                d = date.fromisoformat(data_str)
+            except (ValueError, AttributeError):
+                continue
+            history.append({
+                "id": p.get("id"),
+                "data": data_str,
+                "_data_obj": d,
+                "ano": d.year,
+                "semana_iso": d.isocalendar()[1],
+                "numeros": numbers,
+                "estrelas": stars,
+                "soma": p.get("estatisticas", {}).get("soma"),
+            })
 
         history.sort(key=lambda x: x["_data_obj"])
         for h in history:
