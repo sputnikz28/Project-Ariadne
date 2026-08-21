@@ -1,5 +1,6 @@
 import random
 from core.services.combinations import normalize_candidate, gaps
+from core.services.fitness import fitness
 
 
 def aplicar_conhecimento(key, hidden_numbers, hidden_stars):
@@ -10,6 +11,80 @@ def aplicar_conhecimento(key, hidden_numbers, hidden_stars):
     if hidden_stars and random.random() < 0.45:
         ests[random.randrange(2)] = random.choice(hidden_stars)
     return normalize_candidate(nums, ests, random)
+
+
+_ZOMBIE_DEFAULTS = {
+    "tamanho_pool_numeros": 12,
+    "tamanho_pool_estrelas": 5,
+    "n_simulacoes": 300,
+}
+
+
+def _zombie_config(cfg):
+    if cfg is None:
+        return dict(_ZOMBIE_DEFAULTS)
+    return {
+        "tamanho_pool_numeros": cfg.getint(
+            "ZOMBIES", "tamanho_pool_numeros", fallback=_ZOMBIE_DEFAULTS["tamanho_pool_numeros"]
+        ),
+        "tamanho_pool_estrelas": cfg.getint(
+            "ZOMBIES", "tamanho_pool_estrelas", fallback=_ZOMBIE_DEFAULTS["tamanho_pool_estrelas"]
+        ),
+        "n_simulacoes": cfg.getint(
+            "ZOMBIES", "n_simulacoes", fallback=_ZOMBIE_DEFAULTS["n_simulacoes"]
+        ),
+    }
+
+
+def _nascer_territorio_zombie(rng, tamanho_pool_numeros, tamanho_pool_estrelas):
+    return {
+        "pool_numeros": sorted(rng.sample(range(1, 51), tamanho_pool_numeros)),
+        "pool_estrelas": sorted(rng.sample(range(1, 13), tamanho_pool_estrelas)),
+    }
+
+
+def mutar_territorio_zombie(territorio, rng, taxa_mutacao):
+    """Minimal drift mutation for reproduction (called from
+    algorithm.py's breeding loop, never from generate() itself): each
+    pool element independently has `taxa_mutacao` probability of being
+    replaced by a value not currently in that pool. Size, uniqueness
+    and the 1-50/1-12 bounds are always preserved — the territory is
+    never rebuilt from scratch, only nudged.
+    """
+    pool_numeros = list(territorio["pool_numeros"])
+    for i in range(len(pool_numeros)):
+        if rng.random() < taxa_mutacao:
+            candidatos = [n for n in range(1, 51) if n not in pool_numeros]
+            if candidatos:
+                pool_numeros[i] = rng.choice(candidatos)
+
+    pool_estrelas = list(territorio["pool_estrelas"])
+    for i in range(len(pool_estrelas)):
+        if rng.random() < taxa_mutacao:
+            candidatos = [e for e in range(1, 13) if e not in pool_estrelas]
+            if candidatos:
+                pool_estrelas[i] = rng.choice(candidatos)
+
+    return {"pool_numeros": sorted(pool_numeros), "pool_estrelas": sorted(pool_estrelas)}
+
+
+def _explorar_territorio_zombie(territorio, est, rng, n_simulacoes):
+    """Monte Carlo exploration strictly within the territory's pools —
+    same objective function (core.services.fitness.fitness) already
+    used by factions/werewolves/algorithm.py, no new metric introduced.
+    Returns the exact argmax over the n_simulacoes sampled candidates —
+    ties keep the first candidate found, deterministic given rng.
+    """
+    melhor_chave = None
+    melhor_fitness = None
+    for _ in range(n_simulacoes):
+        nums = sorted(rng.sample(territorio["pool_numeros"], 5))
+        ests = sorted(rng.sample(territorio["pool_estrelas"], 2))
+        f = fitness((nums, ests), est)
+        if melhor_fitness is None or f > melhor_fitness:
+            melhor_fitness = f
+            melhor_chave = (nums, ests)
+    return melhor_chave
 
 
 def _segredos(heroi):
@@ -25,7 +100,7 @@ def _segredos(heroi):
     return list(dict.fromkeys(numbers)), list(dict.fromkeys(stars))
 
 
-def generate(h, ctx):
+def generate(h, ctx, cfg=None):
     est = ctx["estatisticas"]
     hist = ctx["historico"]
     world = ctx["mundo"]
@@ -43,6 +118,17 @@ def generate(h, ctx):
         nums = sorted(random.sample(range(1, 51), 5))
         ests = sorted(random.sample(range(1, 13), 2))
         return normalize_candidate(nums, ests, random)
+
+    if raca == "Zombie":
+        zcfg = _zombie_config(cfg)
+        territorio = h.genoma.get("territorio_zombie")
+        if territorio is None:
+            territorio = _nascer_territorio_zombie(
+                random, zcfg["tamanho_pool_numeros"], zcfg["tamanho_pool_estrelas"],
+            )
+            h.genoma["territorio_zombie"] = territorio
+        nums, ests = _explorar_territorio_zombie(territorio, est, random, zcfg["n_simulacoes"])
+        return nums, ests
 
     if raca == "Esqueleto":
         from factions.skeletons.algorithm import generate as gerar_esqueleto

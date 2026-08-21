@@ -228,7 +228,7 @@ def run_breeding_scenario(p1_raca, p2_raca, forced_child_raca, p1_key, p2_key):
 
     keys_by_id = {"H-00001": p1_key, "H-00002": p2_key, "H-00003": p3_key}
 
-    def fake_generate(h, ctx):
+    def fake_generate(h, ctx, cfg=None):
         return keys_by_id.get(h.id, ([1, 2, 3, 4, 5], [1, 2]))
 
     race_pair = [p1_raca, p2_raca]

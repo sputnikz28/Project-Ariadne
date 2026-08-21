@@ -5,7 +5,7 @@ from artifacts.living import forjar, evoluir, herdar
 from world.engine.malphas_virus import infetar
 from artifacts.amulets.monastery import conceder_audiencia
 from artifacts.ark import tentar_encontrar, marcar_perdido
-from .archetypes import generate
+from .archetypes import generate, mutar_territorio_zombie
 
 
 @dataclass
@@ -40,7 +40,7 @@ TITULOS = [
     "do Sangue Antigo", "do Tempo Perdido", "das Sombras", "da Chama Eterna",
     "da Caverna do Morcego",
 ]
-RACAS = ["Bruxa", "Vidente", "Chefe Tribal", "Elfo", "Goblin", "Shaman", "Cronomante", "Esqueleto", "Minotauro"]
+RACAS = ["Bruxa", "Vidente", "Chefe Tribal", "Elfo", "Goblin", "Shaman", "Cronomante", "Esqueleto", "Minotauro", "Zombie"]
 CASAS = ["Casa Lunar", "Casa dos Ossos", "Casa do Caos", "Casa das Estrelas", "Casa Tribal", "Casa do Bosque"]
 
 
@@ -82,6 +82,7 @@ def execute(cfg, ctx):
     tam = cfg.getint("SIMULACAO", "populacao_inicial")
     gens = cfg.getint("SIMULACAO", "geracoes")
     ns = cfg.getint("SIMULACAO", "sobreviventes")
+    taxa_mutacao_zombie = cfg.getfloat("ZOMBIES", "taxa_mutacao_territorio", fallback=0.10)
     pop = [create(i + 1) for i in range(tam)]
     contador = tam + 1
     todos = {h.id: h for h in pop}
@@ -100,7 +101,7 @@ def execute(cfg, ctx):
             conceder_audiencia(cfg, heroi, g, book_events)
         alvo = ctx["historico"][(g - 1) % len(ctx["historico"])]
         for h in pop:
-            ch = generate(h, ctx)
+            ch = generate(h, ctx, cfg)
             an, ae, p, t = avaliar(ch, alvo)
             h.pontos += p
             h.titulo = t
@@ -171,6 +172,18 @@ def execute(cfg, ctx):
                     origem_chave = None
                 if origem_chave is not None:
                     f.genoma["chave_herdada"] = (tuple(origem_chave["numeros"]), tuple(origem_chave["estrelas"]))
+            if f.raca == "Zombie":
+                p1_raca = p1.raca.replace("Renascido ", "")
+                p2_raca = p2.raca.replace("Renascido ", "")
+                territorio_pai = None
+                if p1_raca == "Zombie":
+                    territorio_pai = p1.genoma.get("territorio_zombie")
+                elif p2_raca == "Zombie":
+                    territorio_pai = p2.genoma.get("territorio_zombie")
+                if territorio_pai is not None:
+                    f.genoma["territorio_zombie"] = mutar_territorio_zombie(
+                        territorio_pai, random, taxa_mutacao_zombie,
+                    )
             todos[f.id] = f
             nova.append(f)
         pop = nova
