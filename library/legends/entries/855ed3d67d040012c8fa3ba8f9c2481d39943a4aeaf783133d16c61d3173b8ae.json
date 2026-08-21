@@ -1,0 +1,42 @@
+{
+  "legend_id": "LEGEND-855ed3d6",
+  "source_prediction_id": "855ed3d67d040012c8fa3ba8f9c2481d39943a4aeaf783133d16c61d3173b8ae",
+  "promotion_draw": "067/2026",
+  "promotion_draw_date": "2026-08-21",
+  "promotion_threshold": 3,
+  "promotion_tier": "LEGEND_TIER_4",
+  "criteria_version": "v1",
+  "promoted_at": "2026-08-21T21:28:06+00:00",
+  "promotion_hero_ids": [
+    "HERO-2026-056-95973c86",
+    "HERO-2026-059-2fb851cf",
+    "HERO-2026-067-42cc726d"
+  ],
+  "project_version": "V12",
+  "git_commit": "71be2592df9f355015ff30ccdefd4a4241b0306a",
+  "qualification_reason": "Promoted to Legend at draw 067/2026 (2026-08-21) by reaching 3 distinct qualifying draws as Hero (criteria_version: v1).",
+  "entity_id": "H-00035",
+  "entity_name": "Aion da Lua Fria",
+  "race": "Vidente",
+  "generation": 7,
+  "predicted_numeros": [
+    18,
+    19,
+    30,
+    45,
+    47
+  ],
+  "predicted_estrelas": [
+    4,
+    9
+  ],
+  "hero_count": 3,
+  "qualified_draws": 3,
+  "contributing_hero_ids": [
+    "HERO-2026-056-95973c86",
+    "HERO-2026-059-2fb851cf",
+    "HERO-2026-067-42cc726d"
+  ],
+  "provenance": "legacy",
+  "last_reevaluated_at": null
+}

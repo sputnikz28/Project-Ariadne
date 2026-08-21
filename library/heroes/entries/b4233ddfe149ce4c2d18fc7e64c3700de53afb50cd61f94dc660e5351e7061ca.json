@@ -1,0 +1,79 @@
+{
+  "hero_id": "HERO-2026-065-b4233ddf",
+  "dedup_hash": "b4233ddfe149ce4c2d18fc7e64c3700de53afb50cd61f94dc660e5351e7061ca",
+  "source_prediction_id": "00ec726f9c1da3058c9b8513e601948179c324eaf557d2212d5696e08714e385",
+  "entity_id": "H-00098",
+  "entity_name": "Lyra dos Astros",
+  "race": "Chefe Tribal",
+  "generation": 2,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "065/2026",
+  "draw_date": "2026-08-14",
+  "official_key": {
+    "numeros": [
+      5,
+      29,
+      39,
+      48,
+      49
+    ],
+    "estrelas": [
+      4,
+      8
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      16,
+      20,
+      34,
+      48,
+      50
+    ],
+    "estrelas": [
+      4,
+      8
+    ]
+  },
+  "matched_numbers_count": 1,
+  "matched_stars_count": 2,
+  "exact_matched_values": {
+    "numeros": [
+      48
+    ],
+    "estrelas": [
+      4,
+      8
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      5,
+      29,
+      39,
+      49
+    ],
+    "estrelas": []
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      16,
+      20,
+      34,
+      50
+    ],
+    "estrelas": []
+  },
+  "hero_category": "1+2",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_067_dataset_completo.json",
+  "qualification_reason": "Matched 1 main numbers and 2 lucky stars against official draw 065/2026 (category 1+2).",
+  "recognized_at": "2026-08-21T21:27:51+00:00",
+  "registered_at": "2026-08-21T21:27:53+00:00"
+}

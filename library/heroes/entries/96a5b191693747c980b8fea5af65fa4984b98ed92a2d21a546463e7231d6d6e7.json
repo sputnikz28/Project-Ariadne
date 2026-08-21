@@ -1,0 +1,81 @@
+{
+  "hero_id": "HERO-2026-066-96a5b191",
+  "dedup_hash": "96a5b191693747c980b8fea5af65fa4984b98ed92a2d21a546463e7231d6d6e7",
+  "source_prediction_id": "30c1f9b11e925c657b7d93d890334962fff22fd6f534f8c8476c71b0c7f1b661",
+  "entity_id": "H-00610",
+  "entity_name": "Morgana dos Ossos",
+  "race": "Chefe Tribal",
+  "generation": 12,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "066/2026",
+  "draw_date": "2026-08-18",
+  "official_key": {
+    "numeros": [
+      3,
+      9,
+      38,
+      40,
+      50
+    ],
+    "estrelas": [
+      6,
+      10
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      21,
+      26,
+      40,
+      45,
+      50
+    ],
+    "estrelas": [
+      5,
+      6
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      40,
+      50
+    ],
+    "estrelas": [
+      6
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      3,
+      9,
+      38
+    ],
+    "estrelas": [
+      10
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      21,
+      26,
+      45
+    ],
+    "estrelas": [
+      5
+    ]
+  },
+  "hero_category": "2+1",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_067_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 1 lucky stars against official draw 066/2026 (category 2+1).",
+  "recognized_at": "2026-08-21T21:27:56+00:00",
+  "registered_at": "2026-08-21T21:27:57+00:00"
+}

@@ -1,0 +1,81 @@
+{
+  "hero_id": "HERO-2026-065-015e22cb",
+  "dedup_hash": "015e22cb48f80888a9525c76ad7aa37d5c92281526ce866f208712224b5d13dc",
+  "source_prediction_id": "2dcf9863735d0897e6db36ae8896836ea1cd612be933e6793cc74c02dbe77d1f",
+  "entity_id": "H-00034",
+  "entity_name": "Lyra Pedra-Partida",
+  "race": "Vidente",
+  "generation": 8,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "065/2026",
+  "draw_date": "2026-08-14",
+  "official_key": {
+    "numeros": [
+      5,
+      29,
+      39,
+      48,
+      49
+    ],
+    "estrelas": [
+      4,
+      8
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      10,
+      14,
+      39,
+      44,
+      48
+    ],
+    "estrelas": [
+      3,
+      8
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      39,
+      48
+    ],
+    "estrelas": [
+      8
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      5,
+      29,
+      49
+    ],
+    "estrelas": [
+      4
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      10,
+      14,
+      44
+    ],
+    "estrelas": [
+      3
+    ]
+  },
+  "hero_category": "2+1",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_067_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 1 lucky stars against official draw 065/2026 (category 2+1).",
+  "recognized_at": "2026-08-21T21:27:51+00:00",
+  "registered_at": "2026-08-21T21:27:53+00:00"
+}

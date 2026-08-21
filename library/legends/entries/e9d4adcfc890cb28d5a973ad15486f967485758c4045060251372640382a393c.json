@@ -1,0 +1,42 @@
+{
+  "legend_id": "LEGEND-e9d4adcf",
+  "source_prediction_id": "e9d4adcfc890cb28d5a973ad15486f967485758c4045060251372640382a393c",
+  "promotion_draw": "067/2026",
+  "promotion_draw_date": "2026-08-21",
+  "promotion_threshold": 3,
+  "promotion_tier": "LEGEND_TIER_4",
+  "criteria_version": "v1",
+  "promoted_at": "2026-08-21T21:28:06+00:00",
+  "promotion_hero_ids": [
+    "HERO-2026-059-8ac5d421",
+    "HERO-2026-061-3790306b",
+    "HERO-2026-067-94def655"
+  ],
+  "project_version": "V12",
+  "git_commit": "71be2592df9f355015ff30ccdefd4a4241b0306a",
+  "qualification_reason": "Promoted to Legend at draw 067/2026 (2026-08-21) by reaching 3 distinct qualifying draws as Hero (criteria_version: v1).",
+  "entity_id": "H-00568",
+  "entity_name": "Elarion Pedra-Partida",
+  "race": "Cronomante",
+  "generation": 11,
+  "predicted_numeros": [
+    10,
+    15,
+    29,
+    31,
+    36
+  ],
+  "predicted_estrelas": [
+    1,
+    4
+  ],
+  "hero_count": 3,
+  "qualified_draws": 3,
+  "contributing_hero_ids": [
+    "HERO-2026-059-8ac5d421",
+    "HERO-2026-061-3790306b",
+    "HERO-2026-067-94def655"
+  ],
+  "provenance": "legacy",
+  "last_reevaluated_at": null
+}

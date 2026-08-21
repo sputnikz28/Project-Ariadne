@@ -1,0 +1,80 @@
+{
+  "hero_id": "HERO-2026-067-fd350f5b",
+  "dedup_hash": "fd350f5b946579997833d29ece6c0dce28d3f6e20842cd8a386d8b224f1caa8e",
+  "source_prediction_id": "b9c5e07e1401b1e38e1ceee23f2c37fdf249db245f2fd95a46b914b496fb89fc",
+  "entity_id": "H-00053",
+  "entity_name": "Thara dos Astros",
+  "race": "Vidente",
+  "generation": 5,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "067/2026",
+  "draw_date": "2026-08-21",
+  "official_key": {
+    "numeros": [
+      10,
+      14,
+      15,
+      19,
+      45
+    ],
+    "estrelas": [
+      4,
+      12
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      10,
+      14,
+      18,
+      24,
+      45
+    ],
+    "estrelas": [
+      2,
+      8
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 0,
+  "exact_matched_values": {
+    "numeros": [
+      10,
+      14,
+      45
+    ],
+    "estrelas": []
+  },
+  "missed_winning_values": {
+    "numeros": [
+      15,
+      19
+    ],
+    "estrelas": [
+      4,
+      12
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      18,
+      24
+    ],
+    "estrelas": [
+      2,
+      8
+    ]
+  },
+  "hero_category": "3+0",
+  "hero_tier": "TIER_4",
+  "simulation_score": 38,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_067_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 0 lucky stars against official draw 067/2026 (category 3+0).",
+  "recognized_at": "2026-08-21T21:28:02+00:00",
+  "registered_at": "2026-08-21T21:28:04+00:00"
+}

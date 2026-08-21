@@ -1,0 +1,81 @@
+{
+  "hero_id": "HERO-2026-067-2e1eea41",
+  "dedup_hash": "2e1eea417ff8e4b54c1a16d0e526b05aa9bba3d16e46c9f1758a4fe41853ccac",
+  "source_prediction_id": "f9b1db8ffd34914920dc3e4743a980fc8b6fefdd3eea815ea618e3e6ef8df04e",
+  "entity_id": "H-00633",
+  "entity_name": "Gruk dos Astros",
+  "race": "Esqueleto",
+  "generation": 12,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "067/2026",
+  "draw_date": "2026-08-21",
+  "official_key": {
+    "numeros": [
+      10,
+      14,
+      15,
+      19,
+      45
+    ],
+    "estrelas": [
+      4,
+      12
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      15,
+      19,
+      22,
+      23,
+      33
+    ],
+    "estrelas": [
+      4,
+      6
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      15,
+      19
+    ],
+    "estrelas": [
+      4
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      10,
+      14,
+      45
+    ],
+    "estrelas": [
+      12
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      22,
+      23,
+      33
+    ],
+    "estrelas": [
+      6
+    ]
+  },
+  "hero_category": "2+1",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_067_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 1 lucky stars against official draw 067/2026 (category 2+1).",
+  "recognized_at": "2026-08-21T21:28:02+00:00",
+  "registered_at": "2026-08-21T21:28:04+00:00"
+}

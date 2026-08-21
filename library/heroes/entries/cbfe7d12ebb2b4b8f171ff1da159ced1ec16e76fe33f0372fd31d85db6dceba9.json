@@ -1,0 +1,80 @@
+{
+  "hero_id": "HERO-2026-067-cbfe7d12",
+  "dedup_hash": "cbfe7d12ebb2b4b8f171ff1da159ced1ec16e76fe33f0372fd31d85db6dceba9",
+  "source_prediction_id": "ee5690cb3187447c0c766d96db114da005c921ef53fee42f6e2a430b6c25dde1",
+  "entity_id": "H-00439",
+  "entity_name": "Lyra Pedra-Partida",
+  "race": "Elfo",
+  "generation": 9,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "067/2026",
+  "draw_date": "2026-08-21",
+  "official_key": {
+    "numeros": [
+      10,
+      14,
+      15,
+      19,
+      45
+    ],
+    "estrelas": [
+      4,
+      12
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      14,
+      15,
+      19,
+      36,
+      42
+    ],
+    "estrelas": [
+      8,
+      9
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 0,
+  "exact_matched_values": {
+    "numeros": [
+      14,
+      15,
+      19
+    ],
+    "estrelas": []
+  },
+  "missed_winning_values": {
+    "numeros": [
+      10,
+      45
+    ],
+    "estrelas": [
+      4,
+      12
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      36,
+      42
+    ],
+    "estrelas": [
+      8,
+      9
+    ]
+  },
+  "hero_category": "3+0",
+  "hero_tier": "TIER_4",
+  "simulation_score": 38,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_067_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 0 lucky stars against official draw 067/2026 (category 3+0).",
+  "recognized_at": "2026-08-21T21:28:02+00:00",
+  "registered_at": "2026-08-21T21:28:04+00:00"
+}

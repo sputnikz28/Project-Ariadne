@@ -1,0 +1,80 @@
+{
+  "hero_id": "HERO-2026-065-ef7f4664",
+  "dedup_hash": "ef7f4664976fb1f4bbfae4807e0ed42027f27fe7f1167d4dc95f9963fb5bd543",
+  "source_prediction_id": "81d8a581c830fcc918376be53d6fe2587dc44e6cb3cfecd5635ed5be5ae6e39e",
+  "entity_id": "Crânio das Vinte e Cinco Pedras",
+  "entity_name": "Crânio das Vinte e Cinco Pedras",
+  "race": "Esqueleto das Catacumbas",
+  "generation": 14,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "065/2026",
+  "draw_date": "2026-08-14",
+  "official_key": {
+    "numeros": [
+      5,
+      29,
+      39,
+      48,
+      49
+    ],
+    "estrelas": [
+      4,
+      8
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      29,
+      31,
+      37,
+      39,
+      48
+    ],
+    "estrelas": [
+      2,
+      6
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 0,
+  "exact_matched_values": {
+    "numeros": [
+      29,
+      39,
+      48
+    ],
+    "estrelas": []
+  },
+  "missed_winning_values": {
+    "numeros": [
+      5,
+      49
+    ],
+    "estrelas": [
+      4,
+      8
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      31,
+      37
+    ],
+    "estrelas": [
+      2,
+      6
+    ]
+  },
+  "hero_category": "3+0",
+  "hero_tier": "TIER_4",
+  "simulation_score": 38,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_067_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 0 lucky stars against official draw 065/2026 (category 3+0).",
+  "recognized_at": "2026-08-21T21:27:51+00:00",
+  "registered_at": "2026-08-21T21:27:54+00:00"
+}

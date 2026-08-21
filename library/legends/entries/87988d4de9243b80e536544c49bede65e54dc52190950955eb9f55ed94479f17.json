@@ -1,0 +1,42 @@
+{
+  "legend_id": "LEGEND-87988d4d",
+  "source_prediction_id": "87988d4de9243b80e536544c49bede65e54dc52190950955eb9f55ed94479f17",
+  "promotion_draw": "067/2026",
+  "promotion_draw_date": "2026-08-21",
+  "promotion_threshold": 3,
+  "promotion_tier": "LEGEND_TIER_4",
+  "criteria_version": "v1",
+  "promoted_at": "2026-08-21T21:28:06+00:00",
+  "promotion_hero_ids": [
+    "HERO-2026-059-1e80e194",
+    "HERO-2026-061-671f239e",
+    "HERO-2026-067-de3e6ac2"
+  ],
+  "project_version": "V12",
+  "git_commit": "71be2592df9f355015ff30ccdefd4a4241b0306a",
+  "qualification_reason": "Promoted to Legend at draw 067/2026 (2026-08-21) by reaching 3 distinct qualifying draws as Hero (criteria_version: v1).",
+  "entity_id": "H-00171",
+  "entity_name": "Velka da Lua Fria",
+  "race": "Vidente",
+  "generation": 13,
+  "predicted_numeros": [
+    4,
+    8,
+    9,
+    10,
+    45
+  ],
+  "predicted_estrelas": [
+    4,
+    5
+  ],
+  "hero_count": 3,
+  "qualified_draws": 3,
+  "contributing_hero_ids": [
+    "HERO-2026-059-1e80e194",
+    "HERO-2026-061-671f239e",
+    "HERO-2026-067-de3e6ac2"
+  ],
+  "provenance": "legacy",
+  "last_reevaluated_at": null
+}

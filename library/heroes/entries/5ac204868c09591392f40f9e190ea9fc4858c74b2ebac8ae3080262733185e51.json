@@ -1,0 +1,80 @@
+{
+  "hero_id": "HERO-2026-065-5ac20486",
+  "dedup_hash": "5ac204868c09591392f40f9e190ea9fc4858c74b2ebac8ae3080262733185e51",
+  "source_prediction_id": "1da75980fe91e5025f361c23f410825cb286c7370d51ff1f7a4b4addf8f73f89",
+  "entity_id": "H-00529",
+  "entity_name": "Aion Pedra-Partida",
+  "race": "Cronomante",
+  "generation": 10,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "065/2026",
+  "draw_date": "2026-08-14",
+  "official_key": {
+    "numeros": [
+      5,
+      29,
+      39,
+      48,
+      49
+    ],
+    "estrelas": [
+      4,
+      8
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      2,
+      29,
+      47,
+      48,
+      49
+    ],
+    "estrelas": [
+      7,
+      12
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 0,
+  "exact_matched_values": {
+    "numeros": [
+      29,
+      48,
+      49
+    ],
+    "estrelas": []
+  },
+  "missed_winning_values": {
+    "numeros": [
+      5,
+      39
+    ],
+    "estrelas": [
+      4,
+      8
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      2,
+      47
+    ],
+    "estrelas": [
+      7,
+      12
+    ]
+  },
+  "hero_category": "3+0",
+  "hero_tier": "TIER_4",
+  "simulation_score": 38,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_067_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 0 lucky stars against official draw 065/2026 (category 3+0).",
+  "recognized_at": "2026-08-21T21:27:51+00:00",
+  "registered_at": "2026-08-21T21:27:52+00:00"
+}

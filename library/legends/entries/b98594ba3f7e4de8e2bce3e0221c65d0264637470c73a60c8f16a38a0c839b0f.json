@@ -1,0 +1,42 @@
+{
+  "legend_id": "LEGEND-b98594ba",
+  "source_prediction_id": "b98594ba3f7e4de8e2bce3e0221c65d0264637470c73a60c8f16a38a0c839b0f",
+  "promotion_draw": "067/2026",
+  "promotion_draw_date": "2026-08-21",
+  "promotion_threshold": 3,
+  "promotion_tier": "LEGEND_TIER_4",
+  "criteria_version": "v1",
+  "promoted_at": "2026-08-21T21:28:06+00:00",
+  "promotion_hero_ids": [
+    "HERO-2026-059-cb382e5d",
+    "HERO-2026-061-54ead386",
+    "HERO-2026-067-09268e3e"
+  ],
+  "project_version": "V12",
+  "git_commit": "71be2592df9f355015ff30ccdefd4a4241b0306a",
+  "qualification_reason": "Promoted to Legend at draw 067/2026 (2026-08-21) by reaching 3 distinct qualifying draws as Hero (criteria_version: v1).",
+  "entity_id": "H-00670",
+  "entity_name": "Morgana do Bosque",
+  "race": "Chefe Tribal",
+  "generation": 13,
+  "predicted_numeros": [
+    10,
+    14,
+    25,
+    36,
+    50
+  ],
+  "predicted_estrelas": [
+    4,
+    9
+  ],
+  "hero_count": 3,
+  "qualified_draws": 3,
+  "contributing_hero_ids": [
+    "HERO-2026-059-cb382e5d",
+    "HERO-2026-061-54ead386",
+    "HERO-2026-067-09268e3e"
+  ],
+  "provenance": "legacy",
+  "last_reevaluated_at": null
+}

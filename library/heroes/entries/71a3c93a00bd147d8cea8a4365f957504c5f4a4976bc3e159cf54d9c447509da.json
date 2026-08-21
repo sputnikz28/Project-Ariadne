@@ -1,0 +1,80 @@
+{
+  "hero_id": "HERO-2026-065-71a3c93a",
+  "dedup_hash": "71a3c93a00bd147d8cea8a4365f957504c5f4a4976bc3e159cf54d9c447509da",
+  "source_prediction_id": "39b013e86f6e685deaccd6352bef344fcf2bf5fa16b58b5c8b3506245645b3d3",
+  "entity_id": "H-00073",
+  "entity_name": "Aion dos Ossos",
+  "race": "Goblin",
+  "generation": 2,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "065/2026",
+  "draw_date": "2026-08-14",
+  "official_key": {
+    "numeros": [
+      5,
+      29,
+      39,
+      48,
+      49
+    ],
+    "estrelas": [
+      4,
+      8
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      10,
+      27,
+      39,
+      48,
+      49
+    ],
+    "estrelas": [
+      2,
+      4
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      39,
+      48,
+      49
+    ],
+    "estrelas": [
+      4
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      5,
+      29
+    ],
+    "estrelas": [
+      8
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      10,
+      27
+    ],
+    "estrelas": [
+      2
+    ]
+  },
+  "hero_category": "3+1",
+  "hero_tier": "TIER_4",
+  "simulation_score": 43,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_067_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 1 lucky stars against official draw 065/2026 (category 3+1).",
+  "recognized_at": "2026-08-21T21:27:51+00:00",
+  "registered_at": "2026-08-21T21:27:54+00:00"
+}

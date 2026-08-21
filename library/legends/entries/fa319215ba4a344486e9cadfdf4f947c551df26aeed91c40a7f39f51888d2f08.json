@@ -29,13 +29,14 @@
     3,
     4
   ],
-  "hero_count": 3,
-  "qualified_draws": 3,
+  "hero_count": 4,
+  "qualified_draws": 4,
   "contributing_hero_ids": [
     "HERO-2026-056-2d840c2e",
     "HERO-2026-059-93b29966",
-    "HERO-2026-061-2bd750d9"
+    "HERO-2026-061-2bd750d9",
+    "HERO-2026-067-424d1fbd"
   ],
   "provenance": "legacy",
-  "last_reevaluated_at": null
+  "last_reevaluated_at": "2026-08-21T21:28:06+00:00"
 }

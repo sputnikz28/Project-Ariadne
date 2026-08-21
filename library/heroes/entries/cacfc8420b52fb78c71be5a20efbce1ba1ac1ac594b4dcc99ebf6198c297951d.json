@@ -1,0 +1,81 @@
+{
+  "hero_id": "HERO-2026-066-cacfc842",
+  "dedup_hash": "cacfc8420b52fb78c71be5a20efbce1ba1ac1ac594b4dcc99ebf6198c297951d",
+  "source_prediction_id": "57291f503ff039ae4f1a393e4e459929c5d9e75bb7ff51ff1f2171e5ad1e5892",
+  "entity_id": "H-00051",
+  "entity_name": "Aruk da Lua Fria",
+  "race": "Bruxa",
+  "generation": 9,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "066/2026",
+  "draw_date": "2026-08-18",
+  "official_key": {
+    "numeros": [
+      3,
+      9,
+      38,
+      40,
+      50
+    ],
+    "estrelas": [
+      6,
+      10
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      3,
+      25,
+      33,
+      38,
+      41
+    ],
+    "estrelas": [
+      6,
+      11
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      3,
+      38
+    ],
+    "estrelas": [
+      6
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      9,
+      40,
+      50
+    ],
+    "estrelas": [
+      10
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      25,
+      33,
+      41
+    ],
+    "estrelas": [
+      11
+    ]
+  },
+  "hero_category": "2+1",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_067_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 1 lucky stars against official draw 066/2026 (category 2+1).",
+  "recognized_at": "2026-08-21T21:27:56+00:00",
+  "registered_at": "2026-08-21T21:27:59+00:00"
+}

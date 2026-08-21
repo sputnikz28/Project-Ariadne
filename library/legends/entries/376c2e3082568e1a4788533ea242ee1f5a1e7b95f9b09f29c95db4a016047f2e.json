@@ -1,0 +1,42 @@
+{
+  "legend_id": "LEGEND-376c2e30",
+  "source_prediction_id": "376c2e3082568e1a4788533ea242ee1f5a1e7b95f9b09f29c95db4a016047f2e",
+  "promotion_draw": "067/2026",
+  "promotion_draw_date": "2026-08-21",
+  "promotion_threshold": 3,
+  "promotion_tier": "LEGEND_TIER_4",
+  "criteria_version": "v1",
+  "promoted_at": "2026-08-21T21:28:06+00:00",
+  "promotion_hero_ids": [
+    "HERO-2026-056-1e0c7321",
+    "HERO-2026-061-7bfbaa62",
+    "HERO-2026-067-ab3a2093"
+  ],
+  "project_version": "V12",
+  "git_commit": "71be2592df9f355015ff30ccdefd4a4241b0306a",
+  "qualification_reason": "Promoted to Legend at draw 067/2026 (2026-08-21) by reaching 3 distinct qualifying draws as Hero (criteria_version: v1).",
+  "entity_id": "H-00285",
+  "entity_name": "Gruk do Bosque",
+  "race": "Elfo",
+  "generation": 6,
+  "predicted_numeros": [
+    10,
+    19,
+    30,
+    31,
+    45
+  ],
+  "predicted_estrelas": [
+    2,
+    9
+  ],
+  "hero_count": 3,
+  "qualified_draws": 3,
+  "contributing_hero_ids": [
+    "HERO-2026-056-1e0c7321",
+    "HERO-2026-061-7bfbaa62",
+    "HERO-2026-067-ab3a2093"
+  ],
+  "provenance": "legacy",
+  "last_reevaluated_at": null
+}

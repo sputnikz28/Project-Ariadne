@@ -1,0 +1,81 @@
+{
+  "hero_id": "HERO-2026-066-1e293299",
+  "dedup_hash": "1e293299f9fa342b818f8bf0f7af4be21e51a3ace38c45213dd192fabdbd33aa",
+  "source_prediction_id": "da759c5b2d2b1ec083ccde01b65d0081c980569d4cd71ab279c6b6dfa41db154",
+  "entity_id": "H-00100",
+  "entity_name": "Thara da Névoa",
+  "race": "Elfo",
+  "generation": 2,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "066/2026",
+  "draw_date": "2026-08-18",
+  "official_key": {
+    "numeros": [
+      3,
+      9,
+      38,
+      40,
+      50
+    ],
+    "estrelas": [
+      6,
+      10
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      3,
+      22,
+      27,
+      38,
+      44
+    ],
+    "estrelas": [
+      2,
+      6
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      3,
+      38
+    ],
+    "estrelas": [
+      6
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      9,
+      40,
+      50
+    ],
+    "estrelas": [
+      10
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      22,
+      27,
+      44
+    ],
+    "estrelas": [
+      2
+    ]
+  },
+  "hero_category": "2+1",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_067_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 1 lucky stars against official draw 066/2026 (category 2+1).",
+  "recognized_at": "2026-08-21T21:27:56+00:00",
+  "registered_at": "2026-08-21T21:27:57+00:00"
+}

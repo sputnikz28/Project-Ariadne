@@ -1,0 +1,81 @@
+{
+  "hero_id": "HERO-2026-067-7c4ae3de",
+  "dedup_hash": "7c4ae3de8d0af9f488d5d9c2956ca352f2fafca9ebcc201a957a91baa7dc1eab",
+  "source_prediction_id": "f908c40b0774b8029d9d1f13aa137ee886e84cbfa80003e46983750eb5b4a8d3",
+  "entity_id": "H-00095",
+  "entity_name": "Elarion do Bosque",
+  "race": "Bruxa",
+  "generation": 2,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "067/2026",
+  "draw_date": "2026-08-21",
+  "official_key": {
+    "numeros": [
+      10,
+      14,
+      15,
+      19,
+      45
+    ],
+    "estrelas": [
+      4,
+      12
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      10,
+      15,
+      18,
+      21,
+      25
+    ],
+    "estrelas": [
+      2,
+      4
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      10,
+      15
+    ],
+    "estrelas": [
+      4
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      14,
+      19,
+      45
+    ],
+    "estrelas": [
+      12
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      18,
+      21,
+      25
+    ],
+    "estrelas": [
+      2
+    ]
+  },
+  "hero_category": "2+1",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_067_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 1 lucky stars against official draw 067/2026 (category 2+1).",
+  "recognized_at": "2026-08-21T21:28:02+00:00",
+  "registered_at": "2026-08-21T21:28:04+00:00"
+}

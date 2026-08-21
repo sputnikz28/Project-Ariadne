@@ -1,0 +1,42 @@
+{
+  "legend_id": "LEGEND-721f7dcf",
+  "source_prediction_id": "721f7dcf9692b979cfccc4b581d9a1fbc7d72937dcd11770b2f0e753443df32d",
+  "promotion_draw": "066/2026",
+  "promotion_draw_date": "2026-08-18",
+  "promotion_threshold": 3,
+  "promotion_tier": "LEGEND_TIER_4",
+  "criteria_version": "v1",
+  "promoted_at": "2026-08-21T21:28:06+00:00",
+  "promotion_hero_ids": [
+    "HERO-2026-062-604e13c7",
+    "HERO-2026-063-d847152e",
+    "HERO-2026-066-ac098619"
+  ],
+  "project_version": "V12",
+  "git_commit": "71be2592df9f355015ff30ccdefd4a4241b0306a",
+  "qualification_reason": "Promoted to Legend at draw 066/2026 (2026-08-18) by reaching 3 distinct qualifying draws as Hero (criteria_version: v1).",
+  "entity_id": "H-00716",
+  "entity_name": "Aruk dos Ossos",
+  "race": "Chefe Tribal",
+  "generation": 14,
+  "predicted_numeros": [
+    30,
+    35,
+    38,
+    40,
+    50
+  ],
+  "predicted_estrelas": [
+    3,
+    12
+  ],
+  "hero_count": 3,
+  "qualified_draws": 3,
+  "contributing_hero_ids": [
+    "HERO-2026-062-604e13c7",
+    "HERO-2026-063-d847152e",
+    "HERO-2026-066-ac098619"
+  ],
+  "provenance": "legacy",
+  "last_reevaluated_at": null
+}

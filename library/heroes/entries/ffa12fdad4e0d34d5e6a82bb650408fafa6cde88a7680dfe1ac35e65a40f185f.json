@@ -1,0 +1,81 @@
+{
+  "hero_id": "HERO-2026-066-ffa12fda",
+  "dedup_hash": "ffa12fdad4e0d34d5e6a82bb650408fafa6cde88a7680dfe1ac35e65a40f185f",
+  "source_prediction_id": "9359b8288944fa539701731f683cd14a44e3c4b6ca48fd86fc1f30b70f53ebf0",
+  "entity_id": "Forja Negra #8",
+  "entity_name": "Forja Negra #8",
+  "race": "Clã Anão",
+  "generation": 14,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "066/2026",
+  "draw_date": "2026-08-18",
+  "official_key": {
+    "numeros": [
+      3,
+      9,
+      38,
+      40,
+      50
+    ],
+    "estrelas": [
+      6,
+      10
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      3,
+      25,
+      34,
+      36,
+      40
+    ],
+    "estrelas": [
+      3,
+      6
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      3,
+      40
+    ],
+    "estrelas": [
+      6
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      9,
+      38,
+      50
+    ],
+    "estrelas": [
+      10
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      25,
+      34,
+      36
+    ],
+    "estrelas": [
+      3
+    ]
+  },
+  "hero_category": "2+1",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_067_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 1 lucky stars against official draw 066/2026 (category 2+1).",
+  "recognized_at": "2026-08-21T21:27:56+00:00",
+  "registered_at": "2026-08-21T21:27:58+00:00"
+}

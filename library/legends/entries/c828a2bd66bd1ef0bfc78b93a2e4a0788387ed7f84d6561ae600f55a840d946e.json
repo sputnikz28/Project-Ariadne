@@ -1,0 +1,42 @@
+{
+  "legend_id": "LEGEND-c828a2bd",
+  "source_prediction_id": "c828a2bd66bd1ef0bfc78b93a2e4a0788387ed7f84d6561ae600f55a840d946e",
+  "promotion_draw": "067/2026",
+  "promotion_draw_date": "2026-08-21",
+  "promotion_threshold": 3,
+  "promotion_tier": "LEGEND_TIER_4",
+  "criteria_version": "v1",
+  "promoted_at": "2026-08-21T21:28:06+00:00",
+  "promotion_hero_ids": [
+    "HERO-2026-063-8c7122c8",
+    "HERO-2026-066-afa8f212",
+    "HERO-2026-067-e5e3f68e"
+  ],
+  "project_version": "V12",
+  "git_commit": "71be2592df9f355015ff30ccdefd4a4241b0306a",
+  "qualification_reason": "Promoted to Legend at draw 067/2026 (2026-08-21) by reaching 3 distinct qualifying draws as Hero (criteria_version: v1).",
+  "entity_id": "H-00338",
+  "entity_name": "Selene da Lua Fria",
+  "race": "Chefe Tribal",
+  "generation": 7,
+  "predicted_numeros": [
+    19,
+    35,
+    38,
+    45,
+    50
+  ],
+  "predicted_estrelas": [
+    10,
+    12
+  ],
+  "hero_count": 3,
+  "qualified_draws": 3,
+  "contributing_hero_ids": [
+    "HERO-2026-063-8c7122c8",
+    "HERO-2026-066-afa8f212",
+    "HERO-2026-067-e5e3f68e"
+  ],
+  "provenance": "legacy",
+  "last_reevaluated_at": null
+}

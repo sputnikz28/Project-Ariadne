@@ -1,0 +1,81 @@
+{
+  "hero_id": "HERO-2026-067-7ea8157d",
+  "dedup_hash": "7ea8157d877b64047338f88acb73441bda3dbe7389a136eaa9d07b846ba2e9da",
+  "source_prediction_id": "34fb805a93390ae922e15597e247942ce82c1fd1e27ab9b7759365d6f37ecad8",
+  "entity_id": "H-00003",
+  "entity_name": "Selene do Bosque",
+  "race": "Esqueleto",
+  "generation": 8,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "067/2026",
+  "draw_date": "2026-08-21",
+  "official_key": {
+    "numeros": [
+      10,
+      14,
+      15,
+      19,
+      45
+    ],
+    "estrelas": [
+      4,
+      12
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      8,
+      10,
+      14,
+      16,
+      26
+    ],
+    "estrelas": [
+      11,
+      12
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      10,
+      14
+    ],
+    "estrelas": [
+      12
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      15,
+      19,
+      45
+    ],
+    "estrelas": [
+      4
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      8,
+      16,
+      26
+    ],
+    "estrelas": [
+      11
+    ]
+  },
+  "hero_category": "2+1",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_067_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 1 lucky stars against official draw 067/2026 (category 2+1).",
+  "recognized_at": "2026-08-21T21:28:02+00:00",
+  "registered_at": "2026-08-21T21:28:04+00:00"
+}

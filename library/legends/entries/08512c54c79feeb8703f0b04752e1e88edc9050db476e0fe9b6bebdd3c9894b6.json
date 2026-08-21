@@ -1,0 +1,42 @@
+{
+  "legend_id": "LEGEND-08512c54",
+  "source_prediction_id": "08512c54c79feeb8703f0b04752e1e88edc9050db476e0fe9b6bebdd3c9894b6",
+  "promotion_draw": "067/2026",
+  "promotion_draw_date": "2026-08-21",
+  "promotion_threshold": 3,
+  "promotion_tier": "LEGEND_TIER_4",
+  "criteria_version": "v1",
+  "promoted_at": "2026-08-21T21:28:06+00:00",
+  "promotion_hero_ids": [
+    "HERO-2026-059-9c4b32f2",
+    "HERO-2026-061-d0c969a4",
+    "HERO-2026-067-ce87f6db"
+  ],
+  "project_version": "V12",
+  "git_commit": "71be2592df9f355015ff30ccdefd4a4241b0306a",
+  "qualification_reason": "Promoted to Legend at draw 067/2026 (2026-08-21) by reaching 3 distinct qualifying draws as Hero (criteria_version: v1).",
+  "entity_id": "H-00539",
+  "entity_name": "Aruk dos Astros",
+  "race": "Bruxa",
+  "generation": 11,
+  "predicted_numeros": [
+    10,
+    36,
+    40,
+    45,
+    50
+  ],
+  "predicted_estrelas": [
+    3,
+    4
+  ],
+  "hero_count": 3,
+  "qualified_draws": 3,
+  "contributing_hero_ids": [
+    "HERO-2026-059-9c4b32f2",
+    "HERO-2026-061-d0c969a4",
+    "HERO-2026-067-ce87f6db"
+  ],
+  "provenance": "legacy",
+  "last_reevaluated_at": null
+}

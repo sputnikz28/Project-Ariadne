@@ -1,0 +1,80 @@
+{
+  "hero_id": "HERO-2026-067-b6b209fa",
+  "dedup_hash": "b6b209fab7f5910f92b9d48d0fee0711f2997c5bffbcbb25836087abb9f133eb",
+  "source_prediction_id": "6f1bd245a47fe0d30d05ce89212f06c5132f40f2b92bad78b343280bb08eca3b",
+  "entity_id": "H-00679",
+  "entity_name": "Aruk da Lua Fria",
+  "race": "Vidente",
+  "generation": 13,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "067/2026",
+  "draw_date": "2026-08-21",
+  "official_key": {
+    "numeros": [
+      10,
+      14,
+      15,
+      19,
+      45
+    ],
+    "estrelas": [
+      4,
+      12
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      10,
+      19,
+      37,
+      44,
+      45
+    ],
+    "estrelas": [
+      6,
+      8
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 0,
+  "exact_matched_values": {
+    "numeros": [
+      10,
+      19,
+      45
+    ],
+    "estrelas": []
+  },
+  "missed_winning_values": {
+    "numeros": [
+      14,
+      15
+    ],
+    "estrelas": [
+      4,
+      12
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      37,
+      44
+    ],
+    "estrelas": [
+      6,
+      8
+    ]
+  },
+  "hero_category": "3+0",
+  "hero_tier": "TIER_4",
+  "simulation_score": 38,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_067_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 0 lucky stars against official draw 067/2026 (category 3+0).",
+  "recognized_at": "2026-08-21T21:28:02+00:00",
+  "registered_at": "2026-08-21T21:28:04+00:00"
+}

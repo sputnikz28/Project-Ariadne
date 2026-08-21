@@ -1,0 +1,81 @@
+{
+  "hero_id": "HERO-2026-066-691baa2f",
+  "dedup_hash": "691baa2fd3d96ab55a1a4581568a79f6d8b69ada8d70c2ab47f085388ab72c14",
+  "source_prediction_id": "347529b5747f75961ab7312ada229a5797dbe2d9a3514f7250085763c0fceee7",
+  "entity_id": "H-00737",
+  "entity_name": "Gruk da Névoa",
+  "race": "Vidente",
+  "generation": 14,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "066/2026",
+  "draw_date": "2026-08-18",
+  "official_key": {
+    "numeros": [
+      3,
+      9,
+      38,
+      40,
+      50
+    ],
+    "estrelas": [
+      6,
+      10
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      38,
+      42,
+      48,
+      49,
+      50
+    ],
+    "estrelas": [
+      6,
+      8
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      38,
+      50
+    ],
+    "estrelas": [
+      6
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      3,
+      9,
+      40
+    ],
+    "estrelas": [
+      10
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      42,
+      48,
+      49
+    ],
+    "estrelas": [
+      8
+    ]
+  },
+  "hero_category": "2+1",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_067_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 1 lucky stars against official draw 066/2026 (category 2+1).",
+  "recognized_at": "2026-08-21T21:27:56+00:00",
+  "registered_at": "2026-08-21T21:28:00+00:00"
+}

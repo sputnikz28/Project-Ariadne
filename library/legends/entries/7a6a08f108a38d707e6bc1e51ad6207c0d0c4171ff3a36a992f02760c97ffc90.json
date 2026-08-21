@@ -1,0 +1,42 @@
+{
+  "legend_id": "LEGEND-7a6a08f1",
+  "source_prediction_id": "7a6a08f108a38d707e6bc1e51ad6207c0d0c4171ff3a36a992f02760c97ffc90",
+  "promotion_draw": "067/2026",
+  "promotion_draw_date": "2026-08-21",
+  "promotion_threshold": 3,
+  "promotion_tier": "LEGEND_TIER_4",
+  "criteria_version": "v1",
+  "promoted_at": "2026-08-21T21:28:06+00:00",
+  "promotion_hero_ids": [
+    "HERO-2026-058-4299fde0",
+    "HERO-2026-059-4d06ddcb",
+    "HERO-2026-067-c2674a93"
+  ],
+  "project_version": "V12",
+  "git_commit": "71be2592df9f355015ff30ccdefd4a4241b0306a",
+  "qualification_reason": "Promoted to Legend at draw 067/2026 (2026-08-21) by reaching 3 distinct qualifying draws as Hero (criteria_version: v1).",
+  "entity_id": "H-00370",
+  "entity_name": "Aruk da Névoa",
+  "race": "Bruxa",
+  "generation": 7,
+  "predicted_numeros": [
+    3,
+    8,
+    10,
+    14,
+    28
+  ],
+  "predicted_estrelas": [
+    4,
+    8
+  ],
+  "hero_count": 3,
+  "qualified_draws": 3,
+  "contributing_hero_ids": [
+    "HERO-2026-058-4299fde0",
+    "HERO-2026-059-4d06ddcb",
+    "HERO-2026-067-c2674a93"
+  ],
+  "provenance": "legacy",
+  "last_reevaluated_at": null
+}

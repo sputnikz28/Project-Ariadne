@@ -1,0 +1,42 @@
+{
+  "legend_id": "LEGEND-29084bc3",
+  "source_prediction_id": "29084bc3d6be232ed2d2e9d08daeea9930a2c8f1d481054044ce64a3db638532",
+  "promotion_draw": "067/2026",
+  "promotion_draw_date": "2026-08-21",
+  "promotion_threshold": 3,
+  "promotion_tier": "LEGEND_TIER_4",
+  "criteria_version": "v1",
+  "promoted_at": "2026-08-21T21:28:06+00:00",
+  "promotion_hero_ids": [
+    "HERO-2026-061-ca304d72",
+    "HERO-2026-065-94e55626",
+    "HERO-2026-067-98596ffc"
+  ],
+  "project_version": "V12",
+  "git_commit": "71be2592df9f355015ff30ccdefd4a4241b0306a",
+  "qualification_reason": "Promoted to Legend at draw 067/2026 (2026-08-21) by reaching 3 distinct qualifying draws as Hero (criteria_version: v1).",
+  "entity_id": "Clérigo-1",
+  "entity_name": "Clérigo-1",
+  "race": "Melfork",
+  "generation": 14,
+  "predicted_numeros": [
+    10,
+    23,
+    29,
+    44,
+    45
+  ],
+  "predicted_estrelas": [
+    4,
+    8
+  ],
+  "hero_count": 3,
+  "qualified_draws": 3,
+  "contributing_hero_ids": [
+    "HERO-2026-061-ca304d72",
+    "HERO-2026-065-94e55626",
+    "HERO-2026-067-98596ffc"
+  ],
+  "provenance": "legacy",
+  "last_reevaluated_at": null
+}

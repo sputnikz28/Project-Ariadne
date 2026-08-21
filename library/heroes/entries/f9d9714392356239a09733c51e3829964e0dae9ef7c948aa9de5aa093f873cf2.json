@@ -1,0 +1,80 @@
+{
+  "hero_id": "HERO-2026-067-f9d97143",
+  "dedup_hash": "f9d9714392356239a09733c51e3829964e0dae9ef7c948aa9de5aa093f873cf2",
+  "source_prediction_id": "bc28fcb28f1af8bd9d6a7aa489a27a67deb4fa1432ea4621c45ceb2fe2a22a5d",
+  "entity_id": "H-00705",
+  "entity_name": "Elarion do Bosque",
+  "race": "Vidente",
+  "generation": 14,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "067/2026",
+  "draw_date": "2026-08-21",
+  "official_key": {
+    "numeros": [
+      10,
+      14,
+      15,
+      19,
+      45
+    ],
+    "estrelas": [
+      4,
+      12
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      10,
+      14,
+      19,
+      21,
+      40
+    ],
+    "estrelas": [
+      3,
+      8
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 0,
+  "exact_matched_values": {
+    "numeros": [
+      10,
+      14,
+      19
+    ],
+    "estrelas": []
+  },
+  "missed_winning_values": {
+    "numeros": [
+      15,
+      45
+    ],
+    "estrelas": [
+      4,
+      12
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      21,
+      40
+    ],
+    "estrelas": [
+      3,
+      8
+    ]
+  },
+  "hero_category": "3+0",
+  "hero_tier": "TIER_4",
+  "simulation_score": 38,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_067_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 0 lucky stars against official draw 067/2026 (category 3+0).",
+  "recognized_at": "2026-08-21T21:28:02+00:00",
+  "registered_at": "2026-08-21T21:28:04+00:00"
+}

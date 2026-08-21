@@ -1,0 +1,80 @@
+{
+  "hero_id": "HERO-2026-066-9a681def",
+  "dedup_hash": "9a681def4d3aaa60a64a71007d590126d874bf653ac6337abfdfa3ddad5a66fd",
+  "source_prediction_id": "639190da188f5f3aa09ef3b01ad95a3a0a614204b8f7bb2d238260369c6592be",
+  "entity_id": "H-00086",
+  "entity_name": "Gruk da Névoa",
+  "race": "Elfo",
+  "generation": 2,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "066/2026",
+  "draw_date": "2026-08-18",
+  "official_key": {
+    "numeros": [
+      3,
+      9,
+      38,
+      40,
+      50
+    ],
+    "estrelas": [
+      6,
+      10
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      3,
+      21,
+      22,
+      38,
+      50
+    ],
+    "estrelas": [
+      5,
+      9
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 0,
+  "exact_matched_values": {
+    "numeros": [
+      3,
+      38,
+      50
+    ],
+    "estrelas": []
+  },
+  "missed_winning_values": {
+    "numeros": [
+      9,
+      40
+    ],
+    "estrelas": [
+      6,
+      10
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      21,
+      22
+    ],
+    "estrelas": [
+      5,
+      9
+    ]
+  },
+  "hero_category": "3+0",
+  "hero_tier": "TIER_4",
+  "simulation_score": 38,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_067_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 0 lucky stars against official draw 066/2026 (category 3+0).",
+  "recognized_at": "2026-08-21T21:27:56+00:00",
+  "registered_at": "2026-08-21T21:27:58+00:00"
+}

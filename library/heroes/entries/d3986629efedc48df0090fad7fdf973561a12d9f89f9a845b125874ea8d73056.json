@@ -1,0 +1,79 @@
+{
+  "hero_id": "HERO-2026-066-d3986629",
+  "dedup_hash": "d3986629efedc48df0090fad7fdf973561a12d9f89f9a845b125874ea8d73056",
+  "source_prediction_id": "21d337db41996b30de7c43e4a94b2fa8f20d17f0d1bf4b0f751c576d7ebdfd56",
+  "entity_id": "H-00674",
+  "entity_name": "Aion dos Ossos",
+  "race": "Bruxa",
+  "generation": 13,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "066/2026",
+  "draw_date": "2026-08-18",
+  "official_key": {
+    "numeros": [
+      3,
+      9,
+      38,
+      40,
+      50
+    ],
+    "estrelas": [
+      6,
+      10
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      9,
+      19,
+      32,
+      42,
+      45
+    ],
+    "estrelas": [
+      6,
+      10
+    ]
+  },
+  "matched_numbers_count": 1,
+  "matched_stars_count": 2,
+  "exact_matched_values": {
+    "numeros": [
+      9
+    ],
+    "estrelas": [
+      6,
+      10
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      3,
+      38,
+      40,
+      50
+    ],
+    "estrelas": []
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      19,
+      32,
+      42,
+      45
+    ],
+    "estrelas": []
+  },
+  "hero_category": "1+2",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_067_dataset_completo.json",
+  "qualification_reason": "Matched 1 main numbers and 2 lucky stars against official draw 066/2026 (category 1+2).",
+  "recognized_at": "2026-08-21T21:27:56+00:00",
+  "registered_at": "2026-08-21T21:28:00+00:00"
+}

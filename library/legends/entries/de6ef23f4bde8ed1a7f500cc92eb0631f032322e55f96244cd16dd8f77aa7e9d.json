@@ -1,0 +1,42 @@
+{
+  "legend_id": "LEGEND-de6ef23f",
+  "source_prediction_id": "de6ef23f4bde8ed1a7f500cc92eb0631f032322e55f96244cd16dd8f77aa7e9d",
+  "promotion_draw": "067/2026",
+  "promotion_draw_date": "2026-08-21",
+  "promotion_threshold": 3,
+  "promotion_tier": "LEGEND_TIER_4",
+  "criteria_version": "v1",
+  "promoted_at": "2026-08-21T21:28:06+00:00",
+  "promotion_hero_ids": [
+    "HERO-2026-056-86a14ce4",
+    "HERO-2026-061-8ce03742",
+    "HERO-2026-067-579c06c0"
+  ],
+  "project_version": "V12",
+  "git_commit": "71be2592df9f355015ff30ccdefd4a4241b0306a",
+  "qualification_reason": "Promoted to Legend at draw 067/2026 (2026-08-21) by reaching 3 distinct qualifying draws as Hero (criteria_version: v1).",
+  "entity_id": "H-00052",
+  "entity_name": "Kael do Bosque",
+  "race": "Vidente",
+  "generation": 1,
+  "predicted_numeros": [
+    10,
+    15,
+    31,
+    37,
+    45
+  ],
+  "predicted_estrelas": [
+    8,
+    9
+  ],
+  "hero_count": 3,
+  "qualified_draws": 3,
+  "contributing_hero_ids": [
+    "HERO-2026-056-86a14ce4",
+    "HERO-2026-061-8ce03742",
+    "HERO-2026-067-579c06c0"
+  ],
+  "provenance": "legacy",
+  "last_reevaluated_at": null
+}

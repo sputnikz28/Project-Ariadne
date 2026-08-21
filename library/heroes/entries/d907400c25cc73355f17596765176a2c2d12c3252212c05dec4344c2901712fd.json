@@ -1,0 +1,81 @@
+{
+  "hero_id": "HERO-2026-067-d907400c",
+  "dedup_hash": "d907400c25cc73355f17596765176a2c2d12c3252212c05dec4344c2901712fd",
+  "source_prediction_id": "a0dd07dc9d42d98bb82f3e253cc8a9d8fd6902d5a0adcae7280f4bcdb638d3d0",
+  "entity_id": "H-00144",
+  "entity_name": "Morgana do Bosque",
+  "race": "Bruxa",
+  "generation": 3,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "067/2026",
+  "draw_date": "2026-08-21",
+  "official_key": {
+    "numeros": [
+      10,
+      14,
+      15,
+      19,
+      45
+    ],
+    "estrelas": [
+      4,
+      12
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      14,
+      19,
+      25,
+      29,
+      43
+    ],
+    "estrelas": [
+      4,
+      8
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      14,
+      19
+    ],
+    "estrelas": [
+      4
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      10,
+      15,
+      45
+    ],
+    "estrelas": [
+      12
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      25,
+      29,
+      43
+    ],
+    "estrelas": [
+      8
+    ]
+  },
+  "hero_category": "2+1",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_067_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 1 lucky stars against official draw 067/2026 (category 2+1).",
+  "recognized_at": "2026-08-21T21:28:02+00:00",
+  "registered_at": "2026-08-21T21:28:04+00:00"
+}

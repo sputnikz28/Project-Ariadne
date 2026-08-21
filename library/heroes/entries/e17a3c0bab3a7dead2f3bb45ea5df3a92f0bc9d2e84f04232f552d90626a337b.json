@@ -1,0 +1,81 @@
+{
+  "hero_id": "HERO-2026-065-e17a3c0b",
+  "dedup_hash": "e17a3c0bab3a7dead2f3bb45ea5df3a92f0bc9d2e84f04232f552d90626a337b",
+  "source_prediction_id": "638683cc3c532ded9e271249c43c2b0992ee48a2ff60cecd491e5a874c2dfe1d",
+  "entity_id": "H-00035",
+  "entity_name": "Morgana dos Astros",
+  "race": "Elfo",
+  "generation": 2,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "065/2026",
+  "draw_date": "2026-08-14",
+  "official_key": {
+    "numeros": [
+      5,
+      29,
+      39,
+      48,
+      49
+    ],
+    "estrelas": [
+      4,
+      8
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      6,
+      20,
+      29,
+      36,
+      39
+    ],
+    "estrelas": [
+      6,
+      8
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      29,
+      39
+    ],
+    "estrelas": [
+      8
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      5,
+      48,
+      49
+    ],
+    "estrelas": [
+      4
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      6,
+      20,
+      36
+    ],
+    "estrelas": [
+      6
+    ]
+  },
+  "hero_category": "2+1",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_067_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 1 lucky stars against official draw 065/2026 (category 2+1).",
+  "recognized_at": "2026-08-21T21:27:51+00:00",
+  "registered_at": "2026-08-21T21:27:54+00:00"
+}

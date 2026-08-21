@@ -1,0 +1,42 @@
+{
+  "legend_id": "LEGEND-31346c88",
+  "source_prediction_id": "31346c882eacdb806e7772b9d52a43b375e59c23727a78a3679850d1085f7123",
+  "promotion_draw": "066/2026",
+  "promotion_draw_date": "2026-08-18",
+  "promotion_threshold": 3,
+  "promotion_tier": "LEGEND_TIER_4",
+  "criteria_version": "v1",
+  "promoted_at": "2026-08-21T21:28:06+00:00",
+  "promotion_hero_ids": [
+    "HERO-2026-057-32e454a3",
+    "HERO-2026-060-149238d6",
+    "HERO-2026-066-6a77c9b1"
+  ],
+  "project_version": "V12",
+  "git_commit": "71be2592df9f355015ff30ccdefd4a4241b0306a",
+  "qualification_reason": "Promoted to Legend at draw 066/2026 (2026-08-18) by reaching 3 distinct qualifying draws as Hero (criteria_version: v1).",
+  "entity_id": "H-00469",
+  "entity_name": "Morgana dos Astros",
+  "race": "Esqueleto",
+  "generation": 9,
+  "predicted_numeros": [
+    23,
+    30,
+    31,
+    38,
+    40
+  ],
+  "predicted_estrelas": [
+    10,
+    11
+  ],
+  "hero_count": 3,
+  "qualified_draws": 3,
+  "contributing_hero_ids": [
+    "HERO-2026-057-32e454a3",
+    "HERO-2026-060-149238d6",
+    "HERO-2026-066-6a77c9b1"
+  ],
+  "provenance": "legacy",
+  "last_reevaluated_at": null
+}

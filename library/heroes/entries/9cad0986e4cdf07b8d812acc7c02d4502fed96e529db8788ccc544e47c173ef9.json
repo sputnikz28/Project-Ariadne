@@ -1,0 +1,81 @@
+{
+  "hero_id": "HERO-2026-065-9cad0986",
+  "dedup_hash": "9cad0986e4cdf07b8d812acc7c02d4502fed96e529db8788ccc544e47c173ef9",
+  "source_prediction_id": "d8ab93b3c328caf9a9686ac8b657d8b04cadc3815a6ddebcc1b1aed827e96fa7",
+  "entity_id": "H-00378",
+  "entity_name": "Lyra do Bosque",
+  "race": "Chefe Tribal",
+  "generation": 7,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "065/2026",
+  "draw_date": "2026-08-14",
+  "official_key": {
+    "numeros": [
+      5,
+      29,
+      39,
+      48,
+      49
+    ],
+    "estrelas": [
+      4,
+      8
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      19,
+      29,
+      34,
+      39,
+      50
+    ],
+    "estrelas": [
+      1,
+      4
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      29,
+      39
+    ],
+    "estrelas": [
+      4
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      5,
+      48,
+      49
+    ],
+    "estrelas": [
+      8
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      19,
+      34,
+      50
+    ],
+    "estrelas": [
+      1
+    ]
+  },
+  "hero_category": "2+1",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_067_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 1 lucky stars against official draw 065/2026 (category 2+1).",
+  "recognized_at": "2026-08-21T21:27:51+00:00",
+  "registered_at": "2026-08-21T21:27:52+00:00"
+}

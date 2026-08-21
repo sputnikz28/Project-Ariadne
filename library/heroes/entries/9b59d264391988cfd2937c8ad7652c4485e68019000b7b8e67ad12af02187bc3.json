@@ -1,0 +1,80 @@
+{
+  "hero_id": "HERO-2026-067-9b59d264",
+  "dedup_hash": "9b59d264391988cfd2937c8ad7652c4485e68019000b7b8e67ad12af02187bc3",
+  "source_prediction_id": "cdcfdd5822ec02401ef7854c2c6279b75f943d7024ff73113f5011cdcc2ac38c",
+  "entity_id": "H-00626",
+  "entity_name": "Velka da Lua Fria",
+  "race": "Elfo",
+  "generation": 12,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "067/2026",
+  "draw_date": "2026-08-21",
+  "official_key": {
+    "numeros": [
+      10,
+      14,
+      15,
+      19,
+      45
+    ],
+    "estrelas": [
+      4,
+      12
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      10,
+      14,
+      19,
+      37,
+      44
+    ],
+    "estrelas": [
+      2,
+      4
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      10,
+      14,
+      19
+    ],
+    "estrelas": [
+      4
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      15,
+      45
+    ],
+    "estrelas": [
+      12
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      37,
+      44
+    ],
+    "estrelas": [
+      2
+    ]
+  },
+  "hero_category": "3+1",
+  "hero_tier": "TIER_4",
+  "simulation_score": 43,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_067_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 1 lucky stars against official draw 067/2026 (category 3+1).",
+  "recognized_at": "2026-08-21T21:28:02+00:00",
+  "registered_at": "2026-08-21T21:28:03+00:00"
+}

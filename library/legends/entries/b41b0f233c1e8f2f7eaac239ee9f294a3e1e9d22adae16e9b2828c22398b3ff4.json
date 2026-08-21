@@ -1,0 +1,42 @@
+{
+  "legend_id": "LEGEND-b41b0f23",
+  "source_prediction_id": "b41b0f233c1e8f2f7eaac239ee9f294a3e1e9d22adae16e9b2828c22398b3ff4",
+  "promotion_draw": "067/2026",
+  "promotion_draw_date": "2026-08-21",
+  "promotion_threshold": 3,
+  "promotion_tier": "LEGEND_TIER_4",
+  "criteria_version": "v1",
+  "promoted_at": "2026-08-21T21:28:06+00:00",
+  "promotion_hero_ids": [
+    "HERO-2026-059-1dd6970a",
+    "HERO-2026-061-9c4161d8",
+    "HERO-2026-067-9382b961"
+  ],
+  "project_version": "V12",
+  "git_commit": "71be2592df9f355015ff30ccdefd4a4241b0306a",
+  "qualification_reason": "Promoted to Legend at draw 067/2026 (2026-08-21) by reaching 3 distinct qualifying draws as Hero (criteria_version: v1).",
+  "entity_id": "H-00358",
+  "entity_name": "Thara da Lua Fria",
+  "race": "Vidente",
+  "generation": 7,
+  "predicted_numeros": [
+    1,
+    10,
+    20,
+    36,
+    45
+  ],
+  "predicted_estrelas": [
+    2,
+    4
+  ],
+  "hero_count": 3,
+  "qualified_draws": 3,
+  "contributing_hero_ids": [
+    "HERO-2026-059-1dd6970a",
+    "HERO-2026-061-9c4161d8",
+    "HERO-2026-067-9382b961"
+  ],
+  "provenance": "legacy",
+  "last_reevaluated_at": null
+}

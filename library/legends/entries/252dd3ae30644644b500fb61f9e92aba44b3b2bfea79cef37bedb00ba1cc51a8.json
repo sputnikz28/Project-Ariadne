@@ -1,0 +1,42 @@
+{
+  "legend_id": "LEGEND-252dd3ae",
+  "source_prediction_id": "252dd3ae30644644b500fb61f9e92aba44b3b2bfea79cef37bedb00ba1cc51a8",
+  "promotion_draw": "067/2026",
+  "promotion_draw_date": "2026-08-21",
+  "promotion_threshold": 3,
+  "promotion_tier": "LEGEND_TIER_4",
+  "criteria_version": "v1",
+  "promoted_at": "2026-08-21T21:28:06+00:00",
+  "promotion_hero_ids": [
+    "HERO-2026-056-38ac0167",
+    "HERO-2026-059-426c1bfb",
+    "HERO-2026-067-be0759b3"
+  ],
+  "project_version": "V12",
+  "git_commit": "71be2592df9f355015ff30ccdefd4a4241b0306a",
+  "qualification_reason": "Promoted to Legend at draw 067/2026 (2026-08-21) by reaching 3 distinct qualifying draws as Hero (criteria_version: v1).",
+  "entity_id": "H-00009",
+  "entity_name": "Aion da Lua Fria",
+  "race": "Bruxa",
+  "generation": 1,
+  "predicted_numeros": [
+    10,
+    16,
+    19,
+    40,
+    47
+  ],
+  "predicted_estrelas": [
+    4,
+    9
+  ],
+  "hero_count": 3,
+  "qualified_draws": 3,
+  "contributing_hero_ids": [
+    "HERO-2026-056-38ac0167",
+    "HERO-2026-059-426c1bfb",
+    "HERO-2026-067-be0759b3"
+  ],
+  "provenance": "legacy",
+  "last_reevaluated_at": null
+}

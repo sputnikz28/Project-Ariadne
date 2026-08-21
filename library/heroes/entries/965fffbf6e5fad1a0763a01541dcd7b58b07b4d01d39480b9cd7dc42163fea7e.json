@@ -1,0 +1,80 @@
+{
+  "hero_id": "HERO-2026-066-965fffbf",
+  "dedup_hash": "965fffbf6e5fad1a0763a01541dcd7b58b07b4d01d39480b9cd7dc42163fea7e",
+  "source_prediction_id": "580ba9de332810b19d5f717bd0b3cdffa9f4f66c5f104f558a12b976ba6b36ee",
+  "entity_id": "H-00099",
+  "entity_name": "Thara do Bosque",
+  "race": "Goblin",
+  "generation": 2,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "066/2026",
+  "draw_date": "2026-08-18",
+  "official_key": {
+    "numeros": [
+      3,
+      9,
+      38,
+      40,
+      50
+    ],
+    "estrelas": [
+      6,
+      10
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      15,
+      38,
+      39,
+      40,
+      50
+    ],
+    "estrelas": [
+      3,
+      12
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 0,
+  "exact_matched_values": {
+    "numeros": [
+      38,
+      40,
+      50
+    ],
+    "estrelas": []
+  },
+  "missed_winning_values": {
+    "numeros": [
+      3,
+      9
+    ],
+    "estrelas": [
+      6,
+      10
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      15,
+      39
+    ],
+    "estrelas": [
+      3,
+      12
+    ]
+  },
+  "hero_category": "3+0",
+  "hero_tier": "TIER_4",
+  "simulation_score": 38,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_067_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 0 lucky stars against official draw 066/2026 (category 3+0).",
+  "recognized_at": "2026-08-21T21:27:56+00:00",
+  "registered_at": "2026-08-21T21:27:57+00:00"
+}

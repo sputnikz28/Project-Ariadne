@@ -1,0 +1,81 @@
+{
+  "hero_id": "HERO-2026-066-082141f3",
+  "dedup_hash": "082141f318a0fefbf7fe2cc9ee6553fa140b797eb8c33614607bbdd6f9023b0f",
+  "source_prediction_id": "4c764072b1a116709c606bbd6dee85d433a6814e9f0568883fe9f2109462bb2e",
+  "entity_id": "H-00681",
+  "entity_name": "Morgana dos Ossos",
+  "race": "Goblin",
+  "generation": 13,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "066/2026",
+  "draw_date": "2026-08-18",
+  "official_key": {
+    "numeros": [
+      3,
+      9,
+      38,
+      40,
+      50
+    ],
+    "estrelas": [
+      6,
+      10
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      19,
+      23,
+      38,
+      44,
+      50
+    ],
+    "estrelas": [
+      4,
+      10
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      38,
+      50
+    ],
+    "estrelas": [
+      10
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      3,
+      9,
+      40
+    ],
+    "estrelas": [
+      6
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      19,
+      23,
+      44
+    ],
+    "estrelas": [
+      4
+    ]
+  },
+  "hero_category": "2+1",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_067_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 1 lucky stars against official draw 066/2026 (category 2+1).",
+  "recognized_at": "2026-08-21T21:27:56+00:00",
+  "registered_at": "2026-08-21T21:28:00+00:00"
+}

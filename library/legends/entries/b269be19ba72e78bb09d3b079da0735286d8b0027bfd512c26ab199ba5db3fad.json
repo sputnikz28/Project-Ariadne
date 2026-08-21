@@ -1,0 +1,42 @@
+{
+  "legend_id": "LEGEND-b269be19",
+  "source_prediction_id": "b269be19ba72e78bb09d3b079da0735286d8b0027bfd512c26ab199ba5db3fad",
+  "promotion_draw": "067/2026",
+  "promotion_draw_date": "2026-08-21",
+  "promotion_threshold": 3,
+  "promotion_tier": "LEGEND_TIER_4",
+  "criteria_version": "v1",
+  "promoted_at": "2026-08-21T21:28:06+00:00",
+  "promotion_hero_ids": [
+    "HERO-2026-056-a988fad1",
+    "HERO-2026-061-4d64660a",
+    "HERO-2026-067-89eeda1f"
+  ],
+  "project_version": "V12",
+  "git_commit": "71be2592df9f355015ff30ccdefd4a4241b0306a",
+  "qualification_reason": "Promoted to Legend at draw 067/2026 (2026-08-21) by reaching 3 distinct qualifying draws as Hero (criteria_version: v1).",
+  "entity_id": "H-00404",
+  "entity_name": "Morgana da Lua Fria",
+  "race": "Elfo",
+  "generation": 8,
+  "predicted_numeros": [
+    10,
+    25,
+    26,
+    42,
+    45
+  ],
+  "predicted_estrelas": [
+    4,
+    9
+  ],
+  "hero_count": 3,
+  "qualified_draws": 3,
+  "contributing_hero_ids": [
+    "HERO-2026-056-a988fad1",
+    "HERO-2026-061-4d64660a",
+    "HERO-2026-067-89eeda1f"
+  ],
+  "provenance": "legacy",
+  "last_reevaluated_at": null
+}

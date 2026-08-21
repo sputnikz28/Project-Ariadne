@@ -1,0 +1,80 @@
+{
+  "hero_id": "HERO-2026-067-8f0d8ae1",
+  "dedup_hash": "8f0d8ae1b0e9f110f6b677bffe92425d8f0f0d59e19268bc2e97b8d21fe6e533",
+  "source_prediction_id": "15382f4672d5ef2a2ae7a65fa558eda7af526e5544b0ec87bcd9bd87a11db06e",
+  "entity_id": "H-00692",
+  "entity_name": "Lyra da Névoa",
+  "race": "Vidente",
+  "generation": 13,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "067/2026",
+  "draw_date": "2026-08-21",
+  "official_key": {
+    "numeros": [
+      10,
+      14,
+      15,
+      19,
+      45
+    ],
+    "estrelas": [
+      4,
+      12
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      4,
+      14,
+      19,
+      37,
+      45
+    ],
+    "estrelas": [
+      2,
+      8
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 0,
+  "exact_matched_values": {
+    "numeros": [
+      14,
+      19,
+      45
+    ],
+    "estrelas": []
+  },
+  "missed_winning_values": {
+    "numeros": [
+      10,
+      15
+    ],
+    "estrelas": [
+      4,
+      12
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      4,
+      37
+    ],
+    "estrelas": [
+      2,
+      8
+    ]
+  },
+  "hero_category": "3+0",
+  "hero_tier": "TIER_4",
+  "simulation_score": 38,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_067_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 0 lucky stars against official draw 067/2026 (category 3+0).",
+  "recognized_at": "2026-08-21T21:28:02+00:00",
+  "registered_at": "2026-08-21T21:28:03+00:00"
+}

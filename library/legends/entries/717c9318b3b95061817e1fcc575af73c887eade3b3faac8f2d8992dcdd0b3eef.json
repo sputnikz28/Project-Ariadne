@@ -1,0 +1,42 @@
+{
+  "legend_id": "LEGEND-717c9318",
+  "source_prediction_id": "717c9318b3b95061817e1fcc575af73c887eade3b3faac8f2d8992dcdd0b3eef",
+  "promotion_draw": "067/2026",
+  "promotion_draw_date": "2026-08-21",
+  "promotion_threshold": 3,
+  "promotion_tier": "LEGEND_TIER_4",
+  "criteria_version": "v1",
+  "promoted_at": "2026-08-21T21:28:06+00:00",
+  "promotion_hero_ids": [
+    "HERO-2026-059-cceeb7fa",
+    "HERO-2026-061-17533187",
+    "HERO-2026-067-c7b59520"
+  ],
+  "project_version": "V12",
+  "git_commit": "71be2592df9f355015ff30ccdefd4a4241b0306a",
+  "qualification_reason": "Promoted to Legend at draw 067/2026 (2026-08-21) by reaching 3 distinct qualifying draws as Hero (criteria_version: v1).",
+  "entity_id": "H-00067",
+  "entity_name": "Aion dos Ossos",
+  "race": "Esqueleto",
+  "generation": 14,
+  "predicted_numeros": [
+    10,
+    15,
+    18,
+    30,
+    31
+  ],
+  "predicted_estrelas": [
+    3,
+    4
+  ],
+  "hero_count": 3,
+  "qualified_draws": 3,
+  "contributing_hero_ids": [
+    "HERO-2026-059-cceeb7fa",
+    "HERO-2026-061-17533187",
+    "HERO-2026-067-c7b59520"
+  ],
+  "provenance": "legacy",
+  "last_reevaluated_at": null
+}

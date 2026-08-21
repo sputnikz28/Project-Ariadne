@@ -1,0 +1,81 @@
+{
+  "hero_id": "HERO-2026-066-ee491858",
+  "dedup_hash": "ee491858481c287dad14285556bc6a6b7777b3d5278778e3565f17feabbee5e2",
+  "source_prediction_id": "bb53d18b7681b58fdf6cf5956b2af5f3e2b356929456c5fd2b459825727580d8",
+  "entity_id": "H-00502",
+  "entity_name": "Gruk do Bosque",
+  "race": "Chefe Tribal",
+  "generation": 10,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "066/2026",
+  "draw_date": "2026-08-18",
+  "official_key": {
+    "numeros": [
+      3,
+      9,
+      38,
+      40,
+      50
+    ],
+    "estrelas": [
+      6,
+      10
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      27,
+      29,
+      34,
+      38,
+      50
+    ],
+    "estrelas": [
+      9,
+      10
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      38,
+      50
+    ],
+    "estrelas": [
+      10
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      3,
+      9,
+      40
+    ],
+    "estrelas": [
+      6
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      27,
+      29,
+      34
+    ],
+    "estrelas": [
+      9
+    ]
+  },
+  "hero_category": "2+1",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_067_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 1 lucky stars against official draw 066/2026 (category 2+1).",
+  "recognized_at": "2026-08-21T21:27:56+00:00",
+  "registered_at": "2026-08-21T21:27:59+00:00"
+}

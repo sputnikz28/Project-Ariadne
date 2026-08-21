@@ -1,0 +1,80 @@
+{
+  "hero_id": "HERO-2026-065-aad25270",
+  "dedup_hash": "aad2527002a9ca003cbf0d5200b75fd2a6178da11ddaaec440f1cc1aa5a83e4b",
+  "source_prediction_id": "d7867fc743875dc284a76864aef9ea1282afef4ec408cdb2b80b777cf2584f6b",
+  "entity_id": "H-00550",
+  "entity_name": "Lyra dos Ossos",
+  "race": "Cronomante",
+  "generation": 11,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "065/2026",
+  "draw_date": "2026-08-14",
+  "official_key": {
+    "numeros": [
+      5,
+      29,
+      39,
+      48,
+      49
+    ],
+    "estrelas": [
+      4,
+      8
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      2,
+      29,
+      47,
+      48,
+      49
+    ],
+    "estrelas": [
+      10,
+      12
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 0,
+  "exact_matched_values": {
+    "numeros": [
+      29,
+      48,
+      49
+    ],
+    "estrelas": []
+  },
+  "missed_winning_values": {
+    "numeros": [
+      5,
+      39
+    ],
+    "estrelas": [
+      4,
+      8
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      2,
+      47
+    ],
+    "estrelas": [
+      10,
+      12
+    ]
+  },
+  "hero_category": "3+0",
+  "hero_tier": "TIER_4",
+  "simulation_score": 38,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_067_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 0 lucky stars against official draw 065/2026 (category 3+0).",
+  "recognized_at": "2026-08-21T21:27:51+00:00",
+  "registered_at": "2026-08-21T21:27:52+00:00"
+}

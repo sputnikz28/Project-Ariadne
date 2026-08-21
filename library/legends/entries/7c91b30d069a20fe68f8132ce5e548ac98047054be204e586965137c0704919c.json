@@ -1,0 +1,42 @@
+{
+  "legend_id": "LEGEND-7c91b30d",
+  "source_prediction_id": "7c91b30d069a20fe68f8132ce5e548ac98047054be204e586965137c0704919c",
+  "promotion_draw": "067/2026",
+  "promotion_draw_date": "2026-08-21",
+  "promotion_threshold": 3,
+  "promotion_tier": "LEGEND_TIER_4",
+  "criteria_version": "v1",
+  "promoted_at": "2026-08-21T21:28:06+00:00",
+  "promotion_hero_ids": [
+    "HERO-2026-059-b1b47e22",
+    "HERO-2026-061-f5d148ca",
+    "HERO-2026-067-c9351a3a"
+  ],
+  "project_version": "V12",
+  "git_commit": "71be2592df9f355015ff30ccdefd4a4241b0306a",
+  "qualification_reason": "Promoted to Legend at draw 067/2026 (2026-08-21) by reaching 3 distinct qualifying draws as Hero (criteria_version: v1).",
+  "entity_id": "H-00253",
+  "entity_name": "Elarion da Lua Fria",
+  "race": "Chefe Tribal",
+  "generation": 6,
+  "predicted_numeros": [
+    10,
+    23,
+    31,
+    36,
+    50
+  ],
+  "predicted_estrelas": [
+    4,
+    12
+  ],
+  "hero_count": 3,
+  "qualified_draws": 3,
+  "contributing_hero_ids": [
+    "HERO-2026-059-b1b47e22",
+    "HERO-2026-061-f5d148ca",
+    "HERO-2026-067-c9351a3a"
+  ],
+  "provenance": "legacy",
+  "last_reevaluated_at": null
+}

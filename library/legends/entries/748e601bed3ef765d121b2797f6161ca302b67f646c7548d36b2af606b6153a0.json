@@ -1,0 +1,42 @@
+{
+  "legend_id": "LEGEND-748e601b",
+  "source_prediction_id": "748e601bed3ef765d121b2797f6161ca302b67f646c7548d36b2af606b6153a0",
+  "promotion_draw": "067/2026",
+  "promotion_draw_date": "2026-08-21",
+  "promotion_threshold": 3,
+  "promotion_tier": "LEGEND_TIER_4",
+  "criteria_version": "v1",
+  "promoted_at": "2026-08-21T21:28:06+00:00",
+  "promotion_hero_ids": [
+    "HERO-2026-059-4cc1f040",
+    "HERO-2026-061-228cd28a",
+    "HERO-2026-067-7cd72bae"
+  ],
+  "project_version": "V12",
+  "git_commit": "71be2592df9f355015ff30ccdefd4a4241b0306a",
+  "qualification_reason": "Promoted to Legend at draw 067/2026 (2026-08-21) by reaching 3 distinct qualifying draws as Hero (criteria_version: v1).",
+  "entity_id": "H-00617",
+  "entity_name": "Elarion dos Astros",
+  "race": "Cronomante",
+  "generation": 12,
+  "predicted_numeros": [
+    10,
+    15,
+    29,
+    31,
+    36
+  ],
+  "predicted_estrelas": [
+    1,
+    4
+  ],
+  "hero_count": 3,
+  "qualified_draws": 3,
+  "contributing_hero_ids": [
+    "HERO-2026-059-4cc1f040",
+    "HERO-2026-061-228cd28a",
+    "HERO-2026-067-7cd72bae"
+  ],
+  "provenance": "legacy",
+  "last_reevaluated_at": null
+}

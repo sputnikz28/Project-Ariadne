@@ -1,0 +1,42 @@
+{
+  "legend_id": "LEGEND-e4d9cd60",
+  "source_prediction_id": "e4d9cd60b519a8d882c44ef737d6c5d07004763f78bce336f2d3f186f5542a44",
+  "promotion_draw": "067/2026",
+  "promotion_draw_date": "2026-08-21",
+  "promotion_threshold": 3,
+  "promotion_tier": "LEGEND_TIER_4",
+  "criteria_version": "v1",
+  "promoted_at": "2026-08-21T21:28:06+00:00",
+  "promotion_hero_ids": [
+    "HERO-2026-056-7987b1e0",
+    "HERO-2026-057-116da015",
+    "HERO-2026-067-1013f7e4"
+  ],
+  "project_version": "V12",
+  "git_commit": "71be2592df9f355015ff30ccdefd4a4241b0306a",
+  "qualification_reason": "Promoted to Legend at draw 067/2026 (2026-08-21) by reaching 3 distinct qualifying draws as Hero (criteria_version: v1).",
+  "entity_id": "H-00172",
+  "entity_name": "Velka da Lua Fria",
+  "race": "Bruxa",
+  "generation": 12,
+  "predicted_numeros": [
+    2,
+    10,
+    21,
+    40,
+    45
+  ],
+  "predicted_estrelas": [
+    9,
+    12
+  ],
+  "hero_count": 3,
+  "qualified_draws": 3,
+  "contributing_hero_ids": [
+    "HERO-2026-056-7987b1e0",
+    "HERO-2026-057-116da015",
+    "HERO-2026-067-1013f7e4"
+  ],
+  "provenance": "legacy",
+  "last_reevaluated_at": null
+}

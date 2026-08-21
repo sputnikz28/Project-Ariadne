@@ -1,0 +1,42 @@
+{
+  "legend_id": "LEGEND-15c3a69c",
+  "source_prediction_id": "15c3a69c0c62052a50914110f843e3c9f8730304e97fe4edd85606329084ed34",
+  "promotion_draw": "067/2026",
+  "promotion_draw_date": "2026-08-21",
+  "promotion_threshold": 3,
+  "promotion_tier": "LEGEND_TIER_4",
+  "criteria_version": "v1",
+  "promoted_at": "2026-08-21T21:28:06+00:00",
+  "promotion_hero_ids": [
+    "HERO-2026-059-cc391cbf",
+    "HERO-2026-061-1e397929",
+    "HERO-2026-067-9c771268"
+  ],
+  "project_version": "V12",
+  "git_commit": "71be2592df9f355015ff30ccdefd4a4241b0306a",
+  "qualification_reason": "Promoted to Legend at draw 067/2026 (2026-08-21) by reaching 3 distinct qualifying draws as Hero (criteria_version: v1).",
+  "entity_id": "H-00430",
+  "entity_name": "Aruk do Bosque",
+  "race": "Bruxa",
+  "generation": 8,
+  "predicted_numeros": [
+    10,
+    17,
+    36,
+    41,
+    45
+  ],
+  "predicted_estrelas": [
+    2,
+    4
+  ],
+  "hero_count": 3,
+  "qualified_draws": 3,
+  "contributing_hero_ids": [
+    "HERO-2026-059-cc391cbf",
+    "HERO-2026-061-1e397929",
+    "HERO-2026-067-9c771268"
+  ],
+  "provenance": "legacy",
+  "last_reevaluated_at": null
+}

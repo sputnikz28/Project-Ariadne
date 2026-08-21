@@ -1,0 +1,42 @@
+{
+  "legend_id": "LEGEND-66344fc3",
+  "source_prediction_id": "66344fc34beef26b7876d73b89c77bc0638ca7cdcae76e2131286baf8535bbbe",
+  "promotion_draw": "067/2026",
+  "promotion_draw_date": "2026-08-21",
+  "promotion_threshold": 3,
+  "promotion_tier": "LEGEND_TIER_4",
+  "criteria_version": "v1",
+  "promoted_at": "2026-08-21T21:28:06+00:00",
+  "promotion_hero_ids": [
+    "HERO-2026-056-999498fe",
+    "HERO-2026-059-e40abd06",
+    "HERO-2026-067-571530b3"
+  ],
+  "project_version": "V12",
+  "git_commit": "71be2592df9f355015ff30ccdefd4a4241b0306a",
+  "qualification_reason": "Promoted to Legend at draw 067/2026 (2026-08-21) by reaching 3 distinct qualifying draws as Hero (criteria_version: v1).",
+  "entity_id": "H-00004",
+  "entity_name": "Morgana Pedra-Partida",
+  "race": "Bruxa",
+  "generation": 11,
+  "predicted_numeros": [
+    10,
+    15,
+    42,
+    46,
+    47
+  ],
+  "predicted_estrelas": [
+    4,
+    6
+  ],
+  "hero_count": 3,
+  "qualified_draws": 3,
+  "contributing_hero_ids": [
+    "HERO-2026-056-999498fe",
+    "HERO-2026-059-e40abd06",
+    "HERO-2026-067-571530b3"
+  ],
+  "provenance": "legacy",
+  "last_reevaluated_at": null
+}

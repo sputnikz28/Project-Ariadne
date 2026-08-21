@@ -1,0 +1,80 @@
+{
+  "hero_id": "HERO-2026-067-b6f44d20",
+  "dedup_hash": "b6f44d2046618bba99b07b9c6ab9e003d12f87c7ab0a63b11ce5e0066664762a",
+  "source_prediction_id": "c618e9623e596936c1d1ed16bb10bbc839ba403a000e4d34adb6f2e187eaab7d",
+  "entity_id": "H-00485",
+  "entity_name": "Lyra dos Ossos",
+  "race": "Goblin",
+  "generation": 9,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "067/2026",
+  "draw_date": "2026-08-21",
+  "official_key": {
+    "numeros": [
+      10,
+      14,
+      15,
+      19,
+      45
+    ],
+    "estrelas": [
+      4,
+      12
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      2,
+      11,
+      14,
+      19,
+      45
+    ],
+    "estrelas": [
+      11,
+      12
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      14,
+      19,
+      45
+    ],
+    "estrelas": [
+      12
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      10,
+      15
+    ],
+    "estrelas": [
+      4
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      2,
+      11
+    ],
+    "estrelas": [
+      11
+    ]
+  },
+  "hero_category": "3+1",
+  "hero_tier": "TIER_4",
+  "simulation_score": 43,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_067_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 1 lucky stars against official draw 067/2026 (category 3+1).",
+  "recognized_at": "2026-08-21T21:28:02+00:00",
+  "registered_at": "2026-08-21T21:28:04+00:00"
+}

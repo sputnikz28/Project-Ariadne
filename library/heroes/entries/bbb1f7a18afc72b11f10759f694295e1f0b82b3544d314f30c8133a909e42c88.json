@@ -1,0 +1,80 @@
+{
+  "hero_id": "HERO-2026-065-bbb1f7a1",
+  "dedup_hash": "bbb1f7a18afc72b11f10759f694295e1f0b82b3544d314f30c8133a909e42c88",
+  "source_prediction_id": "6332362ef1e33a99610e93884d1ef7b71a94423a34e6ca8c6a5abc6b3e563984",
+  "entity_id": "Axiomantes de Nemerion",
+  "entity_name": "Axiomantes de Nemerion",
+  "race": "Axiomante",
+  "generation": 14,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "065/2026",
+  "draw_date": "2026-08-14",
+  "official_key": {
+    "numeros": [
+      5,
+      29,
+      39,
+      48,
+      49
+    ],
+    "estrelas": [
+      4,
+      8
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      5,
+      10,
+      29,
+      39,
+      42
+    ],
+    "estrelas": [
+      5,
+      6
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 0,
+  "exact_matched_values": {
+    "numeros": [
+      5,
+      29,
+      39
+    ],
+    "estrelas": []
+  },
+  "missed_winning_values": {
+    "numeros": [
+      48,
+      49
+    ],
+    "estrelas": [
+      4,
+      8
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      10,
+      42
+    ],
+    "estrelas": [
+      5,
+      6
+    ]
+  },
+  "hero_category": "3+0",
+  "hero_tier": "TIER_4",
+  "simulation_score": 38,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_067_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 0 lucky stars against official draw 065/2026 (category 3+0).",
+  "recognized_at": "2026-08-21T21:27:51+00:00",
+  "registered_at": "2026-08-21T21:27:53+00:00"
+}

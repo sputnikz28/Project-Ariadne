@@ -1,0 +1,42 @@
+{
+  "legend_id": "LEGEND-ca209b70",
+  "source_prediction_id": "ca209b70e73fcf89b99202bb3d2b38febe2aad421c3eef86f684548456c80f3e",
+  "promotion_draw": "066/2026",
+  "promotion_draw_date": "2026-08-18",
+  "promotion_threshold": 3,
+  "promotion_tier": "LEGEND_TIER_4",
+  "criteria_version": "v1",
+  "promoted_at": "2026-08-21T21:28:06+00:00",
+  "promotion_hero_ids": [
+    "HERO-2026-058-a468d3cb",
+    "HERO-2026-064-95b2a11c",
+    "HERO-2026-066-c87f011c"
+  ],
+  "project_version": "V12",
+  "git_commit": "71be2592df9f355015ff30ccdefd4a4241b0306a",
+  "qualification_reason": "Promoted to Legend at draw 066/2026 (2026-08-18) by reaching 3 distinct qualifying draws as Hero (criteria_version: v1).",
+  "entity_id": "H-00446",
+  "entity_name": "Gruk dos Ossos",
+  "race": "Bruxa",
+  "generation": 9,
+  "predicted_numeros": [
+    3,
+    31,
+    38,
+    39,
+    50
+  ],
+  "predicted_estrelas": [
+    1,
+    2
+  ],
+  "hero_count": 3,
+  "qualified_draws": 3,
+  "contributing_hero_ids": [
+    "HERO-2026-058-a468d3cb",
+    "HERO-2026-064-95b2a11c",
+    "HERO-2026-066-c87f011c"
+  ],
+  "provenance": "legacy",
+  "last_reevaluated_at": null
+}

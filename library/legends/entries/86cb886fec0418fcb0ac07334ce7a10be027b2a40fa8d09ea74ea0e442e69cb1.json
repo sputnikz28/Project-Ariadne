@@ -1,0 +1,42 @@
+{
+  "legend_id": "LEGEND-86cb886f",
+  "source_prediction_id": "86cb886fec0418fcb0ac07334ce7a10be027b2a40fa8d09ea74ea0e442e69cb1",
+  "promotion_draw": "067/2026",
+  "promotion_draw_date": "2026-08-21",
+  "promotion_threshold": 3,
+  "promotion_tier": "LEGEND_TIER_4",
+  "criteria_version": "v1",
+  "promoted_at": "2026-08-21T21:28:06+00:00",
+  "promotion_hero_ids": [
+    "HERO-2026-059-7af2d426",
+    "HERO-2026-061-996d9020",
+    "HERO-2026-067-152fecbe"
+  ],
+  "project_version": "V12",
+  "git_commit": "71be2592df9f355015ff30ccdefd4a4241b0306a",
+  "qualification_reason": "Promoted to Legend at draw 067/2026 (2026-08-21) by reaching 3 distinct qualifying draws as Hero (criteria_version: v1).",
+  "entity_id": "H-00106",
+  "entity_name": "Elarion da Névoa",
+  "race": "Cronomante",
+  "generation": 2,
+  "predicted_numeros": [
+    10,
+    15,
+    29,
+    31,
+    36
+  ],
+  "predicted_estrelas": [
+    1,
+    4
+  ],
+  "hero_count": 3,
+  "qualified_draws": 3,
+  "contributing_hero_ids": [
+    "HERO-2026-059-7af2d426",
+    "HERO-2026-061-996d9020",
+    "HERO-2026-067-152fecbe"
+  ],
+  "provenance": "legacy",
+  "last_reevaluated_at": null
+}

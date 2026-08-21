@@ -1,0 +1,81 @@
+{
+  "hero_id": "HERO-2026-066-6f66d846",
+  "dedup_hash": "6f66d8466594d21b7a11aa520e38a982f07b2dd32548bc256a4c57278a7bec49",
+  "source_prediction_id": "7b2bc23b326f490e5e6a2dc18a9829bb428c2eb2b7188abb0a7383e867c75ea4",
+  "entity_id": "H-00083",
+  "entity_name": "Gruk da Lua Fria",
+  "race": "Chefe Tribal",
+  "generation": 2,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "066/2026",
+  "draw_date": "2026-08-18",
+  "official_key": {
+    "numeros": [
+      3,
+      9,
+      38,
+      40,
+      50
+    ],
+    "estrelas": [
+      6,
+      10
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      4,
+      29,
+      36,
+      38,
+      50
+    ],
+    "estrelas": [
+      7,
+      10
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      38,
+      50
+    ],
+    "estrelas": [
+      10
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      3,
+      9,
+      40
+    ],
+    "estrelas": [
+      6
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      4,
+      29,
+      36
+    ],
+    "estrelas": [
+      7
+    ]
+  },
+  "hero_category": "2+1",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_067_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 1 lucky stars against official draw 066/2026 (category 2+1).",
+  "recognized_at": "2026-08-21T21:27:56+00:00",
+  "registered_at": "2026-08-21T21:27:58+00:00"
+}

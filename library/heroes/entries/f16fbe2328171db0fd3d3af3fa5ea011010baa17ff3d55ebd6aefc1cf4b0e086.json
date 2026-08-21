@@ -1,0 +1,81 @@
+{
+  "hero_id": "HERO-2026-066-f16fbe23",
+  "dedup_hash": "f16fbe2328171db0fd3d3af3fa5ea011010baa17ff3d55ebd6aefc1cf4b0e086",
+  "source_prediction_id": "21cd757023cd585ed6842ba86ba8e416c4f47aa9339fd21310e292e56b5013fc",
+  "entity_id": "H-00228",
+  "entity_name": "Velka da Lua Fria",
+  "race": "Cronomante",
+  "generation": 4,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "066/2026",
+  "draw_date": "2026-08-18",
+  "official_key": {
+    "numeros": [
+      3,
+      9,
+      38,
+      40,
+      50
+    ],
+    "estrelas": [
+      6,
+      10
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      7,
+      9,
+      19,
+      26,
+      50
+    ],
+    "estrelas": [
+      3,
+      10
+    ]
+  },
+  "matched_numbers_count": 2,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      9,
+      50
+    ],
+    "estrelas": [
+      10
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      3,
+      38,
+      40
+    ],
+    "estrelas": [
+      6
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      7,
+      19,
+      26
+    ],
+    "estrelas": [
+      3
+    ]
+  },
+  "hero_category": "2+1",
+  "hero_tier": "TIER_5",
+  "simulation_score": 25,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_067_dataset_completo.json",
+  "qualification_reason": "Matched 2 main numbers and 1 lucky stars against official draw 066/2026 (category 2+1).",
+  "recognized_at": "2026-08-21T21:27:56+00:00",
+  "registered_at": "2026-08-21T21:27:57+00:00"
+}

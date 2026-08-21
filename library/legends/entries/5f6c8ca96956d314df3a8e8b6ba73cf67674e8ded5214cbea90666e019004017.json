@@ -1,0 +1,42 @@
+{
+  "legend_id": "LEGEND-5f6c8ca9",
+  "source_prediction_id": "5f6c8ca96956d314df3a8e8b6ba73cf67674e8ded5214cbea90666e019004017",
+  "promotion_draw": "067/2026",
+  "promotion_draw_date": "2026-08-21",
+  "promotion_threshold": 3,
+  "promotion_tier": "LEGEND_TIER_4",
+  "criteria_version": "v1",
+  "promoted_at": "2026-08-21T21:28:06+00:00",
+  "promotion_hero_ids": [
+    "HERO-2026-059-7a7c6eaa",
+    "HERO-2026-061-06e01116",
+    "HERO-2026-067-675892da"
+  ],
+  "project_version": "V12",
+  "git_commit": "71be2592df9f355015ff30ccdefd4a4241b0306a",
+  "qualification_reason": "Promoted to Legend at draw 067/2026 (2026-08-21) by reaching 3 distinct qualifying draws as Hero (criteria_version: v1).",
+  "entity_id": "H-00321",
+  "entity_name": "Elarion da Lua Fria",
+  "race": "Vidente",
+  "generation": 6,
+  "predicted_numeros": [
+    10,
+    15,
+    31,
+    33,
+    36
+  ],
+  "predicted_estrelas": [
+    4,
+    6
+  ],
+  "hero_count": 3,
+  "qualified_draws": 3,
+  "contributing_hero_ids": [
+    "HERO-2026-059-7a7c6eaa",
+    "HERO-2026-061-06e01116",
+    "HERO-2026-067-675892da"
+  ],
+  "provenance": "legacy",
+  "last_reevaluated_at": null
+}

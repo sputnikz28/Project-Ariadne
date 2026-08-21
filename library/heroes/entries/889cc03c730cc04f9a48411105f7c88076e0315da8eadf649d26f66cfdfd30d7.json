@@ -1,0 +1,80 @@
+{
+  "hero_id": "HERO-2026-067-889cc03c",
+  "dedup_hash": "889cc03c730cc04f9a48411105f7c88076e0315da8eadf649d26f66cfdfd30d7",
+  "source_prediction_id": "13d49197e5d876c287255d2b60bc011b49128a90a6e917c91a217745e2b8e474",
+  "entity_id": "H-00025",
+  "entity_name": "Gruk do Bosque",
+  "race": "Goblin",
+  "generation": 2,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "067/2026",
+  "draw_date": "2026-08-21",
+  "official_key": {
+    "numeros": [
+      10,
+      14,
+      15,
+      19,
+      45
+    ],
+    "estrelas": [
+      4,
+      12
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      4,
+      10,
+      14,
+      38,
+      45
+    ],
+    "estrelas": [
+      8,
+      12
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      10,
+      14,
+      45
+    ],
+    "estrelas": [
+      12
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      15,
+      19
+    ],
+    "estrelas": [
+      4
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      4,
+      38
+    ],
+    "estrelas": [
+      8
+    ]
+  },
+  "hero_category": "3+1",
+  "hero_tier": "TIER_4",
+  "simulation_score": 43,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_067_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 1 lucky stars against official draw 067/2026 (category 3+1).",
+  "recognized_at": "2026-08-21T21:28:02+00:00",
+  "registered_at": "2026-08-21T21:28:04+00:00"
+}

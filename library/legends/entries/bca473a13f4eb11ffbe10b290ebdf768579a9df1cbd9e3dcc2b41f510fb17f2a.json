@@ -1,0 +1,42 @@
+{
+  "legend_id": "LEGEND-bca473a1",
+  "source_prediction_id": "bca473a13f4eb11ffbe10b290ebdf768579a9df1cbd9e3dcc2b41f510fb17f2a",
+  "promotion_draw": "067/2026",
+  "promotion_draw_date": "2026-08-21",
+  "promotion_threshold": 3,
+  "promotion_tier": "LEGEND_TIER_4",
+  "criteria_version": "v1",
+  "promoted_at": "2026-08-21T21:28:06+00:00",
+  "promotion_hero_ids": [
+    "HERO-2026-056-484a41f7",
+    "HERO-2026-061-417a2c01",
+    "HERO-2026-067-f5f36998"
+  ],
+  "project_version": "V12",
+  "git_commit": "71be2592df9f355015ff30ccdefd4a4241b0306a",
+  "qualification_reason": "Promoted to Legend at draw 067/2026 (2026-08-21) by reaching 3 distinct qualifying draws as Hero (criteria_version: v1).",
+  "entity_id": "H-00034",
+  "entity_name": "Lyra Pedra-Partida",
+  "race": "Vidente",
+  "generation": 5,
+  "predicted_numeros": [
+    10,
+    19,
+    24,
+    45,
+    47
+  ],
+  "predicted_estrelas": [
+    2,
+    3
+  ],
+  "hero_count": 3,
+  "qualified_draws": 3,
+  "contributing_hero_ids": [
+    "HERO-2026-056-484a41f7",
+    "HERO-2026-061-417a2c01",
+    "HERO-2026-067-f5f36998"
+  ],
+  "provenance": "legacy",
+  "last_reevaluated_at": null
+}

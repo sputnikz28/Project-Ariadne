@@ -1,0 +1,42 @@
+{
+  "legend_id": "LEGEND-31c25c8f",
+  "source_prediction_id": "31c25c8fa9ada894f5fd3b8387d6131898c079fd87defb5cbe96bd1ae9a74953",
+  "promotion_draw": "067/2026",
+  "promotion_draw_date": "2026-08-21",
+  "promotion_threshold": 3,
+  "promotion_tier": "LEGEND_TIER_4",
+  "criteria_version": "v1",
+  "promoted_at": "2026-08-21T21:28:06+00:00",
+  "promotion_hero_ids": [
+    "HERO-2026-056-3694598d",
+    "HERO-2026-059-086e95e7",
+    "HERO-2026-067-59f83c35"
+  ],
+  "project_version": "V12",
+  "git_commit": "71be2592df9f355015ff30ccdefd4a4241b0306a",
+  "qualification_reason": "Promoted to Legend at draw 067/2026 (2026-08-21) by reaching 3 distinct qualifying draws as Hero (criteria_version: v1).",
+  "entity_id": "H-00095",
+  "entity_name": "Lyra da Lua Fria",
+  "race": "Bruxa",
+  "generation": 2,
+  "predicted_numeros": [
+    10,
+    19,
+    33,
+    45,
+    47
+  ],
+  "predicted_estrelas": [
+    1,
+    2
+  ],
+  "hero_count": 3,
+  "qualified_draws": 3,
+  "contributing_hero_ids": [
+    "HERO-2026-056-3694598d",
+    "HERO-2026-059-086e95e7",
+    "HERO-2026-067-59f83c35"
+  ],
+  "provenance": "legacy",
+  "last_reevaluated_at": null
+}

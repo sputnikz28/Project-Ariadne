@@ -1,0 +1,80 @@
+{
+  "hero_id": "HERO-2026-066-ce337dbf",
+  "dedup_hash": "ce337dbffa5750e2f5def4f83c0d7ae238951f8950e0887b4006c9dac73f57a7",
+  "source_prediction_id": "d0bf35079c01beb40f34abb430a4aa268d99ff328e60061974d305c44e866297",
+  "entity_id": "H-00243",
+  "entity_name": "Aion dos Ossos",
+  "race": "Chefe Tribal",
+  "generation": 5,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "066/2026",
+  "draw_date": "2026-08-18",
+  "official_key": {
+    "numeros": [
+      3,
+      9,
+      38,
+      40,
+      50
+    ],
+    "estrelas": [
+      6,
+      10
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      3,
+      24,
+      38,
+      45,
+      50
+    ],
+    "estrelas": [
+      6,
+      11
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      3,
+      38,
+      50
+    ],
+    "estrelas": [
+      6
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      9,
+      40
+    ],
+    "estrelas": [
+      10
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      24,
+      45
+    ],
+    "estrelas": [
+      11
+    ]
+  },
+  "hero_category": "3+1",
+  "hero_tier": "TIER_4",
+  "simulation_score": 43,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_067_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 1 lucky stars against official draw 066/2026 (category 3+1).",
+  "recognized_at": "2026-08-21T21:27:56+00:00",
+  "registered_at": "2026-08-21T21:27:59+00:00"
+}

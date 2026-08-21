@@ -1,0 +1,42 @@
+{
+  "legend_id": "LEGEND-373d60c9",
+  "source_prediction_id": "373d60c9d879b2d80f1db2128fa9066402ec8f6c8394ebc19271f5d67255bd4c",
+  "promotion_draw": "066/2026",
+  "promotion_draw_date": "2026-08-18",
+  "promotion_threshold": 3,
+  "promotion_tier": "LEGEND_TIER_4",
+  "criteria_version": "v1",
+  "promoted_at": "2026-08-21T21:28:06+00:00",
+  "promotion_hero_ids": [
+    "HERO-2026-057-b94cdaad",
+    "HERO-2026-062-3e77dd11",
+    "HERO-2026-066-b963e982"
+  ],
+  "project_version": "V12",
+  "git_commit": "71be2592df9f355015ff30ccdefd4a4241b0306a",
+  "qualification_reason": "Promoted to Legend at draw 066/2026 (2026-08-18) by reaching 3 distinct qualifying draws as Hero (criteria_version: v1).",
+  "entity_id": "H-00169",
+  "entity_name": "Gruk Pedra-Partida",
+  "race": "Bruxa",
+  "generation": 3,
+  "predicted_numeros": [
+    30,
+    37,
+    40,
+    46,
+    50
+  ],
+  "predicted_estrelas": [
+    9,
+    10
+  ],
+  "hero_count": 3,
+  "qualified_draws": 3,
+  "contributing_hero_ids": [
+    "HERO-2026-057-b94cdaad",
+    "HERO-2026-062-3e77dd11",
+    "HERO-2026-066-b963e982"
+  ],
+  "provenance": "legacy",
+  "last_reevaluated_at": null
+}

@@ -1,0 +1,80 @@
+{
+  "hero_id": "HERO-2026-065-9adf9b3b",
+  "dedup_hash": "9adf9b3b8e5c1d52627f26c33d9e464c7e696365bc73d5b9e280e7f724a436bb",
+  "source_prediction_id": "7e83c20304336e0bcde93ff1e5113044ac9ca45595bd340027732daef5bdb0bd",
+  "entity_id": "H-00699",
+  "entity_name": "Thara dos Ossos",
+  "race": "Elfo",
+  "generation": 14,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "065/2026",
+  "draw_date": "2026-08-14",
+  "official_key": {
+    "numeros": [
+      5,
+      29,
+      39,
+      48,
+      49
+    ],
+    "estrelas": [
+      4,
+      8
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      5,
+      14,
+      29,
+      40,
+      49
+    ],
+    "estrelas": [
+      6,
+      9
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 0,
+  "exact_matched_values": {
+    "numeros": [
+      5,
+      29,
+      49
+    ],
+    "estrelas": []
+  },
+  "missed_winning_values": {
+    "numeros": [
+      39,
+      48
+    ],
+    "estrelas": [
+      4,
+      8
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      14,
+      40
+    ],
+    "estrelas": [
+      6,
+      9
+    ]
+  },
+  "hero_category": "3+0",
+  "hero_tier": "TIER_4",
+  "simulation_score": 38,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_067_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 0 lucky stars against official draw 065/2026 (category 3+0).",
+  "recognized_at": "2026-08-21T21:27:51+00:00",
+  "registered_at": "2026-08-21T21:27:54+00:00"
+}

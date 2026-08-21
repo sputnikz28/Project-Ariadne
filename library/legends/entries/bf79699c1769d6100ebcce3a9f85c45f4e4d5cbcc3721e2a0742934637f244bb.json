@@ -1,0 +1,42 @@
+{
+  "legend_id": "LEGEND-bf79699c",
+  "source_prediction_id": "bf79699c1769d6100ebcce3a9f85c45f4e4d5cbcc3721e2a0742934637f244bb",
+  "promotion_draw": "067/2026",
+  "promotion_draw_date": "2026-08-21",
+  "promotion_threshold": 3,
+  "promotion_tier": "LEGEND_TIER_4",
+  "criteria_version": "v1",
+  "promoted_at": "2026-08-21T21:28:06+00:00",
+  "promotion_hero_ids": [
+    "HERO-2026-059-e333687b",
+    "HERO-2026-061-1df586d4",
+    "HERO-2026-067-bbfac7d0"
+  ],
+  "project_version": "V12",
+  "git_commit": "71be2592df9f355015ff30ccdefd4a4241b0306a",
+  "qualification_reason": "Promoted to Legend at draw 067/2026 (2026-08-21) by reaching 3 distinct qualifying draws as Hero (criteria_version: v1).",
+  "entity_id": "H-00393",
+  "entity_name": "Aion Pedra-Partida",
+  "race": "Cronomante",
+  "generation": 8,
+  "predicted_numeros": [
+    10,
+    15,
+    29,
+    31,
+    36
+  ],
+  "predicted_estrelas": [
+    1,
+    4
+  ],
+  "hero_count": 3,
+  "qualified_draws": 3,
+  "contributing_hero_ids": [
+    "HERO-2026-059-e333687b",
+    "HERO-2026-061-1df586d4",
+    "HERO-2026-067-bbfac7d0"
+  ],
+  "provenance": "legacy",
+  "last_reevaluated_at": null
+}

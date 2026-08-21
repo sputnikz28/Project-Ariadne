@@ -1,0 +1,42 @@
+{
+  "legend_id": "LEGEND-c2a443b1",
+  "source_prediction_id": "c2a443b1942ce76ffa52b58e746791dd003c3cb6a93f24594835a16e00a5be97",
+  "promotion_draw": "067/2026",
+  "promotion_draw_date": "2026-08-21",
+  "promotion_threshold": 3,
+  "promotion_tier": "LEGEND_TIER_4",
+  "criteria_version": "v1",
+  "promoted_at": "2026-08-21T21:28:06+00:00",
+  "promotion_hero_ids": [
+    "HERO-2026-056-442fe58b",
+    "HERO-2026-061-ec592f2f",
+    "HERO-2026-067-a218b55e"
+  ],
+  "project_version": "V12",
+  "git_commit": "71be2592df9f355015ff30ccdefd4a4241b0306a",
+  "qualification_reason": "Promoted to Legend at draw 067/2026 (2026-08-21) by reaching 3 distinct qualifying draws as Hero (criteria_version: v1).",
+  "entity_id": "H-00731",
+  "entity_name": "Velka dos Ossos",
+  "race": "Vidente",
+  "generation": 14,
+  "predicted_numeros": [
+    10,
+    19,
+    25,
+    45,
+    47
+  ],
+  "predicted_estrelas": [
+    6,
+    8
+  ],
+  "hero_count": 3,
+  "qualified_draws": 3,
+  "contributing_hero_ids": [
+    "HERO-2026-056-442fe58b",
+    "HERO-2026-061-ec592f2f",
+    "HERO-2026-067-a218b55e"
+  ],
+  "provenance": "legacy",
+  "last_reevaluated_at": null
+}

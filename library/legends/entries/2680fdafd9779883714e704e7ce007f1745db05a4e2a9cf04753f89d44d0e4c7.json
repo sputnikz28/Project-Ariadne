@@ -1,0 +1,42 @@
+{
+  "legend_id": "LEGEND-2680fdaf",
+  "source_prediction_id": "2680fdafd9779883714e704e7ce007f1745db05a4e2a9cf04753f89d44d0e4c7",
+  "promotion_draw": "067/2026",
+  "promotion_draw_date": "2026-08-21",
+  "promotion_threshold": 3,
+  "promotion_tier": "LEGEND_TIER_4",
+  "criteria_version": "v1",
+  "promoted_at": "2026-08-21T21:28:06+00:00",
+  "promotion_hero_ids": [
+    "HERO-2026-059-c68892a3",
+    "HERO-2026-065-4a6ddf08",
+    "HERO-2026-067-decf5c5e"
+  ],
+  "project_version": "V12",
+  "git_commit": "71be2592df9f355015ff30ccdefd4a4241b0306a",
+  "qualification_reason": "Promoted to Legend at draw 067/2026 (2026-08-21) by reaching 3 distinct qualifying draws as Hero (criteria_version: v1).",
+  "entity_id": "H-00577",
+  "entity_name": "Aruk da Lua Fria",
+  "race": "Bruxa",
+  "generation": 11,
+  "predicted_numeros": [
+    9,
+    10,
+    19,
+    36,
+    48
+  ],
+  "predicted_estrelas": [
+    4,
+    8
+  ],
+  "hero_count": 3,
+  "qualified_draws": 3,
+  "contributing_hero_ids": [
+    "HERO-2026-059-c68892a3",
+    "HERO-2026-065-4a6ddf08",
+    "HERO-2026-067-decf5c5e"
+  ],
+  "provenance": "legacy",
+  "last_reevaluated_at": null
+}

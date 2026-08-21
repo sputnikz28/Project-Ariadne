@@ -1,0 +1,42 @@
+{
+  "legend_id": "LEGEND-4b801fca",
+  "source_prediction_id": "4b801fca7bd3a1b611db845d35071a1ea68bcdbd487c65f4fba354648bd220dd",
+  "promotion_draw": "067/2026",
+  "promotion_draw_date": "2026-08-21",
+  "promotion_threshold": 3,
+  "promotion_tier": "LEGEND_TIER_4",
+  "criteria_version": "v1",
+  "promoted_at": "2026-08-21T21:28:06+00:00",
+  "promotion_hero_ids": [
+    "HERO-2026-056-7f8b77a2",
+    "HERO-2026-061-58a5843b",
+    "HERO-2026-067-4ddaaedd"
+  ],
+  "project_version": "V12",
+  "git_commit": "71be2592df9f355015ff30ccdefd4a4241b0306a",
+  "qualification_reason": "Promoted to Legend at draw 067/2026 (2026-08-21) by reaching 3 distinct qualifying draws as Hero (criteria_version: v1).",
+  "entity_id": "H-00448",
+  "entity_name": "Kael da Lua Fria",
+  "race": "Vidente",
+  "generation": 9,
+  "predicted_numeros": [
+    19,
+    31,
+    34,
+    37,
+    45
+  ],
+  "predicted_estrelas": [
+    4,
+    9
+  ],
+  "hero_count": 3,
+  "qualified_draws": 3,
+  "contributing_hero_ids": [
+    "HERO-2026-056-7f8b77a2",
+    "HERO-2026-061-58a5843b",
+    "HERO-2026-067-4ddaaedd"
+  ],
+  "provenance": "legacy",
+  "last_reevaluated_at": null
+}

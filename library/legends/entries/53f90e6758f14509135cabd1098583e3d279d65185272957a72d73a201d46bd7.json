@@ -1,0 +1,42 @@
+{
+  "legend_id": "LEGEND-53f90e67",
+  "source_prediction_id": "53f90e6758f14509135cabd1098583e3d279d65185272957a72d73a201d46bd7",
+  "promotion_draw": "065/2026",
+  "promotion_draw_date": "2026-08-14",
+  "promotion_threshold": 3,
+  "promotion_tier": "LEGEND_TIER_4",
+  "criteria_version": "v1",
+  "promoted_at": "2026-08-21T21:28:06+00:00",
+  "promotion_hero_ids": [
+    "HERO-2026-058-92a5e979",
+    "HERO-2026-064-36e7c340",
+    "HERO-2026-065-7a218422"
+  ],
+  "project_version": "V12",
+  "git_commit": "71be2592df9f355015ff30ccdefd4a4241b0306a",
+  "qualification_reason": "Promoted to Legend at draw 065/2026 (2026-08-14) by reaching 3 distinct qualifying draws as Hero (criteria_version: v1).",
+  "entity_id": "H-00149",
+  "entity_name": "Aruk Pedra-Partida",
+  "race": "Vidente",
+  "generation": 3,
+  "predicted_numeros": [
+    8,
+    39,
+    44,
+    46,
+    48
+  ],
+  "predicted_estrelas": [
+    2,
+    4
+  ],
+  "hero_count": 3,
+  "qualified_draws": 3,
+  "contributing_hero_ids": [
+    "HERO-2026-058-92a5e979",
+    "HERO-2026-064-36e7c340",
+    "HERO-2026-065-7a218422"
+  ],
+  "provenance": "legacy",
+  "last_reevaluated_at": null
+}

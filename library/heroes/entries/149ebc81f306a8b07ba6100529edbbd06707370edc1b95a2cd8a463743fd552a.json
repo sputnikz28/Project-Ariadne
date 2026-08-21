@@ -1,0 +1,80 @@
+{
+  "hero_id": "HERO-2026-067-149ebc81",
+  "dedup_hash": "149ebc81f306a8b07ba6100529edbbd06707370edc1b95a2cd8a463743fd552a",
+  "source_prediction_id": "a6034fe8796b01e3008e6119e941fbf2e3a81aa9b4fc72b470c6d9b8c7809e06",
+  "entity_id": "Aurel dos Segundos Perdidos",
+  "entity_name": "Aurel dos Segundos Perdidos",
+  "race": "Cronomante",
+  "generation": 14,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "067/2026",
+  "draw_date": "2026-08-21",
+  "official_key": {
+    "numeros": [
+      10,
+      14,
+      15,
+      19,
+      45
+    ],
+    "estrelas": [
+      4,
+      12
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      6,
+      10,
+      16,
+      19,
+      45
+    ],
+    "estrelas": [
+      4,
+      11
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      10,
+      19,
+      45
+    ],
+    "estrelas": [
+      4
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      14,
+      15
+    ],
+    "estrelas": [
+      12
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      6,
+      16
+    ],
+    "estrelas": [
+      11
+    ]
+  },
+  "hero_category": "3+1",
+  "hero_tier": "TIER_4",
+  "simulation_score": 43,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_067_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 1 lucky stars against official draw 067/2026 (category 3+1).",
+  "recognized_at": "2026-08-21T21:28:02+00:00",
+  "registered_at": "2026-08-21T21:28:04+00:00"
+}

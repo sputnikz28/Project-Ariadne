@@ -1,0 +1,42 @@
+{
+  "legend_id": "LEGEND-c7e082ac",
+  "source_prediction_id": "c7e082ac5cbb056a3a1add091b7fda95a6367e16089c1f328e54d55da3c329eb",
+  "promotion_draw": "066/2026",
+  "promotion_draw_date": "2026-08-18",
+  "promotion_threshold": 3,
+  "promotion_tier": "LEGEND_TIER_4",
+  "criteria_version": "v1",
+  "promoted_at": "2026-08-21T21:28:06+00:00",
+  "promotion_hero_ids": [
+    "HERO-2026-057-0abdb334",
+    "HERO-2026-062-556f3741",
+    "HERO-2026-066-d0b5848a"
+  ],
+  "project_version": "V12",
+  "git_commit": "71be2592df9f355015ff30ccdefd4a4241b0306a",
+  "qualification_reason": "Promoted to Legend at draw 066/2026 (2026-08-18) by reaching 3 distinct qualifying draws as Hero (criteria_version: v1).",
+  "entity_id": "H-00203",
+  "entity_name": "Kael Pedra-Partida",
+  "race": "Bruxa",
+  "generation": 4,
+  "predicted_numeros": [
+    21,
+    25,
+    40,
+    46,
+    50
+  ],
+  "predicted_estrelas": [
+    2,
+    10
+  ],
+  "hero_count": 3,
+  "qualified_draws": 3,
+  "contributing_hero_ids": [
+    "HERO-2026-057-0abdb334",
+    "HERO-2026-062-556f3741",
+    "HERO-2026-066-d0b5848a"
+  ],
+  "provenance": "legacy",
+  "last_reevaluated_at": null
+}

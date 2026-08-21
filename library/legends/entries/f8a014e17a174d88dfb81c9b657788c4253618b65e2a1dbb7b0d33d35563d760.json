@@ -1,0 +1,42 @@
+{
+  "legend_id": "LEGEND-f8a014e1",
+  "source_prediction_id": "f8a014e17a174d88dfb81c9b657788c4253618b65e2a1dbb7b0d33d35563d760",
+  "promotion_draw": "067/2026",
+  "promotion_draw_date": "2026-08-21",
+  "promotion_threshold": 3,
+  "promotion_tier": "LEGEND_TIER_4",
+  "criteria_version": "v1",
+  "promoted_at": "2026-08-21T21:28:06+00:00",
+  "promotion_hero_ids": [
+    "HERO-2026-059-d06fc509",
+    "HERO-2026-061-8d1c321c",
+    "HERO-2026-067-e9088efe"
+  ],
+  "project_version": "V12",
+  "git_commit": "71be2592df9f355015ff30ccdefd4a4241b0306a",
+  "qualification_reason": "Promoted to Legend at draw 067/2026 (2026-08-21) by reaching 3 distinct qualifying draws as Hero (criteria_version: v1).",
+  "entity_id": "H-00653",
+  "entity_name": "Gruk dos Ossos",
+  "race": "Vidente",
+  "generation": 13,
+  "predicted_numeros": [
+    7,
+    8,
+    10,
+    25,
+    45
+  ],
+  "predicted_estrelas": [
+    4,
+    9
+  ],
+  "hero_count": 3,
+  "qualified_draws": 3,
+  "contributing_hero_ids": [
+    "HERO-2026-059-d06fc509",
+    "HERO-2026-061-8d1c321c",
+    "HERO-2026-067-e9088efe"
+  ],
+  "provenance": "legacy",
+  "last_reevaluated_at": null
+}

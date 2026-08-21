@@ -1,0 +1,42 @@
+{
+  "legend_id": "LEGEND-318aae14",
+  "source_prediction_id": "318aae1488f8403d0c716ea94771b7a1ddcf26e1a0de18b96ce4c894c50fa213",
+  "promotion_draw": "066/2026",
+  "promotion_draw_date": "2026-08-18",
+  "promotion_threshold": 3,
+  "promotion_tier": "LEGEND_TIER_4",
+  "criteria_version": "v1",
+  "promoted_at": "2026-08-21T21:28:06+00:00",
+  "promotion_hero_ids": [
+    "HERO-2026-059-14c5e1d4",
+    "HERO-2026-062-47882458",
+    "HERO-2026-066-434d4e66"
+  ],
+  "project_version": "V12",
+  "git_commit": "71be2592df9f355015ff30ccdefd4a4241b0306a",
+  "qualification_reason": "Promoted to Legend at draw 066/2026 (2026-08-18) by reaching 3 distinct qualifying draws as Hero (criteria_version: v1).",
+  "entity_id": "H-00150",
+  "entity_name": "Kael dos Ossos",
+  "race": "Goblin",
+  "generation": 5,
+  "predicted_numeros": [
+    9,
+    30,
+    38,
+    44,
+    50
+  ],
+  "predicted_estrelas": [
+    1,
+    4
+  ],
+  "hero_count": 3,
+  "qualified_draws": 3,
+  "contributing_hero_ids": [
+    "HERO-2026-059-14c5e1d4",
+    "HERO-2026-062-47882458",
+    "HERO-2026-066-434d4e66"
+  ],
+  "provenance": "legacy",
+  "last_reevaluated_at": null
+}

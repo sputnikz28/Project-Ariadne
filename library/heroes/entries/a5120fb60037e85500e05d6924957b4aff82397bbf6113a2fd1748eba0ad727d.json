@@ -1,0 +1,77 @@
+{
+  "hero_id": "HERO-2026-067-a5120fb6",
+  "dedup_hash": "a5120fb60037e85500e05d6924957b4aff82397bbf6113a2fd1748eba0ad727d",
+  "source_prediction_id": "475296f95c0ab43be0d77d554479e30b794716c9ed85a3fe1d24fbb5614dc76f",
+  "entity_id": "H-00098",
+  "entity_name": "Velka dos Ossos",
+  "race": "Chefe Tribal",
+  "generation": 2,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "067/2026",
+  "draw_date": "2026-08-21",
+  "official_key": {
+    "numeros": [
+      10,
+      14,
+      15,
+      19,
+      45
+    ],
+    "estrelas": [
+      4,
+      12
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      14,
+      19,
+      28,
+      45,
+      50
+    ],
+    "estrelas": [
+      4,
+      12
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 2,
+  "exact_matched_values": {
+    "numeros": [
+      14,
+      19,
+      45
+    ],
+    "estrelas": [
+      4,
+      12
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      10,
+      15
+    ],
+    "estrelas": []
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      28,
+      50
+    ],
+    "estrelas": []
+  },
+  "hero_category": "3+2",
+  "hero_tier": "TIER_3",
+  "simulation_score": 53,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_067_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 2 lucky stars against official draw 067/2026 (category 3+2).",
+  "recognized_at": "2026-08-21T21:28:02+00:00",
+  "registered_at": "2026-08-21T21:28:03+00:00"
+}

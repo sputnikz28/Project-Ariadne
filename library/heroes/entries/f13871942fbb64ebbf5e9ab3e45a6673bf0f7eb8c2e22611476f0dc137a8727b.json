@@ -1,0 +1,80 @@
+{
+  "hero_id": "HERO-2026-065-f1387194",
+  "dedup_hash": "f13871942fbb64ebbf5e9ab3e45a6673bf0f7eb8c2e22611476f0dc137a8727b",
+  "source_prediction_id": "943477ac7183161114bfa00de5e664a8ffbaa99aba9185d642d4a0310937c973",
+  "entity_id": "H-00123",
+  "entity_name": "Velka Pedra-Partida",
+  "race": "Cronomante",
+  "generation": 2,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "065/2026",
+  "draw_date": "2026-08-14",
+  "official_key": {
+    "numeros": [
+      5,
+      29,
+      39,
+      48,
+      49
+    ],
+    "estrelas": [
+      4,
+      8
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      5,
+      21,
+      28,
+      29,
+      48
+    ],
+    "estrelas": [
+      5,
+      7
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 0,
+  "exact_matched_values": {
+    "numeros": [
+      5,
+      29,
+      48
+    ],
+    "estrelas": []
+  },
+  "missed_winning_values": {
+    "numeros": [
+      39,
+      49
+    ],
+    "estrelas": [
+      4,
+      8
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      21,
+      28
+    ],
+    "estrelas": [
+      5,
+      7
+    ]
+  },
+  "hero_category": "3+0",
+  "hero_tier": "TIER_4",
+  "simulation_score": 38,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_067_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 0 lucky stars against official draw 065/2026 (category 3+0).",
+  "recognized_at": "2026-08-21T21:27:51+00:00",
+  "registered_at": "2026-08-21T21:27:53+00:00"
+}

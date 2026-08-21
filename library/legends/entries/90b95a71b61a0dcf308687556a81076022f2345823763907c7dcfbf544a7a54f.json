@@ -1,0 +1,42 @@
+{
+  "legend_id": "LEGEND-90b95a71",
+  "source_prediction_id": "90b95a71b61a0dcf308687556a81076022f2345823763907c7dcfbf544a7a54f",
+  "promotion_draw": "067/2026",
+  "promotion_draw_date": "2026-08-21",
+  "promotion_threshold": 3,
+  "promotion_tier": "LEGEND_TIER_4",
+  "criteria_version": "v1",
+  "promoted_at": "2026-08-21T21:28:06+00:00",
+  "promotion_hero_ids": [
+    "HERO-2026-059-6c99c2b0",
+    "HERO-2026-061-8abe5005",
+    "HERO-2026-067-cf841d20"
+  ],
+  "project_version": "V12",
+  "git_commit": "71be2592df9f355015ff30ccdefd4a4241b0306a",
+  "qualification_reason": "Promoted to Legend at draw 067/2026 (2026-08-21) by reaching 3 distinct qualifying draws as Hero (criteria_version: v1).",
+  "entity_id": "H-00477",
+  "entity_name": "Velka do Bosque",
+  "race": "Cronomante",
+  "generation": 9,
+  "predicted_numeros": [
+    10,
+    15,
+    29,
+    31,
+    36
+  ],
+  "predicted_estrelas": [
+    1,
+    4
+  ],
+  "hero_count": 3,
+  "qualified_draws": 3,
+  "contributing_hero_ids": [
+    "HERO-2026-059-6c99c2b0",
+    "HERO-2026-061-8abe5005",
+    "HERO-2026-067-cf841d20"
+  ],
+  "provenance": "legacy",
+  "last_reevaluated_at": null
+}

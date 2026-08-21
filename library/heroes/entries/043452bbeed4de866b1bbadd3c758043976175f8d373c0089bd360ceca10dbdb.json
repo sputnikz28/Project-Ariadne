@@ -1,0 +1,80 @@
+{
+  "hero_id": "HERO-2026-066-043452bb",
+  "dedup_hash": "043452bbeed4de866b1bbadd3c758043976175f8d373c0089bd360ceca10dbdb",
+  "source_prediction_id": "0f714e3a7c0c66404a1a7fe18b9b725c8dffc051c3bb0ebb2417bd8aa3247213",
+  "entity_id": "H-00210",
+  "entity_name": "Selene Pedra-Partida",
+  "race": "Chefe Tribal",
+  "generation": 8,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "066/2026",
+  "draw_date": "2026-08-18",
+  "official_key": {
+    "numeros": [
+      3,
+      9,
+      38,
+      40,
+      50
+    ],
+    "estrelas": [
+      6,
+      10
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      9,
+      38,
+      43,
+      48,
+      50
+    ],
+    "estrelas": [
+      4,
+      11
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 0,
+  "exact_matched_values": {
+    "numeros": [
+      9,
+      38,
+      50
+    ],
+    "estrelas": []
+  },
+  "missed_winning_values": {
+    "numeros": [
+      3,
+      40
+    ],
+    "estrelas": [
+      6,
+      10
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      43,
+      48
+    ],
+    "estrelas": [
+      4,
+      11
+    ]
+  },
+  "hero_category": "3+0",
+  "hero_tier": "TIER_4",
+  "simulation_score": 38,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_067_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 0 lucky stars against official draw 066/2026 (category 3+0).",
+  "recognized_at": "2026-08-21T21:27:56+00:00",
+  "registered_at": "2026-08-21T21:27:59+00:00"
+}

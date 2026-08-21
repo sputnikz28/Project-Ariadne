@@ -1,0 +1,42 @@
+{
+  "legend_id": "LEGEND-95b99bbe",
+  "source_prediction_id": "95b99bbee1f73c419d280f9c9dda487818ba79450ecfed0f3e5f916231f40bcd",
+  "promotion_draw": "065/2026",
+  "promotion_draw_date": "2026-08-14",
+  "promotion_threshold": 3,
+  "promotion_tier": "LEGEND_TIER_4",
+  "criteria_version": "v1",
+  "promoted_at": "2026-08-21T21:28:06+00:00",
+  "promotion_hero_ids": [
+    "HERO-2026-059-80c1912e",
+    "HERO-2026-064-2dd043a6",
+    "HERO-2026-065-9427cde0"
+  ],
+  "project_version": "V12",
+  "git_commit": "71be2592df9f355015ff30ccdefd4a4241b0306a",
+  "qualification_reason": "Promoted to Legend at draw 065/2026 (2026-08-14) by reaching 3 distinct qualifying draws as Hero (criteria_version: v1).",
+  "entity_id": "H-00265",
+  "entity_name": "Aruk do Bosque",
+  "race": "Goblin",
+  "generation": 5,
+  "predicted_numeros": [
+    35,
+    36,
+    39,
+    46,
+    48
+  ],
+  "predicted_estrelas": [
+    1,
+    4
+  ],
+  "hero_count": 3,
+  "qualified_draws": 3,
+  "contributing_hero_ids": [
+    "HERO-2026-059-80c1912e",
+    "HERO-2026-064-2dd043a6",
+    "HERO-2026-065-9427cde0"
+  ],
+  "provenance": "legacy",
+  "last_reevaluated_at": null
+}

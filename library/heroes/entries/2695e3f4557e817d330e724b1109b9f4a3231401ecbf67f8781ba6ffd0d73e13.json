@@ -1,0 +1,80 @@
+{
+  "hero_id": "HERO-2026-065-2695e3f4",
+  "dedup_hash": "2695e3f4557e817d330e724b1109b9f4a3231401ecbf67f8781ba6ffd0d73e13",
+  "source_prediction_id": "e9c76b3c231553053a7341d11fbad3549d8c2f2dd9fd4513be84621cf253d8b7",
+  "entity_id": "H-00690",
+  "entity_name": "Thara do Bosque",
+  "race": "Cronomante",
+  "generation": 13,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "065/2026",
+  "draw_date": "2026-08-14",
+  "official_key": {
+    "numeros": [
+      5,
+      29,
+      39,
+      48,
+      49
+    ],
+    "estrelas": [
+      4,
+      8
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      5,
+      8,
+      28,
+      29,
+      48
+    ],
+    "estrelas": [
+      5,
+      7
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 0,
+  "exact_matched_values": {
+    "numeros": [
+      5,
+      29,
+      48
+    ],
+    "estrelas": []
+  },
+  "missed_winning_values": {
+    "numeros": [
+      39,
+      49
+    ],
+    "estrelas": [
+      4,
+      8
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      8,
+      28
+    ],
+    "estrelas": [
+      5,
+      7
+    ]
+  },
+  "hero_category": "3+0",
+  "hero_tier": "TIER_4",
+  "simulation_score": 38,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_067_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 0 lucky stars against official draw 065/2026 (category 3+0).",
+  "recognized_at": "2026-08-21T21:27:51+00:00",
+  "registered_at": "2026-08-21T21:27:53+00:00"
+}

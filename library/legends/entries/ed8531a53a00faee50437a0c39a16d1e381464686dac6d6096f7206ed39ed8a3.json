@@ -1,0 +1,42 @@
+{
+  "legend_id": "LEGEND-ed8531a5",
+  "source_prediction_id": "ed8531a53a00faee50437a0c39a16d1e381464686dac6d6096f7206ed39ed8a3",
+  "promotion_draw": "067/2026",
+  "promotion_draw_date": "2026-08-21",
+  "promotion_threshold": 3,
+  "promotion_tier": "LEGEND_TIER_4",
+  "criteria_version": "v1",
+  "promoted_at": "2026-08-21T21:28:06+00:00",
+  "promotion_hero_ids": [
+    "HERO-2026-059-ab6dc4b5",
+    "HERO-2026-061-8eb4280a",
+    "HERO-2026-067-e865d7d4"
+  ],
+  "project_version": "V12",
+  "git_commit": "71be2592df9f355015ff30ccdefd4a4241b0306a",
+  "qualification_reason": "Promoted to Legend at draw 067/2026 (2026-08-21) by reaching 3 distinct qualifying draws as Hero (criteria_version: v1).",
+  "entity_id": "H-00055",
+  "entity_name": "Lyra da Lua Fria",
+  "race": "Elfo",
+  "generation": 3,
+  "predicted_numeros": [
+    7,
+    10,
+    30,
+    37,
+    45
+  ],
+  "predicted_estrelas": [
+    4,
+    6
+  ],
+  "hero_count": 3,
+  "qualified_draws": 3,
+  "contributing_hero_ids": [
+    "HERO-2026-059-ab6dc4b5",
+    "HERO-2026-061-8eb4280a",
+    "HERO-2026-067-e865d7d4"
+  ],
+  "provenance": "legacy",
+  "last_reevaluated_at": null
+}

@@ -1,0 +1,43 @@
+{
+  "legend_id": "LEGEND-f3870e89",
+  "source_prediction_id": "f3870e893b4f22d148df8cd1472612fa162a39719319b52b31f6b5259a0b3dfb",
+  "promotion_draw": "065/2026",
+  "promotion_draw_date": "2026-08-14",
+  "promotion_threshold": 3,
+  "promotion_tier": "LEGEND_TIER_4",
+  "criteria_version": "v1",
+  "promoted_at": "2026-08-21T21:28:06+00:00",
+  "promotion_hero_ids": [
+    "HERO-2026-056-a20ddeb9",
+    "HERO-2026-059-46a544df",
+    "HERO-2026-065-e9a7564a"
+  ],
+  "project_version": "V12",
+  "git_commit": "71be2592df9f355015ff30ccdefd4a4241b0306a",
+  "qualification_reason": "Promoted to Legend at draw 065/2026 (2026-08-14) by reaching 3 distinct qualifying draws as Hero (criteria_version: v1).",
+  "entity_id": "Lunélia-2",
+  "entity_name": "Lunélia-2",
+  "race": "Fada",
+  "generation": 14,
+  "predicted_numeros": [
+    10,
+    19,
+    22,
+    39,
+    47
+  ],
+  "predicted_estrelas": [
+    4,
+    8
+  ],
+  "hero_count": 4,
+  "qualified_draws": 4,
+  "contributing_hero_ids": [
+    "HERO-2026-056-a20ddeb9",
+    "HERO-2026-059-46a544df",
+    "HERO-2026-065-e9a7564a",
+    "HERO-2026-067-7e9cd4d8"
+  ],
+  "provenance": "legacy",
+  "last_reevaluated_at": null
+}

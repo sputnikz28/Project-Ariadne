@@ -1,0 +1,42 @@
+{
+  "legend_id": "LEGEND-88235800",
+  "source_prediction_id": "8823580048e010f1927487b0a91f850204854a402dacb7e93a282a49d0a83126",
+  "promotion_draw": "066/2026",
+  "promotion_draw_date": "2026-08-18",
+  "promotion_threshold": 3,
+  "promotion_tier": "LEGEND_TIER_4",
+  "criteria_version": "v1",
+  "promoted_at": "2026-08-21T21:28:06+00:00",
+  "promotion_hero_ids": [
+    "HERO-2026-060-295d79b0",
+    "HERO-2026-061-b0e22446",
+    "HERO-2026-066-f2bd51bc"
+  ],
+  "project_version": "V12",
+  "git_commit": "71be2592df9f355015ff30ccdefd4a4241b0306a",
+  "qualification_reason": "Promoted to Legend at draw 066/2026 (2026-08-18) by reaching 3 distinct qualifying draws as Hero (criteria_version: v1).",
+  "entity_id": "H-00431",
+  "entity_name": "Selene da Lua Fria",
+  "race": "Bruxa",
+  "generation": 8,
+  "predicted_numeros": [
+    24,
+    30,
+    31,
+    45,
+    50
+  ],
+  "predicted_estrelas": [
+    6,
+    10
+  ],
+  "hero_count": 3,
+  "qualified_draws": 3,
+  "contributing_hero_ids": [
+    "HERO-2026-060-295d79b0",
+    "HERO-2026-061-b0e22446",
+    "HERO-2026-066-f2bd51bc"
+  ],
+  "provenance": "legacy",
+  "last_reevaluated_at": null
+}

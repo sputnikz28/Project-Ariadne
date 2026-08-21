@@ -1,0 +1,42 @@
+{
+  "legend_id": "LEGEND-75f4ad1a",
+  "source_prediction_id": "75f4ad1a30075f66bf84e3957a27c91690db23e4bd96778768ace09ae9dd4ec3",
+  "promotion_draw": "067/2026",
+  "promotion_draw_date": "2026-08-21",
+  "promotion_threshold": 3,
+  "promotion_tier": "LEGEND_TIER_4",
+  "criteria_version": "v1",
+  "promoted_at": "2026-08-21T21:28:06+00:00",
+  "promotion_hero_ids": [
+    "HERO-2026-059-5498c796",
+    "HERO-2026-061-622ddb1c",
+    "HERO-2026-067-4e40f1cb"
+  ],
+  "project_version": "V12",
+  "git_commit": "71be2592df9f355015ff30ccdefd4a4241b0306a",
+  "qualification_reason": "Promoted to Legend at draw 067/2026 (2026-08-21) by reaching 3 distinct qualifying draws as Hero (criteria_version: v1).",
+  "entity_id": "H-00159",
+  "entity_name": "Selene dos Ossos",
+  "race": "Elfo",
+  "generation": 3,
+  "predicted_numeros": [
+    3,
+    10,
+    17,
+    36,
+    45
+  ],
+  "predicted_estrelas": [
+    4,
+    5
+  ],
+  "hero_count": 3,
+  "qualified_draws": 3,
+  "contributing_hero_ids": [
+    "HERO-2026-059-5498c796",
+    "HERO-2026-061-622ddb1c",
+    "HERO-2026-067-4e40f1cb"
+  ],
+  "provenance": "legacy",
+  "last_reevaluated_at": null
+}

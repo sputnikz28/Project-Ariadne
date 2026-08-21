@@ -1,0 +1,42 @@
+{
+  "legend_id": "LEGEND-605b15b4",
+  "source_prediction_id": "605b15b4fda07b9f0fa0cbf89b98db8219cf4897ca26a6faf805240ffdd97ace",
+  "promotion_draw": "066/2026",
+  "promotion_draw_date": "2026-08-18",
+  "promotion_threshold": 3,
+  "promotion_tier": "LEGEND_TIER_4",
+  "criteria_version": "v1",
+  "promoted_at": "2026-08-21T21:28:06+00:00",
+  "promotion_hero_ids": [
+    "HERO-2026-057-98e82282",
+    "HERO-2026-062-28f97bd6",
+    "HERO-2026-066-df099b6c"
+  ],
+  "project_version": "V12",
+  "git_commit": "71be2592df9f355015ff30ccdefd4a4241b0306a",
+  "qualification_reason": "Promoted to Legend at draw 066/2026 (2026-08-18) by reaching 3 distinct qualifying draws as Hero (criteria_version: v1).",
+  "entity_id": "H-00725",
+  "entity_name": "Elarion do Bosque",
+  "race": "Bruxa",
+  "generation": 14,
+  "predicted_numeros": [
+    25,
+    30,
+    37,
+    40,
+    50
+  ],
+  "predicted_estrelas": [
+    9,
+    10
+  ],
+  "hero_count": 3,
+  "qualified_draws": 3,
+  "contributing_hero_ids": [
+    "HERO-2026-057-98e82282",
+    "HERO-2026-062-28f97bd6",
+    "HERO-2026-066-df099b6c"
+  ],
+  "provenance": "legacy",
+  "last_reevaluated_at": null
+}

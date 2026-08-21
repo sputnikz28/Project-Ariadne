@@ -1,0 +1,42 @@
+{
+  "legend_id": "LEGEND-aef7b335",
+  "source_prediction_id": "aef7b335983fc242f1af2d221e58eed221634798aff9ef3e2a44edb0df377177",
+  "promotion_draw": "067/2026",
+  "promotion_draw_date": "2026-08-21",
+  "promotion_threshold": 3,
+  "promotion_tier": "LEGEND_TIER_4",
+  "criteria_version": "v1",
+  "promoted_at": "2026-08-21T21:28:06+00:00",
+  "promotion_hero_ids": [
+    "HERO-2026-056-61bbd980",
+    "HERO-2026-057-0f81abd6",
+    "HERO-2026-067-0996f302"
+  ],
+  "project_version": "V12",
+  "git_commit": "71be2592df9f355015ff30ccdefd4a4241b0306a",
+  "qualification_reason": "Promoted to Legend at draw 067/2026 (2026-08-21) by reaching 3 distinct qualifying draws as Hero (criteria_version: v1).",
+  "entity_id": "H-00351",
+  "entity_name": "Morgana do Bosque",
+  "race": "Esqueleto",
+  "generation": 7,
+  "predicted_numeros": [
+    9,
+    10,
+    12,
+    14,
+    19
+  ],
+  "predicted_estrelas": [
+    9,
+    10
+  ],
+  "hero_count": 3,
+  "qualified_draws": 3,
+  "contributing_hero_ids": [
+    "HERO-2026-056-61bbd980",
+    "HERO-2026-057-0f81abd6",
+    "HERO-2026-067-0996f302"
+  ],
+  "provenance": "legacy",
+  "last_reevaluated_at": null
+}

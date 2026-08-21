@@ -1,0 +1,80 @@
+{
+  "hero_id": "HERO-2026-067-e8b1b2ff",
+  "dedup_hash": "e8b1b2ff7e99abf800544798ad26fcfdbcb2784afc01bc0ecb7c269a5894e553",
+  "source_prediction_id": "8bedaba0b2b5be05779453eb11ec8e69dcb61423ac999e824e6323ec45b378a9",
+  "entity_id": "H-00059",
+  "entity_name": "Selene da Névoa",
+  "race": "Esqueleto",
+  "generation": 1,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "067/2026",
+  "draw_date": "2026-08-21",
+  "official_key": {
+    "numeros": [
+      10,
+      14,
+      15,
+      19,
+      45
+    ],
+    "estrelas": [
+      4,
+      12
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      10,
+      14,
+      15,
+      18,
+      23
+    ],
+    "estrelas": [
+      8,
+      10
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 0,
+  "exact_matched_values": {
+    "numeros": [
+      10,
+      14,
+      15
+    ],
+    "estrelas": []
+  },
+  "missed_winning_values": {
+    "numeros": [
+      19,
+      45
+    ],
+    "estrelas": [
+      4,
+      12
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      18,
+      23
+    ],
+    "estrelas": [
+      8,
+      10
+    ]
+  },
+  "hero_category": "3+0",
+  "hero_tier": "TIER_4",
+  "simulation_score": 38,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_067_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 0 lucky stars against official draw 067/2026 (category 3+0).",
+  "recognized_at": "2026-08-21T21:28:02+00:00",
+  "registered_at": "2026-08-21T21:28:03+00:00"
+}

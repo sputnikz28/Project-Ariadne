@@ -1,0 +1,42 @@
+{
+  "legend_id": "LEGEND-889e09d8",
+  "source_prediction_id": "889e09d8dfc7cff7e21f3ae456eedc64cdbed8c125d17be8cdd2f18efadb983c",
+  "promotion_draw": "067/2026",
+  "promotion_draw_date": "2026-08-21",
+  "promotion_threshold": 3,
+  "promotion_tier": "LEGEND_TIER_4",
+  "criteria_version": "v1",
+  "promoted_at": "2026-08-21T21:28:06+00:00",
+  "promotion_hero_ids": [
+    "HERO-2026-056-f26da4b7",
+    "HERO-2026-057-1fd83f9f",
+    "HERO-2026-067-b566e5dc"
+  ],
+  "project_version": "V12",
+  "git_commit": "71be2592df9f355015ff30ccdefd4a4241b0306a",
+  "qualification_reason": "Promoted to Legend at draw 067/2026 (2026-08-21) by reaching 3 distinct qualifying draws as Hero (criteria_version: v1).",
+  "entity_id": "H-00592",
+  "entity_name": "Aruk do Bosque",
+  "race": "Esqueleto",
+  "generation": 12,
+  "predicted_numeros": [
+    10,
+    12,
+    15,
+    16,
+    19
+  ],
+  "predicted_estrelas": [
+    9,
+    10
+  ],
+  "hero_count": 3,
+  "qualified_draws": 3,
+  "contributing_hero_ids": [
+    "HERO-2026-056-f26da4b7",
+    "HERO-2026-057-1fd83f9f",
+    "HERO-2026-067-b566e5dc"
+  ],
+  "provenance": "legacy",
+  "last_reevaluated_at": null
+}

@@ -1,0 +1,42 @@
+{
+  "legend_id": "LEGEND-ac3d98ad",
+  "source_prediction_id": "ac3d98ad32d11fcaa6af817204adacbf4bfc1a612c4b46afe20462f79924e36c",
+  "promotion_draw": "067/2026",
+  "promotion_draw_date": "2026-08-21",
+  "promotion_threshold": 3,
+  "promotion_tier": "LEGEND_TIER_4",
+  "criteria_version": "v1",
+  "promoted_at": "2026-08-21T21:28:06+00:00",
+  "promotion_hero_ids": [
+    "HERO-2026-062-210c9d3d",
+    "HERO-2026-063-a4f88118",
+    "HERO-2026-067-6a6663c5"
+  ],
+  "project_version": "V12",
+  "git_commit": "71be2592df9f355015ff30ccdefd4a4241b0306a",
+  "qualification_reason": "Promoted to Legend at draw 067/2026 (2026-08-21) by reaching 3 distinct qualifying draws as Hero (criteria_version: v1).",
+  "entity_id": "H-00103",
+  "entity_name": "Velka do Bosque",
+  "race": "Chefe Tribal",
+  "generation": 2,
+  "predicted_numeros": [
+    15,
+    40,
+    45,
+    47,
+    50
+  ],
+  "predicted_estrelas": [
+    1,
+    12
+  ],
+  "hero_count": 3,
+  "qualified_draws": 3,
+  "contributing_hero_ids": [
+    "HERO-2026-062-210c9d3d",
+    "HERO-2026-063-a4f88118",
+    "HERO-2026-067-6a6663c5"
+  ],
+  "provenance": "legacy",
+  "last_reevaluated_at": null
+}

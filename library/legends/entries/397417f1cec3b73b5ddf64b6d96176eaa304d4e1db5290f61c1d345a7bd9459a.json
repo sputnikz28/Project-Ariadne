@@ -1,0 +1,42 @@
+{
+  "legend_id": "LEGEND-397417f1",
+  "source_prediction_id": "397417f1cec3b73b5ddf64b6d96176eaa304d4e1db5290f61c1d345a7bd9459a",
+  "promotion_draw": "066/2026",
+  "promotion_draw_date": "2026-08-18",
+  "promotion_threshold": 3,
+  "promotion_tier": "LEGEND_TIER_4",
+  "criteria_version": "v1",
+  "promoted_at": "2026-08-21T21:28:06+00:00",
+  "promotion_hero_ids": [
+    "HERO-2026-058-79afe07f",
+    "HERO-2026-064-e6a508ae",
+    "HERO-2026-066-7af9541b"
+  ],
+  "project_version": "V12",
+  "git_commit": "71be2592df9f355015ff30ccdefd4a4241b0306a",
+  "qualification_reason": "Promoted to Legend at draw 066/2026 (2026-08-18) by reaching 3 distinct qualifying draws as Hero (criteria_version: v1).",
+  "entity_id": "H-00610",
+  "entity_name": "Velka da Névoa",
+  "race": "Vidente",
+  "generation": 12,
+  "predicted_numeros": [
+    2,
+    3,
+    9,
+    11,
+    46
+  ],
+  "predicted_estrelas": [
+    2,
+    6
+  ],
+  "hero_count": 3,
+  "qualified_draws": 3,
+  "contributing_hero_ids": [
+    "HERO-2026-058-79afe07f",
+    "HERO-2026-064-e6a508ae",
+    "HERO-2026-066-7af9541b"
+  ],
+  "provenance": "legacy",
+  "last_reevaluated_at": null
+}

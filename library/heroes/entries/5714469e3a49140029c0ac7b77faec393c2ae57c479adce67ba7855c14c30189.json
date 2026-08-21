@@ -1,0 +1,79 @@
+{
+  "hero_id": "HERO-2026-067-5714469e",
+  "dedup_hash": "5714469e3a49140029c0ac7b77faec393c2ae57c479adce67ba7855c14c30189",
+  "source_prediction_id": "273e21615f069b3305a666c38ae53331216409930b9508308da058e48d086a5f",
+  "entity_id": "H-00698",
+  "entity_name": "Kael dos Astros",
+  "race": "Vidente",
+  "generation": 14,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "067/2026",
+  "draw_date": "2026-08-21",
+  "official_key": {
+    "numeros": [
+      10,
+      14,
+      15,
+      19,
+      45
+    ],
+    "estrelas": [
+      4,
+      12
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      10,
+      14,
+      15,
+      21,
+      45
+    ],
+    "estrelas": [
+      2,
+      6
+    ]
+  },
+  "matched_numbers_count": 4,
+  "matched_stars_count": 0,
+  "exact_matched_values": {
+    "numeros": [
+      10,
+      14,
+      15,
+      45
+    ],
+    "estrelas": []
+  },
+  "missed_winning_values": {
+    "numeros": [
+      19
+    ],
+    "estrelas": [
+      4,
+      12
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      21
+    ],
+    "estrelas": [
+      2,
+      6
+    ]
+  },
+  "hero_category": "4+0",
+  "hero_tier": "TIER_3",
+  "simulation_score": 48,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_067_dataset_completo.json",
+  "qualification_reason": "Matched 4 main numbers and 0 lucky stars against official draw 067/2026 (category 4+0).",
+  "recognized_at": "2026-08-21T21:28:02+00:00",
+  "registered_at": "2026-08-21T21:28:03+00:00"
+}

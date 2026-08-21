@@ -1,0 +1,42 @@
+{
+  "legend_id": "LEGEND-0987d44b",
+  "source_prediction_id": "0987d44bf27bd4664c327a3b66a04c42fb4ca67a264e989d469e2f17cfba5389",
+  "promotion_draw": "065/2026",
+  "promotion_draw_date": "2026-08-14",
+  "promotion_threshold": 3,
+  "promotion_tier": "LEGEND_TIER_4",
+  "criteria_version": "v1",
+  "promoted_at": "2026-08-21T21:28:06+00:00",
+  "promotion_hero_ids": [
+    "HERO-2026-059-e82191f0",
+    "HERO-2026-063-3d20c37e",
+    "HERO-2026-065-57350f46"
+  ],
+  "project_version": "V12",
+  "git_commit": "71be2592df9f355015ff30ccdefd4a4241b0306a",
+  "qualification_reason": "Promoted to Legend at draw 065/2026 (2026-08-14) by reaching 3 distinct qualifying draws as Hero (criteria_version: v1).",
+  "entity_id": "H-00728",
+  "entity_name": "Elarion da Névoa",
+  "race": "Goblin",
+  "generation": 14,
+  "predicted_numeros": [
+    6,
+    29,
+    44,
+    47,
+    49
+  ],
+  "predicted_estrelas": [
+    1,
+    4
+  ],
+  "hero_count": 3,
+  "qualified_draws": 3,
+  "contributing_hero_ids": [
+    "HERO-2026-059-e82191f0",
+    "HERO-2026-063-3d20c37e",
+    "HERO-2026-065-57350f46"
+  ],
+  "provenance": "legacy",
+  "last_reevaluated_at": null
+}

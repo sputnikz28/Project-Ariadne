@@ -1,0 +1,42 @@
+{
+  "legend_id": "LEGEND-7674bbab",
+  "source_prediction_id": "7674bbab0f375cc00b7764a86d14ae7b0f6f125e445598e0d58f1e4b23128059",
+  "promotion_draw": "067/2026",
+  "promotion_draw_date": "2026-08-21",
+  "promotion_threshold": 3,
+  "promotion_tier": "LEGEND_TIER_4",
+  "criteria_version": "v1",
+  "promoted_at": "2026-08-21T21:28:06+00:00",
+  "promotion_hero_ids": [
+    "HERO-2026-059-8ffb524b",
+    "HERO-2026-061-032d47c2",
+    "HERO-2026-067-c1118966"
+  ],
+  "project_version": "V12",
+  "git_commit": "71be2592df9f355015ff30ccdefd4a4241b0306a",
+  "qualification_reason": "Promoted to Legend at draw 067/2026 (2026-08-21) by reaching 3 distinct qualifying draws as Hero (criteria_version: v1).",
+  "entity_id": "Chrona da Ampulheta Partida",
+  "entity_name": "Chrona da Ampulheta Partida",
+  "race": "Cronomante",
+  "generation": 14,
+  "predicted_numeros": [
+    10,
+    15,
+    29,
+    31,
+    36
+  ],
+  "predicted_estrelas": [
+    1,
+    4
+  ],
+  "hero_count": 3,
+  "qualified_draws": 3,
+  "contributing_hero_ids": [
+    "HERO-2026-059-8ffb524b",
+    "HERO-2026-061-032d47c2",
+    "HERO-2026-067-c1118966"
+  ],
+  "provenance": "legacy",
+  "last_reevaluated_at": null
+}

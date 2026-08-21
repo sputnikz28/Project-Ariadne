@@ -1,0 +1,42 @@
+{
+  "legend_id": "LEGEND-ce4ba45a",
+  "source_prediction_id": "ce4ba45a096dfea4af330b53df15537c5eb0ec9fe529ae81f29dfa6cb70c6d4f",
+  "promotion_draw": "067/2026",
+  "promotion_draw_date": "2026-08-21",
+  "promotion_threshold": 3,
+  "promotion_tier": "LEGEND_TIER_4",
+  "criteria_version": "v1",
+  "promoted_at": "2026-08-21T21:28:06+00:00",
+  "promotion_hero_ids": [
+    "HERO-2026-059-ff3f1c34",
+    "HERO-2026-061-2af05c3d",
+    "HERO-2026-067-159879f2"
+  ],
+  "project_version": "V12",
+  "git_commit": "71be2592df9f355015ff30ccdefd4a4241b0306a",
+  "qualification_reason": "Promoted to Legend at draw 067/2026 (2026-08-21) by reaching 3 distinct qualifying draws as Hero (criteria_version: v1).",
+  "entity_id": "H-00664",
+  "entity_name": "Selene do Bosque",
+  "race": "Bruxa",
+  "generation": 13,
+  "predicted_numeros": [
+    10,
+    36,
+    42,
+    43,
+    45
+  ],
+  "predicted_estrelas": [
+    4,
+    8
+  ],
+  "hero_count": 3,
+  "qualified_draws": 3,
+  "contributing_hero_ids": [
+    "HERO-2026-059-ff3f1c34",
+    "HERO-2026-061-2af05c3d",
+    "HERO-2026-067-159879f2"
+  ],
+  "provenance": "legacy",
+  "last_reevaluated_at": null
+}

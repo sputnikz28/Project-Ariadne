@@ -1,0 +1,80 @@
+{
+  "hero_id": "HERO-2026-066-6278ab49",
+  "dedup_hash": "6278ab49a1fc9ca13497bd685c532dc9a122ce81f1331f9848a3b91dc6bbf6d0",
+  "source_prediction_id": "99d06557fdc9bc53548b3e7c4d4c751905007b323a047af733d1e17d5405f1cf",
+  "entity_id": "H-00552",
+  "entity_name": "Aruk dos Ossos",
+  "race": "Goblin",
+  "generation": 11,
+  "run_id": null,
+  "provenance": "legacy",
+  "simulation_seed": null,
+  "draw_id": "066/2026",
+  "draw_date": "2026-08-18",
+  "official_key": {
+    "numeros": [
+      3,
+      9,
+      38,
+      40,
+      50
+    ],
+    "estrelas": [
+      6,
+      10
+    ]
+  },
+  "predicted_key": {
+    "numeros": [
+      3,
+      18,
+      40,
+      46,
+      50
+    ],
+    "estrelas": [
+      10,
+      12
+    ]
+  },
+  "matched_numbers_count": 3,
+  "matched_stars_count": 1,
+  "exact_matched_values": {
+    "numeros": [
+      3,
+      40,
+      50
+    ],
+    "estrelas": [
+      10
+    ]
+  },
+  "missed_winning_values": {
+    "numeros": [
+      9,
+      38
+    ],
+    "estrelas": [
+      6
+    ]
+  },
+  "extra_predicted_values": {
+    "numeros": [
+      18,
+      46
+    ],
+    "estrelas": [
+      12
+    ]
+  },
+  "hero_category": "3+1",
+  "hero_tier": "TIER_4",
+  "simulation_score": 43,
+  "report_path": null,
+  "project_version": null,
+  "git_commit": null,
+  "dataset_path": "datasets\\historical\\euromillions\\2026\\euromilhoes_2026_001_067_dataset_completo.json",
+  "qualification_reason": "Matched 3 main numbers and 1 lucky stars against official draw 066/2026 (category 3+1).",
+  "recognized_at": "2026-08-21T21:27:56+00:00",
+  "registered_at": "2026-08-21T21:27:57+00:00"
+}
