@@ -537,7 +537,7 @@ Adicionar uma nova facção = criar `factions/<nova>/council.py` + `manifest.jso
 
 # Testes (`tests/`)
 
-Suite `unittest` da stdlib (sem dependências externas — consistente com `requirements.txt`). Correr com:
+Suite `unittest` da stdlib. `requirements.txt` tem uma única dependência não-stdlib, `tzdata` (Commit 25) — necessária para `zoneinfo` resolver fusos horários IANA de forma portátil (nomeadamente em Windows). Correr com:
 
 ```bash
 python -m unittest discover -s tests

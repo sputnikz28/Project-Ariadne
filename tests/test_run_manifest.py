@@ -6,6 +6,7 @@ import tempfile
 import unittest
 from datetime import datetime, timezone
 from pathlib import Path
+from unittest import mock
 
 from core.services import run_manifest as rm
 from core.services.hero_evaluation import classify_temporal_provenance
@@ -115,6 +116,102 @@ class TestRunManifest(unittest.TestCase):
         run_manifests = rm.load_all_runs()
         record = {"run_id": "RUN-20260710T090000Z"}
         self.assertEqual(classify_temporal_provenance(record, run_manifests, draw_dt), "verified")
+
+    # -- run_id collision handling (Commit 25 finding) -----------------
+
+    def test_same_mocked_instant_produces_distinct_run_ids(self):
+        fixed_dt = datetime(2026, 8, 21, 15, 30, 12, 123456, tzinfo=timezone.utc)
+        with mock.patch("core.services.run_manifest.datetime") as mock_datetime:
+            mock_datetime.now.return_value = fixed_dt
+            m1 = rm.start_run(seed=1, modo_semente="fixo")
+            m2 = rm.start_run(seed=2, modo_semente="fixo")
+
+        self.assertNotEqual(m1["run_id"], m2["run_id"])
+        self.assertEqual(m1["run_id"], "RUN-20260821T153012123456Z")
+        self.assertEqual(m2["run_id"], "RUN-20260821T153012123456Z-1")
+
+    def test_three_way_collision_uses_sequential_deterministic_suffixes(self):
+        fixed_dt = datetime(2026, 8, 21, 15, 30, 12, 123456, tzinfo=timezone.utc)
+        with mock.patch("core.services.run_manifest.datetime") as mock_datetime:
+            mock_datetime.now.return_value = fixed_dt
+            m1 = rm.start_run(seed=1, modo_semente="fixo")
+            m2 = rm.start_run(seed=2, modo_semente="fixo")
+            m3 = rm.start_run(seed=3, modo_semente="fixo")
+
+        self.assertEqual([m1["run_id"], m2["run_id"], m3["run_id"]], [
+            "RUN-20260821T153012123456Z",
+            "RUN-20260821T153012123456Z-1",
+            "RUN-20260821T153012123456Z-2",
+        ])
+
+    def test_no_incomplete_manifest_is_ever_overwritten_by_a_collision(self):
+        fixed_dt = datetime(2026, 8, 21, 15, 30, 12, 123456, tzinfo=timezone.utc)
+        with mock.patch("core.services.run_manifest.datetime") as mock_datetime:
+            mock_datetime.now.return_value = fixed_dt
+            m1 = rm.start_run(seed=111, modo_semente="fixo")
+            rm.start_run(seed=222, modo_semente="fixo")
+
+        # m1's own incomplete manifest still holds m1's own seed, never
+        # clobbered by the second start_run() call.
+        reloaded_m1 = rm.load_run(m1["run_id"])
+        self.assertEqual(reloaded_m1["seed"], 111)
+
+    def test_existing_final_manifest_with_the_base_id_also_forces_a_new_id(self):
+        base_run_id = "RUN-20260821T153012123456Z"
+        rm.RUNS_DIR.mkdir(parents=True, exist_ok=True)
+        static_final_manifest = {
+            "run_id": base_run_id, "started_at": "2026-08-21T15:30:12+00:00",
+            "completed_at": "2026-08-21T15:30:20+00:00", "seed": 999,
+            "modo_semente": "fixo", "project_version": None, "git_commit": None,
+            "report_path": None, "command": "main.py", "target_draw": None,
+            "generated_record_count": 0,
+        }
+        (rm.RUNS_DIR / f"{base_run_id}.json").write_text(json.dumps(static_final_manifest), encoding="utf-8")
+
+        fixed_dt = datetime(2026, 8, 21, 15, 30, 12, 123456, tzinfo=timezone.utc)
+        with mock.patch("core.services.run_manifest.datetime") as mock_datetime:
+            mock_datetime.now.return_value = fixed_dt
+            new_manifest = rm.start_run(seed=1, modo_semente="fixo")
+
+        self.assertEqual(new_manifest["run_id"], f"{base_run_id}-1")
+        # the pre-existing final manifest is untouched
+        still_there = json.loads((rm.RUNS_DIR / f"{base_run_id}.json").read_text(encoding="utf-8"))
+        self.assertEqual(still_there["seed"], 999)
+
+    def test_load_all_runs_finds_both_sides_of_a_resolved_collision(self):
+        fixed_dt = datetime(2026, 8, 21, 15, 30, 12, 123456, tzinfo=timezone.utc)
+        with mock.patch("core.services.run_manifest.datetime") as mock_datetime:
+            mock_datetime.now.return_value = fixed_dt
+            m1 = rm.start_run(seed=1, modo_semente="fixo")
+            m2 = rm.start_run(seed=2, modo_semente="fixo")
+
+        all_runs = rm.load_all_runs()
+        self.assertIn(m1["run_id"], all_runs)
+        self.assertIn(m2["run_id"], all_runs)
+        self.assertEqual(all_runs[m1["run_id"]]["seed"], 1)
+        self.assertEqual(all_runs[m2["run_id"]]["seed"], 2)
+
+    def test_run_id_prefix_still_starts_with_RUN(self):
+        manifest = rm.start_run(seed=1, modo_semente="fixo")
+        self.assertTrue(manifest["run_id"].startswith("RUN-"))
+
+    def test_temporal_proof_still_comes_from_completed_at_not_run_id_content(self):
+        # classify_temporal_provenance() is unmodified and unmodifiable
+        # here — this only re-confirms it still reads completed_at, and
+        # is indifferent to a "-1"/"-2" suffix on the run_id string.
+        fixed_dt = datetime(2026, 8, 21, 15, 30, 12, 123456, tzinfo=timezone.utc)
+        with mock.patch("core.services.run_manifest.datetime") as mock_datetime:
+            mock_datetime.now.return_value = fixed_dt
+            m1 = rm.start_run(seed=1, modo_semente="fixo")
+            m2 = rm.start_run(seed=2, modo_semente="fixo")
+            rm.complete_run(m1)
+            rm.complete_run(m2)
+
+        run_manifests = rm.load_all_runs()
+        draw_dt = fixed_dt.replace(year=2030)  # comfortably after both completions
+        for run_id in (m1["run_id"], m2["run_id"]):
+            record = {"run_id": run_id}
+            self.assertEqual(classify_temporal_provenance(record, run_manifests, draw_dt), "verified")
 
 
 if __name__ == "__main__":

@@ -17,6 +17,26 @@ it can never be committed by accident. complete_run() writes the final
 is NOT gitignored, so a genuine, complete manifest can be committed
 alongside the prediction records that reference its run_id — which is
 what makes "verified" provenance reconstructible from a clean clone.
+
+run_id collision handling (found during Commit 25's Backtest
+Orchestrator, whose tests start multiple runs back-to-back much faster
+than main.py's historical single-run-per-invocation usage pattern):
+_run_id_from_timestamp() now includes microseconds, which makes a
+same-run_id collision rare but NOT impossible — clock resolution on
+some platforms is coarser than one microsecond, and nothing here
+depends on wall-clock granularity as a uniqueness proof. Before ever
+writing a run's files, start_run() checks whether a manifest (complete
+or incomplete) already exists for the timestamp-derived run_id and, if
+so, deterministically appends "-1", "-2", ... (never a random UUID —
+the collision resolution is itself reproducible given the same
+sequence of prior collisions) until it finds one that doesn't collide.
+This never overwrites an existing manifest of either kind. It does not
+close every theoretical multi-process race (check-then-write is not
+atomic across processes) — it solves exactly the deterministic,
+single-process, back-to-back-calls case this project actually has.
+started_at/completed_at remain real, separately-stored timestamps —
+classify_temporal_provenance() keeps reading completed_at, never the
+run_id string, and is unmodified by this change.
 """
 
 import subprocess
@@ -34,7 +54,7 @@ def _now_iso():
 
 
 def _run_id_from_timestamp(dt):
-    return "RUN-" + dt.strftime("%Y%m%dT%H%M%SZ")
+    return "RUN-" + dt.strftime("%Y%m%dT%H%M%S%fZ")
 
 
 def _manifest_path(run_id):
@@ -43,6 +63,21 @@ def _manifest_path(run_id):
 
 def _incomplete_manifest_path(run_id):
     return RUNS_DIR / f"{run_id}.incomplete.json"
+
+
+def _resolve_available_run_id(base_run_id):
+    """base_run_id (already microsecond-precise) is returned unchanged
+    if neither its complete nor incomplete manifest file exists yet.
+    Otherwise appends "-1", "-2", ... — a deterministic local counter,
+    never a random suffix — until an unused run_id is found. Never
+    overwrites an existing manifest of either kind.
+    """
+    candidate = base_run_id
+    suffix = 0
+    while _incomplete_manifest_path(candidate).exists() or _manifest_path(candidate).exists():
+        suffix += 1
+        candidate = f"{base_run_id}-{suffix}"
+    return candidate
 
 
 def _read_project_version():
@@ -69,8 +104,9 @@ def start_run(seed, modo_semente, command="main.py", target_draw=None):
     prediction records and to call complete_run() later.
     """
     started_dt = datetime.now(timezone.utc)
+    run_id = _resolve_available_run_id(_run_id_from_timestamp(started_dt))
     manifest = {
-        "run_id": _run_id_from_timestamp(started_dt),
+        "run_id": run_id,
         "started_at": started_dt.isoformat(timespec="seconds"),
         "completed_at": None,
         "seed": seed,

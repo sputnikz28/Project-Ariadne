@@ -365,7 +365,7 @@ Project-Ariadne/
 ├── evaluate_heroes.py           ← CLI: Hero Evaluation Engine
 ├── evaluate_legends.py          ← CLI: Legend Evaluation Engine
 ├── config.txt                  ← all parameters
-├── requirements.txt            ← stdlib only (no external ML libs)
+├── requirements.txt            ← minimal, no ML libs — tzdata (Commit 25), see below
 ├── requirements-dashboard.txt  ← optional: openpyxl, used by dashboard/excel_export.py
 │
 ├── core/                        ← framework engine
@@ -451,11 +451,13 @@ Project-Ariadne/
 
 ## Quick start
 
-**Requirements:** Python 3.10+ — stdlib only, no pip installs needed.
+**Requirements:** Python 3.10+. Almost entirely stdlib — the one
+exception is `tzdata` (see [Timezone data](#timezone-data) below).
 
 ```bash
 git clone https://github.com/your-username/eternal-library.git
 cd eternal-library
+pip install -r requirements.txt
 
 # Run the simulation
 python main.py
@@ -475,6 +477,24 @@ python validate_config.py
 # Run the test suite
 python -m unittest discover -s tests
 ```
+
+---
+
+## Timezone data
+
+Python's standard library handles timezones via `zoneinfo`, but
+`zoneinfo` itself needs an IANA timezone database to resolve named
+zones (e.g. `"Europe/Paris"`) from — many systems don't ship one built
+in, notably Windows. `tzdata` is the official, CPython-maintained
+package that supplies it portably; it's the one non-stdlib dependency
+in `requirements.txt`. Required for portable IANA timezone resolution
+used by the temporal backtest boundary
+(`core/services/backtest_orchestrator.py`, Commit 25), which converts
+a backtest boundary's UTC instant into `[MUNDO].timezone`'s local time
+— that local time then feeds the historical context construction,
+including the moon phase. An unrecognized or missing timezone raises
+`ValueError` in both VERIFIED and EXPLORATORY mode, never a silent
+fallback.
 
 ---
 
@@ -580,9 +600,8 @@ with config, logging and Council integration.
 
 ## Testing
 
-`tests/` uses Python's stdlib `unittest` — no external test framework,
-consistent with the project's stdlib-only philosophy. Run the suite
-with:
+`tests/` uses Python's stdlib `unittest` — no external test framework.
+Run the suite with:
 
 ```bash
 python -m unittest discover -s tests
