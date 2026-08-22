@@ -186,12 +186,13 @@ class TestAriadneLiveModeUnaffected(unittest.TestCase):
 
     def test_scope_a_is_2026_only(self):
         # self.scrolls in LIVE mode is still the 2026-only path list —
-        # 64 real draws confirmed in Commit 21/22's audits.
-        self.assertEqual(len(Ariadne().scrolls), 64)
+        # 67 real draws as of Commit 27 (065-067/2026 registered).
+        self.assertEqual(len(Ariadne().scrolls), 67)
 
     def test_scope_b_sees_all_years(self):
-        # confirmed real total across 2004-2026 in Commit 22's audit.
-        self.assertEqual(len(Ariadne().full_history()), 1971)
+        # confirmed real total across 2004-2026 as of Commit 27
+        # (065-067/2026 registered).
+        self.assertEqual(len(Ariadne().full_history()), 1974)
 
     def test_index_methods_still_work_live(self):
         # pairs()/triples() never call save_query(); least_frequent_numbers()

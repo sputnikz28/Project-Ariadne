@@ -28,7 +28,7 @@ from core.services.statistical_profiles import (
 )
 
 REAL_2026_DATASET_PATH = Path(
-    "datasets/historical/euromillions/2026/euromilhoes_2026_001_064_dataset_completo.json"
+    "datasets/historical/euromillions/2026/euromilhoes_2026_001_067_dataset_completo.json"
 )
 
 

@@ -47,7 +47,7 @@ from core.services.dashboard_data import (
 )
 
 REAL_2026_DATASET_PATH = Path(
-    "datasets/historical/euromillions/2026/euromilhoes_2026_001_064_dataset_completo.json"
+    "datasets/historical/euromillions/2026/euromilhoes_2026_001_067_dataset_completo.json"
 )
 
 REAL_ARCHIVE_PATH = Path("datasets/generated/simulations/arquivo_destino.json")
@@ -523,11 +523,13 @@ class TestBuildEconomyRealDataset(unittest.TestCase):
         cls.summary = build_economy_summary(cls.rows, year=2026, moeda=data["moeda"])
 
     def test_one_row_per_draw_in_2026(self):
-        self.assertEqual(len(self.rows), 64)
+        self.assertEqual(len(self.rows), 67)
 
     def test_coverage_matches_qualidade_dados(self):
         self.assertEqual(self.summary.sorteios_com_dados_financeiros, 15)
-        self.assertAlmostEqual(self.summary.percentagem_sorteios_com_dados_financeiros, 23.4375, places=6)
+        self.assertAlmostEqual(
+            self.summary.percentagem_sorteios_com_dados_financeiros, 15 / 67 * 100, places=6,
+        )
 
     def test_jackpot_forecast_coverage_and_range(self):
         self.assertEqual(self.summary.sorteios_com_previsao_jackpot, 15)
@@ -756,14 +758,14 @@ class TestBuildPrizeCategoryRealDataset(unittest.TestCase):
         cls.rows = build_prize_category_rows(cls.sorteios, year=2026)
         cls.summary = build_prize_category_summary(cls.rows, year=2026)
 
-    def test_total_rows_is_64_draws_times_13_categories(self):
-        self.assertEqual(len(self.rows), 64 * 13)
+    def test_total_rows_is_67_draws_times_13_categories(self):
+        self.assertEqual(len(self.rows), 67 * 13)
 
     def test_coverage_matches_qualidade_dados(self):
-        self.assertEqual(self.summary.sorteios_no_periodo, 64)
+        self.assertEqual(self.summary.sorteios_no_periodo, 67)
         self.assertEqual(self.summary.sorteios_com_categorias_disponiveis, 15)
         self.assertAlmostEqual(
-            self.summary.percentagem_sorteios_com_categorias_disponiveis, 15 / 64 * 100, places=6,
+            self.summary.percentagem_sorteios_com_categorias_disponiveis, 15 / 67 * 100, places=6,
         )
 
     def test_por_categoria_has_13_entries_ordered(self):
