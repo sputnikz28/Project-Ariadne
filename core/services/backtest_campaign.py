@@ -373,6 +373,20 @@ class GeneratorRunResult:
     (and, if reported by its own adapter, Melforks), None for every
     system without that concept — never invented to fit a uniform
     shape.
+
+    attempted_races is optional (defaults to an empty frozenset, fully
+    backward compatible with every adapter that predates it) — the set
+    of race/strategy labels this cell's adapter deliberately tried,
+    whether or not each one produced a candidate. Exists so a strategy
+    that abstains in every single cell (e.g. Astéria Abissal when the
+    conditional sample is always too small) can still be discovered and
+    correctly reported as 100% abstention by
+    core.services.backtest_arena.summarize_arena_participation(),
+    instead of silently disappearing because no CandidateKey with that
+    race was ever produced. Populated only by adapters with a fixed,
+    small, self-known set of sub-strategies per cell (Pantheon, Astérias)
+    — never a central enumeration; Clerics' population-driven races are
+    never declared this way, by design.
     """
 
     system: str
@@ -383,6 +397,7 @@ class GeneratorRunResult:
     candidates: tuple[SimulatedBacktestCandidate, ...]
     evaluations: tuple[CandidateEvaluation, ...]
     performance: CandidatePerformanceSummary
+    attempted_races: frozenset[str | None] = frozenset()
 
 
 def _build_generator_run_result(
@@ -397,6 +412,7 @@ def _build_generator_run_result(
     return GeneratorRunResult(
         system=system, target=target, seed=seed, generations=output.generations,
         run_id=output.run_id, candidates=frozen, evaluations=evaluations, performance=performance,
+        attempted_races=output.attempted_races,
     )
 
 

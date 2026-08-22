@@ -304,12 +304,20 @@ def summarize_system_attendance(results: Sequence[GeneratorRunResult]) -> dict[s
 def summarize_arena_participation(
     results: Sequence[GeneratorRunResult], relevant_categories: Collection[str],
 ) -> dict[tuple[str, str | None], ArenaStrategySummary]:
-    """Discovers (system, race) pairs dynamically from `results`, exactly
-    like core.services.backtest_campaign.summarize_by_system_and_strategy().
-    A race that never appears in `results` at all is invisible here —
-    the same structural limit that function already has — captured
-    instead, at the system level, by summarize_system_attendance()
-    above.
+    """Discovers (system, race) pairs dynamically from `results`, two
+    ways: from candidates actually produced (exactly like
+    core.services.backtest_campaign.summarize_by_system_and_strategy()),
+    and from each GeneratorRunResult.attempted_races — the set of
+    race/strategy labels an adapter declares it deliberately tried this
+    cell, whether or not it produced a candidate. This second source is
+    what lets a strategy that abstains in every single cell (a
+    conditional strategy whose participation threshold is never met at
+    any target) still be discovered and reported honestly as 100%
+    abstention, instead of silently disappearing for lack of a
+    CandidateKey. A race declared by neither path (never produced a
+    candidate and never listed in attempted_races anywhere) is still
+    invisible here — captured instead, at the system level, by
+    summarize_system_attendance() above.
 
     cells_attempted for a given (system, race) is that system's own
     cells_attempted (shared across every race of that system) — a
@@ -325,6 +333,8 @@ def summarize_arena_participation(
     for r in results:
         for c in r.candidates:
             pairs_seen.add((r.system, c.candidate.race))
+        for race in r.attempted_races:
+            pairs_seen.add((r.system, race))
 
     out = {}
     for system, race in pairs_seen:
@@ -378,3 +388,20 @@ def category_rank(category: str, cfg) -> tuple[int, int, int]:
         raise HeroConfigError(f"category {category!r} has no tier mapping in [HEROIS_TIERS]")
     matched_n_str, matched_e_str = category.split("+")
     return (tier_order[tier_map[category]], -int(matched_n_str), -int(matched_e_str))
+
+
+def star_match_distribution(eb: EqualBudgetResult) -> dict[int, int]:
+    """Prova das Estrelas — a lens deliberately separate from the
+    Arena's normal success metric. {0,1,2} -> count of candidates in
+    the equal-budget sample with that many matched stars. Reuses
+    CandidateEvaluation.matched_star_count already computed by
+    reveal_and_evaluate() — never recomputes correspondence, never
+    reads relevant_categories at all. Always operates on an
+    EqualBudgetResult (same N=1/2/5 budgeting as the rest of the
+    Arena), never on unbudgeted raw candidates, so a comparison across
+    systems at the same N stays honest.
+    """
+    distribution = {0: 0, 1: 0, 2: 0}
+    for evaluation in eb.evaluations:
+        distribution[evaluation.matched_star_count] += 1
+    return distribution

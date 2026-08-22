@@ -543,7 +543,7 @@ Suite `unittest` da stdlib. `requirements.txt` tem uma única dependência não-
 python -m unittest discover -s tests
 ```
 
-1011 testes em 39 módulos (`tests/test_*.py`), verificado após o Arena layer (`88bfb28`).
+1037 testes em 39 módulos (`tests/test_*.py`) — 1011 verificados após o Arena layer (`88bfb28`), mais 26 novos da extensão Astérias de Thalássia/`attempted_races` (ver secção própria abaixo), **implementada e testada nesta sessão, ainda pendente de commit**.
 
 | Ficheiro | Cobre |
 |---------|------|
@@ -730,6 +730,7 @@ Estrutura só, sem runner. `benchmarks/random/` (baseline aleatório), `benchmar
 - ✅ `core/services/backtest_campaign.py` (Commit 27, `6308fc1`) — Campaign Runner V1, `target×seed×generations` para Clérigos, descoberta dinâmica de raça
 - ✅ `core/services/backtest_generators.py` (`cb5087e`) — Campaign Runner V2, 6 sistemas via adaptadores externos, zero alterações a facções/orquestrador
 - ✅ `core/services/backtest_arena.py` (`88bfb28`) — Chave Oficial, Orçamento Igual, contabilização de abstenção/participação
+- ⏳ Astérias de Thalássia (Astéria Abissal + Astéria das Marés, sétimo sistema em `GENERATORS`) + `attempted_races` (extensão genérica de contrato) + Prova das Estrelas (`star_match_distribution()`) — implementado e testado nesta sessão (1037/1037), **ainda pendente de commit**; ver secção própria "Astérias de Thalássia — Arena Temporada 2" abaixo
 - ✅ `docs/AUDITORIA_FACCOES_E_ESTRATEGIAS.md` + `docs/BESTIARIO_ALGORITMICO_RECUPERADO.md` — arqueologia histórica/recuperada, V8→atual
 - Continua por fazer: primeira campanha oficial da Arena; ligação a `main.py`; Vampiros/Gárgulas/Kor Vermelho/Lobisomens continuam bloqueados; Campeão do Tesouro sem dados financeiros suficientes; arqueologia pré-Git (V1/V2/V3) não começou
 - Ver secção "Backtest Orchestrator, Campaign Runner & Arena (Commits 25-27 + V2 + Arena)" no final deste documento para o detalhe completo
@@ -886,8 +887,9 @@ Commit 14 — Frequencies Delay
 
 ## Próximo Passo
 
-Estado real: Commits 1-27 concluídos, mais Campaign Runner V2 e Arena (sem número de commit formal atribuído nesta sessão) — 1011/1011 testes OK, verificado depois do Arena layer (`88bfb28`). Candidatos em aberto (ver também Roadmap e "Ideias futuras / não implementadas" acima):
+Estado real: Commits 1-27 concluídos, mais Campaign Runner V2 e Arena (sem número de commit formal atribuído nesta sessão) — 1011/1011 testes OK, verificado depois do Arena layer (`88bfb28`), mais Astérias de Thalássia/`attempted_races`/Prova das Estrelas implementadas e testadas nesta sessão (1037/1037 OK), **ainda pendentes de staging/commit** — ver secção própria "Astérias de Thalássia — Arena Temporada 2" acima. Candidatos em aberto (ver também Roadmap e "Ideias futuras / não implementadas" acima):
 
+- **Commit + Temporada 2 da Arena com as Astérias** — código e testes já prontos (1037/1037); falta autorização explícita de staging/commit, e depois desenhar/correr uma campanha real comparando Astéria Abissal e Astéria das Marés contra o Acaso Puro (Chave Oficial, Orçamento Igual, Prova das Estrelas), sem alterar retroativamente a Temporada 1 / Baseline.
 - **Primeira campanha oficial da Arena** — os 6 sistemas registados, alvos reais (065-067/2026 ou o conjunto de 5 alvos já usado na Baseline dos Clérigos), Chave Oficial + Orçamento Igual (N=1/2/5) + Todas as Chaves lado a lado; ainda não corrida.
 - **Vampiros/Gárgulas/Kor Vermelho/Lobisomens** — bloqueados por razões técnicas já documentadas (look-ahead estrutural / proveniência); não há decisão pendente, só trabalho de redesenho se algum dia se quiser desbloquear.
 - **Arqueologia pré-Git (V1/V2/V3)** — segunda passagem do Bestiário Algorítmico, a partir de ficheiros primordiais recuperados; não começou.
@@ -1036,6 +1038,8 @@ Nova raça dos Clérigos (`RACAS` em `factions/clerics/algorithm.py`, agora com 
 - **Arqueologia pré-Git (V1/V2/V3)** — `docs/BESTIARIO_ALGORITMICO_RECUPERADO.md` só recupera V8→atual (o commit mais antigo disponível em qualquer branch é `756c63e6`); uma segunda passagem a partir de ficheiros primordiais recuperados, mais uma árvore evolutiva das estratégias, está prevista mas não começou.
 - **Replay temporal de Artefactos/Relíquias** — os eventos (`historia[].momento`) já têm timestamp real; reconstruir o estado "como estava em X" por replay é possível mas fica para um commit posterior (ver secção "Fronteira Temporal" abaixo).
 - **Certificação temporal do Grimório/`estado_ordem.json`** — auditado no Commit 24 e considerado estruturalmente impossível sem reescrever esses ficheiros para registarem eventos datados em vez de flags acumulados; fora de âmbito indefinidamente, salvo decisão explícita de redesenhar a persistência.
+- **Academia — turmas Hi-Lo (preditiva vs. rival por repetição)** — conceito registado, sem desenho fechado nem implementação. Ideia: uma turma preditiva que estuda sequências na **ordem real de extração** (não a chave já normalizada/ordenada ascendentemente, como o projeto trata `numeros`/`estrelas` hoje em todo o lado) para apostar se o próximo número sai mais alto ou mais baixo que o anterior; uma turma rival que aposta na repetição do padrão Hi/Lo do par imediatamente anterior. Aplicação análoga estender-se-ia às estrelas. **Pré-requisito explícito, ainda por confirmar antes de desenhar qualquer coisa**: verificar se o dataset histórico (`datasets/historical/euromillions/`) regista mesmo a ordem real de saída das bolas — uma chave já ordenada (o formato usado hoje em todo o projeto) não permite reconstruir essa ordem; sem essa confirmação, a turma Hi-Lo não é implementável com dados honestos.
+- **Personalidade dos indivíduos** — conceito registado, sem desenho fechado. Cada indivíduo ganharia atributos de personalidade numa escala 1–10, com 5 como neutro. A personalidade influenciaria comportamento narrativo — procura, criação e uso de livros/artefactos — nunca a geração ou pontuação de uma chave diretamente. Artefactos poderiam, por design, modificar atributos de personalidade ou transformar parcialmente uma chave (mecanismo concreto ainda por especificar). **Restrição arquitetural explícita, vinculativa desde já**: Personalidade deve manter-se sempre separada da Arena experimental (`backtest_arena.py`) — nunca contaminar comparações algorítmicas entre sistemas/estratégias com efeitos de personalidade, exatamente como os Artefactos da Biblioteca (V13) já são hoje estruturalmente inertes (`altera_algoritmo`/`altera_resultados`/`altera_probabilidades` sempre `false`).
 
 ---
 
@@ -1114,6 +1118,7 @@ Nova linhagem dos Clérigos (não uma nova facção votante, como o Minotauro). 
 | Axiomantes | `factions.axiomantes.ritual.execute_ritual()`, só com a Ariadne **temporal** | nenhum (Feistel determinístico) | `None`; `guardar_experiencia` forçado a `false` — zero escrita em `experiments/axiomancers/runs/` |
 | Panteão | `orders.pantheon.{mages,druids,djinns,aion}` | `ctx['rng']` | `None`; Mago/Druida/Djinn/Aion tornam-se distinguíveis via `CandidateKey.race`, só dentro do adaptador — o arquivo real continua a colapsá-los em `origem="ser_superior"` |
 | Acaso Puro | amostragem uniforme pura, sem histórico/Ariadne nenhum | `random.Random(seed)` | `None`; cumpre a promessa original de `benchmarks/random/README.md`, nunca implementada até agora |
+| Astérias | transição condicional entre pares de estrelas (`ctx['historico']`, sem Ariadne) — duas linhagens, Astéria Abissal e Astéria das Marés | `random.Random(seed)` dentro do adaptador, mesma convenção de Esqueletos/Panteão | `None`; sétimo sistema, acrescentado nesta sessão, **pendente de commit** — ver secção própria "Astérias de Thalássia — Arena Temporada 2" abaixo |
 
 `GENERATORS` é um registo explícito (nunca auto-descoberta) — acrescentar um sistema futuro (Cyber-Anões, Superesqueletos, Academia...) é escrever um adaptador e uma linha no registo, zero alterações ao agregador. Vampiros, Gárgulas, Kor Vermelho e Lobisomens foram auditados e **não** registados — ver "Ideias futuras / não implementadas" acima para a razão exata de cada um.
 
@@ -1130,6 +1135,56 @@ Nova linhagem dos Clérigos (não uma nova facção votante, como o Minotauro). 
 ## Testes (Commits 25-27 + V2 + Arena)
 
 `tests/test_backtest_orchestrator.py` (36), `tests/test_backtest_campaign.py` (30), `tests/test_backtest_generators.py` (28), `tests/test_backtest_arena.py` (31) — 125 testes novos no total.
+
+## Astérias de Thalássia — Arena Temporada 2 (implementado e testado nesta sessão, **pendente de commit**)
+
+Sétimo sistema registado em `GENERATORS` (`"asterias"`), duas linhagens partilhando `source_name="asterias_thalassia"` — a primeira extensão da Arena desenhada especificamente para ser comparada contra o Acaso Puro sob Orçamento Igual, e o primeiro caso real da extensão genérica `attempted_races`.
+
+**Astéria Abissal** (purista) — hipótese: a distribuição condicional das próximas duas estrelas depende do par não ordenado de estrelas do sorteio imediatamente anterior do histórico visível. Abstém-se sempre que a amostra condicional é insuficiente (`n(P) < 5`) — nunca inventa uma estimativa a partir de pouca evidência.
+
+**Astéria das Marés** — mesma hipótese condicional, mas com *backoff* explícito: quando `n(P) < 5`, recorre à distribuição marginal histórica das estrelas (exige `len(histórico) >= 5`); só abstém quando mesmo o histórico completo é demasiado curto.
+
+### Modelo matemático (fixo, pré-declarado, nunca ajustado depois de ver resultados)
+
+- `P` = par não ordenado de estrelas do último sorteio do histórico visível
+- `n(P)` = nº de ocorrências anteriores de `P` — exclui estruturalmente a última posição do histórico como uma ocorrência "atual" (o próprio laço nunca alcança esse índice: `range(len(historico) - 1)`), a mesma disciplina que faz `HistoricalBacktestBoundary` nunca expor `numeros`/`estrelas`
+- `c(s,P)` = nº de vezes que a estrela `s` apareceu no sorteio imediatamente a seguir a uma ocorrência de `P`
+- Condicional: `P_cond(s|P) = (c(s,P) + α) / (2·n(P) + 12α)`, usada por ambas as linhagens quando `n(P) >= 5`
+- Marginal (só Astéria das Marés, como *backoff*): `P_marg(s) = (g(s) + α) / (2·len(histórico) + 12α)`, onde `g(s)` é a contagem total de ocorrências de `s` em todo o histórico
+- **Laplace α = 1**, fixo — nunca escolhido depois de observar resultados
+- Seleção das 2 estrelas: amostragem ponderada sem reposição, ordem canónica ascendente (1..12) sempre alimentada ao amostrador — reprodutibilidade nunca depende de ordem de iteração de dict/set; empates resolvidos naturalmente pelo próprio amostrador ponderado, sem regra de desempate separada
+- Números (5): sempre `rng.sample(range(1,51), 5)` — mecanismo neutro, **o mesmo do Acaso Puro**, nunca informado pela hipótese das estrelas (verificado empiricamente: duas histórias com transições de estrelas diferentes mas a mesma seed produzem `numeros` bit-idênticos e `estrelas` diferentes)
+- RNG: `random.Random(seed)`, uma única instância por célula, construída dentro do adaptador — mesma convenção de Esqueletos/Panteão. Decisão explícita do utilizador: `ctx['rng']` não é populado pelo caminho partilhado `prepare_backtest_run()`/`run_system_campaign()` (só Clérigos constrói uma cópia local internamente); manter o adaptador a construir a sua própria instância, **sem alterar** `prepare_backtest_run()`/`run_system_campaign()`
+
+### `attempted_races` — extensão genérica de contrato (não específica das Astérias)
+
+Correção arquitetural exigida antes da implementação: uma linhagem condicional que se abstém em 100% das células nunca produz uma `CandidateKey`, e por isso desapareceria silenciosamente de `ArenaStrategySummary` — inaceitável, porque "nunca observámos esta estratégia" e "esta estratégia se absteve sempre" são factos diferentes e ambos precisam de ser representáveis. Extensão mínima e genérica, não fechada a nenhuma raça:
+
+- `GeneratorOutput.attempted_races: frozenset[str | None] = frozenset()` (`core/services/backtest_generators.py`) — opcional, default retrocompatível; declara que raças/linhagens um adaptador tentou deliberadamente nesta célula, produza ou não uma candidata.
+- Propagado sem alteração para `GeneratorRunResult.attempted_races` (`core/services/backtest_campaign.py`).
+- `summarize_arena_participation()` (`core/services/backtest_arena.py`) descobre pares `(sistema, raça)` por **duas vias**: candidatas reais produzidas, e `attempted_races` — sem qualquer enumeração central fechada de nomes de raça em código de produção (garantido por teste: `inspect.getsource()` do módulo nunca pode conter os nomes literais das linhagens/sistemas).
+- Astérias declara sempre `{"Astéria Abissal", "Astéria das Marés"}` em `attempted_races`, em todas as células, independentemente de participarem ou se abstiverem — uma linhagem 100% abstinente aparece corretamente como `cells_participated=0`, `abstention_rate=1.0`, `success_rate_when_participating=None` (nunca `0.0`, nunca omissa).
+- Capacidade genérica e reutilizável por qualquer futuro sistema condicional — não fica presa às Astérias.
+
+### Prova das Estrelas
+
+`star_match_distribution(eb: EqualBudgetResult) -> dict[int, int]` (`core/services/backtest_arena.py`) — lente deliberadamente separada da métrica de sucesso normal da Arena (`relevant_categories`). Tabula `{0, 1, 2}` → contagem de candidatas com esse nº de estrelas acertadas, sempre a partir de uma amostra já orçamentada por `sample_with_equal_budget()` (mesmo N que o resto da Arena) — nunca sobre candidatas em bruto não orçamentadas, para que uma comparação futura contra o Acaso Puro no mesmo N se mantenha honesta. Reutiliza `CandidateEvaluation.matched_star_count` já calculado por `reveal_and_evaluate()`; nunca recalcula correspondência, nunca lê `relevant_categories`.
+
+### Comparação futura contra o Acaso Puro (ainda não corrida)
+
+O desenho existe precisamente para permitir comparar, sob Orçamento Igual (mesmo N), as duas linhagens das Astérias contra o Acaso Puro — na Chave Oficial, no Orçamento Igual normal, e na Prova das Estrelas. **Nenhuma campanha foi ainda corrida com as Astérias.** Nenhuma vantagem, superioridade ou "vencedor" foi declarado nem deve ser inferido só a partir do desenho matemático — qualquer veredito fica exclusivamente para depois de uma Temporada 2 real, executada e analisada com o mesmo rigor (numerador/denominador sempre explícitos, nunca agregação entre seeds) já usado na Temporada 1 / Baseline.
+
+### Testes e estado final
+
+`tests/test_backtest_generators.py` ganhou `TestAsteriasMath` (6 testes) e `TestAsteriasAdapter` (11 testes) — 17 novos, mais a atualização de `test_exactly_the_six_approved_systems_are_registered` → `test_exactly_the_seven_approved_systems_are_registered`; ficheiro passa de 28 para **45 testes**, todos OK. `tests/test_backtest_arena.py` ganhou `TestAttemptedRacesRetrocompatibility` (1), `TestAttemptedRacesDiscovery` (6) e `TestStarMatchDistribution` (2) — 9 novos; ficheiro passa de 31 para **40 testes**, todos OK. Suite completa: **1037/1037 OK** (1011 + 26). `py_compile` limpo nos 5 ficheiros tocados; `git diff --check` sem erros de whitespace.
+
+**Ficheiros alterados nesta tranche** (implementados e testados, **ainda não staged/commitados**):
+
+- `core/services/backtest_campaign.py` — `GeneratorRunResult.attempted_races`
+- `core/services/backtest_generators.py` — `GeneratorOutput.attempted_races`, matemática das Astérias (`_star_pair`, `_count_conditional_star_votes`, `_marginal_star_counts`, `_smoothed_probabilities`, `_sample_two_stars`, `_asterias_distribution`), adaptador `_run_asterias`, registo `"asterias"` em `GENERATORS`
+- `core/services/backtest_arena.py` — descoberta via `attempted_races` em `summarize_arena_participation()`, `star_match_distribution()`
+- `tests/test_backtest_generators.py` — `TestAsteriasMath`, `TestAsteriasAdapter`
+- `tests/test_backtest_arena.py` — `TestAttemptedRacesRetrocompatibility`, `TestAttemptedRacesDiscovery`, `TestStarMatchDistribution`
 
 ## Documentação histórica/recuperada associada
 

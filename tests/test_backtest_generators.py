@@ -112,10 +112,10 @@ class _GeneratorFixture(unittest.TestCase):
 
 
 class TestGeneratorsRegistry(_GeneratorFixture):
-    def test_exactly_the_six_approved_systems_are_registered(self):
+    def test_exactly_the_seven_approved_systems_are_registered(self):
         self.assertEqual(
             set(GENERATORS),
-            {"clerics", "skeletons", "melforks", "axiomantes", "pantheon", "acaso_puro"},
+            {"clerics", "skeletons", "melforks", "axiomantes", "pantheon", "acaso_puro", "asterias"},
         )
 
     def test_blocked_systems_are_never_registered(self):
@@ -335,6 +335,202 @@ class TestVerifiedModeGate(_GeneratorFixture):
             with self.subTest(system=system):
                 with self.assertRaises(ValueError):
                     self.build_ctx(cfg, mode="verified")
+
+
+# ---------------------------------------------------------------------------
+# Astérias de Thalássia — Astéria Abissal (purist) / Astéria das Marés
+# (backoff). Pure-math tests operate on hand-verified synthetic histories,
+# never through the full campaign fixture (too small, only 2 draws) — the
+# adapter tests below build ctx['historico'] directly for precise control.
+# ---------------------------------------------------------------------------
+
+def _star_draw(estrelas):
+    return {"numeros": [1, 2, 3, 4, 5], "estrelas": estrelas}
+
+
+# n(P)=5 exactly at the Abissal threshold, P=(1,2) -- hand-verified:
+# counts={3:4,4:4,5:1,6:1}, all others 0; probs sum to 1 with alpha=1.
+_RICH_HISTORICO = [
+    _star_draw([1, 2]), _star_draw([3, 4]),
+    _star_draw([1, 2]), _star_draw([3, 4]),
+    _star_draw([1, 2]), _star_draw([5, 6]),
+    _star_draw([1, 2]), _star_draw([3, 4]),
+    _star_draw([1, 2]), _star_draw([3, 4]),
+    _star_draw([7, 8]),
+    _star_draw([1, 2]),
+]
+
+# Same structure as _RICH_HISTORICO, but the "next" stars are swapped to
+# 9/10 instead of 3/4 -- same participation pattern (both lineages
+# participate), different resulting star probabilities.
+_RICH_HISTORICO_ALT = [
+    _star_draw([1, 2]), _star_draw([9, 10]),
+    _star_draw([1, 2]), _star_draw([9, 10]),
+    _star_draw([1, 2]), _star_draw([5, 6]),
+    _star_draw([1, 2]), _star_draw([9, 10]),
+    _star_draw([1, 2]), _star_draw([9, 10]),
+    _star_draw([7, 8]),
+    _star_draw([1, 2]),
+]
+
+# P=(1,2) never occurred earlier -- Abissal abstains, Marés backs off to
+# the marginal (len(historico)=6 >= 5, each star appears exactly once).
+_SPARSE_HISTORICO = [
+    _star_draw([5, 6]), _star_draw([7, 8]), _star_draw([9, 10]),
+    _star_draw([11, 12]), _star_draw([3, 4]), _star_draw([1, 2]),
+]
+
+# len(historico)=3 < 5 -- even the marginal backoff is too sparse; both
+# lineages abstain.
+_TOO_SHORT_HISTORICO = [
+    _star_draw([9, 10]), _star_draw([11, 12]), _star_draw([1, 2]),
+]
+
+
+class TestAsteriasMath(unittest.TestCase):
+    def test_query_pair_is_unordered(self):
+        from core.services.backtest_generators import _star_pair
+        self.assertEqual(_star_pair([9, 3]), (3, 9))
+        self.assertEqual(_star_pair([3, 9]), (3, 9))
+
+    def test_last_position_never_used_as_a_current_occurrence(self):
+        # A single-draw history: if the last position could match
+        # itself, n would be 1 -- it must be 0. The target's own
+        # instant is structurally unreachable, by construction of the
+        # loop bound, not by convention.
+        from core.services.backtest_generators import _count_conditional_star_votes, _star_pair
+        historico = [_star_draw([1, 2])]
+        n, _counts = _count_conditional_star_votes(historico, _star_pair(historico[-1]["estrelas"]))
+        self.assertEqual(n, 0)
+
+    def test_conditional_distribution_at_exact_threshold(self):
+        from core.services.backtest_generators import _asterias_distribution
+        probs, participates = _asterias_distribution(_RICH_HISTORICO, "abissal")
+        self.assertTrue(participates)
+        self.assertAlmostEqual(sum(probs.values()), 1.0)
+        self.assertAlmostEqual(probs[3], 5 / 22)
+        self.assertAlmostEqual(probs[4], 5 / 22)
+        self.assertAlmostEqual(probs[5], 2 / 22)
+        self.assertAlmostEqual(probs[6], 2 / 22)
+        for s in (1, 2, 7, 8, 9, 10, 11, 12):
+            self.assertAlmostEqual(probs[s], 1 / 22)
+
+    def test_abissal_abstains_below_threshold(self):
+        from core.services.backtest_generators import _asterias_distribution
+        probs, participates = _asterias_distribution(_SPARSE_HISTORICO, "abissal")
+        self.assertFalse(participates)
+        self.assertIsNone(probs)
+
+    def test_mares_backs_off_to_marginal_below_threshold(self):
+        from core.services.backtest_generators import _asterias_distribution
+        probs, participates = _asterias_distribution(_SPARSE_HISTORICO, "mares")
+        self.assertTrue(participates)
+        self.assertAlmostEqual(sum(probs.values()), 1.0)
+        for s in range(1, 13):
+            self.assertAlmostEqual(probs[s], 2 / 24)
+
+    def test_mares_abstains_when_history_itself_too_short(self):
+        from core.services.backtest_generators import _asterias_distribution
+        _probs, participates = _asterias_distribution(_TOO_SHORT_HISTORICO, "mares")
+        self.assertFalse(participates)
+
+
+class TestAsteriasAdapter(unittest.TestCase):
+    def make_cfg(self, **overrides):
+        return make_minimal_cfg(**overrides)
+
+    def make_ctx(self, historico):
+        return {"historico": historico, "estatisticas": {}, "mundo": {}}
+
+    def run_isolated(self, historico, cfg, seed):
+        ctx = self.make_ctx(historico)
+        with tempfile.TemporaryDirectory() as tmp, mock.patch("core.services.run_manifest.RUNS_DIR", Path(tmp)):
+            return GENERATORS["asterias"].run(cfg, ctx, None, seed, BOUNDARY)
+
+    def test_never_touches_get_history_or_builder(self):
+        cfg = self.make_cfg(ARENA={"asterias_quantidade": "3"})
+        with mock.patch("core.data.loaders.get_history", side_effect=AssertionError("must never be called")), \
+             mock.patch("world.engine.builder.build", side_effect=AssertionError("must never be called")):
+            output = self.run_isolated(_RICH_HISTORICO, cfg, seed=1)
+        self.assertTrue(output.candidates)
+
+    def test_produces_both_lineages_when_both_participate(self):
+        cfg = self.make_cfg(ARENA={"asterias_quantidade": "5"})
+        output = self.run_isolated(_RICH_HISTORICO, cfg, seed=1)
+        races = {c.race for c in output.candidates}
+        self.assertEqual(races, {"Astéria Abissal", "Astéria das Marés"})
+        self.assertEqual(sum(1 for c in output.candidates if c.race == "Astéria Abissal"), 5)
+        self.assertEqual(sum(1 for c in output.candidates if c.race == "Astéria das Marés"), 5)
+
+    def test_attempted_races_always_declared_even_when_abissal_abstains(self):
+        cfg = self.make_cfg()
+        output = self.run_isolated(_SPARSE_HISTORICO, cfg, seed=1)
+        self.assertEqual(output.attempted_races, frozenset({"Astéria Abissal", "Astéria das Marés"}))
+        races = {c.race for c in output.candidates}
+        self.assertEqual(races, {"Astéria das Marés"})
+        self.assertNotIn("Astéria Abissal", races)
+
+    def test_both_lineages_abstain_when_history_too_short(self):
+        cfg = self.make_cfg()
+        output = self.run_isolated(_TOO_SHORT_HISTORICO, cfg, seed=1)
+        self.assertEqual(output.candidates, ())
+        self.assertEqual(output.attempted_races, frozenset({"Astéria Abissal", "Astéria das Marés"}))
+        self.assertIsNone(output.generations)
+
+    def test_numeros_never_depend_on_star_transition_data(self):
+        cfg = self.make_cfg(ARENA={"asterias_quantidade": "3"})
+        out_a = self.run_isolated(_RICH_HISTORICO, cfg, seed=42)
+        out_b = self.run_isolated(_RICH_HISTORICO_ALT, cfg, seed=42)
+        for race in ("Astéria Abissal", "Astéria das Marés"):
+            ca = [c for c in out_a.candidates if c.race == race]
+            cb = [c for c in out_b.candidates if c.race == race]
+            self.assertEqual(len(ca), len(cb))
+            for x, y in zip(ca, cb):
+                self.assertEqual(x.numeros, y.numeros, "numeros must be identical regardless of star history")
+        all_stars_a = [c.estrelas for c in out_a.candidates]
+        all_stars_b = [c.estrelas for c in out_b.candidates]
+        self.assertNotEqual(all_stars_a, all_stars_b, "different star histories must produce different star picks")
+
+    def test_deterministic_given_same_seed(self):
+        cfg = self.make_cfg(ARENA={"asterias_quantidade": "4"})
+        out1 = self.run_isolated(_RICH_HISTORICO, cfg, seed=777)
+        out2 = self.run_isolated(_RICH_HISTORICO, cfg, seed=777)
+        strip = lambda o: [(c.race, c.numeros, c.estrelas) for c in o.candidates]
+        self.assertEqual(strip(out1), strip(out2))
+
+    def test_output_independent_of_global_random_state(self):
+        import random
+        cfg = self.make_cfg(ARENA={"asterias_quantidade": "3"})
+        random.seed(111)
+        out1 = self.run_isolated(_RICH_HISTORICO, cfg, seed=42)
+        random.seed(999)
+        out2 = self.run_isolated(_RICH_HISTORICO, cfg, seed=42)
+        strip = lambda o: [(c.race, c.numeros, c.estrelas) for c in o.candidates]
+        self.assertEqual(strip(out1), strip(out2))
+
+    def test_generations_is_always_none(self):
+        cfg = self.make_cfg()
+        output = self.run_isolated(_RICH_HISTORICO, cfg, seed=1)
+        self.assertIsNone(output.generations)
+
+    def test_provenance_source_type_and_name(self):
+        cfg = self.make_cfg(ARENA={"asterias_quantidade": "2"})
+        output = self.run_isolated(_RICH_HISTORICO, cfg, seed=1)
+        for c in output.candidates:
+            self.assertEqual(c.source_type, "external_generator")
+            self.assertEqual(c.source_name, "asterias_thalassia")
+            self.assertIn(c.race, ("Astéria Abissal", "Astéria das Marés"))
+
+    def test_respects_configured_quantidade(self):
+        cfg = self.make_cfg(ARENA={"asterias_quantidade": "7"})
+        output = self.run_isolated(_RICH_HISTORICO, cfg, seed=1)
+        self.assertEqual(sum(1 for c in output.candidates if c.race == "Astéria Abissal"), 7)
+        self.assertEqual(sum(1 for c in output.candidates if c.race == "Astéria das Marés"), 7)
+
+    def test_defaults_to_20_when_unconfigured(self):
+        cfg = self.make_cfg()
+        output = self.run_isolated(_RICH_HISTORICO, cfg, seed=1)
+        self.assertEqual(sum(1 for c in output.candidates if c.race == "Astéria Abissal"), 20)
 
 
 if __name__ == "__main__":

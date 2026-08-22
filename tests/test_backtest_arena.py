@@ -25,6 +25,7 @@ from core.services.backtest_arena import (
     official_key,
     official_keys_by_cell,
     sample_with_equal_budget,
+    star_match_distribution,
     summarize_arena_participation,
     summarize_system_attendance,
 )
@@ -71,7 +72,7 @@ def make_evaluation(target, numeros, estrelas):
     )
 
 
-def make_cell(system, target, seed, race_numeros_pairs, generations=None, run_id=None):
+def make_cell(system, target, seed, race_numeros_pairs, generations=None, run_id=None, attempted_races=frozenset()):
     """race_numeros_pairs: list of (race, numeros, estrelas)."""
     run_id = run_id or f"RUN-{system}-{target.draw_id}-{seed}"
     candidates = tuple(make_sim_candidate(race, numeros, estrelas, run_id) for race, numeros, estrelas in race_numeros_pairs)
@@ -79,6 +80,7 @@ def make_cell(system, target, seed, race_numeros_pairs, generations=None, run_id
     return GeneratorRunResult(
         system=system, target=target, seed=seed, generations=generations, run_id=run_id,
         candidates=candidates, evaluations=evaluations, performance=None,
+        attempted_races=frozenset(attempted_races),
     )
 
 
@@ -433,6 +435,149 @@ class TestArenaIntegrationWithRealGenerators(unittest.TestCase):
             relevant_categories=spec.relevant_categories,
         )
         self.assertEqual(budget.n_used, 5)
+
+
+# ---------------------------------------------------------------------------
+# attempted_races — generic extension (not Astérias-specific). Lets an
+# adapter declare a strategy it deliberately tried this cell even when it
+# produced zero candidates, so a strategy that abstains in every single
+# cell is still discoverable instead of silently disappearing for lack of
+# a CandidateKey.
+# ---------------------------------------------------------------------------
+
+class TestAttemptedRacesRetrocompatibility(unittest.TestCase):
+    def test_results_without_attempted_races_behave_exactly_as_before(self):
+        # default frozenset() -- the 6 pre-existing systems never set this.
+        results = [make_cell("clerics", TARGET_A, 1, [("Bruxa", (1, 2, 3, 4, 5), (1, 2))])]
+        self.assertEqual(results[0].attempted_races, frozenset())
+        summary = summarize_arena_participation(results, relevant_categories=frozenset())
+        self.assertEqual(set(summary), {("clerics", "Bruxa")})
+
+
+class TestAttemptedRacesDiscovery(unittest.TestCase):
+    def test_strategy_declared_but_never_producing_a_candidate_is_discovered(self):
+        result = make_cell(
+            "cond_system", TARGET_A, 1, [], attempted_races=frozenset({"Estrategia-A"}),
+        )
+        summary = summarize_arena_participation([result], relevant_categories=frozenset())
+        self.assertIn(("cond_system", "Estrategia-A"), summary)
+        s = summary[("cond_system", "Estrategia-A")]
+        self.assertEqual(s.cells_attempted, 1)
+        self.assertEqual(s.cells_participated, 0)
+        self.assertEqual(s.abstention_rate, 1.0)
+        self.assertIsNone(s.success_rate_when_participating)
+
+    def test_full_abstention_across_every_cell_still_reported_honestly(self):
+        # Exactly the scenario the correction was requested for: a
+        # strategy that abstains in 100% of cells, never producing a
+        # single CandidateKey anywhere.
+        results = [
+            make_cell("cond_system", TARGET_A, seed, [], attempted_races=frozenset({"Astéria Abissal"}))
+            for seed in (1, 2, 3)
+        ] + [
+            make_cell("cond_system", TARGET_B, seed, [], attempted_races=frozenset({"Astéria Abissal"}))
+            for seed in (1, 2, 3)
+        ]
+        summary = summarize_arena_participation(results, relevant_categories=frozenset())
+        s = summary[("cond_system", "Astéria Abissal")]
+        self.assertEqual(s.cells_attempted, 6)
+        self.assertEqual(s.cells_participated, 0)
+        self.assertEqual(s.cells_succeeded, 0)
+        self.assertEqual(s.abstention_rate, 1.0)
+        self.assertIsNone(s.success_rate_when_participating)
+        self.assertEqual(s.success_rate_over_all_cells, 0.0)
+
+    def test_mixed_participation_and_pure_declaration_in_same_system(self):
+        results = [
+            make_cell(
+                "cond_system", TARGET_A, 1,
+                [("Estrategia-A", (1, 2, 3, 4, 5), (1, 2))],
+                attempted_races=frozenset({"Estrategia-A", "Estrategia-B"}),
+            ),
+            make_cell(
+                "cond_system", TARGET_B, 1, [],
+                attempted_races=frozenset({"Estrategia-A", "Estrategia-B"}),
+            ),
+        ]
+        summary = summarize_arena_participation(results, relevant_categories=frozenset())
+        self.assertEqual(summary[("cond_system", "Estrategia-A")].cells_participated, 1)
+        self.assertEqual(summary[("cond_system", "Estrategia-B")].cells_participated, 0)
+        self.assertEqual(summary[("cond_system", "Estrategia-B")].abstention_rate, 1.0)
+
+    def test_attempted_races_never_inflates_targets_with_participation(self):
+        results = [
+            make_cell("cond_system", TARGET_A, 1, [], attempted_races=frozenset({"Estrategia-A"})),
+            make_cell("cond_system", TARGET_B, 1, [], attempted_races=frozenset({"Estrategia-A"})),
+        ]
+        s = summarize_arena_participation(results, relevant_categories=frozenset())[("cond_system", "Estrategia-A")]
+        self.assertEqual(s.targets_observed, 2)
+        self.assertEqual(s.targets_with_participation, 0)
+        self.assertEqual(s.target_participation_rate, 0.0)
+
+    def test_asterias_concrete_scenario_from_the_generators_suite(self):
+        # Mirrors the exact representation requested: cells_attempted=24,
+        # cells_participated=0, abstention_rate=100%,
+        # success_rate_when_participating=None -- built here purely from
+        # attempted_races, with zero CandidateKey for Astéria Abissal ever
+        # produced.
+        results = [
+            make_cell(
+                "asterias", TARGET_A, seed,
+                [("Astéria das Marés", (1, 2, 3, 4, 5), (1, 2))],
+                attempted_races=frozenset({"Astéria Abissal", "Astéria das Marés"}),
+            )
+            for seed in range(1, 25)
+        ]
+        summary = summarize_arena_participation(results, relevant_categories=frozenset())
+        abissal = summary[("asterias", "Astéria Abissal")]
+        self.assertEqual(abissal.cells_attempted, 24)
+        self.assertEqual(abissal.cells_participated, 0)
+        self.assertEqual(abissal.abstention_rate, 1.0)
+        self.assertIsNone(abissal.success_rate_when_participating)
+        mares = summary[("asterias", "Astéria das Marés")]
+        self.assertEqual(mares.cells_participated, 24)
+
+    def test_no_central_enumeration_of_race_names_in_production_code(self):
+        import inspect
+        import core.services.backtest_arena as arena_module
+        source = inspect.getsource(arena_module)
+        for forbidden in ("Astéria Abissal", "Astéria das Marés", "Acaso Puro", "Bruxa"):
+            self.assertNotIn(
+                forbidden, source,
+                f"{forbidden!r} must never be hardcoded in backtest_arena.py — discovery must stay generic",
+            )
+
+
+# ---------------------------------------------------------------------------
+# Prova das Estrelas — star_match_distribution(), a lens deliberately
+# separate from the Arena's normal relevant_categories-based success metric.
+# ---------------------------------------------------------------------------
+
+class TestStarMatchDistribution(unittest.TestCase):
+    def test_counts_zero_one_two_matched_stars(self):
+        result = make_cell("synthetic", TARGET_A, 1, [
+            ("X", (10, 11, 12, 13, 14), (5, 6)),   # 0 stars (target has 1,2)
+            ("X", (10, 11, 12, 13, 14), (1, 6)),   # 1 star
+            ("X", (10, 11, 12, 13, 14), (1, 2)),   # 2 stars
+        ])
+        eb = sample_with_equal_budget(
+            [result], "synthetic", "X", TARGET_A, generator_seed=1, n=3, arena_seed=1,
+            relevant_categories=frozenset(),
+        )
+        distribution = star_match_distribution(eb)
+        self.assertEqual(distribution, {0: 1, 1: 1, 2: 1})
+
+    def test_never_reads_relevant_categories(self):
+        target = TARGET_A
+        candidate = make_sim_candidate("X", numeros=(1, 2, 3, 4, 5), estrelas=(1, 2))
+        evaluation = make_evaluation(target, candidate.candidate.numeros, candidate.candidate.estrelas)
+        eb = EqualBudgetResult(
+            n_requested=1, n_used=1, candidates=(candidate,), evaluations=(evaluation,), performance=None,
+        )
+        # category is "5+2" (fully relevant by any normal definition),
+        # but star_match_distribution only ever looks at matched_star_count.
+        distribution = star_match_distribution(eb)
+        self.assertEqual(distribution, {0: 0, 1: 0, 2: 1})
 
 
 if __name__ == "__main__":

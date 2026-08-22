@@ -64,6 +64,18 @@ here — touches nothing from ctx/ariadne_temporal at all, only
 as a baseline since the project's own benchmarks/random/README.md
 ("statistical floor every real faction/strategy should be compared
 against"), never implemented until now.
+
+Astérias de Thalássia (Arena Temporada 2): two lineages sharing one
+system, "asterias" — Astéria Abissal (purist conditional star-pair
+transition, abstains under a fixed sample-size threshold) and Astéria
+das Marés (same conditional model, explicit backoff to the marginal
+star distribution instead of abstaining). The only hypothesis tested is
+about stars; numeros are always neutral uniform sampling, the same
+mechanism Acaso Puro uses. Both lineages always declare themselves via
+GeneratorOutput.attempted_races, every cell, so a lineage that abstains
+in 100% of cells is still discoverable and correctly reported as full
+abstention by core.services.backtest_arena, never silently disappearing
+for lack of a CandidateKey.
 """
 
 from __future__ import annotations
@@ -98,11 +110,23 @@ class GeneratorOutput:
     generations is None whenever the system has no meaningful
     generations axis for this integration — never fabricated, never
     forced to 0/-1 to fit a uniform schema.
+
+    attempted_races is optional (defaults empty, fully backward
+    compatible) — the set of race/strategy labels this call
+    deliberately tried, whether or not each one produced a candidate.
+    Only adapters with a fixed, small, self-known set of sub-strategies
+    per cell need to populate it (Pantheon, Astérias) — never a
+    central enumeration living outside the adapter itself. See
+    core.services.backtest_campaign.GeneratorRunResult's docstring for
+    why this exists: a strategy that abstains in every single cell
+    would otherwise never be discoverable by
+    core.services.backtest_arena.summarize_arena_participation().
     """
 
     candidates: tuple[CandidateKey, ...]
     run_id: str
     generations: int | None
+    attempted_races: frozenset[str | None] = frozenset()
 
 
 @dataclass(frozen=True)
@@ -311,6 +335,140 @@ def _run_acaso_puro(cfg, ctx, ariadne_temporal, seed, boundary) -> GeneratorOutp
     return GeneratorOutput(candidates=candidates, run_id=manifest["run_id"], generations=None)
 
 
+_ASTERIAS_ALPHA = 1
+_ASTERIAS_MIN_OCCURRENCES = 5
+_ASTERIAS_LINEAGES = (("abissal", "Astéria Abissal"), ("mares", "Astéria das Marés"))
+
+
+def _star_pair(estrelas) -> tuple[int, int]:
+    a, b = sorted(estrelas)
+    return (a, b)
+
+
+def _count_conditional_star_votes(historico, query_pair):
+    """n(P), c(s,P) for s in 1..12 -- P = query_pair. The loop bound
+    (len(historico) - 1) structurally excludes the last position as a
+    "current" occurrence: that position IS query_pair by construction
+    (see _run_asterias), so looking past it would require the target
+    itself. This is what makes the target's instant unreachable here,
+    the same way HistoricalBacktestBoundary has no numeros/estrelas
+    field at all for Clerics.
+    """
+    n = 0
+    counts = {s: 0 for s in range(1, 13)}
+    for i in range(len(historico) - 1):
+        if _star_pair(historico[i]["estrelas"]) == query_pair:
+            n += 1
+            for s in historico[i + 1]["estrelas"]:
+                counts[s] += 1
+    return n, counts
+
+
+def _marginal_star_counts(historico):
+    counts = {s: 0 for s in range(1, 13)}
+    for draw in historico:
+        for s in draw["estrelas"]:
+            counts[s] += 1
+    return counts
+
+
+def _smoothed_probabilities(counts, total_votes, alpha=_ASTERIAS_ALPHA):
+    """Laplace/additive smoothing, alpha fixed at 1 -- never tuned after
+    seeing results. Sums to exactly 1 over the 12 stars whenever
+    total_votes == sum(counts.values()), which both callers guarantee
+    (2*n for the conditional table, 2*len(historico) for the marginal).
+    """
+    denom = total_votes + 12 * alpha
+    return {s: (counts[s] + alpha) / denom for s in range(1, 13)}
+
+
+def _sample_two_stars(probabilities, rng):
+    """Weighted sampling without replacement, canonical ascending order
+    (1..12) fed to the sampler every time -- reproducibility given a
+    fixed rng state never depends on dict/set iteration order. Ties in
+    probability are resolved by the weighted sampler itself (uniform
+    among tied candidates), never by a separate tie-break rule.
+    """
+    stars = list(range(1, 13))
+    first = rng.choices(stars, weights=[probabilities[s] for s in stars], k=1)[0]
+    rest = [s for s in stars if s != first]
+    second = rng.choices(rest, weights=[probabilities[s] for s in rest], k=1)[0]
+    return tuple(sorted((first, second)))
+
+
+def _asterias_distribution(historico, lineage):
+    """Returns (probabilities, participates) for one lineage ("abissal"
+    or "mares") at this cell. Pure -- no RNG, no side effects.
+    """
+    query_pair = _star_pair(historico[-1]["estrelas"])
+    n, cond_counts = _count_conditional_star_votes(historico, query_pair)
+
+    if n >= _ASTERIAS_MIN_OCCURRENCES:
+        return _smoothed_probabilities(cond_counts, 2 * n), True
+
+    if lineage == "abissal":
+        return None, False
+
+    # lineage == "mares": explicit backoff to the marginal distribution.
+    if len(historico) >= _ASTERIAS_MIN_OCCURRENCES:
+        marg_counts = _marginal_star_counts(historico)
+        return _smoothed_probabilities(marg_counts, 2 * len(historico)), True
+
+    return None, False
+
+
+def _run_asterias(cfg, ctx, ariadne_temporal, seed, boundary) -> GeneratorOutput:
+    """Astéria Abissal (purist -- abstains when the conditional sample
+    on the previous star pair has fewer than 5 historical occurrences)
+    and Astéria das Marés (same conditional distribution, explicit
+    backoff to the marginal star distribution when the sample is too
+    small). The hypothesis is exclusively about stars -- numeros are
+    always uniform/neutral sampling, the same mechanism Acaso Puro uses,
+    never informed by the star-transition data.
+
+    Only ctx['historico'] (already temporally cut, same as every other
+    non-Ariadne adapter) -- no Ariadne, no persistent memory, VERIFIED-
+    safe by construction, same class as Skeletons/Melforks/Pantheon.
+
+    RNG: random.Random(seed), one instance per cell, constructed here --
+    the same pattern _run_skeletons()/_run_pantheon() already use
+    (ctx['rng'] is not populated by prepare_backtest_run() for the
+    shared multi-system path; each adapter that needs one builds its
+    own). Consumed sequentially: Abissal's `quantidade` candidates
+    first, then Marés's -- same fixed-order convention as
+    _run_pantheon().
+
+    attempted_races always declares both lineage labels, every cell,
+    regardless of which one (if any) actually abstains -- so a lineage
+    that abstains in 100% of cells still gets discovered and reported
+    honestly by summarize_arena_participation(), never disappearing
+    for lack of a CandidateKey.
+    """
+    manifest = start_run(seed, _modo_semente(cfg), command="backtest_campaign:asterias", target_draw=boundary.draw_id)
+    quantidade = cfg.getint("ARENA", "asterias_quantidade", fallback=20)
+    historico = ctx["historico"]
+    rng = random.Random(seed)
+
+    candidates = []
+    for lineage, race in _ASTERIAS_LINEAGES:
+        probabilities, participates = _asterias_distribution(historico, lineage)
+        if not participates:
+            continue
+        for i in range(quantidade):
+            estrelas = _sample_two_stars(probabilities, rng)
+            numeros = rng.sample(range(1, 51), 5)
+            chave = normalize_candidate(numeros, list(estrelas), rng)
+            record = {"nome": f"{race}-{i + 1}", "tipo": race, "chave": chave}
+            candidates.append(_candidate_key_from_record(record, "external_generator", "asterias_thalassia", race))
+
+    candidates = tuple(candidates)
+    manifest = complete_run(manifest, generated_record_count=len(candidates))
+    return GeneratorOutput(
+        candidates=candidates, run_id=manifest["run_id"], generations=None,
+        attempted_races=frozenset(race for _lineage, race in _ASTERIAS_LINEAGES),
+    )
+
+
 GENERATORS: Mapping[str, GeneratorAdapter] = MappingProxyType({
     "clerics": GeneratorAdapter("clerics", True, _run_clerics),
     "skeletons": GeneratorAdapter("skeletons", False, _run_skeletons),
@@ -318,4 +476,5 @@ GENERATORS: Mapping[str, GeneratorAdapter] = MappingProxyType({
     "axiomantes": GeneratorAdapter("axiomantes", False, _run_axiomantes),
     "pantheon": GeneratorAdapter("pantheon", False, _run_pantheon),
     "acaso_puro": GeneratorAdapter("acaso_puro", False, _run_acaso_puro),
+    "asterias": GeneratorAdapter("asterias", False, _run_asterias),
 })
