@@ -10,7 +10,7 @@
 
 The Eternal Library is an experimental Python framework built around one central idea: **what happens when many independent agents, each following a different statistical strategy, compete on the same historical dataset under identical, reproducible conditions?**
 
-The agents are factions from a fictional universe. The dataset is 1,968 real Euromillions draws (2004–2026). The strategies range from genetic algorithms and Markov chains to combinatorial permutations and frequency analysis.
+The agents are factions from a fictional universe. The dataset is 1,974 real Euromillions draws (2004–2026). The strategies range from genetic algorithms and Markov chains to combinatorial permutations and frequency analysis.
 
 The result is something between a simulation engine, a statistical workbench, and a strategy game — with lore.
 
@@ -36,13 +36,13 @@ This project is none of those. It is a **laboratory for statistical strategies**
 
 ---
 
-## Current Status (V13)
+## Current Status (V13 + Commits 25-27 + Campaign Runner V2 + Arena)
 
-A quick map of what actually exists in this repository today, kept separate from ideas — see [Roadmap / Future Vision](#roadmap--future-vision) for what is *not* built yet.
+A quick map of what actually exists in this repository today, kept separate from ideas — see [Roadmap / Future Vision](#roadmap--future-vision) for what is *not* built yet, and [Historical/Recovered Documentation](#historicalrecovered-documentation) for archaeology that is neither implemented code nor a roadmap idea.
 
 **✅ Core simulation engine** — plugin architecture (`core/registry.py`, `core/plugin_loader.py`, `core/strategy.py`), 21 auto-discovered voting factions, Ariadne as sole data broker, Council (filtering, weighted voting, Malphas corruption), 21 lore-only races, i18n (6 languages).
 
-**✅ Historical dataset pipeline** — 1,968 real Euromillions draws (2004–2026), immutable annual datasets, plus `core/services/historical_dataset.py`, `historical_astronomy.py`, `historical_statistics.py`, `historical_scroll.py` and `historical_draw_generator.py` (used by `register_official_draw.py`, a full transactional CLI — staged → validated → installed, with rollback — for registering new official draws).
+**✅ Historical dataset pipeline** — 1,974 real Euromillions draws (2004–2026), immutable annual datasets, plus `core/services/historical_dataset.py`, `historical_astronomy.py`, `historical_statistics.py`, `historical_scroll.py` and `historical_draw_generator.py` (used by `register_official_draw.py`, a full transactional CLI — staged → validated → installed, with rollback — for registering new official draws).
 
 **✅ Heroes & Legends** — `library/heroes/` and `library/legends/` registries (`entries/*.json` as source of truth, derived `LIVRO_DOS_HEROIS.json`/`LIVRO_DAS_LENDAS.json` indices), plus `core/services/hero_evaluation.py`/`legend_evaluation.py` and their CLIs (`evaluate_heroes.py`, `evaluate_legends.py`).
 
@@ -58,9 +58,19 @@ A quick map of what actually exists in this repository today, kept separate from
 
 **✅ Minotauros** — a new Clerics lineage (Commit 19) with **key persistence** instead of exploration: survivors keep exactly the same key every generation, and a bred descendant can inherit its Minotauro parent's key. Not a new voting faction — see [Candidate Analysis Layer](#candidate-analysis-layer-commits-15-19) below.
 
-**✅ Backtest Lab & Temporal Safety** — `core/services/backtest_lab.py` (Commit 20) certifies that a candidate provably existed before a target draw's official reveal; `historical_simulation_source.py` (Commit 22) and `historical_ariadne_source.py` (Commit 23, plus a new `Ariadne(scrolls=...)` temporal mode) extend the same timezone-aware cutoff to the versioned historical dataset and to Ariadne's pergaminho-based methods; `temporal_memory_boundary.py` (Commit 24) extends it again to persistent memory (Heroes/Legends recognition, legacy Legend resurrection). None of this is wired into `main.py` yet — see [Temporal Safety and Backtest Lab](#temporal-safety-and-backtest-lab-commits-20-24) below.
+**✅ Backtest Lab & Temporal Safety** — `core/services/backtest_lab.py` (Commit 20) certifies that a candidate provably existed before a target draw's official reveal; `historical_simulation_source.py` (Commit 22) and `historical_ariadne_source.py` (Commit 23, plus a new `Ariadne(scrolls=...)` temporal mode) extend the same timezone-aware cutoff to the versioned historical dataset and to Ariadne's pergaminho-based methods; `temporal_memory_boundary.py` (Commit 24) extends it again to persistent memory (Heroes/Legends recognition, legacy Legend resurrection). See [Temporal Safety and Backtest Lab](#temporal-safety-and-backtest-lab-commits-20-24) below.
 
-**✅ Testing** — 846 tests across 34 modules (`python -m unittest discover -s tests`).
+**✅ Backtest Orchestrator V1** (Commit 25, `6504425`) — `core/services/backtest_orchestrator.py`: the first real, end-to-end retrospective run — builds a temporally-scoped context from a `HistoricalBacktestBoundary` (draw_id + draw_datetime only, no numeros/estrelas field exists on the type at all), runs the real, unmodified Clerics genetic algorithm, freezes the result, and only then reveals the target's key for evaluation. `VERIFIED` mode structurally requires uncertified persistent memory (Artefactos Vivos, Arca, Monges e Escribas) to be unreachable; `EXPLORATORY` mode opts out explicitly. Clerics-only in V1. See [Backtest Orchestrator & Campaign Runner](#backtest-orchestrator--campaign-runner-commits-25-27--v2--arena) below.
+
+**✅ Zombie** (Commit 26, `71be259`) — a new Clerics lineage with **territorial Monte Carlo**: each Zombie is born with a small, heritable, mutable pool of numbers/stars (its "territory") and explores it via Monte Carlo (300 simulations by default) using the same `fitness()` already used by Werewolves. Not a new voting faction, like Minotauro. Clerics now has **10** archetypal lineages, not 9.
+
+**✅ Campaign Runner V1** (Commit 27, `6308fc1`) — `core/services/backtest_campaign.py`: runs a grid of independent historical backtests over `target × seed × generations` for Clerics, aggregating results by race with purely descriptive statistics — no scores, no p-values. Race discovery is fully dynamic, never a fixed list.
+
+**✅ Campaign Runner V2 — multi-system** (`cb5087e`) — `core/services/backtest_generators.py` generalizes the Campaign Runner to 6 systems (Clerics, Skeletons, Melforks, Axiomantes, Pantheon, and a new Acaso Puro/Pure Chance baseline) via external adapters that call each faction's original function unmodified — zero changes to any faction algorithm or to `backtest_orchestrator.py`. System/strategy discovery is dynamic (a `GENERATORS` registry, not an enumeration); `generations=None` is represented honestly for systems without that axis (Skeletons, Axiomantes, Pantheon, Acaso Puro).
+
+**✅ Arena layer** (`88bfb28`) — `core/services/backtest_arena.py`: normalized cross-system/cross-strategy comparison. Official Key (neutral RNG selection, one per `system × strategy × target × seed` cell, never aggregated across seeds), Equal Budget sampling (N candidates without replacement, within one cell), and abstention/participation accounting (`cells_attempted`/`cells_participated`/`cells_succeeded` vs. coarser `targets_observed`/`targets_with_participation`, so a strategy that rarely participates can never look like it "always succeeds"). See [Backtest Orchestrator & Campaign Runner](#backtest-orchestrator--campaign-runner-commits-25-27--v2--arena) below.
+
+**✅ Testing** — 1011 tests across 39 modules (`python -m unittest discover -s tests`).
 
 ---
 
@@ -70,7 +80,7 @@ A quick map of what actually exists in this repository today, kept separate from
 Ariadne (data broker)
     │
     ├── Eternal Library (persistent knowledge)
-    │       ├── Scrolls        — one JSON per real draw (1,968 total)
+    │       ├── Scrolls        — one JSON per real draw (1,974 total)
     │       ├── Books          — derived analytics (frequencies, pairs, triples)
     │       ├── Sources        — immutable annual datasets (2004–2026)
     │       ├── Indices        — pairs and triples index
@@ -95,7 +105,7 @@ Each faction represents a distinct statistical philosophy:
 
 | Faction | Strategy |
 |---------|---------|
-| **Clerics** | Genetic algorithm — 72 individuals evolve over 14 generations across 9 archetypal lineages, including Minotauro's key-persistence lineage (Commit 19) |
+| **Clerics** | Genetic algorithm — 72 individuals evolve over 14 generations across 10 archetypal lineages, including Minotauro's key-persistence lineage (Commit 19) and Zombie's territorial Monte Carlo lineage (Commit 26) |
 | **Melforks** | Specialised genetic algorithm for balanced key generation |
 | **Vampires** | Linhagem Sanguínea: frequent triples + balance; Linhagem Sombria: consecutive triples |
 | **Gargoyles** | Linhagem de Pedra: consistent pairs; Linhagem do Espelho: symmetry and consecutive numbers |
@@ -245,7 +255,7 @@ library/
 ├── sources/            ← immutable annual datasets 2004–2026
 ├── scrolls/
 │   ├── 2004/ … 2025/   ← compact format (1,929 scrolls)
-│   └── 2026/           ← full format with astronomy (61 scrolls)
+│   └── 2026/           ← full format with astronomy (67 scrolls)
 ├── books/
 │   └── cartographers/  ← 5 analytical books (Cartographers)
 ├── indices/            ← pairs, triples, frequencies, moon phases
@@ -274,7 +284,7 @@ library/
 | `build_frequencies_rows()` | `FrequenciesRow` | any already-loaded set of draws — the same shape `build_key_base_rows()` reads |
 | `build_dashboard_dataset()` | `DashboardDataset` | Composes all of the above — never calls the builders itself |
 
-**Economy and Prize Categories are real, not synthetic.** The official 2026 dataset only has complete financial/prize-category data for 15 of its 61 draws — confirmed via the dataset's own `qualidade_dados` flags, never inferred from whether a value happens to be non-null. Every sum, mean, minimum and maximum in `EconomySummary`/`PrizeCategorySummary` is computed only over the draws that actually have that field; a field with zero real observations resolves to `None`, never an invented `0` or an estimate. `PrizeCategoryRow` always emits exactly 13 rows per draw — the fixed, official Euromillions prize-tier table, a game rule rather than a per-draw fact — with only the observed winner counts ever `None`.
+**Economy and Prize Categories are real, not synthetic.** The official 2026 dataset only has complete financial/prize-category data for 15 of its 67 draws — confirmed via the dataset's own `qualidade_dados` flags, never inferred from whether a value happens to be non-null. Every sum, mean, minimum and maximum in `EconomySummary`/`PrizeCategorySummary` is computed only over the draws that actually have that field; a field with zero real observations resolves to `None`, never an invented `0` or an estimate. `PrizeCategoryRow` always emits exactly 13 rows per draw — the fixed, official Euromillions prize-tier table, a game rule rather than a per-draw fact — with only the observed winner counts ever `None`.
 
 `GenerationRow.fitness_medio`/`fitness_maximo`/`fitness_minimo` are always `None` — the real prediction archive never persisted a per-individual score, so there is nothing honest to compute. `GenerationRow.jaccard_medio_vs_geracao_anterior` is also still always `None` — deliberately deferred until the project defines a canonical similarity metric. `FrequenciesRow.atraso_atual` **is now computed** (0 in the most recent draw, N draws ago, `None` if never observed) via `current_delay()` from `core/services/statistical_profiles.py` — this requires `draw_records` to be chronologically ordered (oldest → newest); frequency fields remain order-independent. Both builders take data the caller already scoped (which execution, which draws) — neither decides that on its own.
 
@@ -326,7 +336,7 @@ historical data up to X-1 → train/evolve/generate → freeze candidates → re
 
 **Minotauros (Commit 19)** — a new Clerics lineage, not a new voting faction. Survivors keep exactly the same key every generation (`h.keys[-1]`); a bred descendant can inherit a Minotauro parent's key at reproduction time (deterministic p1-over-p2 precedence, no extra randomness, no mutable aliasing between generations); a non-Minotauro child never inherits; a founder without an inherited key generates its own, the same way other lineages do; Minotauros never go through `aplicar_conhecimento()`; fitness, elimination and provenance (`race="Minotauro"`, `source_type="evolutionary_individual"`) are all unchanged. See `CLAUDE.md`'s "Camada de Proveniência, Avaliação e Desempenho de Candidatos (Commits 15–19)" for the full specification.
 
-**The Backtest Experiment Lab now exists** (Commit 20, see [Temporal Safety and Backtest Lab](#temporal-safety-and-backtest-lab-commits-20-24) below) — it is no longer on the "not implemented" list. Still ideas only, none exists as code or a closed spec today: a Zombies race/faction exploring territorial/local Monte Carlo search, future Necromancer lineages (which must first be audited against the existing `necromancia_estatistica` Legend-resurrection mechanism in `main.py` to avoid duplicating it, and against the temporal-safety work already done for legacy Legend resurrection in Commit 24), and a lab/hybrid-"superspecies" concept.
+**The Backtest Experiment Lab now exists** (Commit 20, see [Temporal Safety and Backtest Lab](#temporal-safety-and-backtest-lab-commits-20-24) below) — it is no longer on the "not implemented" list. **Zombie also now exists** (Commit 26, see [Current Status](#current-status-v13--commits-25-27--campaign-runner-v2--arena) above) — no longer an idea either. Still ideas only, none exists as code or a closed spec today: future Necromancer lineages (which must first be audited against the existing `necromancia_estatistica` Legend-resurrection mechanism in `main.py` to avoid duplicating it, and against the temporal-safety work already done for legacy Legend resurrection in Commit 24), and a lab/hybrid-"superspecies" concept.
 
 ---
 
@@ -351,7 +361,60 @@ Five sequential commits answering a different question from the Candidate Analys
 
 **Explicitly not certified, by decision** — the Black Squad's grimoire, the Elven Order's `estado_ordem.json`, and artifacts' current top-level state (`artifacts/relics/*.json`) are cumulative aggregates with no timestamp at the fact level actually consulted during generation, even though the individual events feeding them do have real timestamps. `artifacts/living.py`, `artifacts/ark.py`, `orders/black_squad/persistence.py` and `orders/elven_order/ninjas.py` never import `temporal_memory_boundary` — a standing, tested proof, not just documentation.
 
-**Nothing here is wired into `main.py` or any backtest orchestrator yet** — each commit is a standalone, tested service; connecting them is future work.
+**Not wired into `main.py`** — each commit is a standalone, tested service. A real backtest orchestrator **does** now exist and consumes several of them directly (Commit 25) — see the next section.
+
+---
+
+## Backtest Orchestrator & Campaign Runner (Commits 25-27 + V2 + Arena)
+
+Four sequential pieces, built on top of the Temporal Safety layer above, answering a new question: not just "can we certify a candidate existed before X", but "let's actually run the retrospective experiment, at scale, across systems, and compare the results fairly".
+
+### Backtest Orchestrator V1 (Commit 25, `6504425`)
+
+`core/services/backtest_orchestrator.py` — the first real end-to-end retrospective run. `prepare_backtest_run(cfg, boundary, *, mode, ...)` builds a temporally-scoped context (reusing Commits 22/23 unmodified) from a `HistoricalBacktestBoundary(draw_id, draw_datetime)` — a type with **no `numeros`/`estrelas` field at all**, so the winning key is structurally unreachable during preparation, not just unlikely to leak. `run_clerics_backtest()` then runs the real, unmodified `factions.clerics.algorithm.execute()`. Only `reveal_and_evaluate()` — called after freezing — ever receives the full target.
+
+Two modes: `mode="verified"` raises `ValueError` (listing every violation) unless Artefactos Vivos, a Redescoberta-enabled Arca, and every Monges e Escribas access list are structurally disabled — `mode="exploratory"` opts out of that check explicitly, never silently. Clerics-only in V1; every other faction was audited and found out of scope (see [Campaign Runner V2](#campaign-runner-v2--multi-system-cb5087e) below for which of them can join later, and why some structurally cannot).
+
+### Zombie (Commit 26, `71be259`)
+
+A new Clerics lineage — not a new voting faction, like Minotauro. Each Zombie is born with a small, heritable, mutable territory (a pool of numbers/stars) and explores it via Monte Carlo (300 simulations by default, same `fitness()` Werewolves already use). Clerics now has **10** archetypal lineages.
+
+### Campaign Runner V1 (Commit 27, `6308fc1`)
+
+`core/services/backtest_campaign.py` — `CampaignSpec`/`run_campaign()` run a grid of independent historical backtests over `target × seed × generations` for Clerics, reusing the orchestrator above unmodified. `summarize_by_race()`/`summarize_by_race_and_generations()` aggregate the pooled results by race — **no fixed race list anywhere**: a race is discovered the moment it appears in a `CandidateKey.race`, including races that don't exist in the real project (proven with synthetic races in tests) and double-resurrected `"Renascido Renascido X"` individuals (a genuine finding from the first real baseline campaign against 065-067/2026).
+
+### Campaign Runner V2 — multi-system (`cb5087e`)
+
+`core/services/backtest_generators.py` generalizes the Campaign Runner beyond Clerics via external adapters — **zero changes to any faction algorithm and zero changes to `backtest_orchestrator.py`**. Each adapter calls the faction's original function exactly as it exists, preserving its own RNG contract (global `random` for Melforks, `ctx['rng']` for Skeletons/Pantheon, no RNG at all for Axiomantes' Feistel walk).
+
+| System | Adapter calls | Notes |
+|---|---|---|
+| Clerics | `run_clerics_backtest()` (Commit 25, unmodified) | Only system with a `generations` axis |
+| Skeletons | `factions.skeletons.algorithm.create_representatives()` | No history/Ariadne dependency at all |
+| Melforks | `factions.melforks.algorithm.melforks()` | Reports its own real `geracoes_chaves`, never swept as a campaign axis |
+| Axiomantes | `factions.axiomantes.ritual.execute_ritual()`, given the **temporal** Ariadne only | `[AXIOMANTES] guardar_experiencia` forced off — a campaign never writes to `experiments/axiomancers/runs/` |
+| Pantheon | `orders.pantheon.{mages,druids,djinns,aion}` | Mago/Druida/Djinn/Aion become individually distinguishable via `CandidateKey.race`, purely inside this adapter — the real archive still collapses the first three under `origem="ser_superior"`, unchanged |
+| Acaso Puro | pure `random.Random(seed)` sampling, no history/Ariadne at all | The statistical-floor baseline `benchmarks/random/README.md` had reserved since early in the project, never implemented until now |
+
+Vampires, Gargoyles, Kor Vermelho and Werewolves were explicitly audited and are **not** registered — see [Roadmap](#roadmap--future-vision) below for why.
+
+### Arena layer (`88bfb28`)
+
+`core/services/backtest_arena.py` — normalized comparison across systems/strategies with unequal candidate budgets, so a strategy that produces thousands of candidates never automatically "wins" over one that produces five.
+
+- **Official Key** — one neutral, RNG-selected key per `(system, strategy, target, seed)` **cell**, never aggregated across seeds (each seed is an independent experimental repetition). The Arena's own RNG (`_arena_rng`, SHA-256-derived, namespaced by purpose) never touches or is touched by any generator's own random stream.
+- **Equal Budget** — samples exactly N candidates without replacement, within one cell; `n_used` is always reported next to `n_requested`, never padded.
+- **Abstention accounting** — `ArenaSystemAttendance` (system-level, catches total abstention — e.g. Axiomantes' Portal closed at every target — even when no strategy label was ever produced) and `ArenaStrategySummary` (`cells_attempted/participated/succeeded` vs. coarser `targets_observed/targets_with_participation`). `success_rate_when_participating` is `None`, never `0.0`, when a strategy never participated — an undefined rate is never rendered as "tried and failed".
+- **Campeão do Tesouro** (financial ranking) is a documented **contract only** — no prize-value-per-category table exists anywhere in the project, and 065-067/2026 (like most real draws) have no financial data at all.
+
+---
+
+## Historical/Recovered Documentation
+
+Two documents that are neither implemented code nor a roadmap idea — pure archaeology, reconstructing intent from the current code and from Git history (as far back as it goes, which is `756c63e6`, "V8 - Claude" — there is no V1-V7 history in this repository).
+
+- **[`docs/AUDITORIA_FACCOES_E_ESTRATEGIAS.md`](docs/AUDITORIA_FACCOES_E_ESTRATEGIAS.md)** — every faction/order/organization's real algorithm, state (`ACTIVE`/`IMPLEMENTED_ORPHAN`/`PARTIAL`/`LORE_ONLY`/`SUPERSEDED`), RNG, Ariadne/history dependencies, persistence, VERIFIED-mode compatibility.
+- **[`docs/BESTIARIO_ALGORITMICO_RECUPERADO.md`](docs/BESTIARIO_ALGORITMICO_RECUPERADO.md)** — a fact sheet per race/lineage/archetype (strategy, key construction, distinguishing trait, implicit experimental hypothesis), with every claim tagged `CONFIRMADO NO CÓDIGO ATUAL` / `CONFIRMADO NO HISTÓRICO GIT` / `DOCUMENTADO-LORE SEM IMPLEMENTAÇÃO` / `INFERÊNCIA`, never presented as fact when it isn't. **Recovered so far: V8 → today only** — pre-Git archaeology (V1/V2/V3, an evolutionary tree of strategies) is an explicitly scoped, not-yet-done second pass, noted in the document itself.
 
 ---
 
@@ -388,7 +451,11 @@ Project-Ariadne/
 │       ├── backtest_lab.py                     ← Backtest Experiment Lab (Commit 20)
 │       ├── historical_simulation_source.py     ← temporal cutoff over the versioned dataset (Commit 22)
 │       ├── historical_ariadne_source.py        ← temporal cutoff over library/scrolls/ (Commit 23)
-│       └── temporal_memory_boundary.py         ← temporal cutoff over persistent memory (Commit 24)
+│       ├── temporal_memory_boundary.py         ← temporal cutoff over persistent memory (Commit 24)
+│       ├── backtest_orchestrator.py            ← Backtest Orchestrator V1, Clerics-only (Commit 25)
+│       ├── backtest_campaign.py                ← Campaign Runner V1 (Commit 27) + V2 multi-system
+│       ├── backtest_generators.py              ← Campaign Runner V2 adapters (6 systems)
+│       └── backtest_arena.py                   ← Arena — Official Key, Equal Budget, abstention accounting
 ├── council/                     ← Grand Council filter + vote
 ├── factions/                    ← executable faction plugins (package format) — 21 factions, one per race
 │   ├── clerics/                 ← Clérigos (V11) — genetic algorithm engine, 8-archetype dispatcher
@@ -400,7 +467,7 @@ Project-Ariadne/
 │       ├── ritual.py            ← Ritual of Thirty Echoes
 │       └── council.py           ← Council integration
 ├── races/                       ← lore only (README/lore.md/characters.json/artifacts.json/lineages|orders.json) — no executable code, 21 races
-│   ├── clerics/                 ← Clérigos (V11) — the 9 ancestral lineages (incl. Minotauro, Commit 19), 6 houses
+│   ├── clerics/                 ← Clérigos (V11) — the 10 ancestral lineages (incl. Minotauro Commit 19, Zombie Commit 26), 6 houses
 │   └── mystics/                 ← Mystics (V10) — lore, characters, artifacts; nature/ + prophecy/ lineages
 ├── orders/                      ← organisations and guilds
 │   ├── black_squad/             ← Black Squad + grimoire + dark_library
@@ -441,6 +508,8 @@ Project-Ariadne/
 │   ├── reports/                 ← human-readable comparison reports
 │   └── rankings/                ← machine-readable leaderboards
 ├── docs/                        ← documentation
+│   ├── AUDITORIA_FACCOES_E_ESTRATEGIAS.md    ← historical/recovered — every faction's real algorithm/state
+│   ├── BESTIARIO_ALGORITMICO_RECUPERADO.md   ← historical/recovered — per-race strategy fact sheets (V8→today)
 │   └── lore/                    ← canon bible (canon_index, timeline, relationships, geography,
 │       │                          factions, artifacts, characters, locations, glossary, architecture)
 │       └── legends/             ← legendary characters registry (runtime, not canon)
@@ -544,8 +613,8 @@ Set `lang = en` in `config.txt`. Invalid codes fall back silently to `pt`.
 
 ## Dataset
 
-- **1,968 real Euromillions draws** (2004–2026) stored as individual JSON scrolls (`library/scrolls/`)
-- **61 full 2026 scrolls** with astronomy metadata, statistics, and SHA-256 signature
+- **1,974 real Euromillions draws** (2004–2026) stored as individual JSON scrolls (`library/scrolls/`)
+- **67 full 2026 scrolls** with astronomy metadata, statistics, and SHA-256 signature
 - **Immutable annual datasets** 2004–2026 in `datasets/historical/euromillions/<year>/`
 - **Raw imports** (e.g. spreadsheet exports) in `datasets/imports/`
 - **Frequency indices** for pairs, triples and the normalized number index in `library/indexes/`
@@ -617,15 +686,17 @@ layers away. Faction-specific narrative logic (the 21 `factions/*/`
 strategies) is not under test — it doesn't affect framework stability
 and its "correctness" is largely narrative, not mechanical.
 
-**Current suite:** 846 tests across 34 modules, also covering the
+**Current suite:** 1011 tests across 39 modules, also covering the
 historical dataset pipeline, Hero/Legend evaluation, the Dashboard
 Dataset layer, the Dashboard Excel Export, the Artifact Library, the
 Candidate Analysis Layer (provenance, evaluation, performance,
-Minotauros) and the Temporal Safety / Backtest Lab (Commits 20-24) —
-each with dedicated tests against real, on-disk data
-(`datasets/historical/euromillions/`, `library/artifacts/entries/`,
-`library/scrolls/`, `datasets/generated/simulations/arquivo_destino.json`),
-not just synthetic fixtures.
+Minotauros, Zombie), the Temporal Safety / Backtest Lab (Commits
+20-24), and the Backtest Orchestrator / Campaign Runner V1+V2 / Arena
+layer (Commits 25-27 and after) — each with dedicated tests against
+real, on-disk data (`datasets/historical/euromillions/`,
+`library/artifacts/entries/`, `library/scrolls/`,
+`datasets/generated/simulations/arquivo_destino.json`), not just
+synthetic fixtures.
 
 ---
 
@@ -673,8 +744,33 @@ exists.
   the shared, seedable `ctx['rng']` (today only the Pantheon, Skeletons
   and Chronomancers do; Clerics deliberately kept the global `random`
   module for reproducibility reasons).
-- **Benchmarks runner** — `benchmarks/` is scaffolding only; no runner
-  exists yet.
+- **Benchmarks runner** — `benchmarks/` is still scaffolding, but its
+  own README's original promise ("baseline runs: pure random key
+  selection... the statistical floor every real faction/strategy
+  should be compared against") is now partially fulfilled by the
+  Arena's Acaso Puro system — what's left is wiring `benchmarks/` as a
+  durable destination for Arena comparison output, not building a
+  random baseline from zero.
+- **Vampires, Gargoyles, Kor Vermelho, Werewolves in the Campaign
+  Runner** — explicitly audited and **not** registered, for two
+  different, documented reasons, not because nobody got to it yet:
+  Vampires/Gargoyles/Kor Vermelho depend on Ariadne methods
+  (`pairs()`/`triples()`/`least_frequent_numbers()`) that Commit 23
+  already proved structurally impossible to certify temporally without
+  redesigning their data source; Werewolves have a real provenance gap
+  (`origem="lobisomem"` is absent from `candidate_provenance.py`'s
+  closed taxonomy — latent, never yet triggered in the real archive).
+  See `docs/AUDITORIA_FACCOES_E_ESTRATEGIAS.md` for the full matrix.
+- **Campeão do Tesouro** (financial ranking, Arena layer) — the
+  contract exists (`core/services/backtest_arena.py`'s module
+  docstring and design notes) but is not implemented: no
+  prize-value-per-category table exists anywhere in the project, and
+  only 15 of the 67 real 2026 draws have financial data at all.
+- **Pre-Git archaeology (V1/V2/V3)** — `docs/BESTIARIO_ALGORITMICO_RECUPERADO.md`
+  only recovers V8 → today (the oldest commit reachable in this
+  repository's Git history). A second pass, based directly on
+  recovered pre-Git source files, plus an evolutionary tree of
+  strategies, is scoped but not started.
 
 ---
 
@@ -712,6 +808,11 @@ Se preferires ler em português → [LEIA-ME.md](LEIA-ME.md)
 | V13 | Biblioteca dos Artefactos — narrative artifact schema, registry and deterministic inspiration generator; official-draw registration CLI |
 | Commits 15-19 | Candidate Analysis Layer — Statistical Window Profiles, Candidate Provenance/Evaluation/Performance (strictly retrospective, temporal boundary enforced); Minotauros — Clerics' key-persistence lineage |
 | Commits 20-24 | Temporal Safety / Backtest Lab — candidate existence (Commit 20), historical dataset + Ariadne temporal modes (Commits 22-23), persistent memory / Necromancy (Commit 24); Commit 21 audited the gaps these close. Not yet wired into `main.py`. |
+| Commit 25 | Backtest Orchestrator V1 (`6504425`) — first real end-to-end retrospective run for Clerics; VERIFIED/EXPLORATORY modes; `run_manifest.py` collision fix; `tzdata` added as the project's one non-stdlib dependency |
+| Commit 26 | Zombie (`71be259`) — territorial Monte Carlo lineage for Clerics; 10 archetypal lineages total |
+| Commit 27 | Campaign Runner V1 (`6308fc1`) — `target × seed × generations` grid for Clerics, dynamic race discovery, purely descriptive race performance |
+| Campaign Runner V2 | Multi-system Campaign Runner (`cb5087e`) — Skeletons, Melforks, Axiomantes, Pantheon and Acaso Puro join Clerics via external adapters, zero faction/orchestrator changes; Arena layer (`88bfb28`) — Official Key, Equal Budget, abstention/participation accounting for normalized cross-system comparison |
+| — | Historical archaeology — `docs/AUDITORIA_FACCOES_E_ESTRATEGIAS.md` and `docs/BESTIARIO_ALGORITMICO_RECUPERADO.md`, V8 → today, every claim tagged by evidence level |
 
 ---
 

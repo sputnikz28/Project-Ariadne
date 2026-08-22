@@ -31,7 +31,7 @@ Biblioteca de conhecimento.
 
 | Facção | Módulo | Estratégia |
 |--------|--------|-----------|
-| Clérigos | `factions/clerics/algorithm.py` + `archetypes.py` | Algoritmo genético, 14 gerações, 9 arquétipos ancestrais (V11; Minotauro — persistência de chave — adicionado no Commit 19) |
+| Clérigos | `factions/clerics/algorithm.py` + `archetypes.py` | Algoritmo genético, 14 gerações, 10 arquétipos ancestrais (V11; Minotauro — persistência de chave — Commit 19; Zombie — território + Monte Carlo — Commit 26) |
 | Melforks | `factions/melforks/algorithm.py` | Algoritmo genético especializado |
 | Anões | `factions/dwarves/algorithm.py` | Combinatória por clãs (3 × 15 chaves) |
 | Fadas | `factions/faeries/algorithm.py` | Ponderação por números quotidianos |
@@ -386,11 +386,11 @@ dashboard/ (Excel export implemented; no CLI/wiring yet)
 
 | Faction | Algorithm | Race |
 |---|---|---|
-| Clerics | Genetic Algorithm — `factions/clerics/algorithm.py` (engine) + `archetypes.py` (9-lineage dispatcher; Minotauro's key-persistence lineage added Commit 19) (V11) | Clerics (`races/clerics/`) |
+| Clerics | Genetic Algorithm — `factions/clerics/algorithm.py` (engine) + `archetypes.py` (10-lineage dispatcher; Minotauro's key-persistence lineage Commit 19, Zombie's territorial Monte Carlo lineage Commit 26) (V11) | Clerics (`races/clerics/`) |
 | Dwarves | Mountain-forge combinatorics (`factions/dwarves/algorithm.py`) | Dwarves (`races/dwarves/`) |
 | Werewolves | Monte Carlo (`factions/werewolves/algorithm.py`) | Werewolves (`races/werewolves/`) |
-| Vampires | Triple frequencies (`factions/vampires/algorithm.py`, `council.py`) | Vampires (`races/vampires/`) |
-| Gargoyles | Frequent pairs (`factions/gargoyles/algorithm.py`, `council.py`) | Gargoyles (`races/gargoyles/`) |
+| Vampires | Triple frequencies **via `council.py`/`ariadne.triples()`** — the live path `main.py`/`FactionRegistry` actually calls; `algorithm.py` (direct `library/indexes/triplas.json` read) is a second, divergent implementation only reachable via the separate legacy `simulate_v7.py` script, not `main.py` (found during the Campaign Runner V2 audit, `docs/AUDITORIA_FACCOES_E_ESTRATEGIAS.md`) | Vampires (`races/vampires/`) |
+| Gargoyles | Frequent pairs via `council.py`/`ariadne.pairs()` — same `algorithm.py`-vs-`council.py` split as Vampires above, same audit | Gargoyles (`races/gargoyles/`) |
 | Kors | Multi-order statistical analysis (`factions/kors/`) | Kors (`races/kors/`) |
 | Mystics (Druids, Moon Priests, Star Gazers, Bone Readers, Oracles, Seers, Shamans, Witches) | Ritual strategies — placeholders, no algorithm yet | Mystics (`races/mystics/`) |
 | Chronomancers | Temporal energy (`factions/chronomancers/algorithm.py`); also generates the Pantheon's Aion (`representatives.py`) | Chronomancers (`races/chronomancers/`) |
@@ -543,7 +543,7 @@ Suite `unittest` da stdlib. `requirements.txt` tem uma única dependência não-
 python -m unittest discover -s tests
 ```
 
-846 testes em 34 módulos (`tests/test_*.py`), verificado no Commit 24 (Temporal Persistent Memory).
+1011 testes em 39 módulos (`tests/test_*.py`), verificado após o Arena layer (`88bfb28`).
 
 | Ficheiro | Cobre |
 |---------|------|
@@ -581,6 +581,10 @@ python -m unittest discover -s tests
 | `test_historical_simulation_source.py` | `core/services/historical_simulation_source.py` (Commit 22) — `available_at`/`load_versioned_history`/`visible_draws`/`adapt_to_legacy_draw`/`build_historical_context_for_backtest`; invariante A/B (alterar X e posteriores nunca muda a vista pré-X); integração real com `core.evolution.statistics.calculate()` |
 | `test_historical_ariadne_source.py` | `core/services/historical_ariadne_source.py` + modo temporal de `library/ariadne/engine.py:Ariadne` (Commit 23) — `pergaminho_available_at`/`load_scrolls`/`visible_scrolls`/`build_scrolls_for_backtest`; prova por `mock.patch` de que os 7 métodos baseados em pergaminhos nunca tocam o disco em modo temporal; `pairs`/`triples`/`numero`/`least_frequent_numbers` levantam `RuntimeError` numa instância temporal |
 | `test_temporal_memory_boundary.py` | `core/services/temporal_memory_boundary.py` (Commit 24) — `classify_memory_availability`/`temporal_memory_view`; Necromancia (`tentar_ressuscitar_lenda`) temporalmente segura via `registado_em`; prova estrutural de que Grimório/Artefactos/Ordem Élfica nunca importam este módulo |
+| `test_backtest_orchestrator.py` | `core/services/backtest_orchestrator.py` (Commit 25) — `prepare_backtest_run`/`run_clerics_backtest`/`freeze_simulated_candidates`/`reveal_and_evaluate`/`summarize`; `HistoricalBacktestBoundary` provado sem campo `numeros`/`estrelas`; `_validate_verified_mode()` (VERIFIED vs EXPLORATORY); `run_manifest.py` sem colisão de `run_id` |
+| `test_backtest_campaign.py` | `core/services/backtest_campaign.py` (Commit 27 + V2) — `CampaignSpec`/`run_campaign()` (Clérigos, `target×seed×generations`); `MultiSystemCampaignSpec`/`run_system_campaign()` (6 sistemas); `summarize_by_race*()`/`summarize_by_system_and_strategy*()` — descoberta dinâmica, sem lista fixa de raças/sistemas; grelha honesta quando `generations` não se aplica |
+| `test_backtest_generators.py` | `core/services/backtest_generators.py` (Campaign Runner V2) — os 6 adaptadores (Clérigos, Esqueletos, Melforks, Axiomantes, Panteão, Acaso Puro); contrato de RNG preservado por gerador; sem escrita em `experiments/axiomancers/runs/`; granularidade Mago/Druida/Djinn/Aion |
+| `test_backtest_arena.py` | `core/services/backtest_arena.py` (Arena) — `official_key`/`sample_with_equal_budget` nunca misturam seeds; `_arena_rng` independente do RNG do gerador; `ArenaSystemAttendance`/`ArenaStrategySummary` — abstenção nunca desaparece estatisticamente, `success_rate_when_participating=None` nunca `0.0`; `category_rank` reutiliza `[HEROIS_TIERS]` |
 
 **Filosofia:** os testes cobrem a *framework* e os serviços partilhados reais (registry, plugin_loader, council, modelos partilhados, pontuação do backtesting, pipeline histórico, Heroes/Legends, Dashboard Dataset, Dashboard Excel Export, Biblioteca dos Artefactos), não a lógica narrativa de cada facção — um refactor da arquitetura de plugins deve falhar aqui, localmente, em vez de partir silenciosamente uma facção três camadas depois. As 21 facções em `factions/*/` não têm testes dedicados; a sua "correção" é maioritariamente narrativa, não mecânica.
 
@@ -717,7 +721,18 @@ Estrutura só, sem runner. `benchmarks/random/` (baseline aleatório), `benchmar
 - ✅ `core/services/historical_simulation_source.py` — cutoff timezone-aware sobre o dataset versionado (Commit 22), ainda não ligado a `main.py`/`world/engine/builder.py`
 - ✅ `library/ariadne/engine.py` ganhou um modo temporal explícito (`Ariadne(scrolls=...)`, Commit 23) para os métodos baseados em pergaminhos; métodos baseados em índices continuam não certificáveis, por design
 - ✅ `core/services/temporal_memory_boundary.py` (Commit 24) — mesma taxonomia `verified`/`legacy`/`ineligible`/`unresolved`; Necromancia legada (`docs/lore/legends/livro_personagens_lendarias.json`) passa a poder ser temporalmente cortada via `registado_em`; `recognized_at`/`promoted_at` passam a ser persistidos em novos Heroes/Legends (forward-only, sem retrodatar registos antigos)
-- Continua por fazer: nenhuma destas peças está ligada a `main.py`/a um orquestrador de backtest real; Grimório, `estado_ordem.json` e o replay temporal de Artefactos continuam sem certificação possível — ver secção "Fronteira Temporal" no final deste documento
+- Continua por fazer: Grimório, `estado_ordem.json` e o replay temporal de Artefactos continuam sem certificação possível — ver secção "Fronteira Temporal" no final deste documento. Um orquestrador de backtest real **já existe** desde o Commit 25 — ver bloco seguinte.
+
+## Commits 25-27 + Campaign Runner V2 + Arena (complete)
+
+- ✅ `core/services/backtest_orchestrator.py` (Commit 25, `6504425`) — Backtest Orchestrator V1, Clérigos-only, `VERIFIED`/`EXPLORATORY`
+- ✅ Zombie (Commit 26, `71be259`) — território herdável + Monte Carlo, nova linhagem de Clérigos; 10 linhagens arquetípicas no total
+- ✅ `core/services/backtest_campaign.py` (Commit 27, `6308fc1`) — Campaign Runner V1, `target×seed×generations` para Clérigos, descoberta dinâmica de raça
+- ✅ `core/services/backtest_generators.py` (`cb5087e`) — Campaign Runner V2, 6 sistemas via adaptadores externos, zero alterações a facções/orquestrador
+- ✅ `core/services/backtest_arena.py` (`88bfb28`) — Chave Oficial, Orçamento Igual, contabilização de abstenção/participação
+- ✅ `docs/AUDITORIA_FACCOES_E_ESTRATEGIAS.md` + `docs/BESTIARIO_ALGORITMICO_RECUPERADO.md` — arqueologia histórica/recuperada, V8→atual
+- Continua por fazer: primeira campanha oficial da Arena; ligação a `main.py`; Vampiros/Gárgulas/Kor Vermelho/Lobisomens continuam bloqueados; Campeão do Tesouro sem dados financeiros suficientes; arqueologia pré-Git (V1/V2/V3) não começou
+- Ver secção "Backtest Orchestrator, Campaign Runner & Arena (Commits 25-27 + V2 + Arena)" no final deste documento para o detalhe completo
 
 # Dependências opcionais
 
@@ -776,7 +791,7 @@ Commit 6
 Commit 7 — Economy
 - EconomyDrawRow, EconomySummary — estruturas novas e aditivas, nunca alteram EconomyPlaceholder/economia/economy
 - build_economy_rows(), build_economy_summary()
-- dados financeiros reais de 2026: 15 de 61 sorteios têm estatisticas_financeiras/premios completos, confirmado por qualidade_dados.dados_financeiros_disponiveis — nunca inferido a partir de um valor ser ou não None
+- dados financeiros reais de 2026: 15 de 67 sorteios têm estatisticas_financeiras/premios completos (razão inalterada desde o registo de 065-067/2026 — esses 3 não têm dados financeiros), confirmado por qualidade_dados.dados_financeiros_disponiveis — nunca inferido a partir de um valor ser ou não None
 - soma/média/mínimo/máximo ignoram None; um campo sem observação real resolve para None, nunca 0 ou uma estimativa
 - percentagem_sorteios_com_vencedor_1_premio_total usa como denominador só os sorteios em que a flag não é None (nunca o total de sorteios — None não é False)
 - 478/478 OK
@@ -871,13 +886,15 @@ Commit 14 — Frequencies Delay
 
 ## Próximo Passo
 
-Commits 1–14 concluídos — Dashboard Dataset completo (incl. atraso_atual real), Excel Export, e a primeira camada de serviços estatísticos partilhados (statistical_profiles.py, rolling_windows.py), 614/614 OK. Sem objetivo de Commit 15 definido ainda; candidatos em aberto (ver também Roadmap):
+Estado real: Commits 1-27 concluídos, mais Campaign Runner V2 e Arena (sem número de commit formal atribuído nesta sessão) — 1011/1011 testes OK, verificado depois do Arena layer (`88bfb28`). Candidatos em aberto (ver também Roadmap e "Ideias futuras / não implementadas" acima):
 
-- Definição estatística canónica de `jaccard_medio_vs_geracao_anterior` (`GenerationRow`) — ainda por decidir; `atraso_atual` já resolvido no Commit 14.
-- `rolling_windows.py` ainda sem nenhum consumidor de produção — nada em `DashboardDataset` tem hoje um campo "janelado" para preencher.
-- CLI/script de wiring que monta um `DashboardDataset` real a partir de Heroes/Legends/datasets/races/economy/prize categories ao vivo e chama `export_to_excel()` — hoje só a suite de testes e uma validação manual ad-hoc constroem um dataset real; não há nenhum ponto de entrada do projeto que o faça.
-- Categorias de prémio detalhadas por linha (breakdown dos 13 escalões por sorteio — hoje só agregado por categoria) — candidato natural de âmbito único.
-- Folha "Generations"/"Frequencies" no Excel Export — `dataset.generations`/`dataset.frequencies` já podem ter dados reais desde os Commits 10/11, mas `excel_export.py` ainda só cobre as 8 folhas do Commit 9.
+- **Primeira campanha oficial da Arena** — os 6 sistemas registados, alvos reais (065-067/2026 ou o conjunto de 5 alvos já usado na Baseline dos Clérigos), Chave Oficial + Orçamento Igual (N=1/2/5) + Todas as Chaves lado a lado; ainda não corrida.
+- **Vampiros/Gárgulas/Kor Vermelho/Lobisomens** — bloqueados por razões técnicas já documentadas (look-ahead estrutural / proveniência); não há decisão pendente, só trabalho de redesenho se algum dia se quiser desbloquear.
+- **Arqueologia pré-Git (V1/V2/V3)** — segunda passagem do Bestiário Algorítmico, a partir de ficheiros primordiais recuperados; não começou.
+- Definição estatística canónica de `jaccard_medio_vs_geracao_anterior` (`GenerationRow`) — ainda por decidir, sem alteração desde o Commit 14.
+- CLI/script de wiring que monta um `DashboardDataset` real a partir de Heroes/Legends/datasets/races/economy/prize categories ao vivo e chama `export_to_excel()` — continua sem existir; só a suite de testes e validações manuais ad-hoc constroem um dataset real.
+- Categorias de prémio detalhadas por linha (breakdown dos 13 escalões por sorteio) e folha "Generations"/"Frequencies" no Excel Export — inalterados desde os Commits 9-11.
+- Ligar o Backtest Orchestrator/Campaign Runner a `main.py` — nenhuma decisão tomada ainda sobre se/como.
 
 ---
 
@@ -1008,13 +1025,15 @@ Nova raça dos Clérigos (`RACAS` em `factions/clerics/algorithm.py`, agora com 
 
 ## Ideias futuras / não implementadas (ver também Roadmap principal)
 
-**Atualizado no Commit 24** — o Backtest Experiment Lab já não está nesta lista: existe desde o Commit 20 (`core/services/backtest_lab.py`), reutilizado por `historical_simulation_source.py`/`historical_ariadne_source.py`/`temporal_memory_boundary.py` nos Commits 22-24. Nada do resto desta lista existe hoje como código, especificação fechada ou funcionalidade — são apenas nomes/conceitos registados para decisão futura:
+**Atualizado após o Arena layer (`88bfb28`)** — o Backtest Experiment Lab já não está nesta lista (existe desde o Commit 20); **Zombie também já não está** (código real desde o Commit 26, `71be259` — ver a tabela de facções e a secção "Backtest Orchestrator, Campaign Runner & Arena" abaixo). Nada do resto desta lista existe hoje como código, especificação fechada ou funcionalidade — são apenas nomes/conceitos registados para decisão futura:
 
-- **Zombies** — possível nova raça/facção explorando Monte Carlo territorial/local; apenas um nome, sem desenho.
 - **Auditoria da memória/Cripta** — feita parcialmente no Commit 21/24 (Heroes, Legends, Grimório, Artefactos, Ordem Élfica) — ver a secção "Fronteira Temporal" abaixo para o inventário completo; o que ficou identificado como "irremediavelmente legado" (Grimório, `estado_ordem.json`) continua por resolver.
 - **Futuras linhagens de Necromantes** — a Necromancia legada já está parcialmente resolvida (Commit 24, via `registado_em`); antes de desenhar uma linhagem nova, continua obrigatório auditar `necromancia_estatistica` (Commit 16) para evitar duplicação conceptual com o mecanismo de ressurreição de Lendas já existente em `main.py`.
 - **Laboratório / superespécie** — conceito experimental de raça híbrida; apenas um nome, sem desenho.
-- **Ligar o Backtest Lab/Fronteira Temporal a `main.py`** — nenhuma das peças dos Commits 20-24 é chamada automaticamente hoje; um orquestrador de backtest real fica para um commit próprio.
+- **Ligar o Backtest Lab/Campaign Runner a `main.py`** — um orquestrador de backtest real já existe e corre de facto (`backtest_orchestrator.py`, Commit 25, mais o Campaign Runner V1/V2 e a Arena) — o que continua por fazer é só a ligação a `main.py`, nunca acontecida automaticamente numa execução normal.
+- **Vampiros, Gárgulas, Kor Vermelho, Lobisomens no Campaign Runner** — auditados explicitamente (`docs/AUDITORIA_FACCOES_E_ESTRATEGIAS.md`) e não registados: os primeiros três por dependência estrutural de métodos de Ariadne não certificáveis (`pairs`/`triples`/`least_frequent_numbers`); Lobisomens por um buraco real de proveniência (`origem="lobisomem"` ausente da taxonomia fechada de `candidate_provenance.py`).
+- **Campeão do Tesouro** (Arena) — contrato definido em `backtest_arena.py`, sem implementação: não existe em lado nenhum do projeto uma tabela de valor de prémio por categoria, e só 15 dos 67 sorteios reais de 2026 têm dado financeiro.
+- **Arqueologia pré-Git (V1/V2/V3)** — `docs/BESTIARIO_ALGORITMICO_RECUPERADO.md` só recupera V8→atual (o commit mais antigo disponível em qualquer branch é `756c63e6`); uma segunda passagem a partir de ficheiros primordiais recuperados, mais uma árvore evolutiva das estratégias, está prevista mas não começou.
 - **Replay temporal de Artefactos/Relíquias** — os eventos (`historia[].momento`) já têm timestamp real; reconstruir o estado "como estava em X" por replay é possível mas fica para um commit posterior (ver secção "Fronteira Temporal" abaixo).
 - **Certificação temporal do Grimório/`estado_ordem.json`** — auditado no Commit 24 e considerado estruturalmente impossível sem reescrever esses ficheiros para registarem eventos datados em vez de flags acumulados; fora de âmbito indefinidamente, salvo decisão explícita de redesenhar a persistência.
 
@@ -1063,4 +1082,55 @@ Distinção vinculativa auditada: `candidate existed_at` (quando a chave previst
 
 ## O que fica para commits futuros
 
-Ligar qualquer peça destes 5 commits a `main.py`/a um orquestrador de backtest real; corrigir o footgun de `world/engine/builder.py`; repontar `core/data/loaders.py:get_history()` para o dataset versionado; certificar temporalmente `pairs`/`triples`/`numero`/`least_frequent_numbers` (exigiria regenerar os índices a partir de um subconjunto de pergaminhos já cortado); replay temporal de Artefactos/Relíquias a partir do seu `historia[]`; qualquer tentativa de tornar o Grimório/`estado_ordem.json` temporalmente certificáveis (exigiria redesenhar o esquema de persistência, não só acrescentar um campo).
+**Atualizado** — um orquestrador de backtest real já existe (`backtest_orchestrator.py`, Commit 25) e já corre campanhas reais (Campaign Runner V1/V2, Arena — ver secção própria abaixo); ligar isso a `main.py` continua por fazer. Ainda por fazer: corrigir o footgun de `world/engine/builder.py`; repontar `core/data/loaders.py:get_history()` para o dataset versionado; certificar temporalmente `pairs`/`triples`/`numero`/`least_frequent_numbers` (exigiria regenerar os índices a partir de um subconjunto de pergaminhos já cortado — é exatamente o que bloqueia Vampiros/Gárgulas/Kor Vermelho no Campaign Runner, ver abaixo); replay temporal de Artefactos/Relíquias a partir do seu `historia[]`; qualquer tentativa de tornar o Grimório/`estado_ordem.json` temporalmente certificáveis (exigiria redesenhar o esquema de persistência, não só acrescentar um campo).
+
+---
+
+# Backtest Orchestrator, Campaign Runner & Arena (Commits 25-27 + V2 + Arena)
+
+Continuação direta da Fronteira Temporal acima — em vez de só certificar que um candidato/memória é temporalmente honesto, estes commits executam mesmo a experiência retrospetiva, a escala, e comparam-na de forma normalizada.
+
+## Commit 25 — Backtest Orchestrator V1 (`6504425`)
+
+`core/services/backtest_orchestrator.py` — primeiro backtest retrospetivo real e completo, Clérigos-only. `HistoricalBacktestBoundary(draw_id, draw_datetime)` — **sem campo `numeros`/`estrelas`**, a chave vencedora é estruturalmente inatingível na preparação/simulação, não só improvável. `prepare_backtest_run()` constrói o contexto temporal (reutiliza Commits 22-23 sem alteração) e valida modo VERIFIED (`_validate_verified_mode()` — Artefactos Vivos, Arca com redescoberta, e as 5 listas de acesso dos Monges e Escribas têm de estar estruturalmente desligados, `ValueError` listando cada violação). `run_clerics_backtest()` corre o algoritmo genético real e não modificado. Só `reveal_and_evaluate()` — chamada depois de congelar — recebe o alvo completo. Achados corrigidos no mesmo commit: `ctx['rng']` em falta (corrigido construindo `random.Random(seed)` dentro de `run_clerics_backtest`), `tzdata` como nova dependência real (`zoneinfo` precisa da base de dados IANA, Windows não a inclui), e colisão de `run_id` por microssegundo em chamadas consecutivas (resolvida com sufixo determinístico `-1`, `-2`... em `run_manifest.py`, nunca UUID aleatório).
+
+## Commit 26 — Zombie (`71be259`)
+
+Nova linhagem dos Clérigos (não uma nova facção votante, como o Minotauro). Território herdável e mutável (pool de 12 números + 5 estrelas, `taxa_mutacao_territorio=0.10`, deriva mínima que preserva tamanho/unicidade/limites, nunca reconstrução total) + exploração por Monte Carlo (`n_simulacoes=300` por omissão, confirmado por benchmark 100/300/1000) usando o mesmo `core.services.fitness.fitness` já usado pelos Lobisomens. Nunca passa por `aplicar_conhecimento()`. Clérigos passam a ter **10** linhagens arquetípicas.
+
+## Commit 27 — Campaign Runner V1 (`6308fc1`)
+
+`core/services/backtest_campaign.py` — `CampaignSpec`/`run_campaign()` correm uma grelha `target × seed × generations` para os Clérigos, reutilizando o orquestrador do Commit 25 sem alteração. `summarize_by_race()`/`summarize_by_race_and_generations()` agregam por raça **sem nenhuma lista fixa** — uma raça aparece assim que surge num `CandidateKey.race`, incluindo raças sintéticas nos testes e, na primeira campanha real contra 065-067/2026, indivíduos duplamente ressuscitados (`"Renascido Renascido X"`) nunca antes observados.
+
+## Campaign Runner V2 — multissistema (`cb5087e`)
+
+`core/services/backtest_generators.py` generaliza o Campaign Runner além dos Clérigos via adaptadores externos — **zero alterações a qualquer algoritmo de facção e zero alterações a `backtest_orchestrator.py`**. Cada adaptador chama a função original da facção exatamente como existe, preservando o seu próprio contrato de RNG:
+
+| Sistema | Chama | RNG | `generations` |
+|---|---|---|---|
+| Clérigos | `run_clerics_backtest()` (Commit 25, inalterado) | `random` global + `ctx['rng']` interno | real, único sistema com este eixo |
+| Esqueletos | `factions.skeletons.algorithm.create_representatives()` | `ctx['rng']` | `None` |
+| Melforks | `factions.melforks.algorithm.melforks()` | `random` global | reporta `geracoes_chaves` real, nunca varrido pela campanha |
+| Axiomantes | `factions.axiomantes.ritual.execute_ritual()`, só com a Ariadne **temporal** | nenhum (Feistel determinístico) | `None`; `guardar_experiencia` forçado a `false` — zero escrita em `experiments/axiomancers/runs/` |
+| Panteão | `orders.pantheon.{mages,druids,djinns,aion}` | `ctx['rng']` | `None`; Mago/Druida/Djinn/Aion tornam-se distinguíveis via `CandidateKey.race`, só dentro do adaptador — o arquivo real continua a colapsá-los em `origem="ser_superior"` |
+| Acaso Puro | amostragem uniforme pura, sem histórico/Ariadne nenhum | `random.Random(seed)` | `None`; cumpre a promessa original de `benchmarks/random/README.md`, nunca implementada até agora |
+
+`GENERATORS` é um registo explícito (nunca auto-descoberta) — acrescentar um sistema futuro (Cyber-Anões, Superesqueletos, Academia...) é escrever um adaptador e uma linha no registo, zero alterações ao agregador. Vampiros, Gárgulas, Kor Vermelho e Lobisomens foram auditados e **não** registados — ver "Ideias futuras / não implementadas" acima para a razão exata de cada um.
+
+## Arena (`88bfb28`)
+
+`core/services/backtest_arena.py` — comparação normalizada entre sistemas/estratégias com orçamentos de candidatas desiguais.
+
+- **Chave Oficial** — seleção neutra por RNG, uma por célula `(sistema, estratégia, target, seed)`, **nunca agregada entre seeds** (cada seed é uma repetição experimental independente). `_arena_rng()` deriva de SHA-256 sobre um payload explícito namespaced por `purpose` — nunca o `hash()` embutido do Python (aleatorizado por processo), nunca toca no RNG do gerador.
+- **Orçamento Igual** — amostra exatamente N candidatas sem reposição, dentro de uma única célula; `n_used` nunca é preenchido para igualar `n_requested`.
+- **Contabilização de abstenção** — `ArenaSystemAttendance` (nível sistema, deteta abstenção total mesmo sem nunca ter visto uma raça — ex. Portal dos Axiomantes sempre fechado) e `ArenaStrategySummary` (`cells_attempted/participated/succeeded` vs. `targets_observed/targets_with_participation`, mais grosseiro). `success_rate_when_participating` é `None`, nunca `0.0`, quando nunca participou.
+- **Campeão do Tesouro** — contrato apenas, sem implementação (ver "Ideias futuras" acima).
+- Uma campanha com mais de um valor de `generations` para o mesmo sistema produz mais de um `GeneratorRunResult` por célula — tratado como ambíguo, levanta `ValueError` em vez de escolher/misturar silenciosamente, exatamente pela mesma razão que nunca mistura seeds.
+
+## Testes (Commits 25-27 + V2 + Arena)
+
+`tests/test_backtest_orchestrator.py` (36), `tests/test_backtest_campaign.py` (30), `tests/test_backtest_generators.py` (28), `tests/test_backtest_arena.py` (31) — 125 testes novos no total.
+
+## Documentação histórica/recuperada associada
+
+`docs/AUDITORIA_FACCOES_E_ESTRATEGIAS.md` e `docs/BESTIARIO_ALGORITMICO_RECUPERADO.md` — arqueologia pura (código atual + histórico Git, até `756c63e6`), cada afirmação marcada `CONFIRMADO NO CÓDIGO ATUAL` / `CONFIRMADO NO HISTÓRICO GIT` / `DOCUMENTADO-LORE SEM IMPLEMENTAÇÃO` / `INFERÊNCIA`. Não são código nem roadmap — são o registo de como o código chegou a ser o que é, incluindo a descoberta de que Shaman nunca teve estratégia própria (cai sempre no ramo de deslocamento por fase lunar) e que Vampiros/Gárgulas têm uma segunda implementação morta (`algorithm.py`, só alcançável via `simulate_v7.py`, nunca por `main.py`).
