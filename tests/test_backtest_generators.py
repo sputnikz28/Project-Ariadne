@@ -112,8 +112,11 @@ class _GeneratorFixture(unittest.TestCase):
 
 
 class TestGeneratorsRegistry(_GeneratorFixture):
-    def test_exactly_the_five_approved_systems_are_registered(self):
-        self.assertEqual(set(GENERATORS), {"clerics", "skeletons", "melforks", "axiomantes", "pantheon"})
+    def test_exactly_the_six_approved_systems_are_registered(self):
+        self.assertEqual(
+            set(GENERATORS),
+            {"clerics", "skeletons", "melforks", "axiomantes", "pantheon", "acaso_puro"},
+        )
 
     def test_blocked_systems_are_never_registered(self):
         for blocked in ("vampiros", "vampires", "gargulas", "gargoyles", "lobisomens", "werewolves", "kor_vermelho", "kors"):
@@ -161,6 +164,21 @@ class TestNoLiveApiOrLookAhead(_GeneratorFixture):
              mock.patch("world.engine.builder.build", side_effect=AssertionError("must never be called")), \
              tempfile.TemporaryDirectory() as tmp, mock.patch("core.services.run_manifest.RUNS_DIR", Path(tmp)):
             GENERATORS["axiomantes"].run(cfg, ctx, ariadne_temporal, 1, BOUNDARY)  # portal open/closed both fine
+
+    def test_acaso_puro_never_touches_get_history_or_builder(self):
+        cfg = make_minimal_cfg()
+        ctx, ariadne_temporal = self.build_ctx(cfg)
+        with mock.patch("core.data.loaders.get_history", side_effect=AssertionError("must never be called")), \
+             mock.patch("world.engine.builder.build", side_effect=AssertionError("must never be called")), \
+             tempfile.TemporaryDirectory() as tmp, mock.patch("core.services.run_manifest.RUNS_DIR", Path(tmp)):
+            output = GENERATORS["acaso_puro"].run(cfg, ctx, ariadne_temporal, 1, BOUNDARY)
+        self.assertTrue(output.candidates)
+
+    def test_acaso_puro_never_touches_ctx_at_all(self):
+        cfg = make_minimal_cfg()
+        with tempfile.TemporaryDirectory() as tmp, mock.patch("core.services.run_manifest.RUNS_DIR", Path(tmp)):
+            output = GENERATORS["acaso_puro"].run(cfg, {}, None, 1, BOUNDARY)
+        self.assertTrue(output.candidates)
 
     def test_axiomantes_receives_the_temporal_ariadne_instance_never_a_live_one(self):
         cfg = make_minimal_cfg()
@@ -220,6 +238,12 @@ class TestDeterminism(_GeneratorFixture):
         cfg = make_minimal_cfg()
         out1 = self.run_adapter_isolated("axiomantes", cfg, seed=777)
         out2 = self.run_adapter_isolated("axiomantes", cfg, seed=777)
+        self.assertEqual(self._strip(out1), self._strip(out2))
+
+    def test_acaso_puro_same_seed_gives_same_output(self):
+        cfg = make_minimal_cfg()
+        out1 = self.run_adapter_isolated("acaso_puro", cfg, seed=777)
+        out2 = self.run_adapter_isolated("acaso_puro", cfg, seed=777)
         self.assertEqual(self._strip(out1), self._strip(out2))
 
 
@@ -282,9 +306,9 @@ class TestGenerationsHonesty(_GeneratorFixture):
         output = self.run_adapter_isolated("clerics", cfg, seed=1)
         self.assertEqual(output.generations, 3)
 
-    def test_skeletons_axiomantes_pantheon_report_none(self):
+    def test_skeletons_axiomantes_pantheon_acaso_puro_report_none(self):
         cfg = make_minimal_cfg()
-        for system in ("skeletons", "axiomantes", "pantheon"):
+        for system in ("skeletons", "axiomantes", "pantheon", "acaso_puro"):
             output = self.run_adapter_isolated(system, cfg, seed=1)
             self.assertIsNone(output.generations, f"{system} must report generations=None, not a fabricated value")
 
@@ -292,6 +316,16 @@ class TestGenerationsHonesty(_GeneratorFixture):
         cfg = make_minimal_cfg()
         output = self.run_adapter_isolated("melforks", cfg, seed=1)
         self.assertEqual(output.generations, 3)
+
+    def test_acaso_puro_reports_configured_quantity(self):
+        cfg = make_minimal_cfg(ARENA={"acaso_puro_quantidade": "7"})
+        output = self.run_adapter_isolated("acaso_puro", cfg, seed=1)
+        self.assertEqual(len(output.candidates), 7)
+
+    def test_acaso_puro_defaults_to_20_when_unconfigured(self):
+        cfg = make_minimal_cfg()
+        output = self.run_adapter_isolated("acaso_puro", cfg, seed=1)
+        self.assertEqual(len(output.candidates), 20)
 
 
 class TestVerifiedModeGate(_GeneratorFixture):

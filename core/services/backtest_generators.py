@@ -52,10 +52,18 @@ never anything else.
 No disk artefacts: run_manifest.start_run()/complete_run() (Commit 25,
 generic, unmodified) give every cell, in every system, a real run_id —
 the same core.services.run_manifest.RUNS_DIR isolation already used by
-Commit 27's tests covers all 5 systems uniformly. Axiomantes'
+Commit 27's tests covers all systems uniformly. Axiomantes'
 [AXIOMANTES] guardar_experiencia is unconditionally forced to false
 inside _run_axiomantes() — no campaign, test, or smoke test ever
 writes to experiments/axiomancers/runs/.
+
+Acaso Puro (Arena baseline, added alongside the Arena layer in
+core/services/backtest_arena.py): the structurally safest generator
+here — touches nothing from ctx/ariadne_temporal at all, only
+[ARENA].acaso_puro_quantidade and a fresh random.Random(seed). Reserved
+as a baseline since the project's own benchmarks/random/README.md
+("statistical floor every real faction/strategy should be compared
+against"), never implemented until now.
 """
 
 from __future__ import annotations
@@ -282,10 +290,32 @@ def _run_pantheon(cfg, ctx, ariadne_temporal, seed, boundary) -> GeneratorOutput
     return GeneratorOutput(candidates=candidates, run_id=manifest["run_id"], generations=None)
 
 
+def _run_acaso_puro(cfg, ctx, ariadne_temporal, seed, boundary) -> GeneratorOutput:
+    """Touches nothing from ctx or ariadne_temporal — no history, no
+    statistics, no Ariadne of any kind. Pure uniform sampling over the
+    two universes, [ARENA].acaso_puro_quantidade candidates (fallback
+    20), seeded once via random.Random(seed). The Arena's control —
+    every other system's performance is meant to be read relative to
+    this one, never in isolation.
+    """
+    manifest = start_run(seed, _modo_semente(cfg), command="backtest_campaign:acaso_puro", target_draw=boundary.draw_id)
+    quantidade = cfg.getint("ARENA", "acaso_puro_quantidade", fallback=20)
+    rng = random.Random(seed)
+    candidates = []
+    for i in range(quantidade):
+        chave = normalize_candidate(rng.sample(range(1, 51), 5), rng.sample(range(1, 13), 2), rng)
+        record = {"nome": f"Acaso Puro-{i + 1}", "tipo": "Acaso Puro", "chave": chave}
+        candidates.append(_candidate_key_from_record(record, "external_generator", "acaso_puro", "Acaso Puro"))
+    candidates = tuple(candidates)
+    manifest = complete_run(manifest, generated_record_count=len(candidates))
+    return GeneratorOutput(candidates=candidates, run_id=manifest["run_id"], generations=None)
+
+
 GENERATORS: Mapping[str, GeneratorAdapter] = MappingProxyType({
     "clerics": GeneratorAdapter("clerics", True, _run_clerics),
     "skeletons": GeneratorAdapter("skeletons", False, _run_skeletons),
     "melforks": GeneratorAdapter("melforks", False, _run_melforks),
     "axiomantes": GeneratorAdapter("axiomantes", False, _run_axiomantes),
     "pantheon": GeneratorAdapter("pantheon", False, _run_pantheon),
+    "acaso_puro": GeneratorAdapter("acaso_puro", False, _run_acaso_puro),
 })
