@@ -18,11 +18,17 @@ from unittest import mock
 from core.services.backtest_campaign import (
     CampaignRunResult,
     CampaignSpec,
+    GeneratorRunResult,
+    MultiSystemCampaignSpec,
     RacePerformanceSummary,
     run_campaign,
+    run_system_campaign,
     summarize_by_race,
     summarize_by_race_and_generations,
+    summarize_by_system_and_strategy,
+    summarize_by_system_strategy_and_generations,
 )
+from core.services.backtest_generators import GENERATORS
 from core.services.backtest_lab import BacktestTarget
 from core.services.candidate_evaluation import CandidateEvaluation
 from core.services.candidate_provenance import CandidateKey
@@ -399,6 +405,151 @@ class TestSummarizeByRaceAndGenerations(unittest.TestCase):
         self.assertIn(("Elfo", 20), summary)
         self.assertNotIn(("Elfo", 90), summary)
         self.assertEqual(summary[("Elfo", 20)].best_category_generation, 90)
+
+
+# ---------------------------------------------------------------------------
+# Campaign Runner V2 — multi-system campaigns (run_system_campaign(),
+# MultiSystemCampaignSpec, GeneratorRunResult, summarize_by_system_*()).
+# Everything above this line covers Commit 27 exactly as before — these
+# classes are purely additive.
+# ---------------------------------------------------------------------------
+
+
+def make_v2_cfg(**overrides):
+    return make_minimal_cfg(
+        ESQUELETOS={"ativos": "true", "quantidade_externa": "3", "largura_numeros": "25", "largura_estrelas": "6"},
+        MELFORKS={"ativo": "true", "populacao_chaves": "10", "geracoes_chaves": "3", "elite": "3", "representantes": "3"},
+        AXIOMANTES={
+            "peso_conselho": "0.75", "periodo_anos": "1", "limiar_cobertura": "0.0",
+            "excesso_minimo": "-1.0", "n_candidatos": "50", "guardar_experiencia": "true",
+        },
+        **overrides,
+    )
+
+
+class _MultiSystemFixture(_CampaignFixture):
+    def run_system_campaign_isolated(self, cfg, spec):
+        with tempfile.TemporaryDirectory() as tmp, _patched_runs_dir(tmp):
+            return run_system_campaign(cfg, spec, historical_root=self.hist_root.name, scrolls_root=self.scrolls_root.name)
+
+
+class TestRunSystemCampaignGridShape(_MultiSystemFixture):
+    def test_grid_size_is_honest_about_generations_axis(self):
+        spec = MultiSystemCampaignSpec(
+            targets=(make_target(),), seeds=(1,), systems=("clerics", "skeletons"),
+            generations=(3, 4), mode="verified", relevant_categories=frozenset(),
+        )
+        results = self.run_system_campaign_isolated(make_v2_cfg(), spec)
+        # 2 clerics cells (one per generations value) + 1 skeletons cell
+        # (no generations axis) = 3, never a fake 2x2=4 cross product.
+        self.assertEqual(len(results), 3)
+        clerics_results = [r for r in results if r.system == "clerics"]
+        skeletons_results = [r for r in results if r.system == "skeletons"]
+        self.assertEqual(len(clerics_results), 2)
+        self.assertEqual(len(skeletons_results), 1)
+        self.assertEqual({r.generations for r in clerics_results}, {3, 4})
+        self.assertEqual({r.generations for r in skeletons_results}, {None})
+
+    def test_systems_without_generations_axis_run_exactly_once_per_target_seed(self):
+        spec = MultiSystemCampaignSpec(
+            targets=(make_target("T-A/2099"), make_target("T-B/2099")), seeds=(1, 2),
+            systems=("skeletons", "melforks", "axiomantes", "pantheon"),
+            generations=(), mode="verified", relevant_categories=frozenset(),
+        )
+        results = self.run_system_campaign_isolated(make_v2_cfg(), spec)
+        self.assertEqual(len(results), 4 * 2 * 2)  # 4 systems x 2 targets x 2 seeds
+        self.assertTrue(all(r.generations is None for r in results if r.system != "melforks"))
+
+    def test_unknown_system_raises_value_error(self):
+        spec = MultiSystemCampaignSpec(
+            targets=(make_target(),), seeds=(1,), systems=("cyber_anoes",),
+            generations=(), mode="verified", relevant_categories=frozenset(),
+        )
+        with self.assertRaises(ValueError):
+            self.run_system_campaign_isolated(make_v2_cfg(), spec)
+
+    def test_generations_axis_system_with_empty_generations_raises_value_error(self):
+        spec = MultiSystemCampaignSpec(
+            targets=(make_target(),), seeds=(1,), systems=("clerics",),
+            generations=(), mode="verified", relevant_categories=frozenset(),
+        )
+        with self.assertRaises(ValueError):
+            self.run_system_campaign_isolated(make_v2_cfg(), spec)
+
+
+class TestRunSystemCampaignDeterminism(_MultiSystemFixture):
+    def test_same_spec_same_seed_gives_same_results(self):
+        spec = MultiSystemCampaignSpec(
+            targets=(make_target(),), seeds=(777,), systems=("clerics", "skeletons", "melforks", "axiomantes", "pantheon"),
+            generations=(3,), mode="verified", relevant_categories=frozenset(),
+        )
+        cfg = make_v2_cfg()
+        results1 = self.run_system_campaign_isolated(cfg, spec)
+        results2 = self.run_system_campaign_isolated(cfg, spec)
+        strip = lambda results: [
+            (r.system, r.generations, [(c.candidate.race, c.candidate.numeros, c.candidate.estrelas) for c in r.candidates])
+            for r in results
+        ]
+        self.assertEqual(strip(results1), strip(results2))
+
+
+class TestRunSystemCampaignVerifiedGate(_MultiSystemFixture):
+    def test_verified_mode_rejects_uncertified_memory_cfg(self):
+        cfg = make_v2_cfg(ARTEFACTOS_VIVOS={"ativo": "true"})
+        spec = MultiSystemCampaignSpec(
+            targets=(make_target(),), seeds=(1,), systems=("clerics", "skeletons"),
+            generations=(3,), mode="verified", relevant_categories=frozenset(),
+        )
+        with self.assertRaises(ValueError):
+            self.run_system_campaign_isolated(cfg, spec)
+
+
+class TestRunSystemCampaignPantheonGranularity(_MultiSystemFixture):
+    def test_pantheon_produces_four_distinguishable_races_in_one_campaign(self):
+        spec = MultiSystemCampaignSpec(
+            targets=(make_target(),), seeds=(1,), systems=("pantheon",),
+            generations=(), mode="verified", relevant_categories=frozenset(),
+        )
+        results = self.run_system_campaign_isolated(make_v2_cfg(), spec)
+        races = {c.candidate.race for r in results for c in r.candidates}
+        self.assertEqual(races, {"Mago", "Druida", "Djinn", "Aion"})
+
+        summary = summarize_by_system_and_strategy(results, frozenset())
+        self.assertEqual(
+            {key for key in summary if key[0] == "pantheon"},
+            {("pantheon", "Mago"), ("pantheon", "Druida"), ("pantheon", "Djinn"), ("pantheon", "Aion")},
+        )
+
+
+class TestSummarizeBySystemAndStrategyDynamicDiscovery(unittest.TestCase):
+    """Built directly over synthetic GeneratorRunResult objects — never
+    via a real run_system_campaign() call — so a system that does not
+    exist in the real GENERATORS registry can be injected freely,
+    proving the aggregator never enumerates systems or strategies.
+    """
+
+    def test_a_system_never_registered_in_generators_is_still_aggregated(self):
+        target = make_target(numeros=(1, 2, 3, 4, 5), estrelas=(1, 2))
+        candidate = make_sim_candidate("Cyber-Anão", generation=None, numeros=(1, 2, 3, 4, 5), estrelas=(1, 2))
+        evaluation = make_evaluation(target.numeros, target.estrelas, candidate.candidate.numeros, candidate.candidate.estrelas)
+        result = GeneratorRunResult(
+            system="cyber_anoes", target=target, seed=1, generations=None, run_id="RUN-X",
+            candidates=(candidate,), evaluations=(evaluation,), performance=None,
+        )
+        summary = summarize_by_system_and_strategy([result], relevant_categories=frozenset())
+        self.assertIn(("cyber_anoes", "Cyber-Anão"), summary)
+        self.assertNotIn("cyber_anoes", GENERATORS)
+
+    def test_summarize_by_system_strategy_and_generations_handles_none_generations(self):
+        target = make_target(numeros=(1, 2, 3, 4, 5), estrelas=(1, 2))
+        candidate = make_sim_candidate("Esqueleto", generation=None, numeros=(1, 2, 3, 4, 5), estrelas=(1, 2))
+        evaluation = make_evaluation(target.numeros, target.estrelas, candidate.candidate.numeros, candidate.candidate.estrelas)
+        result = GeneratorRunResult(
+            system="skeletons", target=target, seed=1, generations=None, run_id="RUN-X",
+            candidates=(candidate,), evaluations=(evaluation,), performance=None,
+        )
+        summary = summarize_by_system_strategy_and_generations([result], relevant_categories=frozenset())
+        self.assertIn(("skeletons", "Esqueleto", None), summary)
 
 
 if __name__ == "__main__":

@@ -41,6 +41,7 @@ from dataclasses import dataclass
 from datetime import datetime
 from typing import Literal
 
+from core.services.backtest_generators import GENERATORS, GeneratorAdapter
 from core.services.backtest_lab import BacktestTarget
 from core.services.backtest_orchestrator import (
     BacktestRunRecord,
@@ -53,7 +54,7 @@ from core.services.backtest_orchestrator import (
     summarize,
 )
 from core.services.candidate_evaluation import CandidateEvaluation
-from core.services.candidate_performance import summarize_candidate_performance
+from core.services.candidate_performance import CandidatePerformanceSummary, summarize_candidate_performance
 from core.services.historical_dataset import find_draw, validate_official_key
 
 
@@ -315,3 +316,168 @@ def summarize_by_race_and_generations(
         key_fn=lambda result, candidate: (candidate.candidate.race, result.generations),
     )
     return {key: _build_race_summary(group, relevant_categories, key[0]) for key, group in pooled.items()}
+
+
+# ---------------------------------------------------------------------------
+# Campaign Runner V2 — multi-system campaigns (Clerics, Skeletons, Melforks,
+# Axiomantes, Pantheon in this tranche). Everything above this line is
+# Commit 27, untouched — CampaignSpec/CampaignRunResult/run_campaign()/
+# summarize_by_race()/summarize_by_race_and_generations() keep behaving
+# exactly as they did, Clerics-only, byte-for-byte. What follows is
+# purely additive: a second, parallel spec/result family that composes
+# core.services.backtest_generators's adapters instead of hardcoding
+# factions.clerics.algorithm.execute() the way run_campaign() does.
+#
+# No faction algorithm and no line of backtest_orchestrator.py changed
+# to make this possible — see backtest_generators.py's module docstring
+# for the per-system RNG/Ariadne/persistence contract each adapter
+# preserves.
+# ---------------------------------------------------------------------------
+
+
+@dataclass(frozen=True)
+class MultiSystemCampaignSpec:
+    """systems is an explicit, caller-chosen tuple of generator ids —
+    looked up in the `generators` mapping passed to
+    run_system_campaign() (GENERATORS by default). Never auto-discovered
+    from factions/*: adding a system here is always a deliberate,
+    one-line registration in that mapping, never automatic — this is
+    what keeps Vampires/Gargoyles/Kor Vermelho/Werewolves (all
+    look-ahead- or provenance-blocked, per the Campaign Runner V2 audit)
+    out unless and until someone explicitly adds a vetted adapter for
+    them.
+
+    generations applies ONLY to systems whose adapter declares
+    has_generations=True (only Clerics in this tranche) — systems
+    without that axis simply never enter the inner generations loop;
+    their results carry generations=None, never a value from this
+    tuple repurposed to mean something else.
+    """
+
+    targets: tuple[BacktestTarget, ...]
+    seeds: tuple[int, ...]
+    systems: tuple[str, ...]
+    generations: tuple[int, ...]
+    mode: Literal["verified", "exploratory"]
+    relevant_categories: frozenset[str]
+
+
+@dataclass(frozen=True)
+class GeneratorRunResult:
+    """One grid cell for one system. Unlike CampaignRunResult, there is
+    no nested BacktestRunRecord — this type never touches
+    backtest_orchestrator.BacktestRunRecord (whose `generations: int`
+    field is not optional, and changing that would mean editing
+    Commit 25 code for the sake of systems that aren't Clerics).
+    `generations` here is honest per system: a real int for Clerics
+    (and, if reported by its own adapter, Melforks), None for every
+    system without that concept — never invented to fit a uniform
+    shape.
+    """
+
+    system: str
+    target: BacktestTarget
+    seed: int
+    generations: int | None
+    run_id: str
+    candidates: tuple[SimulatedBacktestCandidate, ...]
+    evaluations: tuple[CandidateEvaluation, ...]
+    performance: CandidatePerformanceSummary
+
+
+def _build_generator_run_result(
+    system: str, target: BacktestTarget, seed: int, output, relevant_categories: frozenset[str],
+) -> GeneratorRunResult:
+    frozen = tuple(
+        SimulatedBacktestCandidate(candidate=c, temporal_basis="historical_input_boundary", run_id=output.run_id)
+        for c in output.candidates
+    )
+    evaluations = reveal_and_evaluate(frozen, target)
+    performance = summarize(frozen, evaluations, relevant_categories)
+    return GeneratorRunResult(
+        system=system, target=target, seed=seed, generations=output.generations,
+        run_id=output.run_id, candidates=frozen, evaluations=evaluations, performance=performance,
+    )
+
+
+def run_system_campaign(
+    cfg: configparser.ConfigParser,
+    spec: MultiSystemCampaignSpec,
+    *,
+    generators: Mapping[str, GeneratorAdapter] = GENERATORS,
+    historical_root=None,
+    scrolls_root=None,
+) -> tuple[GeneratorRunResult, ...]:
+    """Iterates systems x targets x seeds x (generations, only for
+    systems that have that axis) in that order. ctx/ariadne_temporal
+    are built once per (system, target, seed) via
+    prepare_backtest_run() — the same call that already performs the
+    one, shared VERIFIED-mode check (backtest_orchestrator.
+    _validate_verified_mode) for every system in the campaign; this
+    function never duplicates that check itself.
+
+    An unknown system in spec.systems raises ValueError immediately —
+    never silently skipped. A system with has_generations=True and an
+    empty spec.generations raises ValueError — silently producing zero
+    cells for a requested system would be a footgun, not honest
+    "not applicable" behaviour (that's what generations=None on the
+    result is for, not an empty grid).
+    """
+    for system in spec.systems:
+        if system not in generators:
+            raise ValueError(f"unknown system {system!r} — registered systems: {sorted(generators)}")
+        if generators[system].has_generations and not spec.generations:
+            raise ValueError(f"system {system!r} has a generations axis but spec.generations is empty")
+
+    results = []
+    for system in spec.systems:
+        adapter = generators[system]
+        for target in spec.targets:
+            boundary = HistoricalBacktestBoundary(draw_id=target.draw_id, draw_datetime=target.draw_datetime)
+            for seed in spec.seeds:
+                ctx, ariadne_temporal = prepare_backtest_run(
+                    cfg, boundary, mode=spec.mode,
+                    historical_root=historical_root, scrolls_root=scrolls_root,
+                )
+                if adapter.has_generations:
+                    for generations in spec.generations:
+                        cell_cfg = _cfg_with_generations(cfg, generations)
+                        output = adapter.run(cell_cfg, ctx, ariadne_temporal, seed, boundary)
+                        results.append(_build_generator_run_result(system, target, seed, output, spec.relevant_categories))
+                else:
+                    output = adapter.run(cfg, ctx, ariadne_temporal, seed, boundary)
+                    results.append(_build_generator_run_result(system, target, seed, output, spec.relevant_categories))
+    return tuple(results)
+
+
+def summarize_by_system_and_strategy(
+    results: Sequence[GeneratorRunResult], relevant_categories: Collection[str],
+) -> dict[tuple[str, str | None], RacePerformanceSummary]:
+    """Pools every (candidate, evaluation) pair across every cell in
+    `results`, grouped by (result.system, CandidateKey.race) exactly as
+    each adapter produced them — never a fixed list of systems or
+    strategies anywhere in this function. A future system (e.g. a
+    "cyber_anoes" adapter someone registers later) appears automatically
+    the moment its GeneratorRunResult.system value shows up in
+    `results`, with zero changes here.
+    """
+    pooled = _pool(
+        results, relevant_categories,
+        key_fn=lambda result, candidate: (result.system, candidate.candidate.race),
+    )
+    return {key: _build_race_summary(group, relevant_categories, key[1]) for key, group in pooled.items()}
+
+
+def summarize_by_system_strategy_and_generations(
+    results: Sequence[GeneratorRunResult], relevant_categories: Collection[str],
+) -> dict[tuple[str, str | None, int | None], RacePerformanceSummary]:
+    """Same as summarize_by_system_and_strategy() but grouped by
+    (system, race, generations) — generations is None for every system
+    without that axis, so e.g. ("skeletons", "Esqueleto", None) is a
+    perfectly valid, expected key, never coerced into a fake int.
+    """
+    pooled = _pool(
+        results, relevant_categories,
+        key_fn=lambda result, candidate: (result.system, candidate.candidate.race, result.generations),
+    )
+    return {key: _build_race_summary(group, relevant_categories, key[1]) for key, group in pooled.items()}
