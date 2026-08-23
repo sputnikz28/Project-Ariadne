@@ -1,0 +1,875 @@
+{
+  "campaign": "Arena Oficial — Temporada 3 / A Guerra das Florestas",
+  "commit": "747f12dd6f12a353fd99e137c27e0e80806f9972",
+  "targets": [
+    "006/2005",
+    "041/2005",
+    "024/2006",
+    "007/2007",
+    "042/2007",
+    "025/2008",
+    "008/2009",
+    "043/2009",
+    "026/2010",
+    "008/2011",
+    "043/2011",
+    "078/2011",
+    "027/2012",
+    "062/2012",
+    "097/2012",
+    "028/2013",
+    "063/2013",
+    "098/2013",
+    "028/2014",
+    "063/2014",
+    "098/2014",
+    "029/2015",
+    "064/2015",
+    "099/2015",
+    "030/2016",
+    "065/2016",
+    "100/2016",
+    "030/2017",
+    "065/2017",
+    "100/2017",
+    "031/2018",
+    "066/2018",
+    "101/2018",
+    "032/2019",
+    "067/2019",
+    "102/2019",
+    "032/2020",
+    "067/2020",
+    "102/2020",
+    "033/2021",
+    "068/2021",
+    "103/2021",
+    "033/2022",
+    "068/2022",
+    "103/2022",
+    "034/2023",
+    "069/2023",
+    "104/2023",
+    "035/2024",
+    "070/2024",
+    "105/2024",
+    "035/2025",
+    "070/2025",
+    "001/2026"
+  ],
+  "target_selection_rule": {
+    "H_min": 52,
+    "excluded": [
+      "065/2026",
+      "066/2026",
+      "067/2026"
+    ],
+    "method": "systematic sample, step = len(eligible)//54, over all real draws chronologically sorted, excluding the first 52 draws and the 3 dev-used draws — identical rule and result to Temporada 2"
+  },
+  "seeds": [
+    20260821,
+    20260822,
+    20260823
+  ],
+  "arena_seed": 1,
+  "system": "treefolks_v2",
+  "florestas": [
+    "Yggdrasil — LSTM-v1",
+    "Dodona — Bayes-v1",
+    "Brocéliande — Markov-v1",
+    "Tír na nÓg — MonteCarlo-v1",
+    "Fortuna — Controlo-v1"
+  ],
+  "control": "Fortuna — Controlo-v1",
+  "quantidade_por_treefolk": 20,
+  "relevant_categories": [
+    "3+1",
+    "3+2",
+    "4+0",
+    "4+1",
+    "4+2",
+    "5+0",
+    "5+1",
+    "5+2"
+  ],
+  "cells_ok": 162,
+  "cells_failed": [],
+  "cells_total": 162,
+  "duration_seconds": 207.33689539995976,
+  "total_candidates": 16140,
+  "manifests_written": 162,
+  "attendance": {
+    "systems": {
+      "treefolks_v2": {
+        "system": "treefolks_v2",
+        "cells_attempted": 162,
+        "cells_with_any_candidate": 162,
+        "targets_observed": 54,
+        "targets_with_participation": 54,
+        "system_abstention_rate": 0.0
+      }
+    },
+    "strategies": {
+      "treefolks_v2": {
+        "Yggdrasil — LSTM-v1": {
+          "system": "treefolks_v2",
+          "race": "Yggdrasil — LSTM-v1",
+          "cells_attempted": 162,
+          "cells_participated": 159,
+          "cells_succeeded": 4,
+          "targets_observed": 54,
+          "targets_with_participation": 53,
+          "participation_rate": 0.9814814814814815,
+          "abstention_rate": 0.01851851851851849,
+          "success_rate_when_participating": 0.025157232704402517,
+          "success_rate_over_all_cells": 0.024691358024691357,
+          "target_participation_rate": 0.9814814814814815
+        },
+        "Fortuna — Controlo-v1": {
+          "system": "treefolks_v2",
+          "race": "Fortuna — Controlo-v1",
+          "cells_attempted": 162,
+          "cells_participated": 162,
+          "cells_succeeded": 4,
+          "targets_observed": 54,
+          "targets_with_participation": 54,
+          "participation_rate": 1.0,
+          "abstention_rate": 0.0,
+          "success_rate_when_participating": 0.024691358024691357,
+          "success_rate_over_all_cells": 0.024691358024691357,
+          "target_participation_rate": 1.0
+        },
+        "Brocéliande — Markov-v1": {
+          "system": "treefolks_v2",
+          "race": "Brocéliande — Markov-v1",
+          "cells_attempted": 162,
+          "cells_participated": 162,
+          "cells_succeeded": 7,
+          "targets_observed": 54,
+          "targets_with_participation": 54,
+          "participation_rate": 1.0,
+          "abstention_rate": 0.0,
+          "success_rate_when_participating": 0.043209876543209874,
+          "success_rate_over_all_cells": 0.043209876543209874,
+          "target_participation_rate": 1.0
+        },
+        "Tír na nÓg — MonteCarlo-v1": {
+          "system": "treefolks_v2",
+          "race": "Tír na nÓg — MonteCarlo-v1",
+          "cells_attempted": 162,
+          "cells_participated": 162,
+          "cells_succeeded": 6,
+          "targets_observed": 54,
+          "targets_with_participation": 54,
+          "participation_rate": 1.0,
+          "abstention_rate": 0.0,
+          "success_rate_when_participating": 0.037037037037037035,
+          "success_rate_over_all_cells": 0.037037037037037035,
+          "target_participation_rate": 1.0
+        },
+        "Dodona — Bayes-v1": {
+          "system": "treefolks_v2",
+          "race": "Dodona — Bayes-v1",
+          "cells_attempted": 162,
+          "cells_participated": 162,
+          "cells_succeeded": 10,
+          "targets_observed": 54,
+          "targets_with_participation": 54,
+          "participation_rate": 1.0,
+          "abstention_rate": 0.0,
+          "success_rate_when_participating": 0.06172839506172839,
+          "success_rate_over_all_cells": 0.06172839506172839,
+          "target_participation_rate": 1.0
+        }
+      }
+    }
+  },
+  "orcamento_igual": {
+    "1": {
+      "Yggdrasil — LSTM-v1": {
+        "n": 159,
+        "relevant_count": 0,
+        "relevant_rate": 0.0,
+        "wilson_95": [
+          0.0,
+          0.02359102342398994
+        ],
+        "stdev_entre_targets": 0.0,
+        "stdev_entre_seeds": 0.0
+      },
+      "Dodona — Bayes-v1": {
+        "n": 162,
+        "relevant_count": 0,
+        "relevant_rate": 0.0,
+        "wilson_95": [
+          0.0,
+          0.023164272414159054
+        ],
+        "stdev_entre_targets": 0.0,
+        "stdev_entre_seeds": 0.0
+      },
+      "Brocéliande — Markov-v1": {
+        "n": 162,
+        "relevant_count": 0,
+        "relevant_rate": 0.0,
+        "wilson_95": [
+          0.0,
+          0.023164272414159054
+        ],
+        "stdev_entre_targets": 0.0,
+        "stdev_entre_seeds": 0.0
+      },
+      "Tír na nÓg — MonteCarlo-v1": {
+        "n": 162,
+        "relevant_count": 0,
+        "relevant_rate": 0.0,
+        "wilson_95": [
+          0.0,
+          0.023164272414159054
+        ],
+        "stdev_entre_targets": 0.0,
+        "stdev_entre_seeds": 0.0
+      },
+      "Fortuna — Controlo-v1": {
+        "n": 162,
+        "relevant_count": 0,
+        "relevant_rate": 0.0,
+        "wilson_95": [
+          0.0,
+          0.023164272414159054
+        ],
+        "stdev_entre_targets": 0.0,
+        "stdev_entre_seeds": 0.0
+      }
+    },
+    "2": {
+      "Yggdrasil — LSTM-v1": {
+        "n": 318,
+        "relevant_count": 0,
+        "relevant_rate": 0.0,
+        "wilson_95": [
+          0.0,
+          0.011936306555771534
+        ],
+        "stdev_entre_targets": 0.0,
+        "stdev_entre_seeds": 0.0
+      },
+      "Dodona — Bayes-v1": {
+        "n": 324,
+        "relevant_count": 0,
+        "relevant_rate": 0.0,
+        "wilson_95": [
+          0.0,
+          0.011717853988023485
+        ],
+        "stdev_entre_targets": 0.0,
+        "stdev_entre_seeds": 0.0
+      },
+      "Brocéliande — Markov-v1": {
+        "n": 324,
+        "relevant_count": 0,
+        "relevant_rate": 0.0,
+        "wilson_95": [
+          0.0,
+          0.011717853988023485
+        ],
+        "stdev_entre_targets": 0.0,
+        "stdev_entre_seeds": 0.0
+      },
+      "Tír na nÓg — MonteCarlo-v1": {
+        "n": 324,
+        "relevant_count": 1,
+        "relevant_rate": 0.0030864197530864196,
+        "wilson_95": [
+          0.0005450227751171053,
+          0.017273338287054383
+        ],
+        "stdev_entre_targets": 0.02246947496691518,
+        "stdev_entre_seeds": 0.004364856673991034
+      },
+      "Fortuna — Controlo-v1": {
+        "n": 324,
+        "relevant_count": 0,
+        "relevant_rate": 0.0,
+        "wilson_95": [
+          0.0,
+          0.011717853988023485
+        ],
+        "stdev_entre_targets": 0.0,
+        "stdev_entre_seeds": 0.0
+      }
+    },
+    "5": {
+      "Yggdrasil — LSTM-v1": {
+        "n": 795,
+        "relevant_count": 1,
+        "relevant_rate": 0.0012578616352201257,
+        "wilson_95": [
+          0.00022207227173293007,
+          0.007090516356600897
+        ],
+        "stdev_entre_targets": 0.009070569246450288,
+        "stdev_entre_seeds": 0.0017788849841171006
+      },
+      "Dodona — Bayes-v1": {
+        "n": 810,
+        "relevant_count": 2,
+        "relevant_rate": 0.0024691358024691358,
+        "wilson_95": [
+          0.0006773732718844172,
+          0.008957916936922801
+        ],
+        "stdev_entre_targets": 0.012590171638500703,
+        "stdev_entre_seeds": 0.0017459426695964138
+      },
+      "Brocéliande — Markov-v1": {
+        "n": 810,
+        "relevant_count": 3,
+        "relevant_rate": 0.003703703703703704,
+        "wilson_95": [
+          0.0012603530016452582,
+          0.010832417876619014
+        ],
+        "stdev_entre_targets": 0.015270761576361706,
+        "stdev_entre_seeds": 0.005237828008789241
+      },
+      "Tír na nÓg — MonteCarlo-v1": {
+        "n": 810,
+        "relevant_count": 1,
+        "relevant_rate": 0.0012345679012345679,
+        "wilson_95": [
+          0.0002179591946785803,
+          0.006959850344671582
+        ],
+        "stdev_entre_targets": 0.008987789986766071,
+        "stdev_entre_seeds": 0.0017459426695964138
+      },
+      "Fortuna — Controlo-v1": {
+        "n": 810,
+        "relevant_count": 1,
+        "relevant_rate": 0.0012345679012345679,
+        "wilson_95": [
+          0.0002179591946785803,
+          0.006959850344671582
+        ],
+        "stdev_entre_targets": 0.008987789986766071,
+        "stdev_entre_seeds": 0.0017459426695964138
+      }
+    }
+  },
+  "category_frequency": {
+    "Dodona — Bayes-v1": {
+      "0+0": 1312,
+      "1+0": 758,
+      "0+1": 563,
+      "1+2": 16,
+      "1+1": 349,
+      "2+0": 136,
+      "2+1": 55,
+      "3+0": 14,
+      "0+2": 23,
+      "3+1": 10,
+      "2+2": 3,
+      "4+0": 1
+    },
+    "Brocéliande — Markov-v1": {
+      "0+1": 598,
+      "1+0": 731,
+      "0+0": 1256,
+      "2+0": 153,
+      "1+1": 371,
+      "1+2": 20,
+      "0+2": 28,
+      "2+1": 65,
+      "2+2": 4,
+      "3+1": 5,
+      "3+2": 2,
+      "3+0": 7
+    },
+    "Tír na nÓg — MonteCarlo-v1": {
+      "0+1": 558,
+      "0+0": 1268,
+      "1+0": 811,
+      "1+1": 338,
+      "0+2": 32,
+      "2+0": 147,
+      "2+1": 54,
+      "3+0": 7,
+      "3+1": 5,
+      "1+2": 18,
+      "2+2": 1,
+      "3+2": 1
+    },
+    "Fortuna — Controlo-v1": {
+      "1+1": 368,
+      "0+0": 1264,
+      "0+1": 547,
+      "2+1": 66,
+      "1+0": 799,
+      "1+2": 25,
+      "2+0": 142,
+      "0+2": 20,
+      "2+2": 2,
+      "3+1": 3,
+      "3+0": 3,
+      "3+2": 1
+    },
+    "Yggdrasil — LSTM-v1": {
+      "0+1": 553,
+      "1+0": 778,
+      "0+0": 1229,
+      "2+1": 62,
+      "0+2": 31,
+      "2+0": 154,
+      "1+2": 8,
+      "1+1": 349,
+      "2+2": 3,
+      "3+0": 8,
+      "3+1": 5
+    }
+  },
+  "pairwise_comparisons": {
+    "vs_fortuna": {
+      "Yggdrasil — LSTM-v1": {
+        "a": "Yggdrasil — LSTM-v1",
+        "b": "Fortuna — Controlo-v1",
+        "n_budget": 5,
+        "a_relevant": 1,
+        "a_n": 795,
+        "a_rate": 0.0012578616352201257,
+        "a_wilson_95": [
+          0.00022207227173293007,
+          0.007090516356600897
+        ],
+        "b_relevant": 1,
+        "b_n": 810,
+        "b_rate": 0.0012345679012345679,
+        "b_wilson_95": [
+          0.0002179591946785803,
+          0.006959850344671582
+        ],
+        "abs_diff": 2.3293733985557848e-05
+      },
+      "Dodona — Bayes-v1": {
+        "a": "Dodona — Bayes-v1",
+        "b": "Fortuna — Controlo-v1",
+        "n_budget": 5,
+        "a_relevant": 2,
+        "a_n": 810,
+        "a_rate": 0.0024691358024691358,
+        "a_wilson_95": [
+          0.0006773732718844172,
+          0.008957916936922801
+        ],
+        "b_relevant": 1,
+        "b_n": 810,
+        "b_rate": 0.0012345679012345679,
+        "b_wilson_95": [
+          0.0002179591946785803,
+          0.006959850344671582
+        ],
+        "abs_diff": 0.0012345679012345679
+      },
+      "Brocéliande — Markov-v1": {
+        "a": "Brocéliande — Markov-v1",
+        "b": "Fortuna — Controlo-v1",
+        "n_budget": 5,
+        "a_relevant": 3,
+        "a_n": 810,
+        "a_rate": 0.003703703703703704,
+        "a_wilson_95": [
+          0.0012603530016452582,
+          0.010832417876619014
+        ],
+        "b_relevant": 1,
+        "b_n": 810,
+        "b_rate": 0.0012345679012345679,
+        "b_wilson_95": [
+          0.0002179591946785803,
+          0.006959850344671582
+        ],
+        "abs_diff": 0.002469135802469136
+      },
+      "Tír na nÓg — MonteCarlo-v1": {
+        "a": "Tír na nÓg — MonteCarlo-v1",
+        "b": "Fortuna — Controlo-v1",
+        "n_budget": 5,
+        "a_relevant": 1,
+        "a_n": 810,
+        "a_rate": 0.0012345679012345679,
+        "a_wilson_95": [
+          0.0002179591946785803,
+          0.006959850344671582
+        ],
+        "b_relevant": 1,
+        "b_n": 810,
+        "b_rate": 0.0012345679012345679,
+        "b_wilson_95": [
+          0.0002179591946785803,
+          0.006959850344671582
+        ],
+        "abs_diff": 0.0
+      }
+    },
+    "head_to_head": {
+      "Yggdrasil — LSTM-v1 vs Dodona — Bayes-v1": {
+        "a": "Yggdrasil — LSTM-v1",
+        "b": "Dodona — Bayes-v1",
+        "n_budget": 5,
+        "a_relevant": 1,
+        "a_n": 795,
+        "a_rate": 0.0012578616352201257,
+        "a_wilson_95": [
+          0.00022207227173293007,
+          0.007090516356600897
+        ],
+        "b_relevant": 2,
+        "b_n": 810,
+        "b_rate": 0.0024691358024691358,
+        "b_wilson_95": [
+          0.0006773732718844172,
+          0.008957916936922801
+        ],
+        "abs_diff": -0.00121127416724901
+      },
+      "Yggdrasil — LSTM-v1 vs Brocéliande — Markov-v1": {
+        "a": "Yggdrasil — LSTM-v1",
+        "b": "Brocéliande — Markov-v1",
+        "n_budget": 5,
+        "a_relevant": 1,
+        "a_n": 795,
+        "a_rate": 0.0012578616352201257,
+        "a_wilson_95": [
+          0.00022207227173293007,
+          0.007090516356600897
+        ],
+        "b_relevant": 3,
+        "b_n": 810,
+        "b_rate": 0.003703703703703704,
+        "b_wilson_95": [
+          0.0012603530016452582,
+          0.010832417876619014
+        ],
+        "abs_diff": -0.0024458420684835783
+      },
+      "Yggdrasil — LSTM-v1 vs Tír na nÓg — MonteCarlo-v1": {
+        "a": "Yggdrasil — LSTM-v1",
+        "b": "Tír na nÓg — MonteCarlo-v1",
+        "n_budget": 5,
+        "a_relevant": 1,
+        "a_n": 795,
+        "a_rate": 0.0012578616352201257,
+        "a_wilson_95": [
+          0.00022207227173293007,
+          0.007090516356600897
+        ],
+        "b_relevant": 1,
+        "b_n": 810,
+        "b_rate": 0.0012345679012345679,
+        "b_wilson_95": [
+          0.0002179591946785803,
+          0.006959850344671582
+        ],
+        "abs_diff": 2.3293733985557848e-05
+      },
+      "Dodona — Bayes-v1 vs Brocéliande — Markov-v1": {
+        "a": "Dodona — Bayes-v1",
+        "b": "Brocéliande — Markov-v1",
+        "n_budget": 5,
+        "a_relevant": 2,
+        "a_n": 810,
+        "a_rate": 0.0024691358024691358,
+        "a_wilson_95": [
+          0.0006773732718844172,
+          0.008957916936922801
+        ],
+        "b_relevant": 3,
+        "b_n": 810,
+        "b_rate": 0.003703703703703704,
+        "b_wilson_95": [
+          0.0012603530016452582,
+          0.010832417876619014
+        ],
+        "abs_diff": -0.001234567901234568
+      },
+      "Dodona — Bayes-v1 vs Tír na nÓg — MonteCarlo-v1": {
+        "a": "Dodona — Bayes-v1",
+        "b": "Tír na nÓg — MonteCarlo-v1",
+        "n_budget": 5,
+        "a_relevant": 2,
+        "a_n": 810,
+        "a_rate": 0.0024691358024691358,
+        "a_wilson_95": [
+          0.0006773732718844172,
+          0.008957916936922801
+        ],
+        "b_relevant": 1,
+        "b_n": 810,
+        "b_rate": 0.0012345679012345679,
+        "b_wilson_95": [
+          0.0002179591946785803,
+          0.006959850344671582
+        ],
+        "abs_diff": 0.0012345679012345679
+      },
+      "Brocéliande — Markov-v1 vs Tír na nÓg — MonteCarlo-v1": {
+        "a": "Brocéliande — Markov-v1",
+        "b": "Tír na nÓg — MonteCarlo-v1",
+        "n_budget": 5,
+        "a_relevant": 3,
+        "a_n": 810,
+        "a_rate": 0.003703703703703704,
+        "a_wilson_95": [
+          0.0012603530016452582,
+          0.010832417876619014
+        ],
+        "b_relevant": 1,
+        "b_n": 810,
+        "b_rate": 0.0012345679012345679,
+        "b_wilson_95": [
+          0.0002179591946785803,
+          0.006959850344671582
+        ],
+        "abs_diff": 0.002469135802469136
+      }
+    }
+  },
+  "yggdrasil_diagnostics": {
+    "n_training_pairs_per_cell": [
+      31,
+      31,
+      31,
+      66,
+      66,
+      66,
+      101,
+      101,
+      101,
+      136,
+      136,
+      136,
+      171,
+      171,
+      171,
+      206,
+      206,
+      206,
+      241,
+      241,
+      241,
+      276,
+      276,
+      276,
+      311,
+      311,
+      311,
+      346,
+      346,
+      346,
+      381,
+      381,
+      381,
+      416,
+      416,
+      416,
+      451,
+      451,
+      451,
+      486,
+      486,
+      486,
+      521,
+      521,
+      521,
+      556,
+      556,
+      556,
+      591,
+      591,
+      591,
+      626,
+      626,
+      626,
+      661,
+      661,
+      661,
+      696,
+      696,
+      696,
+      731,
+      731,
+      731,
+      766,
+      766,
+      766,
+      801,
+      801,
+      801,
+      836,
+      836,
+      836,
+      871,
+      871,
+      871,
+      906,
+      906,
+      906,
+      941,
+      941,
+      941,
+      976,
+      976,
+      976,
+      1011,
+      1011,
+      1011,
+      1046,
+      1046,
+      1046,
+      1081,
+      1081,
+      1081,
+      1116,
+      1116,
+      1116,
+      1151,
+      1151,
+      1151,
+      1186,
+      1186,
+      1186,
+      1221,
+      1221,
+      1221,
+      1256,
+      1256,
+      1256,
+      1291,
+      1291,
+      1291,
+      1326,
+      1326,
+      1326,
+      1361,
+      1361,
+      1361,
+      1396,
+      1396,
+      1396,
+      1431,
+      1431,
+      1431,
+      1466,
+      1466,
+      1466,
+      1501,
+      1501,
+      1501,
+      1536,
+      1536,
+      1536,
+      1571,
+      1571,
+      1571,
+      1606,
+      1606,
+      1606,
+      1641,
+      1641,
+      1641,
+      1676,
+      1676,
+      1676,
+      1711,
+      1711,
+      1711,
+      1746,
+      1746,
+      1746,
+      1781,
+      1781,
+      1781,
+      1816,
+      1816,
+      1816,
+      1851,
+      1851,
+      1851,
+      1886,
+      1886,
+      1886
+    ],
+    "abstention_count": 3,
+    "participation_count": 159
+  },
+  "chave_oficial_amostra": {
+    "target": "006/2005",
+    "seed": 20260821,
+    "chaves": {
+      "Yggdrasil — LSTM-v1": null,
+      "Dodona — Bayes-v1": [
+        [
+          5,
+          22,
+          28,
+          31,
+          41
+        ],
+        [
+          2,
+          8
+        ]
+      ],
+      "Brocéliande — Markov-v1": [
+        [
+          4,
+          13,
+          20,
+          21,
+          35
+        ],
+        [
+          6,
+          9
+        ]
+      ],
+      "Tír na nÓg — MonteCarlo-v1": [
+        [
+          2,
+          20,
+          41,
+          44,
+          48
+        ],
+        [
+          2,
+          11
+        ]
+      ],
+      "Fortuna — Controlo-v1": [
+        [
+          5,
+          13,
+          35,
+          37,
+          38
+        ],
+        [
+          7,
+          12
+        ]
+      ]
+    }
+  },
+  "primeira_tentativa_abortada": {
+    "motivo": "AttributeError: 'SimulatedBacktestCandidate' object has no attribute 'race' (bug de pós-processamento no script de campanha, c.race em vez de c.candidate.race)",
+    "run_id_range": [
+      "RUN-20260823T160317754486Z",
+      "RUN-20260823T160558812801Z"
+    ],
+    "manifests_preservados": 162,
+    "cells_ok": 0,
+    "cells_failed": 162,
+    "nota": "Preservados intencionalmente, nunca apagados; fora do intervalo de tempo desta execução; nenhum dos números deste relatório os inclui."
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "run_id": "RUN-20260823T163511100381Z",
+  "started_at": "2026-08-23T16:35:11+00:00",
+  "completed_at": "2026-08-23T16:35:11+00:00",
+  "seed": 20260822,
+  "modo_semente": "caos",
+  "project_version": "V12",
+  "git_commit": "747f12dd6f12a353fd99e137c27e0e80806f9972",
+  "report_path": null,
+  "command": "backtest_campaign:treefolks_v2",
+  "target_draw": "099/2015",
+  "generated_record_count": 100
+}
