@@ -1,21 +1,24 @@
 """Tests for core/services/treefolks_v2/yggdrasil.py.
 
-IMPORTANT — environment note: PyTorch is NOT installed in this
-environment (no installation was authorized during this tranche — see
-requirements-treefolks-v2.txt, optional). This means:
-  - Every test below that only exercises pure-Python logic
-    (_build_causal_pairs, HAS_TORCH-False abstention, signatures) runs
-    for real, in this environment, right now.
-  - Every test that needs torch itself (actual training, the
-    determinism-restore behaviour of torch.use_deterministic_algorithms)
-    is guarded with @unittest.skipUnless(HAS_TORCH, ...) and is
-    SKIPPED here — written and reviewed against the frozen contract,
-    but not executed in this environment. This is a known, explicitly
-    flagged limitation of this tranche, not a silent gap.
+Environment note: whether PyTorch happens to be installed in the
+environment these tests run in varies (it is an optional dependency —
+see requirements-treefolks-v2.txt). Every test that only exercises
+pure-Python logic (_build_causal_pairs, signatures) runs regardless.
+Every test that needs torch itself (actual training, the
+determinism-restore behaviour of torch.use_deterministic_algorithms)
+is guarded with @unittest.skipUnless(HAS_TORCH, ...) and is skipped
+when torch is absent — never a silent gap, always visible in the test
+run's own output.
+
+TestHasTorchAbstention below deliberately FORCES HAS_TORCH to False via
+mock.patch rather than relying on the ambient environment state — this
+is what makes it correct and meaningful whether or not torch actually
+happens to be installed where the suite runs.
 """
 
 import inspect
 import unittest
+from unittest import mock
 
 from core.services.treefolks_v2.yggdrasil import (
     HAS_TORCH,
@@ -41,19 +44,15 @@ def _synthetic_historico(n, sentinel_last=False):
 
 
 class TestHasTorchAbstention(unittest.TestCase):
-    def test_torch_is_not_installed_in_this_environment(self):
-        # Honest statement of the real environment state this session
-        # ran in -- not an assertion about what SHOULD be true in
-        # general.
-        self.assertFalse(HAS_TORCH)
-
     def test_run_yggdrasil_abstains_when_torch_unavailable(self):
         historico = _synthetic_historico(200)
-        self.assertIsNone(run_yggdrasil(historico, seed=1))
+        with mock.patch("core.services.treefolks_v2.yggdrasil.HAS_TORCH", False):
+            self.assertIsNone(run_yggdrasil(historico, seed=1))
 
     def test_abstention_is_independent_of_history_length_when_torch_unavailable(self):
         # Even with abundant history, no torch -> no participation.
-        self.assertIsNone(run_yggdrasil(_synthetic_historico(500), seed=1))
+        with mock.patch("core.services.treefolks_v2.yggdrasil.HAS_TORCH", False):
+            self.assertIsNone(run_yggdrasil(_synthetic_historico(500), seed=1))
 
 
 class TestCausalPairSentinel(unittest.TestCase):
@@ -135,11 +134,10 @@ class TestSignature(unittest.TestCase):
 
 @unittest.skipUnless(HAS_TORCH, "torch not installed in this environment — see module docstring")
 class TestTorchDependentBehaviour(unittest.TestCase):
-    """Written and reviewed against the frozen contract; SKIPPED in
-    this environment because torch was not installed (no installation
-    authorized in this tranche). Run these explicitly in an
-    environment with requirements-treefolks-v2.txt installed before
-    relying on Yggdrasil's real numeric output.
+    """Real training/inference behaviour, checked against the frozen
+    contract. Guarded by @unittest.skipUnless(HAS_TORCH, ...) — skipped
+    in any environment without requirements-treefolks-v2.txt installed;
+    runs for real wherever torch is present.
     """
 
     def _rich_historico(self):

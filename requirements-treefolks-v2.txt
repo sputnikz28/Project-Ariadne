@@ -14,4 +14,4 @@
 # default this module does not itself specify.
 #
 # CPU-only usage — no CUDA/GPU build required.
-torch==2.4.1
+torch==2.13.0
