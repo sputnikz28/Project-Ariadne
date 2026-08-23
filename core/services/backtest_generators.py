@@ -76,6 +76,27 @@ GeneratorOutput.attempted_races, every cell, so a lineage that abstains
 in 100% of cells is still discoverable and correctly reported as full
 abstention by core.services.backtest_arena, never silently disappearing
 for lack of a CandidateKey.
+
+Treefolks V2 — As Grandes Florestas (Arena Temporada 3): one system,
+"treefolks_v2", composed of five Florestas (Yggdrasil/LSTM,
+Dodona/Bayes, Brocéliande/Markov, Tír na nÓg/Monte Carlo,
+Fortuna/control) — see core/services/treefolks_v2/ for the full
+per-Floresta contract. Sistema -> Floresta -> Treefolk is expressed
+entirely through the existing CandidateKey shape: source_name is the
+fixed constant "treefolks_v2" (same convention as every other system
+here), and `race` is a single composed string "Floresta — Treefolk"
+(e.g. "Yggdrasil — LSTM-v1") — no new field anywhere. Each Floresta
+gets its OWN independently-namespaced RNG stream via
+core.services.treefolks_v2.common.forest_rng() — never a single
+sequential stream shared across Florestas — because Yggdrasil's
+internal training consumes a variable amount of randomness that would
+otherwise silently desynchronize every other Floresta's draws. Every
+Floresta always declares itself in attempted_races, even in full
+abstention (insufficient history, or — Yggdrasil only — PyTorch not
+installed), reusing the exact same mechanism already proven for
+Astérias, with zero extension. Fangorn/Ensemble is deliberately absent:
+roadmap only, blocked until real Arena results exist for the other
+five.
 """
 
 from __future__ import annotations
@@ -94,6 +115,12 @@ from core.services.backtest_orchestrator import (
 from core.services.candidate_provenance import CandidateKey
 from core.services.combinations import normalize_candidate
 from core.services.run_manifest import complete_run, start_run
+from core.services.treefolks_v2.broceliande import run_broceliande
+from core.services.treefolks_v2.common import build_key_from_scores, forest_rng
+from core.services.treefolks_v2.dodona import run_dodona
+from core.services.treefolks_v2.fortuna import run_fortuna
+from core.services.treefolks_v2.tirnanog import run_tirnanog
+from core.services.treefolks_v2.yggdrasil import run_yggdrasil
 from factions.axiomantes.ritual import execute_ritual
 from factions.melforks.algorithm import melforks
 from factions.skeletons.algorithm import create_representatives
@@ -487,6 +514,83 @@ def _run_asterias(cfg, ctx, ariadne_temporal, seed, boundary) -> GeneratorOutput
     )
 
 
+_TREEFOLKS_V2_FORESTS = (
+    "Yggdrasil — LSTM-v1",
+    "Dodona — Bayes-v1",
+    "Brocéliande — Markov-v1",
+    "Tír na nÓg — MonteCarlo-v1",
+    "Fortuna — Controlo-v1",
+)
+
+
+def _treefolk_candidates(scores, rng, quantidade, race) -> list[CandidateKey]:
+    """Turns one Floresta's TreefolkScores into `quantidade` candidates
+    via the single shared common.build_key_from_scores() — the only
+    place any Treefolk's score becomes an actual key, so differences
+    in Arena performance come from the model, never the constructor.
+    """
+    out = []
+    for i in range(quantidade):
+        numeros, estrelas = build_key_from_scores(scores.number_scores, scores.star_scores, rng)
+        chave = normalize_candidate(list(numeros), list(estrelas), rng)
+        record = {"nome": f"{race}-{i + 1}", "tipo": race, "chave": chave}
+        out.append(_candidate_key_from_record(record, "external_generator", "treefolks_v2", race))
+    return out
+
+
+def _run_treefolks_v2(cfg, ctx, ariadne_temporal, seed, boundary) -> GeneratorOutput:
+    """Despacha as 5 Florestas em ordem fixa e documentada (Yggdrasil,
+    Dodona, Brocéliande, Tír na nÓg, Fortuna). Cada Floresta recebe o
+    seu próprio stream de RNG via forest_rng(seed, floresta, draw_id)
+    — nunca um único random.Random(seed) sequencial partilhado (ver
+    docstring do módulo). Todas as 5 declaram-se sempre em
+    attempted_races, mesmo em abstenção total.
+
+    Yggdrasil consome uma chamada do seu próprio stream para derivar
+    um inteiro para torch.manual_seed() (getrandbits, determinístico
+    dado o mesmo stream), depois reutiliza o MESMO stream (já avançado)
+    para a construção final das chaves — consumo sequencial, ordem
+    fixa, mesmo princípio já usado por Tír na nÓg (stream consumido
+    primeiro nas simulações Monte Carlo internas, depois na construção
+    final das chaves).
+    """
+    manifest = start_run(seed, _modo_semente(cfg), command="backtest_campaign:treefolks_v2", target_draw=boundary.draw_id)
+    quantidade = cfg.getint("TREEFOLKS_V2", "quantidade_por_treefolk", fallback=20)
+    historico = ctx["historico"]
+
+    candidates: list[CandidateKey] = []
+
+    yggdrasil_rng = forest_rng(seed, "yggdrasil", boundary.draw_id)
+    yggdrasil_scores = run_yggdrasil(historico, yggdrasil_rng.getrandbits(63))
+    if yggdrasil_scores is not None:
+        candidates.extend(_treefolk_candidates(yggdrasil_scores, yggdrasil_rng, quantidade, _TREEFOLKS_V2_FORESTS[0]))
+
+    dodona_rng = forest_rng(seed, "dodona", boundary.draw_id)
+    dodona_scores = run_dodona(historico)
+    candidates.extend(_treefolk_candidates(dodona_scores, dodona_rng, quantidade, _TREEFOLKS_V2_FORESTS[1]))
+
+    broceliande_rng = forest_rng(seed, "broceliande", boundary.draw_id)
+    broceliande_scores = run_broceliande(historico)
+    if broceliande_scores is not None:
+        candidates.extend(_treefolk_candidates(broceliande_scores, broceliande_rng, quantidade, _TREEFOLKS_V2_FORESTS[2]))
+
+    tirnanog_rng = forest_rng(seed, "tirnanog", boundary.draw_id)
+    tirnanog_scores = run_tirnanog(historico, tirnanog_rng)
+    if tirnanog_scores is not None:
+        candidates.extend(_treefolk_candidates(tirnanog_scores, tirnanog_rng, quantidade, _TREEFOLKS_V2_FORESTS[3]))
+
+    fortuna_rng = forest_rng(seed, "fortuna", boundary.draw_id)
+    fortuna_scores = run_fortuna(historico)
+    candidates.extend(_treefolk_candidates(fortuna_scores, fortuna_rng, quantidade, _TREEFOLKS_V2_FORESTS[4]))
+
+    candidates = tuple(candidates)
+    manifest = complete_run(manifest, generated_record_count=len(candidates))
+    return GeneratorOutput(
+        candidates=candidates, run_id=manifest["run_id"], generations=None,
+        attempted_races=frozenset(_TREEFOLKS_V2_FORESTS),
+    )
+
+
 GENERATORS: Mapping[str, GeneratorAdapter] = MappingProxyType({
     "clerics": GeneratorAdapter("clerics", True, _run_clerics),
     "skeletons": GeneratorAdapter("skeletons", False, _run_skeletons),
@@ -495,4 +599,5 @@ GENERATORS: Mapping[str, GeneratorAdapter] = MappingProxyType({
     "pantheon": GeneratorAdapter("pantheon", False, _run_pantheon),
     "acaso_puro": GeneratorAdapter("acaso_puro", False, _run_acaso_puro),
     "asterias": GeneratorAdapter("asterias", False, _run_asterias),
+    "treefolks_v2": GeneratorAdapter("treefolks_v2", False, _run_treefolks_v2),
 })

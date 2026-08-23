@@ -58,6 +58,9 @@ representantes=5
 ativo=true
 quantidade=3
 
+[TREEFOLKS_V2]
+quantidade_por_treefolk=20
+
 [FADAS]
 ativo=true
 quantidade=4

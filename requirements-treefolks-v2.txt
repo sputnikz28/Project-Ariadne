@@ -1,0 +1,17 @@
+# torch — optional dependency, used exclusively by
+# core/services/treefolks_v2/yggdrasil.py (Bosque de Yggdrasil, the
+# only Floresta that trains a real LSTM). No other file in the project
+# imports torch, directly or indirectly. If this package is not
+# installed, Yggdrasil abstains explicitly via attempted_races — every
+# other Floresta (Dodona, Brocéliande, Tír na nÓg, Fortuna) and every
+# other system in the project run normally without it.
+#
+# Pinned to an exact version (never an open range): Yggdrasil's frozen
+# V1 hyperparameters (see core/services/treefolks_v2/yggdrasil.py)
+# explicitly state every Adam/loss/architecture value rather than
+# relying on library defaults — pinning the version too closes the
+# remaining gap where an upgrade could silently change an internal
+# default this module does not itself specify.
+#
+# CPU-only usage — no CUDA/GPU build required.
+torch==2.4.1

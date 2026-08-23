@@ -8,6 +8,7 @@ writes to experiments/axiomancers/runs/.
 
 import configparser
 import json
+import random
 import tempfile
 import unittest
 from datetime import datetime, timezone
@@ -112,10 +113,10 @@ class _GeneratorFixture(unittest.TestCase):
 
 
 class TestGeneratorsRegistry(_GeneratorFixture):
-    def test_exactly_the_seven_approved_systems_are_registered(self):
+    def test_exactly_the_eight_approved_systems_are_registered(self):
         self.assertEqual(
             set(GENERATORS),
-            {"clerics", "skeletons", "melforks", "axiomantes", "pantheon", "acaso_puro", "asterias"},
+            {"clerics", "skeletons", "melforks", "axiomantes", "pantheon", "acaso_puro", "asterias", "treefolks_v2"},
         )
 
     def test_blocked_systems_are_never_registered(self):
@@ -531,6 +532,133 @@ class TestAsteriasAdapter(unittest.TestCase):
         cfg = self.make_cfg()
         output = self.run_isolated(_RICH_HISTORICO, cfg, seed=1)
         self.assertEqual(sum(1 for c in output.candidates if c.race == "Astéria Abissal"), 20)
+
+
+# ---------------------------------------------------------------------------
+# Treefolks V2 — As Grandes Florestas. PyTorch is not installed in this
+# environment (no installation authorized this tranche), so Yggdrasil
+# abstains structurally in every test below — the same abstention path
+# already covered by tests/test_treefolks_v2_yggdrasil.py's
+# TestHasTorchAbstention. Dodona/Brocéliande/Tír na nÓg/Fortuna are the
+# four Florestas exercised for real here.
+# ---------------------------------------------------------------------------
+
+_TREEFOLKS_V2_HISTORICO = [
+    {"numeros": [1, 2, 3, 4, 5], "estrelas": [1, 2]},
+    {"numeros": [6, 7, 8, 9, 10], "estrelas": [3, 4]},
+    {"numeros": [11, 12, 13, 14, 15], "estrelas": [5, 6]},
+    {"numeros": [16, 17, 18, 19, 20], "estrelas": [7, 8]},
+    {"numeros": [21, 22, 23, 24, 25], "estrelas": [9, 10]},
+    {"numeros": [1, 2, 3, 4, 5], "estrelas": [1, 2]},
+    {"numeros": [26, 27, 28, 29, 30], "estrelas": [11, 12]},
+    {"numeros": [6, 7, 8, 9, 10], "estrelas": [3, 4]},
+]
+
+_TREEFOLKS_V2_RACES = (
+    "Yggdrasil — LSTM-v1",
+    "Dodona — Bayes-v1",
+    "Brocéliande — Markov-v1",
+    "Tír na nÓg — MonteCarlo-v1",
+    "Fortuna — Controlo-v1",
+)
+
+
+class TestTreefolksV2Adapter(unittest.TestCase):
+    def make_cfg(self, **overrides):
+        return make_minimal_cfg(**overrides)
+
+    def make_ctx(self, historico):
+        return {"historico": historico, "estatisticas": {}, "mundo": {}}
+
+    def run_isolated(self, historico, cfg, seed):
+        ctx = self.make_ctx(historico)
+        with tempfile.TemporaryDirectory() as tmp, mock.patch("core.services.run_manifest.RUNS_DIR", Path(tmp)):
+            return GENERATORS["treefolks_v2"].run(cfg, ctx, None, seed, BOUNDARY)
+
+    def test_never_touches_get_history_or_builder(self):
+        cfg = self.make_cfg(TREEFOLKS_V2={"quantidade_por_treefolk": "3"})
+        with mock.patch("core.data.loaders.get_history", side_effect=AssertionError("must never be called")), \
+             mock.patch("world.engine.builder.build", side_effect=AssertionError("must never be called")):
+            output = self.run_isolated(_TREEFOLKS_V2_HISTORICO, cfg, seed=1)
+        self.assertTrue(output.candidates)
+
+    def test_attempted_races_always_declares_all_five_florestas(self):
+        cfg = self.make_cfg()
+        output = self.run_isolated(_TREEFOLKS_V2_HISTORICO, cfg, seed=1)
+        self.assertEqual(output.attempted_races, frozenset(_TREEFOLKS_V2_RACES))
+
+    def test_yggdrasil_abstains_without_torch_but_others_participate(self):
+        cfg = self.make_cfg(TREEFOLKS_V2={"quantidade_por_treefolk": "4"})
+        output = self.run_isolated(_TREEFOLKS_V2_HISTORICO, cfg, seed=1)
+        races_with_candidates = {c.race for c in output.candidates}
+        self.assertNotIn("Yggdrasil — LSTM-v1", races_with_candidates)
+        for race in ("Dodona — Bayes-v1", "Brocéliande — Markov-v1", "Tír na nÓg — MonteCarlo-v1", "Fortuna — Controlo-v1"):
+            self.assertIn(race, races_with_candidates)
+            self.assertEqual(sum(1 for c in output.candidates if c.race == race), 4)
+
+    def test_full_abstention_still_visible_via_attempted_races_when_history_too_short_for_broceliande(self):
+        cfg = self.make_cfg()
+        output = self.run_isolated([_TREEFOLKS_V2_HISTORICO[0]], cfg, seed=1)  # len==1 -> Brocéliande abstains too
+        races_with_candidates = {c.race for c in output.candidates}
+        self.assertNotIn("Brocéliande — Markov-v1", races_with_candidates)
+        self.assertNotIn("Yggdrasil — LSTM-v1", races_with_candidates)
+        self.assertIn("Brocéliande — Markov-v1", output.attempted_races)  # still discoverable
+        self.assertIn("Yggdrasil — LSTM-v1", output.attempted_races)
+        # Dodona/Fortuna/Tír na nÓg have no such threshold -- still participate.
+        self.assertIn("Dodona — Bayes-v1", races_with_candidates)
+        self.assertIn("Fortuna — Controlo-v1", races_with_candidates)
+        self.assertIn("Tír na nÓg — MonteCarlo-v1", races_with_candidates)
+
+    def test_provenance_source_type_and_name(self):
+        cfg = self.make_cfg(TREEFOLKS_V2={"quantidade_por_treefolk": "2"})
+        output = self.run_isolated(_TREEFOLKS_V2_HISTORICO, cfg, seed=1)
+        for c in output.candidates:
+            self.assertEqual(c.source_type, "external_generator")
+            self.assertEqual(c.source_name, "treefolks_v2")
+            self.assertIn(c.race, _TREEFOLKS_V2_RACES)
+            self.assertIn(" — ", c.race)  # "Floresta — Treefolk" composed string
+
+    def test_respects_configured_quantidade(self):
+        cfg = self.make_cfg(TREEFOLKS_V2={"quantidade_por_treefolk": "6"})
+        output = self.run_isolated(_TREEFOLKS_V2_HISTORICO, cfg, seed=1)
+        self.assertEqual(sum(1 for c in output.candidates if c.race == "Fortuna — Controlo-v1"), 6)
+
+    def test_defaults_to_20_when_unconfigured(self):
+        cfg = self.make_cfg()
+        output = self.run_isolated(_TREEFOLKS_V2_HISTORICO, cfg, seed=1)
+        self.assertEqual(sum(1 for c in output.candidates if c.race == "Fortuna — Controlo-v1"), 20)
+
+    def test_deterministic_given_same_seed(self):
+        cfg = self.make_cfg(TREEFOLKS_V2={"quantidade_por_treefolk": "5"})
+        out1 = self.run_isolated(_TREEFOLKS_V2_HISTORICO, cfg, seed=777)
+        out2 = self.run_isolated(_TREEFOLKS_V2_HISTORICO, cfg, seed=777)
+        strip = lambda o: [(c.race, c.numeros, c.estrelas) for c in o.candidates]
+        self.assertEqual(strip(out1), strip(out2))
+
+    def test_output_independent_of_global_random_state(self):
+        cfg = self.make_cfg(TREEFOLKS_V2={"quantidade_por_treefolk": "3"})
+        random.seed(111)
+        out1 = self.run_isolated(_TREEFOLKS_V2_HISTORICO, cfg, seed=42)
+        random.seed(999)
+        out2 = self.run_isolated(_TREEFOLKS_V2_HISTORICO, cfg, seed=42)
+        strip = lambda o: [(c.race, c.numeros, c.estrelas) for c in o.candidates]
+        self.assertEqual(strip(out1), strip(out2))
+
+    def test_different_florestas_produce_different_keys_same_cell(self):
+        # Proves the 5 Florestas don't collapse onto the same output
+        # (e.g. by accidentally sharing one RNG stream) -- Dodona and
+        # Fortuna, in particular, should differ given Dodona's
+        # historically-informed scores vs. Fortuna's uniform ones.
+        cfg = self.make_cfg(TREEFOLKS_V2={"quantidade_por_treefolk": "10"})
+        output = self.run_isolated(_TREEFOLKS_V2_HISTORICO, cfg, seed=1)
+        dodona_keys = {(c.numeros, c.estrelas) for c in output.candidates if c.race == "Dodona — Bayes-v1"}
+        fortuna_keys = {(c.numeros, c.estrelas) for c in output.candidates if c.race == "Fortuna — Controlo-v1"}
+        self.assertNotEqual(dodona_keys, fortuna_keys)
+
+    def test_generations_is_always_none(self):
+        cfg = self.make_cfg()
+        output = self.run_isolated(_TREEFOLKS_V2_HISTORICO, cfg, seed=1)
+        self.assertIsNone(output.generations)
 
 
 if __name__ == "__main__":
