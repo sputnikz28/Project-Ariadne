@@ -1,0 +1,13 @@
+{
+  "run_id": "RUN-20260823T103939884702Z",
+  "started_at": "2026-08-23T10:39:39+00:00",
+  "completed_at": "2026-08-23T10:39:39+00:00",
+  "seed": 20260823,
+  "modo_semente": "caos",
+  "project_version": "V12",
+  "git_commit": "cf22d7e7f5ec5c7fa663f7533f51cef77c51ad6d",
+  "report_path": null,
+  "command": "backtest_campaign:asterias",
+  "target_draw": "030/2016",
+  "generated_record_count": 40
+}

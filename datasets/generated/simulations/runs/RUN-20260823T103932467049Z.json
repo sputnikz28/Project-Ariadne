@@ -1,0 +1,13 @@
+{
+  "run_id": "RUN-20260823T103932467049Z",
+  "started_at": "2026-08-23T10:39:32+00:00",
+  "completed_at": "2026-08-23T10:39:32+00:00",
+  "seed": 20260821,
+  "modo_semente": "caos",
+  "project_version": "V12",
+  "git_commit": "cf22d7e7f5ec5c7fa663f7533f51cef77c51ad6d",
+  "report_path": null,
+  "command": "backtest_campaign:acaso_puro",
+  "target_draw": "063/2013",
+  "generated_record_count": 20
+}

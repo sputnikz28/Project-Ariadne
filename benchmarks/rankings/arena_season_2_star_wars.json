@@ -1,0 +1,439 @@
+{
+  "campaign": "Arena Oficial — Temporada 2 / Guerra das Estrelas",
+  "targets": [
+    "006/2005",
+    "041/2005",
+    "024/2006",
+    "007/2007",
+    "042/2007",
+    "025/2008",
+    "008/2009",
+    "043/2009",
+    "026/2010",
+    "008/2011",
+    "043/2011",
+    "078/2011",
+    "027/2012",
+    "062/2012",
+    "097/2012",
+    "028/2013",
+    "063/2013",
+    "098/2013",
+    "028/2014",
+    "063/2014",
+    "098/2014",
+    "029/2015",
+    "064/2015",
+    "099/2015",
+    "030/2016",
+    "065/2016",
+    "100/2016",
+    "030/2017",
+    "065/2017",
+    "100/2017",
+    "031/2018",
+    "066/2018",
+    "101/2018",
+    "032/2019",
+    "067/2019",
+    "102/2019",
+    "032/2020",
+    "067/2020",
+    "102/2020",
+    "033/2021",
+    "068/2021",
+    "103/2021",
+    "033/2022",
+    "068/2022",
+    "103/2022",
+    "034/2023",
+    "069/2023",
+    "104/2023",
+    "035/2024",
+    "070/2024",
+    "105/2024",
+    "035/2025",
+    "070/2025",
+    "001/2026"
+  ],
+  "target_selection_rule": {
+    "H_min": 52,
+    "excluded": [
+      "065/2026",
+      "066/2026",
+      "067/2026"
+    ],
+    "method": "systematic sample, step = len(eligible)//54, over all real draws chronologically sorted, excluding the first 52 draws and the 3 smoke-test draws"
+  },
+  "seeds": [
+    20260821,
+    20260822,
+    20260823
+  ],
+  "arena_seed": 1,
+  "systems": [
+    "asterias",
+    "acaso_puro"
+  ],
+  "cells_ok": 162,
+  "cells_failed": [],
+  "cells_total": 162,
+  "duration_seconds": 54.0483940000413,
+  "total_candidates": 9060,
+  "manifests_written": 324,
+  "prova_das_estrelas": {
+    "1": {
+      "Astéria Abissal": {
+        "n": 129,
+        "count_0": 83,
+        "count_1": 45,
+        "count_2": 1,
+        "taxa_2_estrelas": 0.007751937984496124,
+        "taxa_>=1_estrela": 0.35658914728682173,
+        "wilson_95_taxa_2_estrelas": [
+          0.0013696853368445083,
+          0.04260449142706077
+        ],
+        "stdev_taxa_2_entre_targets": 0.05023829998765783,
+        "stdev_taxa_2_entre_seeds": 0.010962895832349573
+      },
+      "Astéria das Marés [condicional]": {
+        "n": 129,
+        "count_0": 92,
+        "count_1": 36,
+        "count_2": 1,
+        "taxa_2_estrelas": 0.007751937984496124,
+        "taxa_>=1_estrela": 0.2868217054263566,
+        "wilson_95_taxa_2_estrelas": [
+          0.0013696853368445083,
+          0.04260449142706077
+        ],
+        "stdev_taxa_2_entre_targets": 0.05023829998765783,
+        "stdev_taxa_2_entre_seeds": 0.010962895832349573
+      },
+      "Astéria das Marés [backoff]": {
+        "n": 33,
+        "count_0": 20,
+        "count_1": 13,
+        "count_2": 0,
+        "taxa_2_estrelas": 0.0,
+        "taxa_>=1_estrela": 0.3939393939393939,
+        "wilson_95_taxa_2_estrelas": [
+          0.0,
+          0.10427343003561192
+        ],
+        "stdev_taxa_2_entre_targets": 0.0,
+        "stdev_taxa_2_entre_seeds": 0.0
+      },
+      "Acaso Puro": {
+        "n": 162,
+        "count_0": 115,
+        "count_1": 45,
+        "count_2": 2,
+        "taxa_2_estrelas": 0.012345679012345678,
+        "taxa_>=1_estrela": 0.29012345679012347,
+        "wilson_95_taxa_2_estrelas": [
+          0.0033921144271846044,
+          0.043891558668106324
+        ],
+        "stdev_taxa_2_entre_targets": 0.06295085819250351,
+        "stdev_taxa_2_entre_seeds": 0.008729713347982069
+      }
+    },
+    "2": {
+      "Astéria Abissal": {
+        "n": 258,
+        "count_0": 182,
+        "count_1": 71,
+        "count_2": 5,
+        "taxa_2_estrelas": 0.01937984496124031,
+        "taxa_>=1_estrela": 0.29457364341085274,
+        "wilson_95_taxa_2_estrelas": [
+          0.008305499777604631,
+          0.04455699418821288
+        ],
+        "stdev_taxa_2_entre_targets": 0.05342654555073729,
+        "stdev_taxa_2_entre_seeds": 0.005481447916174787
+      },
+      "Astéria das Marés [condicional]": {
+        "n": 258,
+        "count_0": 183,
+        "count_1": 70,
+        "count_2": 5,
+        "taxa_2_estrelas": 0.01937984496124031,
+        "taxa_>=1_estrela": 0.29069767441860467,
+        "wilson_95_taxa_2_estrelas": [
+          0.008305499777604631,
+          0.04455699418821288
+        ],
+        "stdev_taxa_2_entre_targets": 0.05342654555073729,
+        "stdev_taxa_2_entre_seeds": 0.010962895832349573
+      },
+      "Astéria das Marés [backoff]": {
+        "n": 66,
+        "count_0": 51,
+        "count_1": 14,
+        "count_2": 1,
+        "taxa_2_estrelas": 0.015151515151515152,
+        "taxa_>=1_estrela": 0.22727272727272727,
+        "wilson_95_taxa_2_estrelas": [
+          0.00267957153445675,
+          0.08096112398225536
+        ],
+        "stdev_taxa_2_entre_targets": 0.04791329788133908,
+        "stdev_taxa_2_entre_seeds": 0.021427478217774167
+      },
+      "Acaso Puro": {
+        "n": 324,
+        "count_0": 230,
+        "count_1": 91,
+        "count_2": 3,
+        "taxa_2_estrelas": 0.009259259259259259,
+        "taxa_>=1_estrela": 0.29012345679012347,
+        "wilson_95_taxa_2_estrelas": [
+          0.0031538258867425395,
+          0.026865549323724952
+        ],
+        "stdev_taxa_2_entre_targets": 0.03817690394090426,
+        "stdev_taxa_2_entre_seeds": 0.007560153527108574
+      }
+    },
+    "5": {
+      "Astéria Abissal": {
+        "n": 645,
+        "count_0": 450,
+        "count_1": 185,
+        "count_2": 10,
+        "taxa_2_estrelas": 0.015503875968992248,
+        "taxa_>=1_estrela": 0.3023255813953488,
+        "wilson_95_taxa_2_estrelas": [
+          0.008442714178767007,
+          0.02830215544734821
+        ],
+        "stdev_taxa_2_entre_targets": 0.03162182644088549,
+        "stdev_taxa_2_entre_seeds": 0.005801019204300684
+      },
+      "Astéria das Marés [condicional]": {
+        "n": 645,
+        "count_0": 435,
+        "count_1": 201,
+        "count_2": 9,
+        "taxa_2_estrelas": 0.013953488372093023,
+        "taxa_>=1_estrela": 0.32558139534883723,
+        "wilson_95_taxa_2_estrelas": [
+          0.007357942503799474,
+          0.02630451070511931
+        ],
+        "stdev_taxa_2_entre_targets": 0.030696108330578807,
+        "stdev_taxa_2_entre_seeds": 0.006577737499409745
+      },
+      "Astéria das Marés [backoff]": {
+        "n": 165,
+        "count_0": 113,
+        "count_1": 49,
+        "count_2": 3,
+        "taxa_2_estrelas": 0.01818181818181818,
+        "taxa_>=1_estrela": 0.3151515151515151,
+        "wilson_95_taxa_2_estrelas": [
+          0.006202298221943012,
+          0.05208665426370033
+        ],
+        "stdev_taxa_2_entre_targets": 0.02969078476100822,
+        "stdev_taxa_2_entre_seeds": 0.01484539238050411
+      },
+      "Acaso Puro": {
+        "n": 810,
+        "count_0": 545,
+        "count_1": 251,
+        "count_2": 14,
+        "taxa_2_estrelas": 0.01728395061728395,
+        "taxa_>=1_estrela": 0.3271604938271605,
+        "wilson_95_taxa_2_estrelas": [
+          0.010323063558739017,
+          0.028801994683552844
+        ],
+        "stdev_taxa_2_entre_targets": 0.03190826662548169,
+        "stdev_taxa_2_entre_seeds": 0.006295085819250351
+      }
+    }
+  },
+  "abissal_vs_mares": {
+    "cells_n_ge_5": 129,
+    "abissal_abstentions": 33,
+    "mares_condicional": 129,
+    "mares_backoff": 33,
+    "mares_abstentions": 0,
+    "cells_total": 162
+  },
+  "star_contribution_trial": {
+    "config": {
+      "quantidade": 20,
+      "arena_seed": 1,
+      "generator_seeds": [
+        20260821,
+        20260822,
+        20260823
+      ],
+      "linhagens": [
+        "abissal",
+        "mares"
+      ],
+      "pairing_rule": "mesmos_cinco_numeros_neutros_por_par_indice_a_indice",
+      "rng_streams": [
+        "numbers",
+        "acaso",
+        "asteria:{lineage}"
+      ]
+    },
+    "results": {
+      "Astéria Abissal": {
+        "piorou": 551,
+        "igual": 1446,
+        "melhorou": 583
+      },
+      "Astéria das Marés [condicional]": {
+        "piorou": 593,
+        "igual": 1408,
+        "melhorou": 579
+      },
+      "Astéria das Marés [backoff]": {
+        "piorou": 128,
+        "melhorou": 166,
+        "igual": 366
+      }
+    }
+  },
+  "category_frequency": {
+    "Astéria das Marés [backoff]": {
+      "0+0": 253,
+      "0+1": 112,
+      "1+0": 151,
+      "1+1": 76,
+      "2+0": 26,
+      "2+2": 2,
+      "2+1": 21,
+      "1+2": 6,
+      "0+2": 5,
+      "3+0": 3,
+      "3+1": 4,
+      "3+2": 1
+    },
+    "Acaso Puro": {
+      "0+0": 1249,
+      "2+0": 166,
+      "1+0": 774,
+      "0+1": 547,
+      "1+1": 369,
+      "2+1": 64,
+      "3+1": 8,
+      "0+2": 33,
+      "1+2": 20,
+      "3+0": 7,
+      "2+2": 2,
+      "4+1": 1
+    },
+    "Astéria Abissal": {
+      "0+1": 427,
+      "1+0": 636,
+      "0+0": 1008,
+      "1+1": 283,
+      "2+0": 125,
+      "2+1": 49,
+      "3+1": 4,
+      "0+2": 22,
+      "3+0": 9,
+      "1+2": 17
+    },
+    "Astéria das Marés [condicional]": {
+      "0+1": 456,
+      "1+0": 565,
+      "0+0": 1030,
+      "1+1": 299,
+      "2+1": 55,
+      "0+2": 25,
+      "2+0": 118,
+      "3+1": 4,
+      "3+0": 10,
+      "1+2": 14,
+      "2+2": 4
+    }
+  },
+  "relevant_categories": [
+    "3+1",
+    "3+2",
+    "4+0",
+    "4+1",
+    "4+2",
+    "5+0",
+    "5+1",
+    "5+2"
+  ],
+  "attendance": {
+    "systems": {
+      "asterias": {
+        "system": "asterias",
+        "cells_attempted": 162,
+        "cells_with_any_candidate": 162,
+        "targets_observed": 54,
+        "targets_with_participation": 54,
+        "system_abstention_rate": 0.0
+      },
+      "acaso_puro": {
+        "system": "acaso_puro",
+        "cells_attempted": 162,
+        "cells_with_any_candidate": 162,
+        "targets_observed": 54,
+        "targets_with_participation": 54,
+        "system_abstention_rate": 0.0
+      }
+    },
+    "strategies": {
+      "acaso_puro": {
+        "Acaso Puro": {
+          "system": "acaso_puro",
+          "race": "Acaso Puro",
+          "cells_attempted": 162,
+          "cells_participated": 162,
+          "cells_succeeded": 9,
+          "targets_observed": 54,
+          "targets_with_participation": 54,
+          "participation_rate": 1.0,
+          "abstention_rate": 0.0,
+          "success_rate_when_participating": 0.05555555555555555,
+          "success_rate_over_all_cells": 0.05555555555555555,
+          "target_participation_rate": 1.0
+        }
+      },
+      "asterias": {
+        "Astéria das Marés": {
+          "system": "asterias",
+          "race": "Astéria das Marés",
+          "cells_attempted": 162,
+          "cells_participated": 162,
+          "cells_succeeded": 8,
+          "targets_observed": 54,
+          "targets_with_participation": 54,
+          "participation_rate": 1.0,
+          "abstention_rate": 0.0,
+          "success_rate_when_participating": 0.04938271604938271,
+          "success_rate_over_all_cells": 0.04938271604938271,
+          "target_participation_rate": 1.0
+        },
+        "Astéria Abissal": {
+          "system": "asterias",
+          "race": "Astéria Abissal",
+          "cells_attempted": 162,
+          "cells_participated": 129,
+          "cells_succeeded": 4,
+          "targets_observed": 54,
+          "targets_with_participation": 43,
+          "participation_rate": 0.7962962962962963,
+          "abstention_rate": 0.20370370370370372,
+          "success_rate_when_participating": 0.031007751937984496,
+          "success_rate_over_all_cells": 0.024691358024691357,
+          "target_participation_rate": 0.7962962962962963
+        }
+      }
+    }
+  }
+}
