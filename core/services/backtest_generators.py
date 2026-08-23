@@ -417,6 +417,24 @@ def _asterias_distribution(historico, lineage):
     return None, False
 
 
+def asterias_distribution(historico, lineage):
+    """Public wrapper over _asterias_distribution() -- same contract,
+    exposed for reuse by analysis code outside this module (e.g.
+    core.services.star_contribution_trial) that needs the exact same
+    probabilities the real adapter would use, without duplicating the
+    formula. _run_asterias() itself keeps calling the private name --
+    this function is purely an external reuse seam.
+    """
+    return _asterias_distribution(historico, lineage)
+
+
+def sample_two_stars(probabilities, rng):
+    """Public wrapper over _sample_two_stars() -- same reuse rationale
+    as asterias_distribution() above.
+    """
+    return _sample_two_stars(probabilities, rng)
+
+
 def _run_asterias(cfg, ctx, ariadne_temporal, seed, boundary) -> GeneratorOutput:
     """Astéria Abissal (purist -- abstains when the conditional sample
     on the previous star pair has fewer than 5 historical occurrences)
