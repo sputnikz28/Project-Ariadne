@@ -36,7 +36,7 @@ This project is none of those. It is a **laboratory for statistical strategies**
 
 ---
 
-## Current Status (V13 + Commits 25-27 + Campaign Runner V2 + Arena)
+## Current Status (V13 + Commits 25-27 + Campaign Runner V2 + Arena + Astérias + Treefolks V2)
 
 A quick map of what actually exists in this repository today, kept separate from ideas — see [Roadmap / Future Vision](#roadmap--future-vision) for what is *not* built yet, and [Historical/Recovered Documentation](#historicalrecovered-documentation) for archaeology that is neither implemented code nor a roadmap idea.
 
@@ -70,7 +70,17 @@ A quick map of what actually exists in this repository today, kept separate from
 
 **✅ Arena layer** (`88bfb28`) — `core/services/backtest_arena.py`: normalized cross-system/cross-strategy comparison. Official Key (neutral RNG selection, one per `system × strategy × target × seed` cell, never aggregated across seeds), Equal Budget sampling (N candidates without replacement, within one cell), and abstention/participation accounting (`cells_attempted`/`cells_participated`/`cells_succeeded` vs. coarser `targets_observed`/`targets_with_participation`, so a strategy that rarely participates can never look like it "always succeeds"). See [Backtest Orchestrator & Campaign Runner](#backtest-orchestrator--campaign-runner-commits-25-27--v2--arena) below.
 
-**✅ Testing** — 1011 tests across 39 modules (`python -m unittest discover -s tests`).
+**✅ Astérias de Thalássia + `attempted_races`** (`cf22d7e7`) — two conditional lineages testing a star-pair-transition hypothesis (Astéria Abissal, Astéria das Marés with marginal backoff), plus a generic contract extension so a strategy that abstains in 100% of cells is still discoverable in `ArenaStrategySummary` instead of silently disappearing. **[IMPLEMENTED]**
+
+**✅ Star Contribution Trial** (`d9b8c104`) — `core/services/star_contribution_trial.py`: a paired experiment holding the 5 neutral numbers fixed and swapping only the stars, isolating the star-selection hypothesis's real effect. **[IMPLEMENTED]**
+
+**✅ Arena Oficial — Temporada 2 / Guerra das Estrelas** (`e4624e65`) — real campaign, 54 targets × 3 seeds, 324/324 cells, 0 failures, 9060 candidates. Hypothesis tested, **not confirmed** — no statistically clear advantage over Acaso Puro. **[EXPERIMENTALLY TESTED]** — see [Arena Seasons](#arena-oficial--temporadas-1-3) below.
+
+**✅ Treefolks V2 — As Grandes Florestas** (`f32b63b3` + `747f12dd`) — 5 real Florestas (Yggdrasil/LSTM, Dodona/Bayes, Brocéliande/Markov, Tír na nÓg/Monte Carlo, Fortuna/control), a shared scores contract and key constructor, per-Floresta namespaced RNG. Yggdrasil's optional PyTorch dependency (`torch==2.13.0`, CPU-only) is validated for real — the LSTM trains and produces scores. **[IMPLEMENTED]** — see [Treefolks V2](#treefolks-v2--as-grandes-florestas) below.
+
+**✅ Arena Oficial — Temporada 3 / Guerra das Florestas** (`85a65fec`) — real campaign, same 54 targets × 3 seeds, 162/162 valid cells, 0 failures, 16140 candidates. No Floresta showed a statistically clear advantage over the Fortuna control; Fangorn/Ensemble remains unbuilt roadmap, not auto-unlocked by these results. **[EXPERIMENTALLY TESTED]** — see [Arena Seasons](#arena-oficial--temporadas-1-3) below.
+
+**✅ Testing** — 1125 tests across 46 modules (`python -m unittest discover -s tests`), zero skipped.
 
 ---
 
@@ -395,6 +405,8 @@ A new Clerics lineage — not a new voting faction, like Minotauro. Each Zombie 
 | Axiomantes | `factions.axiomantes.ritual.execute_ritual()`, given the **temporal** Ariadne only | `[AXIOMANTES] guardar_experiencia` forced off — a campaign never writes to `experiments/axiomancers/runs/` |
 | Pantheon | `orders.pantheon.{mages,druids,djinns,aion}` | Mago/Druida/Djinn/Aion become individually distinguishable via `CandidateKey.race`, purely inside this adapter — the real archive still collapses the first three under `origem="ser_superior"`, unchanged |
 | Acaso Puro | pure `random.Random(seed)` sampling, no history/Ariadne at all | The statistical-floor baseline `benchmarks/random/README.md` had reserved since early in the project, never implemented until now |
+| Astérias (`cf22d7e7`) | Conditional star-pair transition model, `ctx['historico']` only | Two lineages, Astéria Abissal (abstains under `n(P)<5`) and Astéria das Marés (explicit marginal backoff); see [Arena Seasons](#arena-oficial--temporadas-1-3) below |
+| Treefolks V2 (`f32b63b3`/`747f12dd`) | 5 real Florestas, each with its own namespaced RNG stream | LSTM (optional PyTorch, CPU-only), Bayes, Markov, Monte Carlo, and a Fortuna control; see [Treefolks V2](#treefolks-v2--as-grandes-florestas) below |
 
 Vampires, Gargoyles, Kor Vermelho and Werewolves were explicitly audited and are **not** registered — see [Roadmap](#roadmap--future-vision) below for why.
 
@@ -406,6 +418,52 @@ Vampires, Gargoyles, Kor Vermelho and Werewolves were explicitly audited and are
 - **Equal Budget** — samples exactly N candidates without replacement, within one cell; `n_used` is always reported next to `n_requested`, never padded.
 - **Abstention accounting** — `ArenaSystemAttendance` (system-level, catches total abstention — e.g. Axiomantes' Portal closed at every target — even when no strategy label was ever produced) and `ArenaStrategySummary` (`cells_attempted/participated/succeeded` vs. coarser `targets_observed/targets_with_participation`). `success_rate_when_participating` is `None`, never `0.0`, when a strategy never participated — an undefined rate is never rendered as "tried and failed".
 - **Campeão do Tesouro** (financial ranking) is a documented **contract only** — no prize-value-per-category table exists anywhere in the project, and 065-067/2026 (like most real draws) have no financial data at all.
+
+---
+
+## Treefolks V2 — As Grandes Florestas
+
+**[IMPLEMENTED]**, commits `f32b63b3` (implementation) + `747f12dd` (Yggdrasil validated with PyTorch actually installed). A genuinely new system (`"treefolks_v2"`, eighth entry in `GENERATORS`) — **not** a migration of the original Treefolks: `factions/treefolks/algorithm.py` (the original voting faction, unchanged) is 100% narrative — `"modelo"` was only a randomly-sampled text label, the key itself always came from the same frequency+delay+noise heuristic regardless of which label was drawn. Treefolks V2 lives entirely in `core/services/treefolks_v2/`.
+
+**Sistema → Floresta → Treefolk architecture**, expressed through the existing `CandidateKey` shape with zero new fields: `system="treefolks_v2"` (fixed), `source_name="treefolks_v2"` (fixed), `race="Floresta — Treefolk"` (a single composed string, e.g. `"Yggdrasil — LSTM-v1"`).
+
+**Shared scores contract**: `TreefolkScores(number_scores: {1..50}, star_scores: {1..12})` — never a real physical probability, an "experimental belief". **Single shared key constructor** (`build_key_from_scores()` in `common.py`) used by all 5 Florestas without exception — differences in Arena performance come from the model, never from the constructor. **Per-Floresta namespaced RNG** (`forest_rng()`, SHA-256) — a deliberate departure from the single-shared-stream convention Astérias/Pantheon use, because Yggdrasil's training consumes a variable amount of randomness that would otherwise silently desynchronize every other Floresta.
+
+| Floresta | Method | Frozen V1 hyperparameters | Dependencies |
+|---|---|---|---|
+| **Yggdrasil — LSTM-v1** | Real LSTM, official `torch.nn.LSTM`/`nn.Linear` (never hand-rolled backward) | `W=20, hidden_size=32, epochs=25, min_training_pairs=60, Adam(lr=1e-3, betas=(0.9,0.999))`, full-batch, `BCEWithLogitsLoss` | **Optional PyTorch**, isolated to `yggdrasil.py`, CPU-only, `torch==2.13.0` (pinned; the original `2.4.1` pin had no build for this environment's Python 3.14.6, updated after discovering that for real) |
+| **Dodona — Bayes-v1** | Beta(α,α) prior per number/star, posterior mean | `α=1` | None |
+| **Brocéliande — Markov-v1** | State = one single number/star from the previous draw (never the full combination); per-query distribution, arithmetic mean across the previous draw's 5 numbers/2 stars | `α=1`; abstains at `len(historico)<2` (structural, not a chosen threshold) | None |
+| **Tír na nÓg — MonteCarlo-v1** | Empirical frequency+delay weights → simulation → real scoring via `core.services.fitness.fitness()` (reused, proven VERIFIED-safe) → score = elite frequency | `N_SIMULACOES=1000`, `TOP_FRACTION=0.10` (`ELITE_SIZE=100`), canonical `(numeros, estrelas)` tie-break, never RNG order | None |
+| **Fortuna — Controlo-v1** | Uniform scores → pure uniform sampling | — | None |
+
+**Fangorn / Ensemble** — roadmap only, no module, no placeholder, blocked until real results exist for all 5 Florestas (Temporada 3 running does **not** auto-unlock it).
+
+**Anti-look-ahead**: same `range(len(historico)-1)` discipline as Astérias; Yggdrasil specifically uses `range(_W-1, len(historico)-2)` — `historico[-1]` is structurally never a training label, only the final inference window — proven by a sentinel test. `fitness()`/`calculate()` were proven VERIFIED-safe by inspection + test **before** Tír na nÓg was implemented (pure functions, zero I/O, zero access to Ariadne/persistent memory).
+
+**`attempted_races`** reused with zero extension — every Floresta always declares itself, even in full abstention (Yggdrasil without PyTorch installed, or insufficient history; Brocéliande at `len(historico)<2`).
+
+**Piloto das Florestas** (isolated smoke test, real data, mocked `RUNS_DIR`, zero official manifests): all 5 Florestas ran the full pipeline, determinism confirmed (repeated cell → identical candidates/`attempted_races`), zero real manifests created.
+
+**Tests**: 73 new (62 isolated `test_treefolks_v2_*.py` + 11 integration in `test_backtest_generators.py`). At `f32b63b3`: 1126/1126 OK, 6 skipped (no PyTorch installed yet). After installing `torch==2.13.0` and fixing 2 tests that depended on ambient environment state instead of `mock.patch`-forcing it (`747f12dd`): **1125/1125 OK, zero skipped** — Yggdrasil validated actually training, deterministic, correctly restoring global `torch.use_deterministic_algorithms` state.
+
+---
+
+## Arena Oficial — Temporadas 1-3
+
+Three real, executed campaigns, each with a mechanically pre-registered target rule (never chosen by anticipated result), persisted real run manifests, and a written report — no campaign ever declared a winner.
+
+| Temporada | Question | What it actually concluded |
+|---|---|---|
+| **1 — Baseline multissistema** (`ae9ccd81`) | Do the 6 original systems differ under normalized comparison? | At Equal Budget N=1, **0/240 relevant hits** across every Clerics generation tested — the apparent "more generations = better" trend in raw numbers was a volume artifact (coupon-collector effect), not real signal. |
+| **2 — Guerra das Estrelas** (`e4624e65`) | Does the Astérias conditional star-pair-transition hypothesis beat Acaso Puro on stars? | Hypothesis tested, **not confirmed** — Wilson intervals overlap at every N; Star Contribution Trial's melhorou/piorou ratio sits close to 50/50 in all 3 lineages. |
+| **3 — Guerra das Florestas** (`85a65fec`) | Do 5 real, distinct methodologies (LSTM, Bayes, Markov, Monte Carlo) beat the Fortuna control on the full key? | No statistically clear advantage over Fortuna, in any of the 5 Florestas, across any of the 10 comparisons (4 primary + 6 exploratory). |
+
+**Temporada 2** ran 54 targets × 3 seeds × `{asterias, acaso_puro}` — 324/324 cells, 0 failures, 9060 candidates, 324 real manifests. Abissal participated in 129/162 cells, abstained in 33/162 (real abstention, not just theoretical); Marés used its conditional model in 129/162 and marginal backoff in 33/162 — always reported as two separate lines, never a single pooled "Marés X%". Artifacts: `benchmarks/reports/arena_season_2_star_wars.md`, `benchmarks/rankings/arena_season_2_star_wars.json`.
+
+**Temporada 3** ran the same 54 targets × 3 seeds × `treefolks_v2` (5 Florestas), base commit `747f12dd`. A first attempt wrote 162 real manifests and then failed entirely (`AttributeError`, a campaign-script post-processing bug — `c.race` instead of `c.candidate.race` — `cells_ok=0`); those 162 manifests were **preserved intentionally, never deleted**, and are explicitly excluded from the official results below (confirmed by a dedicated read-only audit: clean time-range separation, zero `run_id` overlap). The corrected re-run: **162/162 valid cells, 0 failures**, 16140 candidates, 162 real manifests. Yggdrasil participated in 159/162, abstained in 3/162 (insufficient history at the oldest 2005-era targets); the other 4 Florestas never abstain. Equal Budget N=5: Yggdrasil 1/795, Dodona 2/810, Brocéliande 3/810, Tír na nÓg 1/810, Fortuna 1/810 — every Floresta's Wilson interval overlaps Fortuna's. Artifacts: `benchmarks/reports/arena_season_3_forest_wars.md`, `benchmarks/rankings/arena_season_3_forest_wars.json`.
+
+**Methodological note kept separate deliberately**: Temporada 2 is specifically about **stars** (Astérias model only the star hypothesis, numbers always neutral); Temporada 3 tests the **full key** (numbers + stars) — the two are not directly comparable number-for-number, only at the level of "was there any detectable signal at all". Neither campaign demonstrates or implies real predictive capability over the Euromillions draw — both compare a hypothesis against a neutral control (Acaso Puro/Fortuna), never against a future draw's actual result.
 
 ---
 
@@ -686,15 +744,19 @@ layers away. Faction-specific narrative logic (the 21 `factions/*/`
 strategies) is not under test — it doesn't affect framework stability
 and its "correctness" is largely narrative, not mechanical.
 
-**Current suite:** 1011 tests across 39 modules, also covering the
-historical dataset pipeline, Hero/Legend evaluation, the Dashboard
-Dataset layer, the Dashboard Excel Export, the Artifact Library, the
-Candidate Analysis Layer (provenance, evaluation, performance,
-Minotauros, Zombie), the Temporal Safety / Backtest Lab (Commits
-20-24), and the Backtest Orchestrator / Campaign Runner V1+V2 / Arena
-layer (Commits 25-27 and after) — each with dedicated tests against
-real, on-disk data (`datasets/historical/euromillions/`,
-`library/artifacts/entries/`, `library/scrolls/`,
+**Current suite:** 1125 tests across 46 modules, zero skipped, also
+covering the historical dataset pipeline, Hero/Legend evaluation, the
+Dashboard Dataset layer, the Dashboard Excel Export, the Artifact
+Library, the Candidate Analysis Layer (provenance, evaluation,
+performance, Minotauros, Zombie), the Temporal Safety / Backtest Lab
+(Commits 20-24), the Backtest Orchestrator / Campaign Runner V1+V2 /
+Arena layer (Commits 25-27 and after), Astérias de Thalássia +
+`attempted_races`, the Star Contribution Trial, and Treefolks V2 — As
+Grandes Florestas (including Yggdrasil's optional-PyTorch path,
+validated with `torch==2.13.0` actually installed) — each with
+dedicated tests against real, on-disk data
+(`datasets/historical/euromillions/`, `library/artifacts/entries/`,
+`library/scrolls/`,
 `datasets/generated/simulations/arquivo_destino.json`), not just
 synthetic fixtures.
 
@@ -771,6 +833,93 @@ exists.
   repository's Git history). A second pass, based directly on
   recovered pre-Git source files, plus an evolutionary tree of
   strategies, is scoped but not started.
+- **Fangorn / Ensemble** (Treefolks V2) — the combination-of-Florestas
+  contract is documented, zero implementation, zero module, zero
+  placeholder. Blocked until real results exist for all 5 Florestas —
+  Temporada 3 running does **not** auto-unlock it.
+- **Component Contribution Trial** (Treefolks V2) — a designed
+  generalization of the Star Contribution Trial to each Floresta's
+  number/star scores (`component ∈ {"numbers","stars","full"}` vs. a
+  neutral Fortuna baseline, independent per-component RNG streams,
+  same shared key constructor) — designed in detail, not implemented.
+- **Academia — Hi-Lo classes (predictive vs. repetition rival)** —
+  registered concept, no closed design, no implementation. A
+  predictive class studying sequences in the **real draw order** (not
+  the already-sorted key format used everywhere in this project today)
+  to bet whether the next number comes in higher or lower than the
+  previous one; a rival class betting on repetition of the immediately
+  preceding Hi/Lo pattern. Analogous application to stars. **Explicit
+  prerequisite, still unconfirmed**: whether the historical dataset
+  actually records real draw order at all — an already-sorted key
+  cannot reconstruct it; without that confirmation the Hi-Lo class
+  cannot be built honestly. (Incidental note: the 2026 dataset shows
+  signs of an `ordem_saida`/`ordem_saida_disponivel` field on some
+  records, observed during unrelated work — this does not confirm
+  full-history coverage and was never formally verified.)
+- **Academia — Rebeldes** — a future Academia class that tries to
+  steal/copy a key produced by another class and then sabotages it via
+  a controlled alteration; if the theft attempt fails, it falls back
+  to its own manuscripts, built only from books/knowledge it has
+  actually stolen or acquired before. Only the concept is registered —
+  the exact theft/sabotage/fallback mechanics are unspecified.
+- **Codex Bruxinorum — O Primeiro Grimório** — a future primordial book
+  conceptually recovered/inspired from the old Java "EuroBruxinhos"
+  project, preserving that project's historical ideas (weighted
+  generation/distribution, historical frequencies, the old
+  "Meditação") inside the Ariadne universe. Intended future direction:
+  books transmit knowledge and can eventually unlock capabilities
+  auditably, never simply altering a key or granting arbitrary
+  modifiers. No JSON/model exists — roadmap only.
+- **Livro de Todas as Chaves / Codex Infinitum** — a future canonical
+  index of all 139,838,160 valid Euromillions keys: exactly one
+  permanent page per key, exactly one key per page, reversible
+  index→key and key→index operations without materializing 139.8M
+  rows, independent of race/strategy/seed/campaign/RNG. Conceptual
+  rule: "a page never changes key, a key never changes page." **Not to
+  be confused with the Axiomantes**: the Codex would give canonical,
+  absolute coordinates of the combinatorial space; the Axiomantes'
+  Labyrinth (already implemented, `factions/axiomantes/labyrinth.py`)
+  uses a seed-dependent Feistel permutation over that same space —
+  related but distinct concepts. No implementation exists.
+- **Laboratório de Malphas — Super-Esqueletos / Cyber-Anões** — a
+  future expansion of the already-existing Malphas (final-key
+  corruption) into a persistent "Obsidian Laboratory" for fictional/
+  algorithmic experiments and synthetic beings. **Super-Esqueletos**:
+  future synthetic individuals combining properties observed across
+  several Esqueletos, keeping provenance of the lineages/experiments
+  used — never simply "Esqueletos +X%". **Cyber-Anões**: a future
+  laboratory variant of the Anões (dwarf DNA + cybernetic components,
+  in-lore). A sketched (unimplemented) V1 hypothesis: a 10-draw
+  window, pool A = numbers seen 1-2 times, pool B = numbers seen 0
+  times, candidate = 3 from A + 2 from B, stars = 2 new or 1 new + 1
+  eligible repeat — an experimental hypothesis, never a claim that
+  absent numbers are "due" or that this has any advantage. Nothing
+  implemented; today's real Malphas (key corruption) is not this
+  laboratory expansion.
+- **Cíclopes — "Olho para a Coisa"** — a future focal race/strategy.
+  Each Ciclope would center its analysis on a single number (its
+  "eye") and build candidates from that number's historical
+  relationships/co-occurrences with other numbers and stars — future
+  hypothesis: does conditioning generation on one focal number behave
+  differently from global-frequency-based strategies? Whether the
+  "eye" could be heritable/mutable across generations was discussed as
+  a future extension, not a defined implementation. No code.
+- **Personalidade dos indivíduos** — a future cross-cutting system
+  where each individual could carry its own personality attributes on
+  a 1-10 scale (5 neutral), independent of race/strategy — e.g.
+  intelligence, greed, curiosity, skill, communication/sociability,
+  courage, discipline, creativity, prudence. Could eventually influence
+  behavior, learning, book/artifact seeking and use, crafting, and
+  social interaction — **never silently altering the base strategy
+  inside the Arena**. Any key modification from personality/an
+  artifact would have to preserve provenance (original key, final key,
+  cause of the transformation). **Explicit, binding restriction
+  already in force**: Personalidade must always stay separate from the
+  experimental Arena (`backtest_arena.py`) — never contaminating
+  algorithmic comparisons between systems/strategies, the same way the
+  Artifact Library (V13) is already structurally inert today
+  (`altera_algoritmo`/`altera_resultados`/`altera_probabilidades`
+  always `false`). Not for implementation now.
 
 ---
 
@@ -813,6 +962,12 @@ Se preferires ler em português → [LEIA-ME.md](LEIA-ME.md)
 | Commit 27 | Campaign Runner V1 (`6308fc1`) — `target × seed × generations` grid for Clerics, dynamic race discovery, purely descriptive race performance |
 | Campaign Runner V2 | Multi-system Campaign Runner (`cb5087e`) — Skeletons, Melforks, Axiomantes, Pantheon and Acaso Puro join Clerics via external adapters, zero faction/orchestrator changes; Arena layer (`88bfb28`) — Official Key, Equal Budget, abstention/participation accounting for normalized cross-system comparison |
 | — | Historical archaeology — `docs/AUDITORIA_FACCOES_E_ESTRATEGIAS.md` and `docs/BESTIARIO_ALGORITMICO_RECUPERADO.md`, V8 → today, every claim tagged by evidence level |
+| `cf22d7e7` | Astérias de Thalássia (Astéria Abissal + Astéria das Marés) + `attempted_races` generic contract extension — seventh `GENERATORS` system |
+| `d9b8c104` | Star Contribution Trial (`core/services/star_contribution_trial.py`) — paired numbers-fixed/stars-swapped experiment |
+| `e4624e65` | Arena Oficial — Temporada 2 / Guerra das Estrelas — real campaign, 324/324 cells, 9060 candidates; hypothesis tested, not confirmed |
+| `f32b63b3` | Treefolks V2 — As Grandes Florestas — 5 real Florestas (LSTM/Bayes/Markov/Monte Carlo/Fortuna control), eighth `GENERATORS` system, Fangorn deliberately unbuilt |
+| `747f12dd` | Treefolks V2 — Yggdrasil validated with PyTorch actually installed (`torch==2.13.0`); 1125/1125 tests, zero skipped |
+| `85a65fec` | Arena Oficial — Temporada 3 / Guerra das Florestas — real campaign, 162/162 valid cells, 16140 candidates; no Floresta showed a clear advantage over the Fortuna control |
 
 ---
 
