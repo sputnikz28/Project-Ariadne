@@ -1,13 +1,18 @@
 """Tests for core/services/academia/common.py — Academia Arcana de
-Nemerion Foundation V1, commit 1/5. Proves only the shared vocabulary:
+Nemerion Foundation V1. Commit 1/5 proved the shared vocabulary:
 DoctrineResult, AcademyClassroomIdentity, classroom_race_label,
-academia_rng, build_academy_candidate_key. No student, enrollment,
-classroom, or doctrine exists yet — this file constructs an ad-hoc
-AcademyClassroomIdentity example inline (not Tyche's real identity,
-which is Tyche's own responsibility to define, in a later commit).
+academia_rng, build_academy_candidate_key — this file constructs an
+ad-hoc AcademyClassroomIdentity example inline for those (not Tyche's
+real identity, which is core.services.academia.tyche's own
+responsibility, see tests/test_academia_tyche.py). Commit 4/5 added
+resolve_eligible_participants(), tested below against isolated
+tempfile student/enrollment registries — never the real
+library/academy/.
 """
 
 import inspect
+import shutil
+import tempfile
 import unittest
 from types import MappingProxyType
 
@@ -17,8 +22,11 @@ from core.services.academia.common import (
     academia_rng,
     build_academy_candidate_key,
     classroom_race_label,
+    resolve_eligible_participants,
 )
 from core.services.candidate_provenance import CandidateKey
+from library.academy.enrollments.registry import AcademyEnrollmentRegistry
+from library.academy.students.registry import AcademyStudentRegistry
 
 _EXAMPLE_IDENTITY = AcademyClassroomIdentity(
     institution_id="nemerion",
@@ -190,6 +198,121 @@ class TestBuildAcademyCandidateKey(unittest.TestCase):
         k2 = self._build(student_id="NEM-STU-000002", student_name="Bram Ostergren")
         self.assertNotEqual(k1.entity_id, k2.entity_id)
         self.assertEqual(k1.race, k2.race)
+
+
+class TestResolveEligibleParticipants(unittest.TestCase):
+    def setUp(self):
+        self._students_tmp = tempfile.mkdtemp()
+        self._enrollments_tmp = tempfile.mkdtemp()
+        self.student_registry = AcademyStudentRegistry(base=self._students_tmp)
+        self.enrollment_registry = AcademyEnrollmentRegistry(base=self._enrollments_tmp)
+
+    def tearDown(self):
+        shutil.rmtree(self._students_tmp, ignore_errors=True)
+        shutil.rmtree(self._enrollments_tmp, ignore_errors=True)
+
+    def _resolve(self):
+        return resolve_eligible_participants(_EXAMPLE_IDENTITY, self._students_tmp, self._enrollments_tmp)
+
+    def _enroll(self, student, **overrides):
+        args = dict(
+            student_id=student.student_id,
+            classroom_id=_EXAMPLE_IDENTITY.classroom_id,
+            doctrine_id=_EXAMPLE_IDENTITY.doctrine_id,
+            doctrine_version=_EXAMPLE_IDENTITY.doctrine_version,
+            student_registry=self.student_registry,
+        )
+        args.update(overrides)
+        return self.enrollment_registry.create(**args)
+
+    def test_empty_registries_yield_no_participants(self):
+        self.assertEqual(self._resolve(), ())
+
+    def test_active_student_with_active_enrollment_is_eligible(self):
+        student = self.student_registry.create(name="Aurelia Vance")
+        enrollment = self._enroll(student)
+        self.assertEqual(self._resolve(), ((student, enrollment),))
+
+    def test_inactive_student_is_excluded(self):
+        student = self.student_registry.create(name="Aurelia Vance", status="inactive")
+        self._enroll(student)
+        self.assertEqual(self._resolve(), ())
+
+    def test_graduated_student_is_excluded(self):
+        student = self.student_registry.create(name="Aurelia Vance", status="graduated")
+        self._enroll(student)
+        self.assertEqual(self._resolve(), ())
+
+    def test_expelled_student_is_excluded(self):
+        student = self.student_registry.create(name="Aurelia Vance", status="expelled")
+        self._enroll(student)
+        self.assertEqual(self._resolve(), ())
+
+    def test_withdrawn_enrollment_is_excluded(self):
+        student = self.student_registry.create(name="Aurelia Vance")
+        self._enroll(student, status="withdrawn")
+        self.assertEqual(self._resolve(), ())
+
+    def test_completed_enrollment_is_excluded(self):
+        student = self.student_registry.create(name="Aurelia Vance")
+        self._enroll(student, status="completed")
+        self.assertEqual(self._resolve(), ())
+
+    def test_enrollment_for_a_different_classroom_is_excluded(self):
+        student = self.student_registry.create(name="Aurelia Vance")
+        self._enroll(student, classroom_id="rebeldes")
+        self.assertEqual(self._resolve(), ())
+
+    def test_enrollment_for_a_different_doctrine_is_excluded(self):
+        student = self.student_registry.create(name="Aurelia Vance")
+        self._enroll(student, doctrine_id="outra_doutrina")
+        self.assertEqual(self._resolve(), ())
+
+    def test_enrollment_for_a_different_doctrine_version_is_excluded(self):
+        student = self.student_registry.create(name="Aurelia Vance")
+        self._enroll(student, doctrine_version="v2")
+        self.assertEqual(self._resolve(), ())
+
+    def test_multiple_eligible_students_all_included(self):
+        s1 = self.student_registry.create(name="Aurelia Vance")
+        s2 = self.student_registry.create(name="Bram Ostergren")
+        e1 = self._enroll(s1)
+        e2 = self._enroll(s2)
+        self.assertEqual(self._resolve(), ((s1, e1), (s2, e2)))
+
+    def test_ineligible_student_does_not_block_eligible_ones(self):
+        eligible = self.student_registry.create(name="Aurelia Vance")
+        ineligible = self.student_registry.create(name="Ghost", status="expelled")
+        e1 = self._enroll(eligible)
+        self._enroll(ineligible)
+        self.assertEqual(self._resolve(), ((eligible, e1),))
+
+    def test_dangling_student_reference_is_excluded_not_raised(self):
+        # Simulates a student that no longer exists on record -- there
+        # is no public delete API, so this is only reachable via
+        # external tampering; still must never be fabricated into a
+        # participant nor raise an error that would abort a cell.
+        from core.services.atomic_io import atomic_create_json
+        from pathlib import Path
+        entries_dir = Path(self._enrollments_tmp) / "entries"
+        atomic_create_json(entries_dir / "NEM-ENR-000001.json", {
+            "enrollment_id": "NEM-ENR-000001", "student_id": "NEM-STU-999999",
+            "institution_id": _EXAMPLE_IDENTITY.institution_id,
+            "classroom_id": _EXAMPLE_IDENTITY.classroom_id,
+            "doctrine_id": _EXAMPLE_IDENTITY.doctrine_id,
+            "doctrine_version": _EXAMPLE_IDENTITY.doctrine_version,
+            "status": "active", "enrolled_at": "2026-01-01T00:00:00+00:00",
+        })
+        self.assertEqual(self._resolve(), ())
+
+    def test_never_creates_mutates_or_deletes_a_student_or_enrollment(self):
+        student = self.student_registry.create(name="Aurelia Vance")
+        enrollment = self._enroll(student)
+        before_students = self.student_registry.load_all()
+        before_enrollments = self.enrollment_registry.load_all()
+        self._resolve()
+        self.assertEqual(self.student_registry.load_all(), before_students)
+        self.assertEqual(self.enrollment_registry.load_all(), before_enrollments)
 
 
 if __name__ == "__main__":

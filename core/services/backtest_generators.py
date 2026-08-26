@@ -97,6 +97,22 @@ installed), reusing the exact same mechanism already proven for
 Astérias, with zero extension. Fangorn/Ensemble is deliberately absent:
 roadmap only, blocked until real Arena results exist for the other
 five.
+
+Academia Arcana de Nemerion (Foundation V1, commit 4/5): one system,
+"academia". Only Cátedra de Tyche — Fundamentos do Acaso exists as an
+executable classroom/doctrine; see core/services/academia/ for the
+full contract (common.py: shared DoctrineResult/academia_rng/
+build_academy_candidate_key/resolve_eligible_participants; tyche.py:
+TYCHE_IDENTITY/run_tyche). Unlike every generator above, this one
+produces a candidate per real, persistent individual (entity_id is the
+acting student's stable student_id — every other adapter here leaves
+entity_id None, since none of them represent a persistent individual).
+Eligible participants are resolved from library/academy/students and
+library/academy/enrollments (paths overridable per-cell via
+[ACADEMIA].students_root/enrollments_root, the same cfg-section
+extensibility every other system-specific parameter here already
+uses) — never hardcoded, never fabricated; zero eligible students is a
+legitimate, honest outcome, not an error.
 """
 
 from __future__ import annotations
@@ -107,6 +123,8 @@ from collections.abc import Callable, Mapping
 from dataclasses import dataclass
 from types import MappingProxyType
 
+from core.services.academia.common import academia_rng, build_academy_candidate_key, classroom_race_label, resolve_eligible_participants
+from core.services.academia.tyche import TYCHE_IDENTITY, run_tyche
 from core.services.backtest_orchestrator import (
     HistoricalBacktestBoundary,
     freeze_simulated_candidates,
@@ -121,6 +139,8 @@ from core.services.treefolks_v2.dodona import run_dodona
 from core.services.treefolks_v2.fortuna import run_fortuna
 from core.services.treefolks_v2.tirnanog import run_tirnanog
 from core.services.treefolks_v2.yggdrasil import run_yggdrasil
+from library.academy.enrollments.registry import BASE as _ACADEMIA_ENROLLMENTS_BASE
+from library.academy.students.registry import BASE as _ACADEMIA_STUDENTS_BASE
 from factions.axiomantes.ritual import execute_ritual
 from factions.melforks.algorithm import melforks
 from factions.skeletons.algorithm import create_representatives
@@ -591,6 +611,94 @@ def _run_treefolks_v2(cfg, ctx, ariadne_temporal, seed, boundary) -> GeneratorOu
     )
 
 
+def _run_academia(cfg, ctx, ariadne_temporal, seed, boundary) -> GeneratorOutput:
+    """Academia Arcana de Nemerion Foundation V1, commit 4/5: only
+    Cátedra de Tyche exists as an executable classroom/doctrine.
+
+    students_root/enrollments_root come from [ACADEMIA] in cfg (never
+    a hardcoded literal path here — see library.academy.students.
+    registry.BASE / library.academy.enrollments.registry.BASE),
+    falling back to the real library/academy/students,
+    library/academy/enrollments paths when the section is absent —
+    e.g. today's real config.txt has no [ACADEMIA] section, so a
+    campaign run against it safely resolves zero eligible participants
+    from the real, currently-empty registries; it can never fabricate
+    a student.
+
+    "resolver participantes" (core.services.academia.common.
+    resolve_eligible_participants) is kept strictly separate from
+    "executar doutrina" (run_tyche()): this adapter is the only place
+    that touches a registry — run_tyche() itself receives only an rng.
+
+    One Candidate per eligible student per cell — Foundation V1's
+    explicit, fixed choice; there is no [ACADEMIA] quantidade knob,
+    unlike Astérias/Treefolks V2's configurable per-strategy volume
+    (see the approved commit 4/5 contract: proving the academic
+    infrastructure, not running a statistically-powered campaign yet).
+    Each student gets an independently-namespaced RNG stream via
+    academia_rng(), keyed by (seed, institution, classroom, doctrine,
+    doctrine_version, student_id, target_draw_id) — student identity
+    participates in the RNG namespace only, never in run_tyche()'s
+    algorithm (which never receives student_id at all).
+
+    attempted_races declares "Cátedra de Tyche — Fundamentos do Acaso"
+    only when at least one eligible participant was actually found
+    this cell. Zero eligible participants means Tyche was never
+    actually invoked — a structurally different, more mundane
+    condition than an algorithmic abstention (contrast
+    Astérias/Treefolks V2, whose attempted_races entries declare a
+    sub-strategy that WAS invoked and chose not to produce a
+    candidate; run_tyche() never abstains once invoked at all — see
+    its own docstring). Conflating the two would misrepresent what
+    happened to core.services.backtest_arena.
+    summarize_arena_participation(). Because attempted_races is a
+    frozenset, multiple eligible students under the same race label
+    never produce duplicate entries — granularity below "race" belongs
+    to entity_id/academic history, never to this set.
+
+    Never writes an AcademicEvent, never touches AcademyStudent/
+    AcademyEnrollment persistence beyond the read-only resolution
+    above, never persists a candidate anywhere beyond the manifest's
+    own record count — identical in that respect to every other
+    adapter here. Linking a finished experience back to academic
+    memory is commit 5's responsibility, not this one's.
+    """
+    manifest = start_run(seed, _modo_semente(cfg), command="backtest_campaign:academia", target_draw=boundary.draw_id)
+    students_root = cfg.get("ACADEMIA", "students_root", fallback=str(_ACADEMIA_STUDENTS_BASE))
+    enrollments_root = cfg.get("ACADEMIA", "enrollments_root", fallback=str(_ACADEMIA_ENROLLMENTS_BASE))
+
+    participants = resolve_eligible_participants(TYCHE_IDENTITY, students_root, enrollments_root)
+
+    candidates = []
+    for student, _enrollment in participants:
+        rng = academia_rng(
+            seed=seed,
+            institution_id=TYCHE_IDENTITY.institution_id,
+            classroom_id=TYCHE_IDENTITY.classroom_id,
+            doctrine_id=TYCHE_IDENTITY.doctrine_id,
+            doctrine_version=TYCHE_IDENTITY.doctrine_version,
+            student_id=student.student_id,
+            target_draw_id=boundary.draw_id,
+        )
+        result = run_tyche(rng)
+        candidates.append(build_academy_candidate_key(
+            identity=TYCHE_IDENTITY,
+            student_id=student.student_id,
+            student_name=student.name,
+            student_species=student.species,
+            numeros=result.numeros,
+            estrelas=result.estrelas,
+        ))
+
+    candidates = tuple(candidates)
+    attempted_races = frozenset({classroom_race_label(TYCHE_IDENTITY)}) if candidates else frozenset()
+    manifest = complete_run(manifest, generated_record_count=len(candidates))
+    return GeneratorOutput(
+        candidates=candidates, run_id=manifest["run_id"], generations=None,
+        attempted_races=attempted_races,
+    )
+
+
 GENERATORS: Mapping[str, GeneratorAdapter] = MappingProxyType({
     "clerics": GeneratorAdapter("clerics", True, _run_clerics),
     "skeletons": GeneratorAdapter("skeletons", False, _run_skeletons),
@@ -600,4 +708,5 @@ GENERATORS: Mapping[str, GeneratorAdapter] = MappingProxyType({
     "acaso_puro": GeneratorAdapter("acaso_puro", False, _run_acaso_puro),
     "asterias": GeneratorAdapter("asterias", False, _run_asterias),
     "treefolks_v2": GeneratorAdapter("treefolks_v2", False, _run_treefolks_v2),
+    "academia": GeneratorAdapter("academia", False, _run_academia),
 })

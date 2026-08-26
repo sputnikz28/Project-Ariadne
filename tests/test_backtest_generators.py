@@ -15,8 +15,12 @@ from datetime import datetime, timezone
 from pathlib import Path
 from unittest import mock
 
+from core.services.academia.tyche import TYCHE_IDENTITY, run_tyche
+from core.services.atomic_io import atomic_create_json, atomic_write_json
 from core.services.backtest_generators import GENERATORS
 from core.services.backtest_orchestrator import HistoricalBacktestBoundary, prepare_backtest_run
+from library.academy.enrollments.registry import AcademyEnrollmentRegistry
+from library.academy.students.registry import AcademyStudentRegistry
 
 FUTURE_DT_1 = datetime(2099, 3, 10, 20, 0, 0, tzinfo=timezone.utc)
 BOUNDARY = HistoricalBacktestBoundary(draw_id="T-A/2099", draw_datetime=FUTURE_DT_1)
@@ -80,16 +84,42 @@ def make_minimal_cfg(**overrides):
     return cfg
 
 
+def _cfg_with_section(cfg, section, values):
+    """A COPY of `cfg` (never mutates the caller's cfg) with one extra
+    section/values merged in — the same small pattern already used by
+    core.services.backtest_generators._cfg_with_generations()/
+    _cfg_copy(), duplicated here deliberately rather than importing a
+    private production helper into test code.
+    """
+    copy = configparser.ConfigParser()
+    for existing_section in cfg.sections():
+        copy[existing_section] = dict(cfg[existing_section])
+    if not copy.has_section(section):
+        copy.add_section(section)
+    for k, v in values.items():
+        copy.set(section, k, v)
+    return copy
+
+
 class _GeneratorFixture(unittest.TestCase):
     """Shared synthetic historical_root/scrolls_root, ctx/ariadne_temporal
     built once per test via the real prepare_backtest_run() (Commit 25,
     unmodified) — every adapter test operates on the same honestly-cut
     context every other backtest consumer would get.
+
+    academia_students_root/academia_enrollments_root are isolated,
+    always-empty-by-default tmp dirs — run_adapter_isolated() injects
+    them as [ACADEMIA] whenever the caller's cfg doesn't already
+    specify one, so any test that loops over every registered system
+    (e.g. TestNoDiskArtefacts) never falls back to the real
+    library/academy/students, library/academy/enrollments paths.
     """
 
     def setUp(self):
         self.hist_root = tempfile.TemporaryDirectory()
         self.scrolls_root = tempfile.TemporaryDirectory()
+        self.academia_students_root = tempfile.TemporaryDirectory()
+        self.academia_enrollments_root = tempfile.TemporaryDirectory()
         write_historical_dataset(self.hist_root.name, 2099, "a.json", [
             make_dataset_draw("001/2099", "2099-01-01", "2099-01-01T20:00:00+00:00", numeros=[1, 2, 3, 4, 5]),
             make_dataset_draw("002/2099", "2099-01-08", "2099-01-08T20:00:00+00:00", numeros=[6, 7, 8, 9, 10]),
@@ -100,6 +130,8 @@ class _GeneratorFixture(unittest.TestCase):
         )
         self.addCleanup(self.hist_root.cleanup)
         self.addCleanup(self.scrolls_root.cleanup)
+        self.addCleanup(self.academia_students_root.cleanup)
+        self.addCleanup(self.academia_enrollments_root.cleanup)
 
     def build_ctx(self, cfg, mode="verified"):
         return prepare_backtest_run(
@@ -108,15 +140,23 @@ class _GeneratorFixture(unittest.TestCase):
 
     def run_adapter_isolated(self, system, cfg, seed, mode="verified"):
         ctx, ariadne_temporal = self.build_ctx(cfg, mode=mode)
+        if not cfg.has_section("ACADEMIA"):
+            cfg = _cfg_with_section(cfg, "ACADEMIA", {
+                "students_root": self.academia_students_root.name,
+                "enrollments_root": self.academia_enrollments_root.name,
+            })
         with tempfile.TemporaryDirectory() as tmp, mock.patch("core.services.run_manifest.RUNS_DIR", Path(tmp)):
             return GENERATORS[system].run(cfg, ctx, ariadne_temporal, seed, BOUNDARY)
 
 
 class TestGeneratorsRegistry(_GeneratorFixture):
-    def test_exactly_the_eight_approved_systems_are_registered(self):
+    def test_exactly_the_nine_approved_systems_are_registered(self):
         self.assertEqual(
             set(GENERATORS),
-            {"clerics", "skeletons", "melforks", "axiomantes", "pantheon", "acaso_puro", "asterias", "treefolks_v2"},
+            {
+                "clerics", "skeletons", "melforks", "axiomantes", "pantheon",
+                "acaso_puro", "asterias", "treefolks_v2", "academia",
+            },
         )
 
     def test_blocked_systems_are_never_registered(self):
@@ -205,12 +245,20 @@ class TestNoDiskArtefacts(_GeneratorFixture):
 
     def test_every_adapter_leaves_the_real_runs_dir_untouched(self):
         real_runs_dir = Path("datasets/generated/simulations/runs")
+        real_students_dir = Path("library/academy/students/entries")
+        real_enrollments_dir = Path("library/academy/enrollments/entries")
         before = set(real_runs_dir.glob("*.json")) if real_runs_dir.exists() else set()
+        before_students = set(real_students_dir.glob("*.json")) if real_students_dir.exists() else set()
+        before_enrollments = set(real_enrollments_dir.glob("*.json")) if real_enrollments_dir.exists() else set()
         cfg = make_minimal_cfg()
         for system in GENERATORS:
             self.run_adapter_isolated(system, cfg, seed=1)
         after = set(real_runs_dir.glob("*.json")) if real_runs_dir.exists() else set()
+        after_students = set(real_students_dir.glob("*.json")) if real_students_dir.exists() else set()
+        after_enrollments = set(real_enrollments_dir.glob("*.json")) if real_enrollments_dir.exists() else set()
         self.assertEqual(before, after)
+        self.assertEqual(before_students, after_students)
+        self.assertEqual(before_enrollments, after_enrollments)
 
 
 class TestDeterminism(_GeneratorFixture):
@@ -659,6 +707,266 @@ class TestTreefolksV2Adapter(unittest.TestCase):
         cfg = self.make_cfg()
         output = self.run_isolated(_TREEFOLKS_V2_HISTORICO, cfg, seed=1)
         self.assertIsNone(output.generations)
+
+
+# ---------------------------------------------------------------------------
+# Academia Arcana de Nemerion — Foundation V1, commit 4/5. Only Cátedra de
+# Tyche exists as an executable classroom/doctrine. Every test here uses its
+# own isolated tempfile students_root/enrollments_root (via make_cfg()'s
+# [ACADEMIA] override) — never the real library/academy/.
+# ---------------------------------------------------------------------------
+
+
+class TestAcademiaAdapter(unittest.TestCase):
+    def setUp(self):
+        self._students_tmp = tempfile.TemporaryDirectory()
+        self._enrollments_tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(self._students_tmp.cleanup)
+        self.addCleanup(self._enrollments_tmp.cleanup)
+        self.student_registry = AcademyStudentRegistry(base=self._students_tmp.name)
+        self.enrollment_registry = AcademyEnrollmentRegistry(base=self._enrollments_tmp.name)
+
+    def make_cfg(self, **overrides):
+        cfg = make_minimal_cfg(**overrides)
+        if not cfg.has_section("ACADEMIA"):
+            cfg.add_section("ACADEMIA")
+        cfg.set("ACADEMIA", "students_root", self._students_tmp.name)
+        cfg.set("ACADEMIA", "enrollments_root", self._enrollments_tmp.name)
+        return cfg
+
+    def make_ctx(self, historico):
+        return {"historico": historico, "estatisticas": {}, "mundo": {}}
+
+    def run_isolated(self, historico, cfg, seed):
+        ctx = self.make_ctx(historico)
+        with tempfile.TemporaryDirectory() as tmp, mock.patch("core.services.run_manifest.RUNS_DIR", Path(tmp)):
+            return GENERATORS["academia"].run(cfg, ctx, None, seed, BOUNDARY)
+
+    def _enroll(self, student_id, **overrides):
+        args = dict(
+            student_id=student_id,
+            classroom_id=TYCHE_IDENTITY.classroom_id,
+            doctrine_id=TYCHE_IDENTITY.doctrine_id,
+            doctrine_version=TYCHE_IDENTITY.doctrine_version,
+            student_registry=self.student_registry,
+        )
+        args.update(overrides)
+        return self.enrollment_registry.create(**args)
+
+    def _enroll_active_student(self, name="Aurelia Vance", species=None):
+        student = self.student_registry.create(name=name, species=species)
+        self._enroll(student.student_id)
+        return student
+
+    # -- eligibility (case A/B/C) ---------------------------------------
+
+    def test_active_student_active_enrollment_participates(self):
+        cfg = self.make_cfg()
+        self._enroll_active_student()
+        output = self.run_isolated([], cfg, seed=1)
+        self.assertEqual(len(output.candidates), 1)
+
+    def test_inactive_student_does_not_participate(self):
+        cfg = self.make_cfg()
+        student = self.student_registry.create(name="Ghost", status="inactive")
+        self._enroll(student.student_id)
+        output = self.run_isolated([], cfg, seed=1)
+        self.assertEqual(output.candidates, ())
+
+    def test_graduated_student_does_not_participate(self):
+        cfg = self.make_cfg()
+        student = self.student_registry.create(name="Ghost", status="graduated")
+        self._enroll(student.student_id)
+        output = self.run_isolated([], cfg, seed=1)
+        self.assertEqual(output.candidates, ())
+
+    def test_expelled_student_does_not_participate(self):
+        cfg = self.make_cfg()
+        student = self.student_registry.create(name="Ghost", status="expelled")
+        self._enroll(student.student_id)
+        output = self.run_isolated([], cfg, seed=1)
+        self.assertEqual(output.candidates, ())
+
+    def test_withdrawn_enrollment_does_not_participate(self):
+        cfg = self.make_cfg()
+        student = self.student_registry.create(name="Aurelia Vance")
+        self._enroll(student.student_id, status="withdrawn")
+        output = self.run_isolated([], cfg, seed=1)
+        self.assertEqual(output.candidates, ())
+
+    def test_completed_enrollment_does_not_participate(self):
+        cfg = self.make_cfg()
+        student = self.student_registry.create(name="Aurelia Vance")
+        self._enroll(student.student_id, status="completed")
+        output = self.run_isolated([], cfg, seed=1)
+        self.assertEqual(output.candidates, ())
+
+    def test_enrollment_for_another_classroom_does_not_run_tyche(self):
+        cfg = self.make_cfg()
+        student = self.student_registry.create(name="Aurelia Vance")
+        self._enroll(student.student_id, classroom_id="rebeldes", doctrine_id="alguma_doutrina")
+        output = self.run_isolated([], cfg, seed=1)
+        self.assertEqual(output.candidates, ())
+
+    def test_unknown_student_reference_is_handled_without_crashing(self):
+        entries_dir = Path(self._enrollments_tmp.name) / "entries"
+        atomic_create_json(entries_dir / "NEM-ENR-000001.json", {
+            "enrollment_id": "NEM-ENR-000001", "student_id": "NEM-STU-999999",
+            "institution_id": TYCHE_IDENTITY.institution_id, "classroom_id": TYCHE_IDENTITY.classroom_id,
+            "doctrine_id": TYCHE_IDENTITY.doctrine_id, "doctrine_version": TYCHE_IDENTITY.doctrine_version,
+            "status": "active", "enrolled_at": "2026-01-01T00:00:00+00:00",
+        })
+        cfg = self.make_cfg()
+        output = self.run_isolated([], cfg, seed=1)
+        self.assertEqual(output.candidates, ())
+
+    # -- eligibility (case D) + attempted_races --------------------------
+
+    def test_no_eligible_students_produces_no_candidates(self):
+        cfg = self.make_cfg()
+        output = self.run_isolated([], cfg, seed=1)
+        self.assertEqual(output.candidates, ())
+
+    def test_attempted_races_empty_when_no_eligible_participants(self):
+        cfg = self.make_cfg()
+        output = self.run_isolated([], cfg, seed=1)
+        self.assertEqual(output.attempted_races, frozenset())
+
+    def test_attempted_races_declares_tyche_when_participants_exist(self):
+        cfg = self.make_cfg()
+        self._enroll_active_student()
+        output = self.run_isolated([], cfg, seed=1)
+        self.assertEqual(output.attempted_races, frozenset({"Cátedra de Tyche — Fundamentos do Acaso"}))
+
+    def test_attempted_races_has_a_single_entry_regardless_of_student_count(self):
+        cfg = self.make_cfg()
+        for i in range(5):
+            self._enroll_active_student(name=f"Student {i}")
+        output = self.run_isolated([], cfg, seed=1)
+        self.assertEqual(len(output.attempted_races), 1)
+
+    # -- multi-student ----------------------------------------------------
+
+    def test_one_candidate_per_eligible_student(self):
+        cfg = self.make_cfg()
+        for i in range(5):
+            self._enroll_active_student(name=f"Student {i}")
+        output = self.run_isolated([], cfg, seed=1)
+        self.assertEqual(len(output.candidates), 5)
+
+    def test_same_race_different_entity_id(self):
+        cfg = self.make_cfg()
+        s1 = self._enroll_active_student(name="Aurelia Vance")
+        s2 = self._enroll_active_student(name="Bram Ostergren")
+        output = self.run_isolated([], cfg, seed=1)
+        races = {c.race for c in output.candidates}
+        self.assertEqual(races, {"Cátedra de Tyche — Fundamentos do Acaso"})
+        entity_ids = {c.entity_id for c in output.candidates}
+        self.assertEqual(entity_ids, {s1.student_id, s2.student_id})
+
+    def test_entity_name_correct_per_student(self):
+        cfg = self.make_cfg()
+        self._enroll_active_student(name="Aurelia Vance")
+        output = self.run_isolated([], cfg, seed=1)
+        self.assertEqual(output.candidates[0].entity_name, "Aurelia Vance")
+
+    def test_independent_rng_streams_per_student(self):
+        cfg = self.make_cfg()
+        self._enroll_active_student(name="Aurelia Vance")
+        self._enroll_active_student(name="Bram Ostergren")
+        output = self.run_isolated([], cfg, seed=1)
+        keys = [(c.numeros, c.estrelas) for c in output.candidates]
+        self.assertNotEqual(keys[0], keys[1])
+
+    def test_reexecution_is_reproducible(self):
+        cfg = self.make_cfg()
+        self._enroll_active_student(name="Aurelia Vance")
+        self._enroll_active_student(name="Bram Ostergren")
+        out1 = self.run_isolated([], cfg, seed=777)
+        out2 = self.run_isolated([], cfg, seed=777)
+        strip = lambda o: sorted((c.entity_id, c.numeros, c.estrelas) for c in o.candidates)
+        self.assertEqual(strip(out1), strip(out2))
+
+    # -- Campaign Runner integration ---------------------------------------
+
+    def test_generators_academia_exists(self):
+        self.assertIn("academia", GENERATORS)
+
+    def test_smoke_one_cell(self):
+        cfg = self.make_cfg()
+        self._enroll_active_student()
+        output = self.run_isolated([], cfg, seed=1)
+        self.assertEqual(len(output.candidates), 1)
+        c = output.candidates[0]
+        self.assertEqual(c.source_type, "external_generator")
+        self.assertEqual(c.source_name, "academia")
+
+    def test_generations_is_always_none(self):
+        cfg = self.make_cfg()
+        self._enroll_active_student()
+        output = self.run_isolated([], cfg, seed=1)
+        self.assertIsNone(output.generations)
+
+    def test_produced_candidate_key_has_valid_shape(self):
+        cfg = self.make_cfg()
+        self._enroll_active_student()
+        output = self.run_isolated([], cfg, seed=1)
+        c = output.candidates[0]
+        self.assertEqual(len(c.numeros), 5)
+        self.assertEqual(len(set(c.numeros)), 5)
+        self.assertEqual(len(c.estrelas), 2)
+        self.assertEqual(len(set(c.estrelas)), 2)
+
+    def test_no_persistent_write_during_generation(self):
+        cfg = self.make_cfg()
+        self._enroll_active_student()
+        before_students = set(Path(self._students_tmp.name, "entries").glob("*.json"))
+        before_enrollments = set(Path(self._enrollments_tmp.name, "entries").glob("*.json"))
+        self.run_isolated([], cfg, seed=1)
+        after_students = set(Path(self._students_tmp.name, "entries").glob("*.json"))
+        after_enrollments = set(Path(self._enrollments_tmp.name, "entries").glob("*.json"))
+        self.assertEqual(before_students, after_students)
+        self.assertEqual(before_enrollments, after_enrollments)
+
+    # -- isolation: statistical historico never influences Tyche ----------
+
+    def test_changing_statistical_historico_never_changes_tyche_output(self):
+        cfg = self.make_cfg()
+        self._enroll_active_student()
+        historico_a = [{"numeros": [1, 2, 3, 4, 5], "estrelas": [1, 2]}]
+        historico_b = [{"numeros": [46, 47, 48, 49, 50], "estrelas": [11, 12]}] * 20
+        out_a = self.run_isolated(historico_a, cfg, seed=555)
+        out_b = self.run_isolated(historico_b, cfg, seed=555)
+        strip = lambda o: [(c.numeros, c.estrelas) for c in o.candidates]
+        self.assertEqual(strip(out_a), strip(out_b))
+
+    def test_academic_history_never_influences_output(self):
+        cfg = self.make_cfg()
+        student = self._enroll_active_student()
+        out_empty_history = self.run_isolated([], cfg, seed=555)
+
+        entry_path = Path(self._students_tmp.name) / "entries" / f"{student.student_id}.json"
+        record = json.loads(entry_path.read_text(encoding="utf-8"))
+        record["historico"] = [{
+            "event_type": "test_participation", "occurred_at": "2020-01-01T00:00:00+00:00",
+            "extra": {"suspicious_arbitrary_data": True},
+        }]
+        atomic_write_json(entry_path, record)
+
+        out_with_history = self.run_isolated([], cfg, seed=555)
+        strip = lambda o: [(c.numeros, c.estrelas) for c in o.candidates]
+        self.assertEqual(strip(out_empty_history), strip(out_with_history))
+
+    def test_run_tyche_is_called_with_only_an_rng_argument(self):
+        cfg = self.make_cfg()
+        self._enroll_active_student()
+        with mock.patch("core.services.backtest_generators.run_tyche", wraps=run_tyche) as spy:
+            self.run_isolated([{"numeros": [1, 2, 3, 4, 5], "estrelas": [1, 2]}], cfg, seed=1)
+        spy.assert_called_once()
+        args, kwargs = spy.call_args
+        self.assertEqual(len(args), 1)
+        self.assertEqual(kwargs, {})
+        self.assertIsInstance(args[0], random.Random)
 
 
 if __name__ == "__main__":

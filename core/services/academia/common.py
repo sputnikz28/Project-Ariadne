@@ -2,14 +2,26 @@
 shared by every future classroom/doctrine (Cátedra de Tyche first,
 Rebeldes/Hi-Lo/Ecos/Cátedra das Páginas Eternas later, per the
 approved Foundation V1 design doc's roadmap) — the DoctrineResult
-output contract, the Academia RNG derivation, and the only constructor
+output contract, the Academia RNG derivation, the only constructor
 that turns a doctrine's output into a CandidateKey carrying real
-student identity.
+student identity, and (commit 4/5) the shared "resolve eligible
+participants" step every future classroom will need.
 
-Commit 1/5. Proves vocabulary only. No student, enrollment, classroom,
-or doctrine exists in code yet. Nothing here registers a system in
-GENERATORS, touches FactionRegistry, main.py, persistence, or any live
-faction/Council flow.
+resolve_eligible_participants() is the one function here that touches
+the filesystem, added in commit 4/5 alongside Cátedra de Tyche. It is
+NOT Tyche-specific — it takes an AcademyClassroomIdentity and filters
+AcademyEnrollmentRegistry/AcademyStudentRegistry against it, so any
+future classroom reuses it unchanged. It is deliberately kept separate
+from any doctrine function (e.g. core.services.academia.tyche.
+run_tyche()) — "resolver participantes" and "executar doutrina" are two
+different responsibilities; no doctrine function ever calls this or
+touches a registry itself.
+
+Nothing here registers a system in GENERATORS, touches FactionRegistry,
+main.py, or any live faction/Council flow.
+resolve_eligible_participants() only ever READS AcademyStudent/
+AcademyEnrollment entries — it never creates, mutates, or persists
+either.
 
 Doctrine output contract: DoctrineResult is deliberately NOT modeled
 after core.services.treefolks_v2.common.TreefolkScores +
@@ -73,6 +85,8 @@ from dataclasses import dataclass
 from types import MappingProxyType
 
 from core.services.candidate_provenance import CandidateKey
+from library.academy.enrollments.registry import AcademyEnrollment, AcademyEnrollmentRegistry
+from library.academy.students.registry import AcademyStudent, AcademyStudentRegistry
 
 
 @dataclass(frozen=True)
@@ -188,3 +202,54 @@ def build_academy_candidate_key(
             "student_species": student_species,
         }),
     )
+
+
+def resolve_eligible_participants(
+    identity: AcademyClassroomIdentity,
+    students_root,
+    enrollments_root,
+) -> tuple[tuple[AcademyStudent, AcademyEnrollment], ...]:
+    """Finds every (student, enrollment) pair eligible to attempt
+    `identity`'s doctrine this cell: enrollment.status == "active",
+    enrollment's institution/classroom/doctrine/doctrine_version
+    matching `identity` exactly, AND student.status == "active". Order
+    matches AcademyEnrollmentRegistry.load_all()'s own deterministic
+    order (sorted by enrollment_id).
+
+    Never invents a student, never falls back to a default population
+    — an empty result is a legitimate, honest outcome (see
+    core.services.backtest_generators._run_academia for how an empty
+    result is represented to the Arena).
+
+    A dangling enrollment.student_id (no such student on record) is
+    silently excluded, exactly like any other ineligible case — there
+    is currently no public API to delete an AcademyStudent, so this
+    can only happen from external tampering; still never fabricated
+    into a participant, never raised as an error that would abort an
+    entire campaign cell over one dangling reference.
+
+    Read-only: never creates, mutates, or persists a Student or
+    Enrollment. Deliberately separate from any doctrine function —
+    see this module's docstring.
+    """
+    student_registry = AcademyStudentRegistry(base=students_root)
+    enrollment_registry = AcademyEnrollmentRegistry(base=enrollments_root)
+
+    target_identity = (
+        identity.institution_id, identity.classroom_id, identity.doctrine_id, identity.doctrine_version,
+    )
+
+    pairs = []
+    for enrollment in enrollment_registry.load_all():
+        if enrollment.status != "active":
+            continue
+        enrollment_identity = (
+            enrollment.institution_id, enrollment.classroom_id, enrollment.doctrine_id, enrollment.doctrine_version,
+        )
+        if enrollment_identity != target_identity:
+            continue
+        student = student_registry.get(enrollment.student_id)
+        if student is None or student.status != "active":
+            continue
+        pairs.append((student, enrollment))
+    return tuple(pairs)
