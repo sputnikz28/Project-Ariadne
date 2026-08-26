@@ -57,6 +57,33 @@ class TestAtomicCreateJson(unittest.TestCase):
         self.assertEqual(json.loads(raw), {"a": 1, "b": [1, 2, 3]})
         self.assertIn("\n", raw)  # indent=2 formatting, not a single line
 
+    def test_no_leftover_file_when_content_is_not_json_serializable(self):
+        # atomic_create_json() opens the real target path directly
+        # (O_CREAT|O_EXCL never uses a separate temp filename the way
+        # atomic_write_json() does) -- a failure during json.dump()
+        # must remove that exact path, leaving no partial/leftover
+        # file behind at all, not even an empty one.
+        path = self._path("will_fail.json")
+
+        class NotSerializable:
+            pass
+
+        with self.assertRaises(TypeError):
+            atomic_create_json(path, {"bad": NotSerializable()})
+        self.assertFalse(path.exists())
+
+    def test_a_later_call_can_succeed_after_a_failed_attempt_at_the_same_path(self):
+        path = self._path("recovers.json")
+
+        class NotSerializable:
+            pass
+
+        with self.assertRaises(TypeError):
+            atomic_create_json(path, {"bad": NotSerializable()})
+        created = atomic_create_json(path, {"a": 1})
+        self.assertTrue(created)
+        self.assertEqual(read_json(path), {"a": 1})
+
     def test_true_concurrent_race_exactly_one_winner(self):
         # Two threads racing os.open(O_CREAT|O_EXCL) against the exact
         # same path -- os.open is a real syscall that releases the GIL,
