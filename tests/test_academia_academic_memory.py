@@ -45,6 +45,19 @@ _TARGET = BacktestTarget(
 )
 
 
+def _snapshot_real_dir(path):
+    """Deterministic content snapshot of a real library/academy/
+    directory tree — relative path -> exact bytes, for every file.
+    Used only to prove an isolated-registry operation never touches
+    real Academia storage. See TestFoundationSmokeEndToEnd's own test
+    for why comparing a specific student_id/enrollment_id string is
+    not a valid proxy for isolation once real founders exist.
+    """
+    if not path.exists():
+        return {}
+    return {p.relative_to(path): p.read_bytes() for p in sorted(path.rglob("*")) if p.is_file()}
+
+
 def _dummy_performance():
     return CandidatePerformanceSummary(
         total_candidates=1, unique_full_keys=1, unique_number_sets=1, duplicate_count=0,
@@ -379,12 +392,28 @@ class TestFoundationSmokeEndToEnd(unittest.TestCase):
         self.assertEqual(len(self.student_registry.get(self.s2.student_id).historico), 1)
 
     def test_no_real_student_or_enrollment_created_in_repository(self):
+        # Snapshot the REAL Academia trees' exact content before/after
+        # -- never compare against a specific student_id/enrollment_id
+        # string. Once real founders exist (Piloto Oficial da Cátedra
+        # de Tyche), this test's own isolated tempfile registries can
+        # legitimately assign the exact same next sequential id (both
+        # start counting from scratch) -- that coincidence proves
+        # nothing about leakage. Only "the real trees are byte-
+        # identical before and after" does.
+        real_students_dir = Path("library/academy/students")
+        real_enrollments_dir = Path("library/academy/enrollments")
+        before_students = _snapshot_real_dir(real_students_dir)
+        before_enrollments = _snapshot_real_dir(real_enrollments_dir)
+
         results = self._run_campaign()
         record_academic_result(results[0], students_root=self._students_tmp.name)
-        real_students_dir = Path("library/academy/students/entries")
-        real_events_dir = Path("library/academy/students/events") / self.s1.student_id
-        self.assertFalse((real_students_dir / f"{self.s1.student_id}.json").exists())
-        self.assertFalse(real_events_dir.exists())
+
+        after_students = _snapshot_real_dir(real_students_dir)
+        after_enrollments = _snapshot_real_dir(real_enrollments_dir)
+        self.assertEqual(before_students, after_students, "real library/academy/students/ must be untouched")
+        self.assertEqual(before_enrollments, after_enrollments, "real library/academy/enrollments/ must be untouched")
+        # the isolated registry itself DID receive the write
+        self.assertEqual(len(self.student_registry.get(self.s1.student_id).historico), 1)
 
 
 if __name__ == "__main__":

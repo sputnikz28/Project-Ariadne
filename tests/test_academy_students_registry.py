@@ -293,12 +293,36 @@ class TestIdCollisionAndRetry(AcademyStudentRegistryTestBase):
         self.assertEqual(self.registry.count(), 2)
 
 
+def _snapshot_real_dir(path):
+    """Deterministic content snapshot of the REAL library/academy/
+    directory tree — every file's relative path mapped to its exact
+    bytes. Used to prove an isolated-registry operation never touches
+    real Academia storage. Deliberately never compares against a
+    specific student_id/enrollment_id string: once real founders exist
+    (Piloto Oficial da Cátedra de Tyche), an isolated tempfile registry
+    can legitimately assign the exact same next sequential id (both
+    start counting from scratch) — that coincidence proves nothing
+    about leakage. Only "the real tree's content is byte-identical
+    before and after" proves isolation.
+    """
+    if not path.exists():
+        return {}
+    return {p.relative_to(path): p.read_bytes() for p in sorted(path.rglob("*")) if p.is_file()}
+
+
 class TestIsolation(AcademyStudentRegistryTestBase):
     def test_writes_stay_inside_the_configured_base(self):
+        real_base = Path("library/academy/students")
+        before = _snapshot_real_dir(real_base)
+
         student = self.registry.create(name="Aurelia Vance")
+
+        after = _snapshot_real_dir(real_base)
+        self.assertEqual(before, after, "real library/academy/students/ must be byte-identical before and after")
+        # the isolated registry itself DID receive the write, proving
+        # this is a real isolation test and not a no-op
         self.assertTrue(str(self.registry.base).startswith(tempfile.gettempdir()))
-        real_entry = Path("library/academy/students/entries") / f"{student.student_id}.json"
-        self.assertFalse(real_entry.exists())
+        self.assertTrue(self.registry.exists(student.student_id))
 
 
 if __name__ == "__main__":
