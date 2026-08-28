@@ -1,0 +1,15 @@
+{
+  "nome": "Livro da Academia",
+  "total_students": 5,
+  "por_status": {
+    "active": 5
+  },
+  "student_ids": [
+    "NEM-STU-000001",
+    "NEM-STU-000002",
+    "NEM-STU-000003",
+    "NEM-STU-000004",
+    "NEM-STU-000005"
+  ],
+  "atualizado_em": "2026-08-28T14:17:32+00:00"
+}

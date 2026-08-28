@@ -1,0 +1,10 @@
+{
+  "enrollment_id": "NEM-ENR-000003",
+  "student_id": "NEM-STU-000003",
+  "institution_id": "nemerion",
+  "classroom_id": "catedra_tyche",
+  "doctrine_id": "tyche",
+  "doctrine_version": "v1",
+  "status": "active",
+  "enrolled_at": "2026-08-28T14:17:32+00:00"
+}

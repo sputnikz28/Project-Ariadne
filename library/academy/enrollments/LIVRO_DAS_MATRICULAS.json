@@ -1,0 +1,18 @@
+{
+  "nome": "Livro das Matrículas",
+  "total_enrollments": 5,
+  "por_status": {
+    "active": 5
+  },
+  "por_classroom": {
+    "catedra_tyche": 5
+  },
+  "enrollment_ids": [
+    "NEM-ENR-000001",
+    "NEM-ENR-000002",
+    "NEM-ENR-000003",
+    "NEM-ENR-000004",
+    "NEM-ENR-000005"
+  ],
+  "atualizado_em": "2026-08-28T14:17:32+00:00"
+}
