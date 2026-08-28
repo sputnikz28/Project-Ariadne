@@ -50,12 +50,58 @@ structurally-validated (non-empty) strings — no ClassroomRegistry, no
 DoctrineRegistry, no catalog, no validation against Cátedra de Tyche
 or any other module exists yet (Tyche's canonical identity is wired
 up starting in commit 4). Pretending a catalog exists before it does
-would be dishonest, not defensive.
+would be dishonest, not defensive. In particular, nothing here
+validates that every enrollment in a given (institution_id,
+classroom_id) actually shares the same doctrine_id/doctrine_version —
+the real bootstrap path (a script driving every enrollment from one
+shared core.services.academia.tyche.TYCHE_IDENTITY constant) makes
+that true operationally for Cátedra de Tyche today, but there is no
+Classroom -> Doctrine consistency check enforced here. Registered
+technical debt, not solved in this change — out of scope until a real
+ClassroomRegistry exists.
 
 historico of the enrolled student is never touched here: no
 AcademicEvent, no append-only history API exists yet (commit 5) —
 create() only ever reads a student's existence, never writes to
 AcademyStudent's own record.
+
+Classroom capacity (institutional rule, added after commit 5): a
+Classroom is considered full at CLASSROOM_ACTIVE_STUDENT_CAPACITY
+distinct students with an `active` enrollment. Capacity is scoped to
+(institution_id, classroom_id) ONLY — never
+(..., doctrine_id, doctrine_version) — so a future doctrine_version
+bump (e.g. tyche/v1 -> tyche/v2) can never open five fresh seats in
+the same Cátedra; doctrine/version stay pure provenance/methodology on
+each AcademyEnrollment, never a second axis of capacity. This is a
+deliberate correction from an earlier draft of this rule that scoped
+capacity per (classroom_id, doctrine_id, doctrine_version).
+
+This is a MAXIMUM, not a target: create() only ever rejects a 6th
+active enrollment (ClassroomFullError) or a student's 2nd simultaneous
+active enrollment in the same classroom (AlreadyActivelyEnrolledError)
+— it never requires 5 to already exist, since a classroom naturally
+grows 0 -> 1 -> ... -> 5 during its own bootstrap. "Exactly 5 = a
+complete/operational turma" is an academic-level expectation a caller
+(e.g. a pilot campaign) enforces before running exams, never a
+create()-level precondition.
+
+Concurrency (explicitly NOT solved here): the capacity check is a
+plain load_all()-then-count -> create() sequence, not a transaction.
+Two truly concurrent create() calls for the same (institution_id,
+classroom_id) when 4 students are already active could theoretically
+both observe count=4 and both succeed, producing 6 active students —
+the same class of race atomic_create_json() alone cannot prevent,
+because the invariant being protected here spans multiple entries,
+not one file. This is NOT concurrency-safe and must never be
+described as such. Individual AcademyEnrollment persistence is still
+fully protected by atomic_create_json() (a single entry can never be
+half-written or double-created) — only the AGGREGATE capacity
+invariant across entries is single-writer-only for now. Accepted
+today because enrollment administration (bootstrap scripts, pilot
+setup) is sequential/single-writer by construction; revisit with a
+real mechanism (e.g. a claimed-slot-number technique analogous to
+student_id/enrollment_id assignment) only if genuine concurrent
+enrollment ever becomes a real requirement.
 """
 from __future__ import annotations
 
@@ -70,11 +116,42 @@ _ID_PREFIX = "NEM-ENR-"
 _ID_WIDTH = 6
 VALID_STATUSES = ("active", "completed", "withdrawn")
 
+CLASSROOM_ACTIVE_STUDENT_CAPACITY = 5
+"""Institutional invariant, not a Tyche-specific value: every Classroom
+in Academia Arcana de Nemerion holds at most this many distinct
+students with an `active` enrollment, scoped to
+(institution_id, classroom_id) only — see module docstring. Deliberately
+NOT named after any specific classroom (e.g. never TYCHE_MAX_STUDENTS)
+so future classrooms share this exact rule without inventing a new
+constant per classroom.
+"""
+
 
 class StudentNotFoundError(ValueError):
     """Raised by AcademyEnrollmentRegistry.create() when student_id does
     not exist in the given AcademyStudentRegistry — no enrollment is
     ever created for an unknown student.
+    """
+
+
+class AlreadyActivelyEnrolledError(ValueError):
+    """Raised by AcademyEnrollmentRegistry.create() when student_id
+    already holds an `active` enrollment in the same
+    (institution_id, classroom_id) — a student may never occupy two of
+    a classroom's seats at once, even under a different doctrine_id/
+    doctrine_version. A student MAY hold unlimited historical
+    completed/withdrawn enrollments in the same classroom; only a
+    second simultaneous `active` one is rejected.
+    """
+
+
+class ClassroomFullError(ValueError):
+    """Raised by AcademyEnrollmentRegistry.create() when the target
+    (institution_id, classroom_id) already has
+    CLASSROOM_ACTIVE_STUDENT_CAPACITY distinct students with an
+    `active` enrollment — no 6th seat is ever created. Enrollments
+    created directly with status="completed"/"withdrawn" never count
+    toward this capacity.
     """
 
 
@@ -192,13 +269,39 @@ class AcademyEnrollmentRegistry:
         AcademyStudentRegistry) so student_id can be checked for
         existence first — raises StudentNotFoundError if the student is
         unknown to it; no enrollment is created in that case. Never
-        deduplicates by content: the same (student_id, classroom_id,
-        doctrine_id, doctrine_version) combination may be enrolled
-        multiple times over history, each a distinct entity. Safe under
-        real concurrent callers: see module docstring.
+        deduplicates by content in general: the same (student_id,
+        classroom_id, doctrine_id, doctrine_version) combination may be
+        enrolled multiple times over history (e.g. after a withdrawal),
+        each a distinct entity.
+
+        When status == "active" only, two classroom-capacity checks run
+        first (see module docstring for the exact rule and its
+        deliberately-NOT-concurrency-safe caveat):
+        AlreadyActivelyEnrolledError if student_id already holds an
+        active enrollment in this (institution_id, classroom_id);
+        ClassroomFullError if CLASSROOM_ACTIVE_STUDENT_CAPACITY distinct
+        students already hold one. Neither check applies when creating
+        an enrollment directly as "completed"/"withdrawn" — those never
+        occupy a seat.
         """
         if not student_registry.exists(student_id):
             raise StudentNotFoundError(f"cannot enroll unknown student_id={student_id!r}")
+
+        if status == "active":
+            active_here = [
+                e for e in self.load_all()
+                if e.status == "active" and e.institution_id == "nemerion" and e.classroom_id == classroom_id
+            ]
+            if any(e.student_id == student_id for e in active_here):
+                raise AlreadyActivelyEnrolledError(
+                    f"student_id={student_id!r} already holds an active enrollment in classroom_id={classroom_id!r}"
+                )
+            active_student_ids = {e.student_id for e in active_here}
+            if len(active_student_ids) >= CLASSROOM_ACTIVE_STUDENT_CAPACITY:
+                raise ClassroomFullError(
+                    f"classroom_id={classroom_id!r} already has {len(active_student_ids)} active students "
+                    f"(capacity={CLASSROOM_ACTIVE_STUDENT_CAPACITY})"
+                )
 
         sequence = self._next_candidate_sequence()
         while True:

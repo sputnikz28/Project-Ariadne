@@ -16,9 +16,12 @@ from pathlib import Path
 
 from core.services.atomic_io import atomic_create_json, read_json
 from library.academy.enrollments.registry import (
+    CLASSROOM_ACTIVE_STUDENT_CAPACITY,
     VALID_STATUSES,
     AcademyEnrollment,
     AcademyEnrollmentRegistry,
+    AlreadyActivelyEnrolledError,
+    ClassroomFullError,
     StudentNotFoundError,
 )
 from library.academy.students.registry import AcademyStudentRegistry
@@ -92,11 +95,18 @@ class TestCreate(AcademyEnrollmentRegistryTestBase):
 
     def test_second_enrollment_gets_id_000002(self):
         self._create()
-        second = self._create(doctrine_version="v2")
+        # a 2nd active enrollment for the SAME student in the SAME
+        # classroom is now rejected (AlreadyActivelyEnrolledError) --
+        # this test is only about enrollment_id sequencing, so the
+        # repeat uses "completed" to stay outside that rule.
+        second = self._create(doctrine_version="v2", status="completed")
         self.assertEqual(second.enrollment_id, "NEM-ENR-000002")
 
     def test_sequence_increments_across_several_creates(self):
-        ids = [self._create(doctrine_version=f"v{i}").enrollment_id for i in range(1, 4)]
+        ids = [
+            self._create(doctrine_version=f"v{i}", status="completed").enrollment_id
+            for i in range(1, 4)
+        ]
         self.assertEqual(ids, ["NEM-ENR-000001", "NEM-ENR-000002", "NEM-ENR-000003"])
 
     def test_unknown_student_is_rejected(self):
@@ -153,8 +163,11 @@ class TestCreate(AcademyEnrollmentRegistryTestBase):
         self.assertNotEqual(e1.enrollment_id, e2.enrollment_id)
 
     def test_two_enrollments_with_identical_fields_get_different_ids(self):
-        e1 = self._create()
-        e2 = self._create()  # same student/classroom/doctrine/version
+        # both "completed" -- capacity/duplicate-active rules only apply
+        # to status="active"; this test is about content never driving
+        # id reuse/dedup, independent of that rule.
+        e1 = self._create(status="completed")
+        e2 = self._create(status="completed")  # same student/classroom/doctrine/version
         self.assertNotEqual(e1.enrollment_id, e2.enrollment_id)
         self.assertEqual(e1.student_id, e2.student_id)
         self.assertEqual(e1.classroom_id, e2.classroom_id)
@@ -198,7 +211,7 @@ class TestUnknownEnrollment(AcademyEnrollmentRegistryTestBase):
 class TestEntriesAreSourceOfTruth(AcademyEnrollmentRegistryTestBase):
     def test_load_all_works_without_ever_calling_rebuild_index(self):
         self._create()
-        self._create(doctrine_version="v2")
+        self._create(doctrine_version="v2", status="completed")
         self.assertFalse(self.registry.index_path.exists())
         self.assertEqual(len(self.registry.load_all()), 2)
 
@@ -220,8 +233,8 @@ class TestEntriesAreSourceOfTruth(AcademyEnrollmentRegistryTestBase):
 
     def test_count_matches_number_created(self):
         self._create()
-        self._create(doctrine_version="v2")
-        self._create(doctrine_version="v3")
+        self._create(doctrine_version="v2", status="completed")
+        self._create(doctrine_version="v3", status="completed")
         self.assertEqual(self.registry.count(), 3)
 
     def test_all_is_an_alias_for_load_all(self):
@@ -348,6 +361,124 @@ class TestIsolation(AcademyEnrollmentRegistryTestBase):
         self.assertTrue(str(self.registry.base).startswith(tempfile.gettempdir()))
         real_entry = Path("library/academy/enrollments/entries") / f"{enrollment.enrollment_id}.json"
         self.assertFalse(real_entry.exists())
+
+
+class TestClassroomCapacity(unittest.TestCase):
+    """Institutional rule added after commit 5: at most
+    CLASSROOM_ACTIVE_STUDENT_CAPACITY distinct students hold an active
+    enrollment per (institution_id, classroom_id) — scoped by classroom
+    only, never by doctrine_id/doctrine_version. Deliberately NOT
+    concurrency-tested here (see registry module docstring) — this
+    invariant is documented as single-writer-only, never claimed safe
+    under real concurrent create() calls.
+    """
+
+    def setUp(self):
+        self._tmp = tempfile.mkdtemp()
+        self._students_tmp = tempfile.mkdtemp()
+        self.registry = AcademyEnrollmentRegistry(base=self._tmp)
+        self.student_registry = AcademyStudentRegistry(base=self._students_tmp)
+        self.students = [self.student_registry.create(name=f"Student {i}") for i in range(8)]
+
+    def tearDown(self):
+        shutil.rmtree(self._tmp, ignore_errors=True)
+        shutil.rmtree(self._students_tmp, ignore_errors=True)
+
+    def _enroll(self, student, **overrides):
+        args = dict(
+            student_id=student.student_id,
+            classroom_id="catedra_tyche",
+            doctrine_id="tyche",
+            doctrine_version="v1",
+            student_registry=self.student_registry,
+        )
+        args.update(overrides)
+        return self.registry.create(**args)
+
+    def test_capacity_constant_is_5(self):
+        self.assertEqual(CLASSROOM_ACTIVE_STUDENT_CAPACITY, 5)
+
+    def test_zero_active_students_allows_creation(self):
+        enrollment = self._enroll(self.students[0])
+        self.assertEqual(enrollment.status, "active")
+
+    def test_fifth_active_student_is_accepted(self):
+        for student in self.students[:4]:
+            self._enroll(student)
+        fifth = self._enroll(self.students[4])
+        self.assertEqual(fifth.status, "active")
+
+    def test_sixth_active_student_is_rejected(self):
+        for student in self.students[:5]:
+            self._enroll(student)
+        with self.assertRaises(ClassroomFullError):
+            self._enroll(self.students[5])
+
+    def test_sixth_rejection_creates_no_entry_file(self):
+        for student in self.students[:5]:
+            self._enroll(student)
+        before = set(Path(self._tmp, "entries").glob("*.json"))
+        with self.assertRaises(ClassroomFullError):
+            self._enroll(self.students[5])
+        after = set(Path(self._tmp, "entries").glob("*.json"))
+        self.assertEqual(before, after)
+
+    def test_same_student_twice_active_same_classroom_is_rejected(self):
+        self._enroll(self.students[0])
+        with self.assertRaises(AlreadyActivelyEnrolledError):
+            self._enroll(self.students[0])
+
+    def test_same_student_different_doctrine_version_still_rejected(self):
+        # the exact bug this rule prevents: a doctrine_version bump must
+        # never open a second seat for the same student in the same
+        # classroom.
+        self._enroll(self.students[0], doctrine_version="v1")
+        with self.assertRaises(AlreadyActivelyEnrolledError):
+            self._enroll(self.students[0], doctrine_version="v2")
+
+    def test_changing_doctrine_id_never_opens_a_second_classroom_capacity(self):
+        # 5 active students under doctrine "tyche" -- a 6th active
+        # student under a DIFFERENT doctrine_id, same classroom, must
+        # still be rejected: capacity is scoped to classroom alone.
+        for student in self.students[:5]:
+            self._enroll(student, doctrine_id="tyche")
+        with self.assertRaises(ClassroomFullError):
+            self._enroll(self.students[5], doctrine_id="uma_doutrina_diferente")
+
+    def test_withdrawn_enrollments_never_occupy_a_seat(self):
+        for student in self.students[:5]:
+            self._enroll(student, status="withdrawn")
+        # all 5 seats still free -- withdrawn never counted
+        sixth = self._enroll(self.students[5])
+        self.assertEqual(sixth.status, "active")
+
+    def test_completed_enrollments_never_occupy_a_seat(self):
+        for student in self.students[:5]:
+            self._enroll(student, status="completed")
+        sixth = self._enroll(self.students[5])
+        self.assertEqual(sixth.status, "active")
+
+    def test_full_classroom_never_blocks_a_different_classroom(self):
+        for student in self.students[:5]:
+            self._enroll(student, classroom_id="catedra_tyche")
+        other = self._enroll(self.students[5], classroom_id="rebeldes")
+        self.assertEqual(other.status, "active")
+
+    def test_student_not_found_error_still_takes_priority(self):
+        # an unknown student must fail with StudentNotFoundError, never
+        # be silently treated as a capacity question.
+        with self.assertRaises(StudentNotFoundError):
+            self.registry.create(
+                student_id="NEM-STU-999999", classroom_id="catedra_tyche",
+                doctrine_id="tyche", doctrine_version="v1",
+                student_registry=self.student_registry,
+            )
+
+    def test_enrollment_ids_still_assigned_sequentially_by_registry(self):
+        e1 = self._enroll(self.students[0])
+        e2 = self._enroll(self.students[1])
+        self.assertEqual(e1.enrollment_id, "NEM-ENR-000001")
+        self.assertEqual(e2.enrollment_id, "NEM-ENR-000002")
 
 
 if __name__ == "__main__":
