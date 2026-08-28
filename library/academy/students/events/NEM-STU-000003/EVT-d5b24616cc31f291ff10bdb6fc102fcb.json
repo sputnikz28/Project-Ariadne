@@ -1,0 +1,28 @@
+{
+  "event_id": "EVT-d5b24616cc31f291ff10bdb6fc102fcb",
+  "event_type": "test_participation",
+  "occurred_at": "2026-08-28T14:20:01+00:00",
+  "extra": {
+    "enrollment_id": "NEM-ENR-000003",
+    "classroom_id": "catedra_tyche",
+    "doctrine_id": "tyche",
+    "doctrine_version": "v1",
+    "historical_target": "020/2017",
+    "generator_seed": 1,
+    "run_id": "RUN-20260828T141959367713Z",
+    "candidate_summary": {
+      "numeros": [
+        15,
+        21,
+        26,
+        29,
+        31
+      ],
+      "estrelas": [
+        3,
+        9
+      ]
+    },
+    "category": "1+0"
+  }
+}

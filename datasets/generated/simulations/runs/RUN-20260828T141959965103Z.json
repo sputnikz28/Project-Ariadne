@@ -1,0 +1,13 @@
+{
+  "run_id": "RUN-20260828T141959965103Z",
+  "started_at": "2026-08-28T14:19:59+00:00",
+  "completed_at": "2026-08-28T14:19:59+00:00",
+  "seed": 3,
+  "modo_semente": "caos",
+  "project_version": "V12",
+  "git_commit": "bb3953d1877234056fecf619cb86ca72ca77b370",
+  "report_path": null,
+  "command": "backtest_campaign:academia",
+  "target_draw": "020/2017",
+  "generated_record_count": 5
+}
