@@ -164,6 +164,7 @@ def build_academy_candidate_key(
     student_id: str,
     student_name: str,
     student_species: str | None,
+    enrollment_id: str,
     numeros: tuple[int, ...],
     estrelas: tuple[int, ...],
 ) -> CandidateKey:
@@ -180,8 +181,17 @@ def build_academy_candidate_key(
     classroom_race_label(), never hardcoded here or anywhere else.
     metadata carries the full academic provenance that
     race/entity_id/entity_name alone cannot express: institution and
-    classroom ids and narrative names, doctrine id and version, and
-    the student's species (None when not yet defined).
+    classroom ids and narrative names, doctrine id and version, the
+    student's species (None when not yet defined), and enrollment_id —
+    added in commit 5/5, closing a real provenance gap found only while
+    designing AcademicEvent: without it, nothing could unambiguously
+    say WHICH matrícula authorized a given Candidate for a student who
+    may hold several. The caller (core.services.backtest_generators.
+    _run_academia) always has the exact enrollment that produced this
+    participation on hand from resolve_eligible_participants() — this
+    parameter is never inferred after the fact from student/classroom/
+    doctrine alone, which could not disambiguate multiple simultaneous
+    enrollments in the same classroom/doctrine/version.
     """
     return CandidateKey(
         source_type="external_generator",
@@ -200,6 +210,7 @@ def build_academy_candidate_key(
             "doctrine_id": identity.doctrine_id,
             "doctrine_version": identity.doctrine_version,
             "student_species": student_species,
+            "enrollment_id": enrollment_id,
         }),
     )
 

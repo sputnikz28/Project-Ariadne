@@ -612,8 +612,13 @@ def _run_treefolks_v2(cfg, ctx, ariadne_temporal, seed, boundary) -> GeneratorOu
 
 
 def _run_academia(cfg, ctx, ariadne_temporal, seed, boundary) -> GeneratorOutput:
-    """Academia Arcana de Nemerion Foundation V1, commit 4/5: only
+    """Academia Arcana de Nemerion Foundation V1 (commits 4-5/5): only
     Cátedra de Tyche exists as an executable classroom/doctrine.
+    Candidates carry the exact enrollment that authorized them
+    (`enrollment.enrollment_id`, from the same (student, enrollment)
+    pair resolve_eligible_participants() already returned — never
+    re-derived or guessed afterward) via
+    CandidateKey.metadata["enrollment_id"], commit 5/5's addition.
 
     students_root/enrollments_root come from [ACADEMIA] in cfg (never
     a hardcoded literal path here — see library.academy.students.
@@ -670,7 +675,7 @@ def _run_academia(cfg, ctx, ariadne_temporal, seed, boundary) -> GeneratorOutput
     participants = resolve_eligible_participants(TYCHE_IDENTITY, students_root, enrollments_root)
 
     candidates = []
-    for student, _enrollment in participants:
+    for student, enrollment in participants:
         rng = academia_rng(
             seed=seed,
             institution_id=TYCHE_IDENTITY.institution_id,
@@ -686,6 +691,7 @@ def _run_academia(cfg, ctx, ariadne_temporal, seed, boundary) -> GeneratorOutput
             student_id=student.student_id,
             student_name=student.name,
             student_species=student.species,
+            enrollment_id=enrollment.enrollment_id,
             numeros=result.numeros,
             estrelas=result.estrelas,
         ))

@@ -28,18 +28,67 @@ processes/threads, proven directly in tests/test_atomic_io.py) and
 retries with the next candidate id whenever a reservation attempt loses
 the race, instead of inventing any separate locking mechanism.
 
-historico is persisted structure only in this commit: every student is
-created with historico=() and there is no public API to append to it
-yet. No AcademyEnrollment, no AcademicEvent, and — deliberately — no
-generic "update" method exists here at all, so this commit cannot
-silently rewrite student_id, created_at, or any past event. Those wait
-for commit 3 (AcademyEnrollment + academic history).
+historico (commit 5/5): AcademicEvent is append-only, permanent memory
+of a finished experience, stored as one exclusively-created file per
+event under events/<student_id>/<event_id>.json — never embedded in
+entries/<student_id>.json's own JSON blob. This is a deliberate
+persistence-internals change from commit 2's original "historico:
+list(...) embedded in the entry" shape (chosen after the user
+identified a real lost-update race: entries/<student_id>.json has no
+compare-and-swap, so a naive read-modify-write append could silently
+lose a concurrent event). entries/<student_id>.json still WRITES a
+vestigial "historico": [] field at creation, for shape stability with
+already-approved commit 2/3 tests, but it is never read back — get()/
+load_all() always source AcademyStudent.historico from events/, never
+from that field. No AcademicEvent is ever written to both places.
+
+AcademyStudent's own identity fields (student_id/name/species/
+institution_id/created_at/status) are untouched by any of this:
+append_event() never opens, reads, or writes entries/<student_id>.json
+at all — it is structurally incapable of altering student_id or
+created_at, or of rewriting/removing a past event, because past
+events are immutable already-created files it never revisits.
+
+Concurrent append safety: exactly the same
+core.services.atomic_io.atomic_create_json() exclusivity already
+proven for create() (student_id) and
+library.academy.enrollments.registry.AcademyEnrollmentRegistry.create()
+(enrollment_id) — applied one level deeper, to individual event files
+instead of individual student/enrollment files. Two concurrent
+append_event() calls with different event_ids just create two files,
+no race possible. Two concurrent calls with the SAME event_id: exactly
+one atomic_create_json() wins; the loser detects "already exists" and
+returns the EXISTING content with created=False — the same
+(record, created) idempotent-create shape already established by
+library.heroes.registry.HeroRegistry.register(). Never
+atomic_write_json() for an event — that function unconditionally
+overwrites, which would violate the "never rewrite a past event"
+guarantee.
+
+event_id is supplied by the caller (deterministically derived, never
+random, never content-derived — see
+core.services.academia.academic_memory.record_academic_result()) so
+the SAME finished experience reprocessed always resolves to the SAME
+event_id and therefore never duplicates; a genuinely new academic
+attempt gets a fresh run_id upstream and therefore a fresh event_id.
+
+Ordering: get()/load_all() project each student's historico sorted by
+(occurred_at, event_id) — occurred_at is Academia-time (when Nemerion
+registered the event), never derived from a historical_target (which
+lives separately inside the event's own `extra`). event_id is only a
+deterministic tie-break for the rare case of two events sharing the
+same occurred_at second; this Foundation does not attempt to solve
+true cross-process causal ordering under real concurrency.
 """
 from __future__ import annotations
 
+import time
+from collections.abc import Mapping
 from dataclasses import dataclass
 from datetime import datetime, timezone
 from pathlib import Path
+from types import MappingProxyType
+from typing import Any
 
 from core.services.atomic_io import atomic_create_json, atomic_write_json, read_json
 
@@ -47,6 +96,13 @@ BASE = Path("library/academy/students")
 _ID_PREFIX = "NEM-STU-"
 _ID_WIDTH = 6
 VALID_STATUSES = ("active", "inactive", "graduated", "expelled")
+
+
+class StudentNotFoundError(KeyError):
+    """Raised by AcademyStudentRegistry.append_event() when student_id
+    does not exist — no AcademicEvent is ever created for an unknown
+    student, and no Student is ever fabricated to make one fit.
+    """
 
 
 def _now_iso():
@@ -59,8 +115,9 @@ class AcademyStudent:
     fabricated. institution_id is always "nemerion" in Foundation V1
     (the only institution that exists); the field exists so a student
     record is self-describing without relying on which registry loaded
-    it. historico is a tuple of already-serialized event dicts — empty
-    for every student created by this commit.
+    it. historico is a tuple of AcademicEvent, projected at read time
+    from events/<student_id>/ — see module docstring. Always empty for
+    a student nobody has ever called append_event() for.
     """
 
     student_id: str
@@ -69,11 +126,32 @@ class AcademyStudent:
     institution_id: str
     created_at: str
     status: str
-    historico: tuple[dict, ...] = ()
+    historico: tuple["AcademicEvent", ...] = ()
 
     def __post_init__(self):
         if self.status not in VALID_STATUSES:
             raise ValueError(f"invalid status {self.status!r} — must be one of {VALID_STATUSES}")
+
+
+@dataclass(frozen=True)
+class AcademicEvent:
+    """One permanent, immutable unit of academic memory. extra carries
+    event_type-specific fields — for "test_participation" (the only
+    event_type this commit ever writes), see
+    core.services.academia.academic_memory.record_academic_result()'s
+    exact shape. Mirrors artifact_schema.py's EventoHistoria (evento,
+    extra) shape, the closest existing precedent for a generic
+    "this happened, here are the details" event.
+
+    Once successfully created via AcademyStudentRegistry.append_event(),
+    an AcademicEvent is never edited, replaced, deleted, or
+    reordered — there is no API in this module for any of those.
+    """
+
+    event_id: str
+    event_type: str
+    occurred_at: str
+    extra: Mapping[str, Any]
 
 
 def _record_from_student(student: AcademyStudent) -> dict:
@@ -84,11 +162,11 @@ def _record_from_student(student: AcademyStudent) -> dict:
         "institution_id": student.institution_id,
         "created_at": student.created_at,
         "status": student.status,
-        "historico": list(student.historico),
+        "historico": [],  # vestigial — never read back, see module docstring
     }
 
 
-def _student_from_record(record: dict) -> AcademyStudent:
+def _student_from_record(record: dict, historico: tuple[AcademicEvent, ...] = ()) -> AcademyStudent:
     return AcademyStudent(
         student_id=record["student_id"],
         name=record["name"],
@@ -96,14 +174,61 @@ def _student_from_record(record: dict) -> AcademyStudent:
         institution_id=record["institution_id"],
         created_at=record["created_at"],
         status=record["status"],
-        historico=tuple(record.get("historico", [])),
+        historico=historico,
     )
+
+
+def _record_from_event(event: AcademicEvent) -> dict:
+    return {
+        "event_id": event.event_id,
+        "event_type": event.event_type,
+        "occurred_at": event.occurred_at,
+        "extra": dict(event.extra),
+    }
+
+
+def _event_from_record(record: dict) -> AcademicEvent:
+    return AcademicEvent(
+        event_id=record["event_id"],
+        event_type=record["event_type"],
+        occurred_at=record["occurred_at"],
+        extra=MappingProxyType(dict(record.get("extra", {}))),
+    )
+
+
+def _read_json_until_valid(path, attempts=50, delay=0.001):
+    """core.services.atomic_io.atomic_create_json() makes `path` exist
+    (via os.open(O_CREAT|O_EXCL)) BEFORE its JSON content is fully
+    written and fsynced — a losing caller's immediate read_json() can
+    therefore race a still-in-progress winner and see an empty or
+    partial file (default=None). This is not a gap in
+    atomic_create_json()'s exclusivity guarantee (still exactly one
+    winner, always) — it is a real TOCTOU window in the read-after-lose
+    path specifically, only exercised by append_event()'s idempotent
+    "return the existing event" behaviour (create()'s own retry loops
+    in this module and library.academy.enrollments.registry never read
+    a losing attempt's content — they just try the next candidate id).
+
+    Retries a bounded number of times with a short sleep rather than
+    introducing OS-level file locking — the winner's write is a few
+    bytes plus one fsync, observed to complete near-instantly; 50
+    attempts at 1ms is generous. Raises RuntimeError if the file never
+    becomes valid JSON in that window — a genuine, unexpected failure,
+    not something to paper over with a fabricated return value.
+    """
+    for _ in range(attempts):
+        content = read_json(path, default=None)
+        if content is not None:
+            return content
+        time.sleep(delay)
+    raise RuntimeError(f"{path} exists but never became valid JSON after losing the create race")
 
 
 class AcademyStudentRegistry:
     def __init__(self, base=None):
         self.base = Path(base) if base is not None else BASE
         self.entries_dir = self.base / "entries"
+        self.events_dir = self.base / "events"
         self.index_path = self.base / "LIVRO_DA_ACADEMIA.json"
 
     # -- persistence --------------------------------------------------
@@ -118,7 +243,7 @@ class AcademyStudentRegistry:
         record = read_json(self._entry_path(student_id), default=None)
         if record is None:
             return None
-        return _student_from_record(record)
+        return _student_from_record(record, self._load_events(student_id))
 
     def load_all(self):
         if not self.entries_dir.is_dir():
@@ -127,8 +252,51 @@ class AcademyStudentRegistry:
         for path in sorted(self.entries_dir.glob(f"{_ID_PREFIX}*.json")):
             record = read_json(path, default=None)
             if record is not None:
-                students.append(_student_from_record(record))
+                students.append(_student_from_record(record, self._load_events(record["student_id"])))
         return students
+
+    # -- academic memory (AcademicEvent) ---------------------------------
+
+    def _event_path(self, student_id, event_id):
+        return self.events_dir / student_id / f"{event_id}.json"
+
+    def _load_events(self, student_id) -> tuple[AcademicEvent, ...]:
+        student_events_dir = self.events_dir / student_id
+        if not student_events_dir.is_dir():
+            return ()
+        events = []
+        for path in sorted(student_events_dir.glob("*.json")):
+            record = read_json(path, default=None)
+            if record is not None:
+                events.append(_event_from_record(record))
+        return tuple(sorted(events, key=lambda e: (e.occurred_at, e.event_id)))
+
+    def append_event(self, student_id, event_type, occurred_at, event_id, extra) -> tuple[AcademicEvent, bool]:
+        """Creates one permanent AcademicEvent for student_id, keyed by
+        the caller-supplied event_id. Returns (event, created) —
+        created=False means an event with this exact event_id already
+        existed and this call was a no-op (idempotent reprocessing,
+        never a duplicate, never inspects whether the existing content
+        matches what was just requested — mirrors
+        core.services.atomic_io.atomic_create_json()'s own semantics).
+
+        Raises StudentNotFoundError if student_id is unknown — never
+        fabricates a Student. Never opens, reads, or writes
+        entries/<student_id>.json — see module docstring for why this
+        makes rewriting student_id/created_at/a past event structurally
+        impossible from here, not just a convention.
+        """
+        if not self.exists(student_id):
+            raise StudentNotFoundError(f"cannot append an academic event for unknown student_id={student_id!r}")
+
+        event = AcademicEvent(
+            event_id=event_id, event_type=event_type, occurred_at=occurred_at, extra=MappingProxyType(dict(extra)),
+        )
+        path = self._event_path(student_id, event_id)
+        if atomic_create_json(path, _record_from_event(event)):
+            return event, True
+        existing = _read_json_until_valid(path)
+        return _event_from_record(existing), False
 
     def _next_candidate_sequence(self):
         """A pure optimization to reduce the number of failed exclusive-

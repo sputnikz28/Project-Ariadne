@@ -140,6 +140,7 @@ class TestBuildAcademyCandidateKey(unittest.TestCase):
             student_id="NEM-STU-000001",
             student_name="Aurelia Vance",
             student_species=None,
+            enrollment_id="NEM-ENR-000001",
             numeros=(41, 7, 22, 33, 14),
             estrelas=(9, 3),
         )
@@ -181,7 +182,12 @@ class TestBuildAcademyCandidateKey(unittest.TestCase):
             "doctrine_id": "example_doctrine",
             "doctrine_version": "v1",
             "student_species": None,
+            "enrollment_id": "NEM-ENR-000001",
         })
+
+    def test_metadata_carries_enrollment_id(self):
+        key = self._build(enrollment_id="NEM-ENR-000042")
+        self.assertEqual(key.metadata["enrollment_id"], "NEM-ENR-000042")
 
     def test_metadata_is_read_only(self):
         key = self._build()

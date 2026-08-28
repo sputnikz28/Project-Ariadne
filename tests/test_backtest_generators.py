@@ -917,6 +917,14 @@ class TestAcademiaAdapter(unittest.TestCase):
         self.assertEqual(len(c.estrelas), 2)
         self.assertEqual(len(set(c.estrelas)), 2)
 
+    def test_metadata_carries_the_authorizing_enrollment_id(self):
+        cfg = self.make_cfg()
+        student = self._enroll_active_student()
+        enrollment = next(e for e in self.enrollment_registry.load_all() if e.student_id == student.student_id)
+        output = self.run_isolated([], cfg, seed=1)
+        c = output.candidates[0]
+        self.assertEqual(c.metadata["enrollment_id"], enrollment.enrollment_id)
+
     def test_no_persistent_write_during_generation(self):
         cfg = self.make_cfg()
         self._enroll_active_student()
