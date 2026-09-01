@@ -108,12 +108,21 @@ def record_academic_result(result: GeneratorRunResult, students_root=None) -> tu
     module, never assumed) — no candidate id is invented here to
     achieve this pairing.
 
-    Raises ValueError immediately if result.system != "academia" — a
+    Accepts result.system == "academia" (Cátedra de Tyche's permanent,
+    already-published historical key — never renamed) or any
+    result.system starting with "academia_" (the namespace for every
+    other Cátedra, e.g. "academia_mnemosyne") — an explicit two-part
+    check, never a bare .startswith("academia"), so a merely
+    lexically-similar name (e.g. "academialegacy", "academiaX") is
+    still rejected. Raises ValueError immediately otherwise — a
     caller-usage error (wrong result passed in), not a per-candidate
     runtime condition.
     """
-    if result.system != "academia":
-        raise ValueError(f"record_academic_result() only accepts system='academia' results, got {result.system!r}")
+    if result.system != "academia" and not result.system.startswith("academia_"):
+        raise ValueError(
+            f"record_academic_result() only accepts system='academia' or systems starting with "
+            f"'academia_', got {result.system!r}"
+        )
 
     student_registry = AcademyStudentRegistry(base=students_root)
     occurred_at = _now_iso()

@@ -15,6 +15,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from unittest import mock
 
+from core.services.academia.mnemosyne import MNEMOSYNE_IDENTITY, run_mnemosyne
 from core.services.academia.tyche import TYCHE_IDENTITY, run_tyche
 from core.services.atomic_io import atomic_create_json, atomic_write_json
 from core.services.backtest_generators import GENERATORS
@@ -150,12 +151,12 @@ class _GeneratorFixture(unittest.TestCase):
 
 
 class TestGeneratorsRegistry(_GeneratorFixture):
-    def test_exactly_the_nine_approved_systems_are_registered(self):
+    def test_exactly_the_ten_approved_systems_are_registered(self):
         self.assertEqual(
             set(GENERATORS),
             {
                 "clerics", "skeletons", "melforks", "axiomantes", "pantheon",
-                "acaso_puro", "asterias", "treefolks_v2", "academia",
+                "acaso_puro", "asterias", "treefolks_v2", "academia", "academia_mnemosyne",
             },
         )
 
@@ -975,6 +976,221 @@ class TestAcademiaAdapter(unittest.TestCase):
         self.assertEqual(len(args), 1)
         self.assertEqual(kwargs, {})
         self.assertIsInstance(args[0], random.Random)
+
+
+# ---------------------------------------------------------------------------
+# Academia Arcana de Nemerion — Segunda Cátedra. Cátedra de Mnemosyne —
+# Memória da Frequência ("academia_mnemosyne"), a separate, permanent
+# generator key from "academia" (Cátedra de Tyche). Every test here uses
+# its own isolated tempfile students_root/enrollments_root — never the real
+# library/academy/.
+# ---------------------------------------------------------------------------
+
+_MNEMOSYNE_HISTORICO = [
+    {"numeros": [1, 2, 3, 4, 5], "estrelas": [1, 2]},
+    {"numeros": [1, 2, 6, 7, 8], "estrelas": [1, 3]},
+    {"numeros": [1, 9, 10, 11, 12], "estrelas": [2, 4]},
+    {"numeros": [13, 14, 15, 16, 17], "estrelas": [5, 6]},
+]
+
+
+class TestAcademiaMnemosyneAdapter(unittest.TestCase):
+    def setUp(self):
+        self._students_tmp = tempfile.TemporaryDirectory()
+        self._enrollments_tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(self._students_tmp.cleanup)
+        self.addCleanup(self._enrollments_tmp.cleanup)
+        self.student_registry = AcademyStudentRegistry(base=self._students_tmp.name)
+        self.enrollment_registry = AcademyEnrollmentRegistry(base=self._enrollments_tmp.name)
+
+    def make_cfg(self, **overrides):
+        cfg = make_minimal_cfg(**overrides)
+        if not cfg.has_section("ACADEMIA"):
+            cfg.add_section("ACADEMIA")
+        cfg.set("ACADEMIA", "students_root", self._students_tmp.name)
+        cfg.set("ACADEMIA", "enrollments_root", self._enrollments_tmp.name)
+        return cfg
+
+    def make_ctx(self, historico):
+        return {"historico": historico, "estatisticas": {}, "mundo": {}}
+
+    def run_isolated(self, historico, cfg, seed, system="academia_mnemosyne"):
+        ctx = self.make_ctx(historico)
+        with tempfile.TemporaryDirectory() as tmp, mock.patch("core.services.run_manifest.RUNS_DIR", Path(tmp)):
+            return GENERATORS[system].run(cfg, ctx, None, seed, BOUNDARY)
+
+    def _enroll_mnemosyne(self, student_id, **overrides):
+        args = dict(
+            student_id=student_id,
+            classroom_id=MNEMOSYNE_IDENTITY.classroom_id,
+            doctrine_id=MNEMOSYNE_IDENTITY.doctrine_id,
+            doctrine_version=MNEMOSYNE_IDENTITY.doctrine_version,
+            student_registry=self.student_registry,
+        )
+        args.update(overrides)
+        return self.enrollment_registry.create(**args)
+
+    def _enroll_tyche(self, student_id, **overrides):
+        args = dict(
+            student_id=student_id,
+            classroom_id=TYCHE_IDENTITY.classroom_id,
+            doctrine_id=TYCHE_IDENTITY.doctrine_id,
+            doctrine_version=TYCHE_IDENTITY.doctrine_version,
+            student_registry=self.student_registry,
+        )
+        args.update(overrides)
+        return self.enrollment_registry.create(**args)
+
+    def _create_and_enroll_mnemosyne(self, name="Aurelia Vance", species=None):
+        student = self.student_registry.create(name=name, species=species)
+        self._enroll_mnemosyne(student.student_id)
+        return student
+
+    # -- A: zero eligible ------------------------------------------------
+
+    def test_zero_eligible_mnemosyne_students_yields_no_candidates(self):
+        cfg = self.make_cfg()
+        output = self.run_isolated(_MNEMOSYNE_HISTORICO, cfg, seed=1)
+        self.assertEqual(output.candidates, ())
+
+    def test_zero_eligible_mnemosyne_students_yields_empty_attempted_races(self):
+        cfg = self.make_cfg()
+        output = self.run_isolated(_MNEMOSYNE_HISTORICO, cfg, seed=1)
+        self.assertEqual(output.attempted_races, frozenset())
+
+    # -- B: 1 eligible ------------------------------------------------------
+
+    def test_one_eligible_student_yields_one_candidate(self):
+        cfg = self.make_cfg()
+        self._create_and_enroll_mnemosyne()
+        output = self.run_isolated(_MNEMOSYNE_HISTORICO, cfg, seed=1)
+        self.assertEqual(len(output.candidates), 1)
+
+    # -- C: classroom completa (5) --------------------------------------
+
+    def test_five_eligible_students_yields_five_candidates(self):
+        cfg = self.make_cfg()
+        for i in range(5):
+            self._create_and_enroll_mnemosyne(name=f"Student {i}")
+        output = self.run_isolated(_MNEMOSYNE_HISTORICO, cfg, seed=1)
+        self.assertEqual(len(output.candidates), 5)
+
+    # -- D/E: cross-classroom isolation -----------------------------------
+
+    def test_tyche_students_are_not_selected_by_mnemosyne_generator(self):
+        cfg = self.make_cfg()
+        tyche_student = self.student_registry.create(name="Tyche Student")
+        self._enroll_tyche(tyche_student.student_id)
+        output = self.run_isolated(_MNEMOSYNE_HISTORICO, cfg, seed=1)
+        self.assertEqual(output.candidates, ())
+
+    def test_mnemosyne_students_are_not_run_by_academia_generator(self):
+        cfg = self.make_cfg()
+        self._create_and_enroll_mnemosyne()
+        output = self.run_isolated(_MNEMOSYNE_HISTORICO, cfg, seed=1, system="academia")
+        self.assertEqual(output.candidates, ())
+
+    # -- F: provenance ----------------------------------------------------
+
+    def test_provenance_source_type_and_name(self):
+        cfg = self.make_cfg()
+        self._create_and_enroll_mnemosyne(name="Aurelia Vance")
+        output = self.run_isolated(_MNEMOSYNE_HISTORICO, cfg, seed=1)
+        c = output.candidates[0]
+        self.assertEqual(c.source_type, "external_generator")
+        self.assertEqual(c.source_name, "academia")
+
+    def test_provenance_identity_and_metadata(self):
+        cfg = self.make_cfg()
+        student = self._create_and_enroll_mnemosyne(name="Aurelia Vance")
+        enrollment = next(e for e in self.enrollment_registry.load_all() if e.student_id == student.student_id)
+        output = self.run_isolated(_MNEMOSYNE_HISTORICO, cfg, seed=1)
+        c = output.candidates[0]
+        self.assertEqual(c.entity_id, student.student_id)
+        self.assertEqual(c.entity_name, "Aurelia Vance")
+        self.assertEqual(c.race, "Cátedra de Mnemosyne — Memória da Frequência")
+        self.assertEqual(c.metadata["institution_id"], "nemerion")
+        self.assertEqual(c.metadata["classroom_id"], "catedra_mnemosyne")
+        self.assertEqual(c.metadata["doctrine_id"], "mnemosyne")
+        self.assertEqual(c.metadata["doctrine_version"], "v1")
+        self.assertEqual(c.metadata["enrollment_id"], enrollment.enrollment_id)
+        self.assertIsNone(c.metadata["student_species"])
+
+    # -- G: RNG independence -----------------------------------------------
+
+    def test_rng_independent_across_students(self):
+        cfg = self.make_cfg()
+        for i in range(3):
+            self._create_and_enroll_mnemosyne(name=f"Student {i}")
+        output = self.run_isolated(_MNEMOSYNE_HISTORICO, cfg, seed=1)
+        keys = [(c.numeros, c.estrelas) for c in output.candidates]
+        self.assertGreater(len(set(keys)), 1)  # not all 3 students collapse onto the same key
+
+    # -- H: replay determinism ----------------------------------------------
+
+    def test_same_cell_replay_gives_same_candidates(self):
+        cfg = self.make_cfg()
+        self._create_and_enroll_mnemosyne()
+        out1 = self.run_isolated(_MNEMOSYNE_HISTORICO, cfg, seed=777)
+        out2 = self.run_isolated(_MNEMOSYNE_HISTORICO, cfg, seed=777)
+        strip = lambda o: [(c.numeros, c.estrelas) for c in o.candidates]
+        self.assertEqual(strip(out1), strip(out2))
+
+    # -- I: anti-look-ahead / no live API ------------------------------------
+
+    def test_never_touches_get_history_or_builder(self):
+        cfg = self.make_cfg()
+        self._create_and_enroll_mnemosyne()
+        with mock.patch("core.data.loaders.get_history", side_effect=AssertionError("must never be called")), \
+             mock.patch("world.engine.builder.build", side_effect=AssertionError("must never be called")):
+            output = self.run_isolated(_MNEMOSYNE_HISTORICO, cfg, seed=1)
+        self.assertTrue(output.candidates)
+
+    def test_changing_historico_changes_output(self):
+        # sanity check that the doctrine genuinely consumes historico
+        # (unlike Tyche) -- proves the cutoff data actually reaches it.
+        cfg = self.make_cfg()
+        self._create_and_enroll_mnemosyne()
+        other_historico = [{"numeros": [40, 41, 42, 43, 44], "estrelas": [10, 11]}] * 10
+        out_a = self.run_isolated(_MNEMOSYNE_HISTORICO, cfg, seed=1)
+        out_b = self.run_isolated(other_historico, cfg, seed=1)
+        strip = lambda o: [(c.numeros, c.estrelas) for c in o.candidates]
+        self.assertNotEqual(strip(out_a), strip(out_b))
+
+    # -- abstention: empty historico -----------------------------------------
+
+    def test_empty_historico_abstains_for_every_participant(self):
+        cfg = self.make_cfg()
+        self._create_and_enroll_mnemosyne()
+        output = self.run_isolated([], cfg, seed=1)
+        self.assertEqual(output.candidates, ())
+
+    def test_attempted_races_declared_even_when_historico_empty(self):
+        # the Cátedra WAS invoked (>=1 eligible participant), even
+        # though every participant abstained -- discoverability
+        # principle already proven for Astérias/Treefolks V2.
+        cfg = self.make_cfg()
+        self._create_and_enroll_mnemosyne()
+        output = self.run_isolated([], cfg, seed=1)
+        self.assertEqual(output.attempted_races, frozenset({"Cátedra de Mnemosyne — Memória da Frequência"}))
+
+    def test_generations_is_always_none(self):
+        cfg = self.make_cfg()
+        self._create_and_enroll_mnemosyne()
+        output = self.run_isolated(_MNEMOSYNE_HISTORICO, cfg, seed=1)
+        self.assertIsNone(output.generations)
+
+    def test_run_mnemosyne_is_called_with_historico_and_rng(self):
+        cfg = self.make_cfg()
+        self._create_and_enroll_mnemosyne()
+        with mock.patch("core.services.backtest_generators.run_mnemosyne", wraps=run_mnemosyne) as spy:
+            self.run_isolated(_MNEMOSYNE_HISTORICO, cfg, seed=1)
+        spy.assert_called_once()
+        args, kwargs = spy.call_args
+        self.assertEqual(len(args), 2)
+        self.assertEqual(kwargs, {})
+        self.assertEqual(args[0], _MNEMOSYNE_HISTORICO)
+        self.assertIsInstance(args[1], random.Random)
 
 
 if __name__ == "__main__":

@@ -131,9 +131,51 @@ class TestDeriveEventId(unittest.TestCase):
         self.assertNotIn("hash(", source)
 
 
-class TestRejectsWrongSystem(AcademicMemoryTestBase):
+class TestSystemNamespaceGuard(AcademicMemoryTestBase):
+    """record_academic_result()'s system-name validation: 'academia'
+    (Cátedra de Tyche's permanent historical key) or any
+    'academia_<slug>' (every other Cátedra's namespace) is accepted;
+    everything else — including non-Academia systems and merely
+    lexically-similar names — is rejected. Empty candidates/evaluations
+    are enough to prove the guard itself without fabricating a real
+    Doctrine/student for Cátedras that don't exist yet.
+    """
+
+    def test_academia_is_accepted(self):
+        result = _make_result("run-1", (), (), system="academia")
+        outcomes = self._record(result)
+        self.assertEqual(outcomes, ())
+
+    def test_academia_mnemosyne_is_accepted(self):
+        result = _make_result("run-1", (), (), system="academia_mnemosyne")
+        outcomes = self._record(result)
+        self.assertEqual(outcomes, ())
+
+    def test_a_future_academia_prefixed_system_is_accepted(self):
+        # proves the namespace guard itself, not a real Doctrine --
+        # academia_penelope has no implementation anywhere; this only
+        # exercises record_academic_result()'s own name validation.
+        result = _make_result("run-1", (), (), system="academia_penelope")
+        outcomes = self._record(result)
+        self.assertEqual(outcomes, ())
+
     def test_raises_for_non_academia_system(self):
         result = _make_result("run-1", (), (), system="treefolks_v2")
+        with self.assertRaises(ValueError):
+            self._record(result)
+
+    def test_asterias_is_rejected(self):
+        result = _make_result("run-1", (), (), system="asterias")
+        with self.assertRaises(ValueError):
+            self._record(result)
+
+    def test_lexically_similar_academialegacy_is_rejected(self):
+        result = _make_result("run-1", (), (), system="academialegacy")
+        with self.assertRaises(ValueError):
+            self._record(result)
+
+    def test_lexically_similar_academiaX_is_rejected(self):
+        result = _make_result("run-1", (), (), system="academiaX")
         with self.assertRaises(ValueError):
             self._record(result)
 

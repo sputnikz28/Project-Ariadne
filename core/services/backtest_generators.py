@@ -113,6 +113,19 @@ library/academy/enrollments (paths overridable per-cell via
 extensibility every other system-specific parameter here already
 uses) — never hardcoded, never fabricated; zero eligible students is a
 legitimate, honest outcome, not an error.
+
+Second Cátedra: "academia_mnemosyne" — Cátedra de Mnemosyne — Memória
+da Frequência (mnemosyne/v1, core/services/academia/mnemosyne.py).
+One generator key per Cátedra, deliberately, never a dynamic
+multi-Classroom dispatcher: "academia" stays permanently Tyche's own
+key (real, already-published manifests carry it as provenance), and
+each future Cátedra gets its own new key (e.g. a hypothetical
+"academia_penelope" later) rather than either system growing to run
+multiple hypotheses internally. Unlike Tyche, Mnemosyne's doctrine can
+genuinely abstain (empty historico) — attempted_races there reflects
+whether the Cátedra was actually invoked (>=1 eligible participant),
+not whether a candidate was produced, the same discoverability
+principle already proven for Astérias/Treefolks V2.
 """
 
 from __future__ import annotations
@@ -124,6 +137,7 @@ from dataclasses import dataclass
 from types import MappingProxyType
 
 from core.services.academia.common import academia_rng, build_academy_candidate_key, classroom_race_label, resolve_eligible_participants
+from core.services.academia.mnemosyne import MNEMOSYNE_IDENTITY, run_mnemosyne
 from core.services.academia.tyche import TYCHE_IDENTITY, run_tyche
 from core.services.backtest_orchestrator import (
     HistoricalBacktestBoundary,
@@ -705,6 +719,79 @@ def _run_academia(cfg, ctx, ariadne_temporal, seed, boundary) -> GeneratorOutput
     )
 
 
+def _run_academia_mnemosyne(cfg, ctx, ariadne_temporal, seed, boundary) -> GeneratorOutput:
+    """Academia Arcana de Nemerion, Segunda Cátedra: Cátedra de
+    Mnemosyne — Memória da Frequência (mnemosyne/v1). A separate,
+    permanent system key — never added to GENERATORS["academia"],
+    which stays exclusively Cátedra de Tyche's forever (15 real,
+    already-published manifests carry command="backtest_campaign:
+    academia" as Tyche's provenance; that history is never renamed
+    retroactively). One generator key = one identifiable experimental
+    hypothesis — never a dynamic multi-Classroom dispatcher.
+
+    Same flow as _run_academia(), parameterized by MNEMOSYNE_IDENTITY
+    instead of TYCHE_IDENTITY: resolve_eligible_participants() already
+    filters by the exact (institution_id, classroom_id, doctrine_id,
+    doctrine_version) tuple passed to it, so Tyche's students are
+    structurally never selected here, and Mnemosyne's students are
+    never selected by GENERATORS["academia"] — no new filtering logic
+    needed, this is the same generic mechanism proven in Foundation V1.
+
+    Unlike Tyche, run_mnemosyne() CAN abstain (empty historico) — every
+    participant in one cell shares the same ctx['historico'], so
+    abstention is uniform across the whole cell when it happens, never
+    partial. Each candidate's DoctrineResult is checked individually
+    (result.numeros is None) before calling
+    build_academy_candidate_key(), exactly as that function's own
+    contract requires. attempted_races is based on whether Mnemosyne
+    was actually INVOKED this cell (at least one eligible participant),
+    not on whether a candidate was produced — the same discoverability
+    principle already proven for Astérias/Treefolks V2, applied
+    correctly here (Tyche's simpler `if candidates` check only worked
+    there because Tyche never abstains).
+    """
+    manifest = start_run(
+        seed, _modo_semente(cfg), command="backtest_campaign:academia_mnemosyne", target_draw=boundary.draw_id,
+    )
+    students_root = cfg.get("ACADEMIA", "students_root", fallback=str(_ACADEMIA_STUDENTS_BASE))
+    enrollments_root = cfg.get("ACADEMIA", "enrollments_root", fallback=str(_ACADEMIA_ENROLLMENTS_BASE))
+
+    participants = resolve_eligible_participants(MNEMOSYNE_IDENTITY, students_root, enrollments_root)
+    historico = ctx["historico"]
+
+    candidates = []
+    for student, enrollment in participants:
+        rng = academia_rng(
+            seed=seed,
+            institution_id=MNEMOSYNE_IDENTITY.institution_id,
+            classroom_id=MNEMOSYNE_IDENTITY.classroom_id,
+            doctrine_id=MNEMOSYNE_IDENTITY.doctrine_id,
+            doctrine_version=MNEMOSYNE_IDENTITY.doctrine_version,
+            student_id=student.student_id,
+            target_draw_id=boundary.draw_id,
+        )
+        result = run_mnemosyne(historico, rng)
+        if result.numeros is None:
+            continue
+        candidates.append(build_academy_candidate_key(
+            identity=MNEMOSYNE_IDENTITY,
+            student_id=student.student_id,
+            student_name=student.name,
+            student_species=student.species,
+            enrollment_id=enrollment.enrollment_id,
+            numeros=result.numeros,
+            estrelas=result.estrelas,
+        ))
+
+    candidates = tuple(candidates)
+    attempted_races = frozenset({classroom_race_label(MNEMOSYNE_IDENTITY)}) if participants else frozenset()
+    manifest = complete_run(manifest, generated_record_count=len(candidates))
+    return GeneratorOutput(
+        candidates=candidates, run_id=manifest["run_id"], generations=None,
+        attempted_races=attempted_races,
+    )
+
+
 GENERATORS: Mapping[str, GeneratorAdapter] = MappingProxyType({
     "clerics": GeneratorAdapter("clerics", True, _run_clerics),
     "skeletons": GeneratorAdapter("skeletons", False, _run_skeletons),
@@ -715,4 +802,5 @@ GENERATORS: Mapping[str, GeneratorAdapter] = MappingProxyType({
     "asterias": GeneratorAdapter("asterias", False, _run_asterias),
     "treefolks_v2": GeneratorAdapter("treefolks_v2", False, _run_treefolks_v2),
     "academia": GeneratorAdapter("academia", False, _run_academia),
+    "academia_mnemosyne": GeneratorAdapter("academia_mnemosyne", False, _run_academia_mnemosyne),
 })
