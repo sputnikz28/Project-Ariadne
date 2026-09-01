@@ -1,18 +1,24 @@
 {
   "nome": "Livro das Matrículas",
-  "total_enrollments": 5,
+  "total_enrollments": 10,
   "por_status": {
-    "active": 5
+    "active": 10
   },
   "por_classroom": {
-    "catedra_tyche": 5
+    "catedra_tyche": 5,
+    "catedra_mnemosyne": 5
   },
   "enrollment_ids": [
     "NEM-ENR-000001",
     "NEM-ENR-000002",
     "NEM-ENR-000003",
     "NEM-ENR-000004",
-    "NEM-ENR-000005"
+    "NEM-ENR-000005",
+    "NEM-ENR-000006",
+    "NEM-ENR-000007",
+    "NEM-ENR-000008",
+    "NEM-ENR-000009",
+    "NEM-ENR-000010"
   ],
-  "atualizado_em": "2026-08-28T14:17:32+00:00"
+  "atualizado_em": "2026-09-01T15:48:18+00:00"
 }

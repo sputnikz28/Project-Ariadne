@@ -1,0 +1,10 @@
+{
+  "enrollment_id": "NEM-ENR-000009",
+  "student_id": "NEM-STU-000009",
+  "institution_id": "nemerion",
+  "classroom_id": "catedra_mnemosyne",
+  "doctrine_id": "mnemosyne",
+  "doctrine_version": "v1",
+  "status": "active",
+  "enrolled_at": "2026-09-01T15:48:18+00:00"
+}
