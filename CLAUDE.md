@@ -1131,8 +1131,10 @@ Nova linhagem dos Clérigos (não uma nova facção votante, como o Minotauro). 
 | Acaso Puro | amostragem uniforme pura, sem histórico/Ariadne nenhum | `random.Random(seed)` | `None`; cumpre a promessa original de `benchmarks/random/README.md`, nunca implementada até agora |
 | Astérias | transição condicional entre pares de estrelas (`ctx['historico']`, sem Ariadne) — duas linhagens, Astéria Abissal e Astéria das Marés | `random.Random(seed)` dentro do adaptador, mesma convenção de Esqueletos/Panteão | `None`; sétimo sistema — commit `cf22d7e7` — ver secção própria "Astérias de Thalássia — Arena Temporada 2" abaixo |
 | Treefolks V2 | 5 florestas (Yggdrasil/Dodona/Brocéliande/Tír na nÓg/Fortuna), cada uma com o seu próprio stream de RNG namespaced | `forest_rng()` por floresta, nunca um stream sequencial partilhado | `None`; oitavo sistema — commits `f32b63b3`/`747f12dd` — ver secção própria "Treefolks V2 — As Grandes Florestas" abaixo |
+| Academia (Tyche) | `core.services.academia.tyche.run_tyche()`, controlo uniforme | `academia_rng()` namespaced por estudante (`core.services.academia.common`) | `None`; nono sistema, chave permanente `"academia"` — ver secção própria "Academia Arcana de Nemerion" abaixo |
+| Academia (Mnemosyne) | `core.services.academia.mnemosyne.run_mnemosyne()`, pesos por frequência histórica (Laplace α=1) | `academia_rng()` namespaced por estudante, mesma convenção de Tyche | `None`; décimo sistema, chave `"academia_mnemosyne"` — ver secção própria "Academia Arcana de Nemerion" abaixo |
 
-`GENERATORS` é um registo explícito (nunca auto-descoberta) — acrescentar um sistema futuro (Cyber-Anões, Superesqueletos, Academia...) é escrever um adaptador e uma linha no registo, zero alterações ao agregador. Vampiros, Gárgulas, Kor Vermelho e Lobisomens foram auditados e **não** registados — ver "Ideias futuras / não implementadas" acima para a razão exata de cada um.
+`GENERATORS` é um registo explícito (nunca auto-descoberta) — acrescentar um sistema futuro (Cyber-Anões, Superesqueletos...) é escrever um adaptador e uma linha no registo, zero alterações ao agregador. Vampiros, Gárgulas, Kor Vermelho e Lobisomens foram auditados e **não** registados — ver "Ideias futuras / não implementadas" acima para a razão exata de cada um. **A Academia já não é um exemplo hipotético** — está implementada e registada desde os commits listados na secção "Academia Arcana de Nemerion" abaixo.
 
 ## Arena (`88bfb28`)
 
@@ -1263,3 +1265,81 @@ Nenhuma das três Temporadas declarou uma estratégia vencedora. Nenhuma delas d
 ## Documentação histórica/recuperada associada
 
 `docs/AUDITORIA_FACCOES_E_ESTRATEGIAS.md` e `docs/BESTIARIO_ALGORITMICO_RECUPERADO.md` — arqueologia pura (código atual + histórico Git, até `756c63e6`), cada afirmação marcada `CONFIRMADO NO CÓDIGO ATUAL` / `CONFIRMADO NO HISTÓRICO GIT` / `DOCUMENTADO-LORE SEM IMPLEMENTAÇÃO` / `INFERÊNCIA`. Não são código nem roadmap — são o registo de como o código chegou a ser o que é, incluindo a descoberta de que Shaman nunca teve estratégia própria (cai sempre no ramo de deslocamento por fase lunar) e que Vampiros/Gárgulas têm uma segunda implementação morta (`algorithm.py`, só alcançável via `simulate_v7.py`, nunca por `main.py`).
+
+---
+
+# Academia Arcana de Nemerion
+
+Iniciativa distinta do Campaign Runner/Arena acima — partilha o mesmo `GENERATORS`/adaptador do Campaign Runner V2 como mecanismo técnico, mas responde a uma pergunta narrativa diferente: não "que sistema produz melhores candidatas", mas "que Doutrina um Estudante persistente segue ao longo do tempo". **Um Piloto Oficial da Academia não é uma Arena Season** — não normaliza orçamentos entre sistemas, não declara vencedores, e opera sobre Estudantes com identidade persistente, não sobre candidatas anónimas por célula.
+
+**Nome:** Academia Arcana de Nemerion — *Schola Aeterna Artium Probabilitatis*.
+**Lema:** "O acaso não se domina. Estuda-se."
+
+## Arquitetura
+
+- `library/academy/students/` — `AcademyStudentRegistry`, um `AcademyStudent` por ficheiro (`student_id`, `name`, `species: str | None`, `status`). `species=None` é um "ainda não definido" legítimo, nunca um erro.
+- `library/academy/enrollments/` — `AcademyEnrollmentRegistry`, uma `AcademyEnrollment` por matrícula (`institution_id`, `classroom_id`, `doctrine_id`, `doctrine_version`, `student_id`, `status ∈ {active, completed, withdrawn}`).
+- `core/services/academia/common.py` — `AcademyClassroomIdentity` (institution/classroom/doctrine/doctrine_version), `DoctrineResult`, `academia_rng()` (RNG namespaced por estudante+seed+identidade, nunca um stream partilhado), `build_academy_candidate_key()`, `classroom_race_label()` (label legacy do Arena `race`, ver Dívidas Conhecidas abaixo), `resolve_eligible_participants()`.
+- `core/services/academia/academic_memory.py` — `record_academic_result()`, grava um `AcademicEvent` (`event_type="test_participation"`) por par (Student, célula target×seed), idempotente por `event_id` determinístico (SHA-256 sobre run_id/student_id/enrollment_id — reprocessar o mesmo `GeneratorRunResult` nunca duplica).
+- `library/academy/students/events/<student_id>/EVT-*.json` — um ficheiro por `AcademicEvent`, nunca um índice agregado.
+
+## Capacidade institucional
+
+`CLASSROOM_ACTIVE_STUDENT_CAPACITY = 5` (`library/academy/enrollments/registry.py`) — escopo **exclusivamente** `(institution_id, classroom_id)`, nunca `(..., doctrine_id, doctrine_version)`: uma futura mudança de versão de Doutrina na mesma Cátedra nunca abre novas vagas. Enforced dentro de `AcademyEnrollmentRegistry.create(status="active")` via `AlreadyActivelyEnrolledError`/`ClassroomFullError`. Capacidade de uma Cátedra é independente da capacidade de qualquer outra — confirmado empiricamente com Tyche (5) e Mnemosyne (5) coexistindo sem interferência.
+
+## Convenção de chave `GENERATORS`
+
+`"academia"` é a chave **histórica e permanente** da Cátedra de Tyche — nunca renomeada para `academia_tyche`, porque já está gravada no campo `command` de 15 manifests reais publicados. Toda Cátedra futura usa `"academia_<slug>"` (ex.: `"academia_mnemosyne"`). Princípio vinculativo: **uma chave de generator = uma hipótese experimental identificável** — nunca um dispatcher dinâmico multi-Classroom. `academic_memory.py:record_academic_result()` aceita `result.system == "academia"` ou `result.system.startswith("academia_")` — guarda deliberadamente em duas partes (não um simples prefixo) para rejeitar falsos positivos lexicamente semelhantes (`academialegacy`, `academiaX`).
+
+## Cátedras implementadas
+
+| Cátedra | `generator` (`GENERATORS`) | `doctrine_id`/`version` | Hipótese | Commits |
+|---|---|---|---|---|
+| **Tyche — Fundamentos do Acaso** | `academia` | `tyche`/`v1` | Controlo uniforme — nenhuma informação histórica influencia a seleção | `357a3a07`…`532a9e9f` (core, students, enrollments, doctrine), `89b316ba` (bootstrap), `33c2e8db` (Piloto Oficial) |
+| **Mnemosyne — Memória da Frequência** | `academia_mnemosyne` | `mnemosyne`/`v1` | `weight(v) = count_historico(v) + 1` (Laplace α=1) sobre contagens brutas de números/estrelas — mais frequente no histórico visível recebe peso maior | `2362a239` (doctrine), `638985a0`/`af22f64e` (bootstrap), `8708dadb` (Piloto Oficial) |
+
+Cada Cátedra: capacidade máxima 5 Estudantes ativos; turma completa = exatamente 5; identidade individual do Estudante **não altera a Doutrina em V1** (`run_tyche`/`run_mnemosyne` recebem apenas `historico`+`rng`, nunca o Student/Enrollment/Personality/Knowledge).
+
+## Tempo académico vs. tempo experimental
+
+Duas noções de tempo distintas e não confundíveis:
+
+- **Tempo académico** — um Student existe persistentemente no repositório (matrícula, eventos, progressão futura); não tem data de "nascimento" narrativa alinhada com o histórico do Euromilhões.
+- **Tempo experimental** — cada exame é contra um target histórico com um cutoff próprio; a Doutrina só vê `historico` estritamente anterior a esse cutoff (mesma Fronteira B do Backtest Lab, Commits 20-24).
+
+Os 5 Estudantes de cada Cátedra, criados em 2026, fazem exames retrospetivos contra targets tão antigos quanto 002/2004 — **nunca se reconstrói "o Student que existia em 2004"**. O anti-look-ahead aplica-se exclusivamente aos dados experimentais (`historico` visível à Doutrina), nunca à existência temporal do próprio Student.
+
+## Pilotos Oficiais — resultados descritivos
+
+Ambos os Pilotos usaram a mesma grelha: 5 targets (`002/2004`, `049/2012`, `020/2017`, `096/2021`, `067/2026`, escolhidos por amostragem sistemática sobre os draws elegíveis) × 3 seeds (1, 2, 3) = 15 células, 5 Estudantes por célula = 75 Candidates/AcademicEvents por Cátedra.
+
+| Categoria | Tyche (`33c2e8db`) | Mnemosyne (`8708dadb`) |
+|---|---|---|
+| 0+0 | 29 | 32 |
+| 0+1 | 16 | 14 |
+| 1+0 | 12 | 17 |
+| 1+1 | 13 | 8 |
+| 2+0 | 4 | 1 |
+| 2+1 | 1 | 0 |
+| 3+1 | 0 | 1 |
+| 1+2 | 0 | 1 |
+| 0+2 | 0 | 1 |
+| **≥1 acerto** | **46/75** | **43/75** |
+
+**Estes números são estritamente descritivos.** Amostra pequena (75 candidatas por Doutrina); nenhuma significância estatística foi calculada; nenhuma Doutrina foi declarada superior; nenhum vencedor foi declarado. Os Pilotos da Academia **não são Arena Seasons** — não usam Orçamento Igual, intervalos de Wilson, nem qualquer outro aparato estatístico normalizado do `backtest_arena.py`.
+
+## Dívidas conhecidas
+
+- Identidade do Student (nome, espécie) ainda não tem qualquer poder algorítmico sobre a Doutrina — puramente narrativo em V1.
+- `classroom_race_label()` produz o `CandidateKey.race` legacy do Arena a partir de `classroom_name` — um rename futuro de Cátedra criaria uma nova categoria no Arena em vez de continuar a anterior (mesma limitação documentada, nunca corrigida, das linhagens do Panteão/Astérias).
+- Nomes de Estudante são apresentação; `student_id`/`enrollment_id` são a identidade real e estável.
+- Capacidade (`CLASSROOM_ACTIVE_STUDENT_CAPACITY=5`) é por `(institution_id, classroom_id)`, nunca por Doutrina/versão.
+- Não existe API de transição `active → withdrawn/completed` — `AcademyEnrollmentRegistry` define os três valores em `VALID_STATUSES`, mas só `create()` os grava; não há método para transicionar uma matrícula já existente.
+- Enforcement de capacidade é single-writer, não concurrency-safe (`load_all()`-depois-`create()` é uma sequência simples, não transacional) — documentado, não resolvido.
+- Não existe `ClassroomRegistry` — a consistência global Classroom→Doutrina depende inteiramente de cada módulo (`TYCHE_IDENTITY`, `MNEMOSYNE_IDENTITY`) declarar os seus próprios valores corretamente; nada impede uma futura Cátedra de reutilizar um `classroom_id` por engano.
+- `academic_memory.py:record_academic_result()` aceita `system == "academia"` ou `system.startswith("academia_")` — ver "Convenção de chave `GENERATORS`" acima.
+- As turmas Hi-Lo/Ecos (ver Roadmap) continuam bloqueadas pela ausência de `ordem_saida` garantida em todo o histórico — não resolvido por esta iniciativa.
+
+## Features roadmap — continuam NÃO implementadas
+
+Personality, Knowledge, Books, Skills, CandidateTransformation, Rebels, Codex Bruxinorum, Codex Infinitum, Hi-Lo/Ecos, professores, progressão/notas, ranking académico. Personality/Rebels/Codex Bruxinorum/Codex Infinitum/Hi-Lo-Ecos já estavam registados em "Ideias futuras / não implementadas" acima antes da Academia existir como código — continuam lá, inalterados. `CandidateTransformation`, professores, progressão/notas e ranking académico são conceitos ainda sem qualquer registo formal de roadmap — não implementados, não desenhados.

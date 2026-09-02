@@ -407,6 +407,8 @@ A new Clerics lineage — not a new voting faction, like Minotauro. Each Zombie 
 | Acaso Puro | pure `random.Random(seed)` sampling, no history/Ariadne at all | The statistical-floor baseline `benchmarks/random/README.md` had reserved since early in the project, never implemented until now |
 | Astérias (`cf22d7e7`) | Conditional star-pair transition model, `ctx['historico']` only | Two lineages, Astéria Abissal (abstains under `n(P)<5`) and Astéria das Marés (explicit marginal backoff); see [Arena Seasons](#arena-oficial--temporadas-1-3) below |
 | Treefolks V2 (`f32b63b3`/`747f12dd`) | 5 real Florestas, each with its own namespaced RNG stream | LSTM (optional PyTorch, CPU-only), Bayes, Markov, Monte Carlo, and a Fortuna control; see [Treefolks V2](#treefolks-v2--as-grandes-florestas) below |
+| Academia (Tyche) | `core.services.academia.tyche.run_tyche()`, uniform control | Permanent generator key `"academia"`; see [Academia Arcana de Nemerion](#academia-arcana-de-nemerion) below |
+| Academia (Mnemosyne) | `core.services.academia.mnemosyne.run_mnemosyne()`, Laplace α=1 frequency weighting | Generator key `"academia_mnemosyne"`; see [Academia Arcana de Nemerion](#academia-arcana-de-nemerion) below |
 
 Vampires, Gargoyles, Kor Vermelho and Werewolves were explicitly audited and are **not** registered — see [Roadmap](#roadmap--future-vision) below for why.
 
@@ -473,6 +475,33 @@ Two documents that are neither implemented code nor a roadmap idea — pure arch
 
 - **[`docs/AUDITORIA_FACCOES_E_ESTRATEGIAS.md`](docs/AUDITORIA_FACCOES_E_ESTRATEGIAS.md)** — every faction/order/organization's real algorithm, state (`ACTIVE`/`IMPLEMENTED_ORPHAN`/`PARTIAL`/`LORE_ONLY`/`SUPERSEDED`), RNG, Ariadne/history dependencies, persistence, VERIFIED-mode compatibility.
 - **[`docs/BESTIARIO_ALGORITMICO_RECUPERADO.md`](docs/BESTIARIO_ALGORITMICO_RECUPERADO.md)** — a fact sheet per race/lineage/archetype (strategy, key construction, distinguishing trait, implicit experimental hypothesis), with every claim tagged `CONFIRMADO NO CÓDIGO ATUAL` / `CONFIRMADO NO HISTÓRICO GIT` / `DOCUMENTADO-LORE SEM IMPLEMENTAÇÃO` / `INFERÊNCIA`, never presented as fact when it isn't. **Recovered so far: V8 → today only** — pre-Git archaeology (V1/V2/V3, an evolutionary tree of strategies) is an explicitly scoped, not-yet-done second pass, noted in the document itself.
+
+---
+
+## Academia Arcana de Nemerion
+
+*Schola Aeterna Artium Probabilitatis* — "O acaso não se domina. Estuda-se." A separate initiative from the Campaign Runner/Arena above: it reuses the same `GENERATORS` adapter mechanism as a technical plumbing choice, but asks a different narrative question — not "which system produces better candidates", but "which Doctrine does a persistent Student follow over time". **An Academia Piloto Oficial is not an Arena Season** — no Equal Budget, no Wilson intervals, no declared winner; it runs over Students with persistent identity (`library/academy/students/`, `library/academy/enrollments/`), not anonymous per-cell candidates.
+
+Each Cátedra (classroom) caps at exactly 5 active Students (`CLASSROOM_ACTIVE_STUDENT_CAPACITY`, scoped per `(institution_id, classroom_id)` — never per doctrine version). Student identity has zero algorithmic power over the Doctrine in V1 — `run_tyche()`/`run_mnemosyne()` receive only `historico` and an `rng`, never the Student record itself.
+
+| Cátedra | Generator key | Doctrine | Hypothesis |
+|---|---|---|---|
+| **Tyche — Fundamentos do Acaso** | `academia` (permanent — never renamed, already baked into 15 published manifests) | `tyche/v1` | Uniform control — no historical information influences selection |
+| **Mnemosyne — Memória da Frequência** | `academia_mnemosyne` | `mnemosyne/v1` | `weight(v) = count_historico(v) + 1` (Laplace α=1) — more frequently observed numbers/stars get proportionally higher selection weight |
+
+Naming convention (binding for all future Cátedras): `academia_<slug>` — one generator key = one identifiable experimental hypothesis, never a dynamic multi-classroom dispatcher.
+
+**Two Piloto Oficiais completed** — same 5 historical targets (`002/2004`, `049/2012`, `020/2017`, `096/2021`, `067/2026`) × 3 seeds × 5 Students = 75 Candidates/AcademicEvents per Cátedra:
+
+| Category | Tyche (`33c2e8db`) | Mnemosyne (`8708dadb`) |
+|---|---|---|
+| 0+0 / 0+1 / 1+0 / 1+1 | 29 / 16 / 12 / 13 | 32 / 14 / 17 / 8 |
+| 2+0 / 2+1 / 3+1 / 1+2 / 0+2 | 4 / 1 / 0 / 0 / 0 | 1 / 0 / 1 / 1 / 1 |
+| **≥1 hit** | **46/75** | **43/75** |
+
+Purely descriptive — small sample, no significance calculated, no Doctrine declared superior.
+
+Known debts: no algorithmic power for Student identity/name; no `active → withdrawn/completed` transition API (only `create()` sets a status); capacity enforcement is single-writer, not concurrency-safe; no `ClassroomRegistry` (each Doctrine module self-declares its own identity); Hi-Lo/Ecos classes remain blocked on `ordem_saida` availability (see Roadmap below). Personality, Knowledge, Books, Skills, CandidateTransformation, Rebels, Codex Bruxinorum, Codex Infinitum remain roadmap-only, unimplemented.
 
 ---
 
