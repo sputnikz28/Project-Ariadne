@@ -1,0 +1,13 @@
+{
+  "run_id": "RUN-20260902T074552663911Z",
+  "started_at": "2026-09-02T07:45:52+00:00",
+  "completed_at": "2026-09-02T07:45:52+00:00",
+  "seed": 3,
+  "modo_semente": "caos",
+  "project_version": "V12",
+  "git_commit": "af22f64e0e6a8575e87bac429210fd0f2700a417",
+  "report_path": null,
+  "command": "backtest_campaign:academia_mnemosyne",
+  "target_draw": "002/2004",
+  "generated_record_count": 5
+}

@@ -1,0 +1,28 @@
+{
+  "event_id": "EVT-5ece31cb8b7dec2f756ff06e4714be0f",
+  "event_type": "test_participation",
+  "occurred_at": "2026-09-02T07:45:56+00:00",
+  "extra": {
+    "enrollment_id": "NEM-ENR-000008",
+    "classroom_id": "catedra_mnemosyne",
+    "doctrine_id": "mnemosyne",
+    "doctrine_version": "v1",
+    "historical_target": "020/2017",
+    "generator_seed": 3,
+    "run_id": "RUN-20260902T074554285409Z",
+    "candidate_summary": {
+      "numeros": [
+        10,
+        13,
+        19,
+        32,
+        50
+      ],
+      "estrelas": [
+        4,
+        10
+      ]
+    },
+    "category": "0+0"
+  }
+}
